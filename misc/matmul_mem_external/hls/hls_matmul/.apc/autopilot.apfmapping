@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="matrixmul.cpp" path="C:\Dropbox\Projects\vivado_hls\matmul_mem_external\hls\matrixmul.cpp"/>
+    <originFiles name="matrixmul.h" path="C:\Dropbox\Projects\vivado_hls\matmul_mem_external\hls\matrixmul.h"/>
+  </source>
+  <testbench>
+    <originFiles name="matrixmul_test.cpp" path="C:\Dropbox\Projects\vivado_hls\matmul_mem_external\hls\matrixmul_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

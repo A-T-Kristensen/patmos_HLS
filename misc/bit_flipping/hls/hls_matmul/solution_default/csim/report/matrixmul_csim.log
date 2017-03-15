@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+WARNING: [SIM 51] HLS only supports CLANG compiler in Linux.
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../matrixmul_test.cpp in debug mode
+   Compiling ../../../../matrixmul.cpp in debug mode
+   Generating csim.exe
+2 4 Test passes.
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

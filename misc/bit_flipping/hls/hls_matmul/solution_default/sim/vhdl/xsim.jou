@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Sun Mar 05 20:51:07 2017
+# Process ID: 10708
+# Current directory: C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/sim/vhdl
+# Command line: xsim.exe -mode tcl -source {xsim.dir/matrixmul/xsim_script.tcl}
+# Log file: C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/sim/vhdl/xsim.log
+# Journal file: C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/sim/vhdl\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/matrixmul/xsim_script.tcl
+source matrixmul.tcl

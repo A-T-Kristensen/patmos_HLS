@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_7_Din_A' to 0." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:47.701+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_7_WEN_A' to 0." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:47.694+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_6_Din_A' to 0." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:47.685+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_6_WEN_A' to 0." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:47.678+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_5_Din_A' to 0." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:47.670+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_5_WEN_A' to 0." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:47.661+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_4_Din_A' to 0." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:47.652+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_4_WEN_A' to 0." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:47.644+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_3_Din_A' to 0." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:47.635+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_3_WEN_A' to 0." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:47.628+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_2_Din_A' to 0." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:47.618+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_2_WEN_A' to 0." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:47.613+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_1_Din_A' to 0." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:47.604+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_1_WEN_A' to 0." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:47.595+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_0_Din_A' to 0." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:47.585+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_0_WEN_A' to 0." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:47.579+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('a_3_load_1', matrixmul.cpp:71) on array 'a_3' due to limited memory ports." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:47.207+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'INTERFACE' cannot be applied: Function 'matmul' does not exist in any synthesis source file." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:46.087+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'INTERFACE' cannot be applied: Function 'matmul' does not exist in any synthesis source file." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:46.075+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'INTERFACE' cannot be applied: Function 'matmul' does not exist in any synthesis source file." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:46.066+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'RESOURCE' for core 'RAM_1P_BRAM' cannot be applied: Function 'matmul' does not exist in any synthesis source file." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:46.054+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'RESOURCE' for core 'RAM_1P_BRAM' cannot be applied: Function 'matmul' does not exist in any synthesis source file." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:46.045+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'RESOURCE' for core 'RAM_1P_BRAM' cannot be applied: Function 'matmul' does not exist in any synthesis source file." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:46.035+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'INTERFACE' cannot be applied: Function 'matmul' does not exist in any synthesis source file." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:46.022+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'PIPELINE' cannot be applied: Function 'matmul' does not exist in any synthesis source file." projectName="hls_matmul" solutionName="solution_bram_BRAM" date="2017-03-15T13:02:46.012+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('a_load_2', matmul.c:17) on array 'a' due to limited memory ports." projectName="hls_matmul" solutionName="solution_default" date="2017-02-18T19:40:04.477+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('a_0_load_1', matmul.c:17) on array 'a_0' due to limited memory ports." projectName="hls_matmul" solutionName="solution_ap_memory_BRAM" date="2017-02-18T19:37:31.591+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul/b_Din_A' to 0." projectName="hls_matmul" solutionName="solution_ap_ctrl_hs_BRAM" date="2017-02-18T19:13:02.486+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul/b_WEN_A' to 0." projectName="hls_matmul" solutionName="solution_ap_ctrl_hs_BRAM" date="2017-02-18T19:13:02.479+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul/a_Din_A' to 0." projectName="hls_matmul" solutionName="solution_ap_ctrl_hs_BRAM" date="2017-02-18T19:13:02.474+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul/a_WEN_A' to 0." projectName="hls_matmul" solutionName="solution_ap_ctrl_hs_BRAM" date="2017-02-18T19:13:02.467+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('b_load_1', matmul.c:17) on array 'b' due to limited memory ports." projectName="hls_matmul" solutionName="solution_ap_ctrl_hs_BRAM" date="2017-02-18T19:13:02.325+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('a_load_2', matmul.c:17) on array 'a' due to limited memory ports." projectName="hls_matmul" solutionName="solution_ap_ctrl_hs_arrays" date="2017-02-18T19:10:24.638+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

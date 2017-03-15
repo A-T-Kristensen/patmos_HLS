@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Sun Mar 05 20:51:05 2017
+# Process ID: 1356
+# Current directory: C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/sim/vhdl
+# Command line: wbtcv.exe -mode batch -source C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/sim/vhdl/xsim.dir/matrixmul/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/sim/vhdl/webtalk.log
+# Journal file: C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/sim/vhdl\webtalk.jou
+#-----------------------------------------------------------
+source C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/sim/vhdl/xsim.dir/matrixmul/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/sim/vhdl/xsim.dir/matrixmul/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun Mar 05 20:51:07 2017. For additional details about this file, please refer to the WebTalk help file at C:/Developer/Xilinx/Vivado/2016.4/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sun Mar 05 20:51:07 2017...

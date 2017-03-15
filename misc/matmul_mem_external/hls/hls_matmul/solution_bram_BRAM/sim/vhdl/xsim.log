@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# xsim v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Wed Mar 15 13:03:38 2017
+# Process ID: 3376
+# Current directory: C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/sim/vhdl
+# Command line: xsim.exe -mode tcl -source {xsim.dir/matrixmul/xsim_script.tcl}
+# Log file: C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/sim/vhdl/xsim.log
+# Journal file: C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/sim/vhdl\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/matrixmul/xsim_script.tcl
+# xsim {matrixmul} -autoloadwcfg -tclbatch {matrixmul.tcl}
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source matrixmul.tcl
+## run all
+Note: simulation done!
+Time: 915 ns  Iteration: 1  Process: /apatb_matrixmul_top/generate_sim_done_proc  File: C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/sim/vhdl/matrixmul.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 915 ns  Iteration: 1  Process: /apatb_matrixmul_top/generate_sim_done_proc  File: C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/sim/vhdl/matrixmul.autotb.vhd
+$finish called at time : 915 ns
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Mar 15 13:03:44 2017...

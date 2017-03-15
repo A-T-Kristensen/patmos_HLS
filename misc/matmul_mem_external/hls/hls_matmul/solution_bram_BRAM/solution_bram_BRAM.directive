@@ -1,0 +1,50 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="matmul" label="CL1" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="matmul" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_ctrl_hs" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="matmul" label="" functionLabel="">
+            <pragma name="RESOURCE">
+                <option name="variable" value="a" positionalBoolean="4"/>
+                <option name="core" value="RAM_1P_BRAM"/>
+            </pragma>
+        </directive>
+        <directive functionName="matmul" label="" functionLabel="">
+            <pragma name="RESOURCE">
+                <option name="variable" value="b" positionalBoolean="4"/>
+                <option name="core" value="RAM_1P_BRAM"/>
+            </pragma>
+        </directive>
+        <directive functionName="matmul" label="" functionLabel="">
+            <pragma name="RESOURCE">
+                <option name="variable" value="c" positionalBoolean="4"/>
+                <option name="core" value="RAM_1P_BRAM"/>
+            </pragma>
+        </directive>
+        <directive functionName="matmul" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="bram" value="" positionalBoolean="mode"/>
+                <option name="port" value="a" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="matmul" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="bram" value="" positionalBoolean="mode"/>
+                <option name="port" value="b" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="matmul" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="bram" value="" positionalBoolean="mode"/>
+                <option name="port" value="c" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+
