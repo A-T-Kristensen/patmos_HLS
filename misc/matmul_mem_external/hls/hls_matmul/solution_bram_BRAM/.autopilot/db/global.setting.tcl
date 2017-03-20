@@ -43,7 +43,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7a100t:csg324:-1"
 set SourceFiles {sc {} c ../../matrixmul.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/solution_bram_BRAM.directive}
+set DirectiveFile {C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/solution_bram_BRAM.directive}
 set TBFiles {verilog ../../matrixmul_test.cpp bc ../../matrixmul_test.cpp vhdl ../../matrixmul_test.cpp sc ../../matrixmul_test.cpp cas ../../matrixmul_test.cpp c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

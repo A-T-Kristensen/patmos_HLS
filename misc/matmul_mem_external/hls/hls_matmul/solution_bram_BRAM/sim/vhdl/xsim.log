@@ -2,23 +2,260 @@
 # xsim v2016.4 (64-bit)
 # SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
 # IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-# Start of session at: Wed Mar 15 13:03:38 2017
-# Process ID: 3376
-# Current directory: C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/sim/vhdl
+# Start of session at: Fri Mar 17 06:27:40 2017
+# Process ID: 11572
+# Current directory: C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/sim/vhdl
 # Command line: xsim.exe -mode tcl -source {xsim.dir/matrixmul/xsim_script.tcl}
-# Log file: C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/sim/vhdl/xsim.log
-# Journal file: C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/sim/vhdl\xsim.jou
+# Log file: C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/sim/vhdl/xsim.log
+# Journal file: C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/sim/vhdl\xsim.jou
 #-----------------------------------------------------------
 source xsim.dir/matrixmul/xsim_script.tcl
 # xsim {matrixmul} -autoloadwcfg -tclbatch {matrixmul.tcl}
 Vivado Simulator 2016.4
 Time resolution is 1 ps
 source matrixmul.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_mLatCnterIn was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_mLatCnterOut was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_mLatCnterIn_addr was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_mLatCnterOut_addr was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_clk_counter was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/reported_stuck_cnt was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_0/mem was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_0/read_file_proc/fp was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_0/read_file_proc/fstatus was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_0/read_file_proc/token_line was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_0/read_file_proc/token was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_0/read_file_proc/token_len was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_0/read_file_proc/token_int was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_0/read_file_proc/transaction_idx was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_0/read_file_proc/idx was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_0/write_file_proc/fp was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_0/write_file_proc/fstatus was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_0/write_file_proc/token_line was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_0/write_file_proc/token was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_0/write_file_proc/transaction_idx was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_1/mem was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_1/read_file_proc/fp was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_1/read_file_proc/fstatus was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_1/read_file_proc/token_line was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_1/read_file_proc/token was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_1/read_file_proc/token_len was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_1/read_file_proc/token_int was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_1/read_file_proc/transaction_idx was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_1/read_file_proc/idx was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_1/write_file_proc/fp was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_1/write_file_proc/fstatus was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_1/write_file_proc/token_line was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_1/write_file_proc/token was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/AESL_inst_a_1/write_file_proc/transaction_idx was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_reset_proc/rand was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_reset_proc/rint was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_start_proc/rand was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_start_proc/rint was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/write_output_transactor_a_1_runtime_proc/fp was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/write_output_transactor_a_1_runtime_proc/fstatus was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/write_output_transactor_a_1_runtime_proc/token_line was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/write_output_transactor_a_1_runtime_proc/token was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/transaction_counter was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/i was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/fp was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/fstatus was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/token_line was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/token was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/latthistime was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/lattotal was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/latmax was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/latmin was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/thrthistime was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/thrtotal was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/thrmax was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/thrmin was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/lataver was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/thraver was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/lat_array was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+WARNING: [Simtcl 6-142] log_wave skipped an HDL object or scope because of this problem: WARNING: Simulation object /apatb_matrixmul_top/gen_performance_check_proc/thr_array was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
+## set a_group [add_wave_group a(bram) -into $cinoutgroup]
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/a_1_Rst_A -into $a_group -radix hex
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/a_1_Clk_A -into $a_group -radix hex
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/a_1_Dout_A -into $a_group -radix hex
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/a_1_Din_A -into $a_group -radix hex
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/a_1_WEN_A -into $a_group -color #ffff00 -radix hex
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/a_1_EN_A -into $a_group -color #ffff00 -radix hex
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/a_1_Addr_A -into $a_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set a_group [add_wave_group a(bram) -into $cinputgroup]
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/a_0_Rst_A -into $a_group -radix hex
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/a_0_Clk_A -into $a_group -radix hex
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/a_0_Dout_A -into $a_group -radix hex
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/a_0_Din_A -into $a_group -radix hex
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/a_0_WEN_A -into $a_group -color #ffff00 -radix hex
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/a_0_EN_A -into $a_group -color #ffff00 -radix hex
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/a_0_Addr_A -into $a_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/ap_start -into $blocksiggroup
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/ap_done -into $blocksiggroup
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/ap_idle -into $blocksiggroup
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_matrixmul_top/AESL_inst_matrixmul/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_matrixmul_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_matrixmul_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_matrixmul_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_matrixmul_top/LENGTH_a_0 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_matrixmul_top/LENGTH_a_1 -into $tb_portdepth_group -radix hex
+## set tbcinoutgroup [add_wave_group "C InOuts" -into $testbenchgroup]
+## set tb_a_group [add_wave_group a(bram) -into $tbcinoutgroup]
+## add_wave /apatb_matrixmul_top/a_1_RST_A -into $tb_a_group -radix hex
+## add_wave /apatb_matrixmul_top/a_1_CLK_A -into $tb_a_group -radix hex
+## add_wave /apatb_matrixmul_top/a_1_DOUT_A -into $tb_a_group -radix hex
+## add_wave /apatb_matrixmul_top/a_1_DIN_A -into $tb_a_group -radix hex
+## add_wave /apatb_matrixmul_top/a_1_WEN_A -into $tb_a_group -color #ffff00 -radix hex
+## add_wave /apatb_matrixmul_top/a_1_EN_A -into $tb_a_group -color #ffff00 -radix hex
+## add_wave /apatb_matrixmul_top/a_1_ADDR_A -into $tb_a_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_a_group [add_wave_group a(bram) -into $tbcinputgroup]
+## add_wave /apatb_matrixmul_top/a_0_RST_A -into $tb_a_group -radix hex
+## add_wave /apatb_matrixmul_top/a_0_CLK_A -into $tb_a_group -radix hex
+## add_wave /apatb_matrixmul_top/a_0_DOUT_A -into $tb_a_group -radix hex
+## add_wave /apatb_matrixmul_top/a_0_DIN_A -into $tb_a_group -radix hex
+## add_wave /apatb_matrixmul_top/a_0_WEN_A -into $tb_a_group -color #ffff00 -radix hex
+## add_wave /apatb_matrixmul_top/a_0_EN_A -into $tb_a_group -color #ffff00 -radix hex
+## add_wave /apatb_matrixmul_top/a_0_ADDR_A -into $tb_a_group -radix hex
+## save_wave_config matrixmul.wcfg
 ## run all
 Note: simulation done!
-Time: 915 ns  Iteration: 1  Process: /apatb_matrixmul_top/generate_sim_done_proc  File: C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/sim/vhdl/matrixmul.autotb.vhd
+Time: 1245 ns  Iteration: 1  Process: /apatb_matrixmul_top/generate_sim_done_proc  File: C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/sim/vhdl/matrixmul.autotb.vhd
 Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
-Time: 915 ns  Iteration: 1  Process: /apatb_matrixmul_top/generate_sim_done_proc  File: C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/sim/vhdl/matrixmul.autotb.vhd
-$finish called at time : 915 ns
+Time: 1245 ns  Iteration: 1  Process: /apatb_matrixmul_top/generate_sim_done_proc  File: C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/sim/vhdl/matrixmul.autotb.vhd
+$finish called at time : 1245 ns
 ## quit
-INFO: [Common 17-206] Exiting xsim at Wed Mar 15 13:03:44 2017...
+INFO: [Common 17-206] Exiting xsim at Fri Mar 17 06:27:47 2017...

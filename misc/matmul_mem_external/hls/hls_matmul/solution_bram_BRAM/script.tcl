@@ -14,5 +14,5 @@ create_clock -period 10 -name default
 source "./hls_matmul/solution_bram_BRAM/directives.tcl"
 csim_design -clean
 csynth_design
-cosim_design -rtl vhdl
+cosim_design -trace_level all -rtl vhdl
 export_design -rtl vhdl -format ip_catalog

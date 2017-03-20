@@ -5,13 +5,13 @@
 // 
 // ==============================================================
 
-#1 "C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/matrixmul.cpp"
+#1 "C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/matrixmul.cpp"
 #1 "<built-in>"
 #1 "<command-line>"
-#1 "C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/matrixmul.cpp"
-#46 "C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/matrixmul.cpp"
-#1 "C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/matrixmul.h" 1
-#49 "C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/matrixmul.h"
+#1 "C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/matrixmul.cpp"
+#46 "C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/matrixmul.cpp"
+#1 "C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/matrixmul.h" 1
+#49 "C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/matrixmul.h"
 #1 "c:\\developer\\xilinx\\vivado_hls\\2016.4\\msys\\bin\\../lib/gcc/mingw32/4.6.2/include/c++/cmath" 1 3
 #41 "c:\\developer\\xilinx\\vivado_hls\\2016.4\\msys\\bin\\../lib/gcc/mingw32/4.6.2/include/c++/cmath" 3
 
@@ -1455,7 +1455,7 @@ namespace std
 
 
 }
-#50 "C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/matrixmul.h" 2
+#50 "C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/matrixmul.h" 2
 using namespace std;
 
 
@@ -1464,11 +1464,11 @@ using namespace std;
 
 
 void matrixmul(int a[3*4][4]);
-#47 "C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/matrixmul.cpp" 2
+#47 "C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/matrixmul.cpp" 2
 
 void matrixmul(int a[3*4][4])
 {
-#pragma HLS ARRAY_PARTITION variable=a block factor=12 dim=1
+#pragma HLS ARRAY_PARTITION variable=a block factor=2 dim=1
 
 
 

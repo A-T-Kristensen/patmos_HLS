@@ -1,10 +1,10 @@
-#pragma line 1 "C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/matrixmul.cpp"
+#pragma line 1 "C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/matrixmul.cpp"
 #pragma line 1 "<built-in>"
 #pragma line 1 "<command-line>"
-#pragma line 1 "C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/matrixmul.cpp"
-#pragma line 46 "C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/matrixmul.cpp"
-#pragma line 1 "C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/matrixmul.h" 1
-#pragma line 49 "C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/matrixmul.h"
+#pragma line 1 "C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/matrixmul.cpp"
+#pragma line 46 "C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/matrixmul.cpp"
+#pragma line 1 "C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/matrixmul.h" 1
+#pragma line 49 "C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/matrixmul.h"
 #pragma line 1 "c:\\developer\\xilinx\\vivado_hls\\2016.4\\msys\\bin\\../lib/gcc/mingw32/4.6.2/include/c++/cmath" 1 3
 #pragma line 41 "c:\\developer\\xilinx\\vivado_hls\\2016.4\\msys\\bin\\../lib/gcc/mingw32/4.6.2/include/c++/cmath" 3
 #pragma empty_line
@@ -1448,7 +1448,7 @@ namespace std
 #pragma empty_line
 #pragma empty_line
 }
-#pragma line 50 "C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/matrixmul.h" 2
+#pragma line 50 "C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/matrixmul.h" 2
 using namespace std;
 #pragma empty_line
 #pragma empty_line
@@ -1457,11 +1457,11 @@ using namespace std;
 #pragma empty_line
 #pragma empty_line
 void matrixmul(int a[3*4][4]);
-#pragma line 47 "C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/matrixmul.cpp" 2
+#pragma line 47 "C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/matrixmul.cpp" 2
 #pragma empty_line
 void matrixmul(int a[3*4][4])
 {
-#pragma HLS ARRAY_PARTITION variable=a block factor=12 dim=1
+#pragma HLS ARRAY_PARTITION variable=a block factor=2 dim=1
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line

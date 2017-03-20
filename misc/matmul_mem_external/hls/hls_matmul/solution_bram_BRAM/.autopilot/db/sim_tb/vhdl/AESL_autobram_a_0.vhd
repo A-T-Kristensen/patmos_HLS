@@ -18,7 +18,7 @@ entity AESL_autobram_a_0 is
         constant    TV_OUT      :   STRING (1 to 36) := "impl_rtl.matrixmul.autotvout_a_0.dat";
         constant    DATA_WIDTH  :   INTEGER := 32;
         constant    ADDR_WIDTH  :   integer := 32;
-        constant    DEPTH       :   integer := 4
+        constant    DEPTH       :   integer := 24
     );
     port (
         Clk_A       :   IN  STD_LOGIC;

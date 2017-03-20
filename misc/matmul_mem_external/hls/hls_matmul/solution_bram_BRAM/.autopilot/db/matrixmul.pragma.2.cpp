@@ -1,5 +1,5 @@
-# 1 "C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/.autopilot/db/matrixmul.pragma.1.cpp"
-# 1 "C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/.autopilot/db/matrixmul.pragma.1.cpp" 1
+# 1 "C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/.autopilot/db/matrixmul.pragma.1.cpp"
+# 1 "C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/.autopilot/db/matrixmul.pragma.1.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 153 "<built-in>" 3
@@ -204,7 +204,7 @@ extern "C" {
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 # 7 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "C:/Dropbox/Projects/vivado_hls/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/.autopilot/db/matrixmul.pragma.1.cpp" 2
+# 1 "C:/Dropbox/Projects/bachelor_project_HLS/misc/matmul_mem_external/hls/hls_matmul/solution_bram_BRAM/.autopilot/db/matrixmul.pragma.1.cpp" 2
 # 1 "matrixmul.cpp"
 # 1 "matrixmul.cpp" 1
 # 1 "<built-in>" 1
@@ -3581,7 +3581,7 @@ void matrixmul(int a[3*4][4]);
 
 void matrixmul(int a[3*4][4])
 {_ssdm_SpecArrayDimSize(a,3*4);
-_ssdm_SpecArrayPartition( a, 1, "BLOCK", 12, "");
+_ssdm_SpecArrayPartition( a, 1, "BLOCK", 2, "");
 //#pragma HLS ARRAY_RESHAPE variable=b complete dim=1
 //#pragma HLS ARRAY_RESHAPE variable=a complete dim=2
 

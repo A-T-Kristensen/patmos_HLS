@@ -3391,7 +3391,7 @@ void matrixmul(int a[3*4][4]);
 
 void matrixmul(int a[3*4][4])
 {_ssdm_SpecArrayDimSize(a,3*4);
-_ssdm_SpecArrayPartition( a, 1, "BLOCK", 12, "");
+_ssdm_SpecArrayPartition( a, 1, "BLOCK", 2, "");
 //#pragma HLS ARRAY_RESHAPE variable=b complete dim=1
 //#pragma HLS ARRAY_RESHAPE variable=a complete dim=2
 

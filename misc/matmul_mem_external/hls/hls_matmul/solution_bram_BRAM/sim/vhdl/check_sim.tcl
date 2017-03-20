@@ -85,20 +85,7 @@ proc check_tvin_file {} {
     set rtlfilelist {
          "c.matrixmul.autotvin_a_0.dat"
          "c.matrixmul.autotvin_a_1.dat"
-         "c.matrixmul.autotvin_a_2.dat"
-         "c.matrixmul.autotvin_a_3.dat"
-         "c.matrixmul.autotvin_a_4.dat"
-         "c.matrixmul.autotvin_a_5.dat"
-         "c.matrixmul.autotvin_a_6.dat"
-         "c.matrixmul.autotvin_a_7.dat"
-         "c.matrixmul.autotvin_a_8.dat"
-         "c.matrixmul.autotvin_a_9.dat"
-         "c.matrixmul.autotvin_a_10.dat"
-         "c.matrixmul.autotvin_a_11.dat"
-         "c.matrixmul.autotvout_a_8.dat"
-         "c.matrixmul.autotvout_a_9.dat"
-         "c.matrixmul.autotvout_a_10.dat"
-         "c.matrixmul.autotvout_a_11.dat"
+         "c.matrixmul.autotvout_a_1.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {
@@ -123,10 +110,7 @@ proc check_tvout_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "rtl.matrixmul.autotvout_a_8.dat"
-         "rtl.matrixmul.autotvout_a_9.dat"
-         "rtl.matrixmul.autotvout_a_10.dat"
-         "rtl.matrixmul.autotvout_a_11.dat"
+         "rtl.matrixmul.autotvout_a_1.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {

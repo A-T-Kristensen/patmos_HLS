@@ -4,7 +4,7 @@
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="a"/>
 <option name="block" positionalBoolean="type" value=""/>
-<option name="factor" value="12"/>
+<option name="factor" value="2"/>
 <option name="dim" value="1"/>
 </pragma>
 </directive>
