@@ -77,14 +77,16 @@ Otherwise, clear candidates are examples of workloads/problems classified as [*e
 ### Install Error
 
 If Kremlin fails on install at around 28% go to /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/KremlibDump.cpp (line 231)  and change
-'''python
+
+```python
 	int dump_fd = open(dump_filename.c_str(), O_RDWR | O_CREAT);
-'''	
+```	
 
 to 
-'''python
+
+```python
 	int dump_fd = open(dump_filename.c_str(), O_RDWR | O_CREAT, 0644);
-'''
+```
 
 See [fix](http://stackoverflow.com/questions/25706291/error-in-using-open-in-cuda-c) and [description](http://stackoverflow.com/questions/18415904/what-does-mode-t-0644-mean)
 
