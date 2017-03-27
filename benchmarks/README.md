@@ -4,7 +4,7 @@ The following describes a collection of benchmark suites. CHStone and MachSuite 
 
 ## [CHStone](http://www.ertl.jp/chstone/)
 
- The CHStone benchmark suite has been developed for C-based high-level synthesis (HLS). The CHStone benchmark suite selected programs of various application domains, some of which originally belong to other benchmark suites. CHStone has several key features described as follows: 
+ The CHStone benchmark suite has been developed for C-based high-level synthesis (HLS). The CHStone benchmark suite selected programs of various application domains, some of which originally belong to other benchmark suites. The CHStone suite includes the following programs.
 
 * DFADD: Double-precision floating-point addition
 * DFMUL: Double-precision floating-point multiplication
@@ -23,7 +23,7 @@ The following describes a collection of benchmark suites. CHStone and MachSuite 
 
 MachSuite is a set of 19 benchmarks designed to mimic low-level kernels suitable for hardware acceleration.
 
-Some examples include (kernel/algorithm)
+A list of the benchmarks is given here (kernel/algorithm)
 
 * aes/aes: The Advanced Encryption Standard, a common block cipher.
 * backprop/backprop: A simple method for training neural networks.
@@ -51,9 +51,42 @@ TACLeBench provides a freely available and comprehensive benchmark suite for tim
 
 TACLeBench is a collection of currently 102 benchmark programs from several different research groups and tool vendors around the world. These benchmarks are provided as ANSI-C 99 source codes. The source codes are 100% self-contained – no dependencies to system-specific header files via #include directives exist, eventually used functions from math libraries are also provided in the form of C source code. 
 
+Some examples include 
+
 # Profiling Tools
 
-Candidates for hardware acceleration are determined using profiling tools in order to identify code segments (or entire functions) which allow for a high degree of parallelisation. A number of such 
+Candidates for hardware acceleration are determined using profiling tools in order to identify code segments (or entire functions), which allow for a high degree of parallelisation. A number of such are listed here
+
+* Kremlin:  Kremlin is a tool that, given a serial program, tells you which regions to parallelize. 
+
+Tools specifically for high-level synthesis include
+
+*
+
+Otherwise, clear candidates are examples of workloads/problems classified as [*embarrassingly parallel*](https://en.wikipedia.org/wiki/Embarrassingly_parallel).
+
+## Kremlin
+
+ Kremlin is a tool that, given a serial program, tells you which regions to parallelize. 
+
+### Description
+
+### Install
+
+
+### Install Error
+
+If Kremlin fails on install at around 28% go to /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/KremlibDump.cpp (line 231)  and change
+'''python
+	int dump_fd = open(dump_filename.c_str(), O_RDWR | O_CREAT);
+'''	
+
+to 
+'''python
+	int dump_fd = open(dump_filename.c_str(), O_RDWR | O_CREAT, 0644);
+'''
+
+See [fix](http://stackoverflow.com/questions/25706291/error-in-using-open-in-cuda-c) and [description](http://stackoverflow.com/questions/18415904/what-does-mode-t-0644-mean)
 
 # Candiates 
 
