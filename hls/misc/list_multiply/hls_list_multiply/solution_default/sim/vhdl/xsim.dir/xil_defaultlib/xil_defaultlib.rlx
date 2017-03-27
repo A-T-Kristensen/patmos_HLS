@@ -1,9 +1,0 @@
-0.6
-2016.4
-Dec 14 2016
-22:58:16
-C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/sim/vhdl/AESL_autobram_a.vhd,1488743463,vhdl,,,,aesl_autobram_a,C:/Developer/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
-C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/sim/vhdl/AESL_sim_pkg.vhd,1488743463,vhdl,,,,aesl_sim_components,C:/Developer/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
-C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/sim/vhdl/matrixmul.autotb.vhd,1488743463,vhdl,,,,apatb_matrixmul_top,C:/Developer/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
-C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/sim/vhdl/matrixmul.vhd,1488743445,vhdl,,,,matrixmul,C:/Developer/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
-C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/sim/vhdl/matrixmul_mux_32_bkb.vhd,1488743445,vhdl,,,,matrixmul_mux_32_bkb,C:/Developer/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,

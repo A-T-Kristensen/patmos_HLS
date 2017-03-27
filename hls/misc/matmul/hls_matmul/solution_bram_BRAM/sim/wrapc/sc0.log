@@ -1,5 +1,0 @@
-   Build using "C:/Developer/Xilinx/Vivado_HLS/2016.4/msys/bin/g++.exe"
-   Compiling apatb_matrixmul.cpp
-   Compiling matrixmul.cpp_pre.cpp.tb.cpp
-   Compiling matrixmul_test.cpp_pre.cpp.tb.cpp
-   Generating cosim.tv.exe

@@ -29,47 +29,47 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/.apc/.src</location>
+			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/.apc/.tb</location>
+			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/.apc/.tb</location>
 		</link>
 		<link>
-			<name>solution_default/constraints</name>
+			<name>list_multiply/constraints</name>
 			<type>2</type>
-			<location>C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/.tcls</location>
+			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/list_multiply/.tcls</location>
 		</link>
 		<link>
-			<name>source/matrixmul.cpp</name>
+			<name>source/list_multiply.c</name>
 			<type>1</type>
-			<location>C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/matrixmul.cpp</location>
+			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/list_multiply.c</location>
 		</link>
 		<link>
-			<name>source/matrixmul.h</name>
+			<name>source/list_multiply.h</name>
 			<type>1</type>
-			<location>C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/matrixmul.h</location>
+			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/list_multiply.h</location>
 		</link>
 		<link>
-			<name>testbench/matrixmul_test.cpp</name>
+			<name>testbench/list_multiply_test.c</name>
 			<type>1</type>
-			<location>C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/matrixmul_test.cpp</location>
+			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/list_multiply_test.c</location>
 		</link>
 		<link>
-			<name>solution_default/constraints/.xml.directive</name>
+			<name>list_multiply/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/solution_default.directive</location>
+			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/list_multiply/list_multiply.directive</location>
 		</link>
 		<link>
-			<name>solution_default/constraints/directives.tcl</name>
+			<name>list_multiply/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/directives.tcl</location>
+			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/list_multiply/directives.tcl</location>
 		</link>
 		<link>
-			<name>solution_default/constraints/script.tcl</name>
+			<name>list_multiply/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/hls_matmul/solution_default/script.tcl</location>
+			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/list_multiply/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

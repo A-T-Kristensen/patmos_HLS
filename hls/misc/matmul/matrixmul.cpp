@@ -47,7 +47,6 @@ ALL TIMES.
 
 void matrixmul(int a[3*DIM][DIM])
 {
-#pragma HLS ARRAY_PARTITION variable=a block factor=2 dim=1
 //#pragma HLS ARRAY_RESHAPE variable=b complete dim=1
 //#pragma HLS ARRAY_RESHAPE variable=a complete dim=2
 

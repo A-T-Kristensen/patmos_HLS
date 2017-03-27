@@ -1,0 +1,5 @@
+sv xil_defaultlib "list_multiply.v"
+sv xil_defaultlib "list_multiply_muxbkb.v"
+sv xil_defaultlib "AESL_autobram_a.v"
+sv xil_defaultlib "list_multiply.autotb.v"
+

@@ -1,0 +1,126 @@
+# do cosim.modelsim.scr 
+# 
+#     set fl [open ".exit.err" w]
+#     puts $fl "Elaboration errors in executing modelsim simulator"
+#     close $fl
+#     quit
+# 
+# /home/clibs
+# lin64
+# 1
+# /home/clibs/questa/10.1b/lin64/lib
+# Copying /opt/modelsim/modeltech/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/modelsim/modeltech/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Compiling package AESL_sim_components
+# -- Compiling package body AESL_sim_components
+# -- Loading package AESL_sim_components
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity matrixmul_mux_42_bkb
+# -- Compiling architecture rtl of matrixmul_mux_42_bkb
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity apatb_matrixmul_top
+# -- Compiling architecture behav of apatb_matrixmul_top
+# ** Warning: matrixmul.autotb.vhd(98): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: matrixmul.autotb.vhd(99): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: matrixmul.autotb.vhd(100): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: matrixmul.autotb.vhd(101): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: matrixmul.autotb.vhd(102): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: matrixmul.autotb.vhd(104): (vcom-1236) Shared variables must be of a protected type.
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity matrixmul
+# -- Compiling architecture behav of matrixmul
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity AESL_autobram_a_1
+# -- Compiling architecture behav of AESL_autobram_a_1
+# ** Warning: AESL_autobram_a_1.vhd(48): (vcom-1236) Shared variables must be of a protected type.
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity AESL_autobram_a_0
+# -- Compiling architecture behav of AESL_autobram_a_0
+# ** Warning: AESL_autobram_a_0.vhd(48): (vcom-1236) Shared variables must be of a protected type.
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity matrixmul_mul_32scud_MulnS_0
+# -- Compiling architecture behav of matrixmul_mul_32scud_MulnS_0
+# -- Compiling entity matrixmul_mul_32scud
+# -- Compiling architecture arch of matrixmul_mul_32scud
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity AESL_autobram_a_2
+# -- Compiling architecture behav of AESL_autobram_a_2
+# ** Warning: AESL_autobram_a_2.vhd(48): (vcom-1236) Shared variables must be of a protected type.
+# vsim -L work -suppress 6630 -t 10ps apatb_matrixmul_top 
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE 10.1b Apr 26 2012 Linux 4.4.0-66-generic
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.apatb_matrixmul_top(behav)#1
+# Loading work.matrixmul(behav)#1
+# Loading work.aesl_autobram_a_0(behav)#1
+# Loading work.aesl_autobram_a_1(behav)#1
+# Loading work.aesl_autobram_a_2(behav)#1
+# 1
+# 1
+# ** Note: simulation done!
+#    Time: 915 ns  Iteration: 1  Instance: /apatb_matrixmul_top
+# ** Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+#    Time: 915 ns  Iteration: 1  Process: /apatb_matrixmul_top/generate_sim_done_proc File: matrixmul.autotb.vhd
+# Break in Process generate_sim_done_proc at matrixmul.autotb.vhd line 733

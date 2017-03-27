@@ -1,0 +1,64 @@
+INFO: [HLS 200-10] Running '/home/patmos/Xilinx/Vivado_HLS/2016.4/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'patmos' on host 'ubuntu' (Linux_x86_64 version 4.4.0-66-generic) on Mon Mar 27 20:25:41 CEST 2017
+INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply'
+INFO: [HLS 200-10] Opening project '/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/hls_list_multiply'.
+INFO: [HLS 200-10] Opening solution '/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/hls_list_multiply/test'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a100tcsg324-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/g++"
+   Compiling apatb_list_multiply.cpp
+   Compiling (apcc) list_multiply_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/home/patmos/Xilinx/Vivado_HLS/2016.4/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'patmos' on host 'ubuntu' (Linux_x86_64 version 4.4.0-66-generic) on Mon Mar 27 20:25:43 CEST 2017
+INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/hls_list_multiply/test/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_patmos/75791490639143917657
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) list_multiply.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/home/patmos/Xilinx/Vivado_HLS/2016.4/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'patmos' on host 'ubuntu' (Linux_x86_64 version 4.4.0-66-generic) on Mon Mar 27 20:25:44 CEST 2017
+INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/hls_list_multiply/test/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_patmos/76311490639144703417
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+test[0] = 2 test[1] = 4 test[2] = 6 
+Test passes! 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/home/patmos/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /home/patmos/Xilinx/Vivado/2016.4/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_list_multiply_top -prj list_multiply.prj --initfile /home/patmos/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s list_multiply 
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/hls_list_multiply/test/sim/verilog/list_multiply.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module list_multiply
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/hls_list_multiply/test/sim/verilog/list_multiply_muxbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module list_multiply_muxbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/hls_list_multiply/test/sim/verilog/AESL_autobram_a.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autobram_a
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/hls_list_multiply/test/sim/verilog/list_multiply.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_list_multiply_top
+INFO: [VRFC 10-2458] undeclared symbol brama_Rst_A, assumed default net type wire [/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/hls_list_multiply/test/sim/verilog/list_multiply.autotb.v:145]
+INFO: [VRFC 10-2458] undeclared symbol brama_Rst_B, assumed default net type wire [/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/hls_list_multiply/test/sim/verilog/list_multiply.autotb.v:152]
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.list_multiply_muxbkb(ID=1,din4_W...
+Compiling module xil_defaultlib.list_multiply
+Compiling module xil_defaultlib.AESL_autobram_a
+Compiling module xil_defaultlib.apatb_list_multiply_top
+Built simulation snapshot list_multiply

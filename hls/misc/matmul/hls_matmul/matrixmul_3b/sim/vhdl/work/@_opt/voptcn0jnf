@@ -1,0 +1,99 @@
+m255
+K3
+cModel Technology Builtin Library
+13
+Z0 d/u/qa/buildsites/10.1b/builds/linux/modeltech
+Z1 !s8c locked
+Penv
+Z2 OL;C;10.1b;51
+32
+b1
+Z3 OP;C;10.1b;51
+Z4 w1335506395
+Z5 d$MODEL_TECH/..
+Z6 8vhdl_src/std/env.vhd
+Z7 Fvhdl_src/std/env.vhd
+l0
+L1
+VkU@g3bh3dSQ6SKX7=V`LE3
+Z8 OE;C;10.1b;51
+Z9 !s108 1335508829.950255
+Z10 !s90 -work|std|-dirpath|$MODEL_TECH/..|vhdl_src/std/env.vhd|
+Z11 !s107 vhdl_src/std/env.vhd|
+Z12 o-work std -dirpath {$MODEL_TECH/..}
+Z13 tExplicit 1
+!i10b 1
+!s100 ^`JWjc^Kdz?i>c86BhQN^2
+Bbody
+DPx4 work 3 env 0 22 kU@g3bh3dSQ6SKX7=V`LE3
+R2
+32
+R3
+l0
+L11
+VaiKaS=JalB`YEWcXd=SOe0
+R8
+R9
+R10
+R11
+R12
+R13
+nbody
+!i10b 1
+!s100 ?ll]];KZ37Z]nCh<Bk7;Y0
+Pstandard
+R2
+33
+R3
+R4
+R5
+8vhdl_src/std/standard.vhd
+Fvhdl_src/std/standard.vhd
+l0
+L8
+Vm1:nJELOz1XOlHZkCN8_C2
+R8
+o-s -2008 -work std -dirpath {$MODEL_TECH/..}
+R13
+!i10b 1
+!s100 3<Nlb7hQ^9aB_=``ALf1Z3
+!s108 1335508829.884295
+!s90 -s|-2008|-work|std|-dirpath|$MODEL_TECH/..|vhdl_src/std/standard.vhd|
+!s107 vhdl_src/std/standard.vhd|
+Ptextio
+R2
+33
+b1
+R3
+Z14 w1335206640
+R5
+Z15 8vhdl_src/std/textio.vhd
+Z16 Fvhdl_src/std/textio.vhd
+l0
+L1
+V5>J:;AW>W0[[dW0I6EN1Q0
+R8
+Z17 !s108 1335508830.019668
+Z18 !s90 -2008|-work|std|-dirpath|$MODEL_TECH/..|vhdl_src/std/textio.vhd|
+Z19 !s107 vhdl_src/std/textio.vhd|
+Z20 o-2008 -work std -dirpath {$MODEL_TECH/..}
+R13
+!i10b 1
+!s100 Y8d?=bLj9m4jiPLbo;>GT0
+Bbody
+DPx4 work 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+R2
+33
+R3
+l0
+L186
+V19BMa2DS:g16YDfhWOjD^1
+R8
+R17
+R18
+R19
+R20
+R13
+nbody
+!i10b 1
+!s100 e:j1i6:1]:ckfBi]V_l3>3

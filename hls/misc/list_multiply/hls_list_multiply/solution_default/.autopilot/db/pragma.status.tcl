@@ -1,2 +1,0 @@
-lappend pragmaStatus0 {pragma "PIPELINE" source "C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/matrixmul.cpp" location "matmul/CL1" found 0 funcFound 0 applied 0 ambiguous 0 reason "Directive 'PIPELINE' cannot be applied: Function 'matmul' does not exist in any synthesis source file."}
-lappend pragmaStatus1 {pragma "INTERFACE" source "C:/Dropbox/Projects/vivado_hls/bit_flipping/hls/matrixmul.cpp" location "matmul" found 0 funcFound 0 applied 0 ambiguous 0 reason "Directive 'INTERFACE' cannot be applied: Function 'matmul' does not exist in any synthesis source file."}
