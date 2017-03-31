@@ -1,0 +1,31 @@
+diff --git a/bench/sequential/gsm_encode/gsm_encode.c b/bench/sequential/gsm_encode/gsm_encode.c
+index bd67274..dd67412 100644
+--- a/bench/sequential/gsm_encode/gsm_encode.c
++++ b/bench/sequential/gsm_encode/gsm_encode.c
+@@ -1174,7 +1174,7 @@ void Gsm_Coder (
+ 
+   static word	e [50] = {0};
+ 
+-  word	so[160];
++  word	so[1024];
+ 
+   Gsm_Preprocess			(S, s, so);
+   Gsm_LPC_Analysis		(S, so, LARc);
+@@ -3143,7 +3143,7 @@ gsm create()
+   return r;
+ }
+ 
+-int encode() 
++int gsm_encode_main()
+ {
+   gsm r;
+   unsigned i;
+@@ -3162,7 +3162,7 @@ int encode()
+ 
+ int main( void ) 
+ {
+-  return encode();
++  return gsm_encode_main();
+ }
+ 
+ 

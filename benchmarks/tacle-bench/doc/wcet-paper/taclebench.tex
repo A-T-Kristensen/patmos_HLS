@@ -1,0 +1,716 @@
+\documentclass[a4paper,UKenglish]{oasics-v2016}
+%This is a template for producing OASIcs articles.
+%See oasics-manual.pdf for further information.
+%for A4 paper format use option "a4paper", for US-letter use option "letterpaper"
+%for british hyphenation rules use option "UKenglish", for american hyphenation rules use option "USenglish"
+
+\usepackage{microtype}%if unwanted, comment out or use option "draft"
+
+\usepackage{booktabs}
+
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+%\graphicspath{{./graphics/}}%helpful if your graphic files are in another directory
+
+\bibliographystyle{plain}% the recommended bibstyle
+
+
+\newcommand{\todo}[1]{{\emph{TODO: #1}}}
+\newcommand{\martin}[1]{{\color{blue} Martin: #1}}
+\newcommand{\abcdef}[1]{{\color{red} Author2: #1}}
+
+\newcommand{\benchcount}{53 }
+
+\newcommand{\code}[1]{{\small{\texttt{#1}}}}
+
+% remove the comment for the submission
+\renewcommand{\todo}[1]{}
+\renewcommand{\martin}[1]{}
+
+
+% fatter TT font
+\renewcommand*\ttdefault{txtt}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% Author macros::begin %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{TACLeBench: A Benchmark Collection to Support Worst-Case Execution
+Time Research\footnote{This work was partially supported by COST Action
+IC1202 Timing Analysis on Code-Level (TACLe).}}
+%\titlerunning{TACLeBench} %optional, in case that the title is too long; the running title should fit into the top page column
+
+% Heiko first, rest in alphabetical order
+\author[1]{Heiko Falk}
+\author[2]{Sebastian Altmeyer}
+\author[3]{Peter Hellinckx}
+\author[4]{Bj{\"o}rn Lisper}
+\author[5]{Wolfgang Puffitsch}
+\author[6]{Christine Rochange}
+\author[5]{Martin Schoeberl}
+\author[5]{Rasmus Bo S{\o}rensen}
+\author[7]{Peter W{\"a}gemann}
+\author[8]{Simon Wegener}
+\affil[1]{Hamburg University of Technology, Institute of Embedded Systems, Germany \\
+  \texttt{Heiko.Falk@tuhh.de}}
+\affil[2]{University of Amsterdam, The Netherlands\\
+  \texttt{altmeyer@uva.nl}}
+\affil[3]{University of Antwerp, iMinds, Belgium\\
+  \texttt{peter.hellinckx@uantwerpen.be}}
+\affil[4]{M{\"a}lardalen University, School of Innovation, Design, and Engineering, Sweden\\
+  \texttt{bjorn.lisper@mdh.se}}
+\affil[5]{Technical University of Denmark, Department of Applied Mathematics and Computer Science, Denmark\\
+  \texttt{\{wopu,masca,rboso\}@dtu.dk}}
+\affil[6]{University of Toulouse, France\\
+  \texttt{rochange@irit.fr}}
+\affil[7]{Friedrich-Alexander University Erlangen-N{\"u}rnberg, Germany\\
+  \texttt{waegemann@cs.fau.de}}
+\affil[8]{AbsInt Angewandte Informatik GmbH, Germany\\
+  \texttt{wegener@absint.com}}
+  \authorrunning{H.~Falk et al.}%mandatory. First: Use abbreviated first/middle names. Second (only in severe cases): Use first author plus 'et. al.'
+
+\Copyright{Heiko Falk et al.}%mandatory. OASIcs license is "CC-BY";  http://creativecommons.org/licenses/by/3.0/
+
+\subjclass{C.3 SPECIAL-PURPOSE AND APPLICATION-BASED SYSTEMS, Real-time and embedded systems}
+%\subjclass{Dummy classification -- please refer to \url{http://www.acm.org/about/class/ccs98-html}}% mandatory: Please choose ACM 1998 classifications from http://www.acm.org/about/class/ccs98-html . E.g., cite as "F.1.1 Models of Computation".
+\keywords{Benchmark, WCET analysis, real-time systems}
+% Author macros::end %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Editor-only macros:: begin (do not touch as author)%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\EventEditors{Martin Schoeberl}
+\EventNoEds{1}
+\EventLongTitle{16th International Workshop on Worst-Case Execution Time
+Analysis (WCET 2016)}
+\EventShortTitle{WCET 2016}
+\EventAcronym{WCET}
+\EventYear{2016}
+\EventDate{July 5, 2016}
+\EventLocation{Toulouse, France}
+\EventLogo{}
+\SeriesVolume{55}
+\ArticleNo{2}
+% Editor-only macros::end %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Engineering related research, such as research on worst-case execution time,
+uses experimentation to evaluate ideas. For these experiments we need
+example programs. Furthermore, to make the research experimentation
+repeatable those programs shall be made publicly available.
+
+We collected open-source programs, adapted them to a common coding
+style, and provide the collection in open-source. The benchmark collection
+is called TACLeBench and is available from GitHub in version 1.9
+at the publication date of this paper. One of the main features of TACLeBench
+is that all programs are self-contained without any dependencies on standard
+libraries or an operating system.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+Good, realistic benchmark suites are essential for the evaluation and comparison
+of worst-case execution time (WCET) analysis, compiler, and computer architecture techniques.
+TACLeBench provides a freely available and comprehensive benchmark suite
+for timing analysis and related research topics.
+%, featuring complex multi-core benchmarks in the near future.
+TACLeBench will be continuously extended by novel benchmarks,
+especially by parallel multi-task/multi-core benchmarks.
+The extension of TACLeBench will be carefully managed with snapshots
+and versioning so that it is clear which code has been used in a research
+experiment.
+The overall goal is to establish TACLeBench as the standard benchmarking
+suite for WCET analysis, WCET oriented compiler and computer
+architecture research worldwide.
+
+TACLeBench is a collection of currently \benchcount benchmark programs
+from several different research groups and tool vendors around the world.
+These benchmarks are provided as ISO C99 source codes.
+The source codes are 100\% self-contained; no dependencies to system-specific
+header files via \code{\#include} directives or an operating system exist.
+All input data is part of the C source code.
+Potentially used functions from math libraries are also provided in the form of C source code.
+This makes the TACLeBench collection useful for general embedded/barebone
+systems where no standard library is available.
+
+Furthermore, almost all benchmarks are processor-independent and can
+be compiled and evaluated for any kind of target processor.
+The only exception is PapaBench that uses architecture-dependent
+I/O addresses and currently supports Atmel AVR processors only.
+
+Since TACLeBench addresses the needs imposed by timing analysis tools,
+all benchmarks are completely annotated with flow facts.
+These flow facts are directly incorporated into the C source codes using
+pragmas. % at a high level of abstraction.
+TACLeBench distinguishes between so-called flow restrictions, loop bounds, and entry points.
+% The following details shall go into its own section on a future publication with more space
+%Flow restrictions allow to express the execution count of one statement in relation to the execution count of other statements.
+%This annotation methods allows to express any kinds of linear dependencies between execution counts of statements.
+%Flow restrictions are expressed in terms of inequations, where each side of an inequation is a weighted sum of execution counts of statements, and where the two sides of an inequation are compared by less-than-equal, equal, or greater-than-equal operators.
+%For example, flow restrictions can be used to express precise upper execution bounds for irregularly nested loops (e.g., triangular loops), recursions, multi-entry loops etc.
+Besides flow restrictions, TACLeBench also uses loop bound flow facts, which simplify the annotation of regular loops.
+Loop bounds provide an upper and a lower bound for the number of iterations of the annotated loop.
+%
+Finally, TACLeBench uses entry point annotations that denote points in a program's control flow graph where the control flow may start.
+Typically, this is the ``main'' function of a program, but in a (possibly interrupt-driven) multi-task system, there may be multiple entry points in a single set of source files.
+These entry points may even share some common code.
+In order to mark such task entries, each function of a multi-task application where a task begins can be marked as an entry point.
+% For example, the following source code snippet states that the shown loop
+% iterates between 50 and 100 times, depending on the data dependency
+% via variable \code{maxIter}:
+%
+% \begin{verbatim}
+%       _Pragma( "loopbound min 50 max 100" )
+%
+%       for ( i = 1; i <= maxIter; i++ )
+%
+%         Array[i] = i * fact * KNOWN_VALUE;
+%
+% \end{verbatim}
+The complete specification of the used flow fact language can be found in~\cite{flowfacts},
+which is part of the source distribution.
+
+
+If you would like to share your  benchmarks with us,
+feel free to contact Heiko Falk (or any coauthor of this paper) in order
+to have your source codes included in TACLeBench.
+
+The first version of TACLeBench (version 1.0, available
+from\footnote{\url{http://www.tacle.eu/index.php/activities/taclebench}}), which was produced
+by Heiko Falk, was a collection of 102 programs from several different
+research groups. We keep this first version tagged with ``V1.0'' in the public
+GitHub repository.\footnote{\url{https://github.com/tacle/tacle-bench}}
+The version described in this paper is version 1.9 and tagged as such in the
+repository. Version 2.0 will be soon available when the last missing programs have been formatted.
+The intention is to have the HEAD of the master branch being
+the most recent, versioned snapshot of TACLeBench.
+Future development and additions will be performed on a development
+branch so that HEAD of master is always a consistent snapshot.
+
+This paper is organized in 5 sections: The following section presents related work.
+Section~\ref{sec:collect} presents the benchmark collection, its classification, and the updates
+to make them useful.
+Section~\ref{sec:eval} evaluates the benchmark collection.
+Section~\ref{sec:conclusion} concludes.
+
+\section{Related Work}
+\label{sec:related}
+
+The M{\"a}lardalen WCET benchmarks (MRTC)~\cite{wcet:bench:2012} is the first collection of programs especially
+intended for benchmarking WCET analysis tools, with a focus on program flow analysis.
+%This collection of C programs was an attempt to organize a number of codes, which had up to then been floating around
+%in the research community, into a repository with a more systematic treatment of meta-data and easy web access.
+It was collected from several sources in 2005, and has since then been
+used in many WCET research projects as well as for the WCET Tool Challenge 2006~\cite{Gustafsson:ISOLA2006}.
+A subset of the M{\"a}lardalen benchmarks has even been translated to
+Java~\cite{jop:volta:rtas2008}. Most benchmarks are relatively small, except
+two C programs that have been generated from tools.
+The benchmarks also contain all input data. This effectively turns them into single-path programs, which
+makes them less suitable for evaluating tools that can handle multi-path codes.
+%To remedy that,
+%some of the benchmarks are equipped with suggested input ranges that override the fixed
+%input data in the code. The user is however then responsible to use the proper settings of the tool,
+%or to create an appropriate test harness, such that the programs are analyzed with the specified input ranges
+%rather than the fixed input data.
+We include most of the benchmarks from the
+M{\"a}lardalen WCET benchmark suite in TACLeBench.
+We dropped benchmarks where the licensing terms are unknown
+or even disallow distributing the source.
+
+MiBench~\cite{MiBench} is a collection of benchmarks targeting the embedded
+domain and providing them in open-source.
+We include some of the MiBench benchmarks, especially
+those where it was possible to include the input data with the C source.
+
+DEBIE~\cite{debie} is a program derived from a satellite-mounted detector of micro-meteorids and space debris.
+It was developed by Space Systems Finland Ltd and was converted by Tidorum Ltd into a portable benchmark for real-time applications.
+DEBIE is a multi-task application that consists of 8, partially small, different tasks.
+DEBIE is accompanied by a specification of valid input and output data and of required activation rates of the individual tasks.
+
+PapaBench~\cite{papabench} has been derived from  Paparazzi,\footnote{\url{https://wiki.paparazziuav.org/}}
+a project for unmanned aerial vehicles.  PapaBench includes
+two software components that run on separate processors:
+the \textit{fly-by-wire} part controls the flight while the \textit{autopilot} part controls the GPS and
+executes the flight plan (which is decided offline). Both software parts  cumulate 13 tasks that are subject
+to precedence constraints and 6 interrupt service routines.
+
+The Embedded Microprocessor Benchmark Consortium (EEMBC)~\cite{eembc} provides a
+benchmark suite dedicated to the evaluation of
+the performance of embedded hardware and embedded software.
+The benchmarks are divided into subsets according to the target domain, e.g., the automotive domain, phones and tablets, but also big data and cloud computing.
+To improve comparability between different systems, the consortium provides a
+test-harness that allows deriving certifiable scores.
+The test-harness, being a clear advantage in terms of comparability,
+constitutes a hindrance in terms of portability and usability.
+Whereas the TACLeBench has been designed to ease portability and to allow the immediate use of the benchmark with a large variety of tools and platforms, the EEMBC benchmarks are not stand-alone executable without the test-harness.
+Furthermore, in stark contrast to TACLeBench, the EEMBC benchmarks are not published under an open-source license.
+Instead, the benchmarks are behind a pay-wall, even for purely academic research.
+
+
+JemBench~\cite{jembench} is a Java benchmark suite targeting
+embedded Java platforms. JemBench only assumes the
+availability of a CLDC API, the minimal configuration
+defined for the J2ME. The core of the benchmark suite consists of
+adapted real-world applications.
+The benchmarks are structured in {\em micro}, {\em kernel}, {\em
+application}, {\em parallel}, and {\em streaming} benchmarks.
+Micro benchmarks are used to measure short bytecode sequences;
+kernel benchmarks compute a computational kernel; and application
+benchmarks are real-world programs restructured as standalone benchmarks.
+Parallel and streaming benchmarks are intended to explore multicore
+speedup.
+%\martin{Maybe we should port some of those to C?}
+Benedikt Huber ported one of the application benchmarks (Lift) to C
+and we include it in TACLeBench.
+
+
+\begin{table}[t!]
+\centering
+\caption{\label{tab:bench_kernel}TACLeBench kernel benchmarks}
+\begin{tabular}{lL{5.5cm}rR{2.5cm}}
+\toprule
+Name & Description & Code Size & Origin\\
+     &             &     (SLOC) & \\ \midrule
+binarysearch & Binary search of 15 integers & 47 & SNU-RT \\
+bitcount & Couting number of bits in an integer array & 164  & Bob Stout \& Auke Reitsma\\
+bitonic &  Bitonic sorting network  & 52 & MiBench \\
+bsort & Bubblesort program & 32 & MRTC \\
+complex\_updates &  Multiply-add with complex vectors & 18 & DSPStone \\
+countnegative &  Counts signes in a matrix  & 35 & MRTC \\
+fac &  Factorial function & 21 & MRTC \\
+fft &  1024-point FFT, 13 bits per twiddle  & 78  & DSPStone \\
+filterbank & Filter bank for multirate signals  & 75 & StreamIt \\
+fir2dim &  2-dimensional FIR filter convolution & 75 & DSPStone \\
+iir &  Biquad IIR 4 sections filter & 27 & DSPStone \\
+insertsort & Insertion sort & 35 & SNU-RT \\
+jfdctint & Discrete-cosine transformation on a 8x8 pixel block  & 123  & SNU-RT \\
+lms &  LMS adaptive signal enhancement  & 51  & SNU-RT \\
+ludcmp & LU decomposition & 68 & SNU-RT \\
+matrix1 &  Generic matrix multiplication  & 28 & DSPStone \\
+md5 &  Message digest algorithm & 344  & NetBench \\
+minver & Floating point matrix inversion  & 141  & SNU-RT \\
+pm & Pattern match kernel & 484  & HPEC \\
+prime &  Prime number test  & 41 & MRTC \\
+quicksort &  Quick sort of strings and  vectors & 992 & MiBench \\
+recursion &  Artificial recursive code  & 18 & MRTC \\
+sha &  NIST secure hash algorithm & 382  & MiBench \\
+st & Statistics calculations & 90  & MRTC \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{The Benchmark Collection}
+\label{sec:collect}
+
+\subsection{Benchmark Sources and Classification}
+
+The benchmarks included in TACLeBench are sourced from single sources and
+benchmarks collections.
+The benchmarks are: SNU-RT benchmark suite, MiBench embedded benchmark suite, M{\"a}lardalen Real-Time Research Center (MRTC) WCET benchmarks,
+DSPStone from RWTH Aachen, StreamIt from MIT, NetBench from UCLA, MediaBench, and the HEPC challenge benchmark suite.
+We have specified the origin of each benchmark in Tables~\ref{tab:bench_kernel}-\ref{tab:bench_app}.
+
+%\todo{what did we collect. How many indirections in collections have there be?
+%E.g., adpcm.c: (1) SOURCE : C Algorithms for Real-Time DSP by P. M. Embree,
+%(2) SNU-RT Benchmark Suite, (3) MDH, and (4) TACLeBench. How have
+%benchmarks  changed? Legal changes?}
+%\todo{Rasmus}
+
+%In this subsection, we provide an overview of the classes of benchmarks that are found in the TACLeBench suite and list the individual benchmarks.
+As a measure of the size of each benchmark, we present the number of source lines of code (SLOC).
+The SLOC count excludes input data arrays and the initialization code.
+We used the Linux utility \code{sloccount} to measure the SLOC.
+The benchmarks are divided into five classes: Kernel, sequential, application, test, and parallel.
+
+
+
+The kernel benchmarks, listed in Table~\ref{tab:bench_kernel}, are synthetic benchmarks implementing small kernel functions; the size of the kernel benchmarks is in the range of 18 to 992 SLOC.
+%
+\begin{table}[t]
+\centering
+\caption{\label{tab:bench_sequential}TACLeBench sequential benchmarks}
+\begin{tabular}{lL{5.5cm}rR{2.5cm}}
+\toprule
+Name & Description & Code Size & Origin\\
+   & &  (SLOC) & \\ \midrule
+adpcm\_dec & ADPCM decoder & 293 & SNU-RT \\
+adpcm\_enc &  ADPCM encoder  & 316  & SNU-RT \\
+ammunition & C compiler arithmetic stress test  & 2431 & Vladimir Makarov \\
+anagram &  Word anagram computation & 2710  & Raymond Chen \\
+audiobeam &  Audio beam former  & 833  & StreamIt \\
+cjpeg\_transupp &  JPEG image transcoding routines  & 608 & MediaBench \\
+cjpeg\_wrbmp & JPEG image bitmap writing code & 892 & Thomas G. Lane \\
+dijkstra & All pairs shortest path  & 117  & MiBench \\
+epic & Efficient pyramid image coder  & 451  & MediaBench \\
+fmref &  Software FM radio with equalizer & 680  & StreamIt \\
+g723\_enc &  CCITT G.723 encoder  & 480  & SUN Microsystems \\
+gsm\_dec & GSM provisional standard decoder & 543 & MediaBench \\
+gsm\_enc & GSM provisional standard encoder & 1491 & MediaBench \\
+h264\_dec &  H.264 block decoding functions & 460 & MediaBench \\
+huff\_dec &  Huffman decoding with a file source to decompress  & 183  & David Bourgin \\
+huff\_enc & Huffman encoding with a file source to compress  & 325  & David Bourgin \\
+mpeg2 &  MPEG2 motion estimation  & 1297 & MediaBench \\
+ndes & Complex embedded code  & 260  & MRTC \\
+petrinet & Petri net simulation & 500  & Friedhelm Stappert \\
+rijndael\_dec & Rijndael AES decryption  & 820 & MiBench \\
+rijndael\_enc & Rijndael AES encryption  & 734 & MiBench \\
+statemate &  Statechart simulation of a car window lift control & 1038 & Friedhelm Stappert \\
+susan &  MR image recognition algorithm & 1491 & MiBench \\
+\bottomrule
+\end{tabular}
+\end{table}
+%
+The sequential benchmarks, listed in Table~\ref{tab:bench_sequential},
+implement large function blocks,
+such as encoders and decoders, which are used in many embedded systems.
+The size of the sequential benchmarks is in the range of 117 to 2710 SLOC.
+The sequential benchmarks cover graph search, cryptographic algorithms, compression algorithms, etc.
+%
+\begin{table}
+\centering
+\caption{\label{tab:bench_test}TACLeBench test benchmarks}
+\begin{tabular}{lL{5.5cm}rR{2.5cm}}
+\toprule
+Name & Description & Code Size & Origin\\
+     &             &  (SLOC) & \\ \midrule
+cover &  Artificial code with lots of different control flow paths  & 620  & MRTC \\
+duff & Duff's device  & 35 & MRTC \\
+test3 &  Artificial WCET analysis stress test & 4235 & Universit\"at des Saarlandes \\
+\bottomrule
+\end{tabular}
+\end{table}
+%
+Three artificial test benchmarks, listed in Table~\ref{tab:bench_test}, are used
+to stress test WCET analysis tools.
+%
+\begin{table}
+\centering
+\caption{\label{tab:bench_parallel}TACLeBench parallel benchmarks}
+\begin{tabular}{lL{5cm}rrR{2cm}}
+\toprule
+Name & Description & \#Tasks &Code Size & Origin\\
+     &             &         &(SLOC) & \\ \midrule
+Debie&  DEBIE-1 instrument observing micro-meteoroids and small space debris &8 &  6615 & Tidorum Ltd \\
+PapaBench &  UAV autopilot and fly-by-wire software & 10 & 6336 & Paparazzi \\
+\bottomrule
+\end{tabular}
+\end{table}
+%
+The two parallel benchmarks, listed in Table~\ref{tab:bench_parallel}, are:
+Debie and PapaBench.
+These two benchmarks are comparable in size and in the number of tasks.
+
+The application benchmarks, derived from real applications and provided with simulated input stimuli, are listed in Table~\ref{tab:bench_app}.
+%
+Lift is a lift controller that has been deployed at a
+factory in Turkey. The hardware is based on a Java processor (JOP).
+% in an
+%FPGA device and an I/O print that was originally developed
+%for the supervisory control and data acquisition device.
+The controller has just a few inputs (command buttons and input
+sensors for the height measurement) and a simple motor control.
+The I/O devices are simulated in the benchmark.
+The Java version of Lift is part of the Java benchmark suit JemBench~\cite{jembench}.
+Benedikt Huber has translated lift to C.
+
+powerwindow implements a controller for an electric window in a car.
+Both the driver and the passenger are able to control the window by 
+requesting the window to roll up or down.
+In case an object is stuck between the window and the doorframe,
+the controller will move the window down to avoid damaging the object.
+
+\begin{table}
+\centering
+\caption{\label{tab:bench_app}TACLeBench application benchmarks}
+\begin{tabular}{lL{5cm}rrR{2cm}}
+\toprule
+Name & Description & \#Tasks & Code Size & Origin\\
+
+     &             &         &     (SLOC) & \\ \midrule
+lift & A lift controller & 1 & 361 & Martin Schoeberl\\
+powerwindow & Distributed power window control & 4 & 2533 & CoSys-Lab \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Issues with the Original Sources}
+
+
+\todo{Show the issues with code snippets. Or the difference with the original one
+and the updated one with patmos-clang -O3 and pasim.}
+
+\todo{Show how compiler optimizations optimized away the original code and how we fixed this}
+
+The original benchmarks include all input data or we added input data into the C source.
+However, this effectively turns them into single-path programs.
+This fact could be used by analysis tools to explore only this single path.
+Another consequence of the fixed
+input data, and that some programs do not provide
+any return value, is that compilers with optimizations turned on can optimize
+most of the code away.
+However, to prohibit the unwanted compiler optimizations we changed
+the way input data is represented in variables (made them \code{volatile}),
+and made the return of \code{main} dependent on the benchmark calculation.
+
+%Some benchmarks, which are part of V 1.0 of TACLeBench and are available
+%for download in the Internet, have a license that does not allow open-source distribution.
+%We removed those benchmarks from the original source.
+
+\martin{Mmh, I think we need to fix this. The simplest form is dropping them
+from the list. How many benchmarks depend on byte ordering?}
+Some benchmarks contain target dependent code.
+For example, PapaBench contains hardcoded I/O addresses.
+Furthermore, a few benchmarks (e.g., rijndael) are byte order dependent
+and there is no standard way in C to detect the byte order of a processor.
+Finally, some benchmarks can be executed only once, either because
+they rely on global initialization, or because they use \code{malloc} but not \code{free}.
+
+%%%\todo{low-level access to device registers -- which benchmarks are involved?}
+
+\subsection{Benchmark Updates}
+
+The benchmarks have been rewritten to split the functions of
+input data initialization, the benchmark itself, and computing a return
+value depending on the output data. Moving the input data generation
+into its own function resulted sometimes in movements from originally
+stack allocated data into global data.
+All function and variable names are prepended with the benchmark
+name to provide unique names.
+All loops have been annotated with loop bounds.
+Moreover, several bugs have been fixed, and compiler warnings have been eliminated.
+The benchmarks are now ISO C99 compliant.
+Some benchmarks have been renamed. The original name of a benchmark can be found in the comment header of each benchmark.
+The library functions used by some benchmarks have been moved to their own files.
+All source files adhere to a common set of formatting rules that can be found in the git repository (\textit{doc/code\_formatting.txt}).
+
+%%%\todo{What else has been done?}
+
+Due to these changes, results obtained with the TACLeBench versions
+of these benchmarks are not comparable with the original versions of
+the benchmarks.
+
+
+\subsection{Licenses}
+
+An issue we encountered with several benchmarks was that the original
+source did not include any licensing information. In absence of such
+information, we had to assume that the copyright holder reserves all
+rights. Wherever necessary, we contacted the copyright holders to
+obtain the right to use, modify, and redistribute the benchmarks. In a
+small number of cases we however discovered that the code was in fact
+under a license that made the benchmark unusable; the respective
+benchmarks were consequently dropped from the TACLeBench benchmark
+suite. All benchmarks in the benchmark suite now contain licensing
+information, such that future developments do not require tracking
+down the original authors of the benchmark.
+
+
+
+
+
+\subsection{Usage Recommendations}
+\label{usage}
+
+TACLeBench is released in source form. However, to report
+results based on TACLeBench, the benchmarks shall not be changed.
+Furthermore, the version of TACLeBench shall be included in any paper.
+% Martin does not understand the following sentence.
+% State the results for the entry points of the benchmarks.
+
+If possible, use all benchmarks in your evaluation. One issue with subsetting
+a benchmark collection is to \emph{selecting the most representative benchmarks}
+to show an improvement. However, this introduces a bias in the result and
+is considered scientific misconduct. If you really need to subset a benchmark collection you have
+two possibilities: (1) use only one class of benchmarks, e.g., the sequential
+benchmarks or (2) use a random selection, possibly generated by a program.
+
+If some benchmarks have not been used, state the reason for exclusion
+(e.g., ``the tool/target architecture does not support floating point numbers'').
+% Martin does not like allowing benchmarks patching
+%If a benchmark needs to be patched to run on a some architecture,
+%publish what changes needed to be done (preferably as a patch).
+\martin{I would really like to aim for a benchmark collection that does not
+need any changes! Better drop some.}
+
+
+\subsection{Known Uses of TACLeBench}
+
+Although TACLeBench is a relative new collection of embedded benchmarks,
+we can already list some usage of the collection in research projects.
+This early adaption of TACLeBench is already a strong indication of
+the need of such a benchmark collection.
+
+\martin{This section might go away, as we have not enough pace.
+However, it is good to collect the information here. We might need it
+for a future journal version.}
+
+\todo{Refs are missing form some usage.}
+
+\begin{itemize}
+%\item Static analysis: \todo{No usage up to now?}
+\item Compiler optimizations: The origin of TACLeBench is the collection of free
+programs used for evaluation of the wcc compiler~\cite{falk:wcc:wcet06}.
+\item Measurement-based analysis: TACLeBench has been used to evaluate the continuous measurement-based WCET estimation approach presented
+in~\cite{Dreyer2016}.
+The different characteristics of the different benchmarks proved to be very useful to trigger edge cases in the analysis and led to various improvements of the prototype.
+However, the evaluation for this approach happened before version 2.0 of TACLeBench has been finished,
+which makes the results non-comparable to the final benchmark collection.
+\martin{I am having a hard time understanding the (original) text on hybrid analysis.
+What are the two layers? 
+Anyway I try to rewrite and cutdown. We need to discuss this for the final version.}
+\item Hybrid analysis: The hybrid model splits the code of tasks into basic blocks
+and uses measurements to obtain instruction traces.
+% Each basic block contains one path trace of instructions with a single set of inputs and a single set of outputs.  The  size  of  a  basic  block  varies  between  the  largest possible trace meeting the constraints of a single set of inputs and outputs over a single memory block, i.e. a unit of memory that is replaced by a cache replacement algorithm, to a single program instruction.
+The  challenge  of  this  two-layer  hybrid  approach  is  tackling the computational complexity problems within the static analysis and accuracy  within  the  measurements based  layer.
+% In  other  words,  a  proper  balance  needs  to  be found between the two layers of the hybrid model.
+The TACLeBench is used in the COBRA-HPA (COde Behaviour fRAmework-Hybrid Program Analyser) framework that facilitates evaluation of the different approaches using different block sizes.
+\martin{We need a link or paper for the above. I did not find anything just with Google.}
+Furthermore, COBRA-TG (Taskset Generator) uses TACLeBench for schedulability analysis.
+Different scheduling methodologies can be analyzed in a reproducible way using generated
+tasksets based on specific application descriptions.
+%It replaces the limited set of universal scheduling benchmarks and the wide variety of non-reproducible benchmark application with a methodology that enables for an unlimited but reproducible set of tasksets.
+\item Hardware design: As the TACLeBench collection is self contained, it leads itself
+as an easy to use benchmark collection to evaluate computer architecture design in the
+embedded and real-time domain. We have used version 1.0 for the evaluation of the
+stack cache design optimized for real-time systems~\cite{patmos:stackcache:rts}.
+
+%\begin{itemize}
+%%\item Static analysis: \todo{No usage up to now?}
+%\item Compiler optimizations: The origin of TACLeBench is the collection of free
+%programs used for evaluation of the wcc compiler.
+%\item Measurement-based analysis: TACLeBench has been used to evaluate the continuous measurement-based WCET estimation approach presented
+%in~\cite{Dreyer2015}.\footnote{A report of this evaluation has been submitted to the 2016 edition of the WCET workshop.}
+%The different characteristics of the different benchmarks proved to be very useful to trigger edge cases in the analysis and led to various improvements of the prototype.
+%Since the evaluation for this approach happened before version 2.0 of TACLeBench was finalized, some issues occurred that will be fixed in the final collection.
+%This makes the results stated there non-comparable.
+%Moreover, the best practices mentioned in Section~\ref{usage} have not been strictly followed.
+%\item Hybrid analysis: The hybrid model splits the code of a set of tasks into so-
+%called basic blocks. Each basic block contains one path trace of instructions with a single set of inputs and a single set of outputs.  The  size  of  a  basic  block  varies  between  the  largest possible trace meeting the constraints of a single set of inputs and outputs over a single memory block, i.e. a unit of memory that is replaced by a cache replacement algorithm, to a single program instruction.
+%The  challenge  of  this  two-layer  hybrid  approach  is  tackling the computational complexity problems within the static analysis  layer  and  the  accuracy  within  the  measurements based  layer.  In  other  words,  a  proper  balance  needs  to  be found between the two layers of the hybrid model. The TACLeBench is used in the COBRA-HPA (COde Behaviour fRAmework-Hybrid Program Analyser) framework that facilitates evaluation of the different approaches using different block sizes.
+%\item Schedulability analysis using TACLeBench is facilitated by the COBRA-TG (Taskset Generator). Different scheduling methodologies can be analyzed in a reproducible way using generated tasksets based on specific application descriptions. It replaces the limited set of universal scheduling benchmarks and the wide variety of non-reproducible benchmark application with a methodology that enables for an unlimited but reproducible set of tasksets.
+%\item Hardware design: As the TACLeBench collection is self contained, it leads itself
+%as an easy to use benchmark collection to evaluate computer architecture design in the
+%embedded and real-time domain. We have used version 1.0 for the evaluation of the
+%stack cache design optimized for real-time systems~\cite{patmos:stackcache:rts}.
+
+% Based on taskset descriptions
+
+\end{itemize}
+
+
+\subsection{Source Access and Compiling the Benchmarks}
+
+The benchmarks are hosted on GitHub at \url{https://github.com/tacle/tacle-bench}.
+Each benchmark is in its own folder and can simply be compiled with your favorite
+C compiler with following command:
+
+\begin{verbatim}
+  cc/gcc/clang *.c
+\end{verbatim}
+
+
+\section{Evaluation and Sanity Checks}
+\label{sec:eval}
+To evaluate the complexity of the benchmarks and their resilience against 
+compiler optimizations, we executed each benchmark on \texttt{pasim}, a 
+cycle-accurate simulator of the Patmos architecture~\cite{t-crest:2015}. Each 
+benchmark was compiled using \texttt{patmos-clang} with activated compiler 
+optimizations~(i.e., -O2). The results of this evaluation are summarized in 
+Figure~\ref{fig:execution-times}. All execution traces start at the function 
+marked as entry point by a pragma directive in the source code of the benchmark.
+The execution times range from 305\,cycles~(binarysearch) up to 
+1,658,333,567\,cycles~(test3).
+%TODO: we should rename this artificial WCET analysis stress test
+To put this into relation, the benchmark program test3 runs approximately 
+for 21\,seconds on the Patmos platform assuming a CPU Frequency of 80\,Mhz.
+%TODO: can we easily make this calculation?
+% bs.c from M{\"a}lardalen is completely optimized to a 
+% single return statement (in clang, not in patmos-clang).
+% In patmos-clang bs requires only 26 cycles (starting) from main.
+From this evaluation we make the main observation that 
+TACLeBench consists of both short- and long running benchmarks with a huge variety in execution time. 
+No benchmark in the suite is optimized to a single return statement.
+
+\begin{figure}[t]
+  \def\resultfile{eval/wcet.csv}
+  \input{eval/pasim-eval.tikz}
+  \caption{Execution times of programs in TACLeBench range from 305 cycles up to more than 1,600,000,000 cycles on the Patmos architecture.}
+  \label{fig:execution-times}
+\end{figure}
+
+Different members of the TACLe COST action changed the code.
+Such a collaborative procedure is inherently error-prone.
+Human errors can occur and the original sources were often faulty to start with.
+The distributive work on the benchmarks led to an additional source of error detection:
+%Different system configurations can lead to different behaviors, and 
+a benchmark behaving well under system configuration A may be faulty under configuration B.
+To ensure the quality of the benchmarks and to improve portability, we have thus implemented automatic sanity checks.
+
+The code quality
+% and conformity with the code formatting rules
+is validated centrally and the latest results can be viewed online.\footnote{\url{https://www4.cs.fau.de/Research/TACLeBench}}
+For this sanity check, all benchmarks are compiled using \textit{gcc}, \textit{g$++$} and \textit{clang}, executed and the return values are checked against the expected value.
+Clang's static analyzer\footnote{\url{http://clang-analyzer.llvm.org/}} is used to further reveal programming bugs, such as out-of-bounds errors, and also to validate the compliance of the code with the code-formatting rules.
+
+The portability has been checked via a shell-script (\code{checkBenchmark.sh}) that is now part of the TACLeBench repository.
+\martin{Should check again if it executes on a Mac.}
+The script allows to quickly identifying incompatibilities of the benchmarks with specific operating systems, compilers, and system configurations.
+Even though full coverage of all system configurations can never be achieved, we were able to cover most of the common operating systems and compilers.
+
+% In order to improve the code quality of the TACLeBench suite, we used different
+% compilers (e.g., clang, gcc) to identify shortcomings in the code of each benchmark in an
+% automated way. Additionally, we exploited Clang's static
+% analyzer\footnote{\url{http://clang-analyzer.llvm.org/}} to further reveal
+% programming bugs in the benchmark suite. We extended this sanity checker with additional
+% TACLeBench-specific passes to identify if all benchmark are compliant to the code-formatting rules.
+
+\todo{Comparison compiler warning in TACLeBench v1 with v2, problem: expint was in 1.0, but is no
+longer in 2.0 and powerwindow was added for 2.0}
+
+%Possible Options for the Evaluation:
+%
+%\begin{itemize}
+%\item Compile for an embedded processor and measure execution time
+%\item Compile for Patmos and use pasim for execution cycles
+%\item 
+%\item Complexity numbers with bar charts on execution time and maybe tools
+%\item Use some WCET tools
+%\end{itemize}
+
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Research in the field of embedded real-time systems needs benchmarks to
+evaluate research ideas. TACLeBench provides an open source collection of
+\benchcount benchmarks. As all benchmarks are self-contained, they are easy to
+use in systems that are lacking the standard library or an operating systems.
+%
+This paper reports on the TACLeBench version 1.9. The major revision
+2.0 will be released when the last missing programs have been adapted
+to the common coding style.
+We intend to grow the collection of programs and coordinate the
+release of benchmark versions.
+We further welcome contributions to the benchmark collection.
+
+
+
+\subparagraph*{Acknowledgements}
+
+We want to thank Bendikt Huber for porting the Lift benchmark from Java to C.
+We want to thank Niklas Holsti from Tidorum Ltd for contributing DEBIE in open-source.
+% Order according to contribution count on GitHub: https://github.com/tacle/tacle-bench/graphs/contributors
+% But Simon is not listed there! Maybe we are missing some people?
+We want to thank Yorick De Bock, Florian Kluge, J{\"o}rg Mische, and Haoxuan Li for helping in restructuring the benchmarks.
+
+
+\bibliography{taclebench}
+
+
+\end{document}
