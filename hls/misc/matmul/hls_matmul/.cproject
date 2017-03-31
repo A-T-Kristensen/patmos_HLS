@@ -25,7 +25,6 @@
 								<option id="gnu.cpp.compiler.exe.debug.option.optimization.level.859077987" name="Optimization Level" superClass="gnu.cpp.compiler.exe.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.1045990400" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1916065959" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/home/patmos/bachelor_project_HLS/hls/misc/matmul"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include"/>
@@ -43,7 +42,6 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.183542482" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.debug.option.debugging.level.1258752891" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.1162240212" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/home/patmos/bachelor_project_HLS/hls/misc/matmul"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include"/>
@@ -111,7 +109,6 @@
 								<option id="gnu.cpp.compiler.exe.release.option.optimization.level.122140361" name="Optimization Level" superClass="gnu.cpp.compiler.exe.release.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.release.option.debugging.level.1198897376" name="Debug Level" superClass="gnu.cpp.compiler.exe.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1290131776" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/home/patmos/bachelor_project_HLS/hls/misc/matmul"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include"/>
@@ -124,7 +121,6 @@
 								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.exe.release.option.optimization.level.837844126" name="Optimization Level" superClass="gnu.c.compiler.exe.release.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.release.option.debugging.level.281607878" name="Debug Level" superClass="gnu.c.compiler.exe.release.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.635755510" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/home/patmos/bachelor_project_HLS/hls/misc/matmul"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include"/>
