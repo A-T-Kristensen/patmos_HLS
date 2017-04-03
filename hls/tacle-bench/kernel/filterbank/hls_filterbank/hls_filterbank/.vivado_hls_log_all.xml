@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'filterbank_core_hwa/F_Din_A' to 0." projectName="hls_filterbank" solutionName="solution1" date="2017-04-03T12:52:31.002+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'filterbank_core_hwa/F_WEN_A' to 0." projectName="hls_filterbank" solutionName="solution1" date="2017-04-03T12:52:30.663+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'filterbank_core_hwa/H_Din_A' to 0." projectName="hls_filterbank" solutionName="solution1" date="2017-04-03T12:52:30.657+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'filterbank_core_hwa/H_WEN_A' to 0." projectName="hls_filterbank" solutionName="solution1" date="2017-04-03T12:52:30.654+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'filterbank_core_hwa/r_Din_A' to 0." projectName="hls_filterbank" solutionName="solution1" date="2017-04-03T12:52:30.653+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'filterbank_core_hwa/r_WEN_A' to 0." projectName="hls_filterbank" solutionName="solution1" date="2017-04-03T12:52:30.632+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'store' operation (../filterbank.c:100) of variable 'tmp_12', ../filterbank.c:100 on array 'y' due to limited memory ports." projectName="hls_filterbank" solutionName="solution1" date="2017-04-03T12:52:27.907+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] more than one sub loop." projectName="hls_filterbank" solutionName="solution1" date="2017-04-03T12:52:26.449+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2' (../filterbank.c:59:9) in function 'filterbank_core_hwa' : " projectName="hls_filterbank" solutionName="solution1" date="2017-04-03T12:52:24.120+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Pipeline directive for loop 'Loop-2.7.1' (../filterbank.c:90) in function 'filterbank_core_hwa' has been removed because the loop is unrolled completely." projectName="hls_filterbank" solutionName="solution1" date="2017-04-03T12:52:22.870+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Pipeline directive for loop 'loop3' (../filterbank.c:82) in function 'filterbank_core_hwa' has been removed because the loop is unrolled completely." projectName="hls_filterbank" solutionName="solution1" date="2017-04-03T12:52:22.666+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Pipeline directive for loop 'loop2' (../filterbank.c:74) in function 'filterbank_core_hwa' has been removed because the loop is unrolled completely." projectName="hls_filterbank" solutionName="solution1" date="2017-04-03T12:52:22.649+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Pipeline directive for loop 'Loop-2.4.1' (../filterbank.c:67) in function 'filterbank_core_hwa' has been removed because the loop is unrolled completely." projectName="hls_filterbank" solutionName="solution1" date="2017-04-03T12:52:22.625+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

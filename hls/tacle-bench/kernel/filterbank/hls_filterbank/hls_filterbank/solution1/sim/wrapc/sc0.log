@@ -1,0 +1,21 @@
+   Build using "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/g++"
+   Compiling apatb_filterbank_core_hwa.cpp
+   Compiling (apcc) filterbank_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/home/patmos/Xilinx/Vivado_HLS/2016.4/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'patmos' on host 'ubuntu' (Linux_x86_64 version 4.4.0-66-generic) on Mon Apr 03 12:52:45 CEST 2017
+INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/hls_filterbank/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_patmos/721501491216765171566
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) filterbank.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/home/patmos/Xilinx/Vivado_HLS/2016.4/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'patmos' on host 'ubuntu' (Linux_x86_64 version 4.4.0-66-generic) on Mon Apr 03 12:52:46 CEST 2017
+INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/hls_filterbank/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_patmos/722021491216766106222
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
