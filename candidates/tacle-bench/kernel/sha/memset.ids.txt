@@ -1,0 +1,37 @@
+FUNC: sha_glibc_memset
+	12: ARG : 0
+	5 : 41 : icmp
+	3 : 42 : trunc
+	1: ARG : 1
+	2: ARG : 2
+	22 : ?? : phi
+	26 : ?? : phi
+	11 : 25 : ptrtoint
+	4 : 27 : icmp
+	6 : ?? : phi
+	14 : ?? : phi
+	8 : 78 : trunc
+	34 : 79 : add
+	35 : 80 : sub
+	13 : 43 : add
+	15 : 44 : sub
+	7 : 36 : or
+	20 : 48 : trunc
+	16 : ?? : phi
+	19 : ?? : phi
+	18 : 50 : icmp
+	17 : 59 : add
+	21 : 60 : sub
+	23 : 50 : add
+	27 : 65 : trunc
+	25 : 67 : icmp
+	24 : 69 : add
+	28 : 70 : sub
+	30 : 67 : add
+	32 : 72 : trunc
+	29 : ?? : phi
+	31 : ?? : phi
+	33 : ?? : phi
+	10 : ?? : phi
+	9 : 77 : icmp
+

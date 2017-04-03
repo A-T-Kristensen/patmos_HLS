@@ -1,0 +1,81 @@
+FUNC: rijndael_dec_init
+	34 : 104 : icmp
+	5 : 76 : load
+	8 : 76 : zext
+	6 : 76 : load
+	7 : 76 : load
+	9 : 76 : trunc
+	19 : ?? : phi
+	33 : 100 : icmp
+	18 : ?? : phi
+	23 : 86 : icmp
+	12 : 86 : load
+	26 : 86 : icmp
+	16 : ?? : phi
+	25 : 88 : getelementptr
+	13 : 88 : load
+	15 : 88 : sext
+	14 : 88 : call
+	32 : 89 : icmp
+	31 : 89 : icmp
+	22 : ?? : phi
+	27 : 90 : sub
+	30 : 92 : icmp
+	29 : 92 : icmp
+	28 : 93 : add
+	17 : 101 : trunc
+	20 : 104 : load
+	35 : 108 : icmp
+	36 : 108 : icmp
+	21 : 113 : udiv
+	1 : 73 : load
+	2 : 73 : load
+	3 : 73 : xor
+	11 : ?? : phi
+	4 : 75 : load
+	10 : 75 : icmp
+	24 : ?? : phi
+
+FUNC: rijndael_dec_return
+	1 : 118 : load
+	2 : 118 : select
+
+FUNC: rijndael_dec_decfile
+	14 : 160 : call
+	15 : 162 : load
+	16 : 162 : load
+	17 : 162 : add
+	26 : ?? : alloca
+	29 : ?? : alloca
+	1 : 127 : call
+	2 : 129 : call
+	10 : 132 : and
+	3 : 137 : call
+	4 : 140 : load
+	5 : 140 : load
+	6 : 140 : add
+	12 : ?? : phi
+	11 : 143 : icmp
+	7 : 144 : load
+	8 : 144 : load
+	9 : 144 : trunc
+	25 : 146 : getelementptr
+	28 : 147 : getelementptr
+	24 : ?? : phi
+	27 : ?? : phi
+	13 : 152 : call
+	18 : 154 : icmp
+	23 : ?? : phi
+	22 : 165 : icmp
+	19 : 166 : load
+	20 : 166 : load
+	21 : 166 : trunc
+
+FUNC: rijndael_dec_main
+	1 : 178 : load
+	3 : 178 : sext
+	2 : 178 : call
+
+FUNC: main
+	1 : 188 : call
+

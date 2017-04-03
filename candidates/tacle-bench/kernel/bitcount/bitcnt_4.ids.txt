@@ -1,0 +1,35 @@
+FUNC: bitcount_init4
+	1 : 54 : load
+	8 : 54 : icmp
+	2 : 55 : load
+	4 : 55 : sext
+	3 : 55 : load
+	5 : 55 : load
+	6 : 54 : load
+	7 : 54 : add
+
+FUNC: bitcount_ntbl_bitcnt
+	1: ARG : 0
+	3 : 60 : sext
+	2 : 60 : load
+	8 : 60 : sext
+	5 : 62 : lshr
+	9 : 62 : icmp
+	4 : 63 : call
+	7 : 63 : add
+	6 : ?? : phi
+
+FUNC: bitcount_btbl_bitcnt
+	10 : 77 : add
+	9 : ?? : phi
+	1: ARG : 0
+	2 : 74 : load
+	4 : 74 : sext
+	3 : 74 : load
+	11 : 74 : sext
+	5 : 76 : load
+	6 : 76 : lshr
+	12 : 76 : icmp
+	7 : 77 : load
+	8 : 77 : call
+

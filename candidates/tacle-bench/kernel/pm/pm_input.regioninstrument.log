@@ -1,0 +1,25 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x26dcac0>, <0x26e2850>, <0x26e2850>, <0x26e2850>, <0x26e4190>, <0x26e2850>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/pm/pm_input.c] [DW_LANG_C99]
+
+!{!"0x34\00pm_lib_data\00pm_lib_data\00\0012\000\001", null, <0x26e2930>, <0x26dd4d0>, [60 x [64 x float]]* @pm_lib_data, null} ; [ DW_TAG_variable ] [pm_lib_data] [line 12] [def]
+
+!{!"0x34\00pm_pattern_data\00pm_pattern_data\00\00494\000\001", null, <0x26e2930>, <0x26dd4d0>, [60 x [64 x float]]* @pm_pattern_data, null} ; [ DW_TAG_variable ] [pm_pattern_data] [line 494] [def]
+
+!{!"0x1\00\000\00122880\0032\000\000\000", null, null, <0x26d5938>, <0x26dd460>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 122880, align 32, offset 0] [from float]
+
+!{!"0x24\00float\000\0032\0032\000\000\004", null, null} ; [ DW_TAG_base_type ] [float] [line 0, size 32, align 32, offset 0, enc DW_ATE_float]
+
+INFO: Loop bodies will be given their own region id
+DEBUG: found 0 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: Writing kremlib calls to pm_input.kdump
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

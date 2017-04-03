@@ -1,0 +1,279 @@
+FUNC: ndes_init
+	5 : ?? : phi
+	1 : 79 : load
+	6 : ?? : phi
+	7 : 78 : icmp
+	3 : 88 : load
+	4 : 89 : load
+	8 : 80 : icmp
+	2 : 81 : load
+
+FUNC: ndes_des
+	21 : 139 : icmp
+	30 : 142 : call
+	32 : 142 : or
+	91 : 139 : add
+	90 : 139 : add
+	35 : 146 : icmp
+	33 : 148 : trunc
+	64 : 168 : load
+	95 : 163 : add
+	65 : 171 : load
+	66 : 172 : load
+	67 : 173 : load
+	83 : ?? : phi
+	71 : ?? : phi
+	70 : 177 : icmp
+	68 : 178 : load
+	69 : 178 : shl
+	72 : 179 : load
+	73 : 179 : load
+	77 : 179 : sext
+	74 : 179 : load
+	94 : 156 : add
+	93 : 156 : add
+	62 : ?? : phi
+	61 : 163 : icmp
+	58 : 166 : load
+	59 : 166 : load
+	60 : 166 : xor
+	63 : 167 : load
+	9 : 125 : icmp
+	11 : ?? : phi
+	8 : ?? : phi
+	10 : 130 : icmp
+	7 : 131 : shl
+	89 : 130 : add
+	12 : 134 : load
+	20 : 134 : icmp
+	96 : 177 : add
+	47 : 159 : load
+	49 : 160 : load
+	50 : 160 : load
+	55 : 160 : sext
+	52 : 160 : load
+	53 : 160 : load
+	54 : 160 : call
+	56 : 160 : or
+	92 : 146 : add
+	39 : ?? : phi
+	38 : 156 : icmp
+	36 : 157 : load
+	37 : 157 : shl
+	42 : 158 : load
+	43 : 158 : load
+	44 : 158 : call
+	46 : 158 : or
+	48 : 159 : shl
+	57 : 165 : load
+	27 : ?? : phi
+	13 : 140 : load
+	40 : 158 : load
+	41 : 158 : load
+	14 : 140 : load
+	19 : 140 : sext
+	34 : ?? : phi
+	29 : 142 : load
+	45 : 158 : sext
+	75 : 179 : load
+	15 : ?? : phi
+	16 : 140 : load
+	17 : 140 : load
+	18 : 140 : call
+	22 : 140 : or
+	23 : 141 : load
+	24 : 141 : shl
+	25 : 142 : load
+	26 : 142 : load
+	31 : 142 : sext
+	28 : 142 : load
+	51 : ?? : phi
+	76 : 179 : call
+	78 : 179 : or
+	79 : 180 : load
+	80 : 180 : shl
+	81 : 181 : load
+	82 : 181 : load
+	87 : 181 : sext
+	84 : 181 : load
+	85 : 181 : load
+	86 : 181 : call
+	88 : 181 : or
+	97 : 177 : add
+	6 : 125 : load
+	4: ARG : 3
+	5: ARG : 5
+	1: ARG : 0
+	3: ARG : 2
+	2: ARG : 1
+
+FUNC: ndes_getbit
+	14 : 316 : icmp
+	6 : 317 : sext
+	5 : 317 : load
+	3: ARG : 2
+	1: ARG : 0
+	2: ARG : 1
+	7 : 317 : load
+	12 : 317 : select
+	9 : 319 : sext
+	8 : 319 : load
+	10 : 319 : load
+	13 : 319 : select
+	11 : ?? : phi
+	4: ARG : 3
+
+FUNC: ndes_ks
+	22 : 343 : load
+	26 : 343 : sext
+	23 : 343 : load
+	24 : 343 : load
+	25 : 343 : call
+	27 : 342 : or
+	28 : 344 : load
+	1: ARG : 0
+	21 : 342 : load
+	11 : 326 : or
+	2 : 327 : load
+	3 : 327 : load
+	4 : 327 : lshr
+	5 : 328 : load
+	6 : 328 : load
+	7 : 328 : lshr
+	13 : ?? : phi
+	12 : 331 : icmp
+	8 : 332 : load
+	9 : 332 : load
+	10 : 332 : lshr
+	14 : 333 : load
+	15 : 333 : load
+	16 : 333 : lshr
+	48 : 331 : add
+	42 : ?? : phi
+	32 : ?? : phi
+	20 : ?? : phi
+	19 : 340 : icmp
+	17 : 341 : load
+	18 : 341 : shl
+	29 : 344 : shl
+	30 : 345 : load
+	31 : 346 : load
+	36 : 346 : sext
+	33 : 346 : load
+	34 : 346 : load
+	35 : 346 : call
+	37 : 345 : or
+	38 : 347 : load
+	39 : 347 : shl
+	40 : 348 : load
+	41 : 349 : load
+	46 : 349 : sext
+	43 : 349 : load
+	44 : 349 : load
+	45 : 349 : call
+	47 : 348 : or
+	51 : 340 : add
+	50 : 340 : add
+	49 : 340 : add
+
+FUNC: ndes_cyfun
+	60 : 302 : sext
+	59 : 302 : load
+	84 : 302 : or
+	61 : 296 : load
+	62 : 296 : add
+	63 : 309 : load
+	66 : 309 : icmp
+	64 : 310 : load
+	65 : 310 : shl
+	67 : 309 : load
+	68 : 309 : add
+	69 : 311 : load
+	71 : 311 : sext
+	70 : 311 : load
+	72 : 311 : load
+	73 : 311 : load
+	74 : 311 : or
+	52 : 299 : load
+	53 : 299 : load
+	54 : 300 : load
+	1: ARG : 0
+	17 : ?? : phi
+	12 : ?? : phi
+	2 : 274 : load
+	9 : 274 : icmp
+	3 : 275 : load
+	4 : 275 : load
+	6 : 275 : sext
+	5 : 275 : load
+	7 : 275 : load
+	8 : 275 : or
+	10 : 276 : load
+	11 : 276 : load
+	13 : 276 : load
+	14 : 276 : or
+	15 : 277 : load
+	16 : 277 : load
+	18 : 277 : load
+	19 : 277 : or
+	20 : 274 : load
+	21 : 274 : add
+	77 : 274 : add
+	76 : 274 : add
+	22 : 279 : load
+	23 : 279 : load
+	24 : 279 : xor
+	25 : 280 : load
+	26 : 280 : load
+	27 : 280 : xor
+	28 : 281 : load
+	29 : 281 : load
+	30 : 281 : xor
+	31 : 282 : load
+	32 : 282 : load
+	82 : 282 : add
+	33 : 283 : load
+	34 : 283 : load
+	80 : 283 : add
+	78 : ?? : phi
+	41 : ?? : phi
+	38 : ?? : phi
+	35 : 286 : load
+	39 : 286 : icmp
+	37 : 287 : trunc
+	36 : 287 : load
+	40 : 288 : trunc
+	83 : 289 : lshr
+	81 : 290 : lshr
+	42 : 286 : load
+	43 : 286 : add
+	79 : 286 : add
+	75 : ?? : phi
+	44 : 296 : load
+	49 : 296 : icmp
+	45 : 297 : load
+	47 : 297 : sext
+	46 : 297 : load
+	48 : 297 : sext
+	50 : 298 : load
+	51 : 298 : load
+	55 : 300 : load
+	56 : 301 : load
+	58 : 301 : sext
+	57 : 301 : load
+
+FUNC: ndes_return
+	1 : 355 : load
+	2 : 355 : load
+	3 : 355 : zext
+
+FUNC: ndes_main
+	1 : 360 : load
+	2 : 360 : load
+	3 : 360 : load
+	4 : 360 : load
+	5 : 360 : load
+
+FUNC: main
+	1 : 370 : call
+

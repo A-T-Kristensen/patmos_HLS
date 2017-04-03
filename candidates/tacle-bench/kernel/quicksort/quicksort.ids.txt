@@ -1,0 +1,110 @@
+FUNC: quicksort_init
+	2 : 73 : load
+	6 : 75 : zext
+	24 : ?? : phi
+	27 : 70 : icmp
+	25 : ?? : phi
+	28 : 72 : icmp
+	3 : 73 : zext
+	1 : 73 : load
+	4 : 75 : load
+	5 : 75 : load
+	29 : 75 : icmp
+	16 : ?? : phi
+	8 : ?? : phi
+	15 : 84 : icmp
+	10 : 85 : add
+	7 : 85 : load
+	12 : 86 : add
+	9 : 86 : load
+	26 : 84 : add
+	11 : 87 : load
+	14 : 91 : uitofp
+	13 : 91 : call
+	18 : 91 : uitofp
+	17 : 91 : call
+	20 : 91 : uitofp
+	19 : 91 : call
+	22 : 91 : fadd
+	21 : 90 : call
+	23 : 90 : fpext
+
+FUNC: quicksort_return
+	1 : 101 : load
+	2 : 102 : load
+	3 : 102 : load
+	4 : 103 : load
+	5 : 100 : add
+
+FUNC: quicksort_str
+	6 : 150 : udiv
+	10 : 151 : sub
+	12 : 153 : icmp
+	14: ARG : 0
+	1: ARG : 1
+	2: ARG : 2
+	11 : ?? : phi
+	9 : ?? : phi
+	3 : ?? : phi
+	8 : 120 : icmp
+	18 : 121 : icmp
+	16 : 122 : call
+	17 : 124 : getelementptr
+	15 : ?? : phi
+	23 : 128 : getelementptr
+	19 : ?? : phi
+	22 : ?? : phi
+	24 : ?? : phi
+	25 : 135 : getelementptr
+	26 : 136 : icmp
+	4 : 136 : call
+	30 : 136 : icmp
+	20 : ?? : phi
+	27 : ?? : phi
+	28 : 140 : getelementptr
+	29 : 141 : icmp
+	5 : 141 : call
+	31 : 141 : icmp
+	7 : ?? : phi
+	21 : 143 : icmp
+	13 : 155 : getelementptr
+
+FUNC: quicksort_vec
+	26 : 187 : icmp
+	4 : 187 : call
+	30 : 187 : icmp
+	14: ARG : 0
+	1: ARG : 1
+	11 : ?? : phi
+	9 : ?? : phi
+	3 : ?? : phi
+	8 : 171 : icmp
+	2: ARG : 2
+	18 : 172 : icmp
+	16 : 173 : call
+	17 : 175 : getelementptr
+	15 : ?? : phi
+	23 : 179 : getelementptr
+	19 : ?? : phi
+	22 : ?? : phi
+	24 : ?? : phi
+	25 : 186 : getelementptr
+	20 : ?? : phi
+	27 : ?? : phi
+	28 : 191 : getelementptr
+	29 : 192 : icmp
+	5 : 192 : call
+	31 : 192 : icmp
+	7 : ?? : phi
+	21 : 194 : icmp
+	6 : 201 : udiv
+	10 : 202 : sub
+	12 : 204 : icmp
+	13 : 206 : getelementptr
+
+FUNC: quicksort_main
+
+FUNC: main
+	1 : 238 : call
+	2 : 238 : zext
+

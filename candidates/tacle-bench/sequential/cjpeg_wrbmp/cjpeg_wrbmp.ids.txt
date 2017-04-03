@@ -1,0 +1,90 @@
+FUNC: cjpeg_wrbmp_init
+
+FUNC: cjpeg_wrbmp_putc_modified
+	3 : 103 : trunc
+	2 : 103 : load
+	1: ARG : 0
+	7 : 107 : add
+	4 : 105 : load
+	5 : 105 : getelementptr
+	6 : 107 : load
+
+FUNC: cjpeg_wrbmp_finish_output_bmp
+	13 : 120 : icmp
+	7 : 121 : icmp
+	9 : 123 : zext
+	8 : 123 : load
+	1 : 116 : load
+	6 : 116 : bitcast
+	5 : ?? : phi
+	3 : 122 : load
+	2 : 120 : load
+	10 : 128 : load
+	11 : 128 : add
+	12 : 120 : add
+	4 : 122 : zext
+
+FUNC: cjpeg_wrbmp_write_colormap
+	5 : 141 : load
+	10 : 141 : icmp
+	3: ARG : 3
+	2: ARG : 2
+	1: ARG : 1
+	4 : 136 : load
+	12 : ?? : phi
+	41 : 192 : call
+	47 : 186 : add
+	42 : ?? : phi
+	22 : 160 : zext
+	46 : ?? : phi
+	38 : 187 : call
+	39 : 188 : call
+	40 : 189 : call
+	53 : 191 : icmp
+	7 : 145 : call
+	13 : 147 : load
+	15 : 147 : zext
+	14 : 147 : call
+	16 : 149 : load
+	18 : 149 : zext
+	17 : 149 : call
+	49 : 152 : icmp
+	9 : 144 : sext
+	11 : 144 : icmp
+	45 : 139 : icmp
+	20 : 160 : load
+	6 : 145 : load
+	8 : 145 : zext
+	23 : 158 : sext
+	21 : 160 : call
+	26 : 162 : load
+	28 : 162 : zext
+	27 : 162 : call
+	29 : 164 : load
+	31 : 164 : zext
+	30 : 164 : call
+	50 : 167 : icmp
+	33 : 175 : call
+	35 : 176 : call
+	36 : 177 : call
+	52 : 179 : icmp
+	37 : 180 : call
+	48 : 186 : icmp
+	19 : 153 : call
+	25 : ?? : phi
+	24 : 158 : icmp
+	34 : ?? : phi
+	51 : 174 : icmp
+	32 : 168 : call
+	43 : ?? : trunc
+	44 : ?? : trunc
+
+FUNC: cjpeg_wrbmp_main
+
+FUNC: cjpeg_wrbmp_return
+	2 : 207 : zext
+	1 : 207 : load
+
+FUNC: main
+	1 : 215 : call
+

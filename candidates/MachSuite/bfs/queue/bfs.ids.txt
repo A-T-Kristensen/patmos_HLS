@@ -1,0 +1,35 @@
+FUNC: bfs
+	18 : ?? : phi
+	2 : 37 : load
+	1: ARG : 2
+	10 : 41 : icmp
+	6 : 42 : load
+	7 : 43 : load
+	28 : 45 : icmp
+	8 : 46 : load
+	9 : 46 : trunc
+	13 : 48 : sext
+	4 : 39 : load
+	5 : 40 : load
+	20 : ?? : phi
+	11 : ?? : phi
+	22 : ?? : phi
+	3 : ?? : phi
+	21 : 34 : icmp
+	31 : 35 : icmp
+	32 : 35 : icmp
+	33 : 35 : and
+	16 : 32 : sub
+	15 : 32 : phi
+	19 : 32 : urem
+	12 : 48 : load
+	14 : 48 : add
+	29 : 49 : icmp
+	27 : 49 : sub
+	26 : 49 : phi
+	30 : 49 : urem
+	24 : ?? : phi
+	25 : 41 : add
+	23 : 38 : urem
+	17 : 32 : icmp
+

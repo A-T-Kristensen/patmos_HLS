@@ -1,0 +1,704 @@
+FUNC: gsm_dec_sub
+	3 : 120 : trunc
+	1: ARG : 0
+	2: ARG : 1
+	6 : 120 : icmp
+	5 : 120 : select
+	4 : 120 : phi
+
+FUNC: gsm_dec_asl
+	1: ARG : 0
+	10 : 125 : icmp
+	9 : 127 : icmp
+	6 : 128 : trunc
+	8 : 129 : icmp
+	4 : 130 : sub
+	3 : 130 : call
+	7 : 131 : trunc
+	5 : ?? : phi
+	2: ARG : 1
+
+FUNC: gsm_dec_asr
+	9 : 421 : icmp
+	4 : 422 : trunc
+	8 : 423 : icmp
+	7 : 425 : icmp
+	5 : 426 : trunc
+	6 : 428 : trunc
+	2: ARG : 1
+	3 : ?? : phi
+	1: ARG : 0
+
+FUNC: gsm_dec_Decoding_of_the_coded_Log_Area_Ratios
+	27 : 176 : add
+	33 : 176 : add
+	3 : 176 : phi
+	25 : 176 : phi
+	5 : 177 : trunc
+	7 : 178 : load
+	51 : 178 : icmp
+	50 : 178 : select
+	49 : 178 : phi
+	52 : 178 : sext
+	8 : 178 : trunc
+	45 : 178 : phi
+	63 : 179 : add
+	64 : 179 : icmp
+	62 : 179 : sext
+	12 : 179 : phi
+	11 : 179 : trunc
+	13 : 181 : load
+	67 : 181 : add
+	68 : 181 : icmp
+	66 : 181 : sext
+	71 : 181 : icmp
+	70 : 181 : select
+	69 : 181 : phi
+	73 : 181 : add
+	31 : 176 : icmp
+	30 : 176 : select
+	29 : 176 : phi
+	75 : 182 : phi
+	81 : 182 : icmp
+	21 : 183 : phi
+	28 : 176 : icmp
+	26 : 176 : sext
+	38 : 177 : icmp
+	36 : 177 : sext
+	53 : 178 : add
+	54 : 178 : icmp
+	9 : 178 : phi
+	41 : 177 : icmp
+	10 : 179 : load
+	57 : 179 : add
+	58 : 179 : icmp
+	56 : 179 : sext
+	55 : 179 : phi
+	60 : 179 : select
+	59 : 179 : phi
+	40 : 177 : select
+	39 : 177 : phi
+	43 : 177 : add
+	44 : 177 : icmp
+	42 : 177 : sext
+	6 : 177 : phi
+	47 : 178 : add
+	48 : 178 : icmp
+	46 : 178 : sext
+	61 : 179 : icmp
+	72 : 181 : sext
+	65 : 181 : phi
+	1 : 176 : load
+	34 : 176 : icmp
+	32 : 176 : sext
+	2 : 176 : trunc
+	4 : 177 : load
+	37 : 177 : add
+	35 : 177 : phi
+	76 : 182 : sext
+	74 : 181 : icmp
+	15 : 181 : phi
+	14 : 181 : trunc
+	16 : 182 : load
+	77 : 182 : add
+	78 : 182 : icmp
+	80 : 182 : select
+	79 : 182 : phi
+	83 : 182 : add
+	84 : 182 : icmp
+	82 : 182 : sext
+	18 : 182 : phi
+	17 : 182 : trunc
+	19 : 183 : load
+	87 : 183 : add
+	88 : 183 : icmp
+	86 : 183 : sext
+	85 : 183 : phi
+	91 : 183 : icmp
+	90 : 183 : select
+	89 : 183 : phi
+	93 : 183 : add
+	94 : 183 : icmp
+	92 : 183 : sext
+	20 : 183 : trunc
+	22 : 184 : load
+	97 : 184 : add
+	98 : 184 : icmp
+	96 : 184 : sext
+	95 : 184 : phi
+	101 : 184 : icmp
+	100 : 184 : select
+	99 : 184 : phi
+	103 : 184 : add
+	104 : 184 : icmp
+	102 : 184 : sext
+	24 : 184 : phi
+	23 : 184 : trunc
+
+FUNC: gsm_dec_Coefficients_0_12
+	26 : 215 : icmp
+	24 : 215 : sext
+	10 : 215 : phi
+	9 : 215 : trunc
+	11 : 213 : add
+	19: ARG : 0
+	16: ARG : 1
+	13: ARG : 2
+	5 : ?? : phi
+	12 : ?? : phi
+	15 : ?? : phi
+	18 : ?? : phi
+	4 : 213 : icmp
+	1 : 214 : load
+	2 : 214 : load
+	22 : 214 : add
+	23 : 214 : icmp
+	21 : 214 : sext
+	6 : 214 : phi
+	3 : 214 : trunc
+	7 : 215 : load
+	8 : 215 : load
+	25 : 215 : add
+	14 : 213 : getelementptr
+	20 : 213 : getelementptr
+	17 : 213 : getelementptr
+
+FUNC: gsm_dec_LARp_to_rp
+	12: ARG : 0
+	6 : ?? : phi
+	11 : ?? : phi
+	5 : 233 : icmp
+	1 : 244 : load
+	16 : 244 : icmp
+	2 : 245 : load
+	17 : 245 : icmp
+	3 : 245 : load
+	15 : 245 : sub
+	14 : 245 : phi
+	22 : 246 : icmp
+	18 : 246 : sext
+	23 : 247 : icmp
+	19 : 247 : sext
+	21 : 248 : add
+	24 : 248 : icmp
+	20 : 248 : sext
+	7 : 246 : phi
+	4 : 246 : trunc
+	29 : 251 : icmp
+	25 : 252 : sext
+	30 : 253 : icmp
+	26 : 253 : sext
+	28 : 253 : add
+	31 : 253 : icmp
+	27 : 253 : sext
+	9 : 251 : phi
+	8 : 251 : trunc
+	10 : 233 : add
+	13 : 233 : getelementptr
+
+FUNC: gsm_dec_Decoder
+	5 : 279 : load
+	13 : 272 : getelementptr
+	21: ARG : 2
+	18: ARG : 3
+	15: ARG : 4
+	12: ARG : 5
+	8: ARG : 6
+	6 : ?? : phi
+	7 : ?? : phi
+	11 : ?? : phi
+	14 : ?? : phi
+	17 : ?? : phi
+	20 : ?? : phi
+	10 : 272 : icmp
+	1 : 274 : load
+	2 : 274 : load
+	3 : 275 : load
+	4 : 275 : load
+	23 : ?? : phi
+	24 : 278 : icmp
+	19 : 272 : getelementptr
+	22 : 272 : getelementptr
+	16 : 272 : getelementptr
+	9 : 272 : getelementptr
+
+FUNC: gsm_dec_RPE_Decoding
+	2: ARG : 1
+	1: ARG : 0
+	3 : 339 : load
+	4 : 339 : load
+
+FUNC: gsm_dec_Long_Term_Synthesis_Filtering
+	1: ARG : 1
+	2: ARG : 2
+	17 : 304 : icmp
+	18 : 304 : icmp
+	3 : 304 : load
+	5 : ?? : phi
+	4 : 304 : trunc
+	7 : 309 : sext
+	6 : 309 : load
+	13 : ?? : phi
+	12 : 316 : icmp
+	9 : 317 : sub
+	8 : 317 : load
+	10 : 318 : load
+	20 : 318 : add
+	21 : 318 : icmp
+	19 : 318 : sext
+	14 : 318 : phi
+	11 : 318 : trunc
+	22 : ?? : phi
+	23 : 327 : icmp
+	16 : 328 : add
+	15 : 328 : load
+
+FUNC: gsm_dec_Short_Term_Synthesis_Filter
+	1 : 547 : load
+	2 : 548 : load
+	3 : 548 : trunc
+
+FUNC: gsm_dec_Postprocessing
+	12: ARG : 1
+	1 : 469 : load
+	7 : ?? : phi
+	5 : ?? : phi
+	11 : ?? : phi
+	10 : 474 : add
+	4 : 474 : icmp
+	2 : 476 : load
+	15 : 476 : add
+	16 : 476 : icmp
+	14 : 476 : sext
+	9 : 476 : phi
+	8 : 476 : trunc
+	18 : 477 : add
+	19 : 477 : icmp
+	17 : 477 : sext
+	6 : 477 : phi
+	3 : 477 : trunc
+	13 : 474 : getelementptr
+
+FUNC: gsm_dec_APCM_quantization_xmaxc_to_exp_mant
+	1: ARG : 0
+	8 : 453 : add
+	15 : 455 : trunc
+	2 : ?? : phi
+	3 : ?? : phi
+	6 : 442 : icmp
+	5 : 443 : trunc
+	4 : ?? : phi
+	14 : 444 : trunc
+	9 : 446 : icmp
+	7 : ?? : phi
+	11 : ?? : phi
+	10 : 451 : icmp
+	13 : 452 : sext
+	12 : 452 : trunc
+
+FUNC: gsm_dec_APCM_inverse_quantization
+	2: ARG : 2
+	17: ARG : 3
+	21: ARG : 0
+	1: ARG : 1
+	4 : 399 : sext
+	3 : 399 : load
+	5 : 400 : call
+	6 : 401 : call
+	8 : 401 : sext
+	7 : 401 : call
+	16 : ?? : phi
+	13 : ?? : phi
+	20 : ?? : phi
+	19 : 404 : add
+	12 : 404 : icmp
+	22 : 407 : getelementptr
+	9 : 407 : load
+	24 : 411 : add
+	25 : 411 : icmp
+	23 : 411 : sext
+	14 : 411 : phi
+	11 : 411 : trunc
+	15 : 412 : sext
+	10 : 412 : call
+	18 : 412 : getelementptr
+
+FUNC: gsm_dec_RPE_grid_positioning
+	15 : 367 : getelementptr
+	13 : 368 : add
+	12 : ?? : phi
+	14 : ?? : phi
+	16 : ?? : phi
+	19 : ?? : phi
+	22 : ?? : phi
+	24 : ?? : phi
+	5: ARG : 2
+	18: ARG : 1
+	1: ARG : 0
+	7 : 359 : sext
+	6 : 361 : getelementptr
+	4 : ?? : phi
+	9 : 363 : getelementptr
+	8 : ?? : phi
+	11 : 365 : getelementptr
+	10 : ?? : phi
+	17 : 367 : getelementptr
+	2 : 367 : load
+	25 : 375 : getelementptr
+	3 : 375 : load
+	23 : 375 : getelementptr
+	20 : 376 : add
+	21 : 376 : icmp
+	30 : ?? : getelementptr
+	26 : ?? : phi
+	29 : ?? : phi
+	31 : 379 : add
+	28 : 379 : icmp
+	27 : 380 : getelementptr
+
+FUNC: gsm_dec_Coefficients_13_26
+	9: ARG : 2
+	12: ARG : 1
+	15: ARG : 0
+	5 : ?? : phi
+	8 : ?? : phi
+	11 : ?? : phi
+	14 : ?? : phi
+	4 : 487 : icmp
+	1 : 488 : load
+	2 : 488 : load
+	18 : 488 : add
+	19 : 488 : icmp
+	17 : 488 : sext
+	6 : 488 : phi
+	3 : 488 : trunc
+	7 : 487 : add
+	16 : 487 : getelementptr
+	13 : 487 : getelementptr
+	10 : 487 : getelementptr
+
+FUNC: gsm_dec_Coefficients_40_159
+	6: ARG : 1
+	9: ARG : 0
+	2 : ?? : phi
+	5 : ?? : phi
+	8 : ?? : phi
+	4 : 496 : icmp
+	1 : 497 : load
+	3 : 496 : add
+	7 : 496 : getelementptr
+	10 : 496 : getelementptr
+
+FUNC: gsm_dec_Short_term_synthesis_filtering
+	1: ARG : 2
+	18: ARG : 3
+	15: ARG : 4
+	14 : ?? : phi
+	17 : ?? : phi
+	9 : ?? : phi
+	20 : 512 : add
+	8 : 512 : icmp
+	2 : 513 : load
+	11 : ?? : phi
+	13 : ?? : phi
+	4 : 515 : add
+	10 : 515 : icmp
+	3 : 519 : load
+	5 : 520 : load
+	25 : 522 : icmp
+	34 : 522 : icmp
+	24 : 524 : and
+	23 : 522 : phi
+	27 : 526 : icmp
+	26 : 526 : select
+	22 : 526 : phi
+	21 : 526 : trunc
+	30 : 530 : icmp
+	35 : 530 : icmp
+	29 : 532 : and
+	28 : 530 : phi
+	6 : 534 : load
+	32 : 534 : add
+	33 : 534 : icmp
+	31 : 534 : sext
+	12 : 534 : phi
+	7 : 534 : trunc
+	19 : 513 : getelementptr
+	16 : 536 : getelementptr
+
+FUNC: gsm_dec_Coefficients_27_39
+	19: ARG : 0
+	16: ARG : 1
+	13: ARG : 2
+	5 : ?? : phi
+	12 : ?? : phi
+	15 : ?? : phi
+	18 : ?? : phi
+	4 : 577 : icmp
+	1 : 578 : load
+	2 : 578 : load
+	22 : 578 : add
+	23 : 578 : icmp
+	21 : 578 : sext
+	6 : 578 : phi
+	3 : 578 : trunc
+	7 : 579 : load
+	8 : 579 : load
+	25 : 579 : add
+	26 : 579 : icmp
+	24 : 579 : sext
+	10 : 579 : phi
+	9 : 579 : trunc
+	11 : 577 : add
+	20 : 577 : getelementptr
+	17 : 577 : getelementptr
+	14 : 577 : getelementptr
+
+FUNC: gsm_dec_create
+	4 : ?? : phi
+	3 : 596 : icmp
+	1 : 597 : load
+	2 : 597 : trunc
+
+FUNC: gsm_dec_init
+	1 : 606 : call
+
+FUNC: gsm_dec_return
+	1 : 611 : load
+
+FUNC: gsm_dec_decode
+	1 : 625 : load
+	224 : 625 : icmp
+	2 : 628 : load
+	3 : 628 : trunc
+	4 : 629 : load
+	5 : 629 : load
+	6 : 629 : trunc
+	136 : 688 : load
+	137 : 688 : load
+	138 : 688 : trunc
+	139 : 689 : load
+	140 : 689 : trunc
+	141 : 690 : load
+	142 : 690 : trunc
+	64 : 655 : trunc
+	65 : 656 : load
+	66 : 656 : trunc
+	67 : 657 : load
+	68 : 657 : trunc
+	69 : 658 : load
+	70 : 658 : load
+	71 : 658 : trunc
+	72 : 659 : load
+	73 : 659 : trunc
+	74 : 660 : load
+	75 : 660 : trunc
+	76 : 661 : load
+	77 : 661 : trunc
+	192 : 713 : load
+	193 : 713 : trunc
+	194 : 714 : load
+	195 : 714 : load
+	196 : 714 : trunc
+	197 : 715 : load
+	198 : 715 : trunc
+	199 : 716 : load
+	200 : 716 : trunc
+	201 : 717 : load
+	202 : 717 : trunc
+	203 : 718 : load
+	204 : 718 : trunc
+	205 : 719 : load
+	164 : 700 : trunc
+	165 : 701 : load
+	166 : 701 : trunc
+	167 : 702 : load
+	168 : 702 : load
+	169 : 702 : trunc
+	170 : 703 : load
+	171 : 703 : trunc
+	172 : 704 : load
+	173 : 704 : trunc
+	174 : 705 : load
+	175 : 705 : trunc
+	176 : 706 : load
+	177 : 706 : trunc
+	7 : 630 : load
+	8 : 630 : trunc
+	9 : 631 : load
+	10 : 631 : trunc
+	11 : 632 : load
+	12 : 632 : trunc
+	13 : 633 : load
+	14 : 633 : load
+	15 : 633 : trunc
+	16 : 634 : load
+	17 : 634 : trunc
+	18 : 635 : load
+	19 : 635 : trunc
+	20 : 636 : load
+	21 : 636 : load
+	22 : 636 : trunc
+	23 : 637 : load
+	24 : 637 : trunc
+	25 : 638 : load
+	26 : 638 : trunc
+	27 : 639 : load
+	28 : 639 : trunc
+	29 : 640 : load
+	30 : 640 : trunc
+	31 : 641 : load
+	32 : 641 : load
+	33 : 641 : trunc
+	34 : 642 : load
+	35 : 642 : trunc
+	36 : 643 : load
+	37 : 643 : trunc
+	38 : 644 : load
+	39 : 644 : load
+	40 : 644 : trunc
+	41 : 645 : load
+	42 : 645 : trunc
+	43 : 646 : load
+	44 : 646 : trunc
+	45 : 647 : load
+	46 : 647 : trunc
+	47 : 648 : load
+	48 : 648 : load
+	49 : 648 : trunc
+	50 : 649 : load
+	51 : 649 : trunc
+	52 : 650 : load
+	53 : 650 : trunc
+	54 : 651 : load
+	55 : 651 : trunc
+	56 : 652 : load
+	57 : 652 : trunc
+	58 : 653 : load
+	59 : 653 : trunc
+	60 : 654 : load
+	61 : 654 : load
+	62 : 654 : trunc
+	63 : 655 : load
+	79 : 662 : trunc
+	80 : 663 : load
+	81 : 663 : load
+	82 : 663 : trunc
+	83 : 664 : load
+	84 : 664 : trunc
+	85 : 665 : load
+	86 : 665 : trunc
+	87 : 666 : load
+	88 : 666 : load
+	89 : 666 : trunc
+	90 : 667 : load
+	91 : 667 : trunc
+	92 : 668 : load
+	93 : 668 : trunc
+	78 : 662 : load
+	209 : 720 : trunc
+	210 : 721 : load
+	211 : 721 : trunc
+	212 : 722 : load
+	213 : 722 : trunc
+	214 : 723 : load
+	215 : 723 : trunc
+	216 : 724 : load
+	217 : 724 : load
+	218 : 724 : trunc
+	219 : 725 : load
+	220 : 725 : trunc
+	221 : 726 : load
+	222 : 726 : trunc
+	223 : ?? : phi
+	94 : 669 : load
+	95 : 669 : trunc
+	96 : 670 : load
+	97 : 670 : load
+	98 : 670 : trunc
+	99 : 671 : load
+	100 : 671 : trunc
+	101 : 672 : load
+	102 : 672 : trunc
+	103 : 673 : load
+	104 : 673 : trunc
+	105 : 674 : load
+	106 : 674 : trunc
+	107 : 675 : load
+	108 : 675 : trunc
+	109 : 676 : load
+	110 : 676 : load
+	111 : 676 : trunc
+	112 : 677 : load
+	113 : 677 : trunc
+	114 : 678 : load
+	115 : 678 : trunc
+	116 : 679 : load
+	117 : 679 : trunc
+	118 : 680 : load
+	119 : 680 : load
+	120 : 680 : trunc
+	121 : 681 : load
+	122 : 681 : trunc
+	123 : 682 : load
+	124 : 682 : trunc
+	125 : 683 : load
+	126 : 683 : trunc
+	127 : 684 : load
+	128 : 684 : trunc
+	129 : 685 : load
+	130 : 685 : load
+	131 : 685 : trunc
+	132 : 686 : load
+	133 : 686 : trunc
+	134 : 687 : load
+	135 : 687 : trunc
+	143 : 691 : load
+	144 : 691 : trunc
+	145 : 692 : load
+	146 : 692 : load
+	147 : 692 : trunc
+	148 : 693 : load
+	149 : 693 : trunc
+	150 : 694 : load
+	151 : 694 : trunc
+	152 : 695 : load
+	153 : 695 : trunc
+	154 : 696 : load
+	155 : 696 : trunc
+	156 : 697 : load
+	157 : 697 : trunc
+	158 : 698 : load
+	159 : 698 : load
+	160 : 698 : trunc
+	161 : 699 : load
+	162 : 699 : trunc
+	163 : 700 : load
+	178 : 707 : load
+	179 : 707 : load
+	180 : 707 : trunc
+	181 : 708 : load
+	182 : 708 : trunc
+	183 : 709 : load
+	184 : 709 : trunc
+	185 : 710 : load
+	186 : 710 : load
+	187 : 710 : trunc
+	188 : 711 : load
+	189 : 711 : trunc
+	190 : 712 : load
+	191 : 712 : trunc
+	206 : 719 : trunc
+	207 : 720 : load
+	208 : 720 : load
+
+FUNC: gsm_dec_main
+	1 : 739 : load
+	3 : ?? : phi
+	4 : 742 : icmp
+	2 : 743 : call
+	5 : 743 : icmp
+
+FUNC: main
+	1 : 755 : call
+

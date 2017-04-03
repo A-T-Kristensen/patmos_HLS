@@ -1,0 +1,355 @@
+FUNCTION_BEGIN: sha_glibc_memcpy
+	BB_BEGIN: entry
+		_KEnterRegion(0x68e68603ff0ae495, 0)
+		_KPrepRTable(35, 2)
+		_KWork(1)
+		_KDeqArg(1)
+		_KTimestamp1(1, 1, 0)
+		_KTimestamp1(16, 6, 0)
+		_KTimestamp1(12, 1, 1)
+		_KTimestamp1(10, 4, 0)
+		TERMINATOR: if.then if.end25 
+	BB_END: entry
+
+	BB_BEGIN: if.then
+		_KPushCDep(12)
+		_KWork(24)
+		CALL: _KTimestamp3(5, 4, 12, 6, 1, 1, 13)
+		_KTimestamp2(18, 4, 11, 1, 12)
+		_KPopCDep()
+		TERMINATOR: while.cond.preheader 
+	BB_END: if.then
+
+	BB_BEGIN: while.cond.preheader
+		_KEnterRegion(0xf02c09b18d1f27a7, 1)
+		TERMINATOR: while.cond 
+	BB_END: while.cond.preheader
+
+	BB_BEGIN: while.cond.cont
+		_KExitRegion(0x38aa26f43e9fefc0, 2)
+		TERMINATOR: while.cond 
+	BB_END: while.cond.cont
+
+	BB_BEGIN: while.cond
+		_KPushCDep(12)
+		_KPhi2To1(14, phi-incoming-val-id16, phi-incoming-condition15, phi-incoming-condition14)
+		_KPhi2To1(15, phi-incoming-val-id19, phi-incoming-condition18, phi-incoming-condition17)
+		_KPhi2To1(9, phi-incoming-val-id21, phi-incoming-condition22, phi-incoming-condition20)
+		_KWork(1)
+		_KTimestamp2(13, 12, 1, 14, 1)
+		_KPhiAddCond(14, 13)
+		_KTimestamp1(14, 14, 0)
+		_KPhiAddCond(15, 13)
+		_KTimestamp1(15, 15, 0)
+		_KPhiAddCond(9, 13)
+		_KTimestamp1(9, 9, 0)
+		_KPopCDep()
+		TERMINATOR: while.body while.cond.pre_exit.while.end 
+	BB_END: while.cond
+
+	BB_BEGIN: while.body
+		_KEnterRegion(0x38aa26f43e9fefc0, 2)
+		_KPushCDep(13)
+		_KWork(8)
+		_KLoad0(inst_arg_ptr2, 2, 1)
+		_KTimestamp1(2, 2, 0)
+		_KStore(2, inst_arg_ptr3, 1)
+		_KTimestamp2(19, 14, 1, 13, 1)
+		_KTimestamp2(17, 15, 1, 13, 1)
+		_KTimestamp2(11, 9, 1, 13, 1)
+		_KPopCDep()
+		TERMINATOR: while.cond.cont 
+	BB_END: while.body
+
+	BB_BEGIN: while.cond.pre_exit.while.end
+		_KExitRegion(0xf02c09b18d1f27a7, 1)
+		TERMINATOR: while.end 
+	BB_END: while.cond.pre_exit.while.end
+
+	BB_BEGIN: while.end
+		_KPushCDep(12)
+		_KWork(12)
+		_KTimestamp2(3, 4, 12, 1, 13)
+		CALL: _KTimestamp3(22, 4, 23, 6, 12, 1, 24)
+		_KPopCDep()
+		TERMINATOR: if.then14 if.else 
+	BB_END: while.end
+
+	BB_BEGIN: if.then14
+		_KPushCDep(22)
+		_KWork(10)
+		_KPrepCall(0x51946a7c8504b9b3, 0)
+		CALL: _KTimestamp3(7, 4, 33, 6, 22, 1, 34)
+		_KEnqArg(7)
+		_KEnqArg(5)
+		_KEnqArg(3)
+		CALL: sha_wordcopy_fwd_aligned(  %6 = add i64 %0, %rem4, !dbg !47,   %2 = add i64 %1, %rem4, !dbg !47, conv16)
+		_KPopCDep()
+		TERMINATOR: if.end 
+	BB_END: if.then14
+
+	BB_BEGIN: if.else
+		_KPushCDep(22)
+		_KWork(2)
+		CALL: _KTimestamp3(21, 4, 25, 6, 14, 1, 26)
+		_KPopCDep()
+		TERMINATOR: if.end 
+	BB_END: if.else
+
+	BB_BEGIN: if.end
+		_KPushCDep(12)
+		_KPhi2To1(20, phi-incoming-val-id24, phi-incoming-condition23, phi-incoming-condition25)
+		_KWork(12)
+		_KTimestamp1(20, 20, 0)
+		_KTimestamp2(26, 4, 22, 1, 23)
+		_KTimestamp2(24, 4, 14, 1, 15)
+		_KPopCDep()
+		TERMINATOR: if.end25 
+	BB_END: if.end
+
+	BB_BEGIN: if.end25
+		_KPhi1To1(27, phi-incoming-val-id8, phi-incoming-condition9)
+		_KPhi1To1(25, phi-incoming-val-id10, phi-incoming-condition11)
+		_KPhi1To1(23, phi-incoming-val-id12, phi-incoming-condition13)
+		_KTimestamp1(25, 25, 0)
+		_KTimestamp1(27, 27, 0)
+		_KTimestamp1(23, 23, 0)
+		TERMINATOR: while.cond26.preheader 
+	BB_END: if.end25
+
+	BB_BEGIN: while.cond26.preheader
+		_KEnterRegion(0x83ec52166652c075, 1)
+		TERMINATOR: while.cond26 
+	BB_END: while.cond26.preheader
+
+	BB_BEGIN: while.cond26.cont
+		_KExitRegion(0xa076c39ae2c24c8b, 2)
+		TERMINATOR: while.cond26 
+	BB_END: while.cond26.cont
+
+	BB_BEGIN: while.cond26
+		_KPhi1To1(31, phi-incoming-val-id, phi-incoming-condition)
+		_KPhi1To1(32, phi-incoming-val-id4, phi-incoming-condition5)
+		_KPhi1To1(28, phi-incoming-val-id7, phi-incoming-condition6)
+		_KWork(1)
+		_KTimestamp1(30, 31, 1)
+		_KPhiAddCond(31, 30)
+		_KTimestamp1(31, 31, 0)
+		_KPhiAddCond(32, 30)
+		_KTimestamp1(32, 32, 0)
+		_KPhiAddCond(28, 30)
+		_KTimestamp1(28, 28, 0)
+		TERMINATOR: while.body29 while.cond26.pre_exit.while.end36 
+	BB_END: while.cond26
+
+	BB_BEGIN: while.body29
+		_KEnterRegion(0xa076c39ae2c24c8b, 2)
+		_KPushCDep(30)
+		_KWork(8)
+		_KLoad0(inst_arg_ptr1, 8, 1)
+		_KTimestamp1(8, 8, 0)
+		_KStore(8, inst_arg_ptr, 1)
+		_KTimestamp2(34, 31, 1, 30, 1)
+		_KTimestamp2(33, 32, 1, 30, 1)
+		_KTimestamp2(29, 28, 1, 30, 1)
+		_KPopCDep()
+		TERMINATOR: while.cond26.cont 
+	BB_END: while.body29
+
+	BB_BEGIN: while.cond26.pre_exit.while.end36
+		_KExitRegion(0x83ec52166652c075, 1)
+		TERMINATOR: while.end36 
+	BB_END: while.cond26.pre_exit.while.end36
+
+	BB_BEGIN: while.end36
+		_KExitRegion(0x68e68603ff0ae495, 0)
+		RETURN
+	BB_END: while.end36
+
+FUNCTION_END: sha_glibc_memcpy
+
+
+FUNCTION_BEGIN: llvm.dbg.declare
+FUNCTION_END: llvm.dbg.declare
+
+
+FUNCTION_BEGIN: sha_wordcopy_fwd_aligned
+FUNCTION_END: sha_wordcopy_fwd_aligned
+
+
+FUNCTION_BEGIN: llvm.dbg.value
+FUNCTION_END: llvm.dbg.value
+
+
+FUNCTION_BEGIN: _KLoad
+FUNCTION_END: _KLoad
+
+
+FUNCTION_BEGIN: _KLoad0
+FUNCTION_END: _KLoad0
+
+
+FUNCTION_BEGIN: _KLoad1
+FUNCTION_END: _KLoad1
+
+
+FUNCTION_BEGIN: _KLoad2
+FUNCTION_END: _KLoad2
+
+
+FUNCTION_BEGIN: _KLoad3
+FUNCTION_END: _KLoad3
+
+
+FUNCTION_BEGIN: _KLoad4
+FUNCTION_END: _KLoad4
+
+
+FUNCTION_BEGIN: _KStore
+FUNCTION_END: _KStore
+
+
+FUNCTION_BEGIN: _KStoreConst
+FUNCTION_END: _KStoreConst
+
+
+FUNCTION_BEGIN: _KEnqArgConst
+FUNCTION_END: _KEnqArgConst
+
+
+FUNCTION_BEGIN: _KEnqArg
+FUNCTION_END: _KEnqArg
+
+
+FUNCTION_BEGIN: _KPrepCall
+FUNCTION_END: _KPrepCall
+
+
+FUNCTION_BEGIN: _KLinkReturn
+FUNCTION_END: _KLinkReturn
+
+
+FUNCTION_BEGIN: _KMalloc
+FUNCTION_END: _KMalloc
+
+
+FUNCTION_BEGIN: _KRealloc
+FUNCTION_END: _KRealloc
+
+
+FUNCTION_BEGIN: _KFree
+FUNCTION_END: _KFree
+
+
+FUNCTION_BEGIN: _KDeqArg
+FUNCTION_END: _KDeqArg
+
+
+FUNCTION_BEGIN: _KReturnConst
+FUNCTION_END: _KReturnConst
+
+
+FUNCTION_BEGIN: _KReturn
+FUNCTION_END: _KReturn
+
+
+FUNCTION_BEGIN: _KWork
+FUNCTION_END: _KWork
+
+
+FUNCTION_BEGIN: _KTimestamp
+FUNCTION_END: _KTimestamp
+
+
+FUNCTION_BEGIN: _KTimestamp0
+FUNCTION_END: _KTimestamp0
+
+
+FUNCTION_BEGIN: _KTimestamp1
+FUNCTION_END: _KTimestamp1
+
+
+FUNCTION_BEGIN: _KTimestamp2
+FUNCTION_END: _KTimestamp2
+
+
+FUNCTION_BEGIN: _KTimestamp3
+FUNCTION_END: _KTimestamp3
+
+
+FUNCTION_BEGIN: _KTimestamp4
+FUNCTION_END: _KTimestamp4
+
+
+FUNCTION_BEGIN: _KTimestamp5
+FUNCTION_END: _KTimestamp5
+
+
+FUNCTION_BEGIN: _KTimestamp6
+FUNCTION_END: _KTimestamp6
+
+
+FUNCTION_BEGIN: _KTimestamp7
+FUNCTION_END: _KTimestamp7
+
+
+FUNCTION_BEGIN: _KPhi
+FUNCTION_END: _KPhi
+
+
+FUNCTION_BEGIN: _KPhi1To1
+FUNCTION_END: _KPhi1To1
+
+
+FUNCTION_BEGIN: _KPhi2To1
+FUNCTION_END: _KPhi2To1
+
+
+FUNCTION_BEGIN: _KPhi3To1
+FUNCTION_END: _KPhi3To1
+
+
+FUNCTION_BEGIN: _KPhi4To1
+FUNCTION_END: _KPhi4To1
+
+
+FUNCTION_BEGIN: _KPhiAddCond
+FUNCTION_END: _KPhiAddCond
+
+
+FUNCTION_BEGIN: _KInduction
+FUNCTION_END: _KInduction
+
+
+FUNCTION_BEGIN: _KPushCDep
+FUNCTION_END: _KPushCDep
+
+
+FUNCTION_BEGIN: _KPopCDep
+FUNCTION_END: _KPopCDep
+
+
+FUNCTION_BEGIN: _KPrepRTable
+FUNCTION_END: _KPrepRTable
+
+
+FUNCTION_BEGIN: _KInit
+FUNCTION_END: _KInit
+
+
+FUNCTION_BEGIN: _KDeinit
+FUNCTION_END: _KDeinit
+
+
+FUNCTION_BEGIN: _KEnterRegion
+FUNCTION_END: _KEnterRegion
+
+
+FUNCTION_BEGIN: _KExitRegion
+FUNCTION_END: _KExitRegion
+
+
+FUNCTION_BEGIN: _KLandingPad
+FUNCTION_END: _KLandingPad
+
+

@@ -1,0 +1,56 @@
+FUNC: bitcount_bit_shifter
+	1: ARG : 0
+	3 : ?? : phi
+	4 : ?? : phi
+	6 : ?? : phi
+	7 : 52 : icmp
+	8 : 52 : icmp
+	5 : 53 : add
+	9 : 52 : ashr
+	2 : ?? : phi
+
+FUNC: bitcount_return
+	1 : 59 : load
+	2 : 59 : zext
+
+FUNC: bitcount_init
+
+FUNC: bitcount_random
+	2 : ?? : phi
+	1 : 82 : load
+	4 : 85 : sub
+	5 : 86 : icmp
+	3 : 87 : add
+
+FUNC: bitcount_main
+	23 : ?? : phi
+	22 : 96 : icmp
+	1 : 98 : call
+	3 : 103 : load
+	4 : 103 : call
+	10 : 115 : call
+	11 : 119 : load
+	12 : 119 : call
+	25 : ?? : phi
+	2 : 98 : load
+	24 : 98 : icmp
+	5 : 106 : load
+	6 : 106 : call
+	7 : 110 : load
+	8 : 110 : call
+	9 : 115 : load
+	13 : 122 : load
+	14 : 122 : call
+	15 : 125 : load
+	16 : 125 : call
+	17 : 128 : load
+	18 : 128 : call
+	19 : 133 : load
+	20 : 133 : load
+	21 : 133 : add
+	26 : 99 : load
+	27 : 99 : add
+
+FUNC: main
+	1 : 145 : call
+

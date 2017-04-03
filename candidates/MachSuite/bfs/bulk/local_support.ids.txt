@@ -1,0 +1,50 @@
+FUNC: run_benchmark
+	1 : 9 : load
+
+FUNC: input_to_data
+	11 : ?? : phi
+	1: ARG : 0
+	12 : 30 : icmp
+	10 : ?? : phi
+	2 : 37 : call
+	3 : 41 : call
+	4 : 42 : call
+	13 : 43 : icmp
+	6 : 44 : mul
+	5 : 44 : load
+	8 : 45 : add
+	7 : 45 : load
+	9 : 50 : call
+
+FUNC: data_to_input
+	1: ARG : 0
+	2 : 60 : call
+	3 : 61 : call
+	4 : 63 : call
+	5 : 64 : call
+	11 : ?? : phi
+	12 : 65 : icmp
+	6 : 66 : load
+	7 : 67 : load
+	8 : 69 : call
+	9 : 72 : call
+	10 : 73 : call
+
+FUNC: output_to_data
+	1: ARG : 0
+	2 : 90 : call
+
+FUNC: data_to_output
+	2 : 97 : call
+	3 : 98 : call
+	1: ARG : 0
+
+FUNC: check_data
+	5 : ?? : phi
+	4 : ?? : phi
+	7 : 108 : icmp
+	1 : 109 : load
+	2 : 109 : load
+	6 : 109 : or
+	3 : 113 : zext
+

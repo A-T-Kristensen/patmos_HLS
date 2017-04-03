@@ -1,0 +1,12 @@
+1db7da0455d34839 callsiteId fac.c main 94 94 
+28ebd52d1210ac29 func fac.c fac_return 53 53 
+5095ccac1a684b43 func fac.c fac_init 46 46 
+600b1360d1fb18b3 func fac.c fac_main 79 79 
+633e22ce1dad3d87 callsiteId fac.c main 95 95 
+bb11eeb7582c9b63 func fac.c fac_fac 65 65 
+ccf54e4d9a4e040d func fac.c main 92 92 
+d0071f9bf39134e3 loop_body fac.c fac_main 81 86 
+daf4e49c9437ab80 loop fac.c fac_main 81 86 
+ddf1a8ecbf0688c8 callsiteId fac.c fac_main 86 86 
+e41c7d47b71fc0e3 callsiteId fac.c main 97 97 
+f184a0a97098792d callsiteId fac.c fac_fac 70 70 

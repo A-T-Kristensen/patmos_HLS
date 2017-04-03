@@ -1,0 +1,183 @@
+FUNC: rj_xtime
+	1: ARG : 0
+	2 : 98 : trunc
+
+FUNC: aes_subBytes
+	7 : 106 : icmp
+	2 : 106 : zext
+	4 : 106 : zext
+	1 : 106 : load
+	3 : 106 : load
+	6 : 106 : add
+	5 : ?? : phi
+
+FUNC: aes_addRoundKey
+	7 : ?? : phi
+	6 : 114 : icmp
+	2 : 114 : zext
+	1 : 114 : load
+	4 : 114 : zext
+	3 : 114 : load
+	5 : 114 : trunc
+	8 : 114 : add
+
+FUNC: aes_addRoundKey_cpy
+	7 : ?? : phi
+	6 : 122 : icmp
+	2 : 122 : zext
+	1 : 122 : load
+	4 : 122 : zext
+	3 : 122 : load
+	5 : 122 : trunc
+	8 : 122 : load
+	9 : 122 : sext
+	10 : 122 : add
+
+FUNC: aes_shiftRows
+	1 : 131 : load
+	2 : 131 : load
+	3 : 131 : load
+	4 : 131 : load
+	5 : 132 : load
+	6 : 132 : load
+	7 : 133 : load
+	8 : 133 : load
+	9 : 133 : load
+	10 : 133 : load
+	11 : 134 : load
+	12 : 134 : load
+
+FUNC: aes_mixColumns
+	20 : 148 : trunc
+	19 : 148 : call
+	22 : 148 : sext
+	21 : 148 : load
+	23 : 148 : trunc
+	11 : 143 : icmp
+	1 : 145 : load
+	4 : 145 : sext
+	3 : 145 : load
+	15 : 147 : trunc
+	14 : 147 : call
+	2 : ?? : phi
+	6 : 145 : sext
+	5 : 145 : load
+	8 : 145 : sext
+	7 : 145 : load
+	10 : 147 : trunc
+	9 : 147 : call
+	12 : 147 : load
+	13 : 147 : trunc
+	17 : 147 : sext
+	16 : 147 : load
+	18 : 147 : trunc
+	25 : 148 : trunc
+	24 : 148 : call
+	27 : 148 : sext
+	26 : 148 : load
+	28 : 148 : trunc
+	29 : 143 : add
+
+FUNC: aes_expandEncKey
+	1 : 157 : load
+	3 : 157 : zext
+	2 : 157 : load
+	30 : 163 : icmp
+	26 : 163 : sext
+	25 : 163 : load
+	27 : 163 : load
+	29 : 163 : trunc
+	32 : 163 : sext
+	46 : 165 : load
+	48 : 165 : zext
+	47 : 165 : load
+	60 : 167 : trunc
+	61 : 168 : load
+	63 : 168 : zext
+	62 : 168 : load
+	64 : 168 : load
+	65 : 168 : trunc
+	69 : ?? : phi
+	71 : 170 : icmp
+	67 : 170 : sext
+	66 : 170 : load
+	4 : 157 : load
+	5 : 157 : load
+	6 : 157 : trunc
+	7 : 158 : load
+	9 : 158 : zext
+	8 : 158 : load
+	10 : 158 : load
+	11 : 158 : trunc
+	12 : 159 : load
+	14 : 159 : zext
+	13 : 159 : load
+	15 : 159 : load
+	16 : 159 : trunc
+	17 : 160 : load
+	19 : 160 : zext
+	18 : 160 : load
+	20 : 160 : load
+	21 : 160 : trunc
+	22 : 161 : load
+	23 : 161 : load
+	24 : 161 : trunc
+	28 : ?? : phi
+	68 : 170 : load
+	70 : 170 : trunc
+	73 : 170 : sext
+	72 : 170 : load
+	75 : 170 : sext
+	74 : 170 : load
+	76 : 170 : trunc
+	78 : 171 : sext
+	77 : 171 : load
+	80 : 171 : sext
+	79 : 171 : load
+	81 : 171 : trunc
+	31 : 163 : load
+	34 : 163 : sext
+	33 : 163 : load
+	35 : 163 : trunc
+	37 : 164 : sext
+	36 : 164 : load
+	39 : 164 : sext
+	38 : 164 : load
+	40 : 164 : trunc
+	42 : 164 : sext
+	41 : 164 : load
+	44 : 164 : sext
+	43 : 164 : load
+	45 : 164 : trunc
+	87 : 163 : add
+	49 : 165 : load
+	50 : 165 : trunc
+	51 : 166 : load
+	53 : 166 : zext
+	52 : 166 : load
+	54 : 166 : load
+	55 : 166 : trunc
+	56 : 167 : load
+	58 : 167 : zext
+	57 : 167 : load
+	59 : 167 : load
+	83 : 171 : sext
+	82 : 171 : load
+	85 : 171 : sext
+	84 : 171 : load
+	86 : 171 : trunc
+	88 : 170 : add
+
+FUNC: aes256_encrypt_ecb
+	3 : ?? : phi
+	10 : 182 : icmp
+	2 : 183 : zext
+	1 : 183 : load
+	4 : ?? : phi
+	5 : 185 : add
+	6 : 185 : icmp
+	7 : ?? : phi
+	9 : 191 : icmp
+	11 : 196 : icmp
+	8 : 191 : add
+

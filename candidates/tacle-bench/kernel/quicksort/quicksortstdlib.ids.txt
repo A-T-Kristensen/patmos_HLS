@@ -1,0 +1,82 @@
+FUNC: quicksort_strcmp
+	6 : 34 : sub
+	13: ARG : 0
+	8: ARG : 1
+	7 : ?? : phi
+	12 : ?? : phi
+	1 : 31 : load
+	11 : 31 : icmp
+	2 : 31 : load
+	3 : 31 : load
+	15 : 31 : icmp
+	10 : ?? : phi
+	14 : 32 : getelementptr
+	9 : 32 : getelementptr
+	4 : 34 : load
+	5 : 34 : load
+
+FUNC: quicksort_compare_strings
+	1 : 43 : call
+	4 : 45 : icmp
+	3 : 45 : select
+	2 : 45 : phi
+
+FUNC: quicksort_compare_vectors
+	1 : 57 : load
+	2 : 58 : load
+	5 : 61 : fcmp
+	4 : 61 : select
+	3 : 61 : phi
+
+FUNC: quicksort_swapi
+	6 : 79 : icmp
+	8: ARG : 0
+	11: ARG : 1
+	1: ARG : 2
+	4 : ?? : phi
+	7 : ?? : phi
+	10 : ?? : phi
+	2 : 75 : load
+	3 : 76 : load
+	9 : 76 : getelementptr
+	12 : 77 : getelementptr
+	5 : 78 : sub
+
+FUNC: quicksort_pivot_strings
+	1: ARG : 1
+	2: ARG : 2
+	3 : 95 : call
+	13 : 95 : icmp
+	4 : 96 : call
+	10: ARG : 0
+	12 : 90 : getelementptr
+	9 : 92 : getelementptr
+	11 : 93 : getelementptr
+	14 : 96 : icmp
+	5 : 97 : call
+	15 : 97 : icmp
+	6 : 104 : call
+	16 : 104 : icmp
+	7 : 105 : call
+	17 : 105 : icmp
+	8 : ?? : phi
+
+FUNC: quicksort_pivot_vectors
+	5 : 128 : call
+	15 : 128 : icmp
+	10: ARG : 0
+	1: ARG : 1
+	2: ARG : 2
+	12 : 121 : getelementptr
+	9 : 123 : getelementptr
+	11 : 124 : getelementptr
+	3 : 126 : call
+	13 : 126 : icmp
+	4 : 127 : call
+	14 : 127 : icmp
+	6 : 135 : call
+	16 : 135 : icmp
+	7 : 136 : call
+	17 : 136 : icmp
+	8 : ?? : phi
+

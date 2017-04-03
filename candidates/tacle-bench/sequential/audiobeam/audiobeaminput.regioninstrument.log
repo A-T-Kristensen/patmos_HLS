@@ -1,0 +1,33 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x3001400>, <0x3002c00>, <0x3002c00>, <0x3002c00>, <0x2ffccf0>, <0x3002c00>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/sequential/audiobeam/audiobeaminput.c] [DW_LANG_C99]
+
+!{!"0x34\00audiobeam_input\00audiobeam_input\00\001\000\001", null, <0x3002c40>, <0x3002ee0>, [5760 x float]* @audiobeam_input, null} ; [ DW_TAG_variable ] [audiobeam_input] [line 1] [def]
+
+!{!"0x34\00audiobeam_mic_locations\00audiobeam_mic_locations\00\005764\000\001", null, <0x3002c40>, <0x3003a10>, [15 x [3 x float]]* @audiobeam_mic_locations, null} ; [ DW_TAG_variable ] [audiobeam_mic_locations] [line 5764] [def]
+
+!{!"0x34\00audiobeam_source_location\00audiobeam_source_location\00\005782\000\001", null, <0x3002c40>, <0x2ffec20>, [3 x float]* @audiobeam_source_location, null} ; [ DW_TAG_variable ] [audiobeam_source_location] [line 5782] [def]
+
+!{!"0x34\00audiobeam_origin_location\00audiobeam_origin_location\00\005784\000\001", null, <0x3002c40>, <0x2ffec20>, [3 x float]* @audiobeam_origin_location, null} ; [ DW_TAG_variable ] [audiobeam_origin_location] [line 5784] [def]
+
+!{!"0x1\00\000\00184320\0032\000\000\000", null, null, <0x3002e18>, <0x3002e78>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 184320, align 32, offset 0] [from float]
+
+!{!"0x24\00float\000\0032\0032\000\000\004", null, null} ; [ DW_TAG_base_type ] [float] [line 0, size 32, align 32, offset 0, enc DW_ATE_float]
+
+!{!"0x1\00\000\001440\0032\000\000\000", null, null, <0x3002e18>, <0x30039a0>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 1440, align 32, offset 0] [from float]
+
+!{!"0x1\00\000\0096\0032\000\000\000", null, null, <0x3002e18>, <0x2ffebb8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 96, align 32, offset 0] [from float]
+
+INFO: Loop bodies will be given their own region id
+DEBUG: found 0 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: Writing kremlib calls to audiobeaminput.kdump
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

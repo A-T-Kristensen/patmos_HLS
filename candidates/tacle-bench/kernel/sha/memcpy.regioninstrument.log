@@ -1,0 +1,100 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x334b520>, <0x334b2b0>, <0x334ccd0>, <0x334b048>, <0x334b2b0>, <0x334b2b0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/sha/memcpy.c] [DW_LANG_C99]
+
+!{!"0x2e\00sha_glibc_memcpy\00sha_glibc_memcpy\00\0024\000\001\000\000\00256\000\0025", <0x334b520>, <0x334b5a0>, <0x334d1f0>, null, i8* (i8*, i8*, i32)* @sha_glibc_memcpy, null, null, <0x334b2b0>} ; [ DW_TAG_subprogram ] [line 24] [def] [scope 25] [sha_glibc_memcpy]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x334d180>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, null} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x334ceb0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, null} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x16\00size_t\0026\000\000\000\000", <0x334cb90>, null, <0x334b018>} ; [ DW_TAG_typedef ] [size_t] [line 26, size 0, align 0, offset 0] [from unsigned int]
+
+!{!"0x24\00unsigned int\000\0032\0032\000\000\007", null, null} ; [ DW_TAG_base_type ] [unsigned int] [line 0, size 32, align 32, offset 0, enc DW_ATE_unsigned]
+
+!{!"0x24\00long int\000\0064\0064\000\000\005", null, null} ; [ DW_TAG_base_type ] [long int] [line 0, size 64, align 64, offset 0, enc DW_ATE_signed]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x3347120>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from BYTE]
+
+!{!"0x16\00BYTE\0024\000\000\000\000", <0x334cb90>, null, <0x334cc48>} ; [ DW_TAG_typedef ] [BYTE] [line 24, size 0, align 0, offset 0] [from unsigned char]
+
+!{!"0x24\00unsigned char\000\008\008\000\000\008", null, null} ; [ DW_TAG_base_type ] [unsigned char] [line 0, size 8, align 8, offset 0, enc DW_ATE_unsigned_char]
+
+Meta data for 9506063169631731829
+Meta data for 17306218126259464103
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 7558876376309884053, name: sha_glibc_memcpy, fileName: memcpy.c, startLine: 24, endLine: 24
+DEBUG: adding sha_glibc_memcpy (in module: memcpy.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 7558876376309884053)
+DEBUG: assigning function sha_glibc_memcpy id 7558876376309884053
+DEBUG: found 1 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: sha_glibc_memcpy is 7558876376309884053
+DEBUG: found 2 loops in function sha_glibc_memcpy
+DEBUG: assigning id = 9506063169631731829 to loop with the following BBs:
+	while.cond26 while.body29 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11562644163317091467
+DEBUG: assigning id = 11562644163317091467 to body of loop
+DEBUG: assigning id = 17306218126259464103 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4083118842629320640
+DEBUG: assigning id = 4083118842629320640 to body of loop
+DEBUG: while.cond26 has 1 possible loop exit points
+DEBUG: 	target #0: while.end36
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: Writing kremlib calls to memcpy.kdump
+INFO: dumping function: sha_glibc_memcpy
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: sha_wordcopy_fwd_aligned
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

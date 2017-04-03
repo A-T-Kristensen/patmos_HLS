@@ -1,0 +1,78 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x2c963a0>, <0x2c95a90>, <0x2c95a90>, <0x2c9b068>, <0x2c95a90>, <0x2c95a90>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/bitcount/bitcnt_1.c] [DW_LANG_C99]
+
+!{!"0x2e\00bitcount_bit_count\00bitcount_bit_count\00\0022\000\001\000\000\00256\000\0023", <0x2c963a0>, <0x2c9aee0>, <0x2c9b190>, null, i32 (i64)* @bitcount_bit_count, null, null, <0x2c95a90>} ; [ DW_TAG_subprogram ] [line 22] [def] [scope 23] [bitcount_bit_count]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2c9b120>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x24\00long int\000\0064\0064\000\000\005", null, null} ; [ DW_TAG_base_type ] [long int] [line 0, size 64, align 64, offset 0, enc DW_ATE_signed]
+
+Meta data for 10070254855242815151
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 9907656666482647549, name: bitcount_bit_count, fileName: bitcnt_1.c, startLine: 22, endLine: 22
+DEBUG: adding bitcount_bit_count (in module: bitcnt_1.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 9907656666482647549)
+DEBUG: assigning function bitcount_bit_count id 9907656666482647549
+DEBUG: found 1 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: bitcount_bit_count is 9907656666482647549
+DEBUG: found 1 loops in function bitcount_bit_count
+DEBUG: assigning id = 10070254855242815151 to loop with the following BBs:
+	do.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5431194881478083259
+DEBUG: assigning id = 5431194881478083259 to body of loop
+DEBUG: do.body has 1 possible loop exit points
+DEBUG: 	target #0: if.end.loopexit
+DEBUG: Writing kremlib calls to bitcnt_1.kdump
+INFO: dumping function: bitcount_bit_count
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

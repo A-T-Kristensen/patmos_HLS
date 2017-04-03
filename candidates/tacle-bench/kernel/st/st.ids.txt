@@ -1,0 +1,109 @@
+FUNC: st_initSeed
+
+FUNC: st_randomInteger
+	1 : 72 : load
+	2 : 72 : srem
+	3 : 73 : load
+	4 : 73 : sext
+
+FUNC: st_initialize
+	3 : ?? : phi
+	4 : 82 : icmp
+	1 : 83 : call
+	2 : 83 : sitofp
+
+FUNC: st_init
+
+FUNC: st_return
+	2 : 97 : load
+	3 : 97 : load
+	4 : 97 : load
+	5 : 97 : load
+	1 : 97 : load
+	9 : 100 : fcmp
+	8 : 100 : fcmp
+	7 : ?? : phi
+	6 : 100 : select
+
+FUNC: st_fabs
+	1: ARG : 0
+	4 : 112 : fcmp
+	3 : 115 : fsub
+	2 : ?? : phi
+
+FUNC: st_sqrtf
+	1: ARG : 0
+	11 : 123 : fdiv
+	6 : 130 : fcmp
+	8 : ?? : phi
+	4 : ?? : phi
+	5 : ?? : phi
+	7 : 134 : icmp
+	15 : 135 : icmp
+	14 : 137 : fadd
+	3 : 138 : fsub
+	2 : 140 : call
+	16 : 140 : fcmp
+	12 : ?? : phi
+	13 : ?? : phi
+	10 : 134 : add
+	9 : ?? : phi
+
+FUNC: st_square
+	1: ARG : 0
+	2 : 152 : fmul
+
+FUNC: st_calc_Sum_Mean
+	5 : ?? : phi
+	4 : 167 : icmp
+	1 : 168 : load
+	2 : 168 : load
+	3 : 168 : fadd
+	6 : 169 : load
+	7 : 169 : fdiv
+
+FUNC: st_calc_Var_Stddev
+	6 : ?? : phi
+	8 : ?? : phi
+	9 : 183 : load
+	10 : 183 : call
+	1: ARG : 1
+	5 : 179 : icmp
+	2 : 180 : load
+	4 : 180 : fsub
+	3 : 180 : call
+	11 : 180 : fadd
+	7 : 182 : fdiv
+
+FUNC: st_calc_LinCorrCoef
+	1: ARG : 2
+	2: ARG : 3
+	9 : ?? : phi
+	18 : ?? : phi
+	14 : ?? : phi
+	16 : ?? : phi
+	8 : 194 : icmp
+	3 : 195 : load
+	4 : 195 : load
+	19 : 195 : fadd
+	5 : 196 : load
+	7 : 196 : fsub
+	6 : 196 : call
+	20 : 196 : fadd
+	10 : 197 : load
+	12 : 197 : fsub
+	11 : 197 : call
+	21 : 197 : fadd
+	13 : 200 : call
+	15 : 200 : call
+	17 : 200 : fdiv
+
+FUNC: st_main
+	3 : 216 : load
+	4 : 216 : load
+	1 : 211 : load
+	2 : 214 : load
+
+FUNC: main
+	1 : 225 : call
+

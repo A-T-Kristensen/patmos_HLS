@@ -1,0 +1,155 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x24ab0e0>, <0x24ab320>, <0x24adc48>, <0x24a8f70>, <0x24b0938>, <0x24ab320>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/iir/iir.c] [DW_LANG_C99]
+
+!{!"0x2e\00iir_init\00iir_init\00\0074\000\001\000\000\00256\000\0075", <0x24ab0e0>, <0x24adc80>, <0x24a8fe0>, null, void ()* @iir_init, null, null, <0x24ab320>} ; [ DW_TAG_subprogram ] [line 74] [def] [scope 75] [iir_init]
+
+!{!"0x2e\00iir_return\00iir_return\00\00107\000\001\000\000\00256\000\00108", <0x24ab0e0>, <0x24adc80>, <0x24ae450>, null, i32 ()* @iir_return, null, null, <0x24ab320>} ; [ DW_TAG_subprogram ] [line 107] [def] [scope 108] [iir_return]
+
+!{!"0x2e\00iir_main\00iir_main\00\00125\000\001\000\000\00256\000\00126", <0x24ab0e0>, <0x24adc80>, <0x24a8fe0>, null, void ()* @iir_main, null, null, <0x24ab320>} ; [ DW_TAG_subprogram ] [line 125] [def] [scope 126] [iir_main]
+
+!{!"0x2e\00main\00main\00\00157\000\001\000\000\00256\000\00158", <0x24ab0e0>, <0x24adc80>, <0x24ae450>, null, i32 ()* @main, null, null, <0x24ab320>} ; [ DW_TAG_subprogram ] [line 157] [def] [scope 158] [main]
+
+!{!"0x34\00iir_wi\00iir_wi\00\0065\000\001", null, <0x24adc80>, <0x24adda0>, [8 x float]* @iir_wi, null} ; [ DW_TAG_variable ] [iir_wi] [line 65] [def]
+
+!{!"0x34\00iir_coefficients\00iir_coefficients\00\0066\000\001", null, <0x24adc80>, <0x24b06a0>, [20 x float]* @iir_coefficients, null} ; [ DW_TAG_variable ] [iir_coefficients] [line 66] [def]
+
+!{!"0x34\00iir_x\00iir_x\00\0067\000\001", null, <0x24adc80>, <0x24ab3f8>, float* @iir_x, null} ; [ DW_TAG_variable ] [iir_x] [line 67] [def]
+
+!{!"0x1\00\000\00256\0032\000\000\000", null, null, <0x24ae960>, <0x24add38>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 256, align 32, offset 0] [from ]
+
+!{!"0x35\00\000\000\000\000\000", null, null, <0x24ab3f8>} ; [ DW_TAG_volatile_type ] [line 0, size 0, align 0, offset 0] [from float]
+
+!{!"0x24\00float\000\0032\0032\000\000\004", null, null} ; [ DW_TAG_base_type ] [float] [line 0, size 32, align 32, offset 0, enc DW_ATE_float]
+
+!{!"0x1\00\000\00640\0032\000\000\000", null, null, <0x24ae960>, <0x24b0638>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 640, align 32, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x24ab4e8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x24ae2f8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x24ab548>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from unsigned char]
+
+!{!"0x24\00unsigned char\000\008\008\000\000\008", null, null} ; [ DW_TAG_base_type ] [unsigned char] [line 0, size 8, align 8, offset 0, enc DW_ATE_unsigned_char]
+
+Meta data for 3444150154189396925
+Meta data for 13117059926599609616
+Meta data for 7889343830871380440
+Meta data for 15041988914072265989
+Meta data for 15210921015462945779
+Meta data for 9944094711822630192
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 14636287034209414551, name: iir_init, fileName: iir.c, startLine: 74, endLine: 74
+DEBUG: adding iir_init (in module: iir.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14636287034209414551)
+DEBUG: assigning function iir_init id 14636287034209414551
+DEBUG: new region: FuncRegion(id: 2382919017704823267, name: iir_return, fileName: iir.c, startLine: 107, endLine: 107
+DEBUG: adding iir_return (in module: iir.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2382919017704823267)
+DEBUG: assigning function iir_return id 2382919017704823267
+DEBUG: new region: FuncRegion(id: 12138599360551836025, name: iir_main, fileName: iir.c, startLine: 125, endLine: 125
+DEBUG: adding iir_main (in module: iir.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12138599360551836025)
+DEBUG: assigning function iir_main id 12138599360551836025
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: iir.c, startLine: 157, endLine: 157
+DEBUG: adding main (in module: iir.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 4 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: iir_init is 14636287034209414551
+DEBUG: found 4 loops in function iir_init
+DEBUG: assigning id = 3444150154189396925 to loop with the following BBs:
+	for.cond19 for.body23 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7184757271394506632
+DEBUG: assigning id = 7184757271394506632 to body of loop
+DEBUG: assigning id = 13117059926599609616 to loop with the following BBs:
+	for.cond9 for.body12 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 206544311023683848
+DEBUG: assigning id = 206544311023683848 to body of loop
+DEBUG: assigning id = 7889343830871380440 to loop with the following BBs:
+	for.cond1 for.body3 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6467232766549819187
+DEBUG: assigning id = 6467232766549819187 to body of loop
+DEBUG: assigning id = 15041988914072265989 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 1631197591874303152
+DEBUG: assigning id = 1631197591874303152 to body of loop
+DEBUG: for.cond19 has 1 possible loop exit points
+DEBUG: 	target #0: for.end31
+DEBUG: for.cond9 has 1 possible loop exit points
+DEBUG: 	target #0: for.end18
+DEBUG: for.cond1 has 1 possible loop exit points
+DEBUG: 	target #0: for.end8
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: iir_return is 2382919017704823267
+DEBUG: found 1 loops in function iir_return
+DEBUG: assigning id = 15210921015462945779 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17480514901363643968
+DEBUG: assigning id = 17480514901363643968 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: iir_main is 12138599360551836025
+DEBUG: found 1 loops in function iir_main
+DEBUG: assigning id = 9944094711822630192 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5264871328744909028
+DEBUG: assigning id = 5264871328744909028 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to iir.kdump
+INFO: dumping function: iir_init
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: iir_return
+INFO: dumping function: iir_main
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

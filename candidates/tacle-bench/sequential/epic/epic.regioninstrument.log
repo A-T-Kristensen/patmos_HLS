@@ -1,0 +1,461 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x2486940>, <0x248be20>, <0x248be20>, <0x2498ad8>, <0x2490130>, <0x248be20>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/sequential/epic/epic.c] [DW_LANG_C99]
+
+!{!"0x2e\00epic_init\00epic_init\00\00625\000\001\000\000\00256\000\00626", <0x2486940>, <0x248beb0>, <0x248a5f0>, null, void ()* @epic_init, null, null, <0x248be20>} ; [ DW_TAG_subprogram ] [line 625] [def] [scope 626] [epic_init]
+
+!{!"0x2e\00epic_build_pyr\00epic_build_pyr\00\00646\000\001\000\000\00256\000\00648", <0x2486940>, <0x248beb0>, <0x2496c40>, null, void (float*, i32, i32, i32, float*, float*, i32)* @epic_build_pyr, null, null, <0x248be20>} ; [ DW_TAG_subprogram ] [line 646] [def] [scope 648] [epic_build_pyr]
+
+!{!"0x2e\00epic_build_level\00epic_build_level\00\00672\000\001\000\000\00256\000\00675", <0x2486940>, <0x248beb0>, <0x2496f10>, null, void (float*, i32, i32, float*, float*, i32, float*)* @epic_build_level, null, null, <0x248be20>} ; [ DW_TAG_subprogram ] [line 672] [def] [scope 675] [epic_build_level]
+
+!{!"0x2e\00epic_internal_transpose\00epic_internal_transpose\00\00715\000\001\000\000\00256\000\00716", <0x2486940>, <0x248beb0>, <0x2497180>, null, void (float*, i32, i32)* @epic_internal_transpose, null, null, <0x248be20>} ; [ DW_TAG_subprogram ] [line 715] [def] [scope 716] [epic_internal_transpose]
+
+!{!"0x2e\00epic_internal_filter\00epic_internal_filter\00\00751\000\001\000\000\00256\000\00755", <0x2486940>, <0x248beb0>, <0x248bb70>, null, void (float*, i32, i32, float*, float*, i32, i32, i32, i32, i32, i32, float*)* @epic_internal_filter, null, null, <0x248be20>} ; [ DW_TAG_subprogram ] [line 751] [def] [scope 755] [epic_internal_filter]
+
+!{!"0x2e\00epic_reflect1\00epic_reflect1\00\001046\000\001\000\000\00256\000\001048", <0x2486940>, <0x248beb0>, <0x2498440>, null, void (float*, i32, i32, i32, i32, float*, i32)* @epic_reflect1, null, null, <0x248be20>} ; [ DW_TAG_subprogram ] [line 1046] [def] [scope 1048] [epic_reflect1]
+
+!{!"0x2e\00epic_main\00epic_main\00\001114\000\001\000\000\00256\000\001115", <0x2486940>, <0x248beb0>, <0x248a5f0>, null, void ()* @epic_main, null, null, <0x248be20>} ; [ DW_TAG_subprogram ] [line 1114] [def] [scope 1115] [epic_main]
+
+!{!"0x2e\00epic_return\00epic_return\00\001120\000\001\000\000\000\000\001120", <0x2486940>, <0x248beb0>, <0x24987d0>, null, i32 ()* @epic_return, null, null, <0x248be20>} ; [ DW_TAG_subprogram ] [line 1120] [def] [epic_return]
+
+!{!"0x2e\00main\00main\00\001129\000\001\000\000\00256\000\001130", <0x2486940>, <0x248beb0>, <0x24987d0>, null, i32 ()* @main, null, null, <0x248be20>} ; [ DW_TAG_subprogram ] [line 1129] [def] [scope 1130] [main]
+
+!{!"0x34\00epic_image\00epic_image\00\0043\000\001", null, <0x248beb0>, <0x2498b40>, [4096 x float]* @epic_image, null} ; [ DW_TAG_variable ] [epic_image] [line 43] [def]
+
+!{!"0x34\00epic_filtertemp\00epic_filtertemp\00\00600\000\001", null, <0x248beb0>, <0x2499130>, [15 x float]* @epic_filtertemp, null} ; [ DW_TAG_variable ] [epic_filtertemp] [line 600] [def]
+
+!{!"0x34\00epic_hi_imagetemp\00epic_hi_imagetemp\00\00601\000\001", null, <0x248beb0>, <0x24980b0>, [2048 x float]* @epic_hi_imagetemp, null} ; [ DW_TAG_variable ] [epic_hi_imagetemp] [line 601] [def]
+
+!{!"0x34\00epic_lo_imagetemp\00epic_lo_imagetemp\00\00602\000\001", null, <0x248beb0>, <0x24980b0>, [2048 x float]* @epic_lo_imagetemp, null} ; [ DW_TAG_variable ] [epic_lo_imagetemp] [line 602] [def]
+
+!{!"0x34\00epic_hi_filter\00epic_hi_filter\00\00612\001\001", null, <0x248beb0>, <0x2499130>, [15 x float]* @epic_hi_filter, null} ; [ DW_TAG_variable ] [epic_hi_filter] [line 612] [local] [def]
+
+!{!"0x34\00epic_lo_filter\00epic_lo_filter\00\00604\001\001", null, <0x248beb0>, <0x2499130>, [15 x float]* @epic_lo_filter, null} ; [ DW_TAG_variable ] [epic_lo_filter] [line 604] [local] [def]
+
+!{!"0x1\00\000\00131072\0032\000\000\000", null, null, <0x2496448>, <0x2498568>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 131072, align 32, offset 0] [from float]
+
+!{!"0x24\00float\000\0032\0032\000\000\004", null, null} ; [ DW_TAG_base_type ] [float] [line 0, size 32, align 32, offset 0, enc DW_ATE_float]
+
+!{!"0x1\00\000\00480\0032\000\000\000", null, null, <0x2496448>, <0x24990c8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 480, align 32, offset 0] [from float]
+
+!{!"0x1\00\000\0065536\0032\000\000\000", null, null, <0x2496448>, <0x2497408>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 65536, align 32, offset 0] [from float]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2486a48>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2496bd0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2496448>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from float]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2496ea0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2496d20>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2498278>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x24983d0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2496318>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+Meta data for 5244683534312883008
+Meta data for 4747958770799072192
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 4984329298741991596, name: epic_init, fileName: epic.c, startLine: 625, endLine: 625
+DEBUG: adding epic_init (in module: epic.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 4984329298741991596)
+DEBUG: assigning function epic_init id 4984329298741991596
+DEBUG: new region: FuncRegion(id: 17664233460941854902, name: epic_build_pyr, fileName: epic.c, startLine: 646, endLine: 646
+DEBUG: adding epic_build_pyr (in module: epic.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17664233460941854902)
+DEBUG: assigning function epic_build_pyr id 17664233460941854902
+DEBUG: new region: FuncRegion(id: 16868603695432672157, name: epic_build_level, fileName: epic.c, startLine: 672, endLine: 672
+DEBUG: adding epic_build_level (in module: epic.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 16868603695432672157)
+DEBUG: assigning function epic_build_level id 16868603695432672157
+DEBUG: new region: FuncRegion(id: 17396796886780032908, name: epic_internal_filter, fileName: epic.c, startLine: 751, endLine: 751
+DEBUG: adding epic_internal_filter (in module: epic.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17396796886780032908)
+DEBUG: assigning function epic_internal_filter id 17396796886780032908
+DEBUG: new region: FuncRegion(id: 6757148095480729645, name: epic_internal_transpose, fileName: epic.c, startLine: 715, endLine: 715
+DEBUG: adding epic_internal_transpose (in module: epic.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6757148095480729645)
+DEBUG: assigning function epic_internal_transpose id 6757148095480729645
+DEBUG: new region: FuncRegion(id: 9477857020185901761, name: epic_reflect1, fileName: epic.c, startLine: 1046, endLine: 1046
+DEBUG: adding epic_reflect1 (in module: epic.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 9477857020185901761)
+DEBUG: assigning function epic_reflect1 id 9477857020185901761
+DEBUG: new region: FuncRegion(id: 7887450869642471579, name: epic_main, fileName: epic.c, startLine: 1114, endLine: 1114
+DEBUG: adding epic_main (in module: epic.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 7887450869642471579)
+DEBUG: assigning function epic_main id 7887450869642471579
+DEBUG: new region: FuncRegion(id: 9905234688174871317, name: epic_return, fileName: epic.c, startLine: 1120, endLine: 1120
+DEBUG: adding epic_return (in module: epic.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 9905234688174871317)
+DEBUG: assigning function epic_return id 9905234688174871317
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: epic.c, startLine: 1129, endLine: 1129
+DEBUG: adding main (in module: epic.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 9 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: epic_init is 4984329298741991596
+DEBUG: found 1 loops in function epic_init
+DEBUG: assigning id = 5244683534312883008 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16816609131598269636
+DEBUG: assigning id = 16816609131598269636 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: epic_build_pyr is 17664233460941854902
+DEBUG: found 1 loops in function epic_build_pyr
+DEBUG: assigning id = 4747958770799072192 to lMeta data for 12772237901406946464
+Meta data for 13395160341563208860
+Meta data for 13098690154983841550
+Meta data for 15876822955686173757
+Meta data for 2106949212065453196
+Meta data for 459196602953339742
+Meta data for 2168674156888959123
+Meta data for 4343568345911912361
+Meta data for 9346489590882339624
+Meta data for 8770521114330969402
+oop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12273050264857986296
+DEBUG: assigning id = 12273050264857986296 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: epic_build_level is 16868603695432672157
+DEBUG: found 0 loops in function epic_build_level
+DEBUG: region name to id: epic_internal_filter is 17396796886780032908
+DEBUG: found 32 loops in function epic_internal_filter
+DEBUG: assigning id = 12772237901406946464 to loop with the following BBs:
+	for.cond228 for.body230 for.cond232 for.end260 for.cond261 for.end290 for.cond293 for.inc323 for.body295 for.cond296 for.end316 for.body298 for.cond300 for.end312 for.body302 for.body263 for.cond264 for.end284 for.body266 for.cond268 for.end280 for.body270 for.body234 for.cond235 for.end254 for.body237 for.cond238 for.end250 for.body240 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 2919244401798019311
+DEBUG: assigning id = 2919244401798019311 to body of loop
+DEBUG: assigning id = 13395160341563208860 to loop with the following BBs:
+	for.cond232 for.body234 for.cond235 for.end254 for.body237 for.cond238 for.end250 for.body240 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4824260402435848490
+DEBUG: assigning id = 4824260402435848490 to body of loop
+DEBUG: assigning id = 13098690154983841550 to loop with the following BBs:
+	for.cond235 for.body237 for.cond238 for.end250 for.body240 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3010623498432845171
+DEBUG: assigning id = 3010623498432845171 to body of loop
+DEBUG: assigning id = 15876822955686173757 to loop with the following BBs:
+	for.cond238 for.body240 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8993524214900270137
+DEBUG: assigning id = 8993524214900270137 to body of loop
+DEBUG: assigning id = 2106949212065453196 to loop with the following BBs:
+	for.cond261 for.body263 for.cond264 for.end284 for.body266 for.cond268 for.end280 for.body270 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13742747931970807710
+DEBUG: assigning id = 13742747931970807710 to body of loop
+DEBUG: assigning id = 459196602953339742 to loop with the following BBs:
+	for.cond264 for.body266 for.cond268 for.end280 for.body270 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3220150799157313855
+DEBUG: assigning id = 3220150799157313855 to body of loop
+DEBUG: assigning id = 2168674156888959123 to loop with the following BBs:
+	for.cond268 for.body270 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9985580421417731069
+DEBUG: assigning id = 9985580421417731069 to body of loop
+DEBUG: assigning id = 4343568345911912361 to loop with the following BBs:
+	for.cond293 for.body295 for.cond296 for.end316 for.body298 for.cond300 for.end312 for.body302 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11091059311896288846
+DEBUG: assigning id = 11091059311896288846 to body of loop
+DEBUG: assigning id = 9346489590882339624 to loop with the following BBs:
+	for.cond296 for.body298 for.cond300 for.end312 for.body302 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14478056184184273914
+DEBUG: assigning id = 14478056184184273914 to body of loop
+DEBUG: assigning id = 8770521Meta data for 12757232565553566033
+Meta data for 2282989721598266355
+Meta data for 9655978127219241336
+Meta data for 17924532214947523579
+Meta data for 2276875434527849140
+Meta data for 4191836823293127344
+Meta data for 4565001238489845937
+Meta data for 3537126353311440660
+Meta data for 5887501121598573392
+Meta data for 2133783479813226217
+Meta data for 7453030444969577453
+114330969402 to loop with the following BBs:
+	for.cond300 for.body302 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3478798736688264030
+DEBUG: assigning id = 3478798736688264030 to body of loop
+DEBUG: assigning id = 12757232565553566033 to loop with the following BBs:
+	for.cond186 for.body188 for.cond189 for.end218 for.body191 for.cond192 for.end212 for.body194 for.cond196 for.end208 for.body198 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14743442121169910672
+DEBUG: assigning id = 14743442121169910672 to body of loop
+DEBUG: assigning id = 2282989721598266355 to loop with the following BBs:
+	for.cond189 for.body191 for.cond192 for.end212 for.body194 for.cond196 for.end208 for.body198 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 559270367217891767
+DEBUG: assigning id = 559270367217891767 to body of loop
+DEBUG: assigning id = 9655978127219241336 to loop with the following BBs:
+	for.cond192 for.body194 for.cond196 for.end208 for.body198 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 577188482024354174
+DEBUG: assigning id = 577188482024354174 to body of loop
+DEBUG: assigning id = 17924532214947523579 to loop with the following BBs:
+	for.cond196 for.body198 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14105527234785834725
+DEBUG: assigning id = 14105527234785834725 to body of loop
+DEBUG: assigning id = 2276875434527849140 to loop with the following BBs:
+	for.cond147 for.body149 for.cond150 for.end179 for.body152 for.cond153 for.end173 for.body155 for.cond157 for.end169 for.body159 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14334534703754671688
+DEBUG: assigning id = 14334534703754671688 to body of loop
+DEBUG: assigning id = 4191836823293127344 to loop with the following BBs:
+	for.cond150 for.body152 for.cond153 for.end173 for.body155 for.cond157 for.end169 for.body159 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11446866674961262774
+DEBUG: assigning id = 11446866674961262774 to body of loop
+DEBUG: assigning id = 4565001238489845937 to loop with the following BBs:
+	for.cond153 for.body155 for.cond157 for.end169 for.body159 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14247671470948811503
+DEBUG: assigning id = 14247671470948811503 to body of loop
+DEBUG: assigning id = 3537126353311440660 to loop with the following BBs:
+	for.cond157 for.body159 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 15549682374241566371
+DEBUG: assigning id = 15549682374241566371 to body of loop
+DEBUG: assigning id = 5887501121598573392 to loop with the following BBs:
+	for.cond111 for.body113 for.cond114 for.end142 for.body116 for.cond117 for.end136 for.body119 for.cond120 for.end132 for.body122 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13992543540292260913
+DEBUG: assigning id = 13992543540292260913 to body of loop
+DEBUG: assigning id = 2133783479813226217 to loop with the following BBs:
+	for.cond114 for.body116 for.cond117 for.end136 for.body119 for.cond120 for.end132 for.body122 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16664225888652555431
+DEBUG: assigning id = 16664225888652555431 to body of loop
+DEBUG: assigning id = 745303044496957745Meta data for 14331456970506480687
+Meta data for 999751834622027429
+Meta data for 6763117535077584939
+Meta data for 13310231160117691595
+Meta data for 18191994855592990503
+Meta data for 17042179954199907228
+Meta data for 16308352257304668257
+Meta data for 6059433308505529861
+Meta data for 1556451145736482395
+Meta data for 11393632465143883319
+Meta data for 10443021729611809046
+3 to loop with the following BBs:
+	for.cond117 for.body119 for.cond120 for.end132 for.body122 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16649932788625529116
+DEBUG: assigning id = 16649932788625529116 to body of loop
+DEBUG: assigning id = 14331456970506480687 to loop with the following BBs:
+	for.cond120 for.body122 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6482975258205036592
+DEBUG: assigning id = 6482975258205036592 to body of loop
+DEBUG: assigning id = 999751834622027429 to loop with the following BBs:
+	for.cond for.body for.cond17 for.end40 for.cond42 for.end71 for.cond75 for.inc105 for.body77 for.cond78 for.end98 for.body80 for.cond82 for.end94 for.body84 for.body44 for.cond45 for.end65 for.body47 for.cond49 for.end61 for.body51 for.body19 for.cond20 for.end34 for.body22 for.cond23 for.end for.body25 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 15135754121316173964
+DEBUG: assigning id = 15135754121316173964 to body of loop
+DEBUG: assigning id = 6763117535077584939 to loop with the following BBs:
+	for.cond17 for.body19 for.cond20 for.end34 for.body22 for.cond23 for.end for.body25 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6276551109394193758
+DEBUG: assigning id = 6276551109394193758 to body of loop
+DEBUG: assigning id = 13310231160117691595 to loop with the following BBs:
+	for.cond20 for.body22 for.cond23 for.end for.body25 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12373206794497005867
+DEBUG: assigning id = 12373206794497005867 to body of loop
+DEBUG: assigning id = 18191994855592990503 to loop with the following BBs:
+	for.cond23 for.body25 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9244914530161831696
+DEBUG: assigning id = 9244914530161831696 to body of loop
+DEBUG: assigning id = 17042179954199907228 to loop with the following BBs:
+	for.cond42 for.body44 for.cond45 for.end65 for.body47 for.cond49 for.end61 for.body51 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4694884277845940819
+DEBUG: assigning id = 4694884277845940819 to body of loop
+DEBUG: assigning id = 16308352257304668257 to loop with the following BBs:
+	for.cond45 for.body47 for.cond49 for.end61 for.body51 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17142426311746666248
+DEBUG: assigning id = 17142426311746666248 to body of loop
+DEBUG: assigning id = 6059433308505529861 to loop with the following BBs:
+	for.cond49 for.body51 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 587515144772339845
+DEBUG: assigning id = 587515144772339845 to body of loop
+DEBUG: assigning id = 1556451145736482395 to loop with the following BBs:
+	for.cond75 for.body77 for.cond78 for.end98 for.body80 for.cond82 for.end94 for.body84 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12817597858868766789
+DEBUG: assigning id = 12817597858868766789 to body of loop
+DEBUG: assigning id = 11393632465143883319 to loop with the following BBs:
+	for.cond78 for.body80 for.cond82 for.end94 for.body84 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9780715910595619429
+DEBUG: assigning id = 9780715910595619429 to body of loop
+DEBUG: assigning id = 10443021729611809046 to loop with the folMeta data for 8111209481399170171
+Meta data for 10415303413324482289
+Meta data for 7186548220578878169
+lowing BBs:
+	for.cond82 for.body84 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 15732002756806275430
+DEBUG: assigning id = 15732002756806275430 to body of loop
+DEBUG: for.cond228 has 1 possible loop exit points
+DEBUG: 	target #0: for.end325
+DEBUG: for.cond232 has 1 possible loop exit points
+DEBUG: 	target #0: for.end260
+DEBUG: for.cond235 has 1 possible loop exit points
+DEBUG: 	target #0: for.end254
+DEBUG: for.cond238 has 1 possible loop exit points
+DEBUG: 	target #0: for.end250
+DEBUG: for.cond261 has 1 possible loop exit points
+DEBUG: 	target #0: for.end290
+DEBUG: for.cond264 has 1 possible loop exit points
+DEBUG: 	target #0: for.end284
+DEBUG: for.cond268 has 1 possible loop exit points
+DEBUG: 	target #0: for.end280
+DEBUG: for.cond293 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc323
+DEBUG: for.cond296 has 1 possible loop exit points
+DEBUG: 	target #0: for.end316
+DEBUG: for.cond300 has 1 possible loop exit points
+DEBUG: 	target #0: for.end312
+DEBUG: for.cond186 has 1 possible loop exit points
+DEBUG: 	target #0: for.end222
+DEBUG: for.cond189 has 1 possible loop exit points
+DEBUG: 	target #0: for.end218
+DEBUG: for.cond192 has 1 possible loop exit points
+DEBUG: 	target #0: for.end212
+DEBUG: for.cond196 has 1 possible loop exit points
+DEBUG: 	target #0: for.end208
+DEBUG: for.cond147 has 1 possible loop exit points
+DEBUG: 	target #0: for.end183
+DEBUG: for.cond150 has 1 possible loop exit points
+DEBUG: 	target #0: for.end179
+DEBUG: for.cond153 has 1 possible loop exit points
+DEBUG: 	target #0: for.end173
+DEBUG: for.cond157 has 1 possible loop exit points
+DEBUG: 	target #0: for.end169
+DEBUG: for.cond111 has 1 possible loop exit points
+DEBUG: 	target #0: for.end146
+DEBUG: for.cond114 has 1 possible loop exit points
+DEBUG: 	target #0: for.end142
+DEBUG: for.cond117 has 1 possible loop exit points
+DEBUG: 	target #0: for.end136
+DEBUG: for.cond120 has 1 possible loop exit points
+DEBUG: 	target #0: for.end132
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end107
+DEBUG: for.cond17 has 1 possible loop exit points
+DEBUG: 	target #0: for.end40
+DEBUG: for.cond20 has 1 possible loop exit points
+DEBUG: 	target #0: for.end34
+DEBUG: for.cond23 has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: for.cond42 has 1 possible loop exit points
+DEBUG: 	target #0: for.end71
+DEBUG: for.cond45 has 1 possible loop exit points
+DEBUG: 	target #0: for.end65
+DEBUG: for.cond49 has 1 possible loop exit points
+DEBUG: 	target #0: for.end61
+DEBUG: for.cond75 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc105
+DEBUG: for.cond78 has 1 possible loop exit points
+DEBUG: 	target #0: for.end98
+DEBUG: for.cond82 has 1 possible loop exit points
+DEBUG: 	target #0: for.end94
+DEBUG: region name to id: epic_internal_transpose is 6757148095480729645
+DEBUG: found 2 loops in function epic_internal_transpose
+DEBUG: assigning id = 8111209481399170171 to loop with the following BBs:
+	for.cond for.body do.body do.end if.then for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12841763722763046848
+DEBUG: assigning id = 12841763722763046848 to body of loop
+DEBUG: assigning id = 10415303413324482289 to loop with the following BBs:
+	do.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 727295938473884287
+DEBUG: assigning id = 727295938473884287 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: do.body has 1 possible loop exit points
+DEBUG: 	target #0: do.end
+DEBUG: region name to id: epic_reflect1 is 9477857020185901761
+DEBUG: found 5 loops in function epic_reflect1
+DEBUG: assigning id = 7186548220578878169 to loop with the following BBs:
+	for.cond169 for.body172 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9900Meta data for 4893496480371696594
+Meta data for 196206438676893551
+Meta data for 8567132773106220973
+Meta data for 4875789495274933203
+Meta data for 16417260203464360262
+493835634891852
+DEBUG: assigning id = 9900493835634891852 to body of loop
+DEBUG: assigning id = 4893496480371696594 to loop with the following BBs:
+	for.cond147 for.body149 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5543334892472216929
+DEBUG: assigning id = 5543334892472216929 to body of loop
+DEBUG: assigning id = 196206438676893551 to loop with the following BBs:
+	for.cond60 for.body62 for.cond64 for.end131 for.body67 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13082204837676876707
+DEBUG: assigning id = 13082204837676876707 to body of loop
+DEBUG: assigning id = 8567132773106220973 to loop with the following BBs:
+	for.cond64 for.body67 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11502355716604703196
+DEBUG: assigning id = 11502355716604703196 to body of loop
+DEBUG: assigning id = 4875789495274933203 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6527865982372275948
+DEBUG: assigning id = 6527865982372275948 to body of loop
+DEBUG: for.cond169 has 1 possible loop exit points
+DEBUG: 	target #0: if.end182.loopexit
+DEBUG: for.cond147 has 1 possible loop exit points
+DEBUG: 	target #0: if.end158.loopexit
+DEBUG: for.cond60 has 1 possible loop exit points
+DEBUG: 	target #0: for.end135
+DEBUG: for.cond64 has 1 possible loop exit points
+DEBUG: 	target #0: for.end131
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: epic_main is 7887450869642471579
+DEBUG: found 0 loops in function epic_main
+DEBUG: region name to id: epic_return is 9905234688174871317
+DEBUG: found 1 loops in function epic_return
+DEBUG: assigning id = 16417260203464360262 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3059458755862538630
+DEBUG: assigning id = 3059458755862538630 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to epic.kdump
+INFO: dumping function: epic_init
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: epic_build_pyr
+INFO: dumping function: epic_build_level
+INFO: dumping function: epic_internal_filter
+INFO: dumping function: epic_internal_transpose
+INFO: dumping function: epic_reflect1
+INFO: dumping function: epic_main
+INFO: dumping function: epic_return
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

@@ -1,0 +1,25 @@
+FUNC: fac_init
+
+FUNC: fac_return
+	1 : 56 : load
+	2 : 56 : sub
+
+FUNC: fac_fac
+	1: ARG : 0
+	6 : 67 : icmp
+	3 : 70 : sub
+	2 : 70 : call
+	5 : 70 : mul
+	4 : ?? : phi
+
+FUNC: fac_main
+	3 : ?? : phi
+	1 : 84 : load
+	6 : 84 : icmp
+	2 : 86 : call
+	4 : 86 : load
+	5 : 86 : add
+
+FUNC: main
+	1 : 97 : call
+

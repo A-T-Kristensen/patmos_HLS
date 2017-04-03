@@ -1,0 +1,139 @@
+FUNC: fir2dim_init
+	3 : 71 : trunc
+	22 : 70 : getelementptr
+	21 : ?? : phi
+	5 : ?? : phi
+	4 : 70 : icmp
+	1 : 71 : load
+	2 : 71 : load
+	23 : ?? : phi
+	10 : ?? : phi
+	9 : 75 : icmp
+	6 : 76 : load
+	7 : 76 : load
+	8 : 76 : trunc
+	24 : 75 : getelementptr
+	25 : ?? : phi
+	15 : ?? : phi
+	14 : 80 : icmp
+	11 : 81 : load
+	12 : 81 : load
+	13 : 81 : trunc
+	26 : 80 : getelementptr
+	27 : ?? : phi
+	20 : ?? : phi
+	19 : 85 : icmp
+	16 : 86 : load
+	17 : 86 : load
+	18 : 86 : trunc
+	28 : 85 : getelementptr
+
+FUNC: fir2dim_return
+	1 : 92 : load
+	2 : 92 : zext
+
+FUNC: fir2dim_pin_down
+	28 : ?? : phi
+	31 : ?? : phi
+	27 : 122 : fcmp
+	38 : 123 : getelementptr
+	33 : ?? : getelementptr
+	34 : ?? : phi
+	37 : ?? : phi
+	6: ARG : 0
+	23: ARG : 1
+	17: ARG : 2
+	52: ARG : 3
+	2 : ?? : phi
+	5 : ?? : phi
+	4 : 105 : fcmp
+	8 : ?? : phi
+	11 : ?? : phi
+	10 : 107 : fcmp
+	12 : 108 : getelementptr
+	53 : 136 : getelementptr
+	49 : 135 : fadd
+	9 : 107 : fadd
+	7 : ?? : getelementptr
+	3 : 105 : fadd
+	13 : ?? : phi
+	16 : ?? : phi
+	15 : 114 : fcmp
+	18 : 115 : getelementptr
+	14 : 114 : fadd
+	32 : 111 : getelementptr
+	19 : ?? : phi
+	22 : ?? : phi
+	21 : 118 : fcmp
+	24 : 119 : getelementptr
+	20 : 118 : fadd
+	29 : ?? : getelementptr
+	25 : ?? : phi
+	40 : ?? : phi
+	36 : 125 : fcmp
+	41 : 126 : getelementptr
+	1 : 126 : load
+	39 : 126 : getelementptr
+	35 : 125 : fadd
+	30 : 127 : getelementptr
+	26 : 122 : fadd
+	46 : ?? : getelementptr
+	42 : ?? : phi
+	45 : ?? : phi
+	44 : 131 : fcmp
+	47 : 132 : getelementptr
+	43 : 131 : fadd
+	48 : ?? : phi
+	51 : ?? : phi
+	50 : 135 : fcmp
+
+FUNC: fir2dim_main
+	40 : 174 : getelementptr
+	12 : 174 : load
+	13 : 174 : load
+	14 : 174 : fadd
+	44 : 164 : getelementptr
+	6 : ?? : phi
+	27 : ?? : phi
+	5 : 157 : icmp
+	8 : ?? : phi
+	29 : ?? : phi
+	7 : 160 : icmp
+	34 : 162 : getelementptr
+	10 : ?? : phi
+	31 : ?? : phi
+	33 : ?? : phi
+	9 : 169 : icmp
+	32 : 170 : getelementptr
+	1 : 170 : load
+	35 : 170 : getelementptr
+	2 : 170 : load
+	3 : 170 : load
+	4 : 170 : fadd
+	39 : 163 : getelementptr
+	16 : ?? : phi
+	36 : ?? : phi
+	38 : ?? : phi
+	15 : 173 : icmp
+	37 : 174 : getelementptr
+	11 : 174 : load
+	26 : 184 : fptosi
+	22 : ?? : phi
+	41 : ?? : phi
+	43 : ?? : phi
+	21 : 177 : icmp
+	42 : 178 : getelementptr
+	17 : 178 : load
+	45 : 178 : getelementptr
+	18 : 178 : load
+	19 : 178 : load
+	20 : 178 : fadd
+	30 : 180 : getelementptr
+	28 : ?? : getelementptr
+	23 : 184 : load
+	24 : 184 : load
+	25 : 184 : load
+
+FUNC: main
+	1 : 196 : call
+

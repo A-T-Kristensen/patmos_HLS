@@ -1,0 +1,4 @@
+FUNC: bitcount_bitcount
+	1: ARG : 0
+	2 : 30 : trunc
+

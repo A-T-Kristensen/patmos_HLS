@@ -1,0 +1,350 @@
+FUNC: g723_enc_fmult
+	6 : 218 : select
+	3 : 209 : call
+	4 : 209 : sext
+	11 : 211 : ashr
+	8 : 208 : and
+	5 : 208 : phi
+	14 : 210 : icmp
+	13 : 211 : icmp
+	2: ARG : 1
+	12 : 211 : shl
+	10 : 210 : phi
+	15 : 215 : and
+	16 : 216 : ashr
+	7 : 215 : phi
+	17 : 215 : icmp
+	9 : 208 : icmp
+	1: ARG : 0
+
+FUNC: g723_enc_quan
+	7 : 252 : icmp
+	1: ARG : 0
+	9: ARG : 1
+	13 : 254 : icmp
+	15 : 255 : getelementptr
+	3 : 255 : load
+	14 : 255 : icmp
+	6 : ?? : phi
+	11 : ?? : phi
+	10 : ?? : phi
+	12 : ?? : phi
+	8 : ?? : phi
+	5 : ?? : phi
+	4 : ?? : phi
+	2: ARG : 2
+
+FUNC: g723_enc_abs
+	1: ARG : 0
+	2 : 225 : select
+
+FUNC: g723_enc_predictor_zero
+	10 : 282 : ashr
+	8 : 282 : load
+	12 : 282 : sext
+	9 : 282 : call
+	15 : 282 : add
+	14 : 281 : add
+	4 : 279 : ashr
+	2 : 279 : load
+	5 : 279 : sext
+	3 : 279 : call
+	7 : ?? : phi
+	13 : ?? : phi
+	11 : 281 : icmp
+	6 : 282 : load
+	1 : 279 : load
+
+FUNC: g723_enc_predictor_pole
+	4 : 298 : ashr
+	2 : 298 : load
+	5 : 298 : sext
+	3 : 298 : call
+	6 : 299 : load
+	9 : 299 : ashr
+	7 : 299 : load
+	10 : 299 : sext
+	8 : 299 : call
+	11 : 298 : add
+	1 : 298 : load
+
+FUNC: g723_enc_step_size
+	1 : 316 : load
+	13 : 316 : icmp
+	2 : 317 : load
+	14 : 317 : sext
+	4 : 320 : load
+	12 : 322 : icmp
+	8 : 323 : add
+	11 : 325 : icmp
+	9 : 326 : add
+	7 : ?? : phi
+	6 : ?? : phi
+	5 : 321 : load
+	3 : 319 : load
+	10 : 319 : trunc
+
+FUNC: g723_enc_quantize
+	8 : 377 : sext
+	2: ARG : 1
+	4 : 360 : call
+	6 : 361 : ashr
+	5 : 361 : call
+	9 : ?? : phi
+	3: ARG : 3
+	1: ARG : 0
+	7 : 377 : call
+	13 : 379 : icmp
+	10 : 380 : sub
+	12 : 382 : icmp
+	11 : 383 : add
+
+FUNC: g723_enc_reconstruct
+	3: ARG : 2
+	2: ARG : 1
+	1: ARG : 0
+	7 : 407 : icmp
+	5 : 408 : select
+	6 : 413 : select
+	4 : ?? : phi
+
+FUNC: g723_enc_update
+	9 : 450 : load
+	60 : 445 : trunc
+	8 : 449 : load
+	19 : 497 : load
+	23 : ?? : phi
+	86 : 452 : icmp
+	85 : 452 : sext
+	84 : 452 : phi
+	10 : 454 : load
+	87 : 454 : icmp
+	3: ARG : 2
+	2: ARG : 1
+	1: ARG : 0
+	4: ARG : 3
+	5: ARG : 4
+	6: ARG : 5
+	7: ARG : 6
+	124 : 620 : icmp
+	71 : 621 : load
+	72 : 621 : load
+	73 : 621 : trunc
+	74 : 623 : load
+	82 : 627 : load
+	83 : 627 : trunc
+	61 : 611 : load
+	62 : 611 : load
+	63 : 611 : trunc
+	64 : 612 : load
+	65 : 612 : load
+	66 : 612 : trunc
+	122 : 614 : icmp
+	18 : 494 : load
+	20 : 497 : load
+	98 : 497 : trunc
+	93 : 498 : icmp
+	88 : 457 : icmp
+	27 : ?? : phi
+	11 : 468 : trunc
+	12 : 471 : load
+	107 : 471 : icmp
+	13 : 474 : load
+	108 : 474 : icmp
+	14 : 479 : load
+	15 : 479 : load
+	16 : 479 : load
+	17 : 479 : add
+	38 : 484 : icmp
+	55 : 586 : trunc
+	119 : 588 : icmp
+	57 : 590 : sext
+	56 : 590 : call
+	58 : 591 : trunc
+	59 : 596 : load
+	120 : 600 : icmp
+	111 : 542 : icmp
+	32 : 543 : trunc
+	33 : 545 : load
+	21 : 499 : load
+	94 : 500 : icmp
+	90 : 501 : trunc
+	95 : 503 : icmp
+	91 : 504 : trunc
+	92 : 506 : trunc
+	89 : ?? : phi
+	22 : 507 : load
+	99 : 507 : icmp
+	100 : 509 : icmp
+	101 : 512 : icmp
+	96 : 515 : trunc
+	102 : 517 : icmp
+	103 : 520 : icmp
+	97 : 523 : trunc
+	24 : 532 : load
+	25 : 532 : load
+	26 : 532 : trunc
+	109 : 533 : icmp
+	110 : 534 : icmp
+	28 : 535 : load
+	29 : 535 : trunc
+	30 : 537 : trunc
+	34 : 541 : trunc
+	31 : 542 : load
+	75 : 623 : load
+	77 : 623 : sub
+	76 : 623 : call
+	78 : 624 : load
+	125 : 623 : icmp
+	79 : 625 : load
+	80 : 625 : load
+	81 : 625 : trunc
+	112 : 545 : icmp
+	40 : ?? : phi
+	39 : 550 : icmp
+	113 : 551 : icmp
+	35 : 552 : load
+	36 : 552 : load
+	37 : 552 : trunc
+	41 : 554 : load
+	42 : 554 : trunc
+	114 : 555 : icmp
+	43 : 556 : load
+	115 : 556 : icmp
+	44 : 557 : load
+	45 : 557 : trunc
+	46 : 559 : trunc
+	104 : ?? : phi
+	105 : ?? : phi
+	106 : 566 : icmp
+	48 : 566 : add
+	47 : 567 : load
+	116 : 569 : icmp
+	49 : 570 : trunc
+	51 : 572 : sext
+	50 : 572 : call
+	52 : 573 : trunc
+	53 : 579 : load
+	117 : 581 : icmp
+	118 : 584 : icmp
+	54 : 585 : call
+	121 : 603 : icmp
+	123 : 617 : icmp
+	67 : 618 : load
+	68 : 618 : load
+	69 : 618 : trunc
+	70 : 620 : load
+
+FUNC: g723_enc_alaw2linear
+	1: ARG : 0
+	7 : 646 : lshr
+	6 : 649 : add
+	5 : 652 : add
+	4 : 656 : shl
+	3 : ?? : phi
+	2 : 658 : select
+
+FUNC: g723_enc_ulaw2linear
+	1: ARG : 0
+	2 : 687 : select
+
+FUNC: g723_enc_g723_24_encoder
+	2: ARG : 1
+	1: ARG : 0
+	4 : 712 : trunc
+	3 : 712 : call
+	34 : 712 : ashr
+	6 : 715 : trunc
+	5 : 715 : call
+	33 : 715 : ashr
+	32 : 718 : ashr
+	12 : ?? : phi
+	7 : 724 : call
+	8 : 726 : call
+	9 : 732 : call
+	11 : 733 : sext
+	13 : 733 : sext
+	10 : 733 : call
+	17 : 734 : and
+	15 : 734 : sext
+	14 : 734 : load
+	18 : 734 : sext
+	19 : 734 : sext
+	16 : 734 : call
+	37 : 736 : icmp
+	35 : 736 : sub
+	36 : 736 : add
+	29 : 736 : phi
+	24 : 740 : sext
+	21 : 740 : sext
+	20 : 740 : load
+	25 : 740 : sext
+	23 : 740 : sext
+	22 : 740 : load
+	26 : 740 : sext
+	27 : 740 : sext
+	28 : 740 : sext
+	30 : 740 : sext
+	38 : 742 : sext
+	31 : ?? : phi
+
+FUNC: g723_enc_pack_output
+	10 : 763 : load
+	11 : 763 : sub
+	12 : 764 : load
+	13 : 764 : lshr
+	15 : 767 : zext
+	14 : 767 : load
+	16 : 768 : load
+	17 : 768 : add
+	18 : 771 : load
+	19 : 771 : zext
+	1: ARG : 0
+	2: ARG : 1
+	3 : 759 : load
+	4 : 759 : load
+	5 : 759 : or
+	6 : 760 : load
+	7 : 760 : add
+	8 : 761 : load
+	20 : 761 : icmp
+	9 : 762 : load
+
+FUNC: g723_enc_init_state
+	1 : ?? : phi
+	3 : 798 : icmp
+	2 : ?? : phi
+	4 : 804 : icmp
+
+FUNC: g723_enc_init
+	5 : ?? : phi
+	4 : 819 : icmp
+	1 : 820 : load
+	2 : 820 : load
+	3 : 820 : add
+
+FUNC: g723_enc_return
+	4 : ?? : phi
+	3 : ?? : phi
+	6 : 831 : icmp
+	1 : 832 : load
+	5 : 832 : add
+	2 : 835 : zext
+
+FUNC: g723_enc_main
+	6 : ?? : phi
+	10 : ?? : phi
+	5 : 858 : icmp
+	1 : 859 : load
+	2 : 860 : load
+	4 : 860 : sext
+	3 : 860 : call
+	8 : 860 : trunc
+	7 : 861 : call
+	11 : ?? : phi
+	12 : 866 : icmp
+	9 : 867 : call
+
+FUNC: main
+	1 : 876 : call
+

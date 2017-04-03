@@ -1,0 +1,390 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x3023aa0>, <0x300dd70>, <0x300dff0>, <0x3010660>, <0x30103f8>, <0x300dd70>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/sequential/ammunition/ammunition.c] [DW_LANG_C99]
+
+!{!"0x2e\00ammunition_reset_str_bits\00ammunition_reset_str_bits\00\0059\000\001\000\000\00256\000\0060", <0x3023aa0>, <0x300e0c0>, <0x3023b10>, null, void (i8*, i8*)* @ammunition_reset_str_bits, null, null, <0x300dd70>} ; [ DW_TAG_subprogram ] [line 59] [def] [scope 60] [ammunition_reset_str_bits]
+
+!{!"0x2e\00ammunition_reset_str_arithm\00ammunition_reset_str_arithm\00\0070\000\001\000\000\00256\000\0072", <0x3023aa0>, <0x300e0c0>, <0x300e690>, null, void (i8*, i8*, i8*, i8*, i8*)* @ammunition_reset_str_arithm, null, null, <0x300dd70>} ; [ DW_TAG_subprogram ] [line 70] [def] [scope 72] [ammunition_reset_str_arithm]
+
+!{!"0x2e\00ammunition_bits_test\00ammunition_bits_test\00\0092\000\001\000\000\000\000\0093", <0x3023aa0>, <0x300e0c0>, <0x300e9d0>, null, i32 ()* @ammunition_bits_test, null, null, <0x300dd70>} ; [ DW_TAG_subprogram ] [line 92] [def] [scope 93] [ammunition_bits_test]
+
+!{!"0x2e\00ammunition_arithm_test\00ammunition_arithm_test\00\00232\000\001\000\000\000\000\00233", <0x3023aa0>, <0x300e0c0>, <0x300e9d0>, null, i32 ()* @ammunition_arithm_test, null, null, <0x300dd70>} ; [ DW_TAG_subprogram ] [line 232] [def] [scope 233] [ammunition_arithm_test]
+
+!{!"0x2e\00ammunition_init\00ammunition_init\00\001152\000\001\000\000\00256\000\001153", <0x3023aa0>, <0x300e0c0>, <0x300e200>, null, void ()* @ammunition_init, null, null, <0x300dd70>} ; [ DW_TAG_subprogram ] [line 1152] [def] [scope 1153] [ammunition_init]
+
+!{!"0x2e\00ammunition_return\00ammunition_return\00\001157\000\001\000\000\00256\000\001158", <0x3023aa0>, <0x300e0c0>, <0x300e9d0>, null, i32 ()* @ammunition_return, null, null, <0x300dd70>} ; [ DW_TAG_subprogram ] [line 1157] [def] [scope 1158] [ammunition_return]
+
+!{!"0x2e\00ammunition_main\00ammunition_main\00\001166\000\001\000\000\00256\000\001167", <0x3023aa0>, <0x300e0c0>, <0x300e200>, null, void ()* @ammunition_main, null, null, <0x300dd70>} ; [ DW_TAG_subprogram ] [line 1166] [def] [scope 1167] [ammunition_main]
+
+!{!"0x2e\00main\00main\00\001173\000\001\000\000\00256\000\001174", <0x3023aa0>, <0x300e0c0>, <0x300e9d0>, null, i32 ()* @main, null, null, <0x300dd70>} ; [ DW_TAG_subprogram ] [line 1173] [def] [scope 1174] [main]
+
+!{!"0x34\00ammunition_result\00ammunition_result\00\0052\000\001", null, <0x300e0c0>, <0x300e938>, i32* @ammunition_result, null} ; [ DW_TAG_variable ] [ammunition_result] [line 52] [def]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x300dec8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x300de88>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from char]
+
+!{!"0x24\00char\000\008\008\000\000\006", null, null} ; [ DW_TAG_base_type ] [char] [line 0, size 8, align 8, offset 0, enc DW_ATE_signed_char]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x300e050>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x300e968>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x300e198>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x300ddc0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x300de88>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from char]
+
+Meta data for 6260624233155964549
+Meta data for 3281519325868525538
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 11243146463753727849, name: ammunition_reset_str_bits, fileName: ammunition.c, startLine: 59, endLine: 59
+DEBUG: adding ammunition_reset_str_bits (in module: ammunition.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 11243146463753727849)
+DEBUG: assigning function ammunition_reset_str_bits id 11243146463753727849
+DEBUG: new region: FuncRegion(id: 10836001106575067661, name: ammunition_reset_str_arithm, fileName: ammunition.c, startLine: 70, endLine: 70
+DEBUG: adding ammunition_reset_str_arithm (in module: ammunition.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 10836001106575067661)
+DEBUG: assigning function ammunition_reset_str_arithm id 10836001106575067661
+DEBUG: new region: FuncRegion(id: 8874495400394360819, name: ammunition_bits_test, fileName: ammunition.c, startLine: 92, endLine: 92
+DEBUG: adding ammunition_bits_test (in module: ammunition.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 8874495400394360819)
+DEBUG: assigning function ammunition_bits_test id 8874495400394360819
+DEBUG: new region: FuncRegion(id: 13109000495394554443, name: ammunition_arithm_test, fileName: ammunition.c, startLine: 232, endLine: 232
+DEBUG: adding ammunition_arithm_test (in module: ammunition.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 13109000495394554443)
+DEBUG: assigning function ammunition_arithm_test id 13109000495394554443
+DEBUG: new region: FuncRegion(id: 8729649614010146210, name: ammunition_init, fileName: ammunition.c, startLine: 1152, endLine: 1152
+DEBUG: adding ammunition_init (in module: ammunition.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 8729649614010146210)
+DEBUG: assigning function ammunition_init id 8729649614010146210
+DEBUG: new region: FuncRegion(id: 9474279982255135846, name: ammunition_return, fileName: ammunition.c, startLine: 1157, endLine: 1157
+DEBUG: adding ammunition_return (in module: ammunition.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 9474279982255135846)
+DEBUG: assigning function ammunition_return id 9474279982255135846
+DEBUG: new region: FuncRegion(id: 10674193573329571302, name: ammunition_main, fileName: ammunition.c, startLine: 1166, endLine: 1166
+DEBUG: adding ammunition_main (in module: ammunition.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 10674193573329571302)
+DEBUG: assigning function ammunition_main id 10674193573329571302
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: ammunition.c, startLine: 1173, endLine: 1173
+DEBUG: adding main (in module: ammunition.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 8 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: ammunition_reset_str_bits is 11243146463753727849
+DEBUG: found 1 loops in function ammunition_reset_str_bits
+DEBUG: assigning id = 6260624233155964549 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9546053650457772845
+DEBUG: assigning id = 9546053650457772845 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: ammunition_reset_str_arithm is 10836001106575067661
+DEBUG: found 3 loops in function ammunition_reset_str_arithm
+DEBUG: assigning id = 3281519325868525538 to loop with the following BBs:
+	for.cond13 for.body15 
+DEBUG: /home/patmos/Developer/kremMeta data for 7486670843837340550
+Meta data for 13467751227532781671
+Meta data for 6775274772225489639
+Meta data for 3651420207140832660
+Meta data for 8882351517733747314
+Meta data for 16344379328162797683
+Meta data for 4669580369209669264
+Meta data for 4910846525263343371
+Meta data for 2267032808358822089
+Meta data for 11779996359282227857
+Meta data for 10887559119962651029
+lin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16572855392752134262
+DEBUG: assigning id = 16572855392752134262 to body of loop
+DEBUG: assigning id = 7486670843837340550 to loop with the following BBs:
+	for.cond3 for.body5 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10769230052995239125
+DEBUG: assigning id = 10769230052995239125 to body of loop
+DEBUG: assigning id = 13467751227532781671 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4729886550659213048
+DEBUG: assigning id = 4729886550659213048 to body of loop
+DEBUG: for.cond13 has 1 possible loop exit points
+DEBUG: 	target #0: for.end20
+DEBUG: for.cond3 has 1 possible loop exit points
+DEBUG: 	target #0: for.end12
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: ammunition_bits_test is 8874495400394360819
+DEBUG: found 14 loops in function ammunition_bits_test
+DEBUG: assigning id = 6775274772225489639 to loop with the following BBs:
+	for.cond293 for.body298 if.then318 for.inc320 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 1746731223104800654
+DEBUG: assigning id = 1746731223104800654 to body of loop
+DEBUG: assigning id = 3651420207140832660 to loop with the following BBs:
+	for.cond259 for.body264 if.then284 for.inc286 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17717236584989788849
+DEBUG: assigning id = 17717236584989788849 to body of loop
+DEBUG: assigning id = 8882351517733747314 to loop with the following BBs:
+	for.cond227 for.body232 if.then250 for.inc252 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 1165350403203773368
+DEBUG: assigning id = 1165350403203773368 to body of loop
+DEBUG: assigning id = 16344379328162797683 to loop with the following BBs:
+	for.cond207 for.body210 if.then219 for.inc221 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16988153756187155970
+DEBUG: assigning id = 16988153756187155970 to body of loop
+DEBUG: assigning id = 4669580369209669264 to loop with the following BBs:
+	for.cond190 for.body193 if.then202 for.inc204 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10272977591990009721
+DEBUG: assigning id = 10272977591990009721 to body of loop
+DEBUG: assigning id = 4910846525263343371 to loop with the following BBs:
+	for.cond175 for.body178 if.then185 for.inc187 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7359269222878965483
+DEBUG: assigning id = 7359269222878965483 to body of loop
+DEBUG: assigning id = 2267032808358822089 to loop with the following BBs:
+	for.cond129 for.body136 if.then144 if.end145 if.then151 if.end152 if.then165 if.end166 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5459591287350689297
+DEBUG: assigning id = 5459591287350689297 to body of loop
+DEBUG: assigning id = 11779996359282227857 to loop with the following BBs:
+	for.cond111 for.body115 if.then122 for.inc124 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9446147208867025330
+DEBUG: assigning id = 9446147208867025330 to body of loop
+DEBUG: assigning id = 10887559119962651029 to loop with the following BBs:
+	for.cond98 for.body101 if.then106 for.inc108 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/lMeta data for 830972204557017781
+Meta data for 3503210879012709602
+Meta data for 14083361803722445761
+Meta data for 13232919767562865925
+Meta data for 4676716339188926716
+Meta data for 13066492348083096701
+Meta data for 7288950110865029193
+Meta data for 3028278217107145122
+lvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 18373100772137901506
+DEBUG: assigning id = 18373100772137901506 to body of loop
+DEBUG: assigning id = 830972204557017781 to loop with the following BBs:
+	for.cond85 for.body88 if.then93 for.inc95 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14888194079326942518
+DEBUG: assigning id = 14888194079326942518 to body of loop
+DEBUG: assigning id = 3503210879012709602 to loop with the following BBs:
+	for.cond68 for.body72 if.then79 for.inc81 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3446056363324025075
+DEBUG: assigning id = 3446056363324025075 to body of loop
+DEBUG: assigning id = 14083361803722445761 to loop with the following BBs:
+	for.cond5 for.body9 for.cond26 for.inc63 for.body30 if.else if.then57 if.then33 if.then45 for.inc60 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11963985892352557149
+DEBUG: assigning id = 11963985892352557149 to body of loop
+DEBUG: assigning id = 13232919767562865925 to loop with the following BBs:
+	for.cond26 for.body30 if.else if.then57 if.then33 if.then45 for.inc60 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10253345669989791634
+DEBUG: assigning id = 10253345669989791634 to body of loop
+DEBUG: assigning id = 4676716339188926716 to loop with the following BBs:
+	for.cond for.body if.then for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17084163519027458733
+DEBUG: assigning id = 17084163519027458733 to body of loop
+DEBUG: for.cond293 has 1 possible loop exit points
+DEBUG: 	target #0: for.end322
+DEBUG: for.cond259 has 1 possible loop exit points
+DEBUG: 	target #0: for.end288
+DEBUG: for.cond227 has 1 possible loop exit points
+DEBUG: 	target #0: for.end254
+DEBUG: for.cond207 has 1 possible loop exit points
+DEBUG: 	target #0: for.end223
+DEBUG: for.cond190 has 1 possible loop exit points
+DEBUG: 	target #0: for.end206
+DEBUG: for.cond175 has 1 possible loop exit points
+DEBUG: 	target #0: for.end189
+DEBUG: for.cond129 has 1 possible loop exit points
+DEBUG: 	target #0: for.end170
+DEBUG: for.cond111 has 1 possible loop exit points
+DEBUG: 	target #0: for.end126
+DEBUG: for.cond98 has 1 possible loop exit points
+DEBUG: 	target #0: for.end110
+DEBUG: for.cond85 has 1 possible loop exit points
+DEBUG: 	target #0: for.end97
+DEBUG: for.cond68 has 1 possible loop exit points
+DEBUG: 	target #0: for.end83
+DEBUG: for.cond5 has 1 possible loop exit points
+DEBUG: 	target #0: for.end65
+DEBUG: for.cond26 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc63
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: ammunition_arithm_test is 13109000495394554443
+DEBUG: found 11 loops in function ammunition_arithm_test
+DEBUG: assigning id = 13066492348083096701 to loop with the following BBs:
+	for.cond769 for.body771 if.then788 if.end789 if.then798 for.inc800 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 1048534711192011806
+DEBUG: assigning id = 1048534711192011806 to body of loop
+DEBUG: assigning id = 7288950110865029193 to loop with the following BBs:
+	for.cond719 for.body721 if.then738 if.end739 if.then749 for.inc751 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7038192993169820857
+DEBUG: assigning id = 7038192993169820857 to body of loop
+DEBUG: assigning id = 3028278217107145122 to loop with the following BBs:
+	for.cond624 for.body626 if.then648 if.end649 if.then668 if.end669 if.then679 if.end680 if.then699 for.inc701 
+DEBUG: /home/patmos/DeveMeta data for 13959707655436862440
+Meta data for 18442441467087739884
+Meta data for 13182406725938173300
+Meta data for 71216610774356497
+Meta data for 16498921315694393416
+Meta data for 15444098575726103650
+Meta data for 4249058562038188
+Meta data for 5574834773082150300
+loper/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4207008949121325227
+DEBUG: assigning id = 4207008949121325227 to body of loop
+DEBUG: assigning id = 13959707655436862440 to loop with the following BBs:
+	for.cond576 for.body578 if.then594 if.end595 if.then604 for.inc606 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7014653151625128009
+DEBUG: assigning id = 7014653151625128009 to body of loop
+DEBUG: assigning id = 18442441467087739884 to loop with the following BBs:
+	for.cond496 for.body498 if.then514 if.end515 if.then523 for.inc525 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11938489759147392147
+DEBUG: assigning id = 11938489759147392147 to body of loop
+DEBUG: assigning id = 13182406725938173300 to loop with the following BBs:
+	for.cond379 for.body381 if.then396 if.end397 if.then406 for.inc408 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 15523738029665207246
+DEBUG: assigning id = 15523738029665207246 to body of loop
+DEBUG: assigning id = 71216610774356497 to loop with the following BBs:
+	for.cond307 for.body309 if.then324 if.end325 if.then334 for.inc336 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5537292494722354389
+DEBUG: assigning id = 5537292494722354389 to body of loop
+DEBUG: assigning id = 16498921315694393416 to loop with the following BBs:
+	for.cond229 for.body231 if.then247 if.end248 if.then257 for.inc259 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16675542914685421078
+DEBUG: assigning id = 16675542914685421078 to body of loop
+DEBUG: assigning id = 15444098575726103650 to loop with the following BBs:
+	for.cond152 for.body154 if.then169 if.end170 if.then179 for.inc181 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3448277382257121381
+DEBUG: assigning id = 3448277382257121381 to body of loop
+DEBUG: assigning id = 4249058562038188 to loop with the following BBs:
+	for.cond84 for.body86 if.then93 if.end94 if.then102 for.inc104 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17166181376249332522
+DEBUG: assigning id = 17166181376249332522 to body of loop
+DEBUG: assigning id = 5574834773082150300 to loop with the following BBs:
+	for.cond for.body if.then46 if.end47 if.then55 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12035607307127566582
+DEBUG: assigning id = 12035607307127566582 to body of loop
+DEBUG: for.cond769 has 1 possible loop exit points
+DEBUG: 	target #0: for.end802
+DEBUG: for.cond719 has 1 possible loop exit points
+DEBUG: 	target #0: for.end753
+DEBUG: for.cond624 has 1 possible loop exit points
+DEBUG: 	target #0: for.end703
+DEBUG: for.cond576 has 1 possible loop exit points
+DEBUG: 	target #0: for.end608
+DEBUG: for.cond496 has 1 possible loop exit points
+DEBUG: 	target #0: for.end527
+DEBUG: for.cond379 has 1 possible loop exit points
+DEBUG: 	target #0: for.end410
+DEBUG: for.cond307 has 1 possible loop exit points
+DEBUG: 	target #0: for.end338
+DEBUG: for.cond229 has 1 possible loop exit points
+DEBUG: 	target #0: for.end261
+DEBUG: for.cond152 has 1 possible loop exit points
+DEBUG: 	target #0: for.end183
+DEBUG: for.cond84 has 1 possible loop exit points
+DEBUG: 	target #0: for.end106
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: ammunition_init is 8729649614010146210
+DEBUG: found 0 loops in function ammunition_init
+DEBUG: region name to id: ammunition_return is 9474279982255135846
+DEBUG: found 0 loops in function ammunition_return
+DEBUG: region name to id: ammunition_main is 10674193573329571302
+DEBUG: found 0 loops in function ammunition_main
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to ammunition.kdump
+INFO: dumping function: ammunition_reset_str_bits
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: ammunition_reset_str_arithm
+INFO: dumping function: ammunition_bits_test
+INFO: dumping function: ammunition_is_zero_bit_string
+INFO: dumping function: ammunition_bit_string_set
+INFO: dumping function: ammunition_bit_string_comparison
+INFO: dumping function: ammunition_bit_string_copy
+INFO: dumping function: ammunition_bit_string_move
+INFO: dumping function: ammunition_arithm_test
+INFO: dumping function: ammunition_integer_from_string
+INFO: dumping function: ammunition_sprintf_d
+INFO: dumping function: ammunition_integer_to_string
+INFO: dumping function: ammunition_strcmp
+INFO: dumping function: ammunition_unsigned_integer_from_string
+INFO: dumping function: ammunition_sprintf_u
+INFO: dumping function: ammunition_unsigned_integer_to_string
+INFO: dumping function: ammunition_add_integer
+INFO: dumping function: ammunition_atoi
+INFO: dumping function: ammunition_add_unsigned_integer
+INFO: dumping function: ammunition_subtract_integer
+INFO: dumping function: ammunition_subtract_unsigned_integer
+INFO: dumping function: ammunition_multiply_integer
+INFO: dumping function: ammunition_multiply_unsigned_integer
+INFO: dumping function: ammunition_divide_integer
+INFO: dumping function: ammunition_divide_unsigned_integer
+INFO: dumping function: ammunition_unsigned_integer_remainder
+INFO: dumping function: ammunition_unsigned_integer_shift_right
+INFO: dumping function: ammunition_unsigned_integer_shift_left
+INFO: dumping function: ammunition_integer_shift_right
+INFO: dumping function: ammunition_integer_shift_left
+INFO: dumping function: ammunition_eq_integer
+INFO: dumping function: ammunition_eq_unsigned_integer
+INFO: dumping function: ammunition_ne_integer
+INFO: dumping function: ammunition_ne_unsigned_integer
+INFO: dumping function: ammunition_gt_integer
+INFO: dumping function: ammunition_gt_unsigned_integer
+INFO: dumping function: ammunition_lt_integer
+INFO: dumping function: ammunition_lt_unsigned_integer
+INFO: dumping function: ammunition_ge_integer
+INFO: dumping function: ammunition_ge_unsigned_integer
+INFO: dumping function: ammunition_le_integer
+INFO: dumping function: ammunition_le_unsigned_integer
+INFO: dumping function: ammunition_change_unsigned_integer_size
+INFO: dumping function: ammunition_change_integer_size
+INFO: dumping function: ammunition_unsigned_integer_or
+INFO: dumping function: ammunition_integer_or
+INFO: dumping function: ammunition_unsigned_integer_and
+INFO: dumping function: ammunition_integer_and
+INFO: dumping function: ammunition_unsigned_integer_not
+INFO: dumping function: ammunition_integer_not
+INFO: dumping function: ammunition_init
+INFO: dumping function: ammunition_return
+INFO: dumping function: ammunition_main
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

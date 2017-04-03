@@ -1,0 +1,79 @@
+FUNC: jfdctint_init
+	4 : ?? : phi
+	2 : ?? : phi
+	3 : 153 : icmp
+	1 : 154 : srem
+
+FUNC: jfdctint_return
+	4 : ?? : phi
+	3 : ?? : phi
+	6 : 165 : icmp
+	1 : 166 : load
+	5 : 166 : add
+	2 : 167 : select
+
+FUNC: jfdctint_jpeg_fdct_islow
+	16 : 198 : load
+	19 : ?? : phi
+	54 : ?? : phi
+	18 : 189 : icmp
+	1 : 191 : load
+	2 : 191 : load
+	3 : 192 : load
+	4 : 192 : load
+	5 : 193 : load
+	6 : 193 : load
+	7 : 194 : load
+	8 : 194 : load
+	56 : 242 : add
+	33 : 246 : load
+	34 : 246 : load
+	35 : 247 : load
+	36 : 247 : load
+	37 : 248 : load
+	38 : 248 : load
+	39 : 249 : load
+	9 : 195 : load
+	10 : 195 : load
+	11 : 196 : load
+	12 : 196 : load
+	13 : 197 : load
+	14 : 197 : load
+	15 : 198 : load
+	55 : 237 : getelementptr
+	53 : 189 : add
+	17 : 205 : shl
+	26 : 235 : ashr
+	20 : 206 : shl
+	21 : 209 : ashr
+	22 : 211 : ashr
+	23 : 232 : ashr
+	24 : 233 : ashr
+	25 : 234 : ashr
+	49 : 285 : ashr
+	50 : 287 : ashr
+	45 : ?? : phi
+	57 : ?? : phi
+	44 : 242 : icmp
+	27 : 243 : load
+	28 : 243 : load
+	29 : 244 : load
+	30 : 244 : load
+	31 : 245 : load
+	32 : 245 : load
+	40 : 249 : load
+	41 : 250 : load
+	42 : 250 : load
+	43 : 257 : ashr
+	46 : 258 : ashr
+	47 : 261 : ashr
+	48 : 263 : ashr
+	51 : 289 : ashr
+	52 : 291 : ashr
+	58 : 294 : getelementptr
+
+FUNC: jfdctint_main
+
+FUNC: main
+	1 : 317 : call
+

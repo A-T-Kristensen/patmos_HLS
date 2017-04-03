@@ -1,0 +1,15 @@
+FUNC: pm_memcpy
+	1: ARG : 2
+	5 : 38 : icmp
+	4 : 38 : sext
+	3 : ?? : phi
+	2 : 39 : load
+
+FUNC: pm_memset
+	1: ARG : 1
+	2: ARG : 2
+	4 : 48 : sext
+	6 : ?? : phi
+	5 : 48 : icmp
+	3 : 49 : trunc
+

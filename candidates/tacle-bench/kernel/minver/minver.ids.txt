@@ -1,0 +1,138 @@
+FUNC: minver_fabs
+	1: ARG : 0
+	4 : 65 : fcmp
+	3 : 68 : fsub
+	2 : ?? : phi
+
+FUNC: minver_mmul
+	15 : 87 : icmp
+	1: ARG : 0
+	2: ARG : 1
+	3: ARG : 2
+	4: ARG : 3
+	17 : 81 : or
+	13 : 81 : icmp
+	9 : ?? : phi
+	14 : 85 : icmp
+	10 : ?? : phi
+	11 : ?? : phi
+	7 : ?? : phi
+	16 : 90 : icmp
+	5 : 91 : load
+	6 : 91 : load
+	12 : 91 : fadd
+	8 : ?? : phi
+
+FUNC: minver_minver
+	16 : 141 : load
+	4 : ?? : phi
+	13 : 136 : load
+	60 : ?? : phi
+	61 : ?? : phi
+	1: ARG : 0
+	2: ARG : 1
+	5 : 109 : or
+	17 : 147 : load
+	18 : 147 : fdiv
+	6 : 113 : icmp
+	3 : 114 : trunc
+	51 : 116 : sext
+	19 : 116 : sext
+	21 : ?? : phi
+	44 : ?? : phi
+	46 : ?? : phi
+	11 : ?? : phi
+	20 : 116 : icmp
+	49 : ?? : phi
+	53 : ?? : phi
+	54 : ?? : phi
+	56 : ?? : phi
+	52 : 119 : icmp
+	7 : 120 : load
+	8 : 120 : call
+	59 : 121 : fcmp
+	58 : 124 : trunc
+	55 : ?? : phi
+	57 : ?? : phi
+	50 : 119 : add
+	9 : 126 : load
+	30 : ?? : phi
+	45 : ?? : phi
+	10 : 127 : call
+	22 : 128 : fcmp
+	65 : 132 : fmul
+	62 : 133 : icmp
+	12 : 135 : load
+	14 : 136 : sext
+	63 : 139 : icmp
+	15 : 140 : load
+	66 : 134 : fsub
+	47 : ?? : phi
+	64 : ?? : phi
+	48 : ?? : phi
+	24 : ?? : phi
+	23 : 146 : icmp
+	31 : 149 : icmp
+	68 : 150 : icmp
+	25 : 151 : load
+	32 : 152 : fcmp
+	29 : ?? : phi
+	33 : 154 : icmp
+	71 : 155 : icmp
+	26 : 155 : load
+	27 : 155 : load
+	28 : 155 : fsub
+	34 : 157 : fdiv
+	67 : ?? : phi
+	35 : 162 : fdiv
+	69 : ?? : phi
+	72 : 165 : icmp
+	36 : 173 : load
+	73 : 174 : icmp
+	38 : 175 : sext
+	37 : 175 : load
+	39 : 176 : load
+	70 : ?? : phi
+	74 : 179 : icmp
+	40 : 180 : load
+	42 : 181 : sext
+	41 : 181 : load
+	43 : ?? : phi
+
+FUNC: minver_init
+	5 : ?? : phi
+	4 : 202 : icmp
+	7 : ?? : phi
+	6 : 204 : icmp
+	1 : 205 : load
+	2 : 205 : load
+	3 : 205 : fadd
+
+FUNC: minver_return
+	4 : ?? : phi
+	3 : ?? : phi
+	6 : 216 : icmp
+	7 : ?? : phi
+	5 : ?? : phi
+	9 : 218 : icmp
+	1 : 219 : load
+	8 : 219 : fadd
+	2 : 222 : zext
+
+FUNC: minver_main
+	5 : ?? : phi
+	9 : 237 : icmp
+	6 : ?? : phi
+	10 : 239 : icmp
+	1 : 240 : load
+	2 : 243 : call
+	7 : ?? : phi
+	11 : 245 : icmp
+	8 : ?? : phi
+	12 : 247 : icmp
+	3 : 248 : load
+	4 : 251 : call
+
+FUNC: main
+	1 : 260 : call
+

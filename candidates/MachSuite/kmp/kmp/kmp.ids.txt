@@ -1,0 +1,45 @@
+FUNC: CPF
+	4 : ?? : phi
+	12 : ?? : phi
+	11 : 12 : icmp
+	13 : ?? : phi
+	14 : 13 : icmp
+	2 : 13 : sext
+	1 : 13 : load
+	3 : 13 : load
+	15 : 13 : icmp
+	5 : 14 : load
+	16 : ?? : phi
+	7 : 16 : sext
+	6 : 16 : load
+	8 : 16 : load
+	18 : 16 : icmp
+	17 : 17 : add
+	9 : ?? : phi
+	10 : 12 : add
+
+FUNC: kmp
+	7 : 35 : load
+	22 : 35 : icmp
+	21 : 36 : add
+	16 : ?? : phi
+	11 : ?? : phi
+	15 : ?? : phi
+	10 : 31 : icmp
+	17 : ?? : phi
+	19 : 32 : icmp
+	2 : 32 : sext
+	1 : 32 : load
+	3 : 32 : load
+	20 : 32 : icmp
+	18 : ?? : phi
+	5 : 33 : sext
+	4 : 33 : load
+	6 : 35 : load
+	8 : 39 : load
+	9 : 39 : add
+	14 : 40 : sext
+	12 : ?? : phi
+	23 : 38 : icmp
+	13 : 40 : load
+

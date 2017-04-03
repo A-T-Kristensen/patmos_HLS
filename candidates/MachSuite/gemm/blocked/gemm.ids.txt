@@ -1,0 +1,21 @@
+FUNC: bbgemm
+	9 : ?? : phi
+	8 : 15 : icmp
+	11 : ?? : phi
+	10 : 16 : icmp
+	13 : ?? : phi
+	12 : 17 : icmp
+	15 : ?? : phi
+	14 : 18 : icmp
+	2 : 21 : add
+	1 : 21 : load
+	17 : ?? : phi
+	16 : 22 : icmp
+	4 : 23 : add
+	3 : 23 : load
+	6 : 24 : add
+	5 : 24 : load
+	7 : 24 : fadd
+	19 : 16 : add
+	18 : 15 : add
+

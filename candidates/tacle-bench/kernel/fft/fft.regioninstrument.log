@@ -1,0 +1,242 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x252e380>, <0x2529bf0>, <0x2527be8>, <0x2538030>, <0x253b080>, <0x2529bf0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/fft/fft.c] [DW_LANG_C99]
+
+!{!"0x2e\00fft_bit_reduct\00fft_bit_reduct\00\00111\000\001\000\000\00256\000\00112", <0x252e380>, <0x25320e0>, <0x2535530>, null, void (i32*)* @fft_bit_reduct, null, null, <0x2529bf0>} ; [ DW_TAG_subprogram ] [line 111] [def] [scope 112] [fft_bit_reduct]
+
+!{!"0x2e\00fft_exp2f\00fft_exp2f\00\00202\000\001\000\000\00256\000\00203", <0x252e380>, <0x25320e0>, <0x2535c40>, null, float (float)* @fft_exp2f, null, null, <0x2529bf0>} ; [ DW_TAG_subprogram ] [line 202] [def] [scope 203] [fft_exp2f]
+
+!{!"0x2e\00fft_modff\00fft_modff\00\00215\000\001\000\000\00256\000\00216", <0x252e380>, <0x25320e0>, <0x2535e40>, null, float (float, float*)* @fft_modff, null, null, <0x2529bf0>} ; [ DW_TAG_subprogram ] [line 215] [def] [scope 216] [fft_modff]
+
+!{!"0x2e\00fft_convert\00fft_convert\00\00226\000\001\000\000\00256\000\00227", <0x252e380>, <0x25320e0>, <0x2535a40>, null, i32 (float)* @fft_convert, null, null, <0x2529bf0>} ; [ DW_TAG_subprogram ] [line 226] [def] [scope 227] [fft_convert]
+
+!{!"0x2e\00fft_float2fract\00fft_float2fract\00\00251\000\001\000\000\00256\000\00252", <0x252e380>, <0x25320e0>, <0x2531b60>, null, void ()* @fft_float2fract, null, null, <0x2529bf0>} ; [ DW_TAG_subprogram ] [line 251] [def] [scope 252] [fft_float2fract]
+
+!{!"0x2e\00fft_pin_down\00fft_pin_down\00\00265\000\001\000\000\00256\000\00266", <0x252e380>, <0x25320e0>, <0x2535530>, null, void (i32*)* @fft_pin_down, null, null, <0x2529bf0>} ; [ DW_TAG_subprogram ] [line 265] [def] [scope 266] [fft_pin_down]
+
+!{!"0x2e\00fft_init\00fft_init\00\00283\000\001\000\000\00256\000\00284", <0x252e380>, <0x25320e0>, <0x2531b60>, null, void ()* @fft_init, null, null, <0x2529bf0>} ; [ DW_TAG_subprogram ] [line 283] [def] [scope 284] [fft_init]
+
+!{!"0x2e\00fft_return\00fft_return\00\00299\000\001\000\000\00256\000\00300", <0x252e380>, <0x25320e0>, <0x2537b90>, null, i32 ()* @fft_return, null, null, <0x2529bf0>} ; [ DW_TAG_subprogram ] [line 299] [def] [scope 300] [fft_return]
+
+!{!"0x2e\00fft_main\00fft_main\00\00316\000\001\000\000\00256\000\00317", <0x252e380>, <0x25320e0>, <0x2531b60>, null, void ()* @fft_main, null, null, <0x2529bf0>} ; [ DW_TAG_subprogram ] [line 316] [def] [scope 317] [fft_main]
+
+!{!"0x2e\00main\00main\00\00322\000\001\000\000\00256\000\00323", <0x252e380>, <0x25320e0>, <0x2537b90>, null, i32 ()* @main, null, null, <0x2529bf0>} ; [ DW_TAG_subprogram ] [line 322] [def] [scope 323] [main]
+
+!{!"0x34\00fft_input_data\00fft_input_data\00\0093\000\001", null, <0x25320e0>, <0x25380a0>, [2048 x i32]* @fft_input_data, null} ; [ DW_TAG_variable ] [fft_input_data] [line 93] [def]
+
+!{!"0x34\00fft_inputfract\00fft_inputfract\00\00104\000\001", null, <0x25320e0>, <0x25361e0>, [1024 x i32]* @fft_inputfract, null} ; [ DW_TAG_variable ] [fft_inputfract] [line 104] [def]
+
+!{!"0x1\00\000\0065536\0032\000\000\000", null, null, <0x2532548>, <0x2537da8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 65536, align 32, offset 0] [from int]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x1\00\000\0032768\0032\000\000\000", null, null, <0x2532548>, <0x2536178>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 32768, align 32, offset 0] [from int]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x25354c0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2532548>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from int]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2535bd0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x24\00float\000\0032\0032\000\000\004", null, null} ; [ DW_TAG_base_type ] [float] [line 0, size 32, align 32, offset 0, enc DW_ATE_float]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2535d18>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2535b98>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from float]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2535f10>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2532158>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2527be8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+Meta data for 5925476534426140625
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 1206606693822166117, name: fft_bit_reduct, fileName: fft.c, startLine: 111, endLine: 111
+DEBUG: adding fft_bit_reduct (in module: fft.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 1206606693822166117)
+DEBUG: assigning function fft_bit_reduct id 1206606693822166117
+DEBUG: new region: FuncRegion(id: 10259623769862005887, name: fft_exp2f, fileName: fft.c, startLine: 202, endLine: 202
+DEBUG: adding fft_exp2f (in module: fft.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 10259623769862005887)
+DEBUG: assigning function fft_exp2f id 10259623769862005887
+DEBUG: new region: FuncRegion(id: 5073018741072588704, name: fft_modff, fileName: fft.c, startLine: 215, endLine: 215
+DEBUG: adding fft_modff (in module: fft.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 5073018741072588704)
+DEBUG: assigning function fft_modff id 5073018741072588704
+DEBUG: new region: FuncRegion(id: 5618331814215755180, name: fft_convert, fileName: fft.c, startLine: 226, endLine: 226
+DEBUG: adding fft_convert (in module: fft.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 5618331814215755180)
+DEBUG: assigning function fft_convert id 5618331814215755180
+DEBUG: new region: FuncRegion(id: 8980503848618988093, name: fft_float2fract, fileName: fft.c, startLine: 251, endLine: 251
+DEBUG: adding fft_float2fract (in module: fft.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 8980503848618988093)
+DEBUG: assigning function fft_float2fract id 8980503848618988093
+DEBUG: new region: FuncRegion(id: 12673044142767763649, name: fft_pin_down, fileName: fft.c, startLine: 265, endLine: 265
+DEBUG: adding fft_pin_down (in module: fft.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12673044142767763649)
+DEBUG: assigning function fft_pin_down id 12673044142767763649
+DEBUG: new region: FuncRegion(id: 8677392086236962712, name: fft_init, fileName: fft.c, startLine: 283, endLine: 283
+DEBUG: adding fft_init (in module: fft.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 8677392086236962712)
+DEBUG: assigning function fft_init id 8677392086236962712
+DEBUG: new region: FuncRegion(id: 3491951968834694719, name: fft_return, fileName: fft.c, startLine: 299, endLine: 299
+DEBUG: adding fft_return (in module: fft.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3491951968834694719)
+DEBUG: assigning function fft_return id 3491951968834694719
+DEBUG: new region: FuncRegion(id: 12580922253086835624, name: fft_main, fileName: fft.c, startLine: 316, endLine: 316
+DEBUG: adding fft_main (in module: fft.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12580922253086835624)
+DEBUG: assigning function fft_main id 12580922253086835624
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: fft.c, startLine: 322, endLine: 322
+DEBUG: adding main (in module: fft.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 10 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: fft_bit_reduct is 1206606693822166117
+DEBUG: found 6 loops in function fft_bit_reduct
+DEBUG: assigning id = 5925476534426140625 to loop with the following BBs:
+	while.cond24 while.body26 for.cond27 for.end65 for.cond66 for.end71 for.body68 for.body29 for.cond36 for.inc63 for.body38 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBoMeta data for 13052531643710805442
+Meta data for 8314815743601151901
+Meta data for 11714935155223982291
+Meta data for 15296242475423467527
+Meta data for 801557653133839532
+Meta data for 5570545447384410528
+Meta data for 17771167656666930228
+Meta data for 8045391988550481745
+Meta data for 6047461652320292688
+dyRegion.cpp:82 Meta data for 16233263568102093344
+DEBUG: assigning id = 16233263568102093344 to body of loop
+DEBUG: assigning id = 13052531643710805442 to loop with the following BBs:
+	for.cond27 for.body29 for.cond36 for.inc63 for.body38 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5402329395490658317
+DEBUG: assigning id = 5402329395490658317 to body of loop
+DEBUG: assigning id = 8314815743601151901 to loop with the following BBs:
+	for.cond36 for.body38 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4314643543123278679
+DEBUG: assigning id = 4314643543123278679 to body of loop
+DEBUG: assigning id = 11714935155223982291 to loop with the following BBs:
+	for.cond66 for.body68 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16428299523292646779
+DEBUG: assigning id = 16428299523292646779 to body of loop
+DEBUG: assigning id = 15296242475423467527 to loop with the following BBs:
+	for.cond for.body if.then if.end while.cond land.rhs land.end while.end while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14387733928307612184
+DEBUG: assigning id = 14387733928307612184 to body of loop
+DEBUG: assigning id = 801557653133839532 to loop with the following BBs:
+	while.cond land.rhs land.end while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 2717000288030641122
+DEBUG: assigning id = 2717000288030641122 to body of loop
+DEBUG: while.cond24 has 1 possible loop exit points
+DEBUG: 	target #0: while.end72
+DEBUG: for.cond27 has 1 possible loop exit points
+DEBUG: 	target #0: for.end65
+DEBUG: for.cond36 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc63
+DEBUG: for.cond66 has 1 possible loop exit points
+DEBUG: 	target #0: for.end71
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: land.end has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: region name to id: fft_exp2f is 10259623769862005887
+DEBUG: found 1 loops in function fft_exp2f
+DEBUG: assigning id = 5570545447384410528 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11051430449993778049
+DEBUG: assigning id = 11051430449993778049 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: fft_modff is 5073018741072588704
+DEBUG: found 0 loops in function fft_modff
+DEBUG: region name to id: fft_convert is 5618331814215755180
+DEBUG: found 0 loops in function fft_convert
+DEBUG: region name to id: fft_float2fract is 8980503848618988093
+DEBUG: found 1 loops in function fft_float2fract
+DEBUG: assigning id = 17771167656666930228 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5833977236859886913
+DEBUG: assigning id = 5833977236859886913 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: fft_pin_down is 12673044142767763649
+DEBUG: found 1 loops in function fft_pin_down
+DEBUG: assigning id = 8045391988550481745 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16878631146178570687
+DEBUG: assigning id = 16878631146178570687 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: fft_init is 8677392086236962712
+DEBUG: found 1 loops in function fft_init
+DEBUG: assigning id = 60474616523Meta data for 12826696899965202378
+20292688 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10166834841282540317
+DEBUG: assigning id = 10166834841282540317 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: fft_return is 3491951968834694719
+DEBUG: found 1 loops in function fft_return
+DEBUG: assigning id = 12826696899965202378 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 2171245099175681552
+DEBUG: assigning id = 2171245099175681552 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: fft_main is 12580922253086835624
+DEBUG: found 0 loops in function fft_main
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to fft.kdump
+INFO: dumping function: fft_bit_reduct
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: fft_exp2f
+INFO: dumping function: fft_modff
+INFO: dumping function: fft_convert
+INFO: dumping function: fft_float2fract
+INFO: dumping function: fft_pin_down
+INFO: dumping function: fft_init
+INFO: dumping function: fft_return
+INFO: dumping function: fft_main
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

@@ -1,0 +1,44 @@
+FUNC: merge
+	27 : ?? : phi
+	23 : 18 : icmp
+	9 : 19 : sext
+	1: ARG : 1
+	2: ARG : 2
+	3: ARG : 3
+	15 : ?? : sext
+	13 : 7 : sext
+	5 : ?? : phi
+	14 : 7 : icmp
+	4 : 8 : load
+	12 : 7 : add
+	19 : 11 : add
+	17 : 11 : sext
+	7 : ?? : phi
+	18 : 11 : icmp
+	6 : 12 : load
+	16 : 11 : add
+	24 : ?? : sext
+	22 : 18 : sext
+	20 : ?? : phi
+	25 : ?? : phi
+	8 : 19 : load
+	11 : 20 : sext
+	10 : 20 : load
+	30 : 21 : icmp
+	31 : 23 : add
+	29 : 26 : add
+	26 : ?? : phi
+	28 : ?? : phi
+	21 : 18 : add
+
+FUNC: ms_mergesort
+	3 : ?? : phi
+	4 : 38 : icmp
+	1 : ?? : phi
+	5 : 39 : icmp
+	2 : 41 : sub
+	6 : 42 : sub
+	9 : 43 : icmp
+	8 : 39 : add
+	7 : 38 : add
+

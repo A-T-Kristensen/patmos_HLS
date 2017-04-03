@@ -1,0 +1,280 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x355a0f0>, <0x355f0e0>, <0x3560630>, <0x3569310>, <0x35671c8>, <0x355f0e0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/sha/sha.c] [DW_LANG_C99]
+
+!{!"0x2e\00sha_transform\00sha_transform\00\0052\000\001\000\000\00256\000\0053", <0x355a0f0>, <0x3560670>, <0x3560dc0>, null, void (%struct.SHA_INFO*)* @sha_transform, null, null, <0x355f0e0>} ; [ DW_TAG_subprogram ] [line 52] [def] [scope 53] [sha_transform]
+
+!{!"0x2e\00sha_byte_reverse\00sha_byte_reverse\00\0092\000\001\000\000\00256\000\0093", <0x355a0f0>, <0x3560670>, <0x35620c0>, null, void (i64*, i32)* @sha_byte_reverse, null, null, <0x355f0e0>} ; [ DW_TAG_subprogram ] [line 92] [def] [scope 93] [sha_byte_reverse]
+
+!{!"0x2e\00sha_init\00sha_init\00\00114\000\001\000\000\00256\000\00115", <0x355a0f0>, <0x3560670>, <0x35622f0>, null, void ()* @sha_init, null, null, <0x355f0e0>} ; [ DW_TAG_subprogram ] [line 114] [def] [scope 115] [sha_init]
+
+!{!"0x2e\00sha_fread\00sha_fread\00\00128\000\001\000\000\00256\000\00130", <0x355a0f0>, <0x3560670>, <0x3567020>, null, i32 (i8*, i32, i32, %struct.SHA_MY_FILE*)* @sha_fread, null, null, <0x355f0e0>} ; [ DW_TAG_subprogram ] [line 128] [def] [scope 130] [sha_fread]
+
+!{!"0x2e\00sha_update\00sha_update\00\00143\000\001\000\000\00256\000\00144", <0x355a0f0>, <0x3560670>, <0x35673f0>, null, void (%struct.SHA_INFO*, i8*, i32)* @sha_update, null, null, <0x355f0e0>} ; [ DW_TAG_subprogram ] [line 143] [def] [scope 144] [sha_update]
+
+!{!"0x2e\00sha_final\00sha_final\00\00162\000\001\000\000\00256\000\00163", <0x355a0f0>, <0x3560670>, <0x3560dc0>, null, void (%struct.SHA_INFO*)* @sha_final, null, null, <0x355f0e0>} ; [ DW_TAG_subprogram ] [line 162] [def] [scope 163] [sha_final]
+
+!{!"0x2e\00sha_stream\00sha_stream\00\00187\000\001\000\000\00256\000\00188", <0x355a0f0>, <0x3560670>, <0x3568ae0>, null, void (%struct.SHA_INFO*, %struct.SHA_MY_FILE*)* @sha_stream, null, null, <0x355f0e0>} ; [ DW_TAG_subprogram ] [line 187] [def] [scope 188] [sha_stream]
+
+!{!"0x2e\00sha_main\00sha_main\00\00198\000\001\000\000\00256\000\00199", <0x355a0f0>, <0x3560670>, <0x35622f0>, null, void ()* @sha_main, null, null, <0x355f0e0>} ; [ DW_TAG_subprogram ] [line 198] [def] [scope 199] [sha_main]
+
+!{!"0x2e\00sha_return\00sha_return\00\00207\000\001\000\000\00256\000\00208", <0x355a0f0>, <0x3560670>, <0x3568f70>, null, i32 ()* @sha_return, null, null, <0x355f0e0>} ; [ DW_TAG_subprogram ] [line 207] [def] [scope 208] [sha_return]
+
+!{!"0x2e\00main\00main\00\00214\000\001\000\000\00256\000\00215", <0x355a0f0>, <0x3560670>, <0x3568f70>, null, i32 ()* @main, null, null, <0x355f0e0>} ; [ DW_TAG_subprogram ] [line 214] [def] [scope 215] [main]
+
+!{!"0x34\00sha_info\00sha_info\00\0027\000\001", null, <0x3560670>, <0x3561750>, %struct.SHA_INFO* @sha_info, null} ; [ DW_TAG_variable ] [sha_info] [line 27] [def]
+
+!{!"0x13\00SHA_INFO\0042\001472\0064\000\000\000", <0x355f1a0>, null, null, <0x3561660>, null, null, null} ; [ DW_TAG_structure_type ] [SHA_INFO] [line 42, size 1472, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00digest\0043\00320\0064\000\000", <0x355f1a0>, <0x3561750>, <0x3560930>} ; [ DW_TAG_member ] [digest] [line 43, size 320, align 64, offset 0] [from ]
+
+!{!"0x1\00\000\00320\0064\000\000\000", null, null, <0x355a140>, <0x35608c8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 320, align 64, offset 0] [from LONG]
+
+!{!"0x16\00LONG\0025\000\000\000\000", <0x355f1a0>, null, <0x3560498>} ; [ DW_TAG_typedef ] [LONG] [line 25, size 0, align 0, offset 0] [from long unsigned int]
+
+!{!"0x24\00long unsigned int\000\0064\0064\000\000\007", null, null} ; [ DW_TAG_base_type ] [long unsigned int] [line 0, size 64, align 64, offset 0, enc DW_ATE_unsigned]
+
+!{!"0xd\00count_lo\0044\0064\0064\00320\000", <0x355f1a0>, <0x3561750>, <0x355a140>} ; [ DW_TAG_member ] [count_lo] [line 44, size 64, align 64, offset 320] [from LONG]
+
+!{!"0xd\00count_hi\0044\0064\0064\00384\000", <0x355f1a0>, <0x3561750>, <0x355a140>} ; [ DW_TAG_member ] [count_hi] [line 44, size 64, align 64, offset 384] [from LONG]
+
+!{!"0xd\00data\0045\001024\0064\00448\000", <0x355f1a0>, <0x3561750>, <0x3561540>} ; [ DW_TAG_member ] [data] [line 45, size 1024, align 64, offset 448] [from ]
+
+!{!"0x1\00\000\001024\0064\000\000\000", null, null, <0x355a140>, <0x35614d8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 1024, align 64, offset 0] [from LONG]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3560520>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x3561750>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from SHA_INFO]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3561f08>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x355a140>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from LONG]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3562288>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3566f38>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x16\00size_t\0026\000\000\000\000", <0x355f1a0>, null, <0x3562418>} ; [ DW_TAG_typedef ] [size_t] [line 26, size 0, align 0, offset 0] [from unsigned int]
+
+!{!"0x24\00unsigned int\000\0032\0032\000\000\007", null, null} ; [ DW_TAG_base_type ] [unsigned int] [line 0, size 32, align 32, offset 0, enc DW_ATE_unsigned]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, null} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x3567730>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from SHA_MY_FILE]
+
+!{!"0x13\00SHA_MY_FILE\0036\00128\0064\000\000\000", <0x355f1a0>, null, null, <0x3567648>, null, null, null} ; [ DW_TAG_structure_type ] [SHA_MY_FILE] [line 36, size 128, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00data\0037\0064\0064\000\000", <0x355f1a0>, <0x3567730>, <0x3560390>} ; [ DW_TAG_member ] [data] [line 37, size 64, align 64, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x355a1c8>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from unsigned char]
+
+!{!"0x24\00unsigned char\000\008\008\000\000\008", null, null} ; [ DW_TAG_base_type ] [unsigned char] [line 0, size 8, align 8, offset 0, enc DW_ATE_unsigned_char]
+
+!{!"0xd\00size\0038\0032\0032\0064\000", <0x355f1a0>, <0x3567730>, <0x3560740>} ; [ DW_TAG_member ] [size] [line 38, size 32, align 32, offset 64] [from size_t]
+
+!{!"0xd\00cur_pos\0039\0032\0032\0096\000", <0x355f1a0>, <0x3567730>, <0x3562418>} ; [ DW_TAG_member ] [cur_pos] [line 39, size 32, align 32, offset 96] [from unsigned int]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3567300>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x355eb30>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from BYTE]
+
+!{!"0x16\00BYTE\0024\000\000\000\000", <0x355f1a0>, null, <0x355a1c8>} ; [ DW_TAG_typedef ] [BYTE] [line 24, size 0, align 0, offset 0] [from unsigned char]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x35609c8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x35607c8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+Meta data for 9351576977440701239
+Meta data for 5231581860291665142
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 13799002644062304540, name: sha_transform, fileName: sha.c, startLine: 52, endLine: 52
+DEBUG: adding sha_transform (in module: sha.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 13799002644062304540)
+DEBUG: assigning function sha_transform id 13799002644062304540
+DEBUG: new region: FuncRegion(id: 9534437624163307321, name: sha_byte_reverse, fileName: sha.c, startLine: 92, endLine: 92
+DEBUG: adding sha_byte_reverse (in module: sha.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 9534437624163307321)
+DEBUG: assigning function sha_byte_reverse id 9534437624163307321
+DEBUG: new region: FuncRegion(id: 6633717484059487479, name: sha_init, fileName: sha.c, startLine: 114, endLine: 114
+DEBUG: adding sha_init (in module: sha.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6633717484059487479)
+DEBUG: assigning function sha_init id 6633717484059487479
+DEBUG: new region: FuncRegion(id: 8309868279847603561, name: sha_fread, fileName: sha.c, startLine: 128, endLine: 128
+DEBUG: adding sha_fread (in module: sha.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 8309868279847603561)
+DEBUG: assigning function sha_fread id 8309868279847603561
+DEBUG: new region: FuncRegion(id: 6683121428273955190, name: sha_update, fileName: sha.c, startLine: 143, endLine: 143
+DEBUG: adding sha_update (in module: sha.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6683121428273955190)
+DEBUG: assigning function sha_update id 6683121428273955190
+DEBUG: new region: FuncRegion(id: 6346899140897740424, name: sha_final, fileName: sha.c, startLine: 162, endLine: 162
+DEBUG: adding sha_final (in module: sha.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6346899140897740424)
+DEBUG: assigning function sha_final id 6346899140897740424
+DEBUG: new region: FuncRegion(id: 14023547294548143106, name: sha_stream, fileName: sha.c, startLine: 187, endLine: 187
+DEBUG: adding sha_stream (in module: sha.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14023547294548143106)
+DEBUG: assigning function sha_stream id 14023547294548143106
+DEBUG: new region: FuncRegion(id: 11750938467101356190, name: sha_main, fileName: sha.c, startLine: 198, endLine: 198
+DEBUG: adding sha_main (in module: sha.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 11750938467101356190)
+DEBUG: assigning function sha_main id 11750938467101356190
+DEBUG: new region: FuncRegion(id: 794004762333980050, name: sha_return, fileName: sha.c, startLine: 207, endLine: 207
+DEBUG: adding sha_return (in module: sha.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 794004762333980050)
+DEBUG: assigning function sha_return id 794004762333980050
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: sha.c, startLine: 214, endLine: 214
+DEBUG: adding main (in module: sha.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 10 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: sha_transform is 13799002644062304540
+DEBUG: found 6 loops in function sha_transform
+DEBUG: assigning id = 9351576977440701239 to loop with the following BBs:
+	for.cond92 for.body94 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 15588246508396264868
+DEBUG: assigning id = 15588246508396264868 to body of loop
+DEBUG: Meta data for 11206457637415960009
+Meta data for 13178981651608027656
+Meta data for 8670562865877203615
+Meta data for 16664847234112247091
+Meta data for 12607552723962094459
+Meta data for 11268357792355791531
+Meta data for 8632804541479360296
+Meta data for 17214131979380199876
+assigning id = 5231581860291665142 to loop with the following BBs:
+	for.cond69 for.body71 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16206222403720398681
+DEBUG: assigning id = 16206222403720398681 to body of loop
+DEBUG: assigning id = 11206457637415960009 to loop with the following BBs:
+	for.cond49 for.body51 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7007333407614854080
+DEBUG: assigning id = 7007333407614854080 to body of loop
+DEBUG: assigning id = 13178981651608027656 to loop with the following BBs:
+	for.cond33 for.body35 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13353316543994481262
+DEBUG: assigning id = 13353316543994481262 to body of loop
+DEBUG: assigning id = 8670562865877203615 to loop with the following BBs:
+	for.cond3 for.body5 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4164962594512415932
+DEBUG: assigning id = 4164962594512415932 to body of loop
+DEBUG: assigning id = 16664847234112247091 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 937418616993339226
+DEBUG: assigning id = 937418616993339226 to body of loop
+DEBUG: for.cond92 has 1 possible loop exit points
+DEBUG: 	target #0: for.end108
+DEBUG: for.cond69 has 1 possible loop exit points
+DEBUG: 	target #0: for.end88
+DEBUG: for.cond49 has 1 possible loop exit points
+DEBUG: 	target #0: for.end65
+DEBUG: for.cond33 has 1 possible loop exit points
+DEBUG: 	target #0: for.end45
+DEBUG: for.cond3 has 1 possible loop exit points
+DEBUG: 	target #0: for.end23
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: sha_byte_reverse is 9534437624163307321
+DEBUG: found 1 loops in function sha_byte_reverse
+DEBUG: assigning id = 12607552723962094459 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11842769253077399305
+DEBUG: assigning id = 11842769253077399305 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: sha_init is 6633717484059487479
+DEBUG: found 1 loops in function sha_init
+DEBUG: assigning id = 11268357792355791531 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 677291806290070467
+DEBUG: assigning id = 677291806290070467 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: sha_fread is 8309868279847603561
+DEBUG: found 1 loops in function sha_fread
+DEBUG: assigning id = 8632804541479360296 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13105317418205852953
+DEBUG: assigning id = 13105317418205852953 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: region name to id: sha_update is 6683121428273955190
+DEBUG: found 1 loops in function sha_update
+DEBUG: assigning id = 17214131979380199876 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11459590515135003223
+DEBUG: assigning id = 11459590515135003223 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: region name to id: sha_final is 6346899140897740424
+DEBUG: found 0 loopsMeta data for 6716359071929608856
+ in function sha_final
+DEBUG: region name to id: sha_stream is 14023547294548143106
+DEBUG: found 1 loops in function sha_stream
+DEBUG: assigning id = 6716359071929608856 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 1569847432474331557
+DEBUG: assigning id = 1569847432474331557 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: region name to id: sha_main is 11750938467101356190
+DEBUG: found 0 loops in function sha_main
+DEBUG: region name to id: sha_return is 794004762333980050
+DEBUG: found 0 loops in function sha_return
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to sha.kdump
+INFO: dumping function: sha_transform
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: sha_byte_reverse
+INFO: dumping function: sha_init
+INFO: dumping function: sha_fread
+INFO: dumping function: sha_update
+INFO: dumping function: sha_glibc_memcpy
+INFO: dumping function: sha_final
+INFO: dumping function: sha_glibc_memset
+INFO: dumping function: sha_stream
+INFO: dumping function: sha_main
+INFO: dumping function: sha_return
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

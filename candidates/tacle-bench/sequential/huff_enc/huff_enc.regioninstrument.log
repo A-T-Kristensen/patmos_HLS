@@ -1,0 +1,460 @@
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 3040341714699284800, name: huff_enc_init, fileName: huff_enc.c, startLine: 150, endLine: 150
+DEBUG: adding huff_enc_init (in module: huff_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3040341714699284800)
+DEBUG: assigning function huff_enc_init id 3040341714699284800
+DEBUG: new region: FuncRegion(id: 3226955818112500226, name: huff_enc_return, fileName: huff_enc.c, startLine: 157, endLine: 157
+DEBUG: adding huff_enc_return (in module: huff_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3226955818112500226)
+DEBUG: assigning function huff_enc_return id 3226955818112500226
+DEBUG: new region: FuncRegion(id: 14351694054974613488, name: huff_enc_beginning_of_data, fileName: huff_enc.c, startLine: 172, endLine: 172
+DEBUG: adding huff_enc_beginning_of_data (in module: huff_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14351694054974613488)
+DEBUG: assigning function huff_enc_beginning_of_data id 14351694054974613488
+DEBUG: new region: FuncRegion(id: 12724482845071162977, name: huff_enc_end_of_data, fileName: huff_enc.c, startLine: 178, endLine: 178
+DEBUG: adding huff_enc_end_of_data (in module: huff_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12724482845071162977)
+DEBUG: assigning function huff_enc_end_of_data id 12724482845071162977
+DEBUG: new region: FuncRegion(id: 17920326357493539207, name: huff_enc_read_byte, fileName: huff_enc.c, startLine: 184, endLine: 184
+DEBUG: adding huff_enc_read_byte (in module: huff_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17920326357493539207)
+DEBUG: assigning function huff_enc_read_byte id 17920326357493539207
+DEBUG: new region: FuncRegion(id: 11205751605727808132, name: huff_enc_write_byte, fileName: huff_enc.c, startLine: 190, endLine: 190
+DEBUG: adding huff_enc_write_byte (in module: huff_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 11205751605727808132)
+DEBUG: assigning function huff_enc_write_byte id 11205751605727808132
+DEBUG: new region: FuncRegion(id: 4981560814658652773, name: huff_enc_write_bin_val, fileName: huff_enc.c, startLine: 196, endLine: 196
+DEBUG: adding huff_enc_write_bin_val (in module: huff_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 4981560814658652773)
+DEBUG: assigning function huff_enc_write_bin_val id 4981560814658652773
+DEBUG: new region: FuncRegion(id: 14684012922128631771, name: huff_enc_fill_encoding, fileName: huff_enc.c, startLine: 228, endLine: 228
+DEBUG: adding huff_enc_fill_encoding (in module: huff_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14684012922128631771)
+DEBUG: assigning function huff_enc_fill_encoding id 14684012922128631771
+DEBUG: new region: FuncRegion(id: 8969888373211840165, name: huff_enc_write_header, fileName: huff_enc.c, startLine: 240, endLine: 240
+DEBUG: adding huff_enc_write_header (in module: huff_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 8969888373211840165)
+DEBUG: assigning function huff_enc_write_header id 8969888373211840165
+DEBUG: new region: FuncRegion(id: 6036500612662386604, name: huff_enc_weighhuff_enc_t_tree_comp, fileName: huff_enc.c, startLine: 300, endLine: 300
+DEBUG: adding huff_enc_weighhuff_enc_t_tree_comp (in module: huff_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6036500612662386604)
+DEBUG: assigning function huff_enc_weighhuff_enc_t_tree_comp id 6036500612662386604
+DEBUG: new region: FuncRegion(id: 10741423167350172144, name: huff_enc_swapi, fileName: huff_enc.c, startLine: 315, endLine: 315
+DEBUG: adding huff_enc_swapi (in module: huff_enc.!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x2ae8450>, <0x2af04a0>, <0x2aee848>, <0x2b02500>, <0x2b03378>, <0x2af04a0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/sequential/huff_enc/huff_enc.c] [DW_LANG_C99]
+
+!{!"0x2e\00huff_enc_init\00huff_enc_init\00\00150\000\001\000\000\00256\000\00151", <0x2ae8450>, <0x2aee900>, <0x2af4c50>, null, void ()* @huff_enc_init, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 150] [def] [scope 151] [huff_enc_init]
+
+!{!"0x2e\00huff_enc_return\00huff_enc_return\00\00157\000\001\000\000\00256\000\00158", <0x2ae8450>, <0x2aee900>, <0x2af5300>, null, i32 ()* @huff_enc_return, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 157] [def] [scope 158] [huff_enc_return]
+
+!{!"0x2e\00huff_enc_beginning_of_data\00huff_enc_beginning_of_data\00\00172\000\001\000\000\000\000\00173", <0x2ae8450>, <0x2aee900>, <0x2af4c50>, null, void ()* @huff_enc_beginning_of_data, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 172] [def] [scope 173] [huff_enc_beginning_of_data]
+
+!{!"0x2e\00huff_enc_end_of_data\00huff_enc_end_of_data\00\00178\000\001\000\000\000\000\00179", <0x2ae8450>, <0x2aee900>, <0x2af5300>, null, i32 ()* @huff_enc_end_of_data, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 178] [def] [scope 179] [huff_enc_end_of_data]
+
+!{!"0x2e\00huff_enc_read_byte\00huff_enc_read_byte\00\00184\000\001\000\000\000\000\00185", <0x2ae8450>, <0x2aee900>, <0x2af5300>, null, i32 ()* @huff_enc_read_byte, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 184] [def] [scope 185] [huff_enc_read_byte]
+
+!{!"0x2e\00huff_enc_write_byte\00huff_enc_write_byte\00\00190\000\001\000\000\00256\000\00191", <0x2ae8450>, <0x2aee900>, <0x2aee790>, null, void (i8)* @huff_enc_write_byte, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 190] [def] [scope 191] [huff_enc_write_byte]
+
+!{!"0x2e\00huff_enc_write_bin_val\00huff_enc_write_bin_val\00\00196\000\001\000\000\00256\000\00201", <0x2ae8450>, <0x2aee900>, <0x2af8850>, null, void (%struct.huff_enc_t_bin_val*)* @huff_enc_write_bin_val, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 196] [def] [scope 201] [huff_enc_write_bin_val]
+
+!{!"0x2e\00huff_enc_fill_encoding\00huff_enc_fill_encoding\00\00228\000\001\000\000\00256\000\00233", <0x2ae8450>, <0x2aee900>, <0x2af4c50>, null, void ()* @huff_enc_fill_encoding, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 228] [def] [scope 233] [huff_enc_fill_encoding]
+
+!{!"0x2e\00huff_enc_write_header\00huff_enc_write_header\00\00240\000\001\000\000\00256\000\00245", <0x2ae8450>, <0x2aee900>, <0x2af9c70>, null, void (%struct.huff_enc_t_bin_val*)* @huff_enc_write_header, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 240] [def] [scope 245] [huff_enc_write_header]
+
+!{!"0x2e\00huff_enc_weighhuff_enc_t_tree_comp\00huff_enc_weighhuff_enc_t_tree_comp\00\00300\000\001\000\000\00256\000\00307", <0x2ae8450>, <0x2aee900>, <0x2af0360>, null, i32 (i8*, i8*)* @huff_enc_weighhuff_enc_t_tree_comp, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 300] [def] [scope 307] [huff_enc_weighhuff_enc_t_tree_comp]
+
+!{!"0x2e\00huff_enc_swapi\00huff_enc_swapi\00\00315\000\001\000\000\00256\000\00316", <0x2ae8450>, <0x2aee900>, <0x2afa4d0>, null, void (i8*, i8*, i64)* @huff_enc_swapi, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 315] [def] [scope 316] [huff_enc_swapi]
+
+!{!"0x2e\00huff_enc_pivot\00huff_enc_pivot\00\00331\000\001\000\000\00256\000\00332", <0x2ae8450>, <0x2aee900>, <0x2afa730>, null, i8* (i8*, i64, i64)* @huff_enc_pivot, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 331] [def] [scope 332] [huff_enc_pivot]
+
+!{!"0x2e\00huff_enc_qsort\00huff_enc_qsort\00\00358\000\001\000\000\00256\000\00359", <0x2ae8450>, <0x2aee900>, <0x2afa990>, null, void (i8*, i64, i64)* @huff_enc_qsort, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 358] [def] [scope 359] [huff_enc_qsort]
+
+!{!"0x2e\00huff_enc_build_tree_encoding\00huff_enc_build_tree_encoding\00\00408\000\001\000\000\00256\000\00414", <0x2ae8450>, <0x2aee900>, <0x2af5990>, null, %struct.huff_enc_s_tree* (%struct.huff_enc_s_tree*)* @huff_enc_build_tree_encoding, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 408] [def] [scope 414] [huff_enc_build_tree_encoding]
+
+!{!"0x2e\00huff_enc_encode_codes_table\00huff_enc_encode_codes_table\00\00472\000\001\000\000\00256\000\00480", <0x2ae8450>, <0x2aee900>, <0x2b01b00>, null, void (%struct.huff_enc_s_tree*, %struct.huff_enc_t_bin_val*, %struct.huff_enc_t_bin_val*)* @huff_enc_encode_codes_table, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 472] [def] [scope 480] [huff_enc_encode_codes_table]
+
+!{!"0x2e\00huff_enc_create_codes_table\00huff_enc_create_codes_table\00\00513\000\001\000\000\00256\000\00520", <0x2ae8450>, <0x2aee900>, <0x2b01e80>, null, void (%struct.huff_enc_s_tree*, %struct.huff_enc_t_bin_val*)* @huff_enc_create_codes_table, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 513] [def] [scope 520] [huff_enc_create_codes_table]
+
+!{!"0x2e\00huff_enc_main\00huff_enc_main\00\00543\000\001\000\000\000\000\00549", <0x2ae8450>, <0x2aee900>, <0x2af4c50>, null, void ()* @huff_enc_main, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 543] [def] [scope 549] [huff_enc_main]
+
+!{!"0x2e\00main\00main\00\00576\000\001\000\000\00256\000\00577", <0x2ae8450>, <0x2aee900>, <0x2af5300>, null, i32 ()* @main, null, null, <0x2af04a0>} ; [ DW_TAG_subprogram ] [line 576] [def] [scope 577] [main]
+
+!{!"0x34\00huff_enc_input_pos\00huff_enc_input_pos\00\0096\001\001", null, <0x2aee900>, <0x2af5298>, i32* @huff_enc_input_pos, null} ; [ DW_TAG_variable ] [huff_enc_input_pos] [line 96] [local] [def]
+
+!{!"0x34\00huff_enc_output_pos\00huff_enc_output_pos\00\0097\001\001", null, <0x2aee900>, <0x2af5298>, i32* @huff_enc_output_pos, null} ; [ DW_TAG_variable ] [huff_enc_output_pos] [line 97] [local] [def]
+
+!{!"0x34\00huff_enc_output\00huff_enc_output\00\0098\001\001", null, <0x2aee900>, <0x2b02800>, [1024 x i8]* @huff_enc_output, null} ; [ DW_TAG_variable ] [huff_enc_output] [line 98] [local] [def]
+
+!{!"0x34\00huff_enc_byte_nb_to_write\00huff_enc_byte_nb_to_write\00\0099\001\001", null, <0x2aee900>, <0x2ae8528>, i8* @huff_enc_byte_nb_to_write, null} ; [ DW_TAG_variable ] [huff_enc_byte_nb_to_write] [line 99] [local] [def]
+
+!{!"0x34\00huff_enc_val_to_write\00huff_enc_val_to_write\00\00100\001\001", null, <0x2aee900>, <0x2ae8528>, i8* @huff_enc_val_to_write, null} ; [ DW_TAG_variable ] [huff_enc_val_to_write] [line 100] [local] [def]
+
+!{!"0x34\00huff_enc_plaintext\00huff_enc_plaintext\00\00108\001\001", null, <0x2aee900>, <0x2af83f0>, i8** @huff_enc_plaintext, null} ; [ DW_TAG_variable ] [huff_enc_plaintext] [line 108] [local] [def]
+
+!{!"0x34\00huff_enc_encoded\00huff_enc_encoded\00\00119\001\001", null, <0x2aee900>, <0x2b03220>, [419 x i8]* @huff_enc_encoded, null} ; [ DW_TAG_variable ] [huff_enc_encoded] [line 119] [local] [def]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x1\00\000\008192\008\000\000\000", null, null, <0x2ae8528>, <0x2b02438>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 8192, align 8, offset 0] [from unsigned char]
+
+!{!"0x24\00unsigned char\000\008\008\000\000\008", null, null} ; [ DW_TAG_base_type ] [unsigned char] [line 0, size 8, align 8, offset 0, enc DW_ATE_unsigned_char]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2b02940>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x2ae85f8>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from char]
+
+!{!"0x24\00char\000\008\008\000\000\006", null, null} ; [ DW_TAG_base_type ] [char] [line 0, size 8, align 8, offset 0, enc DW_ATE_signed_char]
+
+!{!"0x1\00\000\003352\008\000\000\000", null, null, <0x2ae8528>, <0x2b031b8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 3352, align 8, offset 0] [from unsigned char]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2aefba8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2aee9d8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2aee720>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2af8760>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x16\00huff_enc_t_bin_val\0063\000\000\000\000", <0x2ae8450>, null, <0x2af8ea0>} ; [ DW_TAG_typedef ] [huff_enc_t_bin_val] [line 63, size 0, align 0, offset 0] [from ]
+
+!{!"0x13\00\0060\00288\0032\000\000\000", <0x2ae8450>, null, null, <0x2af1310>, null, null, null} ; [ DW_TAG_structure_type ] [line 60, size 288, align 32, offset 0] [def] [from ]
+
+!{!"0xd\00bits\0061\00256\008\000\000", <0x2ae8450>, <0x2af8ea0>, <0x2af12d0>} ; [ DW_TAG_member ] [bits] [line 61, size 256, align 8, offset 0] [from ]
+
+!{!"0x1\00\000\00256\008\000\000\000", null, null, <0x2ae8528>, <0x2af1268>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 256, align 8, offset 0] [from unsigned char]
+
+!{!"0xd\00bits_nb\0062\0032\0032\00256\000", <0x2ae8450>, <0x2af8ea0>, <0x2aef9b8>} ; [ DW_TAG_member ] [bits_nb] [line 62, size 32, align 32, offset 256] [from unsigned int]
+
+!{!"0x24\00unsigned int\000\0032\0032\000\000\007", null, null} ; [ DW_TAG_base_type ] [unsigned int] [line 0, size 32, align 32, offset 0, enc DW_ATE_unsigned]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2af9b80>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2af80f0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from huff_enc_t_bin_val]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2afa278>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2afa1e0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, null} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2afa350>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2ae85f8>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from char]
+
+!{!"0x24\00long unsigned int\000\0064\0064\000\000\007", null, null} ; [ DW_TAG_base_type ] [long unsigned int] [line 0, size 64, align 64, offset 0, enc DW_ATE_unsigned]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2afa5b0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2afa810>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2afa390>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2ae85b0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from huff_enc_t_tree]
+
+!{!"0x16\00huff_enc_t_tree\0058\000\000\000\000", <0x2ae8450>, null, <0x2af1ae0>} ; [ DW_TAG_typedef ] [huff_enc_t_tree] [line 58, size 0, align 0, offset 0] [from huff_enc_s_tree]
+
+!{!"0x13\00huff_enc_s_tree\0052\00256\0064\000\000\000", <0x2ae8450>, null, null, <0x2af19f0>, null, null, null} ; [ DW_TAG_structure_type ] [huff_enc_s_tree] [line 52, size 256, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00byte\0053\0032\0032\000\000", <0x2ae8450>, <0x2af1ae0>, <0x2aef9b8>} ; [ DW_TAG_member ] [byte] [line 53, size 32, align 32, offset 0] [from unsigned int]
+
+!{!"0xd\00weight\0055\0064\0064\0064\000", <0x2ae8450>, <0x2af1ae0>, <0x2aee378>} ; [ DW_TAG_member ] [weight] [line 55, size 64, align 64, offset 64] [from long unsigned int]
+
+!{!"0xd\00left_ptr\0056\0064\0064\00128\000", <0x2ae8450>, <0x2af1ae0>, <0x2af05c0>} ; [ DW_TAG_member ] [left_ptr] [line 56, size 64, align 64, offset 128] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2af1ae0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from huff_enc_s_tree]
+
+!{!"0xd\00right_ptr\0057\0064\0064\00192\000", <0x2ae8450>, <0x2af1ae0>, <0x2af05c0>} ; [ DW_TAG_member ] [right_ptr] [line 57, size 64, align 64, offset 192] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2b01a10>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2afa5f8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2aee560>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x2aee490>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+Meta data for 17487254543669014757
+simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 10741423167350172144)
+DEBUG: assigning function huff_enc_swapi id 10741423167350172144
+DEBUG: new region: FuncRegion(id: 18069503966727871783, name: huff_enc_pivot, fileName: huff_enc.c, startLine: 331, endLine: 331
+DEBUG: adding huff_enc_pivot (in module: huff_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 18069503966727871783)
+DEBUG: assigning function huff_enc_pivot id 18069503966727871783
+DEBUG: new region: FuncRegion(id: 7153772254445984475, name: huff_enc_qsort, fileName: huff_enc.c, startLine: 358, endLine: 358
+DEBUG: adding huff_enc_qsort (in module: huff_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 7153772254445984475)
+DEBUG: assigning function huff_enc_qsort id 7153772254445984475
+DEBUG: new region: FuncRegion(id: 16852244530088434652, name: huff_enc_build_tree_encoding, fileName: huff_enc.c, startLine: 408, endLine: 408
+DEBUG: adding huff_enc_build_tree_encoding (in module: huff_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 16852244530088434652)
+DEBUG: assigning function huff_enc_build_tree_encoding id 16852244530088434652
+DEBUG: new region: FuncRegion(id: 14176205793856219128, name: huff_enc_encode_codes_table, fileName: huff_enc.c, startLine: 472, endLine: 472
+DEBUG: adding huff_enc_encode_codes_table (in module: huff_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14176205793856219128)
+DEBUG: assigning function huff_enc_encode_codes_table id 14176205793856219128
+DEBUG: new region: FuncRegion(id: 15809711524516542415, name: huff_enc_create_codes_table, fileName: huff_enc.c, startLine: 513, endLine: 513
+DEBUG: adding huff_enc_create_codes_table (in module: huff_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 15809711524516542415)
+DEBUG: assigning function huff_enc_create_codes_table id 15809711524516542415
+DEBUG: new region: FuncRegion(id: 12748051318127815715, name: huff_enc_main, fileName: huff_enc.c, startLine: 543, endLine: 543
+DEBUG: adding huff_enc_main (in module: huff_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12748051318127815715)
+DEBUG: assigning function huff_enc_main id 12748051318127815715
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: huff_enc.c, startLine: 576, endLine: 576
+DEBUG: adding main (in module: huff_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 18 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: huff_enc_init is 3040341714699284800
+DEBUG: found 0 loops in function huff_enc_init
+DEBUG: region name to id: huff_enc_return is 3226955818112500226
+DEBUG: found 1 loops in function huff_enc_return
+DEBUG: assigning id = 17487254543669014757 to loop with the following BBs:
+	for.cond for.body for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 1074392151019973396
+DEBUG: assigning id = 1074392151019973396 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: for.body has 1 possible loop exit points
+DEBUG: 	target #0: if.then
+DEBUG: region name to id: huff_enc_beginning_of_data is 14351694054974613488
+DEBUG: found 0 loops in function huff_enc_beginning_of_data
+DEBUG: region name to id: huff_enc_end_of_data is 12724482845071162977
+DEBUG: found 0 loops in function huff_enc_end_of_data
+DEBUG: region name to id: huff_enc_read_byte is 17920326357493539207
+DEBUG: found 0 loops in function huffMeta data for 7384985081526614929
+Meta data for 12842197366785499032
+Meta data for 18202335245051471919
+Meta data for 1870963885416719848
+Meta data for 15645068158139208767
+Meta data for 4278164697054835158
+Meta data for 14676198094530315962
+Meta data for 8079819762868723767
+_enc_read_byte
+DEBUG: region name to id: huff_enc_write_byte is 11205751605727808132
+DEBUG: found 0 loops in function huff_enc_write_byte
+DEBUG: region name to id: huff_enc_write_bin_val is 4981560814658652773
+DEBUG: found 1 loops in function huff_enc_write_bin_val
+DEBUG: assigning id = 7384985081526614929 to loop with the following BBs:
+	for.cond for.body if.then if.else if.end if.else17 if.then16 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 15876329168915391628
+DEBUG: assigning id = 15876329168915391628 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: huff_enc_fill_encoding is 14684012922128631771
+DEBUG: found 0 loops in function huff_enc_fill_encoding
+DEBUG: region name to id: huff_enc_write_header is 8969888373211840165
+DEBUG: found 4 loops in function huff_enc_write_header
+DEBUG: assigning id = 12842197366785499032 to loop with the following BBs:
+	for.cond43 for.body46 if.then52 if.else57 if.then55 if.end59 for.inc67 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6481790740888808830
+DEBUG: assigning id = 6481790740888808830 to body of loop
+DEBUG: assigning id = 18202335245051471919 to loop with the following BBs:
+	for.cond12 for.body15 if.then20 for.inc25 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17950476437016605184
+DEBUG: assigning id = 17950476437016605184 to body of loop
+DEBUG: assigning id = 1870963885416719848 to loop with the following BBs:
+	for.cond28 for.body31 if.else37 if.then36 for.inc39 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17921819301045858028
+DEBUG: assigning id = 17921819301045858028 to body of loop
+DEBUG: assigning id = 15645068158139208767 to loop with the following BBs:
+	for.cond for.body if.then for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 15961376909389443685
+DEBUG: assigning id = 15961376909389443685 to body of loop
+DEBUG: for.cond43 has 1 possible loop exit points
+DEBUG: 	target #0: for.end69
+DEBUG: for.cond12 has 1 possible loop exit points
+DEBUG: 	target #0: if.end42.loopexit
+DEBUG: for.cond28 has 1 possible loop exit points
+DEBUG: 	target #0: if.end42.loopexit1
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: huff_enc_weighhuff_enc_t_tree_comp is 6036500612662386604
+DEBUG: found 0 loops in function huff_enc_weighhuff_enc_t_tree_comp
+DEBUG: region name to id: huff_enc_swapi is 10741423167350172144
+DEBUG: found 1 loops in function huff_enc_swapi
+DEBUG: assigning id = 4278164697054835158 to loop with the following BBs:
+	do.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3673683955187049839
+DEBUG: assigning id = 3673683955187049839 to body of loop
+DEBUG: do.body has 1 possible loop exit points
+DEBUG: 	target #0: do.end
+DEBUG: region name to id: huff_enc_pivot is 18069503966727871783
+DEBUG: found 0 loops in function huff_enc_pivot
+DEBUG: region name to id: huff_enc_qsort is 7153772254445984475
+DEBUG: found 5 loops in function huff_enc_qsort
+DEBUG: assigning id = 14676198094530315962 to loop with the following BBs:
+	while.cond.outer while.cond while.body if.else if.then if.end while.body5 do.body land.rhs do.body10.preheader do.body10 land.rhs14 do.end18 if.end21 while.end if.else27 if.then24 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3438349222729427652
+DEBUG: assigning id = 3438349222729427652 to body of loop
+DEBUG: assigning id = 8079819762868723767 to loop with the following BBs:
+	while.cond while.bodyMeta data for 14929938545450390367
+Meta data for 486416142780330254
+Meta data for 16423537129936619519
+Meta data for 14538865465732477586
+Meta data for 15803887421338727687
+Meta data for 8140909322902158065
+Meta data for 4449909279219672339
+Meta data for 9952918245459213965
+ if.else if.then if.end while.body5 do.body land.rhs do.body10.preheader do.body10 land.rhs14 do.end18 if.end21 while.end if.else27 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4243598769404777993
+DEBUG: assigning id = 4243598769404777993 to body of loop
+DEBUG: assigning id = 14929938545450390367 to loop with the following BBs:
+	while.body5 do.body land.rhs do.body10.preheader do.body10 land.rhs14 do.end18 if.end21 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11126068571198286097
+DEBUG: assigning id = 11126068571198286097 to body of loop
+DEBUG: assigning id = 486416142780330254 to loop with the following BBs:
+	do.body land.rhs 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 1982251606022790538
+DEBUG: assigning id = 1982251606022790538 to body of loop
+DEBUG: assigning id = 16423537129936619519 to loop with the following BBs:
+	do.body10 land.rhs14 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17630038294608280149
+DEBUG: assigning id = 17630038294608280149 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end32
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.cond.pre_exit.while.end32
+DEBUG: while.end has 1 possible loop exit points
+DEBUG: 	target #0: if.then24
+DEBUG: do.end18 has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: do.body has 1 possible loop exit points
+DEBUG: 	target #0: do.body10.preheader
+DEBUG: land.rhs has 1 possible loop exit points
+DEBUG: 	target #0: do.body10.preheader
+DEBUG: do.body10 has 1 possible loop exit points
+DEBUG: 	target #0: do.end18
+DEBUG: land.rhs14 has 1 possible loop exit points
+DEBUG: 	target #0: do.end18
+DEBUG: region name to id: huff_enc_build_tree_encoding is 16852244530088434652
+DEBUG: found 4 loops in function huff_enc_build_tree_encoding
+DEBUG: assigning id = 14538865465732477586 to loop with the following BBs:
+	while.cond32 while.body34 if.else if.then48 if.end if.then63 while.cond32.backedge 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9912181390882274151
+DEBUG: assigning id = 9912181390882274151 to body of loop
+DEBUG: assigning id = 15803887421338727687 to loop with the following BBs:
+	for.cond21 land.rhs for.inc29 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6493852050773736016
+DEBUG: assigning id = 6493852050773736016 to body of loop
+DEBUG: assigning id = 8140909322902158065 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6889386667816387483
+DEBUG: assigning id = 6889386667816387483 to body of loop
+DEBUG: assigning id = 4449909279219672339 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5179109319540552385
+DEBUG: assigning id = 5179109319540552385 to body of loop
+DEBUG: while.cond32 has 1 possible loop exit points
+DEBUG: 	target #0: if.end67.loopexit
+DEBUG: for.cond21 has 1 possible loop exit points
+DEBUG: 	target #0: for.end30
+DEBUG: land.rhs has 1 possible loop exit points
+DEBUG: 	target #0: for.end30
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: huff_enc_encode_codes_table is 14176205793856219128
+DEBUG: found 2 loops in function huff_enc_encode_codes_table
+DEBUG: assigning id = 9952918245459213965 to loop with the following BBs:Meta data for 15193972609153900249
+Meta data for 6893284675345316805
+Meta data for 9353195211783125882
+Meta data for 5936031838199575425
+Meta data for 7637304209674392878
+
+	for.cond23 for.body26 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4348169334092401943
+DEBUG: assigning id = 4348169334092401943 to body of loop
+DEBUG: assigning id = 15193972609153900249 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10536605471031323306
+DEBUG: assigning id = 10536605471031323306 to body of loop
+DEBUG: for.cond23 has 1 possible loop exit points
+DEBUG: 	target #0: for.end45
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: huff_enc_create_codes_table is 15809711524516542415
+DEBUG: found 3 loops in function huff_enc_create_codes_table
+DEBUG: assigning id = 6893284675345316805 to loop with the following BBs:
+	for.cond1 for.body3 for.cond4 for.end14 for.body6 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 15523918896777133560
+DEBUG: assigning id = 15523918896777133560 to body of loop
+DEBUG: assigning id = 9353195211783125882 to loop with the following BBs:
+	for.cond4 for.body6 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3777988057085154078
+DEBUG: assigning id = 3777988057085154078 to body of loop
+DEBUG: assigning id = 5936031838199575425 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9419057476477894308
+DEBUG: assigning id = 9419057476477894308 to body of loop
+DEBUG: for.cond1 has 1 possible loop exit points
+DEBUG: 	target #0: for.end20
+DEBUG: for.cond4 has 1 possible loop exit points
+DEBUG: 	target #0: for.end14
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: huff_enc_main is 12748051318127815715
+DEBUG: found 1 loops in function huff_enc_main
+DEBUG: assigning id = 7637304209674392878 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9290663680847651612
+DEBUG: assigning id = 9290663680847651612 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to huff_enc.kdump
+INFO: dumping function: huff_enc_init
+INFO: dumping function: huff_enc_return
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: huff_enc_beginning_of_data
+INFO: dumping function: huff_enc_end_of_data
+INFO: dumping function: huff_enc_read_byte
+INFO: dumping function: huff_enc_write_byte
+INFO: dumping function: huff_enc_write_bin_val
+INFO: dumping function: huff_enc_fill_encoding
+INFO: dumping function: huff_enc_write_header
+INFO: dumping function: llvm.memcpy.p0i8.p0i8.i64
+INFO: dumping function: huff_enc_weighhuff_enc_t_tree_comp
+INFO: dumping function: huff_enc_swapi
+INFO: dumping function: huff_enc_pivot
+INFO: dumping function: huff_enc_qsort
+INFO: dumping function: huff_enc_build_tree_encoding
+INFO: dumping function: huff_enc_encode_codes_table
+INFO: dumping function: huff_enc_create_codes_table
+INFO: dumping function: huff_enc_main
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

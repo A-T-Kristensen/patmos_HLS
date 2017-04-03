@@ -1,0 +1,129 @@
+FUNC: fft_bit_reduct
+	38 : ?? : phi
+	55: ARG : 0
+	15 : 169 : load
+	8 : ?? : phi
+	49 : ?? : phi
+	20 : ?? : phi
+	19 : 149 : icmp
+	4 : ?? : phi
+	35 : ?? : phi
+	34 : 118 : icmp
+	57 : 119 : icmp
+	2 : 120 : sext
+	1 : 120 : load
+	3 : 121 : load
+	5 : 124 : load
+	6 : 125 : load
+	37 : ?? : phi
+	41 : 132 : icmp
+	43 : 132 : icmp
+	40 : ?? : phi
+	42 : 133 : sub
+	39 : 134 : ashr
+	36 : 136 : add
+	33 : 118 : add
+	23 : 170 : load
+	24 : 170 : sub
+	25 : 172 : load
+	26 : 172 : add
+	44 : ?? : phi
+	17 : ?? : phi
+	18 : 145 : icmp
+	53 : ?? : sext
+	48 : ?? : sext
+	7 : 150 : load
+	45 : 141 : trunc
+	9 : 151 : load
+	22 : ?? : phi
+	21 : 155 : icmp
+	12 : 156 : add
+	10 : 160 : load
+	11 : 161 : load
+	13 : 163 : load
+	14 : 164 : load
+	16 : 169 : sub
+	27 : 173 : load
+	28 : 173 : add
+	52 : 155 : add
+	47 : 149 : add
+	51 : 149 : add
+	50 : 149 : add
+	54 : ?? : phi
+	32 : ?? : phi
+	31 : 185 : icmp
+	29 : 186 : load
+	30 : 186 : ashr
+	56 : 187 : getelementptr
+	46 : 146 : shl
+
+FUNC: fft_exp2f
+	1: ARG : 0
+	3 : ?? : phi
+	2 : ?? : phi
+	5 : 208 : fcmp
+	6 : 209 : fmul
+	4 : 208 : add
+
+FUNC: fft_modff
+	3: ARG : 1
+	1: ARG : 0
+	7 : 217 : icmp
+	2 : 218 : sitofp
+	4 : 219 : load
+	6 : 219 : fsub
+	5 : ?? : phi
+
+FUNC: fft_convert
+	1: ARG : 0
+	3 : 233 : fadd
+	2 : 233 : call
+	5 : 235 : fmul
+	4 : 236 : call
+	9 : 237 : fcmp
+	10 : 239 : fcmp
+	11 : 242 : fcmp
+	8 : ?? : phi
+	6 : 244 : load
+	7 : 247 : trunc
+
+FUNC: fft_float2fract
+	3 : ?? : phi
+	4 : 257 : icmp
+	1 : 258 : load
+	2 : 259 : call
+
+FUNC: fft_pin_down
+	8: ARG : 0
+	7 : 272 : getelementptr
+	2 : ?? : phi
+	6 : ?? : phi
+	5 : ?? : phi
+	4 : 276 : icmp
+	3 : 277 : getelementptr
+	1 : 277 : load
+	9 : 278 : getelementptr
+
+FUNC: fft_init
+	5 : ?? : phi
+	4 : 291 : icmp
+	1 : 292 : load
+	2 : 292 : load
+	3 : 292 : add
+	6 : 293 : load
+	7 : 293 : load
+	8 : 293 : add
+
+FUNC: fft_return
+	4 : ?? : phi
+	3 : ?? : phi
+	6 : 304 : icmp
+	1 : 305 : load
+	5 : 305 : add
+	2 : 308 : zext
+
+FUNC: fft_main
+
+FUNC: main
+	1 : 328 : call
+

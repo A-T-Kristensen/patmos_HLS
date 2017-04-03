@@ -1,0 +1,280 @@
+FUNC: huff_enc_init
+
+FUNC: huff_enc_return
+	3 : ?? : phi
+	2 : 162 : load
+	6 : 161 : icmp
+	1 : 162 : load
+	7 : 162 : icmp
+	5 : 162 : trunc
+	4 : ?? : phi
+
+FUNC: huff_enc_beginning_of_data
+
+FUNC: huff_enc_end_of_data
+	2 : 180 : zext
+	1 : 180 : load
+
+FUNC: huff_enc_read_byte
+	1 : 186 : load
+	2 : 186 : add
+	5 : 186 : sext
+	3 : 186 : load
+	4 : 186 : load
+	6 : 186 : sext
+
+FUNC: huff_enc_write_byte
+	2 : 192 : load
+	1: ARG : 0
+	3 : 192 : add
+
+FUNC: huff_enc_write_bin_val
+	24 : 217 : icmp
+	12 : 219 : load
+	18 : 203 : trunc
+	2 : 204 : load
+	16 : 204 : lshr
+	7 : 210 : trunc
+	22 : 213 : icmp
+	21 : 214 : add
+	23 : 216 : add
+	17 : ?? : phi
+	19 : ?? : phi
+	11 : 217 : load
+	15 : ?? : phi
+	10 : ?? : phi
+	9 : ?? : phi
+	13 : 223 : load
+	14 : 223 : add
+	20 : 208 : add
+	1 : 203 : load
+	8 : 207 : icmp
+	4 : 210 : load
+	6 : 211 : zext
+	5 : 211 : load
+	3 : 207 : load
+
+FUNC: huff_enc_fill_encoding
+	1 : 234 : load
+	3 : 236 : load
+	5 : 234 : icmp
+	2 : 235 : load
+	4 : 235 : trunc
+
+FUNC: huff_enc_write_header
+	24 : 286 : icmp
+	11 : 293 : trunc
+	4 : 270 : load
+	5 : 271 : trunc
+	19 : ?? : phi
+	21 : 277 : icmp
+	13 : ?? : phi
+	12 : 284 : icmp
+	10 : 285 : load
+	23 : 285 : icmp
+	6 : ?? : phi
+	8 : 269 : icmp
+	20 : 270 : icmp
+	14 : ?? : phi
+	3 : ?? : phi
+	16 : 256 : icmp
+	1 : 257 : load
+	18 : 257 : icmp
+	17 : 257 : add
+	15 : ?? : phi
+	7 : 262 : icmp
+	2 : 266 : trunc
+	9 : 278 : load
+	22 : 278 : icmp
+
+FUNC: huff_enc_weighhuff_enc_t_tree_comp
+	2 : 310 : load
+	3 : 310 : load
+	1 : 310 : load
+	4 : 310 : load
+	11 : 310 : icmp
+	5 : 311 : load
+	6 : 311 : load
+	7 : 311 : load
+	8 : 311 : load
+	10 : 311 : select
+	9 : 310 : phi
+
+FUNC: huff_enc_swapi
+	1: ARG : 2
+	11: ARG : 1
+	8: ARG : 0
+	3 : 324 : load
+	9 : 324 : getelementptr
+	4 : ?? : phi
+	7 : ?? : phi
+	10 : ?? : phi
+	2 : 323 : load
+	12 : 325 : getelementptr
+	5 : 326 : sub
+	6 : 327 : icmp
+
+FUNC: huff_enc_pivot
+	8 : ?? : phi
+	2: ARG : 2
+	1: ARG : 1
+	10: ARG : 0
+	12 : 337 : getelementptr
+	9 : 339 : getelementptr
+	11 : 340 : getelementptr
+	3 : 341 : call
+	13 : 341 : icmp
+	4 : 342 : call
+	14 : 342 : icmp
+	5 : 343 : call
+	15 : 343 : icmp
+	6 : 349 : call
+	16 : 349 : icmp
+	7 : 350 : call
+	17 : 350 : icmp
+
+FUNC: huff_enc_qsort
+	1: ARG : 1
+	2: ARG : 2
+	17: ARG : 0
+	11 : ?? : phi
+	15 : ?? : phi
+	9 : ?? : phi
+	18 : ?? : phi
+	3 : ?? : phi
+	8 : 365 : icmp
+	22 : 366 : icmp
+	20 : 367 : call
+	21 : 369 : getelementptr
+	19 : ?? : phi
+	27 : 374 : getelementptr
+	23 : ?? : phi
+	26 : ?? : phi
+	13 : ?? : phi
+	12 : 380 : add
+	28 : ?? : phi
+	29 : 383 : getelementptr
+	30 : 384 : icmp
+	4 : 384 : call
+	34 : 384 : icmp
+	24 : ?? : phi
+	31 : ?? : phi
+	32 : 387 : getelementptr
+	33 : 388 : icmp
+	5 : 388 : call
+	35 : 388 : icmp
+	7 : ?? : phi
+	25 : 389 : icmp
+	6 : 394 : udiv
+	10 : 396 : sub
+	14 : 397 : icmp
+	16 : 399 : getelementptr
+
+FUNC: huff_enc_build_tree_encoding
+	4: ARG : 0
+	39 : 461 : zext
+	48 : ?? : phi
+	33 : ?? : phi
+	38 : ?? : phi
+	34 : 445 : icmp
+	50 : 448 : add
+	37 : 448 : getelementptr
+	2 : ?? : phi
+	3 : 421 : icmp
+	1 : 422 : getelementptr
+	5 : 423 : load
+	6 : 423 : trunc
+	7 : 424 : load
+	8 : 425 : load
+	9 : 426 : load
+	49 : 430 : trunc
+	10 : 430 : call
+	17 : 430 : icmp
+	11 : 431 : call
+	18 : 431 : xor
+	12 : 432 : call
+	14 : 433 : zext
+	13 : 433 : load
+	15 : 433 : load
+	16 : 433 : add
+	19 : 435 : load
+	21 : ?? : phi
+	43 : 440 : icmp
+	46 : 440 : trunc
+	20 : 440 : load
+	22 : 440 : load
+	44 : 440 : xor
+	42 : 440 : add
+	45 : ?? : phi
+	47 : 442 : add
+	52 : 450 : add
+	24 : 450 : zext
+	23 : 450 : load
+	25 : 450 : load
+	27 : 451 : zext
+	26 : 451 : load
+	53 : 452 : icmp
+	51 : 453 : add
+	29 : 454 : zext
+	28 : 454 : load
+	30 : 454 : load
+	31 : 454 : load
+	32 : 454 : add
+	36 : 455 : zext
+	35 : 455 : load
+	40 : ?? : phi
+	55 : 464 : icmp
+	54 : 465 : add
+	41 : 468 : load
+
+FUNC: huff_enc_encode_codes_table
+	7 : 490 : trunc
+	29 : 489 : add
+	10 : 492 : load
+	11 : 492 : trunc
+	12 : 493 : load
+	13 : 493 : add
+	14 : 494 : load
+	1 : 484 : load
+	31 : 484 : icmp
+	2 : 485 : load
+	8 : 485 : icmp
+	4 : ?? : phi
+	9 : 489 : icmp
+	3 : 490 : load
+	6 : 491 : zext
+	5 : 491 : load
+	15 : 497 : load
+	21 : 497 : icmp
+	17 : ?? : phi
+	22 : 501 : icmp
+	16 : 502 : load
+	19 : 503 : zext
+	18 : 503 : load
+	20 : 502 : trunc
+	30 : 501 : add
+	23 : 504 : load
+	24 : 504 : trunc
+	25 : 505 : load
+	26 : 505 : add
+	27 : 506 : load
+	28 : 509 : load
+
+FUNC: huff_enc_create_codes_table
+	1 : ?? : phi
+	4 : 525 : icmp
+	2 : ?? : phi
+	5 : 530 : icmp
+	3 : ?? : phi
+	6 : 532 : icmp
+
+FUNC: huff_enc_main
+	1 : 555 : call
+	4 : 555 : icmp
+	2 : 564 : call
+	5 : 564 : xor
+	3 : 565 : call
+
+FUNC: main
+	1 : 580 : call
+

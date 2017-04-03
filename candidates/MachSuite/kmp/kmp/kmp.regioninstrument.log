@@ -1,0 +1,117 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x1f92c80>, <0x1f93370>, <0x1f93370>, <0x1f999e0>, <0x1f93370>, <0x1f93370>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/MachSuite/kmp/kmp/kmp.c] [DW_LANG_C99]
+
+!{!"0x2e\00CPF\00CPF\00\007\000\001\000\000\00256\000\007", <0x1f92c80>, <0x1f98fd0>, <0x1f994b0>, null, void (i8*, i32*)* @CPF, null, null, <0x1f93370>} ; [ DW_TAG_subprogram ] [line 7] [def] [CPF]
+
+!{!"0x2e\00kmp\00kmp\00\0024\000\001\000\000\00256\000\0024", <0x1f92c80>, <0x1f98fd0>, <0x1f99b10>, null, i32 (i8*, i8*, i32*, i32*)* @kmp, null, null, <0x1f93370>} ; [ DW_TAG_subprogram ] [line 24] [def] [kmp]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x1f99448>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x1f99168>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from char]
+
+!{!"0x24\00char\000\008\008\000\000\006", null, null} ; [ DW_TAG_base_type ] [char] [line 0, size 8, align 8, offset 0, enc DW_ATE_signed_char]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x1f990a0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from int32_t]
+
+!{!"0x16\00int32_t\00196\000\000\000\000", <0x1f99210>, null, <0x1f99058>} ; [ DW_TAG_typedef ] [int32_t] [line 196, size 0, align 0, offset 0] [from int]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x1f99aa8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+Meta data for 4363267685620095766
+Meta data for 17922556299727529457
+Meta data for 17859373611548824693
+Meta data for 18310673693482969604
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 17654468737504934604, name: CPF, fileName: kmp.c, startLine: 7, endLine: 7
+DEBUG: adding CPF (in module: kmp.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17654468737504934604)
+DEBUG: assigning function CPF id 17654468737504934604
+DEBUG: new region: FuncRegion(id: 13504909423722263458, name: kmp, fileName: kmp.c, startLine: 24, endLine: 24
+DEBUG: adding kmp (in module: kmp.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 13504909423722263458)
+DEBUG: assigning function kmp id 13504909423722263458
+DEBUG: found 2 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: CPF is 17654468737504934604
+DEBUG: found 2 loops in function CPF
+DEBUG: assigning id = 4363267685620095766 to loop with the following BBs:
+	for.cond while.cond.preheader while.cond land.rhs while.end if.then if.end while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8931222981877126256
+DEBUG: assigning id = 8931222981877126256 to body of loop
+DEBUG: assigning id = 17922556299727529457 to loop with the following BBs:
+	while.cond land.rhs while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16172953173482731753
+DEBUG: assigning id = 16172953173482731753 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: land.rhs has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: region name to id: kmp is 13504909423722263458
+DEBUG: found 2 loops in function kmp
+DEBUG: assigning id = 17859373611548824693 to loop with the following BBs:
+	for.cond while.cond.preheader while.cond land.rhs land.end while.end if.then if.end if.then20 for.inc while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5533611626903057859
+DEBUG: assigning id = 5533611626903057859 to body of loop
+DEBUG: assigning id = 18310673693482969604 to loop with the following BBs:
+	while.cond land.rhs land.end while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16592884420765180294
+DEBUG: assigning id = 16592884420765180294 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: land.end has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: Writing kremlib calls to kmp.kdump
+INFO: dumping function: CPF
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: kmp
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

@@ -1,0 +1,101 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x2214030>, <0x2218810>, <0x2219468>, <0x2219528>, <0x2218810>, <0x2218810>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/MachSuite/stencil/stencil2d/stencil.c] [DW_LANG_C99]
+
+!{!"0x2e\00stencil\00stencil\00\003\000\001\000\000\00256\000\003", <0x2214030>, <0x221a170>, <0x221a3c0>, null, void (i32*, i32*, i32*)* @stencil, null, null, <0x2218810>} ; [ DW_TAG_subprogram ] [line 3] [def] [stencil]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x221a350>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2218260>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from int32_t]
+
+!{!"0x16\00int32_t\00196\000\000\000\000", <0x2218890>, null, <0x2219578>} ; [ DW_TAG_typedef ] [int32_t] [line 196, size 0, align 0, offset 0] [from int]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+Meta data for 6886819295409417102
+Meta data for 6702554779881298157
+Meta data for 9996478583329175486
+Meta data for 5743485250762047226
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 933955850700229687, name: stencil, fileName: stencil.c, startLine: 3, endLine: 3
+DEBUG: adding stencil (in module: stencil.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 933955850700229687)
+DEBUG: assigning function stencil id 933955850700229687
+DEBUG: found 1 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: stencil is 933955850700229687
+DEBUG: found 4 loops in function stencil
+DEBUG: assigning id = 6886819295409417102 to loop with the following BBs:
+	for.cond stencil_label2 for.cond1 for.inc29 for.body3 for.cond4 for.end21 stencil_label4 for.cond7 for.inc19 for.body9 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8499018094978118501
+DEBUG: assigning id = 8499018094978118501 to body of loop
+DEBUG: assigning id = 6702554779881298157 to loop with the following BBs:
+	for.cond1 for.body3 for.cond4 for.end21 stencil_label4 for.cond7 for.inc19 for.body9 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10648744745908171626
+DEBUG: assigning id = 10648744745908171626 to body of loop
+DEBUG: assigning id = 9996478583329175486 to loop with the following BBs:
+	for.cond4 stencil_label4 for.cond7 for.inc19 for.body9 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8445070441595981392
+DEBUG: assigning id = 8445070441595981392 to body of loop
+DEBUG: assigning id = 5743485250762047226 to loop with the following BBs:
+	for.cond7 for.body9 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8908809613028958312
+DEBUG: assigning id = 8908809613028958312 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end31
+DEBUG: for.cond1 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc29
+DEBUG: for.cond4 has 1 possible loop exit points
+DEBUG: 	target #0: for.end21
+DEBUG: for.cond7 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc19
+DEBUG: Writing kremlib calls to stencil.kdump
+INFO: dumping function: stencil
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

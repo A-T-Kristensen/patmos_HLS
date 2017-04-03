@@ -1,0 +1,73 @@
+FUNC: rijndael_dec_toupper
+	4 : 5 : and
+	2 : ?? : phi
+	3 : 6 : add
+	1: ARG : 0
+
+FUNC: rijndael_dec_fread
+	11 : 19 : zext
+	9 : 19 : load
+	12 : 20 : load
+	10 : 19 : load
+	4 : 15 : load
+	13 : 20 : trunc
+	1: ARG : 1
+	2: ARG : 2
+	5 : 15 : load
+	17 : 15 : icmp
+	15 : 16 : mul
+	16 : 16 : sub
+	6 : 16 : load
+	7 : 16 : load
+	18 : ?? : phi
+	21 : ?? : phi
+	8 : 18 : load
+	20 : 18 : icmp
+	19 : 19 : add
+	14 : 15 : phi
+	3 : 13 : load
+
+FUNC: rijndael_dec_fwrite
+	11 : 33 : load
+	12 : 34 : load
+	13 : 34 : trunc
+	2: ARG : 2
+	1: ARG : 1
+	7 : 30 : load
+	16 : 30 : sub
+	14 : 29 : phi
+	18 : ?? : phi
+	21 : ?? : phi
+	20 : 32 : icmp
+	10 : 33 : zext
+	9 : 33 : load
+	19 : 33 : add
+	3 : 27 : load
+	4 : 29 : load
+	5 : 29 : load
+	17 : 29 : icmp
+	15 : 30 : mul
+	6 : 30 : load
+	8 : 32 : load
+
+FUNC: rijndael_dec_fseek
+	2: ARG : 2
+	9 : 41 : icmp
+	3 : 42 : trunc
+	10 : 45 : icmp
+	4 : 46 : load
+	5 : 46 : trunc
+	11 : 49 : icmp
+	1: ARG : 1
+	6 : 50 : load
+	7 : 50 : trunc
+	8 : ?? : phi
+
+FUNC: rijndael_dec_fgetpos
+	1 : 59 : load
+
+FUNC: rijndael_dec_feof
+	1 : 65 : load
+	2 : 65 : load
+	3 : 65 : select
+

@@ -1,0 +1,77 @@
+FUNC: lms_sinus
+	1: ARG : 0
+	2 : 69 : load
+	7 : 69 : fsub
+	8 : 68 : icmp
+	3 : 69 : sext
+	5 : 71 : sext
+	4 : 71 : load
+	6 : ?? : phi
+
+FUNC: lms_init
+	6 : 90 : fadd
+	16 : 91 : fcmp
+	3 : ?? : phi
+	14 : ?? : phi
+	4 : 82 : icmp
+	7 : ?? : phi
+	12 : 87 : fsub
+	15 : 88 : add
+	8 : 89 : fsub
+	2 : 95 : trunc
+	1 : 95 : call
+	5 : 95 : fptrunc
+	10 : 96 : trunc
+	9 : 96 : call
+	11 : 96 : fptrunc
+	13 : 82 : add
+
+FUNC: lms_calc
+	19 : 131 : icmp
+	13 : 132 : load
+	14 : 132 : load
+	15 : 132 : fadd
+	2: ARG : 1
+	1: ARG : 0
+	3: ARG : 3
+	4: ARG : 4
+	5: ARG : 5
+	23 : ?? : sext
+	21 : ?? : phi
+	22 : 115 : icmp
+	7 : 115 : add
+	6 : 116 : load
+	8 : 121 : load
+	9 : 121 : fadd
+	26 : 124 : sext
+	24 : ?? : phi
+	17 : ?? : phi
+	27 : 124 : icmp
+	10 : 125 : load
+	11 : 125 : load
+	25 : 125 : fadd
+	12 : 128 : load
+	16 : 128 : fdiv
+	18 : 131 : sext
+	20 : ?? : phi
+
+FUNC: lms_main
+	5 : ?? : phi
+	7 : 152 : icmp
+	4 : ?? : phi
+	6 : 146 : icmp
+	1 : 153 : load
+	2 : 154 : load
+	3 : 153 : call
+
+FUNC: lms_return
+	4 : ?? : phi
+	3 : ?? : phi
+	6 : 167 : icmp
+	1 : 168 : load
+	5 : 168 : fadd
+	2 : 169 : fptosi
+
+FUNC: main
+	1 : 178 : call
+

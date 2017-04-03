@@ -1,0 +1,25 @@
+FUNC: recursion_init
+	1 : 41 : load
+
+FUNC: recursion_fib
+	1: ARG : 0
+	8 : 47 : icmp
+	9 : 49 : icmp
+	3 : 52 : sub
+	2 : 52 : call
+	5 : 52 : sub
+	4 : 52 : call
+	7 : 52 : add
+	6 : ?? : phi
+
+FUNC: recursion_return
+	1 : 57 : load
+	2 : 57 : zext
+
+FUNC: recursion_main
+	1 : 64 : load
+	2 : 64 : call
+
+FUNC: main
+	1 : 71 : call
+

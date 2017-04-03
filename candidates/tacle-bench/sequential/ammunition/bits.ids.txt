@@ -1,0 +1,181 @@
+FUNC: ammunition_is_zero_bit_string
+	18 : ?? : phi
+	22 : ?? : phi
+	20 : 46 : icmp
+	6 : 47 : load
+	16: ARG : 0
+	1: ARG : 1
+	2: ARG : 2
+	9 : ?? : phi
+	25 : 30 : icmp
+	4 : 32 : sext
+	15 : 32 : getelementptr
+	11 : 34 : icmp
+	3 : 35 : load
+	24 : 35 : zext
+	12 : 39 : icmp
+	5 : 40 : load
+	13 : 40 : icmp
+	17 : 42 : getelementptr
+	10 : 43 : sub
+	14 : ?? : phi
+	21 : 47 : icmp
+	23 : 49 : getelementptr
+	19 : 50 : sub
+	26 : 52 : icmp
+	7 : 52 : load
+	27 : 52 : icmp
+	8 : ?? : phi
+
+FUNC: ammunition_bit_string_set
+	19: ARG : 0
+	1: ARG : 1
+	2: ARG : 2
+	3: ARG : 3
+	21 : 70 : icmp
+	8 : 73 : trunc
+	5 : 74 : sext
+	18 : 74 : getelementptr
+	15 : 76 : icmp
+	14 : 77 : shl
+	16 : 78 : icmp
+	13 : 79 : or
+	7 : ?? : phi
+	4 : 80 : load
+	6 : 80 : trunc
+	20 : 81 : getelementptr
+	22 : 82 : sub
+	17 : ?? : phi
+	12 : ?? : phi
+	10 : ?? : zext
+	23 : ?? : phi
+	26 : ?? : phi
+	25 : 85 : icmp
+	24 : 87 : getelementptr
+	27 : 88 : sub
+	28 : 90 : icmp
+	9 : 92 : load
+	11 : 92 : trunc
+
+FUNC: ammunition_bit_string_copy
+	19 : 150 : trunc
+	10 : 115 : srem
+	12 : 120 : and
+	22 : 121 : icmp
+	32 : 122 : icmp
+	5 : 123 : load
+	25: ARG : 0
+	1: ARG : 1
+	29: ARG : 2
+	2: ARG : 3
+	3: ARG : 4
+	9 : 112 : icmp
+	24 : 114 : getelementptr
+	28 : 116 : getelementptr
+	11 : 117 : srem
+	8 : ?? : phi
+	23 : ?? : phi
+	27 : ?? : phi
+	4 : 120 : load
+	31 : 123 : ashr
+	13 : 121 : phi
+	21 : 125 : icmp
+	6 : 130 : load
+	7 : 130 : trunc
+	33 : 133 : icmp
+	14 : 135 : load
+	15 : 135 : trunc
+	20 : 137 : sub
+	30 : 138 : getelementptr
+	26 : 139 : getelementptr
+	16 : 146 : load
+	17 : 146 : trunc
+	34 : 148 : icmp
+	18 : 150 : load
+
+FUNC: ammunition_reverse_bit_string_copy
+	5 : 186 : load
+	31 : 186 : shl
+	13 : 184 : phi
+	25: ARG : 0
+	1: ARG : 1
+	29: ARG : 2
+	2: ARG : 3
+	3: ARG : 4
+	9 : 171 : icmp
+	24 : 174 : getelementptr
+	10 : 175 : srem
+	28 : 177 : getelementptr
+	11 : 178 : srem
+	8 : ?? : phi
+	23 : ?? : phi
+	27 : ?? : phi
+	4 : 183 : load
+	12 : 183 : ashr
+	22 : 184 : icmp
+	32 : 185 : icmp
+	21 : 189 : icmp
+	6 : 194 : load
+	7 : 194 : trunc
+	33 : 196 : icmp
+	14 : 198 : load
+	15 : 198 : trunc
+	20 : 201 : sub
+	30 : 202 : getelementptr
+	26 : 203 : getelementptr
+	16 : 211 : load
+	17 : 211 : trunc
+	34 : 214 : icmp
+	18 : 216 : load
+	19 : 216 : trunc
+
+FUNC: ammunition_bit_string_move
+	6 : 236 : icmp
+	4 : 239 : srem
+	8: ARG : 0
+	1: ARG : 1
+	9: ARG : 2
+	2: ARG : 3
+	3: ARG : 4
+	5 : 241 : srem
+	7 : 242 : icmp
+	10 : 243 : icmp
+	11 : 244 : icmp
+
+FUNC: ammunition_bit_string_comparison
+	2: ARG : 3
+	27: ARG : 2
+	1: ARG : 1
+	23: ARG : 0
+	3: ARG : 4
+	11 : 272 : icmp
+	22 : 274 : getelementptr
+	12 : 275 : srem
+	26 : 276 : getelementptr
+	14 : 277 : srem
+	9 : ?? : phi
+	21 : ?? : phi
+	25 : ?? : phi
+	4 : 280 : load
+	13 : 280 : and
+	20 : 281 : icmp
+	30 : 284 : icmp
+	5 : 285 : load
+	29 : 285 : ashr
+	15 : 281 : phi
+	6 : 287 : load
+	32 : 288 : icmp
+	33 : 289 : icmp
+	7 : 290 : load
+	31 : 290 : ashr
+	16 : 288 : phi
+	17 : 292 : icmp
+	18 : 294 : icmp
+	19 : 297 : icmp
+	10 : 299 : sub
+	28 : 300 : getelementptr
+	24 : 301 : getelementptr
+	34 : 306 : icmp
+	35 : 309 : icmp
+	8 : ?? : phi
+

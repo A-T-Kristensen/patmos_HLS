@@ -1,0 +1,5 @@
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ReductionVars.cpp:20 Constructing ReductionVars with id: -17
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ReductionVars.cpp:25 Destructing ReductionVars with id: -17
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ReductionVars.cpp:20 Constructing ReductionVars with id: -17
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/CriticalPath.cpp:86 instrumenting module: anagram_input.simplifycfg.mem2reg.indvars.elimsinglephis.bc
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ReductionVars.cpp:25 Destructing ReductionVars with id: -17

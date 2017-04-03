@@ -1,0 +1,53 @@
+FUNC: countnegative_initSeed
+
+FUNC: countnegative_randomInteger
+	1 : 65 : load
+	2 : 65 : srem
+	3 : 66 : load
+
+FUNC: countnegative_initialize
+	4 : 77 : icmp
+	2 : ?? : phi
+	3 : ?? : phi
+	5 : 79 : icmp
+	1 : 80 : call
+
+FUNC: countnegative_init
+
+FUNC: countnegative_return
+	1 : 91 : load
+	2 : 92 : load
+	3 : 93 : load
+	4 : 94 : load
+	5 : 96 : select
+
+FUNC: countnegative_sum
+	13 : ?? : phi
+	8 : ?? : phi
+	21 : 116 : add
+	4 : ?? : phi
+	5 : ?? : phi
+	3 : ?? : phi
+	6 : ?? : phi
+	7 : ?? : phi
+	9 : 109 : icmp
+	1 : 112 : load
+	20 : 112 : icmp
+	2 : 113 : load
+	10 : ?? : phi
+	11 : ?? : phi
+	12 : ?? : phi
+	15 : 111 : icmp
+	22 : 113 : add
+	19 : 114 : add
+	23 : 117 : add
+	14 : ?? : phi
+	16 : ?? : phi
+	17 : ?? : phi
+	18 : ?? : phi
+
+FUNC: countnegative_main
+
+FUNC: main
+	1 : 139 : call
+

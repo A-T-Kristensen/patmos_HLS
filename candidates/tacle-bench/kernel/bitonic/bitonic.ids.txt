@@ -1,0 +1,52 @@
+FUNC: bitonic_init
+	2 : ?? : phi
+	3 : 54 : icmp
+	1 : 55 : trunc
+
+FUNC: bitonic_return
+	1 : 63 : load
+	2 : 63 : load
+	3 : 63 : load
+	4 : 65 : select
+
+FUNC: bitonic_compare
+	1: ARG : 0
+	2: ARG : 1
+	3: ARG : 2
+	5 : 80 : sext
+	4 : 80 : load
+	7 : 80 : sext
+	6 : 80 : load
+	12 : 80 : icmp
+	9 : 81 : sext
+	8 : 81 : load
+	11 : 82 : sext
+	10 : 82 : load
+
+FUNC: bitonic_merge
+	7 : 98 : icmp
+	5 : 99 : add
+	1: ARG : 0
+	2: ARG : 1
+	3: ARG : 2
+	6 : 95 : sdiv
+	4 : ?? : phi
+	9 : 98 : add
+	10 : 101 : icmp
+	8 : 103 : add
+
+FUNC: bitonic_sort
+	1: ARG : 0
+	2: ARG : 1
+	3: ARG : 2
+	4 : 115 : sdiv
+	6 : 118 : icmp
+	5 : 120 : add
+
+FUNC: bitonic_main
+	1 : ?? : phi
+	2 : 146 : icmp
+
+FUNC: main
+	1 : 156 : call
+

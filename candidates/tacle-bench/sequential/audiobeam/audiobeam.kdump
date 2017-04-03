@@ -1,0 +1,2024 @@
+FUNCTION_BEGIN: audiobeam_init
+	BB_BEGIN: entry
+		_KEnterRegion(0x8c45c1da0936e0d6, 0)
+		_KPrepRTable(29, 2)
+		_KWork(3)
+		_KStoreConst(inst_arg_ptr14, 4)
+		_KStoreConst(inst_arg_ptr13, 4)
+		_KStoreConst(inst_arg_ptr12, 1)
+		_KInduction(5)
+		TERMINATOR: for.cond.preheader 
+	BB_END: entry
+
+	BB_BEGIN: for.cond.preheader
+		_KEnterRegion(0x64b1956c7ff51b05, 1)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.preheader
+
+	BB_BEGIN: for.cond.cont
+		_KExitRegion(0x355e8a88bb33bf4e, 2)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.cont
+
+	BB_BEGIN: for.cond
+		_KPhi1To1(21, phi-incoming-val-id15, phi-incoming-condition16)
+		_KWork(1)
+		_KTimestamp1(4, 5, 1)
+		_KPhiAddCond(21, 4)
+		_KTimestamp1(21, 21, 0)
+		TERMINATOR: for.body for.cond.pre_exit.for.end 
+	BB_END: for.cond
+
+	BB_BEGIN: for.body
+		_KEnterRegion(0x355e8a88bb33bf4e, 2)
+		_KPushCDep(4)
+		_KLoad0(inst_arg_ptr7, 1, 1)
+		_KWork(10)
+		_KLoad0(inst_arg_ptr6, 2, 1)
+		CALL: _KTimestamp3(3, 4, 1, 1, 1, 2, 1)
+		_KStore(3, inst_arg_ptr1, 1)
+		_KTimestamp2(22, 21, 0, 4, 0)
+		_KPopCDep()
+		TERMINATOR: for.cond.cont 
+	BB_END: for.body
+
+	BB_BEGIN: for.cond.pre_exit.for.end
+		_KExitRegion(0x64b1956c7ff51b05, 1)
+		TERMINATOR: for.end 
+	BB_END: for.cond.pre_exit.for.end
+
+	BB_BEGIN: for.end
+		_KInduction(10)
+		TERMINATOR: for.cond5.preheader 
+	BB_END: for.end
+
+	BB_BEGIN: for.cond5.preheader
+		_KEnterRegion(0x81a2d61380f2c89, 1)
+		TERMINATOR: for.cond5 
+	BB_END: for.cond5.preheader
+
+	BB_BEGIN: for.cond5.cont
+		_KExitRegion(0x96ec26a4620542f1, 2)
+		TERMINATOR: for.cond5 
+	BB_END: for.cond5.cont
+
+	BB_BEGIN: for.cond5
+		_KPhi1To1(23, phi-incoming-val-id19, phi-incoming-condition20)
+		_KWork(1)
+		_KTimestamp1(9, 10, 1)
+		_KPhiAddCond(23, 9)
+		_KTimestamp1(23, 23, 0)
+		TERMINATOR: for.body9 for.cond5.pre_exit.for.end17 
+	BB_END: for.cond5
+
+	BB_BEGIN: for.body9
+		_KEnterRegion(0x96ec26a4620542f1, 2)
+		_KPushCDep(9)
+		_KLoad0(inst_arg_ptr11, 6, 1)
+		_KWork(10)
+		_KLoad0(inst_arg_ptr10, 7, 1)
+		CALL: _KTimestamp3(8, 9, 1, 6, 1, 7, 1)
+		_KStore(8, inst_arg_ptr, 1)
+		_KTimestamp2(24, 23, 0, 9, 0)
+		_KPopCDep()
+		TERMINATOR: for.cond5.cont 
+	BB_END: for.body9
+
+	BB_BEGIN: for.cond5.pre_exit.for.end17
+		_KExitRegion(0x81a2d61380f2c89, 1)
+		TERMINATOR: for.end17 
+	BB_END: for.cond5.pre_exit.for.end17
+
+	BB_BEGIN: for.end17
+		_KInduction(15)
+		TERMINATOR: for.cond18.preheader 
+	BB_END: for.end17
+
+	BB_BEGIN: for.cond18.preheader
+		_KEnterRegion(0xe6853a274de35ef1, 1)
+		TERMINATOR: for.cond18 
+	BB_END: for.cond18.preheader
+
+	BB_BEGIN: for.cond18.cont
+		_KExitRegion(0x730a5e467d9a799b, 2)
+		TERMINATOR: for.cond18 
+	BB_END: for.cond18.cont
+
+	BB_BEGIN: for.cond18
+		_KPhi1To1(25, phi-incoming-val-id, phi-incoming-condition)
+		_KWork(1)
+		_KTimestamp1(14, 15, 1)
+		_KPhiAddCond(25, 14)
+		_KTimestamp1(25, 25, 0)
+		TERMINATOR: for.body22 for.cond18.pre_exit.for.end30 
+	BB_END: for.cond18
+
+	BB_BEGIN: for.body22
+		_KEnterRegion(0x730a5e467d9a799b, 2)
+		_KPushCDep(14)
+		_KLoad0(inst_arg_ptr5, 11, 1)
+		_KWork(10)
+		_KLoad0(inst_arg_ptr4, 12, 1)
+		CALL: _KTimestamp3(13, 11, 1, 12, 1, 14, 1)
+		_KStore(13, inst_arg_ptr3, 1)
+		_KTimestamp2(26, 25, 0, 14, 0)
+		_KPopCDep()
+		TERMINATOR: for.cond18.cont 
+	BB_END: for.body22
+
+	BB_BEGIN: for.cond18.pre_exit.for.end30
+		_KExitRegion(0xe6853a274de35ef1, 1)
+		TERMINATOR: for.end30 
+	BB_END: for.cond18.pre_exit.for.end30
+
+	BB_BEGIN: for.end30
+		_KInduction(20)
+		TERMINATOR: for.cond31.preheader 
+	BB_END: for.end30
+
+	BB_BEGIN: for.cond31.preheader
+		_KEnterRegion(0xfc7caab650048ee3, 1)
+		TERMINATOR: for.cond31 
+	BB_END: for.cond31.preheader
+
+	BB_BEGIN: for.cond31.cont
+		_KExitRegion(0x847b917cf1bb8b95, 2)
+		TERMINATOR: for.cond31 
+	BB_END: for.cond31.cont
+
+	BB_BEGIN: for.cond31
+		_KPhi1To1(27, phi-incoming-val-id17, phi-incoming-condition18)
+		_KWork(1)
+		_KTimestamp1(19, 20, 1)
+		_KPhiAddCond(27, 19)
+		_KTimestamp1(27, 27, 0)
+		TERMINATOR: for.body35 for.cond31.pre_exit.for.end43 
+	BB_END: for.cond31
+
+	BB_BEGIN: for.body35
+		_KEnterRegion(0x847b917cf1bb8b95, 2)
+		_KPushCDep(19)
+		_KLoad0(inst_arg_ptr8, 16, 1)
+		_KWork(10)
+		_KLoad0(inst_arg_ptr9, 17, 1)
+		CALL: _KTimestamp3(18, 17, 1, 19, 1, 16, 1)
+		_KStore(18, inst_arg_ptr2, 1)
+		_KTimestamp2(28, 27, 0, 19, 0)
+		_KPopCDep()
+		TERMINATOR: for.cond31.cont 
+	BB_END: for.body35
+
+	BB_BEGIN: for.cond31.pre_exit.for.end43
+		_KExitRegion(0xfc7caab650048ee3, 1)
+		TERMINATOR: for.end43 
+	BB_END: for.cond31.pre_exit.for.end43
+
+	BB_BEGIN: for.end43
+		_KExitRegion(0x8c45c1da0936e0d6, 0)
+		RETURN
+	BB_END: for.end43
+
+FUNCTION_END: audiobeam_init
+
+
+FUNCTION_BEGIN: llvm.dbg.declare
+FUNCTION_END: llvm.dbg.declare
+
+
+FUNCTION_BEGIN: audiobeam_return
+	BB_BEGIN: entry
+		_KEnterRegion(0xf1ee9b23f646e67, 0)
+		_KPrepRTable(3, 0)
+		_KLoad0(inst_arg_ptr, 1, 4)
+		_KWork(6)
+		_KTimestamp1(2, 1, 2)
+		_KReturn(2)
+		_KExitRegion(0xf1ee9b23f646e67, 0)
+		RETURN
+	BB_END: entry
+
+FUNCTION_END: audiobeam_return
+
+
+FUNCTION_BEGIN: audiobeam_preprocess_delays
+	BB_BEGIN: entry
+		_KEnterRegion(0x9ca90847d07f5701, 0)
+		_KPrepRTable(13, 2)
+		_KInduction(6)
+		TERMINATOR: for.cond.preheader 
+	BB_END: entry
+
+	BB_BEGIN: for.cond.preheader
+		_KEnterRegion(0xf98ed2f4691ca1fa, 1)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.preheader
+
+	BB_BEGIN: for.cond.cont
+		_KExitRegion(0xe059dadbbc9bd654, 2)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.cont
+
+	BB_BEGIN: for.cond
+		_KWork(1)
+		_KTimestamp1(5, 6, 1)
+		TERMINATOR: for.body for.cond.pre_exit.for.end 
+	BB_END: for.cond
+
+	BB_BEGIN: for.body
+		_KEnterRegion(0xe059dadbbc9bd654, 2)
+		_KPushCDep(5)
+		_KWork(26)
+		_KLoad0(inst_arg_ptr7, 1, 4)
+		_KTimestamp1(1, 1, 0)
+		_KStore(1, inst_arg_ptr6, 4)
+		_KLoad0(inst_arg_ptr5, 2, 4)
+		_KPrepCall(0x4f2421d17a86a309, 0)
+		_KTimestamp1(2, 2, 0)
+		_KEnqArg(2)
+		_KLinkReturn(3)
+		CALL: call = audiobeam___ceilf(  %1 = load float* %arrayidx4, align 4, !dbg !117)
+		_KTimestamp2(4, 5, 0, 3, 0)
+		_KStore(4, inst_arg_ptr, 4)
+		_KLoad0(inst_arg_ptr4, 7, 4)
+		_KTimestamp1(7, 7, 0)
+		_KPrepCall(0xd3a6fd78204abfdb, 0)
+		_KEnqArg(7)
+		_KLinkReturn(8)
+		CALL: call9 = audiobeam___floorf(  %2 = load float* %arrayidx8, align 4, !dbg !121)
+		_KTimestamp2(9, 5, 0, 8, 0)
+		_KStore(9, inst_arg_ptr3, 4)
+		_KLoad0(inst_arg_ptr2, 10, 4)
+		_KLoad0(inst_arg_ptr1, 11, 4)
+		CALL: _KTimestamp3(12, 5, 2, 10, 2, 11, 2)
+		_KStore(12, inst_arg_ptr8, 4)
+		_KPopCDep()
+		TERMINATOR: for.cond.cont 
+	BB_END: for.body
+
+	BB_BEGIN: for.cond.pre_exit.for.end
+		_KExitRegion(0xf98ed2f4691ca1fa, 1)
+		TERMINATOR: for.end 
+	BB_END: for.cond.pre_exit.for.end
+
+	BB_BEGIN: for.end
+		_KExitRegion(0x9ca90847d07f5701, 0)
+		RETURN
+	BB_END: for.end
+
+FUNCTION_END: audiobeam_preprocess_delays
+
+
+FUNCTION_BEGIN: audiobeam___ceilf
+FUNCTION_END: audiobeam___ceilf
+
+
+FUNCTION_BEGIN: audiobeam___floorf
+FUNCTION_END: audiobeam___floorf
+
+
+FUNCTION_BEGIN: audiobeam_parse_line
+	BB_BEGIN: entry
+		_KEnterRegion(0x500ff61b0566e44d, 0)
+		_KPrepRTable(9, 2)
+		_KDeqArg(1)
+		_KTimestamp1(4, 1, 0)
+		_KInduction(6)
+		TERMINATOR: for.cond.preheader 
+	BB_END: entry
+
+	BB_BEGIN: for.cond.preheader
+		_KEnterRegion(0xde7d18e7ce16880b, 1)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.preheader
+
+	BB_BEGIN: for.cond.cont
+		_KExitRegion(0x8897bf515b5dace6, 2)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.cont
+
+	BB_BEGIN: for.cond
+		_KWork(1)
+		_KTimestamp2(5, 4, 1, 6, 1)
+		TERMINATOR: for.body for.cond.pre_exit.for.end 
+	BB_END: for.cond
+
+	BB_BEGIN: for.body
+		_KEnterRegion(0x8897bf515b5dace6, 2)
+		_KPushCDep(5)
+		_KWork(11)
+		_KLoad0(inst_arg_ptr3, 2, 4)
+		_KTimestamp2(3, 5, 1, 2, 1)
+		_KStore(3, inst_arg_ptr2, 4)
+		_KLoad1(inst_arg_ptr1, 7, 8, 4)
+		_KTimestamp1(7, 7, 0)
+		_KStore(7, inst_arg_ptr, 4)
+		_KPopCDep()
+		TERMINATOR: for.cond.cont 
+	BB_END: for.body
+
+	BB_BEGIN: for.cond.pre_exit.for.end
+		_KExitRegion(0xde7d18e7ce16880b, 1)
+		TERMINATOR: for.end 
+	BB_END: for.cond.pre_exit.for.end
+
+	BB_BEGIN: for.end
+		_KExitRegion(0x500ff61b0566e44d, 0)
+		RETURN
+	BB_END: for.end
+
+FUNCTION_END: audiobeam_parse_line
+
+
+FUNCTION_BEGIN: audiobeam_find_max_in_arr
+	BB_BEGIN: entry
+		_KEnterRegion(0xa9e022e287229de8, 0)
+		_KPrepRTable(12, 2)
+		_KDeqArg(1)
+		_KInduction(7)
+		_KTimestamp1(9, 1, 0)
+		TERMINATOR: for.cond.preheader 
+	BB_END: entry
+
+	BB_BEGIN: for.cond.preheader
+		_KEnterRegion(0xb7dbcca62cf7ff1, 1)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.preheader
+
+	BB_BEGIN: for.cond.cont
+		_KExitRegion(0x91a12925583b9142, 2)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.cont
+
+	BB_BEGIN: for.cond
+		_KPhi1To1(5, phi-incoming-val-id3, phi-incoming-condition4)
+		_KWork(1)
+		_KTimestamp1(5, 5, 0)
+		_KTimestamp2(10, 9, 1, 7, 1)
+		_KPhiAddCond(5, 10)
+		TERMINATOR: for.body for.cond.pre_exit.for.end 
+	BB_END: for.cond
+
+	BB_BEGIN: for.body
+		_KEnterRegion(0x91a12925583b9142, 2)
+		_KPushCDep(10)
+		_KWork(6)
+		_KLoad0(inst_arg_ptr1, 2, 4)
+		CALL: _KTimestamp3(11, 5, 2, 10, 2, 2, 2)
+		_KPopCDep()
+		TERMINATOR: if.then for.inc 
+	BB_END: for.body
+
+	BB_BEGIN: if.then
+		_KPushCDep(11)
+		_KWork(4)
+		_KLoad0(inst_arg_ptr, 3, 4)
+		_KTimestamp1(3, 3, 0)
+		_KPopCDep()
+		TERMINATOR: for.inc 
+	BB_END: if.then
+
+	BB_BEGIN: for.inc
+		_KPushCDep(10)
+		_KPhi2To1(8, phi-incoming-val-id, phi-incoming-condition, phi-incoming-condition2)
+		_KTimestamp1(8, 8, 0)
+		_KPopCDep()
+		TERMINATOR: for.cond.cont 
+	BB_END: for.inc
+
+	BB_BEGIN: for.cond.pre_exit.for.end
+		_KExitRegion(0xb7dbcca62cf7ff1, 1)
+		TERMINATOR: for.end 
+	BB_END: for.cond.pre_exit.for.end
+
+	BB_BEGIN: for.end
+		_KPrepCall(0x1f9d0c251a6344a9, 0)
+		_KEnqArg(5)
+		_KLinkReturn(4)
+		CALL: call = audiobeam___ceilf(max.0)
+		_KTimestamp1(6, 4, 0)
+		_KReturn(6)
+		_KExitRegion(0xa9e022e287229de8, 0)
+		RETURN
+	BB_END: for.end
+
+FUNCTION_END: audiobeam_find_max_in_arr
+
+
+FUNCTION_BEGIN: audiobeam_find_min_in_arr
+	BB_BEGIN: entry
+		_KEnterRegion(0x3238bc6bf114ffef, 0)
+		_KPrepRTable(13, 2)
+		_KDeqArg(1)
+		_KWork(4)
+		_KLoad0(inst_arg_ptr2, 2, 4)
+		_KTimestamp1(2, 2, 0)
+		_KInduction(8)
+		_KTimestamp1(10, 1, 0)
+		TERMINATOR: for.cond.preheader 
+	BB_END: entry
+
+	BB_BEGIN: for.cond.preheader
+		_KEnterRegion(0x151c474391660e1b, 1)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.preheader
+
+	BB_BEGIN: for.cond.cont
+		_KExitRegion(0x6cddda2326771af1, 2)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.cont
+
+	BB_BEGIN: for.cond
+		_KPhi1To1(6, phi-incoming-val-id4, phi-incoming-condition5)
+		_KWork(1)
+		_KTimestamp1(6, 6, 0)
+		_KTimestamp2(11, 10, 1, 8, 1)
+		_KPhiAddCond(6, 11)
+		TERMINATOR: for.body for.cond.pre_exit.for.end 
+	BB_END: for.cond
+
+	BB_BEGIN: for.body
+		_KEnterRegion(0x6cddda2326771af1, 2)
+		_KPushCDep(11)
+		_KWork(6)
+		_KLoad0(inst_arg_ptr1, 3, 4)
+		CALL: _KTimestamp3(12, 6, 2, 11, 2, 3, 2)
+		_KPopCDep()
+		TERMINATOR: if.then for.inc 
+	BB_END: for.body
+
+	BB_BEGIN: if.then
+		_KPushCDep(12)
+		_KWork(4)
+		_KLoad0(inst_arg_ptr, 4, 4)
+		_KTimestamp1(4, 4, 0)
+		_KPopCDep()
+		TERMINATOR: for.inc 
+	BB_END: if.then
+
+	BB_BEGIN: for.inc
+		_KPushCDep(11)
+		_KPhi2To1(9, phi-incoming-val-id, phi-incoming-condition, phi-incoming-condition3)
+		_KTimestamp1(9, 9, 0)
+		_KPopCDep()
+		TERMINATOR: for.cond.cont 
+	BB_END: for.inc
+
+	BB_BEGIN: for.cond.pre_exit.for.end
+		_KExitRegion(0x151c474391660e1b, 1)
+		TERMINATOR: for.end 
+	BB_END: for.cond.pre_exit.for.end
+
+	BB_BEGIN: for.end
+		_KPrepCall(0xc343c8df8f881f01, 0)
+		_KEnqArg(6)
+		_KLinkReturn(5)
+		CALL: call = audiobeam___floorf(min.0)
+		_KTimestamp1(7, 5, 0)
+		_KReturn(7)
+		_KExitRegion(0x3238bc6bf114ffef, 0)
+		RETURN
+	BB_END: for.end
+
+FUNCTION_END: audiobeam_find_min_in_arr
+
+
+FUNCTION_BEGIN: audiobeam_wrapped_inc_offset
+	BB_BEGIN: entry
+		_KEnterRegion(0x5035a205e5d3dff2, 0)
+		_KPrepRTable(8, 0)
+		_KDeqArg(3)
+		_KDeqArg(2)
+		_KDeqArg(1)
+		_KWork(3)
+		_KTimestamp2(6, 2, 1, 1, 1)
+		CALL: _KTimestamp3(7, 3, 1, 2, 2, 1, 2)
+		TERMINATOR: if.then if.else 
+	BB_END: entry
+
+	BB_BEGIN: if.then
+		_KPushCDep(7)
+		_KWork(2)
+		CALL: _KTimestamp3(5, 3, 3, 2, 4, 1, 4)
+		_KPopCDep()
+		TERMINATOR: return 
+	BB_END: if.then
+
+	BB_BEGIN: if.else
+		_KPushCDep(7)
+		_KPopCDep()
+		TERMINATOR: return 
+	BB_END: if.else
+
+	BB_BEGIN: return
+		_KPhi1To1(4, phi-incoming-val-id, phi-incoming-condition)
+		_KTimestamp1(4, 4, 0)
+		_KReturn(4)
+		_KExitRegion(0x5035a205e5d3dff2, 0)
+		RETURN
+	BB_END: return
+
+FUNCTION_END: audiobeam_wrapped_inc_offset
+
+
+FUNCTION_BEGIN: audiobeam_wrapped_dec_offset
+	BB_BEGIN: entry
+		_KEnterRegion(0xc10410b8b29113a6, 0)
+		_KPrepRTable(8, 0)
+		_KDeqArg(3)
+		_KDeqArg(2)
+		_KDeqArg(1)
+		_KWork(2)
+		_KTimestamp2(7, 2, 2, 1, 2)
+		TERMINATOR: if.then if.else 
+	BB_END: entry
+
+	BB_BEGIN: if.then
+		_KPushCDep(7)
+		_KWork(3)
+		CALL: _KTimestamp3(5, 3, 2, 2, 5, 1, 5)
+		_KPopCDep()
+		TERMINATOR: return 
+	BB_END: if.then
+
+	BB_BEGIN: if.else
+		_KPushCDep(7)
+		_KWork(1)
+		_KTimestamp2(6, 2, 3, 1, 3)
+		_KPopCDep()
+		TERMINATOR: return 
+	BB_END: if.else
+
+	BB_BEGIN: return
+		_KPhi1To1(4, phi-incoming-val-id, phi-incoming-condition)
+		_KTimestamp1(4, 4, 0)
+		_KReturn(4)
+		_KExitRegion(0xc10410b8b29113a6, 0)
+		RETURN
+	BB_END: return
+
+FUNCTION_END: audiobeam_wrapped_dec_offset
+
+
+FUNCTION_BEGIN: audiobeam_wrapped_inc
+	BB_BEGIN: entry
+		_KEnterRegion(0xe72fd6253ac0a369, 0)
+		_KPrepRTable(4, 0)
+		_KDeqArg(2)
+		_KDeqArg(1)
+		_KPrepCall(0xeb83b8d4303f9bd, 0)
+		_KTimestamp1(2, 2, 0)
+		_KEnqArg(2)
+		_KEnqArgConst()
+		_KTimestamp1(1, 1, 0)
+		_KEnqArg(1)
+		_KLinkReturn(3)
+		CALL: call = audiobeam_wrapped_inc_offset(i, 1, max_i)
+		_KTimestamp1(3, 3, 0)
+		_KReturn(3)
+		_KExitRegion(0xe72fd6253ac0a369, 0)
+		RETURN
+	BB_END: entry
+
+FUNCTION_END: audiobeam_wrapped_inc
+
+
+FUNCTION_BEGIN: audiobeam_wrapped_dec
+	BB_BEGIN: entry
+		_KEnterRegion(0xecaee02fd663b017, 0)
+		_KPrepRTable(4, 0)
+		_KDeqArg(2)
+		_KDeqArg(1)
+		_KTimestamp1(1, 1, 0)
+		_KTimestamp1(2, 2, 0)
+		_KPrepCall(0x98281ca4ae92a92f, 0)
+		_KEnqArg(2)
+		_KEnqArgConst()
+		_KEnqArg(1)
+		_KLinkReturn(3)
+		CALL: call = audiobeam_wrapped_dec_offset(i, 1, max_i)
+		_KTimestamp1(3, 3, 0)
+		_KReturn(3)
+		_KExitRegion(0xecaee02fd663b017, 0)
+		RETURN
+	BB_END: entry
+
+FUNCTION_END: audiobeam_wrapped_dec
+
+
+FUNCTION_BEGIN: audiobeam_init_data_queue
+	BB_BEGIN: entry
+		_KEnterRegion(0x783d21737d47034d, 0)
+		_KPrepRTable(17, 4)
+		_KDeqArg(2)
+		_KDeqArg(1)
+		_KWork(4)
+		_KPrepCall(0xbfd4d6f7fb30ba5c, 0)
+		_KEnqArgConst()
+		CALL: call = audiobeam_malloc(24)
+		_KTimestamp1(3, 1, 3)
+		_KPrepCall(0x21505b0a86bed82e, 0)
+		_KEnqArg(3)
+		CALL: call2 = audiobeam_malloc(conv1)
+		_KTimestamp1(4, 5, 0)
+		_KStore(4, inst_arg_ptr8, 8)
+		_KInduction(8)
+		_KTimestamp1(15, 2, 0)
+		TERMINATOR: for.cond.preheader 
+	BB_END: entry
+
+	BB_BEGIN: for.cond.preheader
+		_KEnterRegion(0xa4882af3471802df, 1)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.preheader
+
+	BB_BEGIN: for.cond.cont
+		_KExitRegion(0xbfd5d96b06eb3c49, 2)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.cont
+
+	BB_BEGIN: for.cond
+		_KWork(2)
+		_KTimestamp2(7, 1, 2, 8, 1)
+		TERMINATOR: for.body for.cond.pre_exit.for.end21 
+	BB_END: for.cond
+
+	BB_BEGIN: for.body
+		_KEnterRegion(0xbfd5d96b06eb3c49, 2)
+		_KPushCDep(7)
+		_KWork(7)
+		_KPrepCall(0x4cd78444a341c6b7, 0)
+		_KTimestamp2(6, 2, 2, 7, 2)
+		_KEnqArg(6)
+		CALL: call8 = audiobeam_malloc(conv7)
+		_KLoad0(inst_arg_ptr7, 9, 8)
+		_KTimestamp2(10, 7, 0, 11, 0)
+		_KStore(10, inst_arg_ptr6, 8)
+		_KInduction(14)
+		_KPopCDep()
+		TERMINATOR: for.cond10.preheader 
+	BB_END: for.body
+
+	BB_BEGIN: for.cond10.preheader
+		_KEnterRegion(0xe08d8d6debcc8e4a, 1)
+		TERMINATOR: for.cond10 
+	BB_END: for.cond10.preheader
+
+	BB_BEGIN: for.cond10.cont
+		_KExitRegion(0x151bc399b57693f1, 2)
+		TERMINATOR: for.cond10 
+	BB_END: for.cond10.cont
+
+	BB_BEGIN: for.cond10
+		_KPushCDep(7)
+		_KWork(1)
+		_KPopCDep()
+		CALL: _KTimestamp3(16, 15, 1, 7, 1, 14, 1)
+		TERMINATOR: for.body13 for.cond10.pre_exit.for.inc19 
+	BB_END: for.cond10
+
+	BB_BEGIN: for.body13
+		_KEnterRegion(0x151bc399b57693f1, 2)
+		_KPushCDep(16)
+		_KWork(9)
+		_KLoad0(inst_arg_ptr5, 12, 8)
+		_KLoad0(inst_arg_ptr4, 13, 8)
+		_KStoreConst(inst_arg_ptr3, 4)
+		_KPopCDep()
+		TERMINATOR: for.cond10.cont 
+	BB_END: for.body13
+
+	BB_BEGIN: for.cond10.pre_exit.for.inc19
+		_KExitRegion(0xe08d8d6debcc8e4a, 1)
+		TERMINATOR: for.inc19 
+	BB_END: for.cond10.pre_exit.for.inc19
+
+	BB_BEGIN: for.inc19
+		_KPushCDep(7)
+		_KPopCDep()
+		TERMINATOR: for.cond.cont 
+	BB_END: for.inc19
+
+	BB_BEGIN: for.cond.pre_exit.for.end21
+		_KExitRegion(0xa4882af3471802df, 1)
+		TERMINATOR: for.end21 
+	BB_END: for.cond.pre_exit.for.end21
+
+	BB_BEGIN: for.end21
+		_KWork(3)
+		_KStoreConst(inst_arg_ptr2, 4)
+		_KStoreConst(inst_arg_ptr1, 4)
+		_KStoreConst(inst_arg_ptr, 1)
+		_KExitRegion(0x783d21737d47034d, 0)
+		RETURN
+	BB_END: for.end21
+
+FUNCTION_END: audiobeam_init_data_queue
+
+
+FUNCTION_BEGIN: audiobeam_malloc
+FUNCTION_END: audiobeam_malloc
+
+
+FUNCTION_BEGIN: audiobeam_init_delays
+	BB_BEGIN: entry
+		_KEnterRegion(0x40e1ed4ecf715cd1, 0)
+		_KPrepRTable(13, 2)
+		_KDeqArg(2)
+		_KDeqArg(1)
+		_KWork(3)
+		_KPrepCall(0x86955d0e4a58e2e9, 0)
+		_KEnqArgConst()
+		CALL: call = audiobeam_malloc(16)
+		_KPrepCall(0x1cfe87c13ffbe8d3, 0)
+		_KTimestamp1(3, 1, 2)
+		_KEnqArg(3)
+		CALL: call2 = audiobeam_malloc(conv1)
+		_KTimestamp1(4, 5, 0)
+		_KStore(4, inst_arg_ptr2, 8)
+		_KTimestamp1(7, 1, 0)
+		_KInduction(9)
+		TERMINATOR: for.cond.preheader 
+	BB_END: entry
+
+	BB_BEGIN: for.cond.preheader
+		_KEnterRegion(0x9aa73d38c6cf3a6e, 1)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.preheader
+
+	BB_BEGIN: for.cond.cont
+		_KExitRegion(0x7b48e8c337bace11, 2)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.cont
+
+	BB_BEGIN: for.cond
+		_KWork(1)
+		_KTimestamp2(8, 9, 1, 7, 1)
+		TERMINATOR: for.body for.cond.pre_exit.for.end 
+	BB_END: for.cond
+
+	BB_BEGIN: for.body
+		_KEnterRegion(0x7b48e8c337bace11, 2)
+		_KPushCDep(8)
+		_KWork(7)
+		_KTimestamp2(6, 2, 2, 8, 2)
+		_KPrepCall(0x2f849c0cab4e65c6, 0)
+		_KEnqArg(6)
+		CALL: call7 = audiobeam_malloc(conv6)
+		_KLoad0(inst_arg_ptr1, 10, 8)
+		_KTimestamp2(11, 8, 0, 12, 0)
+		_KStore(11, inst_arg_ptr, 8)
+		_KPopCDep()
+		TERMINATOR: for.cond.cont 
+	BB_END: for.body
+
+	BB_BEGIN: for.cond.pre_exit.for.end
+		_KExitRegion(0x9aa73d38c6cf3a6e, 1)
+		TERMINATOR: for.end 
+	BB_END: for.cond.pre_exit.for.end
+
+	BB_BEGIN: for.end
+		_KExitRegion(0x40e1ed4ecf715cd1, 0)
+		RETURN
+	BB_END: for.end
+
+FUNCTION_END: audiobeam_init_delays
+
+
+FUNCTION_BEGIN: audiobeam_calc_distances
+	BB_BEGIN: entry
+		_KEnterRegion(0x1f88698e3b632a11, 0)
+		_KPrepRTable(19, 2)
+		_KDeqArg(1)
+		_KTimestamp1(16, 1, 0)
+		_KInduction(18)
+		TERMINATOR: for.cond.preheader 
+	BB_END: entry
+
+	BB_BEGIN: for.cond.preheader
+		_KEnterRegion(0xfbe5c9a7ecbfde76, 1)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.preheader
+
+	BB_BEGIN: for.cond.cont
+		_KExitRegion(0xc7ff941871ae362b, 2)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.cont
+
+	BB_BEGIN: for.cond
+		_KWork(1)
+		_KTimestamp2(17, 16, 1, 18, 1)
+		TERMINATOR: for.body for.cond.pre_exit.for.end 
+	BB_END: for.cond
+
+	BB_BEGIN: for.body
+		_KEnterRegion(0xc7ff941871ae362b, 2)
+		_KPushCDep(17)
+		_KWork(80)
+		_KLoad0(inst_arg_ptr8, 2, 4)
+		_KLoad0(inst_arg_ptr7, 3, 4)
+		_KLoad0(inst_arg_ptr6, 4, 4)
+		_KLoad0(inst_arg_ptr5, 5, 4)
+		_KLoad0(inst_arg_ptr4, 6, 4)
+		_KLoad0(inst_arg_ptr12, 7, 4)
+		_KLoad0(inst_arg_ptr11, 8, 4)
+		_KLoad0(inst_arg_ptr10, 9, 4)
+		_KLoad0(inst_arg_ptr9, 10, 4)
+		_KLoad0(inst_arg_ptr3, 11, 4)
+		_KLoad0(inst_arg_ptr2, 12, 4)
+		_KLoad0(inst_arg_ptr1, 13, 4)
+		_KPrepCall(0x8151fe2eda39a45a, 0)
+		_KTimestamp(15, 13, 7, 11, 8, 11, 9, 11, 10, 9, 17, 11, 2, 11, 3, 11, 4, 11, 5, 11, 6, 11, 11, 9, 12, 9, 13, 9)
+		_KEnqArg(15)
+		_KLinkReturn(14)
+		CALL: call = audiobeam___ieee754_sqrtf(add30)
+		_KTimestamp1(14, 14, 0)
+		_KStore(14, inst_arg_ptr, 4)
+		_KPopCDep()
+		TERMINATOR: for.cond.cont 
+	BB_END: for.body
+
+	BB_BEGIN: for.cond.pre_exit.for.end
+		_KExitRegion(0xfbe5c9a7ecbfde76, 1)
+		TERMINATOR: for.end 
+	BB_END: for.cond.pre_exit.for.end
+
+	BB_BEGIN: for.end
+		_KExitRegion(0x1f88698e3b632a11, 0)
+		RETURN
+	BB_END: for.end
+
+FUNCTION_END: audiobeam_calc_distances
+
+
+FUNCTION_BEGIN: audiobeam___ieee754_sqrtf
+FUNCTION_END: audiobeam___ieee754_sqrtf
+
+
+FUNCTION_BEGIN: audiobeam_calc_delays
+	BB_BEGIN: entry
+		_KEnterRegion(0xe149e3e91a76ff1e, 0)
+		_KPrepRTable(9, 2)
+		_KDeqArg(3)
+		_KDeqArg(2)
+		_KDeqArg(1)
+		_KTimestamp1(6, 3, 0)
+		_KInduction(8)
+		TERMINATOR: for.cond.preheader 
+	BB_END: entry
+
+	BB_BEGIN: for.cond.preheader
+		_KEnterRegion(0x97615e616261154d, 1)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.preheader
+
+	BB_BEGIN: for.cond.cont
+		_KExitRegion(0x8dd1950d4521aca6, 2)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.cont
+
+	BB_BEGIN: for.cond
+		_KWork(1)
+		_KTimestamp2(7, 6, 1, 8, 1)
+		TERMINATOR: for.body for.cond.pre_exit.for.end 
+	BB_END: for.cond
+
+	BB_BEGIN: for.body
+		_KEnterRegion(0x8dd1950d4521aca6, 2)
+		_KPushCDep(7)
+		_KWork(30)
+		_KLoad0(inst_arg_ptr1, 4, 4)
+		CALL: _KTimestamp4(5, 7, 25, 1, 25, 2, 5, 4, 25)
+		_KStore(5, inst_arg_ptr, 4)
+		_KPopCDep()
+		TERMINATOR: for.cond.cont 
+	BB_END: for.body
+
+	BB_BEGIN: for.cond.pre_exit.for.end
+		_KExitRegion(0x97615e616261154d, 1)
+		TERMINATOR: for.end 
+	BB_END: for.cond.pre_exit.for.end
+
+	BB_BEGIN: for.end
+		_KExitRegion(0xe149e3e91a76ff1e, 0)
+		RETURN
+	BB_END: for.end
+
+FUNCTION_END: audiobeam_calc_delays
+
+
+FUNCTION_BEGIN: audiobeam_adjust_delays
+	BB_BEGIN: entry
+		_KEnterRegion(0xccfb5c790cdd50d2, 0)
+		_KPrepRTable(9, 2)
+		_KDeqArg(1)
+		_KWork(1)
+		_KPrepCall(0xb403ccb44ee4009e, 0)
+		_KTimestamp1(1, 1, 0)
+		_KEnqArg(1)
+		_KLinkReturn(2)
+		CALL: call = audiobeam_find_min_in_arr(delays, num_mic)
+		_KTimestamp1(5, 2, 1)
+		_KTimestamp1(6, 1, 0)
+		_KInduction(8)
+		TERMINATOR: for.cond.preheader 
+	BB_END: entry
+
+	BB_BEGIN: for.cond.preheader
+		_KEnterRegion(0x5e5bbfa4cf998ff3, 1)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.preheader
+
+	BB_BEGIN: for.cond.cont
+		_KExitRegion(0x6d2bc9b3bf9c59a, 2)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.cont
+
+	BB_BEGIN: for.cond
+		_KWork(1)
+		_KTimestamp2(7, 6, 1, 8, 1)
+		TERMINATOR: for.body for.cond.pre_exit.for.end 
+	BB_END: for.cond
+
+	BB_BEGIN: for.body
+		_KEnterRegion(0x6d2bc9b3bf9c59a, 2)
+		_KPushCDep(7)
+		_KWork(7)
+		_KLoad0(inst_arg_ptr1, 3, 4)
+		CALL: _KTimestamp3(4, 5, 2, 7, 2, 3, 2)
+		_KStore(4, inst_arg_ptr, 4)
+		_KPopCDep()
+		TERMINATOR: for.cond.cont 
+	BB_END: for.body
+
+	BB_BEGIN: for.cond.pre_exit.for.end
+		_KExitRegion(0x5e5bbfa4cf998ff3, 1)
+		TERMINATOR: for.end 
+	BB_END: for.cond.pre_exit.for.end
+
+	BB_BEGIN: for.end
+		_KExitRegion(0xccfb5c790cdd50d2, 0)
+		RETURN
+	BB_END: for.end
+
+FUNCTION_END: audiobeam_adjust_delays
+
+
+FUNCTION_BEGIN: audiobeam_calc_weights_lr
+	BB_BEGIN: entry
+		_KEnterRegion(0x69c7007645a50e62, 0)
+		_KPrepRTable(27, 4)
+		_KDeqArg(1)
+		_KWork(13)
+		_KPrepCall(0xa2ea52b15387fe02, 0)
+		_KTimestamp1(2, 1, 2)
+		_KEnqArg(2)
+		CALL: call = audiobeam_malloc(conv1)
+		_KTimestamp1(6, 1, 10)
+		_KTimestamp1(19, 1, 11)
+		_KTimestamp1(18, 1, 11)
+		TERMINATOR: for.cond.preheader 
+	BB_END: entry
+
+	BB_BEGIN: for.cond.preheader
+		_KEnterRegion(0xfc0deb3ff87e0f78, 1)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.preheader
+
+	BB_BEGIN: for.cond.cont
+		_KExitRegion(0xd5e7964e7e130e3a, 2)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.cont
+
+	BB_BEGIN: for.cond
+		_KPhi1To1(8, phi-incoming-val-id6, phi-incoming-condition7)
+		_KPhi1To1(16, phi-incoming-val-id8, phi-incoming-condition9)
+		_KWork(1)
+		_KTimestamp1(7, 8, 1)
+		_KPhiAddCond(8, 7)
+		_KPhiAddCond(16, 7)
+		_KTimestamp1(16, 16, 0)
+		_KTimestamp1(8, 8, 0)
+		TERMINATOR: for.body for.cond.pre_exit.for.end39 
+	BB_END: for.cond
+
+	BB_BEGIN: for.body
+		_KEnterRegion(0xd5e7964e7e130e3a, 2)
+		_KPushCDep(7)
+		_KInduction(5)
+		_KTimestamp2(23, 16, 0, 7, 0)
+		_KPopCDep()
+		TERMINATOR: for.cond3.preheader 
+	BB_END: for.body
+
+	BB_BEGIN: for.cond3.preheader
+		_KEnterRegion(0x8df98c07fe46cb9e, 1)
+		TERMINATOR: for.cond3 
+	BB_END: for.cond3.preheader
+
+	BB_BEGIN: for.cond3.cont
+		_KExitRegion(0x29db5b369b1f7af0, 2)
+		TERMINATOR: for.cond3 
+	BB_END: for.cond3.cont
+
+	BB_BEGIN: for.cond3
+		_KPushCDep(7)
+		_KPhi2To1(21, phi-incoming-val-id4, phi-incoming-condition5, phi-incoming-condition3)
+		_KWork(1)
+		CALL: _KTimestamp3(9, 6, 1, 7, 1, 5, 1)
+		_KTimestamp1(5, 5, 0)
+		_KPhiAddCond(21, 9)
+		_KTimestamp1(21, 21, 0)
+		_KPopCDep()
+		TERMINATOR: for.body6 for.cond3.pre_exit.for.end 
+	BB_END: for.cond3
+
+	BB_BEGIN: for.body6
+		_KEnterRegion(0x29db5b369b1f7af0, 2)
+		_KPushCDep(9)
+		_KWork(34)
+		_KPrepCall(0x60364822e6aa5ce3, 0)
+		CALL: _KTimestamp3(4, 6, 20, 5, 25, 9, 25)
+		_KEnqArg(4)
+		_KLinkReturn(3)
+		CALL: call12 = audiobeam___cosf(conv11)
+		_KTimestamp2(10, 9, 7, 3, 7)
+		_KStore(10, inst_arg_ptr, 4)
+		_KTimestamp2(22, 21, 1, 9, 1)
+		_KPopCDep()
+		TERMINATOR: for.cond3.cont 
+	BB_END: for.body6
+
+	BB_BEGIN: for.cond3.pre_exit.for.end
+		_KExitRegion(0x8df98c07fe46cb9e, 1)
+		TERMINATOR: for.end 
+	BB_END: for.cond3.pre_exit.for.end
+
+	BB_BEGIN: for.end
+		_KPushCDep(7)
+		_KWork(1)
+		_KInduction(13)
+		CALL: _KTimestamp3(26, 19, 1, 16, 1, 7, 1)
+		_KPopCDep()
+		TERMINATOR: for.cond17.preheader 
+	BB_END: for.end
+
+	BB_BEGIN: for.cond17.preheader
+		_KEnterRegion(0x897f1761fb29c60b, 1)
+		TERMINATOR: for.cond17 
+	BB_END: for.cond17.preheader
+
+	BB_BEGIN: for.cond17.cont
+		_KExitRegion(0xe23066e88c7947af, 2)
+		TERMINATOR: for.cond17 
+	BB_END: for.cond17.cont
+
+	BB_BEGIN: for.cond17
+		_KPushCDep(7)
+		_KPhi2To1(24, phi-incoming-val-id, phi-incoming-condition2, phi-incoming-condition)
+		_KWork(1)
+		_KTimestamp1(13, 13, 0)
+		CALL: _KTimestamp3(14, 6, 1, 7, 1, 13, 1)
+		_KPhiAddCond(24, 14)
+		_KTimestamp1(24, 24, 0)
+		_KPopCDep()
+		TERMINATOR: for.body20 for.cond17.pre_exit.for.inc37 
+	BB_END: for.cond17
+
+	BB_BEGIN: for.body20
+		_KEnterRegion(0xe23066e88c7947af, 2)
+		_KPushCDep(14)
+		_KWork(35)
+		_KPrepCall(0x1c85c90c2f353e45, 0)
+		CALL: _KTimestamp3(12, 6, 20, 13, 26, 14, 26)
+		_KEnqArg(12)
+		_KLinkReturn(11)
+		CALL: call26 = audiobeam___cosf(conv25)
+		_KTimestamp2(15, 11, 7, 14, 7)
+		_KStore(15, inst_arg_ptr1, 4)
+		_KTimestamp2(25, 24, 1, 14, 1)
+		_KPopCDep()
+		TERMINATOR: for.cond17.cont 
+	BB_END: for.body20
+
+	BB_BEGIN: for.cond17.pre_exit.for.inc37
+		_KExitRegion(0x897f1761fb29c60b, 1)
+		TERMINATOR: for.inc37 
+	BB_END: for.cond17.pre_exit.for.inc37
+
+	BB_BEGIN: for.inc37
+		_KPushCDep(7)
+		_KWork(2)
+		_KTimestamp2(20, 8, 1, 7, 1)
+		CALL: _KTimestamp4(17, 19, 2, 18, 1, 16, 2, 7, 2)
+		_KPopCDep()
+		TERMINATOR: for.cond.cont 
+	BB_END: for.inc37
+
+	BB_BEGIN: for.cond.pre_exit.for.end39
+		_KExitRegion(0xfc0deb3ff87e0f78, 1)
+		TERMINATOR: for.end39 
+	BB_END: for.cond.pre_exit.for.end39
+
+	BB_BEGIN: for.end39
+		_KExitRegion(0x69c7007645a50e62, 0)
+		RETURN
+	BB_END: for.end39
+
+FUNCTION_END: audiobeam_calc_weights_lr
+
+
+FUNCTION_BEGIN: audiobeam___cosf
+FUNCTION_END: audiobeam___cosf
+
+
+FUNCTION_BEGIN: audiobeam_calc_weights_left_only
+	BB_BEGIN: entry
+		_KEnterRegion(0xfe37a6d06c74c387, 0)
+		_KPrepRTable(12, 2)
+		_KDeqArg(1)
+		_KWork(13)
+		_KPrepCall(0xc2b6c30030f8d2f4, 0)
+		_KTimestamp1(2, 1, 2)
+		_KEnqArg(2)
+		CALL: call = audiobeam_malloc(conv1)
+		_KTimestamp1(6, 1, 10)
+		_KTimestamp1(10, 1, 11)
+		_KInduction(9)
+		TERMINATOR: for.cond.preheader 
+	BB_END: entry
+
+	BB_BEGIN: for.cond.preheader
+		_KEnterRegion(0x991e2d048e618994, 1)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.preheader
+
+	BB_BEGIN: for.cond.cont
+		_KExitRegion(0xd70c33f81de0b75, 2)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.cont
+
+	BB_BEGIN: for.cond
+		_KPhi1To1(5, phi-incoming-val-id, phi-incoming-condition)
+		_KWork(1)
+		_KTimestamp1(5, 5, 0)
+		_KTimestamp2(7, 6, 1, 5, 1)
+		_KPhiAddCond(5, 7)
+		TERMINATOR: for.body for.cond.pre_exit.for.end 
+	BB_END: for.cond
+
+	BB_BEGIN: for.body
+		_KEnterRegion(0xd70c33f81de0b75, 2)
+		_KPushCDep(7)
+		_KWork(34)
+		_KPrepCall(0x3e9f0c4fbe73a1bd, 0)
+		CALL: _KTimestamp3(4, 6, 20, 5, 25, 7, 25)
+		_KEnqArg(4)
+		_KLinkReturn(3)
+		CALL: call8 = audiobeam___cosf(conv7)
+		_KTimestamp2(8, 7, 7, 3, 7)
+		_KStore(8, inst_arg_ptr, 4)
+		_KTimestamp2(11, 5, 1, 7, 1)
+		_KPopCDep()
+		TERMINATOR: for.cond.cont 
+	BB_END: for.body
+
+	BB_BEGIN: for.cond.pre_exit.for.end
+		_KExitRegion(0x991e2d048e618994, 1)
+		TERMINATOR: for.end 
+	BB_END: for.cond.pre_exit.for.end
+
+	BB_BEGIN: for.end
+		_KExitRegion(0xfe37a6d06c74c387, 0)
+		RETURN
+	BB_END: for.end
+
+FUNCTION_END: audiobeam_calc_weights_left_only
+
+
+FUNCTION_BEGIN: audiobeam_calculate_energy
+	BB_BEGIN: entry
+		_KEnterRegion(0xb2cc464854ab67, 0)
+		_KPrepRTable(9, 2)
+		_KDeqArg(1)
+		_KInduction(5)
+		_KTimestamp1(7, 1, 0)
+		TERMINATOR: for.cond.preheader 
+	BB_END: entry
+
+	BB_BEGIN: for.cond.preheader
+		_KEnterRegion(0xfc3540458c0b9b12, 1)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.preheader
+
+	BB_BEGIN: for.cond.cont
+		_KExitRegion(0xce03c1e9f496248, 2)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.cont
+
+	BB_BEGIN: for.cond
+		_KPhi1To1(4, phi-incoming-val-id, phi-incoming-condition)
+		_KWork(1)
+		_KTimestamp1(4, 4, 0)
+		_KTimestamp2(8, 7, 1, 5, 1)
+		_KPhiAddCond(4, 8)
+		TERMINATOR: for.body for.cond.pre_exit.for.end 
+	BB_END: for.cond
+
+	BB_BEGIN: for.body
+		_KEnterRegion(0xce03c1e9f496248, 2)
+		_KPushCDep(8)
+		_KWork(15)
+		_KLoad0(inst_arg_ptr1, 2, 4)
+		_KLoad0(inst_arg_ptr, 3, 4)
+		CALL: _KTimestamp4(6, 4, 2, 8, 7, 2, 7, 3, 7)
+		_KPopCDep()
+		TERMINATOR: for.cond.cont 
+	BB_END: for.body
+
+	BB_BEGIN: for.cond.pre_exit.for.end
+		_KExitRegion(0xfc3540458c0b9b12, 1)
+		TERMINATOR: for.end 
+	BB_END: for.cond.pre_exit.for.end
+
+	BB_BEGIN: for.end
+		_KReturn(4)
+		_KExitRegion(0xb2cc464854ab67, 0)
+		RETURN
+	BB_END: for.end
+
+FUNCTION_END: audiobeam_calculate_energy
+
+
+FUNCTION_BEGIN: audiobeam_do_beamforming
+	BB_BEGIN: entry
+		_KEnterRegion(0x6ead8b41f206bce2, 0)
+		_KPrepRTable(34, 2)
+		_KDeqArg(3)
+		_KDeqArg(2)
+		_KDeqArg(1)
+		_KTimestamp1(20, 3, 0)
+		_KInduction(18)
+		TERMINATOR: for.cond.preheader 
+	BB_END: entry
+
+	BB_BEGIN: for.cond.preheader
+		_KEnterRegion(0x8c33bd285c0c3d72, 1)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.preheader
+
+	BB_BEGIN: for.cond.cont
+		_KExitRegion(0x6e963e6282eb93b, 2)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.cont
+
+	BB_BEGIN: for.cond
+		_KPhi1To1(17, phi-incoming-val-id18, phi-incoming-condition17)
+		_KWork(1)
+		_KTimestamp1(17, 17, 0)
+		_KTimestamp2(21, 20, 1, 18, 1)
+		_KPhiAddCond(17, 21)
+		TERMINATOR: for.body for.cond.pre_exit.for.end 
+	BB_END: for.cond
+
+	BB_BEGIN: for.body
+		_KEnterRegion(0x6e963e6282eb93b, 2)
+		_KPushCDep(21)
+		_KWork(10)
+		_KLoad0(inst_arg_ptr9, 4, 4)
+		_KLoad0(inst_arg_ptr8, 5, 4)
+		CALL: _KTimestamp4(25, 1, 2, 2, 1, 21, 2, 4, 2)
+		CALL: _KTimestamp3(24, 1, 1, 21, 1, 4, 1)
+		_KPopCDep()
+		TERMINATOR: if.then if.end 
+	BB_END: for.body
+
+	BB_BEGIN: if.then
+		_KPushCDep(25)
+		_KWork(2)
+		CALL: _KTimestamp4(23, 1, 4, 2, 3, 21, 4, 4, 4)
+		_KPopCDep()
+		TERMINATOR: if.end 
+	BB_END: if.then
+
+	BB_BEGIN: if.end
+		_KPushCDep(21)
+		_KPhi2To1(22, phi-incoming-val-id15, phi-incoming-condition16, phi-incoming-condition14)
+		_KWork(2)
+		CALL: _KTimestamp4(29, 1, 2, 2, 1, 21, 2, 5, 2)
+		CALL: _KTimestamp3(28, 1, 1, 21, 1, 5, 1)
+		_KPopCDep()
+		TERMINATOR: if.then12 if.end17 
+	BB_END: if.end
+
+	BB_BEGIN: if.then12
+		_KPushCDep(29)
+		_KWork(2)
+		CALL: _KTimestamp4(27, 1, 4, 2, 3, 21, 4, 5, 4)
+		_KPopCDep()
+		TERMINATOR: if.end17 
+	BB_END: if.then12
+
+	BB_BEGIN: if.end17
+		_KPushCDep(21)
+		_KPhi2To1(26, phi-incoming-val-id13, phi-incoming-condition12, phi-incoming-condition11)
+		_KWork(38)
+		_KLoad1(inst_arg_ptr7, 6, 7, 8)
+		_KLoad0(inst_arg_ptr6, 8, 4)
+		_KLoad1(inst_arg_ptr5, 9, 10, 8)
+		_KLoad0(inst_arg_ptr4, 11, 4)
+		_KLoad0(inst_arg_ptr3, 12, 4)
+		_KLoad1(inst_arg_ptr2, 13, 14, 8)
+		_KLoad0(inst_arg_ptr1, 15, 4)
+		_KTimestamp2(33, 31, 1, 21, 1)
+		_KPopCDep()
+		TERMINATOR: if.then36 if.else 
+	BB_END: if.end17
+
+	BB_BEGIN: if.then36
+		_KPushCDep(33)
+		_KWork(11)
+		_KLoad0(inst_arg_ptr, 16, 4)
+		_KTimestamp(30, 8, 31, 8, 17, 2, 21, 16, 8, 16, 11, 16, 12, 14, 15, 9, 16, 7)
+		_KPopCDep()
+		TERMINATOR: for.inc 
+	BB_END: if.then36
+
+	BB_BEGIN: if.else
+		_KPushCDep(33)
+		_KWork(2)
+		CALL: _KTimestamp7(32, 31, 3, 17, 2, 21, 11, 8, 11, 11, 11, 12, 9, 15, 4)
+		_KPopCDep()
+		TERMINATOR: for.inc 
+	BB_END: if.else
+
+	BB_BEGIN: for.inc
+		_KPushCDep(21)
+		_KPhi2To1(19, phi-incoming-val-id, phi-incoming-condition10, phi-incoming-condition)
+		_KTimestamp1(19, 19, 0)
+		_KPopCDep()
+		TERMINATOR: for.cond.cont 
+	BB_END: for.inc
+
+	BB_BEGIN: for.cond.pre_exit.for.end
+		_KExitRegion(0x8c33bd285c0c3d72, 1)
+		TERMINATOR: for.end 
+	BB_END: for.cond.pre_exit.for.end
+
+	BB_BEGIN: for.end
+		_KReturn(17)
+		_KExitRegion(0x6ead8b41f206bce2, 0)
+		RETURN
+	BB_END: for.end
+
+FUNCTION_END: audiobeam_do_beamforming
+
+
+FUNCTION_BEGIN: audiobeam_process_signal
+	BB_BEGIN: entry
+		_KEnterRegion(0x61a011ac8fce6e82, 0)
+		_KPrepRTable(50, 4)
+		_KWork(8)
+		_KDeqArg(4)
+		_KDeqArg(3)
+		_KDeqArg(2)
+		_KDeqArg(1)
+		_KLoad0(inst_arg_ptr20, 5, 8)
+		_KLoad0(inst_arg_ptr19, 6, 8)
+		_KPrepCall(0x5062523824e8e61d, 0)
+		CALL: audiobeam_preprocess_delays(arraydecay,   %1 = load float** %arrayidx, align 8, !dbg !132)
+		_KInduction(18)
+		TERMINATOR: for.cond.preheader 
+	BB_END: entry
+
+	BB_BEGIN: for.cond.preheader
+		_KEnterRegion(0xf585c90730599a67, 1)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.preheader
+
+	BB_BEGIN: for.cond.cont
+		_KExitRegion(0x86a7870834b9239b, 2)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.cont
+
+	BB_BEGIN: for.cond
+		_KWork(6)
+		_KLoad0(inst_arg_ptr18, 7, 8)
+		_KTimestamp2(17, 18, 1, 7, 2)
+		TERMINATOR: for.body for.cond.pre_exit.for.end 
+	BB_END: for.cond
+
+	BB_BEGIN: for.body
+		_KEnterRegion(0x86a7870834b9239b, 2)
+		_KPushCDep(17)
+		_KWork(5)
+		_KLoad0(inst_arg_ptr17, 8, 4)
+		_KTimestamp2(47, 17, 1, 8, 1)
+		_KPopCDep()
+		TERMINATOR: if.then for.body.pre_exit.if.else 
+	BB_END: for.body
+
+	BB_BEGIN: if.then
+		_KPushCDep(47)
+		_KWork(21)
+		_KLoad0(inst_arg_ptr16, 9, 4)
+		_KLoad0(inst_arg_ptr15, 10, 8)
+		_KLoad1(inst_arg_ptr14, 11, 12, 8)
+		_KPrepCall(0xed8a2093b7b0601, 0)
+		_KEnqArgConst()
+		CALL: call = audiobeam_parse_line(  %6 = load float** %arrayidx6, align 8, !dbg !147, 15)
+		_KLoad0(inst_arg_ptr13, 13, 4)
+		_KLoad0(inst_arg_ptr12, 14, 8)
+		CALL: _KTimestamp3(16, 17, 1, 8, 1, 14, 0)
+		_KPrepCall(0xbea0278182d2fcd4, 0)
+		_KEnqArg(16)
+		_KTimestamp1(13, 13, 0)
+		_KEnqArg(13)
+		_KLinkReturn(15)
+		CALL: call10 = audiobeam_wrapped_inc(  %7 = load i32* %head7, align 4, !dbg !150, conv9)
+		_KTimestamp1(15, 15, 0)
+		_KStore(15, inst_arg_ptr11, 4)
+		_KPopCDep()
+		TERMINATOR: for.cond.cont 
+	BB_END: if.then
+
+	BB_BEGIN: for.body.pre_exit.if.else
+		_KExitRegion(0x86a7870834b9239b, 2)
+		_KExitRegion(0xf585c90730599a67, 1)
+		TERMINATOR: if.else 
+	BB_END: for.body.pre_exit.if.else
+
+	BB_BEGIN: if.else
+		_KPushCDep(47)
+		_KPopCDep()
+		TERMINATOR: return 
+	BB_END: if.else
+
+	BB_BEGIN: for.cond.pre_exit.for.end
+		_KExitRegion(0xf585c90730599a67, 1)
+		TERMINATOR: for.end 
+	BB_END: for.cond.pre_exit.for.end
+
+	BB_BEGIN: for.end
+		_KPushCDep(17)
+		CALL: _KTimestamp3(30, 4, 0, 18, 1, 7, 2)
+		CALL: _KTimestamp3(29, 3, 0, 18, 1, 7, 2)
+		_KInduction(32)
+		_KPopCDep()
+		TERMINATOR: for.cond12.preheader 
+	BB_END: for.end
+
+	BB_BEGIN: for.cond12.preheader
+		_KEnterRegion(0x19033924afcc9582, 1)
+		TERMINATOR: for.cond12 
+	BB_END: for.cond12.preheader
+
+	BB_BEGIN: for.cond12.cont
+		_KExitRegion(0xc335bbf016962c2d, 2)
+		TERMINATOR: for.cond12 
+	BB_END: for.cond12.cont
+
+	BB_BEGIN: for.cond12
+		_KPushCDep(17)
+		_KWork(3)
+		CALL: _KTimestamp4(31, 4, 2, 17, 2, 30, 2, 32, 2)
+		_KPopCDep()
+		TERMINATOR: for.body17 for.cond12.pre_exit.for.end61.loopexit 
+	BB_END: for.cond12
+
+	BB_BEGIN: for.body17
+		_KEnterRegion(0xc335bbf016962c2d, 2)
+		_KPushCDep(31)
+		_KWork(5)
+		_KLoad0(inst_arg_ptr24, 19, 4)
+		_KTimestamp2(33, 31, 1, 19, 1)
+		_KPopCDep()
+		TERMINATOR: if.then20 for.body17.pre_exit.if.else26 
+	BB_END: for.body17
+
+	BB_BEGIN: if.then20
+		_KPushCDep(33)
+		_KWork(12)
+		_KLoad0(inst_arg_ptr23, 20, 4)
+		_KLoad0(inst_arg_ptr22, 21, 8)
+		_KLoad1(inst_arg_ptr21, 22, 23, 8)
+		_KPrepCall(0xa615f2bc289ae355, 0)
+		_KEnqArgConst()
+		CALL: call25 = audiobeam_parse_line(  %14 = load float** %arrayidx24, align 8, !dbg !168, 15)
+		_KInduction(35)
+		_KPopCDep()
+		TERMINATOR: for.cond28.preheader 
+	BB_END: if.then20
+
+	BB_BEGIN: for.body17.pre_exit.if.else26
+		_KExitRegion(0xc335bbf016962c2d, 2)
+		_KExitRegion(0x19033924afcc9582, 1)
+		TERMINATOR: if.else26 
+	BB_END: for.body17.pre_exit.if.else26
+
+	BB_BEGIN: if.else26
+		_KPushCDep(33)
+		_KPopCDep()
+		TERMINATOR: for.end61 
+	BB_END: if.else26
+
+	BB_BEGIN: for.cond28.preheader
+		_KEnterRegion(0x211a6dc92c736312, 1)
+		TERMINATOR: for.cond28 
+	BB_END: for.cond28.preheader
+
+	BB_BEGIN: for.cond28.cont
+		_KExitRegion(0x61123ead1da625cc, 2)
+		TERMINATOR: for.cond28 
+	BB_END: for.cond28.cont
+
+	BB_BEGIN: for.cond28
+		_KPushCDep(33)
+		_KWork(1)
+		CALL: _KTimestamp3(34, 33, 1, 35, 1, 29, 1)
+		_KPopCDep()
+		TERMINATOR: for.body31 for.cond28.pre_exit.for.end52 
+	BB_END: for.cond28
+
+	BB_BEGIN: for.body31
+		_KEnterRegion(0x61123ead1da625cc, 2)
+		_KPushCDep(34)
+		_KWork(37)
+		_KLoad0(inst_arg_ptr10, 24, 8)
+		_KLoad0(inst_arg_ptr9, 25, 4)
+		_KLoad0(inst_arg_ptr8, 26, 8)
+		_KPrepCall(0xc09c2a1179c3ede3, 0)
+		_KTimestamp2(28, 34, 0, 26, 0)
+		_KEnqArg(28)
+		_KTimestamp1(25, 25, 0)
+		_KEnqArg(25)
+		_KLinkReturn(27)
+		CALL: call37 = audiobeam_wrapped_inc(  %16 = load i32* %head34, align 4, !dbg !183, conv36)
+		_KLoad0(inst_arg_ptr7, 36, 8)
+		_KPrepCall(0x9b90c3db205ed486, 0)
+		_KTimestamp1(1, 1, 0)
+		_KEnqArg(1)
+		_KTimestamp1(36, 36, 0)
+		_KEnqArg(36)
+		_KTimestamp1(27, 27, 0)
+		_KEnqArg(27)
+		_KLinkReturn(37)
+		CALL: call39 = audiobeam_do_beamforming(arraydecay32,   %15 = load float*** %sample_queue33, align 8, !dbg !182, call37,   %18 = load i64* %max_delay38, align 8, !dbg !186, num_mic, weights)
+		CALL: _KTimestamp3(39, 34, 20, 1, 20, 37, 20)
+		_KTimestamp2(48, 34, 1, 49, 1)
+		_KPopCDep()
+		TERMINATOR: if.then44 for.inc50 
+	BB_END: for.body31
+
+	BB_BEGIN: if.then44
+		_KPushCDep(48)
+		_KWork(5)
+		_KLoad0(inst_arg_ptr6, 38, 8)
+		_KStore(39, inst_arg_ptr5, 4)
+		_KPopCDep()
+		TERMINATOR: for.inc50 
+	BB_END: if.then44
+
+	BB_BEGIN: for.inc50
+		_KPushCDep(34)
+		_KPopCDep()
+		TERMINATOR: for.cond28.cont 
+	BB_END: for.inc50
+
+	BB_BEGIN: for.cond28.pre_exit.for.end52
+		_KExitRegion(0x211a6dc92c736312, 1)
+		TERMINATOR: for.end52 
+	BB_END: for.cond28.pre_exit.for.end52
+
+	BB_BEGIN: for.end52
+		_KPushCDep(33)
+		_KWork(14)
+		_KLoad0(inst_arg_ptr4, 40, 4)
+		_KTimestamp1(40, 40, 0)
+		_KStore(40, inst_arg_ptr3, 4)
+		_KLoad0(inst_arg_ptr2, 41, 4)
+		_KLoad0(inst_arg_ptr1, 42, 8)
+		_KPrepCall(0x990ce9a416acab0c, 0)
+		CALL: _KTimestamp3(44, 31, 1, 19, 1, 42, 0)
+		_KEnqArg(44)
+		_KTimestamp1(41, 41, 0)
+		_KEnqArg(41)
+		_KLinkReturn(43)
+		CALL: call57 = audiobeam_wrapped_inc(  %21 = load i32* %head54, align 4, !dbg !199, conv56)
+		_KTimestamp1(43, 43, 0)
+		_KStore(43, inst_arg_ptr, 4)
+		_KPopCDep()
+		TERMINATOR: for.cond12.cont 
+	BB_END: for.end52
+
+	BB_BEGIN: for.cond12.pre_exit.for.end61.loopexit
+		_KExitRegion(0x19033924afcc9582, 1)
+		TERMINATOR: for.end61.loopexit 
+	BB_END: for.cond12.pre_exit.for.end61.loopexit
+
+	BB_BEGIN: for.end61.loopexit
+		_KPushCDep(31)
+		_KPopCDep()
+		TERMINATOR: for.end61 
+	BB_END: for.end61.loopexit
+
+	BB_BEGIN: for.end61
+		_KPushCDep(17)
+		_KTimestamp1(46, 46, 0)
+		_KPhi3To1(46, phi-incoming-val-id28, phi-incoming-condition27, phi-incoming-condition26, phi-incoming-condition29)
+		_KPopCDep()
+		TERMINATOR: return 
+	BB_END: for.end61
+
+	BB_BEGIN: return
+		_KPhi2To1(45, phi-incoming-val-id, phi-incoming-condition25, phi-incoming-condition)
+		_KTimestamp1(45, 45, 0)
+		_KReturn(45)
+		_KExitRegion(0x61a011ac8fce6e82, 0)
+		RETURN
+	BB_END: return
+
+FUNCTION_END: audiobeam_process_signal
+
+
+FUNCTION_BEGIN: audiobeam_calc_beamforming_result
+	BB_BEGIN: entry
+		_KEnterRegion(0x96282f8373e92130, 0)
+		_KPrepRTable(15, 2)
+		_KWork(1)
+		_KDeqArg(3)
+		_KDeqArg(2)
+		_KDeqArg(1)
+		_KTimestamp1(9, 3, 1)
+		TERMINATOR: if.then if.end 
+	BB_END: entry
+
+	BB_BEGIN: if.then
+		_KPushCDep(9)
+		_KPrepCall(0xb081f8ade6924b07, 0)
+		_KEnqArgConst()
+		CALL: call = audiobeam_calc_weights_left_only(15)
+		_KTimestamp1(8, 8, 0)
+		_KPopCDep()
+		TERMINATOR: if.end 
+	BB_END: if.then
+
+	BB_BEGIN: if.end
+		_KPhi1To1(7, phi-incoming-val-id, phi-incoming-condition)
+		_KTimestamp1(1, 1, 0)
+		_KTimestamp1(2, 2, 0)
+		_KPrepCall(0x8e066a233eb3a496, 0)
+		_KEnqArg(2)
+		_KEnqArg(1)
+		_KEnqArgConst()
+		_KEnqArgConst()
+		_KLinkReturn(4)
+		_KWork(1)
+		CALL: call1 = audiobeam_process_signal(delays, 15, float 1.600000e+04, beamform_results, queue, num_beams, window, weights.0)
+		_KTimestamp1(4, 4, 0)
+		_KTimestamp1(11, 12, 1)
+		TERMINATOR: if.then2 if.end7 
+	BB_END: if.end
+
+	BB_BEGIN: if.then2
+		_KPushCDep(11)
+		_KInduction(10)
+		_KTimestamp2(13, 12, 1, 1, 0)
+		_KPopCDep()
+		TERMINATOR: for.cond.preheader 
+	BB_END: if.then2
+
+	BB_BEGIN: for.cond.preheader
+		_KEnterRegion(0xcb4fe3cae7611734, 1)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.preheader
+
+	BB_BEGIN: for.cond.cont
+		_KExitRegion(0x15b28330cce2d5ee, 2)
+		TERMINATOR: for.cond 
+	BB_END: for.cond.cont
+
+	BB_BEGIN: for.cond
+		_KPushCDep(11)
+		_KWork(1)
+		CALL: _KTimestamp3(14, 11, 1, 13, 1, 10, 1)
+		_KPopCDep()
+		TERMINATOR: for.body for.cond.pre_exit.if.end7.loopexit 
+	BB_END: for.cond
+
+	BB_BEGIN: for.body
+		_KEnterRegion(0x15b28330cce2d5ee, 2)
+		_KPushCDep(14)
+		_KWork(5)
+		_KLoad0(inst_arg_ptr1, 5, 8)
+		_KPrepCall(0x5aaed3e6a0924e6e, 0)
+		_KEnqArg(2)
+		_KLinkReturn(6)
+		CALL: call4 = audiobeam_calculate_energy(  %1 = load float** %arrayidx, align 8, !dbg !140, window)
+		_KTimestamp1(6, 6, 0)
+		_KStore(6, inst_arg_ptr, 4)
+		_KPopCDep()
+		TERMINATOR: for.cond.cont 
+	BB_END: for.body
+
+	BB_BEGIN: for.cond.pre_exit.if.end7.loopexit
+		_KExitRegion(0xcb4fe3cae7611734, 1)
+		TERMINATOR: if.end7.loopexit 
+	BB_END: for.cond.pre_exit.if.end7.loopexit
+
+	BB_BEGIN: if.end7.loopexit
+		_KPushCDep(11)
+		_KPopCDep()
+		TERMINATOR: if.end7 
+	BB_END: if.end7.loopexit
+
+	BB_BEGIN: if.end7
+		_KReturn(4)
+		_KExitRegion(0x96282f8373e92130, 0)
+		RETURN
+	BB_END: if.end7
+
+FUNCTION_END: audiobeam_calc_beamforming_result
+
+
+FUNCTION_BEGIN: audiobeam_calc_single_pos
+	BB_BEGIN: entry
+		_KEnterRegion(0x14bd715c2c3058ef, 0)
+		_KPrepRTable(18, 0)
+		_KWork(50)
+		_KDeqArg(1)
+		_KPrepCall(0x2536255ccad7860a, 0)
+		_KEnqArgConst()
+		_KEnqArgConst()
+		CALL: call = audiobeam_init_delays(1, 15)
+		_KPrepCall(0xae7ee1629f49812a, 0)
+		_KEnqArgConst()
+		CALL: call1 = audiobeam_malloc(8)
+		_KPrepCall(0xbd394cd57c1dc37, 0)
+		_KEnqArgConst()
+		CALL: call2 = audiobeam_malloc(1536)
+		_KTimestamp1(2, 3, 0)
+		_KStore(2, inst_arg_ptr12, 8)
+		_KPrepCall(0xe6080956914e05f6, 0)
+		_KEnqArgConst()
+		CALL: call3 = audiobeam_malloc(8)
+		_KPrepCall(0x31ba99d42ca23d73, 0)
+		_KEnqArgConst()
+		CALL: audiobeam_calc_distances(source_location, audiobeam_mic_locations, arraydecay, 15)
+		_KLoad0(inst_arg_ptr11, 4, 8)
+		_KLoad0(inst_arg_ptr10, 5, 8)
+		_KPrepCall(0xef8f47451196bc5b, 0)
+		_KEnqArgConst()
+		_KEnqArgConst()
+		_KEnqArgConst()
+		CALL: audiobeam_calc_delays(arraydecay4,   %4 = load float** %arrayidx5, align 8, !dbg !132, 342, 16000, 15)
+		_KLoad0(inst_arg_ptr9, 6, 8)
+		_KLoad0(inst_arg_ptr8, 7, 8)
+		_KPrepCall(0x18e4f70b7ef32caa, 0)
+		_KEnqArgConst()
+		CALL: audiobeam_adjust_delays(  %6 = load float** %arrayidx7, align 8, !dbg !134, 15)
+		_KLoad0(inst_arg_ptr7, 8, 8)
+		_KLoad0(inst_arg_ptr6, 9, 8)
+		_KPrepCall(0x3ed7a805888e9714, 0)
+		_KEnqArgConst()
+		_KLinkReturn(10)
+		CALL: call10 = audiobeam_find_max_in_arr(  %8 = load float** %arrayidx9, align 8, !dbg !136, 15)
+		_KTimestamp1(10, 10, 0)
+		_KStore(10, inst_arg_ptr5, 8)
+		_KLoad0(inst_arg_ptr4, 11, 8)
+		_KPrepCall(0x4f63ee24682fca62, 0)
+		_KEnqArgConst()
+		_KTimestamp1(12, 11, 0)
+		_KEnqArg(12)
+		CALL: call12 = audiobeam_init_data_queue(conv, 15)
+		_KTimestamp1(1, 1, 0)
+		_KPrepCall(0x3b1e4eab3b8eaa7e, 0)
+		_KEnqArg(1)
+		_KEnqArgConst()
+		_KEnqArgConst()
+		_KLinkReturn(13)
+		CALL: call13 = audiobeam_calc_beamforming_result(call,   %0 = bitcast i8* %call1 to float**, !dbg !119,   %2 = bitcast i8* %call3 to float*, !dbg !126, call12, 1, 4294967295, hamming)
+		_KLoad0(inst_arg_ptr3, 14, 8)
+		_KLoad0(inst_arg_ptr2, 15, 4)
+		_KLoad0(inst_arg_ptr1, 16, 4)
+		_KTimestamp2(17, 15, 7, 16, 2)
+		_KStore(17, inst_arg_ptr, 4)
+		_KExitRegion(0x14bd715c2c3058ef, 0)
+		RETURN
+	BB_END: entry
+
+FUNCTION_END: audiobeam_calc_single_pos
+
+
+FUNCTION_BEGIN: audiobeam_main
+	BB_BEGIN: entry
+		_KEnterRegion(0x3af64b0237f0481b, 0)
+		_KPrepRTable(2, 0)
+		_KPrepCall(0x5caf2ae2316f6e85, 0)
+		_KTimestamp0(1)
+		_KEnqArg(1)
+		CALL: audiobeam_calc_single_pos(float* getelementptr inbounds ([3 x float]* @audiobeam_source_location, i32 0, i32 0), [3 x float]* getelementptr inbounds ([15 x [3 x float]]* @audiobeam_mic_locations, i32 0, i32 0), conv)
+		_KExitRegion(0x3af64b0237f0481b, 0)
+		RETURN
+	BB_END: entry
+
+FUNCTION_END: audiobeam_main
+
+
+FUNCTION_BEGIN: main
+	BB_BEGIN: entry
+		_KInit()
+		_KEnterRegion(0xccf54e4d9a4e040d, 0)
+		_KPrepRTable(2, 0)
+		_KPrepCall(0xb40410c8dd62f168, 0)
+		CALL: audiobeam_init()
+		_KPrepCall(0x9049fe4a71769b11, 0)
+		CALL: audiobeam_main()
+		_KPrepCall(0xdbf67b993d2842b0, 0)
+		_KLinkReturn(1)
+		CALL: call = audiobeam_return()
+		_KTimestamp1(1, 1, 0)
+		_KReturn(1)
+		_KExitRegion(0xccf54e4d9a4e040d, 0)
+		_KDeinit()
+		RETURN
+	BB_END: entry
+
+FUNCTION_END: main
+
+
+FUNCTION_BEGIN: llvm.dbg.value
+FUNCTION_END: llvm.dbg.value
+
+
+FUNCTION_BEGIN: _KLoad
+FUNCTION_END: _KLoad
+
+
+FUNCTION_BEGIN: _KLoad0
+FUNCTION_END: _KLoad0
+
+
+FUNCTION_BEGIN: _KLoad1
+FUNCTION_END: _KLoad1
+
+
+FUNCTION_BEGIN: _KLoad2
+FUNCTION_END: _KLoad2
+
+
+FUNCTION_BEGIN: _KLoad3
+FUNCTION_END: _KLoad3
+
+
+FUNCTION_BEGIN: _KLoad4
+FUNCTION_END: _KLoad4
+
+
+FUNCTION_BEGIN: _KStore
+FUNCTION_END: _KStore
+
+
+FUNCTION_BEGIN: _KStoreConst
+FUNCTION_END: _KStoreConst
+
+
+FUNCTION_BEGIN: _KEnqArgConst
+FUNCTION_END: _KEnqArgConst
+
+
+FUNCTION_BEGIN: _KEnqArg
+FUNCTION_END: _KEnqArg
+
+
+FUNCTION_BEGIN: _KPrepCall
+FUNCTION_END: _KPrepCall
+
+
+FUNCTION_BEGIN: _KLinkReturn
+FUNCTION_END: _KLinkReturn
+
+
+FUNCTION_BEGIN: _KMalloc
+FUNCTION_END: _KMalloc
+
+
+FUNCTION_BEGIN: _KRealloc
+FUNCTION_END: _KRealloc
+
+
+FUNCTION_BEGIN: _KFree
+FUNCTION_END: _KFree
+
+
+FUNCTION_BEGIN: _KDeqArg
+FUNCTION_END: _KDeqArg
+
+
+FUNCTION_BEGIN: _KReturnConst
+FUNCTION_END: _KReturnConst
+
+
+FUNCTION_BEGIN: _KReturn
+FUNCTION_END: _KReturn
+
+
+FUNCTION_BEGIN: _KWork
+FUNCTION_END: _KWork
+
+
+FUNCTION_BEGIN: _KTimestamp
+FUNCTION_END: _KTimestamp
+
+
+FUNCTION_BEGIN: _KTimestamp0
+FUNCTION_END: _KTimestamp0
+
+
+FUNCTION_BEGIN: _KTimestamp1
+FUNCTION_END: _KTimestamp1
+
+
+FUNCTION_BEGIN: _KTimestamp2
+FUNCTION_END: _KTimestamp2
+
+
+FUNCTION_BEGIN: _KTimestamp3
+FUNCTION_END: _KTimestamp3
+
+
+FUNCTION_BEGIN: _KTimestamp4
+FUNCTION_END: _KTimestamp4
+
+
+FUNCTION_BEGIN: _KTimestamp5
+FUNCTION_END: _KTimestamp5
+
+
+FUNCTION_BEGIN: _KTimestamp6
+FUNCTION_END: _KTimestamp6
+
+
+FUNCTION_BEGIN: _KTimestamp7
+FUNCTION_END: _KTimestamp7
+
+
+FUNCTION_BEGIN: _KPhi
+FUNCTION_END: _KPhi
+
+
+FUNCTION_BEGIN: _KPhi1To1
+FUNCTION_END: _KPhi1To1
+
+
+FUNCTION_BEGIN: _KPhi2To1
+FUNCTION_END: _KPhi2To1
+
+
+FUNCTION_BEGIN: _KPhi3To1
+FUNCTION_END: _KPhi3To1
+
+
+FUNCTION_BEGIN: _KPhi4To1
+FUNCTION_END: _KPhi4To1
+
+
+FUNCTION_BEGIN: _KPhiAddCond
+FUNCTION_END: _KPhiAddCond
+
+
+FUNCTION_BEGIN: _KInduction
+FUNCTION_END: _KInduction
+
+
+FUNCTION_BEGIN: _KPushCDep
+FUNCTION_END: _KPushCDep
+
+
+FUNCTION_BEGIN: _KPopCDep
+FUNCTION_END: _KPopCDep
+
+
+FUNCTION_BEGIN: _KPrepRTable
+FUNCTION_END: _KPrepRTable
+
+
+FUNCTION_BEGIN: _KInit
+FUNCTION_END: _KInit
+
+
+FUNCTION_BEGIN: _KDeinit
+FUNCTION_END: _KDeinit
+
+
+FUNCTION_BEGIN: _KEnterRegion
+FUNCTION_END: _KEnterRegion
+
+
+FUNCTION_BEGIN: _KExitRegion
+FUNCTION_END: _KExitRegion
+
+
+FUNCTION_BEGIN: _KLandingPad
+FUNCTION_END: _KLandingPad
+
+

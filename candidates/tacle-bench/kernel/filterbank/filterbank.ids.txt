@@ -1,0 +1,64 @@
+FUNC: filterbank_init
+
+FUNC: filterbank_return
+	1 : 61 : load
+
+FUNC: filterbank_main
+	4 : 87 : sitofp
+	6 : 83 : icmp
+	8 : ?? : phi
+	9 : ?? : phi
+	7 : 86 : icmp
+	2 : ?? : phi
+	3 : 79 : icmp
+	1 : 80 : sitofp
+	5 : ?? : phi
+	10 : 88 : sitofp
+	15 : 86 : add
+	11 : 93 : load
+	12 : 93 : add
+	16 : 93 : icmp
+	13 : 96 : load
+	14 : 96 : sub
+
+FUNC: filterbank_core
+	21 : ?? : phi
+	20 : 144 : icmp
+	28 : ?? : phi
+	29 : ?? : phi
+	33 : 110 : icmp
+	15 : 148 : load
+	17 : 148 : sub
+	7 : ?? : phi
+	6 : 114 : icmp
+	9 : ?? : phi
+	8 : 122 : icmp
+	11 : ?? : phi
+	10 : 125 : icmp
+	1 : 126 : load
+	3 : 126 : sub
+	2 : 126 : load
+	4 : 126 : load
+	5 : 126 : fadd
+	30 : ?? : phi
+	34 : 131 : icmp
+	13 : 132 : mul
+	12 : 132 : load
+	31 : ?? : phi
+	35 : 136 : icmp
+	32 : ?? : phi
+	36 : 139 : icmp
+	14 : 140 : load
+	18 : 148 : load
+	19 : 148 : fadd
+	27 : 154 : icmp
+	24 : 155 : load
+	25 : 155 : load
+	23 : ?? : phi
+	22 : 147 : icmp
+	16 : 148 : load
+	26 : 155 : fadd
+
+FUNC: main
+	1 : 169 : call
+

@@ -1,0 +1,188 @@
+FUNC: __ieee754_rem_pio2f
+	1: ARG : 0
+	49 : 121 : icmp
+	52 : 123 : icmp
+	3 : 124 : fsub
+	25 : 172 : fsub
+	28 : ?? : phi
+	2 : 116 : load
+	51 : 118 : icmp
+	50 : 120 : icmp
+	4 : 125 : load
+	5 : 125 : fsub
+	6 : 128 : fsub
+	7 : 129 : load
+	8 : 129 : fsub
+	53 : 134 : icmp
+	9 : 135 : fadd
+	10 : 136 : load
+	38 : 162 : fsub
+	11 : 136 : fadd
+	45 : 163 : fsub
+	22 : 164 : fsub
+	12 : 139 : fadd
+	13 : 140 : load
+	14 : 140 : fadd
+	39 : 145 : icmp
+	15 : 146 : call
+	47 : 147 : fptosi
+	36 : 149 : fsub
+	43 : 150 : fmul
+	40 : 151 : icmp
+	17 : 151 : sext
+	16 : 151 : load
+	54 : 151 : icmp
+	18 : 152 : fsub
+	19 : 156 : fsub
+	20 : 157 : load
+	21 : 157 : load
+	41 : 159 : icmp
+	23 : 165 : load
+	24 : 165 : load
+	42 : 167 : icmp
+	37 : 170 : fsub
+	44 : 171 : fsub
+	29 : ?? : phi
+	26 : 176 : load
+	27 : 176 : fsub
+	48 : 177 : icmp
+	30 : 177 : load
+	31 : 177 : fsub
+	32 : 177 : load
+	33 : 177 : fsub
+	46 : 177 : sub
+	55 : 183 : icmp
+	34 : 184 : fsub
+	35 : ?? : phi
+
+FUNC: __fabsf
+	1: ARG : 0
+	2 : 551 : load
+	3 : 552 : and
+	4 : 552 : load
+
+FUNC: __kernel_cosf
+	2: ARG : 1
+	1: ARG : 0
+	3 : 231 : load
+	12 : 233 : icmp
+	13 : 234 : icmp
+	8 : 238 : icmp
+	10 : 239 : fsub
+	9 : 241 : icmp
+	4 : 244 : sub
+	5 : 244 : load
+	7 : ?? : phi
+	11 : 248 : fsub
+	6 : ?? : phi
+
+FUNC: __kernel_sinf
+	4 : 294 : load
+	8 : 296 : icmp
+	9 : 297 : icmp
+	10 : 301 : icmp
+	6 : 301 : fadd
+	3: ARG : 2
+	2: ARG : 1
+	1: ARG : 0
+	7 : 302 : fsub
+	5 : ?? : phi
+
+FUNC: __atanf
+	1: ARG : 0
+	2 : 382 : load
+	24 : 384 : icmp
+	44 : 385 : icmp
+	40 : 386 : fadd
+	45 : 387 : icmp
+	3 : 387 : load
+	4 : 387 : load
+	41 : 387 : fadd
+	5 : 388 : load
+	42 : 388 : fsub
+	25 : 389 : icmp
+	26 : 390 : icmp
+	46 : 391 : fcmp
+	6 : 395 : call
+	27 : 396 : icmp
+	28 : 397 : icmp
+	31 : 398 : fdiv
+	32 : 400 : fdiv
+	29 : 403 : icmp
+	33 : 404 : fdiv
+	34 : 406 : fdiv
+	23 : ?? : phi
+	30 : ?? : phi
+	7 : 413 : load
+	8 : 413 : load
+	9 : 413 : load
+	10 : 413 : load
+	11 : 413 : load
+	12 : 413 : load
+	13 : 414 : load
+	14 : 414 : load
+	15 : 414 : load
+	16 : 414 : load
+	17 : 414 : load
+	38 : 415 : icmp
+	43 : 415 : fsub
+	19 : 417 : sext
+	18 : 417 : load
+	21 : 417 : sext
+	20 : 417 : load
+	37 : 417 : fsub
+	39 : 418 : icmp
+	36 : 418 : fsub
+	35 : 418 : phi
+	22 : ?? : phi
+
+FUNC: __cosf
+	1: ARG : 0
+	2 : 454 : load
+	21 : 458 : icmp
+	3 : 458 : call
+	22 : 461 : icmp
+	18 : 461 : fsub
+	4 : 465 : call
+	23 : 466 : and
+	5 : 467 : load
+	6 : 467 : load
+	7 : 467 : call
+	8 : 468 : load
+	9 : 468 : load
+	10 : 468 : call
+	20 : 468 : fsub
+	11 : 469 : load
+	12 : 469 : load
+	13 : 469 : call
+	19 : 469 : fsub
+	14 : 471 : load
+	15 : 471 : load
+	16 : 471 : call
+	17 : ?? : phi
+
+FUNC: __sinf
+	11 : 516 : load
+	12 : 516 : load
+	13 : 516 : call
+	20 : 516 : fsub
+	14 : 518 : load
+	15 : 518 : load
+	16 : 518 : call
+	19 : 518 : fsub
+	17 : ?? : phi
+	1: ARG : 0
+	2 : 501 : load
+	21 : 505 : icmp
+	3 : 505 : call
+	22 : 508 : icmp
+	18 : 508 : fsub
+	4 : 512 : call
+	23 : 513 : and
+	5 : 514 : load
+	6 : 514 : load
+	7 : 514 : call
+	8 : 515 : load
+	9 : 515 : load
+	10 : 515 : call
+

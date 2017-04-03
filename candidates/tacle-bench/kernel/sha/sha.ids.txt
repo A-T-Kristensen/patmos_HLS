@@ -1,0 +1,143 @@
+FUNC: sha_transform
+	34 : 86 : load
+	18 : 73 : load
+	51 : 76 : or
+	30 : ?? : phi
+	49 : 78 : icmp
+	50 : 79 : add
+	48 : 78 : add
+	55 : 79 : or
+	24 : ?? : phi
+	27 : ?? : phi
+	53 : 81 : icmp
+	23 : 82 : load
+	54 : 82 : add
+	52 : 81 : add
+	14 : 65 : load
+	5 : 62 : sub
+	4 : 62 : load
+	7 : 62 : sub
+	6 : 62 : load
+	9 : 62 : sub
+	8 : 62 : load
+	10 : 62 : xor
+	40 : 61 : add
+	13 : 64 : load
+	12 : ?? : phi
+	11 : 61 : icmp
+	3 : 62 : sub
+	41 : ?? : phi
+	36 : ?? : phi
+	43 : 72 : icmp
+	42 : 73 : add
+	47 : 73 : or
+	20 : ?? : phi
+	33 : ?? : phi
+	45 : 75 : icmp
+	19 : 76 : load
+	46 : 76 : add
+	44 : 75 : add
+	35 : 86 : add
+	37 : 87 : load
+	38 : 87 : add
+	22 : ?? : phi
+	39 : ?? : phi
+	56 : 58 : icmp
+	1 : 59 : load
+	15 : 66 : load
+	16 : 67 : load
+	17 : 68 : load
+	31 : 85 : load
+	25 : 83 : load
+	28 : 84 : load
+	2 : 62 : load
+	21 : 79 : load
+	26 : 83 : add
+	29 : 84 : add
+	32 : 85 : add
+
+FUNC: sha_byte_reverse
+	13: ARG : 0
+	1: ARG : 1
+	15 : 97 : trunc
+	12 : 98 : bitcast
+	10 : ?? : phi
+	11 : ?? : phi
+	16 : 100 : icmp
+	2 : 101 : load
+	3 : 102 : load
+	4 : 103 : load
+	5 : 104 : load
+	6 : 105 : load
+	7 : 106 : load
+	8 : 107 : load
+	9 : 108 : load
+	14 : 109 : getelementptr
+
+FUNC: sha_init
+	1 : ?? : phi
+	2 : 124 : icmp
+
+FUNC: sha_fread
+	1: ARG : 1
+	2: ARG : 2
+	3 : 131 : load
+	4 : 133 : load
+	5 : 133 : load
+	17 : 133 : icmp
+	15 : 134 : mul
+	6 : 134 : load
+	7 : 134 : load
+	16 : 134 : sub
+	14 : 133 : phi
+	18 : ?? : phi
+	21 : ?? : phi
+	8 : 136 : load
+	20 : 136 : icmp
+	19 : 137 : add
+	11 : 137 : zext
+	9 : 137 : load
+	10 : 137 : load
+	12 : 138 : load
+	13 : 138 : add
+
+FUNC: sha_update
+	12: ARG : 1
+	1: ARG : 2
+	2 : 145 : load
+	3 : 145 : load
+	17 : 145 : icmp
+	4 : 146 : load
+	5 : 146 : add
+	6 : 147 : load
+	7 : 147 : add
+	8 : 148 : load
+	9 : 148 : add
+	11 : ?? : phi
+	15 : ?? : phi
+	14 : 150 : icmp
+	13 : 154 : getelementptr
+	16 : 155 : sub
+	10 : 150 : sub
+
+FUNC: sha_final
+	3 : 172 : sub
+	4 : 177 : sub
+	1 : 167 : load
+	2 : 168 : load
+	5 : 171 : icmp
+
+FUNC: sha_stream
+	1 : 192 : call
+	2 : 192 : icmp
+
+FUNC: sha_main
+
+FUNC: sha_return
+	1 : 210 : load
+	2 : 210 : load
+	3 : 211 : zext
+
+FUNC: main
+	1 : 218 : call
+

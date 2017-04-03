@@ -1,0 +1,7 @@
+env = Environment()
+input_files = ['#anagram.c', '#anagram_input.c', '#anagram_stdlib.c']
+target = 'link'
+output_file = ''
+make_output_file = ''
+Export('env input_files target output_file make_output_file')
+SConscript('/home/patmos/Developer/kremlin/bin/../instrument/make/SConscript')

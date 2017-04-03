@@ -1,0 +1,7 @@
+FUNC: cjpeg_wrbmp_initInput
+	4 : 73 : icmp
+	2 : ?? : phi
+	3 : ?? : phi
+	5 : 74 : icmp
+	1 : 76 : load
+

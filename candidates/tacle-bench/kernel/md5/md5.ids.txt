@@ -1,0 +1,206 @@
+FUNC: md5_orig_init
+
+FUNC: md5_update
+	2 : 282 : load
+	17 : 282 : trunc
+	14 : 294 : icmp
+	12 : ?? : phi
+	1: ARG : 2
+	15 : 299 : icmp
+	13 : 299 : add
+	10 : 309 : sub
+	3 : 285 : load
+	11 : ?? : phi
+	16 : ?? : phi
+	4 : 285 : add
+	18 : 285 : icmp
+	5 : 287 : load
+	6 : 287 : add
+	7 : 288 : load
+	8 : 288 : add
+	9 : 290 : sub
+
+FUNC: md5_memcpy
+	1: ARG : 2
+	3 : ?? : phi
+	4 : 483 : icmp
+	2 : 484 : load
+
+FUNC: md5_transform
+	17 : 375 : load
+	12 : 370 : load
+	11 : 369 : load
+	20 : 378 : load
+	1 : 358 : load
+	2 : 358 : load
+	3 : 358 : load
+	4 : 358 : load
+	5 : 363 : load
+	6 : 364 : load
+	7 : 365 : load
+	8 : 366 : load
+	9 : 367 : load
+	10 : 368 : load
+	52 : 414 : load
+	53 : 417 : load
+	54 : 418 : load
+	55 : 419 : load
+	56 : 420 : load
+	59 : 423 : load
+	13 : 371 : load
+	14 : 372 : load
+	15 : 373 : load
+	16 : 374 : load
+	18 : 376 : load
+	19 : 377 : load
+	37 : 399 : load
+	21 : 381 : load
+	22 : 382 : load
+	23 : 383 : load
+	24 : 384 : load
+	57 : 421 : load
+	58 : 422 : load
+	25 : 385 : load
+	26 : 386 : load
+	27 : 387 : load
+	28 : 388 : load
+	29 : 389 : load
+	30 : 390 : load
+	31 : 391 : load
+	32 : 392 : load
+	33 : 393 : load
+	34 : 394 : load
+	35 : 395 : load
+	36 : 396 : load
+	38 : 400 : load
+	39 : 401 : load
+	40 : 402 : load
+	41 : 403 : load
+	42 : 404 : load
+	43 : 405 : load
+	44 : 406 : load
+	45 : 407 : load
+	46 : 408 : load
+	47 : 409 : load
+	48 : 410 : load
+	49 : 411 : load
+	50 : 412 : load
+	51 : 413 : load
+	60 : 424 : load
+	61 : 425 : load
+	62 : 426 : load
+	63 : 427 : load
+	64 : 428 : load
+	65 : 429 : load
+	66 : 430 : load
+	67 : 431 : load
+	68 : 432 : load
+	69 : 434 : load
+	70 : 434 : add
+	71 : 435 : load
+	72 : 435 : add
+	73 : 436 : load
+	74 : 436 : add
+	75 : 437 : load
+	76 : 437 : add
+
+FUNC: md5_final
+	1 : 327 : load
+	2 : 328 : select
+
+FUNC: md5_encode
+	9 : 456 : load
+	10 : 456 : trunc
+	1: ARG : 2
+	4 : 453 : sext
+	6 : ?? : phi
+	14 : ?? : phi
+	5 : 453 : icmp
+	2 : 454 : load
+	3 : 454 : trunc
+	7 : 455 : load
+	8 : 455 : trunc
+	11 : 457 : load
+	12 : 457 : trunc
+	13 : 453 : add
+
+FUNC: md5_memset
+	1: ARG : 1
+	2: ARG : 2
+	5 : ?? : phi
+	4 : 349 : icmp
+	3 : 350 : trunc
+
+FUNC: md5_decode
+	1: ARG : 2
+	13 : ?? : phi
+	12 : ?? : phi
+	11 : 470 : icmp
+	3 : 471 : zext
+	2 : 471 : load
+	5 : 471 : zext
+	4 : 471 : load
+	7 : 472 : zext
+	6 : 472 : load
+	9 : 472 : zext
+	8 : 472 : load
+	10 : 471 : or
+	14 : 470 : add
+
+FUNC: md5_R_memset
+	1: ARG : 1
+	2: ARG : 2
+	4 : 495 : icmp
+	3 : 496 : zext
+
+FUNC: md5_memset_x
+	8: ARG : 0
+	1: ARG : 1
+	2: ARG : 2
+	5 : ?? : phi
+	7 : ?? : phi
+	6 : 504 : add
+	4 : 504 : icmp
+	3 : 505 : trunc
+	9 : 505 : getelementptr
+
+FUNC: md5_R_RandomInit
+
+FUNC: md5_R_RandomUpdate
+	1: ARG : 2
+	9 : ?? : phi
+	7 : ?? : phi
+	8 : 539 : icmp
+	3 : 540 : zext
+	2 : 540 : load
+	5 : 540 : zext
+	4 : 540 : load
+	6 : 541 : trunc
+	13 : 542 : lshr
+	10 : 545 : load
+	14 : 545 : icmp
+	11 : 548 : load
+	12 : 548 : sub
+
+FUNC: md5_InitRandomStruct
+	1 : 569 : call
+	2 : 576 : call
+	3 : 577 : load
+	5 : 577 : icmp
+	4 : 580 : call
+
+FUNC: md5_R_GetRandomBytesNeeded
+	1 : 588 : load
+
+FUNC: md5_init
+
+FUNC: md5_main
+	4 : ?? : phi
+	5 : 608 : icmp
+	1 : 613 : load
+	2 : 613 : load
+	3 : 613 : add
+
+FUNC: main
+	1 : 621 : call
+

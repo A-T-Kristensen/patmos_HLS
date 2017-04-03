@@ -1,0 +1,91 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x2e6f840>, <0x2e737c0>, <0x2e737c0>, <0x2e745f8>, <0x2e737c0>, <0x2e737c0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/MachSuite/spmv/crs/spmv.c] [DW_LANG_C99]
+
+!{!"0x2e\00spmv\00spmv\00\008\000\001\000\000\00256\000\008", <0x2e6f840>, <0x2e6ef40>, <0x2e75bf0>, null, void (double*, i32*, i32*, double*, double*)* @spmv, null, null, <0x2e737c0>} ; [ DW_TAG_subprogram ] [line 8] [def] [spmv]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2e75b80>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2e74588>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from double]
+
+!{!"0x24\00double\000\0064\0064\000\000\004", null, null} ; [ DW_TAG_base_type ] [double] [line 0, size 64, align 64, offset 0, enc DW_ATE_float]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2e738a0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from int32_t]
+
+!{!"0x16\00int32_t\00196\000\000\000\000", <0x2e759d0>, null, <0x2e74448>} ; [ DW_TAG_typedef ] [int32_t] [line 196, size 0, align 0, offset 0] [from int]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+Meta data for 10231659162526442893
+Meta data for 10963332333953054057
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 17309149596352614664, name: spmv, fileName: spmv.c, startLine: 8, endLine: 8
+DEBUG: adding spmv (in module: spmv.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17309149596352614664)
+DEBUG: assigning function spmv id 17309149596352614664
+DEBUG: found 1 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: spmv is 17309149596352614664
+DEBUG: found 2 loops in function spmv
+DEBUG: assigning id = 10231659162526442893 to loop with the following BBs:
+	for.cond for.body for.cond3 for.end for.body5 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14520799844099584688
+DEBUG: assigning id = 14520799844099584688 to body of loop
+DEBUG: assigning id = 10963332333953054057 to loop with the following BBs:
+	for.cond3 for.body5 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 15596510348434327960
+DEBUG: assigning id = 15596510348434327960 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end17
+DEBUG: for.cond3 has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: Writing kremlib calls to spmv.kdump
+INFO: dumping function: spmv
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

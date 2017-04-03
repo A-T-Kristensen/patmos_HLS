@@ -1,0 +1,45 @@
+FUNC: binarysearch_initSeed
+
+FUNC: binarysearch_randomInteger
+	2 : 82 : srem
+	4 : 83 : sext
+	1 : 82 : load
+	3 : 83 : load
+
+FUNC: binarysearch_init
+	3 : 94 : icmp
+	1 : 95 : call
+	2 : 95 : trunc
+	4 : ?? : phi
+	5 : 96 : call
+	6 : 96 : trunc
+
+FUNC: binarysearch_return
+	1 : 103 : load
+
+FUNC: binarysearch_binary_search
+	17 : 133 : add
+	1: ARG : 0
+	6 : ?? : phi
+	5 : ?? : phi
+	12 : ?? : phi
+	9 : ?? : phi
+	16 : ?? : phi
+	8 : ?? : phi
+	10 : 120 : icmp
+	14 : 121 : ashr
+	2 : 123 : load
+	11 : 123 : icmp
+	7 : 125 : sub
+	3 : 126 : load
+	4 : 129 : load
+	15 : 129 : icmp
+	13 : 131 : sub
+
+FUNC: binarysearch_main
+	1 : 146 : call
+
+FUNC: main
+	1 : 155 : call
+	2 : 155 : zext
+

@@ -1,0 +1,126 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x35508f0>, <0x35555e0>, <0x35555e0>, <0x3559ed8>, <0x35555e0>, <0x35555e0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/MachSuite/bfs/bulk/bfs.c] [DW_LANG_C99]
+
+!{!"0x2e\00bfs\00bfs\00\009\000\001\000\000\00256\000\0012", <0x35508f0>, <0x3555000>, <0x355a1e0>, null, void (%struct.node_t_struct*, %struct.edge_t_struct*, i64, i8*, i64*)* @bfs, null, null, <0x35555e0>} ; [ DW_TAG_subprogram ] [line 9] [def] [scope 12] [bfs]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x355a0f0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x3556e00>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from node_t]
+
+!{!"0x16\00node_t\0038\000\000\000\000", <0x35569c0>, null, <0x3557760>} ; [ DW_TAG_typedef ] [node_t] [line 38, size 0, align 0, offset 0] [from node_t_struct]
+
+!{!"0x13\00node_t_struct\0035\00128\0064\000\000\000", <0x35569c0>, null, null, <0x3557670>, null, null, null} ; [ DW_TAG_structure_type ] [node_t_struct] [line 35, size 128, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00edge_begin\0036\0064\0064\000\000", <0x35569c0>, <0x3557760>, <0x3556db0>} ; [ DW_TAG_member ] [edge_begin] [line 36, size 64, align 64, offset 0] [from edge_index_t]
+
+!{!"0x16\00edge_index_t\0025\000\000\000\000", <0x35569c0>, null, <0x35555b0>} ; [ DW_TAG_typedef ] [edge_index_t] [line 25, size 0, align 0, offset 0] [from uint64_t]
+
+!{!"0x16\00uint64_t\0055\000\000\000\000", <0x35550c0>, null, <0x3555568>} ; [ DW_TAG_typedef ] [uint64_t] [line 55, size 0, align 0, offset 0] [from long unsigned int]
+
+!{!"0x24\00long unsigned int\000\0064\0064\000\000\007", null, null} ; [ DW_TAG_base_type ] [long unsigned int] [line 0, size 64, align 64, offset 0, enc DW_ATE_unsigned]
+
+!{!"0xd\00edge_end\0037\0064\0064\0064\000", <0x35569c0>, <0x3557760>, <0x3556db0>} ; [ DW_TAG_member ] [edge_end] [line 37, size 64, align 64, offset 64] [from edge_index_t]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x35575b0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from edge_t]
+
+!{!"0x16\00edge_t\0033\000\000\000\000", <0x35569c0>, null, <0x3557560>} ; [ DW_TAG_typedef ] [edge_t] [line 33, size 0, align 0, offset 0] [from edge_t_struct]
+
+!{!"0x13\00edge_t_struct\0028\0064\0064\000\000\000", <0x35569c0>, null, null, <0x35569f8>, null, null, null} ; [ DW_TAG_structure_type ] [edge_t_struct] [line 28, size 64, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00dst\0032\0064\0064\000\000", <0x35569c0>, <0x3557560>, <0x3556ce0>} ; [ DW_TAG_member ] [dst] [line 32, size 64, align 64, offset 0] [from node_index_t]
+
+!{!"0x16\00node_index_t\0026\000\000\000\000", <0x35569c0>, null, <0x35555b0>} ; [ DW_TAG_typedef ] [node_index_t] [line 26, size 0, align 0, offset 0] [from uint64_t]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x3559ff0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from level_t]
+
+!{!"0x16\00level_t\0040\000\000\000\000", <0x35569c0>, null, <0x3559fa0>} ; [ DW_TAG_typedef ] [level_t] [line 40, size 0, align 0, offset 0] [from int8_t]
+
+!{!"0x16\00int8_t\00194\000\000\000\000", <0x3559e50>, null, <0x3559f58>} ; [ DW_TAG_typedef ] [int8_t] [line 194, size 0, align 0, offset 0] [from signed char]
+
+!{!"0x24\00signed char\000\008\008\000\000\006", null, null} ; [ DW_TAG_base_type ] [signed char] [line 0, size 8, align 8, offset 0, enc DW_ATE_signed_char]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x3556db0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from edge_index_t]
+
+Meta data for 6765057173552567427
+Meta data for 13137814639640842186
+Meta data for 10781233271881802252
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 9399066272164011263, name: bfs, fileName: bfs.c, startLine: 9, endLine: 9
+DEBUG: adding bfs (in module: bfs.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 9399066272164011263)
+DEBUG: assigning function bfs id 9399066272164011263
+DEBUG: found 1 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: bfs is 9399066272164011263
+DEBUG: found 3 loops in function bfs
+DEBUG: assigning id = 6765057173552567427 to loop with the following BBs:
+	for.cond for.body for.cond3 for.end31 for.inc39 for.body6 if.then for.cond14 for.inc29.loopexit for.inc29 for.body17 if.then23 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 1039152055419929521
+DEBUG: assigning id = 1039152055419929521 to body of loop
+DEBUG: assigning id = 13137814639640842186 to loop with the following BBs:
+	for.cond3 for.body6 if.then for.cond14 for.inc29.loopexit for.inc29 for.body17 if.then23 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12988739879737274438
+DEBUG: assigning id = 12988739879737274438 to body of loop
+DEBUG: assigning id = 10781233271881802252 to loop with the following BBs:
+	for.cond14 for.body17 if.then23 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8773487298449358255
+DEBUG: assigning id = 8773487298449358255 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end41
+DEBUG: for.end31 has 1 possible loop exit points
+DEBUG: 	target #0: for.end41
+DEBUG: for.cond3 has 1 possible loop exit points
+DEBUG: 	target #0: for.end31
+DEBUG: for.cond14 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc29.loopexit
+DEBUG: Writing kremlib calls to bfs.kdump
+INFO: dumping function: bfs
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

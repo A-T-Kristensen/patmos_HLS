@@ -1,0 +1,97 @@
+FUNC: dijkstra_init
+	1 : 76 : load
+	2 : 76 : load
+	7 : ?? : phi
+	6 : 75 : icmp
+	5 : ?? : phi
+	4 : 73 : icmp
+	3 : 76 : trunc
+
+FUNC: dijkstra_return
+	1 : 89 : load
+	2 : 89 : select
+
+FUNC: dijkstra_enqueue
+	16 : 109 : icmp
+	10 : 110 : load
+	15 : 104 : icmp
+	14 : ?? : phi
+	9 : 109 : load
+	11 : 113 : load
+	12 : 113 : add
+	13 : ?? : phi
+	4 : 94 : load
+	8 : 94 : getelementptr
+	5 : 95 : load
+	6 : 97 : load
+	7 : 97 : add
+	17 : 97 : icmp
+	1: ARG : 0
+	2: ARG : 1
+	3: ARG : 2
+
+FUNC: dijkstra_dequeue
+	3 : 120 : load
+	1 : 119 : load
+	12 : 119 : icmp
+	2 : 120 : load
+	4 : 121 : load
+	5 : 121 : load
+	6 : 122 : load
+	7 : 122 : load
+	8 : 123 : load
+	9 : 123 : load
+	10 : 124 : load
+	11 : 124 : add
+
+FUNC: dijkstra_qcount
+	1 : 130 : load
+
+FUNC: dijkstra_find
+	28 : 162 : icmp
+	10 : 163 : load
+	11 : 163 : add
+	1: ARG : 0
+	2: ARG : 1
+	14 : 159 : icmp
+	5 : 160 : load
+	6 : 160 : load
+	23 : ?? : phi
+	25 : 141 : icmp
+	24 : 146 : icmp
+	3 : 151 : call
+	12 : 151 : icmp
+	4 : 156 : call
+	13 : 156 : icmp
+	15 : ?? : phi
+	26 : 160 : icmp
+	7 : 161 : load
+	27 : 161 : icmp
+	8 : 162 : load
+	9 : 162 : load
+	16 : 164 : load
+	17 : 165 : load
+	21 : 165 : add
+	18 : 165 : load
+	20 : 165 : trunc
+	19 : 165 : call
+	29 : 165 : icmp
+	22 : ?? : phi
+
+FUNC: dijkstra_main
+	4 : ?? : phi
+	2 : ?? : phi
+	5 : 181 : icmp
+	3 : 182 : srem
+	1 : 183 : call
+	12 : 183 : icmp
+	6 : 184 : load
+	7 : 184 : add
+	8 : 187 : load
+	9 : 187 : load
+	10 : 187 : add
+	11 : 181 : add
+
+FUNC: main
+	1 : 197 : call
+

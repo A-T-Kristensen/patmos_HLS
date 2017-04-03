@@ -1,0 +1,460 @@
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 15367600578791906123, name: adpcm_enc_abs, fileName: adpcm_enc.c, startLine: 194, endLine: 194
+DEBUG: adding adpcm_enc_abs (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 15367600578791906123)
+DEBUG: assigning function adpcm_enc_abs id 15367600578791906123
+DEBUG: new region: FuncRegion(id: 7103073260596127680, name: adpcm_enc_fabs, fileName: adpcm_enc.c, startLine: 209, endLine: 209
+DEBUG: adding adpcm_enc_fabs (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 7103073260596127680)
+DEBUG: assigning function adpcm_enc_fabs id 7103073260596127680
+DEBUG: new region: FuncRegion(id: 666777818332049740, name: adpcm_enc_sin, fileName: adpcm_enc.c, startLine: 223, endLine: 223
+DEBUG: adding adpcm_enc_sin (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 666777818332049740)
+DEBUG: assigning function adpcm_enc_sin id 666777818332049740
+DEBUG: new region: FuncRegion(id: 2581114881566709040, name: adpcm_enc_cos, fileName: adpcm_enc.c, startLine: 261, endLine: 261
+DEBUG: adding adpcm_enc_cos (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2581114881566709040)
+DEBUG: assigning function adpcm_enc_cos id 2581114881566709040
+DEBUG: new region: FuncRegion(id: 15530702093366274977, name: adpcm_enc_encode, fileName: adpcm_enc.c, startLine: 268, endLine: 268
+DEBUG: adding adpcm_enc_encode (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 15530702093366274977)
+DEBUG: assigning function adpcm_enc_encode id 15530702093366274977
+DEBUG: new region: FuncRegion(id: 8590339993861802714, name: adpcm_enc_filtez, fileName: adpcm_enc.c, startLine: 425, endLine: 425
+DEBUG: adding adpcm_enc_filtez (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 8590339993861802714)
+DEBUG: assigning function adpcm_enc_filtez id 8590339993861802714
+DEBUG: new region: FuncRegion(id: 13560140361795925161, name: adpcm_enc_filtep, fileName: adpcm_enc.c, startLine: 445, endLine: 445
+DEBUG: adding adpcm_enc_filtep (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 13560140361795925161)
+DEBUG: assigning function adpcm_enc_filtep id 13560140361795925161
+DEBUG: new region: FuncRegion(id: 2689295413356767569, name: adpcm_enc_quantl, fileName: adpcm_enc.c, startLine: 460, endLine: 460
+DEBUG: adding adpcm_enc_quantl (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2689295413356767569)
+DEBUG: assigning function adpcm_enc_quantl id 2689295413356767569
+DEBUG: new region: FuncRegion(id: 2042538558688581378, name: adpcm_enc_logscl, fileName: adpcm_enc.c, startLine: 500, endLine: 500
+DEBUG: adding adpcm_enc_logscl (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2042538558688581378)
+DEBUG: assigning function adpcm_enc_logscl id 2042538558688581378
+DEBUG: new region: FuncRegion(id: 14957209144732072037, name: adpcm_enc_scalel, fileName: adpcm_enc.c, startLine: 518, endLine: 518
+DEBUG: adding adpcm_enc_scalel (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14957209144732072037)
+DEBUG: assigning function adpcm_enc_scalel id 14957209144732072037
+DEBUG: new region: FuncRegion(id: 15784779577946614857, name: adpcm_enc_upzero, fileName: adpcm_enc.c, startLine: 533, endLine: 533
+DEBUG: adding adpcm_enc_upzero (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 15784779577946614857)
+DEBUG: assigning function adpcm_enc_upze!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x3246e10>, <0x3241e40>, <0x32426a0>, <0x3250308>, <0x3256cd0>, <0x3241e40>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/sequential/adpcm_enc/adpcm_enc.c] [DW_LANG_C99]
+
+!{!"0x2e\00adpcm_enc_abs\00adpcm_enc_abs\00\00194\000\001\000\000\00256\000\00195", <0x3246e10>, <0x32426e0>, <0x32427d0>, null, i32 (i32)* @adpcm_enc_abs, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 194] [def] [scope 195] [adpcm_enc_abs]
+
+!{!"0x2e\00adpcm_enc_fabs\00adpcm_enc_fabs\00\00209\000\001\000\000\00256\000\00210", <0x3246e10>, <0x32426e0>, <0x32427d0>, null, i32 (i32)* @adpcm_enc_fabs, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 209] [def] [scope 210] [adpcm_enc_fabs]
+
+!{!"0x2e\00adpcm_enc_sin\00adpcm_enc_sin\00\00223\000\001\000\000\00256\000\00224", <0x3246e10>, <0x32426e0>, <0x32427d0>, null, i32 (i32)* @adpcm_enc_sin, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 223] [def] [scope 224] [adpcm_enc_sin]
+
+!{!"0x2e\00adpcm_enc_cos\00adpcm_enc_cos\00\00261\000\001\000\000\00256\000\00262", <0x3246e10>, <0x32426e0>, <0x32427d0>, null, i32 (i32)* @adpcm_enc_cos, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 261] [def] [scope 262] [adpcm_enc_cos]
+
+!{!"0x2e\00adpcm_enc_encode\00adpcm_enc_encode\00\00268\000\001\000\000\00256\000\00269", <0x3246e10>, <0x32426e0>, <0x3249860>, null, i32 (i32, i32)* @adpcm_enc_encode, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 268] [def] [scope 269] [adpcm_enc_encode]
+
+!{!"0x2e\00adpcm_enc_filtez\00adpcm_enc_filtez\00\00425\000\001\000\000\00256\000\00426", <0x3246e10>, <0x32426e0>, <0x3246cc0>, null, i32 (i32*, i32*)* @adpcm_enc_filtez, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 425] [def] [scope 426] [adpcm_enc_filtez]
+
+!{!"0x2e\00adpcm_enc_filtep\00adpcm_enc_filtep\00\00445\000\001\000\000\00256\000\00446", <0x3246e10>, <0x32426e0>, <0x324bd10>, null, i32 (i32, i32, i32, i32)* @adpcm_enc_filtep, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 445] [def] [scope 446] [adpcm_enc_filtep]
+
+!{!"0x2e\00adpcm_enc_quantl\00adpcm_enc_quantl\00\00460\000\001\000\000\00256\000\00461", <0x3246e10>, <0x32426e0>, <0x3249860>, null, i32 (i32, i32)* @adpcm_enc_quantl, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 460] [def] [scope 461] [adpcm_enc_quantl]
+
+!{!"0x2e\00adpcm_enc_logscl\00adpcm_enc_logscl\00\00500\000\001\000\000\00256\000\00501", <0x3246e10>, <0x32426e0>, <0x3249860>, null, i32 (i32, i32)* @adpcm_enc_logscl, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 500] [def] [scope 501] [adpcm_enc_logscl]
+
+!{!"0x2e\00adpcm_enc_scalel\00adpcm_enc_scalel\00\00518\000\001\000\000\00256\000\00519", <0x3246e10>, <0x32426e0>, <0x3249860>, null, i32 (i32, i32)* @adpcm_enc_scalel, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 518] [def] [scope 519] [adpcm_enc_scalel]
+
+!{!"0x2e\00adpcm_enc_upzero\00adpcm_enc_upzero\00\00533\000\001\000\000\00256\000\00534", <0x3246e10>, <0x32426e0>, <0x324c420>, null, void (i32, i32*, i32*)* @adpcm_enc_upzero, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 533] [def] [scope 534] [adpcm_enc_upzero]
+
+!{!"0x2e\00adpcm_enc_uppol2\00adpcm_enc_uppol2\00\00572\000\001\000\000\00256\000\00573", <0x3246e10>, <0x32426e0>, <0x324c6e0>, null, i32 (i32, i32, i32, i32, i32)* @adpcm_enc_uppol2, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 572] [def] [scope 573] [adpcm_enc_uppol2]
+
+!{!"0x2e\00adpcm_enc_uppol1\00adpcm_enc_uppol1\00\00602\000\001\000\000\00256\000\00603", <0x3246e10>, <0x32426e0>, <0x324bd10>, null, i32 (i32, i32, i32, i32)* @adpcm_enc_uppol1, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 602] [def] [scope 603] [adpcm_enc_uppol1]
+
+!{!"0x2e\00adpcm_enc_logsch\00adpcm_enc_logsch\00\00638\000\001\000\000\00256\000\00639", <0x3246e10>, <0x32426e0>, <0x3249860>, null, i32 (i32, i32)* @adpcm_enc_logsch, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 638] [def] [scope 639] [adpcm_enc_logsch]
+
+!{!"0x2e\00adpcm_enc_reset\00adpcm_enc_reset\00\00661\000\001\000\000\00256\000\00662", <0x3246e10>, <0x32426e0>, <0x324f860>, null, void ()* @adpcm_enc_reset, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 661] [def] [scope 662] [adpcm_enc_reset]
+
+!{!"0x2e\00adpcm_enc_init\00adpcm_enc_init\00\00691\000\001\000\000\00256\000\00692", <0x3246e10>, <0x32426e0>, <0x324f860>, null, void ()* @adpcm_enc_init, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 691] [def] [scope 692] [adpcm_enc_init]
+
+!{!"0x2e\00adpcm_enc_return\00adpcm_enc_return\00\00717\000\001\000\000\00256\000\00718", <0x3246e10>, <0x32426e0>, <0x3249a60>, null, i32 ()* @adpcm_enc_return, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 717] [def] [scope 718] [adpcm_enc_return]
+
+!{!"0x2e\00adpcm_enc_main\00adpcm_enc_main\00\00734\000\001\000\000\00256\000\00735", <0x3246e10>, <0x32426e0>, <0x324f860>, null, void ()* @adpcm_enc_main, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 734] [def] [scope 735] [adpcm_enc_main]
+
+!{!"0x2e\00main\00main\00\00745\000\001\000\000\00256\000\00746", <0x3246e10>, <0x32426e0>, <0x3249a60>, null, i32 ()* @main, null, null, <0x3241e40>} ; [ DW_TAG_subprogram ] [line 745] [def] [scope 746] [main]
+
+!{!"0x34\00adpcm_enc_h\00adpcm_enc_h\00\0076\000\001", null, <0x32426e0>, <0x3250110>, [24 x i32]* @adpcm_enc_h, null} ; [ DW_TAG_variable ] [adpcm_enc_h] [line 76] [def]
+
+!{!"0x34\00adpcm_enc_qq4_code4_table\00adpcm_enc_qq4_code4_table\00\0088\000\001", null, <0x32426e0>, <0x3246e80>, [16 x i32]* @adpcm_enc_qq4_code4_table, null} ; [ DW_TAG_variable ] [adpcm_enc_qq4_code4_table] [line 88] [def]
+
+!{!"0x34\00adpcm_enc_qq5_code5_table\00adpcm_enc_qq5_code5_table\00\0093\000\001", null, <0x32426e0>, <0x32508a0>, [32 x i32]* @adpcm_enc_qq5_code5_table, null} ; [ DW_TAG_variable ] [adpcm_enc_qq5_code5_table] [line 93] [def]
+
+!{!"0x34\00adpcm_enc_qq6_code6_table\00adpcm_enc_qq6_code6_table\00\00100\000\001", null, <0x32426e0>, <0x3250b00>, [64 x i32]* @adpcm_enc_qq6_code6_table, null} ; [ DW_TAG_variable ] [adpcm_enc_qq6_code6_table] [line 100] [def]
+
+!{!"0x34\00adpcm_enc_wl_code_table\00adpcm_enc_wl_code_table\00\00115\000\001", null, <0x32426e0>, <0x3246e80>, [16 x i32]* @adpcm_enc_wl_code_table, null} ; [ DW_TAG_variable ] [adpcm_enc_wl_code_table] [line 115] [def]
+
+!{!"0x34\00adpcm_enc_ilb_table\00adpcm_enc_ilb_table\00\00120\000\001", null, <0x32426e0>, <0x32508a0>, [32 x i32]* @adpcm_enc_ilb_table, null} ; [ DW_TAG_variable ] [adpcm_enc_ilb_table] [line 120] [def]
+
+!{!"0x34\00adpcm_enc_decis_levl\00adpcm_enc_decis_levl\00\00134\000\001", null, <0x32426e0>, <0x324c9d0>, [30 x i32]* @adpcm_enc_decis_levl, null} ; [ DW_TAG_variable ] [adpcm_enc_decis_levl] [line 134] [def]
+
+!{!"0x34\00adpcm_enc_quant26bt_pos\00adpcm_enc_quant26bt_pos\00\00145\000\001", null, <0x32426e0>, <0x324ccb0>, [31 x i32]* @adpcm_enc_quant26bt_pos, null} ; [ DW_TAG_variable ] [adpcm_enc_quant26bt_pos] [line 145] [def]
+
+!{!"0x34\00adpcm_enc_quant26bt_neg\00adpcm_enc_quant26bt_neg\00\00154\000\001", null, <0x32426e0>, <0x324ccb0>, [31 x i32]* @adpcm_enc_quant26bt_neg, null} ; [ DW_TAG_variable ] [adpcm_enc_quant26bt_neg] [line 154] [def]
+
+!{!"0x34\00adpcm_enc_qq2_code2_table\00adpcm_enc_qq2_code2_table\00\00166\000\001", null, <0x32426e0>, <0x324fcc0>, [4 x i32]* @adpcm_enc_qq2_code2_table, null} ; [ DW_TAG_variable ] [adpcm_enc_qq2_code2_table] [line 166] [def]
+
+!{!"0x34\00adpcm_enc_wh_code_table\00adpcm_enc_wh_code_table\00\00170\000\001", null, <0x32426e0>, <0x324fcc0>, [4 x i32]* @adpcm_enc_wh_code_table, null} ; [ DW_TAG_variable ] [adpcm_enc_wh_code_table] [line 170] [def]
+
+!{!"0x34\00adpcm_enc_test_data\00adpcm_enc_test_data\00\0066\000\001", null, <0x32426e0>, <0x3257080>, [6 x i32]* @adpcm_enc_test_data, null} ; [ DW_TAG_variable ] [adpcm_enc_test_data] [line 66] [def]
+
+!{!"0x34\00adpcm_enc_compressed\00adpcm_enc_compressed\00\0066\000\001", null, <0x32426e0>, <0x3257310>, [3 x i32]* @adpcm_enc_compressed, null} ; [ DW_TAG_variable ] [adpcm_enc_compressed] [line 66] [def]
+
+!{!"0x34\00adpcm_enc_tqmf\00adpcm_enc_tqmf\00\0072\000\001", null, <0x32426e0>, <0x3250110>, [24 x i32]* @adpcm_enc_tqmf, null} ; [ DW_TAG_variable ] [adpcm_enc_tqmf] [line 72] [def]
+
+!{!"0x34\00adpcm_enc_xl\00adpcm_enc_xl\00\0082\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_xl, null} ; [ DW_TAG_variable ] [adpcm_enc_xl] [line 82] [def]
+
+!{!"0x34\00adpcm_enc_xh\00adpcm_enc_xh\00\0082\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_xh, null} ; [ DW_TAG_variable ] [adpcm_enc_xh] [line 82] [def]
+
+!{!"0x34\00adpcm_enc_il\00adpcm_enc_il\00\0086\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_il, null} ; [ DW_TAG_variable ] [adpcm_enc_il] [line 86] [def]
+
+!{!"0x34\00adpcm_enc_szl\00adpcm_enc_szl\00\0086\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_szl, null} ; [ DW_TAG_variable ] [adpcm_enc_szl] [line 86] [def]
+
+!{!"0x34\00adpcm_enc_spl\00adpcm_enc_spl\00\0086\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_spl, null} ; [ DW_TAG_variable ] [adpcm_enc_spl] [line 86] [def]
+
+!{!"0x34\00adpcm_enc_sl\00adpcm_enc_sl\00\0086\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_sl, null} ; [ DW_TAG_variable ] [adpcm_enc_sl] [line 86] [def]
+
+!{!"0x34\00adpcm_enc_el\00adpcm_enc_el\00\0086\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_el, null} ; [ DW_TAG_variable ] [adpcm_enc_el] [line 86] [def]
+
+!{!"0x34\00adpcm_enc_delay_bpl\00adpcm_enc_delay_bpl\00\00111\000\001", null, <0x32426e0>, <0x3257080>, [6 x i32]* @adpcm_enc_delay_bpl, null} ; [ DW_TAG_variable ] [adpcm_enc_delay_bpl] [line 111] [def]
+
+!{!"0x34\00adpcm_enc_delay_dltx\00adpcm_enc_delay_dltx\00\00113\000\001", null, <0x32426e0>, <0x3257080>, [6 x i32]* @adpcm_enc_delay_dltx, null} ; [ DW_TAG_variable ] [adpcm_enc_delay_dltx] [line 113] [def]
+
+!{!"0x34\00adpcm_enc_nbl\00adpcm_enc_nbl\00\00127\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_nbl, null} ; [ DW_TAG_variable ] [adpcm_enc_nbl] [line 127] [def]
+
+!{!"0x34\00adpcm_enc_al1\00adpcm_enc_al1\00\00128\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_al1, null} ; [ DW_TAG_variable ] [adpcm_enc_al1] [line 128] [def]
+
+!{!"0x34\00adpcm_enc_al2\00adpcm_enc_al2\00\00128\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_al2, null} ; [ DW_TAG_variable ] [adpcm_enc_al2] [line 128] [def]
+
+!{!"0x34\00adpcm_enc_plt\00adpcm_enc_plt\00\00129\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_plt, null} ; [ DW_TAG_variable ] [adpcm_enc_plt] [line 129] [def]
+
+!{!"0x34\00adpcm_enc_plt1\00adpcm_enc_plt1\00\00129\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_plt1, null} ; [ DW_TAG_variable ] [adpcm_enc_plt1] [line 129] [def]
+
+!{!"0x34\00adpcm_enc_plt2\00adpcm_enc_plt2\00\00129\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_plt2, null} ; [ DW_TAG_variable ] [adpcm_enc_plt2] [line 129] [def]
+
+!{!"0x34\00adpcm_enc_dlt\00adpcm_enc_dlt\00\00130\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_dlt, null} ; [ DW_TAG_variable ] [adpcm_enc_dlt] [line 130] [def]
+
+!{!"0x34\00adpcm_enc_rlt\00adpcm_enc_rlt\00\00131\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_rlt, null} ; [ DW_TAG_variable ] [adpcm_enc_rlt] [line 131] [def]
+
+!{!"0x34\00adpcm_enc_rlt1\00adpcm_enc_rlt1\00\00131\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_rlt1, null} ; [ DW_TAG_variable ] [adpcm_enc_rlt1] [line 131] [def]
+
+!{!"0x34\00adpcm_enc_rlt2\00adpcm_enc_rlt2\00\00131\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_rlt2, null} ; [ DW_TAG_variable ] [adpcm_enc_rlt2] [line 131] [def]
+
+!{!"0x34\00adpcm_enc_detl\00adpcm_enc_detl\00\00141\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_detl, null} ; [ DW_TAG_variable ] [adpcm_enc_detl] [line 141] [def]
+
+!{!"0x34\00adpcm_enc_deth\00adpcm_enc_deth\00\00162\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_deth, null} ; [ DW_TAG_variable ] [adpcm_enc_deth] [line 162] [def]
+
+!{!"0x34\00adpcm_enc_sh\00adpcm_enc_sh\00\00163\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_sh, null} ; [ DW_TAG_variable ] [adpcm_enc_sh] [line 163] [def]
+
+!{!"0x34\00adpcm_enc_eh\00adpcm_enc_eh\00\00164\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_eh, null} ; [ DW_TAG_variable ] [adpcm_enc_eh] [line 164] [def]
+
+!{!"0x34\00adpcm_enc_dh\00adpcm_enc_dh\00\00175\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_dh, null} ; [ DW_TAG_variable ] [adpcm_enc_dh] [line 175] [def]
+
+!{!"0x34\00adpcm_enc_ih\00adpcm_enc_ih\00\00175\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_ih, null} ; [ DW_TAG_variable ] [adpcm_enc_ih] [line 175] [def]
+
+!{!"0x34\00adpcm_enc_nbh\00adpcm_enc_nbh\00\00176\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_nbh, null} ; [ DW_TAG_variable ] [adpcm_enc_nbh] [line 176] [def]
+
+!{!"0x34\00adpcm_enc_szh\00adpcm_enc_szh\00\00176\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_szh, null} ; [ DW_TAG_variable ] [adpcm_enc_szh] [line 176] [def]
+
+!{!"0x34\00adpcm_enc_sph\00adpcm_enc_sph\00\00177\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_sph, null} ; [ DW_TAG_variable ] [adpcm_enc_sph] [line 177] [def]
+
+!{!"0x34\00adpcm_enc_ph\00adpcm_enc_ph\00\00177\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_ph, null} ; [ DW_TAG_variable ] [adpcm_enc_ph] [line 177] [def]
+
+!{!"0x34\00adpcm_enc_yh\00adpcm_enc_yh\00\00177\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_yh, null} ; [ DW_TAG_variable ] [adpcm_enc_yh] [line 177] [def]
+
+!{!"0x34\00adpcm_enc_delay_dhx\00adpcm_enc_delay_dhx\00\00179\000\001", null, <0x32426e0>, <0x3257080>, [6 x i32]* @adpcm_enc_delay_dhx, null} ; [ DW_TAG_variable ] [adpcm_enc_delay_dhx] [line 179] [def]
+
+!{!"0x34\00adpcm_enc_delay_bph\00adpcm_enc_delay_bph\00\00180\000\001", null, <0x32426e0>, <0x3257080>, [6 x i32]* @adpcm_enc_delay_bph, null} ; [ DW_TAG_variable ] [adpcm_enc_delay_bph] [line 180] [def]
+
+!{!"0x34\00adpcm_enc_ah1\00adpcm_enc_ah1\00\00182\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_ah1, null} ; [ DW_TAG_variable ] [adpcm_enc_ah1] [line 182] [def]
+
+!{!"0x34\00adpcm_enc_ah2\00adpcm_enc_ah2\00\00182\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_ah2, null} ; [ DW_TAG_variable ] [adpcm_enc_ah2] [line 182] [def]
+
+!{!"0x34\00adpcm_enc_ph1\00adpcm_enc_ph1\00\00183\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_ph1, null} ; [ DW_TAG_variable ] [adpcm_enc_ph1] [line 183] [def]
+
+!{!"0x34\00adpcm_enc_ph2\00adpcm_enc_ph2\00\00183\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_ph2, null} ; [ DW_TAG_variable ] [adpcm_enc_ph2] [line 183] [def]
+
+!{!"0x34\00adpcm_enc_rh1\00adpcm_enc_rh1\00\00184\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_rh1, null} ; [ DW_TAG_variable ] [adpcm_enc_rh1] [line 184] [def]
+
+!{!"0x34\00adpcm_enc_rh2\00adpcm_enc_rh2\00\00184\000\001", null, <0x32426e0>, <0x32425d8>, i32* @adpcm_enc_rh2, null} ; [ DW_TAG_variable ] [adpcm_enc_rh2] [line 184] [def]
+
+!{!"0x1\00\000\00768\0032\000\000\000", null, null, <0x32425d8>, <0x3246cf8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 768, align 32, offset 0] [from int]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x1\00\000\00512\0032\000\000\000", null, null, <0x32425d8>, <0x324c348>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 512, align 32, offset 0] [from int]
+
+!{!"0x1\00\000\001024\0032\000\000\000", null, null, <0x32425d8>, <0x324fb18>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 1024, align 32, offset 0] [from int]
+
+!{!"0x1\00\000\002048\0032\000\000\000", null, null, <0x32425d8>, <0x3250a98>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 2048, align 32, offset 0] [from int]
+
+!{!"0x1\00\000\00960\0032\000\000\000", null, null, <0x32425d8>, <0x324c968>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 960, align 32, offset 0] [from int]
+
+!{!"0x1\00\000\00992\0032\000\000\000", null, null, <0x32425d8>, <0x324cc48>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 992, align 32, offset 0] [from int]
+
+!{!"0x1\00\000\00128\0032\000\000\000", null, null, <0x32425d8>, <0x324fc58>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 128, align 32, offset 0] [from int]
+
+!{!"0x1\00\000\00192\0032\000\000\000", null, null, <0x32425d8>, <0x3257018>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 192, align 32, offset 0] [from int]
+
+!{!"0x1\00\000\0096\0032\000\000\000", null, null, <0x32425d8>, <0x32572a8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 96, align 32, offset 0] [from int]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3242760>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x32493b8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3246c58>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x32425d8>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from int]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x324bc48>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x324bdf0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x324c670>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3242668>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x32495f8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x24\00long int\000\0064\0064\000\000\005", null, null} ; [ DW_TAG_base_type ] [long int] [line 0, size 64, align 64, offset 0, enc DW_ATE_signed]
+
+Meta data for 3222111998710156002
+Meta data for 5432534252526690162
+ro id 15784779577946614857
+DEBUG: new region: FuncRegion(id: 5117019876877230948, name: adpcm_enc_uppol2, fileName: adpcm_enc.c, startLine: 572, endLine: 572
+DEBUG: adding adpcm_enc_uppol2 (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 5117019876877230948)
+DEBUG: assigning function adpcm_enc_uppol2 id 5117019876877230948
+DEBUG: new region: FuncRegion(id: 11147945873058576403, name: adpcm_enc_uppol1, fileName: adpcm_enc.c, startLine: 602, endLine: 602
+DEBUG: adding adpcm_enc_uppol1 (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 11147945873058576403)
+DEBUG: assigning function adpcm_enc_uppol1 id 11147945873058576403
+DEBUG: new region: FuncRegion(id: 11852233728212396980, name: adpcm_enc_logsch, fileName: adpcm_enc.c, startLine: 638, endLine: 638
+DEBUG: adding adpcm_enc_logsch (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 11852233728212396980)
+DEBUG: assigning function adpcm_enc_logsch id 11852233728212396980
+DEBUG: new region: FuncRegion(id: 17629987198584221856, name: adpcm_enc_reset, fileName: adpcm_enc.c, startLine: 661, endLine: 661
+DEBUG: adding adpcm_enc_reset (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17629987198584221856)
+DEBUG: assigning function adpcm_enc_reset id 17629987198584221856
+DEBUG: new region: FuncRegion(id: 14366496533316751162, name: adpcm_enc_init, fileName: adpcm_enc.c, startLine: 691, endLine: 691
+DEBUG: adding adpcm_enc_init (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14366496533316751162)
+DEBUG: assigning function adpcm_enc_init id 14366496533316751162
+DEBUG: new region: FuncRegion(id: 17529653233553792855, name: adpcm_enc_return, fileName: adpcm_enc.c, startLine: 717, endLine: 717
+DEBUG: adding adpcm_enc_return (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17529653233553792855)
+DEBUG: assigning function adpcm_enc_return id 17529653233553792855
+DEBUG: new region: FuncRegion(id: 8513084466899327564, name: adpcm_enc_main, fileName: adpcm_enc.c, startLine: 734, endLine: 734
+DEBUG: adding adpcm_enc_main (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 8513084466899327564)
+DEBUG: assigning function adpcm_enc_main id 8513084466899327564
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: adpcm_enc.c, startLine: 745, endLine: 745
+DEBUG: adding main (in module: adpcm_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 19 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: adpcm_enc_abs is 15367600578791906123
+DEBUG: found 0 loops in function adpcm_enc_abs
+DEBUG: region name to id: adpcm_enc_fabs is 7103073260596127680
+DEBUG: found 0 loops in function adpcm_enc_fabs
+DEBUG: region name to id: adpcm_enc_sin is 666777818332049740
+DEBUG: found 3 loops in function adpcm_enc_sin
+DEBUG: assigning id = 3222111998710156002 to loop with the following BBs:
+	while.cond13 while.body15 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 15413705041490758913
+DEBUG: assigning id = 15413705041490758913 to body of loop
+DEBUG: assigning id = 5432534252526690162 to loop with the following BBs:
+	while.cond1 while.body3 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17356970815868552630
+DEBUG: assigning id =Meta data for 10425738134352165045
+Meta data for 9012359981155062292
+Meta data for 6434548552437746787
+Meta data for 11239620770507604026
+Meta data for 12634473651724127254
+Meta data for 14503955911979027824
+Meta data for 5015441367006918459
+ 17356970815868552630 to body of loop
+DEBUG: assigning id = 10425738134352165045 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 684880696579782635
+DEBUG: assigning id = 684880696579782635 to body of loop
+DEBUG: while.cond13 has 1 possible loop exit points
+DEBUG: 	target #0: while.end26
+DEBUG: while.cond1 has 1 possible loop exit points
+DEBUG: 	target #0: while.end4
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.cond1.preheader
+DEBUG: region name to id: adpcm_enc_cos is 2581114881566709040
+DEBUG: found 0 loops in function adpcm_enc_cos
+DEBUG: region name to id: adpcm_enc_encode is 15530702093366274977
+DEBUG: found 2 loops in function adpcm_enc_encode
+DEBUG: assigning id = 9012359981155062292 to loop with the following BBs:
+	for.cond31 for.body34 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11867078299530725267
+DEBUG: assigning id = 11867078299530725267 to body of loop
+DEBUG: assigning id = 6434548552437746787 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 86169487546359804
+DEBUG: assigning id = 86169487546359804 to body of loop
+DEBUG: for.cond31 has 1 possible loop exit points
+DEBUG: 	target #0: for.end39
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: adpcm_enc_filtez is 8590339993861802714
+DEBUG: found 1 loops in function adpcm_enc_filtez
+DEBUG: assigning id = 11239620770507604026 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9902970440311017579
+DEBUG: assigning id = 9902970440311017579 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: adpcm_enc_filtep is 13560140361795925161
+DEBUG: found 0 loops in function adpcm_enc_filtep
+DEBUG: region name to id: adpcm_enc_quantl is 2689295413356767569
+DEBUG: found 1 loops in function adpcm_enc_quantl
+DEBUG: assigning id = 12634473651724127254 to loop with the following BBs:
+	for.cond for.body for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7470949399817703240
+DEBUG: assigning id = 7470949399817703240 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: for.body has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: adpcm_enc_logscl is 2042538558688581378
+DEBUG: found 0 loops in function adpcm_enc_logscl
+DEBUG: region name to id: adpcm_enc_scalel is 14957209144732072037
+DEBUG: found 0 loops in function adpcm_enc_scalel
+DEBUG: region name to id: adpcm_enc_upzero is 15784779577946614857
+DEBUG: found 2 loops in function adpcm_enc_upzero
+DEBUG: assigning id = 14503955911979027824 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8370274338942794898
+DEBUG: assigning id = 8370274338942794898 to body of loop
+DEBUG: assigning id = 5015441367006918459 to loop with the following BBs:
+	for.cond5 for.body8 if.else17 if.then16 if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16540227219306226160
+DEBUG: assigning id = 16540227219306226160 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: if.end29.loopexit
+DEBUG: for.cond5 has 1 possible loop exit points
+DEBUG: 	target #0: if.end29.loopexit1
+DEBUG: region name to id: adpcm_enc_uppol2 is 5117019876877230948
+DEBUG: found 0 loops in function adpcm_enc_Meta data for 8077714254047451360
+Meta data for 11607070183508903257
+Meta data for 15276043459612857333
+Meta data for 3467753509398901122
+Meta data for 4919033066651532124
+Meta data for 17812856921754862939
+uppol2
+DEBUG: region name to id: adpcm_enc_uppol1 is 11147945873058576403
+DEBUG: found 0 loops in function adpcm_enc_uppol1
+DEBUG: region name to id: adpcm_enc_logsch is 11852233728212396980
+DEBUG: found 0 loops in function adpcm_enc_logsch
+DEBUG: region name to id: adpcm_enc_reset is 17629987198584221856
+DEBUG: found 3 loops in function adpcm_enc_reset
+DEBUG: assigning id = 8077714254047451360 to loop with the following BBs:
+	for.cond13 for.body15 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3689780920026347505
+DEBUG: assigning id = 3689780920026347505 to body of loop
+DEBUG: assigning id = 11607070183508903257 to loop with the following BBs:
+	for.cond3 for.body5 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 18295720565571386058
+DEBUG: assigning id = 18295720565571386058 to body of loop
+DEBUG: assigning id = 15276043459612857333 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14257875011026763557
+DEBUG: assigning id = 14257875011026763557 to body of loop
+DEBUG: for.cond13 has 1 possible loop exit points
+DEBUG: 	target #0: for.end20
+DEBUG: for.cond3 has 1 possible loop exit points
+DEBUG: 	target #0: for.end12
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: adpcm_enc_init is 14366496533316751162
+DEBUG: found 1 loops in function adpcm_enc_init
+DEBUG: assigning id = 3467753509398901122 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16195314987696832383
+DEBUG: assigning id = 16195314987696832383 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: adpcm_enc_return is 17529653233553792855
+DEBUG: found 1 loops in function adpcm_enc_return
+DEBUG: assigning id = 4919033066651532124 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5757768702146279658
+DEBUG: assigning id = 5757768702146279658 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: adpcm_enc_main is 8513084466899327564
+DEBUG: found 1 loops in function adpcm_enc_main
+DEBUG: assigning id = 17812856921754862939 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17549329812885069576
+DEBUG: assigning id = 17549329812885069576 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to adpcm_enc.kdump
+INFO: dumping function: adpcm_enc_abs
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: adpcm_enc_fabs
+INFO: dumping function: adpcm_enc_sin
+INFO: dumping function: adpcm_enc_cos
+INFO: dumping function: adpcm_enc_encode
+INFO: dumping function: adpcm_enc_filtez
+INFO: dumping function: adpcm_enc_filtep
+INFO: dumping function: adpcm_enc_quantl
+INFO: dumping function: adpcm_enc_logscl
+INFO: dumping function: adpcm_enc_scalel
+INFO: dumping function: adpcm_enc_upzero
+INFO: dumping function: adpcm_enc_uppol2
+INFO: dumping function: adpcm_enc_uppol1
+INFO: dumping function: adpcm_enc_logsch
+INFO: dumping function: adpcm_enc_reset
+INFO: dumping function: adpcm_enc_init
+INFO: dumping function: adpcm_enc_return
+INFO: dumping function: adpcm_enc_main
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

@@ -1,0 +1,311 @@
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 17355950079714156337, name: quicksort___ieee754_powf, fileName: quicksortlibm.c, startLine: 87, endLine: 87
+DEBUG: adding quicksort___ieee754_powf (in module: quicksortlibm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17355950079714156337)
+DEBUG: assigning function quicksort___ieee754_powf id 17355950079714156337
+DEBUG: new region: FuncRegion(id: 2206518859589336894, name: quicksort___isinff, fileName: quicksortlibm.c, startLine: 1118, endLine: 1118
+DEBUG: adding quicksort___isinff (in module: quicksortlibm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2206518859589336894)
+DEBUG: assigning function quicksort___isinff id 2206518859589336894
+DEBUG: new region: FuncRegion(id: 6462360663831658816, name: quicksort___ieee754_sqrtf, fileName: quicksortlibm.c, startLine: 357, endLine: 357
+DEBUG: adding quicksort___ieee754_sqrtf (in module: quicksortlibm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6462360663831658816)
+DEBUG: assigning function quicksort___ieee754_sqrtf id 6462360663831658816
+DEBUG: new region: FuncRegion(id: 12190362897517525394, name: quicksort___fabsf, fileName: quicksortlibm.c, startLine: 1027, endLine: 1027
+DEBUG: adding quicksort___fabsf (in module: quicksortlibm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12190362897517525394)
+DEBUG: assigning function quicksort___fabsf id 12190362897517525394
+DEBUG: new region: FuncRegion(id: 12042062918320899150, name: quicksort___scalbnf, fileName: quicksortlibm.c, startLine: 1066, endLine: 1066
+DEBUG: adding quicksort___scalbnf (in module: quicksortlibm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12042062918320899150)
+DEBUG: assigning function quicksort___scalbnf id 12042062918320899150
+DEBUG: new region: FuncRegion(id: 16220380828850420040, name: quicksort___copysignf, fileName: quicksortlibm.c, startLine: 458, endLine: 458
+DEBUG: adding quicksort___copysignf (in module: quicksortlibm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 16220380828850420040)
+DEBUG: assigning function quicksort___copysignf id 16220380828850420040
+DEBUG: new region: FuncRegion(id: 4662427859289503493, name: quicksort___ieee754_rem_pio2f, fileName: quicksortlibm.c, startLine: 538, endLine: 538
+DEBUG: adding quicksort___ieee754_rem_pio2f (in module: quicksortlibm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 4662427859289503493)
+DEBUG: assigning function quicksort___ieee754_rem_pio2f id 4662427859289503493
+DEBUG: new region: FuncRegion(id: 7035557481555283282, name: quicksort___kernel_cosf, fileName: quicksortlibm.c, startLine: 667, endLine: 667
+DEBUG: adding quicksort___kernel_cosf (in module: quicksortlibm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 7035557481555283282)
+DEBUG: assigning function quicksort___kernel_cosf id 7035557481555283282
+DEBUG: new region: FuncRegion(id: 5493277559176314220, name: quicksort___kernel_sinf, fileName: quicksortlibm.c, startLine: 731, endLine: 731
+DEBUG: adding quicksort___kernel_sinf (in module: quicksortlibm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 5493277559176314220)
+DEBUG: assigning function quicksort___kernel_sinf id 5493277559176314220
+DEBUG: new region: FuncRegion(id: 1449162316741551713, name: quicksort___atanf, fileName: quicksortlibm.c, startLine: 821, endLine: 821
+DEBUG: adding quicksort___atanf (in module: quicksortlibm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 1449162316741551713)
+DEBUG: assigning function quicksort___atanf id 1449162316741551713
+DEBUG: new region: FuncRegion(id: 9514518829345731760, name:!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x2eee7d0>, <0x2eeea10>, <0x2eeeec8>, <0x2ef1880>, <0x2f01040>, <0x2eeea10>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/quicksort/quicksortlibm.c] [DW_LANG_C99]
+
+!{!"0x2e\00quicksort___ieee754_powf\00quicksort___ieee754_powf\00\0087\000\001\000\000\00256\000\0092", <0x2eee7d0>, <0x2eeef70>, <0x2eeede0>, null, float (float, float)* @quicksort___ieee754_powf, null, null, <0x2eeea10>} ; [ DW_TAG_subprogram ] [line 87] [def] [scope 92] [quicksort___ieee754_powf]
+
+!{!"0x2e\00quicksort___ieee754_sqrtf\00quicksort___ieee754_sqrtf\00\00357\000\001\000\000\00256\000\00362", <0x2eee7d0>, <0x2eeef70>, <0x2eef300>, null, float (float)* @quicksort___ieee754_sqrtf, null, null, <0x2eeea10>} ; [ DW_TAG_subprogram ] [line 357] [def] [scope 362] [quicksort___ieee754_sqrtf]
+
+!{!"0x2e\00quicksort___copysignf\00quicksort___copysignf\00\00458\000\001\000\000\00256\000\00463", <0x2eee7d0>, <0x2eeef70>, <0x2eeede0>, null, float (float, float)* @quicksort___copysignf, null, null, <0x2eeea10>} ; [ DW_TAG_subprogram ] [line 458] [def] [scope 463] [quicksort___copysignf]
+
+!{!"0x2e\00quicksort___ieee754_rem_pio2f\00quicksort___ieee754_rem_pio2f\00\00538\000\001\000\000\00256\000\00543", <0x2eee7d0>, <0x2eeef70>, <0x2ef5a30>, null, i32 (float, float*)* @quicksort___ieee754_rem_pio2f, null, null, <0x2eeea10>} ; [ DW_TAG_subprogram ] [line 538] [def] [scope 543] [quicksort___ieee754_rem_pio2f]
+
+!{!"0x2e\00quicksort___kernel_cosf\00quicksort___kernel_cosf\00\00667\000\001\000\000\00256\000\00672", <0x2eee7d0>, <0x2eeef70>, <0x2eeede0>, null, float (float, float)* @quicksort___kernel_cosf, null, null, <0x2eeea10>} ; [ DW_TAG_subprogram ] [line 667] [def] [scope 672] [quicksort___kernel_cosf]
+
+!{!"0x2e\00quicksort___kernel_sinf\00quicksort___kernel_sinf\00\00731\000\001\000\000\00256\000\00737", <0x2eee7d0>, <0x2eeef70>, <0x2ef1cc0>, null, float (float, float, i32)* @quicksort___kernel_sinf, null, null, <0x2eeea10>} ; [ DW_TAG_subprogram ] [line 731] [def] [scope 737] [quicksort___kernel_sinf]
+
+!{!"0x2e\00quicksort___atanf\00quicksort___atanf\00\00821\000\001\000\000\00256\000\00826", <0x2eee7d0>, <0x2eeef70>, <0x2eef300>, null, float (float)* @quicksort___atanf, null, null, <0x2eeea10>} ; [ DW_TAG_subprogram ] [line 821] [def] [scope 826] [quicksort___atanf]
+
+!{!"0x2e\00quicksort___cosf\00quicksort___cosf\00\00911\000\001\000\000\00256\000\00916", <0x2eee7d0>, <0x2eeef70>, <0x2eef300>, null, float (float)* @quicksort___cosf, null, null, <0x2eeea10>} ; [ DW_TAG_subprogram ] [line 911] [def] [scope 916] [quicksort___cosf]
+
+!{!"0x2e\00quicksort___sinf\00quicksort___sinf\00\00967\000\001\000\000\00256\000\00972", <0x2eee7d0>, <0x2eeef70>, <0x2eef300>, null, float (float)* @quicksort___sinf, null, null, <0x2eeea10>} ; [ DW_TAG_subprogram ] [line 967] [def] [scope 972] [quicksort___sinf]
+
+!{!"0x2e\00quicksort___fabsf\00quicksort___fabsf\00\001027\000\001\000\000\00256\000\001032", <0x2eee7d0>, <0x2eeef70>, <0x2eef300>, null, float (float)* @quicksort___fabsf, null, null, <0x2eeea10>} ; [ DW_TAG_subprogram ] [line 1027] [def] [scope 1032] [quicksort___fabsf]
+
+!{!"0x2e\00quicksort___scalbnf\00quicksort___scalbnf\00\001066\000\001\000\000\00256\000\001072", <0x2eee7d0>, <0x2eeef70>, <0x2efb3c0>, null, float (float, i32)* @quicksort___scalbnf, null, null, <0x2eeea10>} ; [ DW_TAG_subprogram ] [line 1066] [def] [scope 1072] [quicksort___scalbnf]
+
+!{!"0x2e\00quicksort___isinff\00quicksort___isinff\00\001118\000\001\000\000\00256\000\001119", <0x2eee7d0>, <0x2eeef70>, <0x2efb600>, null, i32 (float)* @quicksort___isinff, null, null, <0x2eeea10>} ; [ DW_TAG_subprogram ] [line 1118] [def] [scope 1119] [quicksort___isinff]
+
+!{!"0x34\00quicksort_one\00quicksort_one\00\0032\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_one, null} ; [ DW_TAG_variable ] [quicksort_one] [line 32] [def]
+
+!{!"0x34\00quicksort_half\00quicksort_half\00\0033\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_half, null} ; [ DW_TAG_variable ] [quicksort_half] [line 33] [def]
+
+!{!"0x34\00quicksort_zero\00quicksort_zero\00\0034\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_zero, null} ; [ DW_TAG_variable ] [quicksort_zero] [line 34] [def]
+
+!{!"0x34\00quicksort_huge\00quicksort_huge\00\0035\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_huge, null} ; [ DW_TAG_variable ] [quicksort_huge] [line 35] [def]
+
+!{!"0x34\00quicksort_tiny\00quicksort_tiny\00\0036\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_tiny, null} ; [ DW_TAG_variable ] [quicksort_tiny] [line 36] [def]
+
+!{!"0x34\00quicksort_two\00quicksort_two\00\0037\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_two, null} ; [ DW_TAG_variable ] [quicksort_two] [line 37] [def]
+
+!{!"0x34\00quicksort_two24\00quicksort_two24\00\0038\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_two24, null} ; [ DW_TAG_variable ] [quicksort_two24] [line 38] [def]
+
+!{!"0x34\00quicksort_bp\00quicksort_bp\00\0060\000\001", null, <0x2eeef70>, <0x2effba0>, [2 x float]* @quicksort_bp, null} ; [ DW_TAG_variable ] [quicksort_bp] [line 60] [def]
+
+!{!"0x34\00quicksort_dp_h\00quicksort_dp_h\00\0061\000\001", null, <0x2eeef70>, <0x2effba0>, [2 x float]* @quicksort_dp_h, null} ; [ DW_TAG_variable ] [quicksort_dp_h] [line 61] [def]
+
+!{!"0x34\00quicksort_dp_l\00quicksort_dp_l\00\0062\000\001", null, <0x2eeef70>, <0x2effba0>, [2 x float]* @quicksort_dp_l, null} ; [ DW_TAG_variable ] [quicksort_dp_l] [line 62] [def]
+
+!{!"0x34\00quicksort_L1\00quicksort_L1\00\0063\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_L1, null} ; [ DW_TAG_variable ] [quicksort_L1] [line 63] [def]
+
+!{!"0x34\00quicksort_L2\00quicksort_L2\00\0064\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_L2, null} ; [ DW_TAG_variable ] [quicksort_L2] [line 64] [def]
+
+!{!"0x34\00quicksort_L3\00quicksort_L3\00\0065\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_L3, null} ; [ DW_TAG_variable ] [quicksort_L3] [line 65] [def]
+
+!{!"0x34\00quicksort_L4\00quicksort_L4\00\0066\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_L4, null} ; [ DW_TAG_variable ] [quicksort_L4] [line 66] [def]
+
+!{!"0x34\00quicksort_L5\00quicksort_L5\00\0067\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_L5, null} ; [ DW_TAG_variable ] [quicksort_L5] [line 67] [def]
+
+!{!"0x34\00quicksort_L6\00quicksort_L6\00\0068\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_L6, null} ; [ DW_TAG_variable ] [quicksort_L6] [line 68] [def]
+
+!{!"0x34\00quicksort_P1\00quicksort_P1\00\0069\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_P1, null} ; [ DW_TAG_variable ] [quicksort_P1] [line 69] [def]
+
+!{!"0x34\00quicksort_P2\00quicksort_P2\00\0070\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_P2, null} ; [ DW_TAG_variable ] [quicksort_P2] [line 70] [def]
+
+!{!"0x34\00quicksort_P3\00quicksort_P3\00\0071\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_P3, null} ; [ DW_TAG_variable ] [quicksort_P3] [line 71] [def]
+
+!{!"0x34\00quicksort_P4\00quicksort_P4\00\0072\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_P4, null} ; [ DW_TAG_variable ] [quicksort_P4] [line 72] [def]
+
+!{!"0x34\00quicksort_P5\00quicksort_P5\00\0073\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_P5, null} ; [ DW_TAG_variable ] [quicksort_P5] [line 73] [def]
+
+!{!"0x34\00quicksort_lg2\00quicksort_lg2\00\0074\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_lg2, null} ; [ DW_TAG_variable ] [quicksort_lg2] [line 74] [def]
+
+!{!"0x34\00quicksort_lg2_h\00quicksort_lg2_h\00\0075\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_lg2_h, null} ; [ DW_TAG_variable ] [quicksort_lg2_h] [line 75] [def]
+
+!{!"0x34\00quicksort_lg2_l\00quicksort_lg2_l\00\0076\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_lg2_l, null} ; [ DW_TAG_variable ] [quicksort_lg2_l] [line 76] [def]
+
+!{!"0x34\00quicksort_ovt\00quicksort_ovt\00\0077\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_ovt, null} ; [ DW_TAG_variable ] [quicksort_ovt] [line 77] [def]
+
+!{!"0x34\00quicksort_cp\00quicksort_cp\00\0078\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_cp, null} ; [ DW_TAG_variable ] [quicksort_cp] [line 78] [def]
+
+!{!"0x34\00quicksort_cp_h\00quicksort_cp_h\00\0079\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_cp_h, null} ; [ DW_TAG_variable ] [quicksort_cp_h] [line 79] [def]
+
+!{!"0x34\00quicksort_cp_l\00quicksort_cp_l\00\0080\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_cp_l, null} ; [ DW_TAG_variable ] [quicksort_cp_l] [line 80] [def]
+
+!{!"0x34\00quicksort_ivln2\00quicksort_ivln2\00\0081\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_ivln2, null} ; [ DW_TAG_variable ] [quicksort_ivln2] [line 81] [def]
+
+!{!"0x34\00quicksort_ivln2_h\00quicksort_ivln2_h\00\0082\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_ivln2_h, null} ; [ DW_TAG_variable ] [quicksort_ivln2_h] [line 82] [def]
+
+!{!"0x34\00quicksort_ivln2_l\00quicksort_ivln2_l\00\0083\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_ivln2_l, null} ; [ DW_TAG_variable ] [quicksort_ivln2_l] [line 83] [def]
+
+!{!"0x34\00quicksort_npio2_hw\00quicksort_npio2_hw\00\00500\000\001", null, <0x2eeef70>, <0x2f091b0>, [32 x i32]* @quicksort_npio2_hw, null} ; [ DW_TAG_variable ] [quicksort_npio2_hw] [line 500] [def]
+
+!{!"0x34\00quicksort_invpio2\00quicksort_invpio2\00\00528\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_invpio2, null} ; [ DW_TAG_variable ] [quicksort_invpio2] [line 528] [def]
+
+!{!"0x34\00quicksort_pio2_1\00quicksort_pio2_1\00\00529\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_pio2_1, null} ; [ DW_TAG_variable ] [quicksort_pio2_1] [line 529] [def]
+
+!{!"0x34\00quicksort_pio2_1t\00quicksort_pio2_1t\00\00530\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_pio2_1t, null} ; [ DW_TAG_variable ] [quicksort_pio2_1t] [line 530] [def]
+
+!{!"0x34\00quicksort_pio2_2\00quicksort_pio2_2\00\00531\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_pio2_2, null} ; [ DW_TAG_variable ] [quicksort_pio2_2] [line 531] [def]
+
+!{!"0x34\00quicksort_pio2_2t\00quicksort_pio2_2t\00\00532\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_pio2_2t, null} ; [ DW_TAG_variable ] [quicksort_pio2_2t] [line 532] [def]
+
+!{!"0x34\00quicksort_pio2_3\00quicksort_pio2_3\00\00533\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_pio2_3, null} ; [ DW_TAG_variable ] [quicksort_pio2_3] [line 533] [def]
+
+!{!"0x34\00quicksort_pio2_3t\00quicksort_pio2_3t\00\00534\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_pio2_3t, null} ; [ DW_TAG_variable ] [quicksort_pio2_3t] [line 534] [def]
+
+!{!"0x34\00quicksort_C1\00quicksort_C1\00\00659\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_C1, null} ; [ DW_TAG_variable ] [quicksort_C1] [line 659] [def]
+
+!{!"0x34\00quicksort_C2\00quicksort_C2\00\00660\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_C2, null} ; [ DW_TAG_variable ] [quicksort_C2] [line 660] [def]
+
+!{!"0x34\00quicksort_C3\00quicksort_C3\00\00661\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_C3, null} ; [ DW_TAG_variable ] [quicksort_C3] [line 661] [def]
+
+!{!"0x34\00quicksort_C4\00quicksort_C4\00\00662\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_C4, null} ; [ DW_TAG_variable ] [quicksort_C4] [line 662] [def]
+
+!{!"0x34\00quicksort_C5\00quicksort_C5\00\00663\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_C5, null} ; [ DW_TAG_variable ] [quicksort_C5] [line 663] [def]
+
+!{!"0x34\00quicksort_C6\00quicksort_C6\00\00664\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_C6, null} ; [ DW_TAG_variable ] [quicksort_C6] [line 664] [def]
+
+!{!"0x34\00quicksort_S1\00quicksort_S1\00\00722\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_S1, null} ; [ DW_TAG_variable ] [quicksort_S1] [line 722] [def]
+
+!{!"0x34\00quicksort_S2\00quicksort_S2\00\00723\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_S2, null} ; [ DW_TAG_variable ] [quicksort_S2] [line 723] [def]
+
+!{!"0x34\00quicksort_S3\00quicksort_S3\00\00724\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_S3, null} ; [ DW_TAG_variable ] [quicksort_S3] [line 724] [def]
+
+!{!"0x34\00quicksort_S4\00quicksort_S4\00\00725\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_S4, null} ; [ DW_TAG_variable ] [quicksort_S4] [line 725] [def]
+
+!{!"0x34\00quicksort_S5\00quicksort_S5\00\00726\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_S5, null} ; [ DW_TAG_variable ] [quicksort_S5] [line 726] [def]
+
+!{!"0x34\00quicksort_S6\00quicksort_S6\00\00727\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_S6, null} ; [ DW_TAG_variable ] [quicksort_S6] [line 727] [def]
+
+!{!"0x34\00quicksort_atanhi\00quicksort_atanhi\00\00778\000\001", null, <0x2eeef70>, <0x2f0b030>, [4 x float]* @quicksort_atanhi, null} ; [ DW_TAG_variable ] [quicksort_atanhi] [line 778] [def]
+
+!{!"0x34\00quicksort_atanlo\00quicksort_atanlo\00\00790\000\001", null, <0x2eeef70>, <0x2f0b030>, [4 x float]* @quicksort_atanlo, null} ; [ DW_TAG_variable ] [quicksort_atanlo] [line 790] [def]
+
+!{!"0x34\00quicksort_aT\00quicksort_aT\00\00802\000\001", null, <0x2eeef70>, <0x2f00390>, [11 x float]* @quicksort_aT, null} ; [ DW_TAG_variable ] [quicksort_aT] [line 802] [def]
+
+!{!"0x34\00quicksort_two25\00quicksort_two25\00\001062\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_two25, null} ; [ DW_TAG_variable ] [quicksort_two25] [line 1062] [def]
+
+!{!"0x34\00quicksort_twom25\00quicksort_twom25\00\001063\000\001", null, <0x2eeef70>, <0x2ef1da0>, float* @quicksort_twom25, null} ; [ DW_TAG_variable ] [quicksort_twom25] [line 1063] [def]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x2eeed78>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from float]
+
+!{!"0x24\00float\000\0032\0032\000\000\004", null, null} ; [ DW_TAG_base_type ] [float] [line 0, size 32, align 32, offset 0, enc DW_ATE_float]
+
+!{!"0x1\00\000\0064\0032\000\000\000", null, null, <0x2ef1da0>, <0x2ef19f8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 64, align 32, offset 0] [from ]
+
+!{!"0x1\00\000\001024\0032\000\000\000", null, null, <0x2f090e0>, <0x2f09148>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 1024, align 32, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x2eeee88>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from int]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x1\00\000\00128\0032\000\000\000", null, null, <0x2ef1da0>, <0x2f0afc8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 128, align 32, offset 0] [from ]
+
+!{!"0x1\00\000\00352\0032\000\000\000", null, null, <0x2ef1da0>, <0x2f00328>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 352, align 32, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2eeeff8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2eeec60>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2ef59c8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2eeed78>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from float]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2ef1c50>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2ef1de8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2efb590>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x24\00unsigned int\000\0032\0032\000\000\007", null, null} ; [ DW_TAG_base_type ] [unsigned int] [line 0, size 32, align 32, offset 0, enc DW_ATE_unsigned]
+
+Meta data for 1686165705869508592
+Meta data for 7076553978141425427
+ quicksort___cosf, fileName: quicksortlibm.c, startLine: 911, endLine: 911
+DEBUG: adding quicksort___cosf (in module: quicksortlibm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 9514518829345731760)
+DEBUG: assigning function quicksort___cosf id 9514518829345731760
+DEBUG: new region: FuncRegion(id: 13410722968848597271, name: quicksort___sinf, fileName: quicksortlibm.c, startLine: 967, endLine: 967
+DEBUG: adding quicksort___sinf (in module: quicksortlibm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 13410722968848597271)
+DEBUG: assigning function quicksort___sinf id 13410722968848597271
+DEBUG: found 12 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: quicksort___ieee754_powf is 17355950079714156337
+DEBUG: found 0 loops in function quicksort___ieee754_powf
+DEBUG: region name to id: quicksort___isinff is 2206518859589336894
+DEBUG: found 0 loops in function quicksort___isinff
+DEBUG: region name to id: quicksort___ieee754_sqrtf is 6462360663831658816
+DEBUG: found 2 loops in function quicksort___ieee754_sqrtf
+DEBUG: assigning id = 1686165705869508592 to loop with the following BBs:
+	while.cond while.body if.then30 if.end34 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5034427988374457111
+DEBUG: assigning id = 5034427988374457111 to body of loop
+DEBUG: assigning id = 7076553978141425427 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10571134371530153847
+DEBUG: assigning id = 10571134371530153847 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: quicksort___fabsf is 12190362897517525394
+DEBUG: found 0 loops in function quicksort___fabsf
+DEBUG: region name to id: quicksort___scalbnf is 12042062918320899150
+DEBUG: found 0 loops in function quicksort___scalbnf
+DEBUG: region name to id: quicksort___copysignf is 16220380828850420040
+DEBUG: found 0 loops in function quicksort___copysignf
+DEBUG: region name to id: quicksort___ieee754_rem_pio2f is 4662427859289503493
+DEBUG: found 0 loops in function quicksort___ieee754_rem_pio2f
+DEBUG: region name to id: quicksort___kernel_cosf is 7035557481555283282
+DEBUG: found 0 loops in function quicksort___kernel_cosf
+DEBUG: region name to id: quicksort___kernel_sinf is 5493277559176314220
+DEBUG: found 0 loops in function quicksort___kernel_sinf
+DEBUG: region name to id: quicksort___atanf is 1449162316741551713
+DEBUG: found 0 loops in function quicksort___atanf
+DEBUG: region name to id: quicksort___cosf is 9514518829345731760
+DEBUG: found 0 loops in function quicksort___cosf
+DEBUG: region name to id: quicksort___sinf is 13410722968848597271
+DEBUG: found 0 loops in function quicksort___sinf
+DEBUG: Writing kremlib calls to quicksortlibm.kdump
+INFO: dumping function: quicksort___ieee754_powf
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: quicksort___isinff
+INFO: dumping function: quicksort___ieee754_sqrtf
+INFO: dumping function: quicksort___fabsf
+INFO: dumping function: quicksort___scalbnf
+INFO: dumping function: quicksort___copysignf
+INFO: dumping function: quicksort___ieee754_rem_pio2f
+INFO: dumping function: quicksort___kernel_cosf
+INFO: dumping function: quicksort___kernel_sinf
+INFO: dumping function: quicksort___atanf
+INFO: dumping function: quicksort___cosf
+INFO: dumping function: quicksort___sinf
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

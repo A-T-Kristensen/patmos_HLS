@@ -1,0 +1,9 @@
+FUNC: main
+	1 : 19 : trunc
+	4 : ?? : phi
+	2 : ?? : phi
+	3 : 18 : icmp
+	6 : 18 : add
+	5 : 23 : call
+	7 : 24 : icmp
+

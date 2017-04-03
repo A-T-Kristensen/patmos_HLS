@@ -1,0 +1,164 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x3a4e940>, <0x3a4e520>, <0x3a4e520>, <0x3a57db8>, <0x3a59d48>, <0x3a4e520>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/matrix1/matrix1.c] [DW_LANG_C99]
+
+!{!"0x2e\00matrix1_pin_down\00matrix1_pin_down\00\0091\000\001\000\000\00256\000\0092", <0x3a4e940>, <0x3a56910>, <0x3a56b10>, null, void (i32*, i32*, i32*)* @matrix1_pin_down, null, null, <0x3a4e520>} ; [ DW_TAG_subprogram ] [line 91] [def] [scope 92] [matrix1_pin_down]
+
+!{!"0x2e\00matrix1_init\00matrix1_init\00\00110\000\001\000\000\00256\000\00111", <0x3a4e940>, <0x3a56910>, <0x3a57840>, null, void ()* @matrix1_init, null, null, <0x3a4e520>} ; [ DW_TAG_subprogram ] [line 110] [def] [scope 111] [matrix1_init]
+
+!{!"0x2e\00matrix1_return\00matrix1_return\00\00119\000\001\000\000\00256\000\00120", <0x3a4e940>, <0x3a56910>, <0x3a57a40>, null, i32 ()* @matrix1_return, null, null, <0x3a4e520>} ; [ DW_TAG_subprogram ] [line 119] [def] [scope 120] [matrix1_return]
+
+!{!"0x2e\00matrix1_main\00matrix1_main\00\00136\000\001\000\000\00256\000\00137", <0x3a4e940>, <0x3a56910>, <0x3a57840>, null, void ()* @matrix1_main, null, null, <0x3a4e520>} ; [ DW_TAG_subprogram ] [line 136] [def] [scope 137] [matrix1_main]
+
+!{!"0x2e\00main\00main\00\00163\000\001\000\000\00256\000\00164", <0x3a4e940>, <0x3a56910>, <0x3a57a40>, null, i32 ()* @main, null, null, <0x3a4e520>} ; [ DW_TAG_subprogram ] [line 163] [def] [scope 164] [main]
+
+!{!"0x34\00matrix1_A\00matrix1_A\00\0082\000\001", null, <0x3a56910>, <0x3a55130>, [100 x i32]* @matrix1_A, null} ; [ DW_TAG_variable ] [matrix1_A] [line 82] [def]
+
+!{!"0x34\00matrix1_B\00matrix1_B\00\0083\000\001", null, <0x3a56910>, <0x3a55130>, [100 x i32]* @matrix1_B, null} ; [ DW_TAG_variable ] [matrix1_B] [line 83] [def]
+
+!{!"0x34\00matrix1_C\00matrix1_C\00\0084\000\001", null, <0x3a56910>, <0x3a55130>, [100 x i32]* @matrix1_C, null} ; [ DW_TAG_variable ] [matrix1_C] [line 84] [def]
+
+!{!"0x1\00\000\003200\0032\000\000\000", null, null, <0x3a56aa8>, <0x3a57168>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 3200, align 32, offset 0] [from int]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3a554c0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x3a56aa8>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from int]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3a57048>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3a57968>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+Meta data for 13510782823788397232
+Meta data for 15145023254222409426
+Meta data for 5558804434640526333
+Meta data for 3817131101506726215
+Meta data for 7328856950483508032
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 218833809991105460, name: matrix1_pin_down, fileName: matrix1.c, startLine: 91, endLine: 91
+DEBUG: adding matrix1_pin_down (in module: matrix1.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 218833809991105460)
+DEBUG: assigning function matrix1_pin_down id 218833809991105460
+DEBUG: new region: FuncRegion(id: 2519069398975355753, name: matrix1_init, fileName: matrix1.c, startLine: 110, endLine: 110
+DEBUG: adding matrix1_init (in module: matrix1.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2519069398975355753)
+DEBUG: assigning function matrix1_init id 2519069398975355753
+DEBUG: new region: FuncRegion(id: 6418430184665827294, name: matrix1_return, fileName: matrix1.c, startLine: 119, endLine: 119
+DEBUG: adding matrix1_return (in module: matrix1.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6418430184665827294)
+DEBUG: assigning function matrix1_return id 6418430184665827294
+DEBUG: new region: FuncRegion(id: 5001710556977091854, name: matrix1_main, fileName: matrix1.c, startLine: 136, endLine: 136
+DEBUG: adding matrix1_main (in module: matrix1.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 5001710556977091854)
+DEBUG: assigning function matrix1_main id 5001710556977091854
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: matrix1.c, startLine: 163, endLine: 163
+DEBUG: adding main (in module: matrix1.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 5 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: matrix1_pin_down is 218833809991105460
+DEBUG: found 3 loops in function matrix1_pin_down
+DEBUG: assigning id = 13510782823788397232 to loop with the following BBs:
+	for.cond9 for.body11 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8420872655265872697
+DEBUG: assigning id = 8420872655265872697 to body of loop
+DEBUG: assigning id = 15145023254222409426 to loop with the following BBs:
+	for.cond1 for.body3 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3317243046342427371
+DEBUG: assigning id = 3317243046342427371 to body of loop
+DEBUG: assigning id = 5558804434640526333 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 1712837850262572665
+DEBUG: assigning id = 1712837850262572665 to body of loop
+DEBUG: for.cond9 has 1 possible loop exit points
+DEBUG: 	target #0: for.end16
+DEBUG: for.cond1 has 1 possible loop exit points
+DEBUG: 	target #0: for.end8
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: matrix1_init is 2519069398975355753
+DEBUG: found 0 loops in function matrix1_init
+DEBUG: region name to id: matrix1_return is 6418430184665827294
+DEBUG: found 1 loops in function matrix1_return
+DEBUG: assigning id = 3817131101506726215 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14269685865618206932
+DEBUG: assigning id = 14269685865618206932 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: matrix1_main is 5001710556977091854
+DEBUG: found 3 loops in function matrix1_main
+DEBUG: assigning id = 7328856950483508032 to loop with the following BBs:
+	for.conMeta data for 6932584850476107329
+Meta data for 8495660941593308243
+d for.body for.cond1 for.inc13 for.body3 for.cond4 for.end for.body6 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3421145710261664726
+DEBUG: assigning id = 3421145710261664726 to body of loop
+DEBUG: assigning id = 6932584850476107329 to loop with the following BBs:
+	for.cond1 for.body3 for.cond4 for.end for.body6 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7157920203786584488
+DEBUG: assigning id = 7157920203786584488 to body of loop
+DEBUG: assigning id = 8495660941593308243 to loop with the following BBs:
+	for.cond4 for.body6 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7167892185553710423
+DEBUG: assigning id = 7167892185553710423 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end15
+DEBUG: for.cond1 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc13
+DEBUG: for.cond4 has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to matrix1.kdump
+INFO: dumping function: matrix1_pin_down
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: matrix1_init
+INFO: dumping function: matrix1_return
+INFO: dumping function: matrix1_main
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

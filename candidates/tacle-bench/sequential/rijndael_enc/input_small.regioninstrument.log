@@ -1,0 +1,23 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x24a8dd0>, <0x24a6d90>, <0x24a6d90>, <0x24a6d90>, <0x24a7b38>, <0x24a6d90>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/sequential/rijndael_enc/input_small.c] [DW_LANG_C99]
+
+!{!"0x34\00rijndael_enc_data\00rijndael_enc_data\00\001\000\001", null, <0x24a6ea0>, <0x24ab4c0>, [31369 x i8]* @rijndael_enc_data, null} ; [ DW_TAG_variable ] [rijndael_enc_data] [line 1] [def]
+
+!{!"0x1\00\000\00250952\008\000\000\000", null, null, <0x24ab3f8>, <0x24ab458>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 250952, align 8, offset 0] [from unsigned char]
+
+!{!"0x24\00unsigned char\000\008\008\000\000\008", null, null} ; [ DW_TAG_base_type ] [unsigned char] [line 0, size 8, align 8, offset 0, enc DW_ATE_unsigned_char]
+
+INFO: Loop bodies will be given their own region id
+DEBUG: found 0 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: Writing kremlib calls to input_small.kdump
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

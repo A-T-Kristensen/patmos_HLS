@@ -1,0 +1,10 @@
+FUNC: bitcount_bit_count
+	1: ARG : 0
+	6 : 29 : icmp
+	3 : ?? : phi
+	4 : ?? : phi
+	8 : 32 : add
+	5 : 33 : and
+	7 : 33 : icmp
+	2 : ?? : phi
+

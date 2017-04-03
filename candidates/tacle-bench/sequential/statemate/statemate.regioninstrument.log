@@ -1,0 +1,359 @@
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 2356133418581303448, name: statemate_init, fileName: statemate.c, startLine: 198, endLine: 198
+DEBUG: adding statemate_init (in module: statemate.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2356133418581303448)
+DEBUG: assigning function statemate_init id 2356133418581303448
+DEBUG: new region: FuncRegion(id: 4393124986920960315, name: statemate_interface, fileName: statemate.c, startLine: 226, endLine: 226
+DEBUG: adding statemate_interface (in module: statemate.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 4393124986920960315)
+DEBUG: assigning function statemate_interface id 4393124986920960315
+DEBUG: new region: FuncRegion(id: 2754662507158135619, name: statemate_generic_KINDERSICHERUNG_CTRL, fileName: statemate.c, startLine: 271, endLine: 271
+DEBUG: adding statemate_generic_KINDERSICHERUNG_CTRL (in module: statemate.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2754662507158135619)
+DEBUG: assigning function statemate_generic_KINDERSICHERUNG_CTRL id 2754662507158135619
+DEBUG: new region: FuncRegion(id: 16164226673054806028, name: statemate_generic_FH_TUERMODUL_CTRL, fileName: statemate.c, startLine: 449, endLine: 449
+DEBUG: adding statemate_generic_FH_TUERMODUL_CTRL (in module: statemate.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 16164226673054806028)
+DEBUG: assigning function statemate_generic_FH_TUERMODUL_CTRL id 16164226673054806028
+DEBUG: new region: FuncRegion(id: 12295908176876654253, name: statemate_generic_EINKLEMMSCHUTZ_CTRL, fileName: statemate.c, startLine: 859, endLine: 859
+DEBUG: adding statemate_generic_EINKLEMMSCHUTZ_CTRL (in module: statemate.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12295908176876654253)
+DEBUG: assigning function statemate_generic_EINKLEMMSCHUTZ_CTRL id 12295908176876654253
+DEBUG: new region: FuncRegion(id: 5591034574545857414, name: statemate_generic_BLOCK_ERKENNUNG_CTRL, fileName: statemate.c, startLine: 897, endLine: 897
+DEBUG: adding statemate_generic_BLOCK_ERKENNUNG_CTRL (in module: statemate.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 5591034574545857414)
+DEBUG: assigning function statemate_generic_BLOCK_ERKENNUNG_CTRL id 5591034574545857414
+DEBUG: new region: FuncRegion(id: 12748825967272078795, name: statemate_FH_DU, fileName: statemate.c, startLine: 996, endLine: 996
+DEBUG: adding statemate_FH_DU (in module: statemate.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12748825967272078795)
+DEBUG: assigning function statemate_FH_DU id 12748825967272078795
+DEBUG: new region: FuncRegion(id: 1435996922497610194, name: statemate_return, fileName: statemate.c, startLine: 1256, endLine: 1256
+DEBUG: adding statemate_return (in module: statemate.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 1435996922497610194)
+DEBUG: assigning function statemate_return id 1435996922497610194
+DEBUG: new region: FuncRegion(id: 11551982057898432374, name: statemate_main, fileName: statemate.c, startLine: 1266, endLine: 1266
+DEBUG: adding statemate_main (in module: statemate.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 11551982057898432374)
+DEBUG: assigning function statemate_main id 11551982057898432374
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: statemate.c, startLine: 1272, endLine: 1272
+DEBUG: adding main (in module: statemate.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 10 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDei!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x29277d0>, <0x2921150>, <0x2927798>, <0x292c100>, <0x2953400>, <0x2921150>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/sequential/statemate/statemate.c] [DW_LANG_C99]
+
+!{!"0x2e\00statemate_init\00statemate_init\00\00198\000\001\000\000\00256\000\00199", <0x29277d0>, <0x2927810>, <0x29278f0>, null, void ()* @statemate_init, null, null, <0x2921150>} ; [ DW_TAG_subprogram ] [line 198] [def] [scope 199] [statemate_init]
+
+!{!"0x2e\00statemate_interface\00statemate_interface\00\00226\000\001\000\000\00256\000\00227", <0x29277d0>, <0x2927810>, <0x29278f0>, null, void ()* @statemate_interface, null, null, <0x2921150>} ; [ DW_TAG_subprogram ] [line 226] [def] [scope 227] [statemate_interface]
+
+!{!"0x2e\00statemate_generic_KINDERSICHERUNG_CTRL\00statemate_generic_KINDERSICHERUNG_CTRL\00\00271\000\001\000\000\00256\000\00272", <0x29277d0>, <0x2927810>, <0x29278f0>, null, void ()* @statemate_generic_KINDERSICHERUNG_CTRL, null, null, <0x2921150>} ; [ DW_TAG_subprogram ] [line 271] [def] [scope 272] [statemate_generic_KINDERSICHERUNG_CTRL]
+
+!{!"0x2e\00statemate_generic_FH_TUERMODUL_CTRL\00statemate_generic_FH_TUERMODUL_CTRL\00\00449\000\001\000\000\00256\000\00450", <0x29277d0>, <0x2927810>, <0x29278f0>, null, void ()* @statemate_generic_FH_TUERMODUL_CTRL, null, null, <0x2921150>} ; [ DW_TAG_subprogram ] [line 449] [def] [scope 450] [statemate_generic_FH_TUERMODUL_CTRL]
+
+!{!"0x2e\00statemate_generic_EINKLEMMSCHUTZ_CTRL\00statemate_generic_EINKLEMMSCHUTZ_CTRL\00\00859\000\001\000\000\00256\000\00860", <0x29277d0>, <0x2927810>, <0x29278f0>, null, void ()* @statemate_generic_EINKLEMMSCHUTZ_CTRL, null, null, <0x2921150>} ; [ DW_TAG_subprogram ] [line 859] [def] [scope 860] [statemate_generic_EINKLEMMSCHUTZ_CTRL]
+
+!{!"0x2e\00statemate_generic_BLOCK_ERKENNUNG_CTRL\00statemate_generic_BLOCK_ERKENNUNG_CTRL\00\00897\000\001\000\000\00256\000\00898", <0x29277d0>, <0x2927810>, <0x29278f0>, null, void ()* @statemate_generic_BLOCK_ERKENNUNG_CTRL, null, null, <0x2921150>} ; [ DW_TAG_subprogram ] [line 897] [def] [scope 898] [statemate_generic_BLOCK_ERKENNUNG_CTRL]
+
+!{!"0x2e\00statemate_FH_DU\00statemate_FH_DU\00\00996\000\001\000\000\00256\000\00997", <0x29277d0>, <0x2927810>, <0x29278f0>, null, void ()* @statemate_FH_DU, null, null, <0x2921150>} ; [ DW_TAG_subprogram ] [line 996] [def] [scope 997] [statemate_FH_DU]
+
+!{!"0x2e\00statemate_return\00statemate_return\00\001256\000\001\000\000\00256\000\001257", <0x29277d0>, <0x2927810>, <0x292bc60>, null, i32 ()* @statemate_return, null, null, <0x2921150>} ; [ DW_TAG_subprogram ] [line 1256] [def] [scope 1257] [statemate_return]
+
+!{!"0x2e\00statemate_main\00statemate_main\00\001266\000\001\000\000\00256\000\001267", <0x29277d0>, <0x2927810>, <0x29278f0>, null, void ()* @statemate_main, null, null, <0x2921150>} ; [ DW_TAG_subprogram ] [line 1266] [def] [scope 1267] [statemate_main]
+
+!{!"0x2e\00main\00main\00\001272\000\001\000\000\00256\000\001273", <0x29277d0>, <0x2927810>, <0x292bc60>, null, i32 ()* @main, null, null, <0x2921150>} ; [ DW_TAG_subprogram ] [line 1272] [def] [scope 1273] [main]
+
+!{!"0x34\00statemate_bitlist\00statemate_bitlist\00\0078\001\001", null, <0x2927810>, <0x292c1f0>, [64 x i8]* @statemate_bitlist, null} ; [ DW_TAG_variable ] [statemate_bitlist] [line 78] [local] [def]
+
+!{!"0x34\00statemate_tm_entered_EINSCHALTSTROM_MESSEN_BLOCK_ERKENNUNG_CTRLch_BLOCK_ERKENNUNG_CTRL__N_copy\00statemate_tm_entered_EINSCHALTSTROM_MESSEN_BLOCK_ERKENNUNG_CTRLch_BLOCK_ERKENNUNG_CTRL__N_copy\00\0080\000\001", null, <0x2927810>, <0x29211e8>, i64* @statemate_tm_entered_EINSCHALTSTROM_MESSEN_BLOCK_ERKENNUNG_CTRLch_BLOCK_ERKENNUNG_CTRL__N_copy, null} ; [ DW_TAG_variable ] [statemate_tm_entered_EINSCHALTSTROM_MESSEN_BLOCK_ERKENNUNG_CTRLch_BLOCK_ERKENNUNG_CTRL__N_copy] [line 80] [def]
+
+!{!"0x34\00statemate_tm_entered_WIEDERHOLSPERRE_FH_TUERMODUL_CTRLexited_BEREIT_FH_TUERMODUL_CTRL\00statemate_tm_entered_WIEDERHOLSPERRE_FH_TUERMODUL_CTRLexited_BEREIT_FH_TUERMODUL_CTRL\00\0082\000\001", null, <0x2927810>, <0x29211e8>, i64* @statemate_tm_entered_WIEDERHOLSPERRE_FH_TUERMODUL_CTRLexited_BEREIT_FH_TUERMODUL_CTRL, null} ; [ DW_TAG_variable ] [statemate_tm_entered_WIEDERHOLSPERRE_FH_TUERMODUL_CTRLexited_BEREIT_FH_TUERMODUL_CTRL] [line 82] [def]
+
+!{!"0x34\00statemate_tm_entered_WIEDERHOLSPERRE_FH_TUERMODUL_CTRL\00statemate_tm_entered_WIEDERHOLSPERRE_FH_TUERMODUL_CTRL\00\0083\000\001", null, <0x2927810>, <0x29211e8>, i64* @statemate_tm_entered_WIEDERHOLSPERRE_FH_TUERMODUL_CTRL, null} ; [ DW_TAG_variable ] [statemate_tm_entered_WIEDERHOLSPERRE_FH_TUERMODUL_CTRL] [line 83] [def]
+
+!{!"0x34\00statemate_sc_FH_TUERMODUL_CTRL_2375_2\00statemate_sc_FH_TUERMODUL_CTRL_2375_2\00\0084\000\001", null, <0x2927810>, <0x29211e8>, i64* @statemate_sc_FH_TUERMODUL_CTRL_2375_2, null} ; [ DW_TAG_variable ] [statemate_sc_FH_TUERMODUL_CTRL_2375_2] [line 84] [def]
+
+!{!"0x34\00statemate_sc_FH_TUERMODUL_CTRL_2352_1\00statemate_sc_FH_TUERMODUL_CTRL_2352_1\00\0085\000\001", null, <0x2927810>, <0x29211e8>, i64* @statemate_sc_FH_TUERMODUL_CTRL_2352_1, null} ; [ DW_TAG_variable ] [statemate_sc_FH_TUERMODUL_CTRL_2352_1] [line 85] [def]
+
+!{!"0x34\00statemate_sc_FH_TUERMODUL_CTRL_2329_1\00statemate_sc_FH_TUERMODUL_CTRL_2329_1\00\0086\000\001", null, <0x2927810>, <0x29211e8>, i64* @statemate_sc_FH_TUERMODUL_CTRL_2329_1, null} ; [ DW_TAG_variable ] [statemate_sc_FH_TUERMODUL_CTRL_2329_1] [line 86] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL_CTRL__N\00statemate_FH_TUERMODUL_CTRL__N\00\0087\000\001", null, <0x2927810>, <0x2928bd8>, i32* @statemate_FH_TUERMODUL_CTRL__N, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL_CTRL__N] [line 87] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL_CTRL__N_old\00statemate_FH_TUERMODUL_CTRL__N_old\00\0088\000\001", null, <0x2927810>, <0x2928bd8>, i32* @statemate_FH_TUERMODUL_CTRL__N_old, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL_CTRL__N_old] [line 88] [def]
+
+!{!"0x34\00statemate_sc_FH_TUERMODUL_CTRL_1781_10\00statemate_sc_FH_TUERMODUL_CTRL_1781_10\00\0089\000\001", null, <0x2927810>, <0x29211e8>, i64* @statemate_sc_FH_TUERMODUL_CTRL_1781_10, null} ; [ DW_TAG_variable ] [statemate_sc_FH_TUERMODUL_CTRL_1781_10] [line 89] [def]
+
+!{!"0x34\00statemate_sc_FH_TUERMODUL_CTRL_1739_10\00statemate_sc_FH_TUERMODUL_CTRL_1739_10\00\0090\000\001", null, <0x2927810>, <0x29211e8>, i64* @statemate_sc_FH_TUERMODUL_CTRL_1739_10, null} ; [ DW_TAG_variable ] [statemate_sc_FH_TUERMODUL_CTRL_1739_10] [line 90] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__POSITION\00statemate_FH_TUERMODUL__POSITION\00\0091\000\001", null, <0x2927810>, <0x2928bd8>, i32* @statemate_FH_TUERMODUL__POSITION, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__POSITION] [line 91] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__I_EIN\00statemate_FH_TUERMODUL__I_EIN\00\0092\000\001", null, <0x2927810>, <0x2928bd8>, i32* @statemate_FH_TUERMODUL__I_EIN, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__I_EIN] [line 92] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__I_EIN_old\00statemate_FH_TUERMODUL__I_EIN_old\00\0093\000\001", null, <0x2927810>, <0x2928bd8>, i32* @statemate_FH_TUERMODUL__I_EIN_old, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__I_EIN_old] [line 93] [def]
+
+!{!"0x34\00statemate_FH_DU__MFH\00statemate_FH_DU__MFH\00\0094\000\001", null, <0x2927810>, <0x2928bd8>, i32* @statemate_FH_DU__MFH, null} ; [ DW_TAG_variable ] [statemate_FH_DU__MFH] [line 94] [def]
+
+!{!"0x34\00statemate_FH_DU__MFH_copy\00statemate_FH_DU__MFH_copy\00\0095\000\001", null, <0x2927810>, <0x2928bd8>, i32* @statemate_FH_DU__MFH_copy, null} ; [ DW_TAG_variable ] [statemate_FH_DU__MFH_copy] [line 95] [def]
+
+!{!"0x34\00statemate_FH_DU__POSITION\00statemate_FH_DU__POSITION\00\0096\000\001", null, <0x2927810>, <0x2928bd8>, i32* @statemate_FH_DU__POSITION, null} ; [ DW_TAG_variable ] [statemate_FH_DU__POSITION] [line 96] [def]
+
+!{!"0x34\00statemate_FH_DU__I_EIN\00statemate_FH_DU__I_EIN\00\0097\000\001", null, <0x2927810>, <0x2928bd8>, i32* @statemate_FH_DU__I_EIN, null} ; [ DW_TAG_variable ] [statemate_FH_DU__I_EIN] [line 97] [def]
+
+!{!"0x34\00statemate_FH_DU__I_EIN_old\00statemate_FH_DU__I_EIN_old\00\0098\000\001", null, <0x2927810>, <0x2928bd8>, i32* @statemate_FH_DU__I_EIN_old, null} ; [ DW_TAG_variable ] [statemate_FH_DU__I_EIN_old] [line 98] [def]
+
+!{!"0x34\00statemate_BLOCK_ERKENNUNG_CTRL__I_EIN_MAX\00statemate_BLOCK_ERKENNUNG_CTRL__I_EIN_MAX\00\0099\000\001", null, <0x2927810>, <0x2928bd8>, i32* @statemate_BLOCK_ERKENNUNG_CTRL__I_EIN_MAX, null} ; [ DW_TAG_variable ] [statemate_BLOCK_ERKENNUNG_CTRL__I_EIN_MAX] [line 99] [def]
+
+!{!"0x34\00statemate_BLOCK_ERKENNUNG_CTRL__N\00statemate_BLOCK_ERKENNUNG_CTRL__N\00\00100\000\001", null, <0x2927810>, <0x2928bd8>, i32* @statemate_BLOCK_ERKENNUNG_CTRL__N, null} ; [ DW_TAG_variable ] [statemate_BLOCK_ERKENNUNG_CTRL__N] [line 100] [def]
+
+!{!"0x34\00statemate_BLOCK_ERKENNUNG_CTRL__N_old\00statemate_BLOCK_ERKENNUNG_CTRL__N_old\00\00101\000\001", null, <0x2927810>, <0x2928bd8>, i32* @statemate_BLOCK_ERKENNUNG_CTRL__N_old, null} ; [ DW_TAG_variable ] [statemate_BLOCK_ERKENNUNG_CTRL__N_old] [line 101] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL_CTRL__INREVERS2\00statemate_FH_TUERMODUL_CTRL__INREVERS2\00\00102\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL_CTRL__INREVERS2, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL_CTRL__INREVERS2] [line 102] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL_CTRL__INREVERS2_copy\00statemate_FH_TUERMODUL_CTRL__INREVERS2_copy\00\00103\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL_CTRL__INREVERS2_copy, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL_CTRL__INREVERS2_copy] [line 103] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL_CTRL__INREVERS1\00statemate_FH_TUERMODUL_CTRL__INREVERS1\00\00104\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL_CTRL__INREVERS1, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL_CTRL__INREVERS1] [line 104] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL_CTRL__INREVERS1_copy\00statemate_FH_TUERMODUL_CTRL__INREVERS1_copy\00\00105\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL_CTRL__INREVERS1_copy, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL_CTRL__INREVERS1_copy] [line 105] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__SFHZ_ZENTRAL\00statemate_FH_TUERMODUL__SFHZ_ZENTRAL\00\00106\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__SFHZ_ZENTRAL, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__SFHZ_ZENTRAL] [line 106] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__SFHZ_ZENTRAL_old\00statemate_FH_TUERMODUL__SFHZ_ZENTRAL_old\00\00107\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__SFHZ_ZENTRAL_old, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__SFHZ_ZENTRAL_old] [line 107] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__SFHZ_MEC\00statemate_FH_TUERMODUL__SFHZ_MEC\00\00108\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__SFHZ_MEC, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__SFHZ_MEC] [line 108] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__SFHZ_MEC_old\00statemate_FH_TUERMODUL__SFHZ_MEC_old\00\00109\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__SFHZ_MEC_old, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__SFHZ_MEC_old] [line 109] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__SFHA_ZENTRAL\00statemate_FH_TUERMODUL__SFHA_ZENTRAL\00\00110\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__SFHA_ZENTRAL, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__SFHA_ZENTRAL] [line 110] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__SFHA_ZENTRAL_old\00statemate_FH_TUERMODUL__SFHA_ZENTRAL_old\00\00111\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__SFHA_ZENTRAL_old, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__SFHA_ZENTRAL_old] [line 111] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__SFHA_MEC\00statemate_FH_TUERMODUL__SFHA_MEC\00\00112\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__SFHA_MEC, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__SFHA_MEC] [line 112] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__SFHA_MEC_old\00statemate_FH_TUERMODUL__SFHA_MEC_old\00\00113\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__SFHA_MEC_old, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__SFHA_MEC_old] [line 113] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__KL_50\00statemate_FH_TUERMODUL__KL_50\00\00114\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__KL_50, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__KL_50] [line 114] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__BLOCK\00statemate_FH_TUERMODUL__BLOCK\00\00115\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__BLOCK, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__BLOCK] [line 115] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__BLOCK_copy\00statemate_FH_TUERMODUL__BLOCK_copy\00\00116\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__BLOCK_copy, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__BLOCK_copy] [line 116] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__BLOCK_old\00statemate_FH_TUERMODUL__BLOCK_old\00\00117\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__BLOCK_old, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__BLOCK_old] [line 117] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__FT\00statemate_FH_TUERMODUL__FT\00\00118\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__FT, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__FT] [line 118] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__SFHZ\00statemate_FH_TUERMODUL__SFHZ\00\00119\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__SFHZ, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__SFHZ] [line 119] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__SFHZ_copy\00statemate_FH_TUERMODUL__SFHZ_copy\00\00120\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__SFHZ_copy, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__SFHZ_copy] [line 120] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__SFHZ_old\00statemate_FH_TUERMODUL__SFHZ_old\00\00121\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__SFHZ_old, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__SFHZ_old] [line 121] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__SFHA\00statemate_FH_TUERMODUL__SFHA\00\00122\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__SFHA, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__SFHA] [line 122] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__SFHA_copy\00statemate_FH_TUERMODUL__SFHA_copy\00\00123\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__SFHA_copy, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__SFHA_copy] [line 123] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__SFHA_old\00statemate_FH_TUERMODUL__SFHA_old\00\00124\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__SFHA_old, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__SFHA_old] [line 124] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__MFHZ\00statemate_FH_TUERMODUL__MFHZ\00\00125\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__MFHZ, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__MFHZ] [line 125] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__MFHZ_copy\00statemate_FH_TUERMODUL__MFHZ_copy\00\00126\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__MFHZ_copy, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__MFHZ_copy] [line 126] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__MFHZ_old\00statemate_FH_TUERMODUL__MFHZ_old\00\00127\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__MFHZ_old, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__MFHZ_old] [line 127] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__MFHA\00statemate_FH_TUERMODUL__MFHA\00\00128\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__MFHA, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__MFHA] [line 128] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__MFHA_copy\00statemate_FH_TUERMODUL__MFHA_copy\00\00129\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__MFHA_copy, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__MFHA_copy] [line 129] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__MFHA_old\00statemate_FH_TUERMODUL__MFHA_old\00\00130\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__MFHA_old, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__MFHA_old] [line 130] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__EKS_LEISTE_AKTIV\00statemate_FH_TUERMODUL__EKS_LEISTE_AKTIV\00\00131\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__EKS_LEISTE_AKTIV, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__EKS_LEISTE_AKTIV] [line 131] [def]
+
+!{!"0x34\00statemate_FH_TUERMODUL__EKS_LEISTE_AKTIV_old\00statemate_FH_TUERMODUL__EKS_LEISTE_AKTIV_old\00\00132\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_TUERMODUL__EKS_LEISTE_AKTIV_old, null} ; [ DW_TAG_variable ] [statemate_FH_TUERMODUL__EKS_LEISTE_AKTIV_old] [line 132] [def]
+
+!{!"0x34\00statemate_FH_DU__KL_50\00statemate_FH_DU__KL_50\00\00133\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__KL_50, null} ; [ DW_TAG_variable ] [statemate_FH_DU__KL_50] [line 133] [def]
+
+!{!"0x34\00statemate_FH_DU__S_FH_FTZU\00statemate_FH_DU__S_FH_FTZU\00\00134\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__S_FH_FTZU, null} ; [ DW_TAG_variable ] [statemate_FH_DU__S_FH_FTZU] [line 134] [def]
+
+!{!"0x34\00statemate_FH_DU__S_FH_FTAUF\00statemate_FH_DU__S_FH_FTAUF\00\00135\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__S_FH_FTAUF, null} ; [ DW_TAG_variable ] [statemate_FH_DU__S_FH_FTAUF] [line 135] [def]
+
+!{!"0x34\00statemate_FH_DU__FT\00statemate_FH_DU__FT\00\00136\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__FT, null} ; [ DW_TAG_variable ] [statemate_FH_DU__FT] [line 136] [def]
+
+!{!"0x34\00statemate_FH_DU__EKS_LEISTE_AKTIV\00statemate_FH_DU__EKS_LEISTE_AKTIV\00\00137\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__EKS_LEISTE_AKTIV, null} ; [ DW_TAG_variable ] [statemate_FH_DU__EKS_LEISTE_AKTIV] [line 137] [def]
+
+!{!"0x34\00statemate_FH_DU__EKS_LEISTE_AKTIV_old\00statemate_FH_DU__EKS_LEISTE_AKTIV_old\00\00138\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__EKS_LEISTE_AKTIV_old, null} ; [ DW_TAG_variable ] [statemate_FH_DU__EKS_LEISTE_AKTIV_old] [line 138] [def]
+
+!{!"0x34\00statemate_FH_DU__S_FH_TMBFAUFCAN\00statemate_FH_DU__S_FH_TMBFAUFCAN\00\00139\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__S_FH_TMBFAUFCAN, null} ; [ DW_TAG_variable ] [statemate_FH_DU__S_FH_TMBFAUFCAN] [line 139] [def]
+
+!{!"0x34\00statemate_FH_DU__S_FH_TMBFAUFCAN_old\00statemate_FH_DU__S_FH_TMBFAUFCAN_old\00\00140\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__S_FH_TMBFAUFCAN_old, null} ; [ DW_TAG_variable ] [statemate_FH_DU__S_FH_TMBFAUFCAN_old] [line 140] [def]
+
+!{!"0x34\00statemate_FH_DU__S_FH_TMBFZUCAN\00statemate_FH_DU__S_FH_TMBFZUCAN\00\00141\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__S_FH_TMBFZUCAN, null} ; [ DW_TAG_variable ] [statemate_FH_DU__S_FH_TMBFZUCAN] [line 141] [def]
+
+!{!"0x34\00statemate_FH_DU__S_FH_TMBFZUCAN_old\00statemate_FH_DU__S_FH_TMBFZUCAN_old\00\00142\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__S_FH_TMBFZUCAN_old, null} ; [ DW_TAG_variable ] [statemate_FH_DU__S_FH_TMBFZUCAN_old] [line 142] [def]
+
+!{!"0x34\00statemate_FH_DU__S_FH_TMBFZUDISC\00statemate_FH_DU__S_FH_TMBFZUDISC\00\00143\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__S_FH_TMBFZUDISC, null} ; [ DW_TAG_variable ] [statemate_FH_DU__S_FH_TMBFZUDISC] [line 143] [def]
+
+!{!"0x34\00statemate_FH_DU__S_FH_TMBFZUDISC_old\00statemate_FH_DU__S_FH_TMBFZUDISC_old\00\00144\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__S_FH_TMBFZUDISC_old, null} ; [ DW_TAG_variable ] [statemate_FH_DU__S_FH_TMBFZUDISC_old] [line 144] [def]
+
+!{!"0x34\00statemate_FH_DU__S_FH_TMBFAUFDISC\00statemate_FH_DU__S_FH_TMBFAUFDISC\00\00145\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__S_FH_TMBFAUFDISC, null} ; [ DW_TAG_variable ] [statemate_FH_DU__S_FH_TMBFAUFDISC] [line 145] [def]
+
+!{!"0x34\00statemate_FH_DU__S_FH_TMBFAUFDISC_old\00statemate_FH_DU__S_FH_TMBFAUFDISC_old\00\00146\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__S_FH_TMBFAUFDISC_old, null} ; [ DW_TAG_variable ] [statemate_FH_DU__S_FH_TMBFAUFDISC_old] [line 146] [def]
+
+!{!"0x34\00statemate_FH_DU__S_FH_ZUDISC\00statemate_FH_DU__S_FH_ZUDISC\00\00147\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__S_FH_ZUDISC, null} ; [ DW_TAG_variable ] [statemate_FH_DU__S_FH_ZUDISC] [line 147] [def]
+
+!{!"0x34\00statemate_FH_DU__S_FH_AUFDISC\00statemate_FH_DU__S_FH_AUFDISC\00\00148\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__S_FH_AUFDISC, null} ; [ DW_TAG_variable ] [statemate_FH_DU__S_FH_AUFDISC] [line 148] [def]
+
+!{!"0x34\00statemate_FH_DU__DOOR_ID\00statemate_FH_DU__DOOR_ID\00\00149\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__DOOR_ID, null} ; [ DW_TAG_variable ] [statemate_FH_DU__DOOR_ID] [line 149] [def]
+
+!{!"0x34\00statemate_FH_DU__BLOCK\00statemate_FH_DU__BLOCK\00\00150\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__BLOCK, null} ; [ DW_TAG_variable ] [statemate_FH_DU__BLOCK] [line 150] [def]
+
+!{!"0x34\00statemate_FH_DU__BLOCK_copy\00statemate_FH_DU__BLOCK_copy\00\00151\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__BLOCK_copy, null} ; [ DW_TAG_variable ] [statemate_FH_DU__BLOCK_copy] [line 151] [def]
+
+!{!"0x34\00statemate_FH_DU__BLOCK_old\00statemate_FH_DU__BLOCK_old\00\00152\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__BLOCK_old, null} ; [ DW_TAG_variable ] [statemate_FH_DU__BLOCK_old] [line 152] [def]
+
+!{!"0x34\00statemate_FH_DU__MFHZ\00statemate_FH_DU__MFHZ\00\00153\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__MFHZ, null} ; [ DW_TAG_variable ] [statemate_FH_DU__MFHZ] [line 153] [def]
+
+!{!"0x34\00statemate_FH_DU__MFHZ_copy\00statemate_FH_DU__MFHZ_copy\00\00154\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__MFHZ_copy, null} ; [ DW_TAG_variable ] [statemate_FH_DU__MFHZ_copy] [line 154] [def]
+
+!{!"0x34\00statemate_FH_DU__MFHZ_old\00statemate_FH_DU__MFHZ_old\00\00155\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__MFHZ_old, null} ; [ DW_TAG_variable ] [statemate_FH_DU__MFHZ_old] [line 155] [def]
+
+!{!"0x34\00statemate_FH_DU__MFHA\00statemate_FH_DU__MFHA\00\00156\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__MFHA, null} ; [ DW_TAG_variable ] [statemate_FH_DU__MFHA] [line 156] [def]
+
+!{!"0x34\00statemate_FH_DU__MFHA_copy\00statemate_FH_DU__MFHA_copy\00\00157\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__MFHA_copy, null} ; [ DW_TAG_variable ] [statemate_FH_DU__MFHA_copy] [line 157] [def]
+
+!{!"0x34\00statemate_FH_DU__MFHA_old\00statemate_FH_DU__MFHA_old\00\00158\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_DU__MFHA_old, null} ; [ DW_TAG_variable ] [statemate_FH_DU__MFHA_old] [line 158] [def]
+
+!{!"0x34\00statemate_time\00statemate_time\00\00160\000\001", null, <0x2927810>, <0x29211e8>, i64* @statemate_time, null} ; [ DW_TAG_variable ] [statemate_time] [line 160] [def]
+
+!{!"0x34\00statemate_stable\00statemate_stable\00\00161\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_stable, null} ; [ DW_TAG_variable ] [statemate_stable] [line 161] [def]
+
+!{!"0x34\00statemate_step\00statemate_step\00\00162\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_step, null} ; [ DW_TAG_variable ] [statemate_step] [line 162] [def]
+
+!{!"0x34\00statemate_NICHT_INITIALISIERT_NICHT_INITIALISIERT_next_state\00statemate_NICHT_INITIALISIERT_NICHT_INITIALISIERT_next_state\00\00165\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_NICHT_INITIALISIERT_NICHT_INITIALISIERT_next_state, null} ; [ DW_TAG_variable ] [statemate_NICHT_INITIALISIERT_NICHT_INITIALISIERT_next_state] [line 165] [def]
+
+!{!"0x34\00statemate_ZENTRAL_KINDERSICHERUNG_CTRL_next_state\00statemate_ZENTRAL_KINDERSICHERUNG_CTRL_next_state\00\00167\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_ZENTRAL_KINDERSICHERUNG_CTRL_next_state, null} ; [ DW_TAG_variable ] [statemate_ZENTRAL_KINDERSICHERUNG_CTRL_next_state] [line 167] [def]
+
+!{!"0x34\00statemate_MEC_KINDERSICHERUNG_CTRL_next_state\00statemate_MEC_KINDERSICHERUNG_CTRL_next_state\00\00168\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_MEC_KINDERSICHERUNG_CTRL_next_state, null} ; [ DW_TAG_variable ] [statemate_MEC_KINDERSICHERUNG_CTRL_next_state] [line 168] [def]
+
+!{!"0x34\00statemate_KINDERSICHERUNG_CTRL_KINDERSICHERUNG_CTRL_next_state\00statemate_KINDERSICHERUNG_CTRL_KINDERSICHERUNG_CTRL_next_state\00\00170\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_KINDERSICHERUNG_CTRL_KINDERSICHERUNG_CTRL_next_state, null} ; [ DW_TAG_variable ] [statemate_KINDERSICHERUNG_CTRL_KINDERSICHERUNG_CTRL_next_state] [line 170] [def]
+
+!{!"0x34\00statemate_B_FH_TUERMODUL_CTRL_next_state\00statemate_B_FH_TUERMODUL_CTRL_next_state\00\00171\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_B_FH_TUERMODUL_CTRL_next_state, null} ; [ DW_TAG_variable ] [statemate_B_FH_TUERMODUL_CTRL_next_state] [line 171] [def]
+
+!{!"0x34\00statemate_A_FH_TUERMODUL_CTRL_next_state\00statemate_A_FH_TUERMODUL_CTRL_next_state\00\00172\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_A_FH_TUERMODUL_CTRL_next_state, null} ; [ DW_TAG_variable ] [statemate_A_FH_TUERMODUL_CTRL_next_state] [line 172] [def]
+
+!{!"0x34\00statemate_WIEDERHOLSPERRE_FH_TUERMODUL_CTRL_next_state\00statemate_WIEDERHOLSPERRE_FH_TUERMODUL_CTRL_next_state\00\00174\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_WIEDERHOLSPERRE_FH_TUERMODUL_CTRL_next_state, null} ; [ DW_TAG_variable ] [statemate_WIEDERHOLSPERRE_FH_TUERMODUL_CTRL_next_state] [line 174] [def]
+
+!{!"0x34\00statemate_INITIALISIERT_FH_TUERMODUL_CTRL_next_state\00statemate_INITIALISIERT_FH_TUERMODUL_CTRL_next_state\00\00176\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_INITIALISIERT_FH_TUERMODUL_CTRL_next_state, null} ; [ DW_TAG_variable ] [statemate_INITIALISIERT_FH_TUERMODUL_CTRL_next_state] [line 176] [def]
+
+!{!"0x34\00statemate_TIPP_SCHLIESSEN_FH_TUERMODUL_CTRL_next_state\00statemate_TIPP_SCHLIESSEN_FH_TUERMODUL_CTRL_next_state\00\00178\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_TIPP_SCHLIESSEN_FH_TUERMODUL_CTRL_next_state, null} ; [ DW_TAG_variable ] [statemate_TIPP_SCHLIESSEN_FH_TUERMODUL_CTRL_next_state] [line 178] [def]
+
+!{!"0x34\00statemate_MANUELL_SCHLIESSEN_FH_TUERMODUL_CTRL_next_state\00statemate_MANUELL_SCHLIESSEN_FH_TUERMODUL_CTRL_next_state\00\00180\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_MANUELL_SCHLIESSEN_FH_TUERMODUL_CTRL_next_state, null} ; [ DW_TAG_variable ] [statemate_MANUELL_SCHLIESSEN_FH_TUERMODUL_CTRL_next_state] [line 180] [def]
+
+!{!"0x34\00statemate_OEFFNEN_FH_TUERMODUL_CTRL_next_state\00statemate_OEFFNEN_FH_TUERMODUL_CTRL_next_state\00\00181\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_OEFFNEN_FH_TUERMODUL_CTRL_next_state, null} ; [ DW_TAG_variable ] [statemate_OEFFNEN_FH_TUERMODUL_CTRL_next_state] [line 181] [def]
+
+!{!"0x34\00statemate_SCHLIESSEN_FH_TUERMODUL_CTRL_next_state\00statemate_SCHLIESSEN_FH_TUERMODUL_CTRL_next_state\00\00183\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_SCHLIESSEN_FH_TUERMODUL_CTRL_next_state, null} ; [ DW_TAG_variable ] [statemate_SCHLIESSEN_FH_TUERMODUL_CTRL_next_state] [line 183] [def]
+
+!{!"0x34\00statemate_FH_STEUERUNG_DUMMY_FH_STEUERUNG_DUMMY_next_state\00statemate_FH_STEUERUNG_DUMMY_FH_STEUERUNG_DUMMY_next_state\00\00185\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_FH_STEUERUNG_DUMMY_FH_STEUERUNG_DUMMY_next_state, null} ; [ DW_TAG_variable ] [statemate_FH_STEUERUNG_DUMMY_FH_STEUERUNG_DUMMY_next_state] [line 185] [def]
+
+!{!"0x34\00statemate_EINKLEMMSCHUTZ_CTRL_EINKLEMMSCHUTZ_CTRL_next_state\00statemate_EINKLEMMSCHUTZ_CTRL_EINKLEMMSCHUTZ_CTRL_next_state\00\00187\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_EINKLEMMSCHUTZ_CTRL_EINKLEMMSCHUTZ_CTRL_next_state, null} ; [ DW_TAG_variable ] [statemate_EINKLEMMSCHUTZ_CTRL_EINKLEMMSCHUTZ_CTRL_next_state] [line 187] [def]
+
+!{!"0x34\00statemate_BEWEGUNG_BLOCK_ERKENNUNG_CTRL_next_state\00statemate_BEWEGUNG_BLOCK_ERKENNUNG_CTRL_next_state\00\00189\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_BEWEGUNG_BLOCK_ERKENNUNG_CTRL_next_state, null} ; [ DW_TAG_variable ] [statemate_BEWEGUNG_BLOCK_ERKENNUNG_CTRL_next_state] [line 189] [def]
+
+!{!"0x34\00statemate_BLOCK_ERKENNUNG_CTRL_BLOCK_ERKENNUNG_CTRL_next_state\00statemate_BLOCK_ERKENNUNG_CTRL_BLOCK_ERKENNUNG_CTRL_next_state\00\00191\000\001", null, <0x2927810>, <0x292c188>, i8* @statemate_BLOCK_ERKENNUNG_CTRL_BLOCK_ERKENNUNG_CTRL_next_state, null} ; [ DW_TAG_variable ] [statemate_BLOCK_ERKENNUNG_CTRL_BLOCK_ERKENNUNG_CTRL_next_state] [line 191] [def]
+
+!{!"0x1\00\000\00512\008\000\000\000", null, null, <0x292c188>, <0x292c018>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 512, align 8, offset 0] [from char]
+
+!{!"0x24\00char\000\008\008\000\000\006", null, null} ; [ DW_TAG_base_type ] [char] [line 0, size 8, align 8, offset 0, enc DW_ATE_signed_char]
+
+!{!"0x24\00long unsigned int\000\0064\0064\000\000\007", null, null} ; [ DW_TAG_base_type ] [long unsigned int] [line 0, size 64, align 64, offset 0, enc DW_ATE_unsigned]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2927888>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2929988>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+Meta data for 9720916602263062895
+Meta data for 16388856903550744959
+nit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: statemate_init is 2356133418581303448
+DEBUG: found 0 loops in function statemate_init
+DEBUG: region name to id: statemate_interface is 4393124986920960315
+DEBUG: found 0 loops in function statemate_interface
+DEBUG: region name to id: statemate_generic_KINDERSICHERUNG_CTRL is 2754662507158135619
+DEBUG: found 0 loops in function statemate_generic_KINDERSICHERUNG_CTRL
+DEBUG: region name to id: statemate_generic_FH_TUERMODUL_CTRL is 16164226673054806028
+DEBUG: found 0 loops in function statemate_generic_FH_TUERMODUL_CTRL
+DEBUG: region name to id: statemate_generic_EINKLEMMSCHUTZ_CTRL is 12295908176876654253
+DEBUG: found 0 loops in function statemate_generic_EINKLEMMSCHUTZ_CTRL
+DEBUG: region name to id: statemate_generic_BLOCK_ERKENNUNG_CTRL is 5591034574545857414
+DEBUG: found 0 loops in function statemate_generic_BLOCK_ERKENNUNG_CTRL
+DEBUG: region name to id: statemate_FH_DU is 12748825967272078795
+DEBUG: found 1 loops in function statemate_FH_DU
+DEBUG: assigning id = 9720916602263062895 to loop with the following BBs:
+	for.cond for.body sw.bb16 land.lhs.true18 if.then21 sw.bb3 if.then8 if.end9 if.then14 sw.bb land.lhs.true if.then sw.default sw.epilog if.then24 if.end25 if.then27 if.end28 if.then30 if.end31 if.then33 if.end34 if.then41 if.end43 if.then50 if.end52 if.then59 if.end61 if.then68 if.end70 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10621458586353571030
+DEBUG: assigning id = 10621458586353571030 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: statemate_return is 1435996922497610194
+DEBUG: found 1 loops in function statemate_return
+DEBUG: assigning id = 16388856903550744959 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13431995354901015984
+DEBUG: assigning id = 13431995354901015984 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: statemate_main is 11551982057898432374
+DEBUG: found 0 loops in function statemate_main
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to statemate.kdump
+INFO: dumping function: statemate_init
+INFO: dumping function: statemate_interface
+INFO: dumping function: statemate_generic_KINDERSICHERUNG_CTRL
+INFO: dumping function: statemate_generic_FH_TUERMODUL_CTRL
+INFO: dumping function: statemate_generic_EINKLEMMSCHUTZ_CTRL
+INFO: dumping function: statemate_generic_BLOCK_ERKENNUNG_CTRL
+INFO: dumping function: statemate_FH_DU
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: statemate_return
+INFO: dumping function: statemate_main
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

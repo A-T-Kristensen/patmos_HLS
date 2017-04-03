@@ -1,0 +1,118 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x25cbab0>, <0x25ce760>, <0x25ce760>, <0x25d6320>, <0x25ce760>, <0x25ce760>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/MachSuite/sort/merge/sort.c] [DW_LANG_C99]
+
+!{!"0x2e\00merge\00merge\00\003\000\001\000\000\00256\000\003", <0x25cbab0>, <0x25ce160>, <0x25d5cb0>, null, void (i32*, i32, i32, i32)* @merge, null, null, <0x25ce760>} ; [ DW_TAG_subprogram ] [line 3] [def] [merge]
+
+!{!"0x2e\00ms_mergesort\00ms_mergesort\00\0031\000\001\000\000\00256\000\0031", <0x25cbab0>, <0x25ce160>, <0x25d61c0>, null, void (i32*)* @ms_mergesort, null, null, <0x25ce760>} ; [ DW_TAG_subprogram ] [line 31] [def] [ms_mergesort]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x25ce1f8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x25ce300>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from int32_t]
+
+!{!"0x16\00int32_t\00196\000\000\000\000", <0x25d5a60>, null, <0x25d5ae8>} ; [ DW_TAG_typedef ] [int32_t] [line 196, size 0, align 0, offset 0] [from int]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x25ce230>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+Meta data for 7951772296434105331
+Meta data for 6964242820909417345
+Meta data for 18087678423167642180
+Meta data for 11698202345907152982
+Meta data for 17924126364374588162
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 2164267625970809742, name: merge, fileName: sort.c, startLine: 3, endLine: 3
+DEBUG: adding merge (in module: sort.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2164267625970809742)
+DEBUG: assigning function merge id 2164267625970809742
+DEBUG: new region: FuncRegion(id: 16866175096043647355, name: ms_mergesort, fileName: sort.c, startLine: 31, endLine: 31
+DEBUG: adding ms_mergesort (in module: sort.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 16866175096043647355)
+DEBUG: assigning function ms_mergesort id 16866175096043647355
+DEBUG: found 2 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: merge is 2164267625970809742
+DEBUG: found 3 loops in function merge
+DEBUG: assigning id = 7951772296434105331 to loop with the following BBs:
+	for.cond15 for.body17 if.else if.then for.inc28 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7183772469320744739
+DEBUG: assigning id = 7183772469320744739 to body of loop
+DEBUG: assigning id = 6964242820909417345 to loop with the following BBs:
+	for.cond3 for.body5 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 437223036404083545
+DEBUG: assigning id = 437223036404083545 to body of loop
+DEBUG: assigning id = 18087678423167642180 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5221357924953176652
+DEBUG: assigning id = 5221357924953176652 to body of loop
+DEBUG: for.cond15 has 1 possible loop exit points
+DEBUG: 	target #0: for.end30
+DEBUG: for.cond3 has 1 possible loop exit points
+DEBUG: 	target #0: for.end14
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: merge_label2
+DEBUG: region name to id: ms_mergesort is 16866175096043647355
+DEBUG: found 2 loops in function ms_mergesort
+DEBUG: assigning id = 11698202345907152982 to loop with the following BBs:
+	for.cond mergesort_label2 for.cond1 for.inc11 for.body3 if.else if.then for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17478634308484928914
+DEBUG: assigning id = 17478634308484928914 to body of loop
+DEBUG: assigning id = 17924126364374588162 to loop with the following BBs:
+	for.cond1 for.body3 if.else if.then for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4041679009458206013
+DEBUG: assigning id = 4041679009458206013 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end13
+DEBUG: for.cond1 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc11
+DEBUG: Writing kremlib calls to sort.kdump
+INFO: dumping function: merge
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: ms_mergesort
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

@@ -1,0 +1,56 @@
+FUNC: iir_init
+	2 : 98 : load
+	3 : 98 : trunc
+	11 : ?? : phi
+	17 : 83 : icmp
+	12 : ?? : phi
+	18 : 87 : icmp
+	13 : ?? : phi
+	5 : ?? : phi
+	4 : 97 : icmp
+	1 : 98 : load
+	14 : 97 : getelementptr
+	15 : ?? : phi
+	10 : ?? : phi
+	9 : 102 : icmp
+	6 : 103 : load
+	7 : 103 : load
+	8 : 103 : trunc
+	16 : 102 : getelementptr
+
+FUNC: iir_return
+	4 : ?? : phi
+	3 : ?? : phi
+	6 : 114 : icmp
+	1 : 115 : load
+	5 : 115 : fadd
+	2 : 117 : fptosi
+
+FUNC: iir_main
+	1 : 137 : load
+	16 : ?? : phi
+	18 : ?? : phi
+	20 : ?? : phi
+	15 : ?? : phi
+	13 : ?? : phi
+	14 : 140 : icmp
+	2 : 141 : load
+	3 : 141 : load
+	4 : 142 : load
+	5 : 142 : load
+	12 : 142 : fsub
+	6 : 144 : load
+	7 : 145 : load
+	8 : 145 : load
+	21 : 146 : getelementptr
+	9 : 146 : load
+	10 : 146 : load
+	22 : 146 : fadd
+	11 : 148 : load
+	17 : 151 : getelementptr
+	19 : 152 : getelementptr
+
+FUNC: main
+	1 : 162 : call
+	2 : 162 : zext
+

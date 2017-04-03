@@ -1,0 +1,215 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x2042d50>, <0x2042f90>, <0x203c9b8>, <0x2046088>, <0x2045f30>, <0x2042f90>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/filterbank/filterbank.c] [DW_LANG_C99]
+
+!{!"0x2e\00filterbank_init\00filterbank_init\00\0053\000\001\000\000\00256\000\0054", <0x2042d50>, <0x2043cc0>, <0x2043da0>, null, void ()* @filterbank_init, null, null, <0x2042f90>} ; [ DW_TAG_subprogram ] [line 53] [def] [scope 54] [filterbank_init]
+
+!{!"0x2e\00filterbank_return\00filterbank_return\00\0059\000\001\000\000\00256\000\0060", <0x2042d50>, <0x2043cc0>, <0x2043c60>, null, i32 ()* @filterbank_return, null, null, <0x2042f90>} ; [ DW_TAG_subprogram ] [line 59] [def] [scope 60] [filterbank_return]
+
+!{!"0x2e\00filterbank_main\00filterbank_main\00\0069\000\001\000\000\00256\000\0070", <0x2042d50>, <0x2043cc0>, <0x2043da0>, null, void ()* @filterbank_main, null, null, <0x2042f90>} ; [ DW_TAG_subprogram ] [line 69] [def] [scope 70] [filterbank_main]
+
+!{!"0x2e\00filterbank_core\00filterbank_core\00\00102\000\001\000\000\00256\000\00106", <0x2042d50>, <0x2043cc0>, <0x2044400>, null, void (float*, float*, [32 x float]*, [32 x float]*)* @filterbank_core, null, null, <0x2042f90>} ; [ DW_TAG_subprogram ] [line 102] [def] [scope 106] [filterbank_core]
+
+!{!"0x2e\00main\00main\00\00164\000\001\000\000\00256\000\00165", <0x2042d50>, <0x2043cc0>, <0x2043c60>, null, i32 ()* @main, null, null, <0x2042f90>} ; [ DW_TAG_subprogram ] [line 164] [def] [scope 165] [main]
+
+!{!"0x34\00filterbank_return_value\00filterbank_return_value\00\0045\001\001", null, <0x2043cc0>, <0x2043ba8>, i32* @filterbank_return_value, null} ; [ DW_TAG_variable ] [filterbank_return_value] [line 45] [local] [def]
+
+!{!"0x34\00filterbank_numiters\00filterbank_numiters\00\0046\001\001", null, <0x2043cc0>, <0x2043ba8>, i32* @filterbank_numiters, null} ; [ DW_TAG_variable ] [filterbank_numiters] [line 46] [local] [def]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2043d38>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x203c9b8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2044398>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2044e08>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from float]
+
+!{!"0x24\00float\000\0032\0032\000\000\004", null, null} ; [ DW_TAG_base_type ] [float] [line 0, size 32, align 32, offset 0, enc DW_ATE_float]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2042c20>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x1\00\000\001024\0032\000\000\000", null, null, <0x2044e08>, <0x2044d18>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 1024, align 32, offset 0] [from float]
+
+Meta data for 1078928790602783213
+Meta data for 8984918367282306050
+Meta data for 14317162788434873219
+Meta data for 973252786916529385
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 4006106531973862554, name: filterbank_init, fileName: filterbank.c, startLine: 53, endLine: 53
+DEBUG: adding filterbank_init (in module: filterbank.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 4006106531973862554)
+DEBUG: assigning function filterbank_init id 4006106531973862554
+DEBUG: new region: FuncRegion(id: 10605262823712341592, name: filterbank_return, fileName: filterbank.c, startLine: 59, endLine: 59
+DEBUG: adding filterbank_return (in module: filterbank.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 10605262823712341592)
+DEBUG: assigning function filterbank_return id 10605262823712341592
+DEBUG: new region: FuncRegion(id: 13360101990017092353, name: filterbank_main, fileName: filterbank.c, startLine: 69, endLine: 69
+DEBUG: adding filterbank_main (in module: filterbank.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 13360101990017092353)
+DEBUG: assigning function filterbank_main id 13360101990017092353
+DEBUG: new region: FuncRegion(id: 481750231436308359, name: filterbank_core, fileName: filterbank.c, startLine: 102, endLine: 102
+DEBUG: adding filterbank_core (in module: filterbank.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 481750231436308359)
+DEBUG: assigning function filterbank_core id 481750231436308359
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: filterbank.c, startLine: 164, endLine: 164
+DEBUG: adding main (in module: filterbank.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 5 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: filterbank_init is 4006106531973862554
+DEBUG: found 0 loops in function filterbank_init
+DEBUG: region name to id: filterbank_return is 10605262823712341592
+DEBUG: found 0 loops in function filterbank_return
+DEBUG: region name to id: filterbank_main is 13360101990017092353
+DEBUG: found 4 loops in function filterbank_main
+DEBUG: assigning id = 1078928790602783213 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9498168276895561322
+DEBUG: assigning id = 9498168276895561322 to body of loop
+DEBUG: assigning id = 8984918367282306050 to loop with the following BBs:
+	for.cond1 for.body4 for.cond5 for.inc33 for.body8 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5351721261951230696
+DEBUG: assigning id = 5351721261951230696 to body of loop
+DEBUG: assigning id = 14317162788434873219 to loop with the following BBs:
+	for.cond5 for.body8 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4814475584191354137
+DEBUG: assigning id = 4814475584191354137 to body of loop
+DEBUG: assigning id = 973252786916529385 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17877046013969478798
+DEBUG: assigning id = 17877046013969478798 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: for.cond1 has 1 possible loop exit points
+DEBUG: 	target #0: while.cond.preheader
+DEBUG: for.cond5 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc33
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: filterbank_core is 481750231436308359
+DEBUG: fouMeta data for 2897530805006303968
+Meta data for 17740454206790422126
+Meta data for 16110693192351097919
+Meta data for 3228664944977753676
+Meta data for 11606673834816682649
+Meta data for 2510838688248348306
+Meta data for 10873699863272063917
+Meta data for 5070277954765043673
+Meta data for 15804863266536805015
+Meta data for 6864078376260648246
+nd 10 loops in function filterbank_core
+DEBUG: assigning id = 2897530805006303968 to loop with the following BBs:
+	for.cond1 for.body3 for.cond4 for.end28 for.cond29 for.end40 for.cond41 for.end49 for.cond50 for.end61 for.cond62 for.end93 for.cond94 for.inc106 for.body97 for.body65 for.cond68 for.inc91 for.body76 for.body53 for.body44 for.body32 for.body6 for.cond9 for.inc26 for.body13 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17482385240272298547
+DEBUG: assigning id = 17482385240272298547 to body of loop
+DEBUG: assigning id = 17740454206790422126 to loop with the following BBs:
+	for.cond4 for.body6 for.cond9 for.inc26 for.body13 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11012452441034582560
+DEBUG: assigning id = 11012452441034582560 to body of loop
+DEBUG: assigning id = 16110693192351097919 to loop with the following BBs:
+	for.cond9 for.body13 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3345212160740600236
+DEBUG: assigning id = 3345212160740600236 to body of loop
+DEBUG: assigning id = 3228664944977753676 to loop with the following BBs:
+	for.cond29 for.body32 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 850004485722732994
+DEBUG: assigning id = 850004485722732994 to body of loop
+DEBUG: assigning id = 11606673834816682649 to loop with the following BBs:
+	for.cond41 for.body44 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10997653314383152331
+DEBUG: assigning id = 10997653314383152331 to body of loop
+DEBUG: assigning id = 2510838688248348306 to loop with the following BBs:
+	for.cond50 for.body53 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 2014337463664733242
+DEBUG: assigning id = 2014337463664733242 to body of loop
+DEBUG: assigning id = 10873699863272063917 to loop with the following BBs:
+	for.cond62 for.body65 for.cond68 for.inc91 for.body76 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5957517324451864242
+DEBUG: assigning id = 5957517324451864242 to body of loop
+DEBUG: assigning id = 5070277954765043673 to loop with the following BBs:
+	for.cond68 for.body76 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14854205526816607953
+DEBUG: assigning id = 14854205526816607953 to body of loop
+DEBUG: assigning id = 15804863266536805015 to loop with the following BBs:
+	for.cond94 for.body97 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 2740834908247669290
+DEBUG: assigning id = 2740834908247669290 to body of loop
+DEBUG: assigning id = 6864078376260648246 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 980351930915795330
+DEBUG: assigning id = 980351930915795330 to body of loop
+DEBUG: for.cond1 has 1 possible loop exit points
+DEBUG: 	target #0: for.end108
+DEBUG: for.cond4 has 1 possible loop exit points
+DEBUG: 	target #0: for.end28
+DEBUG: for.cond9 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc26
+DEBUG: for.cond29 has 1 possible loop exit points
+DEBUG: 	target #0: for.end40
+DEBUG: for.cond41 has 1 possible loop exit points
+DEBUG: 	target #0: for.end49
+DEBUG: for.cond50 has 1 possible loop exit points
+DEBUG: 	target #0: for.end61
+DEBUG: for.cond62 has 1 possible loop exit points
+DEBUG: 	target #0: for.end93
+DEBUG: for.cond68 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc91
+DEBUG: for.cond94 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc106
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to filterbank.kdump
+INFO: dumping function: filterbank_init
+INFO: dumping function: filterbank_return
+INFO: dumping function: filterbank_main
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: filterbank_core
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

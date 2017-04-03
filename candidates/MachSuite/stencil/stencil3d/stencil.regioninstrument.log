@@ -1,0 +1,136 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x21c80a0>, <0x21cd570>, <0x21cd570>, <0x21cdfc8>, <0x21cd570>, <0x21cd570>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/MachSuite/stencil/stencil3d/stencil.c] [DW_LANG_C99]
+
+!{!"0x2e\00stencil3d\00stencil3d\00\0010\000\001\000\000\00256\000\0010", <0x21c80a0>, <0x21c7ed0>, <0x21ce2e0>, null, void (i32*, i32*, i32*)* @stencil3d, null, null, <0x21cd570>} ; [ DW_TAG_subprogram ] [line 10] [def] [stencil3d]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x21cdf10>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x21ce110>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from int32_t]
+
+!{!"0x16\00int32_t\00196\000\000\000\000", <0x21ce040>, null, <0x21ce0c8>} ; [ DW_TAG_typedef ] [int32_t] [line 196, size 0, align 0, offset 0] [from int]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+Meta data for 14153225276584046378
+Meta data for 421120568414442190
+Meta data for 1504366940185200137
+Meta data for 5129129606117824776
+Meta data for 16278227725736117974
+Meta data for 10702544267125764389
+Meta data for 10390434774139613142
+Meta data for 7763383567541823212
+Meta data for 8987813856013736656
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 75443006851368742, name: stencil3d, fileName: stencil.c, startLine: 10, endLine: 10
+DEBUG: adding stencil3d (in module: stencil.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 75443006851368742)
+DEBUG: assigning function stencil3d id 75443006851368742
+DEBUG: found 1 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: stencil3d is 75443006851368742
+DEBUG: found 9 loops in function stencil3d
+DEBUG: assigning id = 14153225276584046378 to loop with the following BBs:
+	for.cond95 loop_col for.cond98 for.inc173 loop_row for.cond101 for.inc170 for.body103 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13874407818430447688
+DEBUG: assigning id = 13874407818430447688 to body of loop
+DEBUG: assigning id = 421120568414442190 to loop with the following BBs:
+	for.cond98 loop_row for.cond101 for.inc170 for.body103 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13725078110969114450
+DEBUG: assigning id = 13725078110969114450 to body of loop
+DEBUG: assigning id = 1504366940185200137 to loop with the following BBs:
+	for.cond101 for.body103 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13425393767047680223
+DEBUG: assigning id = 13425393767047680223 to body of loop
+DEBUG: assigning id = 5129129606117824776 to loop with the following BBs:
+	for.cond59 row_bound_col for.cond62 for.inc92 for.body64 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11687008905935051083
+DEBUG: assigning id = 11687008905935051083 to body of loop
+DEBUG: assigning id = 16278227725736117974 to loop with the following BBs:
+	for.cond62 for.body64 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8777470483387909352
+DEBUG: assigning id = 8777470483387909352 to body of loop
+DEBUG: assigning id = 10702544267125764389 to loop with the following BBs:
+	for.cond23 col_bound_row for.cond26 for.inc56 for.body28 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9765194383223360281
+DEBUG: assigning id = 9765194383223360281 to body of loop
+DEBUG: assigning id = 10390434774139613142 to loop with the following BBs:
+	for.cond26 for.body28 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8712267499359152500
+DEBUG: assigning id = 8712267499359152500 to body of loop
+DEBUG: assigning id = 7763383567541823212 to loop with the following BBs:
+	for.cond height_bound_row for.cond1 for.inc20 for.body3 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14326410408011547937
+DEBUG: assigning id = 14326410408011547937 to body of loop
+DEBUG: assigning id = 8987813856013736656 to loop with the following BBs:
+	for.cond1 for.body3 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16659194529966265117
+DEBUG: assigning id = 16659194529966265117 to body of loop
+DEBUG: for.cond95 has 1 possible loop exit points
+DEBUG: 	target #0: for.end175
+DEBUG: for.cond98 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc173
+DEBUG: for.cond101 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc170
+DEBUG: for.cond59 has 1 possible loop exit points
+DEBUG: 	target #0: loop_height
+DEBUG: for.cond62 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc92
+DEBUG: for.cond23 has 1 possible loop exit points
+DEBUG: 	target #0: row_bound_height
+DEBUG: for.cond26 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc56
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: col_bound_height
+DEBUG: for.cond1 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc20
+DEBUG: Writing kremlib calls to stencil.kdump
+INFO: dumping function: stencil3d
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

@@ -1,0 +1,121 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x253a4c0>, <0x253a700>, <0x2534058>, <0x253ccc0>, <0x253f9b0>, <0x253a700>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/pm/pm_libm.c] [DW_LANG_C99]
+
+!{!"0x2e\00pm_math_init\00pm_math_init\00\0051\000\001\000\000\00256\000\0052", <0x253a4c0>, <0x253c550>, <0x253c6c0>, null, void ()* @pm_math_init, null, null, <0x253a700>} ; [ DW_TAG_subprogram ] [line 51] [def] [scope 52] [pm_math_init]
+
+!{!"0x2e\00pm_pow10f\00pm_pow10f\00\0096\000\001\000\000\00256\000\0097", <0x253a4c0>, <0x253c550>, <0x253d3f0>, null, float (float)* @pm_pow10f, null, null, <0x253a700>} ; [ DW_TAG_subprogram ] [line 96] [def] [scope 97] [pm_pow10f]
+
+!{!"0x2e\00pm_log10f\00pm_log10f\00\00151\000\001\000\000\00256\000\00152", <0x253a4c0>, <0x253c550>, <0x253d3f0>, null, float (float)* @pm_log10f, null, null, <0x253a700>} ; [ DW_TAG_subprogram ] [line 151] [def] [scope 152] [pm_log10f]
+
+!{!"0x2e\00pm_fabs\00pm_fabs\00\00199\000\001\000\000\00256\000\00200", <0x253a4c0>, <0x253c550>, <0x253d3f0>, null, float (float)* @pm_fabs, null, null, <0x253a700>} ; [ DW_TAG_subprogram ] [line 199] [def] [scope 200] [pm_fabs]
+
+!{!"0x2e\00pm_floor\00pm_floor\00\00208\000\001\000\000\00256\000\00209", <0x253a4c0>, <0x253c550>, <0x253d3f0>, null, float (float)* @pm_floor, null, null, <0x253a700>} ; [ DW_TAG_subprogram ] [line 208] [def] [scope 209] [pm_floor]
+
+!{!"0x2e\00pm_ceil\00pm_ceil\00\00215\000\001\000\000\00256\000\00216", <0x253a4c0>, <0x253c550>, <0x253d3f0>, null, float (float)* @pm_ceil, null, null, <0x253a700>} ; [ DW_TAG_subprogram ] [line 215] [def] [scope 216] [pm_ceil]
+
+!{!"0x34\00pm_pow_coeff\00pm_pow_coeff\00\0037\001\001", null, <0x253c550>, <0x253f600>, [19 x float]* @pm_pow_coeff, null} ; [ DW_TAG_variable ] [pm_pow_coeff] [line 37] [local] [def]
+
+!{!"0x34\00pm_log_coeff\00pm_log_coeff\00\0038\001\001", null, <0x253c550>, <0x253f880>, [16 x float]* @pm_log_coeff, null} ; [ DW_TAG_variable ] [pm_log_coeff] [line 38] [local] [def]
+
+!{!"0x1\00\000\00608\0032\000\000\000", null, null, <0x253cbf8>, <0x253d928>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 608, align 32, offset 0] [from float]
+
+!{!"0x24\00float\000\0032\0032\000\000\004", null, null} ; [ DW_TAG_base_type ] [float] [line 0, size 32, align 32, offset 0, enc DW_ATE_float]
+
+!{!"0x1\00\000\00512\0032\000\000\000", null, null, <0x253cbf8>, <0x253f818>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 512, align 32, offset 0] [from float]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x253c658>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x253c5d0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 10077098481608820241, name: pm_math_init, fileName: pm_libm.c, startLine: 51, endLine: 51
+DEBUG: adding pm_math_init (in module: pm_libm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 10077098481608820241)
+DEBUG: assigning function pm_math_init id 10077098481608820241
+DEBUG: new region: FuncRegion(id: 2882321494315938793, name: pm_pow10f, fileName: pm_libm.c, startLine: 96, endLine: 96
+DEBUG: adding pm_pow10f (in module: pm_libm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2882321494315938793)
+DEBUG: assigning function pm_pow10f id 2882321494315938793
+DEBUG: new region: FuncRegion(id: 9018009666235919751, name: pm_log10f, fileName: pm_libm.c, startLine: 151, endLine: 151
+DEBUG: adding pm_log10f (in module: pm_libm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 9018009666235919751)
+DEBUG: assigning function pm_log10f id 9018009666235919751
+DEBUG: new region: FuncRegion(id: 15787880229759719084, name: pm_fabs, fileName: pm_libm.c, startLine: 199, endLine: 199
+DEBUG: adding pm_fabs (in module: pm_libm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 15787880229759719084)
+DEBUG: assigning function pm_fabs id 15787880229759719084
+DEBUG: new region: FuncRegion(id: 3475266770584164089, name: pm_floor, fileName: pm_libm.c, startLine: 208, endLine: 208
+DEBUG: adding pm_floor (in module: pm_libm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3475266770584164089)
+DEBUG: assigning function pm_floor id 3475266770584164089
+DEBUG: new region: FuncRegion(id: 16323049977824691313, name: pm_ceil, fileName: pm_libm.c, startLine: 215, endLine: 215
+DEBUG: adding pm_ceil (in module: pm_libm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 16323049977824691313)
+DEBUG: assigning function pm_ceil id 16323049977824691313
+DEBUG: found 6 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: pm_math_init is 10077098481608820241
+DEBUG: found 0 loops in function pm_math_init
+DEBUG: region name to id: pm_pow10f is 2882321494315938793
+DEBUG: found 0 loops in function pm_pow10f
+DEBUG: region name to id: pm_log10f is 9018009666235919751
+DEBUG: found 0 loops in function pm_log10f
+DEBUG: region name to id: pm_fabs is 15787880229759719084
+DEBUG: found 0 loops in function pm_fabs
+DEBUG: region name to id: pm_floor is 3475266770584164089
+DEBUG: found 0 loops in function pm_floor
+DEBUG: region name to id: pm_ceil is 16323049977824691313
+DEBUG: found 0 loops in function pm_ceil
+DEBUG: Writing kremlib calls to pm_libm.kdump
+INFO: dumping function: pm_math_init
+INFO: dumping function: pm_pow10f
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: pm_log10f
+INFO: dumping function: pm_fabs
+INFO: dumping function: pm_floor
+INFO: dumping function: pm_ceil
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

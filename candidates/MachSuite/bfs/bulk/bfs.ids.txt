@@ -1,0 +1,24 @@
+FUNC: bfs
+	13 : 28 : icmp
+	5 : 29 : load
+	14 : ?? : phi
+	2 : 25 : load
+	12 : 25 : icmp
+	3 : 26 : load
+	4 : 27 : load
+	18 : ?? : phi
+	6 : 30 : load
+	21 : 32 : icmp
+	1: ARG : 2
+	7 : 33 : trunc
+	20 : 34 : add
+	19 : ?? : phi
+	17 : 28 : add
+	16 : ?? : phi
+	22 : 39 : icmp
+	11 : ?? : phi
+	15 : ?? : phi
+	10 : 24 : icmp
+	8 : ?? : phi
+	9 : 21 : icmp
+

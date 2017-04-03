@@ -1,0 +1,149 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x22ef520>, <0x22f91c0>, <0x22f91c0>, <0x22fa950>, <0x22f8ee8>, <0x22f91c0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/bsort/bsort.c] [DW_LANG_C99]
+
+!{!"0x2e\00bsort_Initialize\00bsort_Initialize\00\0051\000\001\000\000\00256\000\0052", <0x22ef520>, <0x22f75f0>, <0x22fa2e0>, null, i32 (i32*)* @bsort_Initialize, null, null, <0x22f91c0>} ; [ DW_TAG_subprogram ] [line 51] [def] [scope 52] [bsort_Initialize]
+
+!{!"0x2e\00bsort_init\00bsort_init\00\0063\000\001\000\000\00256\000\0064", <0x22ef520>, <0x22f75f0>, <0x22fa170>, null, void ()* @bsort_init, null, null, <0x22f91c0>} ; [ DW_TAG_subprogram ] [line 63] [def] [scope 64] [bsort_init]
+
+!{!"0x2e\00bsort_return\00bsort_return\00\0069\000\001\000\000\00256\000\0070", <0x22ef520>, <0x22f75f0>, <0x22fb1a0>, null, i32 ()* @bsort_return, null, null, <0x22f91c0>} ; [ DW_TAG_subprogram ] [line 69] [def] [scope 70] [bsort_return]
+
+!{!"0x2e\00bsort_BubbleSort\00bsort_BubbleSort\00\0087\000\001\000\000\00256\000\0088", <0x22ef520>, <0x22f75f0>, <0x22fa2e0>, null, i32 (i32*)* @bsort_BubbleSort, null, null, <0x22f91c0>} ; [ DW_TAG_subprogram ] [line 87] [def] [scope 88] [bsort_BubbleSort]
+
+!{!"0x2e\00bsort_main\00bsort_main\00\00115\000\001\000\000\00256\000\00116", <0x22ef520>, <0x22f75f0>, <0x22fa170>, null, void ()* @bsort_main, null, null, <0x22f91c0>} ; [ DW_TAG_subprogram ] [line 115] [def] [scope 116] [bsort_main]
+
+!{!"0x2e\00main\00main\00\00125\000\001\000\000\00256\000\00126", <0x22ef520>, <0x22f75f0>, <0x22fb1a0>, null, i32 ()* @main, null, null, <0x22f91c0>} ; [ DW_TAG_subprogram ] [line 125] [def] [scope 126] [main]
+
+!{!"0x34\00bsort_Array\00bsort_Array\00\0043\001\001", null, <0x22f75f0>, <0x22fd310>, [100 x i32]* @bsort_Array, null} ; [ DW_TAG_variable ] [bsort_Array] [line 43] [local] [def]
+
+!{!"0x1\00\000\003200\0032\000\000\000", null, null, <0x22fa1f8>, <0x22f8eb8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 3200, align 32, offset 0] [from int]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x22fa270>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x22fa1f8>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from int]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x22fa108>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x22fb0c8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+Meta data for 11015533154117497555
+Meta data for 6780271250076159880
+Meta data for 7583466545768523618
+Meta data for 3890692511813474177
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 7398765139413338894, name: bsort_Initialize, fileName: bsort.c, startLine: 51, endLine: 51
+DEBUG: adding bsort_Initialize (in module: bsort.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 7398765139413338894)
+DEBUG: assigning function bsort_Initialize id 7398765139413338894
+DEBUG: new region: FuncRegion(id: 6130370126687033026, name: bsort_init, fileName: bsort.c, startLine: 63, endLine: 63
+DEBUG: adding bsort_init (in module: bsort.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6130370126687033026)
+DEBUG: assigning function bsort_init id 6130370126687033026
+DEBUG: new region: FuncRegion(id: 14219546595598118470, name: bsort_return, fileName: bsort.c, startLine: 69, endLine: 69
+DEBUG: adding bsort_return (in module: bsort.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14219546595598118470)
+DEBUG: assigning function bsort_return id 14219546595598118470
+DEBUG: new region: FuncRegion(id: 17823290152470134614, name: bsort_BubbleSort, fileName: bsort.c, startLine: 87, endLine: 87
+DEBUG: adding bsort_BubbleSort (in module: bsort.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17823290152470134614)
+DEBUG: assigning function bsort_BubbleSort id 17823290152470134614
+DEBUG: new region: FuncRegion(id: 10601011266950646308, name: bsort_main, fileName: bsort.c, startLine: 115, endLine: 115
+DEBUG: adding bsort_main (in module: bsort.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 10601011266950646308)
+DEBUG: assigning function bsort_main id 10601011266950646308
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: bsort.c, startLine: 125, endLine: 125
+DEBUG: adding main (in module: bsort.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 6 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: bsort_Initialize is 7398765139413338894
+DEBUG: found 1 loops in function bsort_Initialize
+DEBUG: assigning id = 11015533154117497555 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4713835561494904774
+DEBUG: assigning id = 4713835561494904774 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: bsort_init is 6130370126687033026
+DEBUG: found 0 loops in function bsort_init
+DEBUG: region name to id: bsort_return is 14219546595598118470
+DEBUG: found 1 loops in function bsort_return
+DEBUG: assigning id = 6780271250076159880 to loop with the following BBs:
+	for.cond for.body land.rhs land.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8399415844448027049
+DEBUG: assigning id = 8399415844448027049 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: bsort_BubbleSort is 17823290152470134614
+DEBUG: found 2 loops in function bsort_BubbleSort
+DEBUG: assigning id = 7583466545768523618 to loop with the following BBs:
+	for.cond for.body for.cond1 if.end if.then8 for.inc for.end for.inc22 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 18293979288568574827
+DEBUG: assigning id = 18293979288568574827 to body of loop
+DEBUG: assigning id = 3890692511813474177 to loop with the following BBs:
+	for.cond1 if.end if.then8 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5746261794025478728
+DEBUG: assigning id = 5746261794025478728 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end24
+DEBUG: for.end has 1 possible loop exit points
+DEBUG: 	target #0: for.end24
+DEBUG: for.cond1 has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: bsort_main is 10601011266950646308
+DEBUG: found 0 loops in function bsort_main
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to bsort.kdump
+INFO: dumping function: bsort_Initialize
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: bsort_init
+INFO: dumping function: bsort_return
+INFO: dumping function: bsort_BubbleSort
+INFO: dumping function: bsort_main
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

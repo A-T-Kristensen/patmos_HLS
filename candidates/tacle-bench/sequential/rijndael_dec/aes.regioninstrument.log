@@ -1,0 +1,171 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x26e2de0>, <0x26e8eb0>, <0x26f4690>, <0x26e8f40>, <0x26f4c48>, <0x26f5740>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/sequential/rijndael_dec/aes.c] [DW_LANG_C99]
+
+!{!"0x2e\00rijndael_dec_set_key\00rijndael_dec_set_key\00\0066\000\001\000\000\00256\000\0068", <0x26e2de0>, <0x26e8c40>, <0x26f5020>, null, i16 (i8*, i64, i32, %struct.aes*)* @rijndael_dec_set_key, null, null, <0x26f5740>} ; [ DW_TAG_subprogram ] [line 66] [def] [scope 68] [rijndael_dec_set_key]
+
+!{!"0x2e\00rijndael_dec_decrypt\00rijndael_dec_decrypt\00\00156\000\001\000\000\00256\000\00158", <0x26e2de0>, <0x26e8c40>, <0x26e8510>, null, i16 (i8*, i8*, %struct.aes*)* @rijndael_dec_decrypt, null, null, <0x26f5740>} ; [ DW_TAG_subprogram ] [line 156] [def] [scope 158] [rijndael_dec_decrypt]
+
+!{!"0x34\00rijndael_dec_rcon_tab\00rijndael_dec_rcon_tab\00\0046\000\001", null, <0x26f6d40>, <0x26f6e80>, [29 x i64]* @rijndael_dec_rcon_tab, null} ; [ DW_TAG_variable ] [rijndael_dec_rcon_tab] [line 46] [def]
+
+!{!"0x34\00rijndael_dec_it_tab\00rijndael_dec_it_tab\00\00218\000\001", null, <0x26f6d40>, <0x26f7120>, [4 x [256 x i64]]* @rijndael_dec_it_tab, null} ; [ DW_TAG_variable ] [rijndael_dec_it_tab] [line 218] [def]
+
+!{!"0x34\00rijndael_dec_fl_tab\00rijndael_dec_fl_tab\00\00271\000\001", null, <0x26f6d40>, <0x26f7120>, [4 x [256 x i64]]* @rijndael_dec_fl_tab, null} ; [ DW_TAG_variable ] [rijndael_dec_fl_tab] [line 271] [def]
+
+!{!"0x34\00rijndael_dec_il_tab\00rijndael_dec_il_tab\00\00286\000\001", null, <0x26f6d40>, <0x26f7120>, [4 x [256 x i64]]* @rijndael_dec_il_tab, null} ; [ DW_TAG_variable ] [rijndael_dec_il_tab] [line 286] [def]
+
+!{!"0x34\00rijndael_dec_im_tab\00rijndael_dec_im_tab\00\00368\000\001", null, <0x26f6d40>, <0x26f7120>, [4 x [256 x i64]]* @rijndael_dec_im_tab, null} ; [ DW_TAG_variable ] [rijndael_dec_im_tab] [line 368] [def]
+
+!{!"0x1\00\000\001856\0064\000\000\000", null, null, <0x26e8d00>, <0x26f6e18>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 1856, align 64, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x26e92f0>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from word]
+
+!{!"0x16\00word\00114\000\000\000\000", <0x26e6c90>, null, <0x26e92a8>} ; [ DW_TAG_typedef ] [word] [line 114, size 0, align 0, offset 0] [from long unsigned int]
+
+!{!"0x24\00long unsigned int\000\0064\0064\000\000\007", null, null} ; [ DW_TAG_base_type ] [long unsigned int] [line 0, size 64, align 64, offset 0, enc DW_ATE_unsigned]
+
+!{!"0x1\00\000\0065536\0064\000\000\000", null, null, <0x26e8d00>, <0x26f70b0>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 65536, align 64, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x26f4f38>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x16\00aes_ret\00115\000\000\000\000", <0x26e6c90>, null, <0x26f3cd8>} ; [ DW_TAG_typedef ] [aes_ret] [line 115, size 0, align 0, offset 0] [from short]
+
+!{!"0x24\00short\000\0016\0016\000\000\005", null, null} ; [ DW_TAG_base_type ] [short] [line 0, size 16, align 16, offset 0, enc DW_ATE_signed]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26e91d0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from byte]
+
+!{!"0x16\00byte\00113\000\000\000\000", <0x26e6c90>, null, <0x26e9188>} ; [ DW_TAG_typedef ] [byte] [line 113, size 0, align 0, offset 0] [from unsigned char]
+
+!{!"0x24\00unsigned char\000\008\008\000\000\008", null, null} ; [ DW_TAG_base_type ] [unsigned char] [line 0, size 8, align 8, offset 0, enc DW_ATE_unsigned_char]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x26eaae0>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from aes_key]
+
+!{!"0x4\00aes_key\00147\0032\0032\000\000\000", <0x26e6c90>, null, null, <0x26f3b78>, null, null, null} ; [ DW_TAG_enumeration_type ] [aes_key] [line 147, size 32, align 32, offset 0] [def] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26f5aa0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from aes]
+
+!{!"0x13\00aes\00152\008384\0064\000\000\000", <0x26e6c90>, null, null, <0x26f59b8>, null, null, null} ; [ DW_TAG_structure_type ] [aes] [line 152, size 8384, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00Nkey\00153\0064\0064\000\000", <0x26e6c90>, <0x26f5aa0>, <0x26e92f0>} ; [ DW_TAG_member ] [Nkey] [line 153, size 64, align 64, offset 0] [from word]
+
+!{!"0xd\00Nrnd\00154\0064\0064\0064\000", <0x26e6c90>, <0x26f5aa0>, <0x26e92f0>} ; [ DW_TAG_member ] [Nrnd] [line 154, size 64, align 64, offset 64] [from word]
+
+!{!"0xd\00e_key\00155\004096\0064\00128\000", <0x26e6c90>, <0x26f5aa0>, <0x26f5640>} ; [ DW_TAG_member ] [e_key] [line 155, size 4096, align 64, offset 128] [from ]
+
+!{!"0x1\00\000\004096\0064\000\000\000", null, null, <0x26e92f0>, <0x26f55d8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 4096, align 64, offset 0] [from word]
+
+!{!"0xd\00d_key\00156\004096\0064\004224\000", <0x26e6c90>, <0x26f5aa0>, <0x26f5640>} ; [ DW_TAG_member ] [d_key] [line 156, size 4096, align 64, offset 4224] [from ]
+
+!{!"0xd\00mode\00157\008\008\008320\000", <0x26e6c90>, <0x26f5aa0>, <0x26e91d0>} ; [ DW_TAG_member ] [mode] [line 157, size 8, align 8, offset 8320] [from byte]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x26e84a0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26f5180>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x26e9188>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from unsigned char]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26e9188>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from unsigned char]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26f5410>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x26f5aa0>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from aes]
+
+!{!"0x4\00aes_const\00138\0032\0032\000\000\000", <0x26e6c90>, null, null, <0x26e8e08>, null, null, null} ; [ DW_TAG_enumeration_type ] [aes_const] [line 138, size 32, align 32, offset 0] [def] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26e92f0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from word]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26e92a8>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from long unsigned int]
+
+Meta data for 9463451695169796702
+Meta data for 9650275125206605003
+Meta data for 17084035358595759271
+Meta data for 446466394888138439
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 14283467231412464791, name: rijndael_dec_set_key, fileName: aes.c, startLine: 66, endLine: 66
+DEBUG: adding rijndael_dec_set_key (in module: aes.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14283467231412464791)
+DEBUG: assigning function rijndael_dec_set_key id 14283467231412464791
+DEBUG: new region: FuncRegion(id: 10183903111963709538, name: rijndael_dec_decrypt, fileName: aes.c, startLine: 156, endLine: 156
+DEBUG: adding rijndael_dec_decrypt (in module: aes.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 10183903111963709538)
+DEBUG: assigning function rijndael_dec_decrypt id 10183903111963709538
+DEBUG: found 2 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: rijndael_dec_set_key is 14283467231412464791
+DEBUG: found 4 loops in function rijndael_dec_set_key
+DEBUG: assigning id = 9463451695169796702 to loop with the following BBs:
+	for.cond do.body273 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7659613813464425220
+DEBUG: assigning id = 7659613813464425220 to body of loop
+DEBUG: assigning id = 9650275125206605003 to loop with the following BBs:
+	do.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17766898412489175966
+DEBUG: assigning id = 17766898412489175966 to body of loop
+DEBUG: assigning id = 17084035358595759271 to loop with the following BBs:
+	do.body94 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17176598764217302613
+DEBUG: assigning id = 17176598764217302613 to body of loop
+DEBUG: assigning id = 446466394888138439 to loop with the following BBs:
+	do.body162 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17547461375357987937
+DEBUG: assigning id = 17547461375357987937 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: do.body362
+DEBUG: do.body has 1 possible loop exit points
+DEBUG: 	target #0: sw.epilog.loopexit
+DEBUG: do.body94 has 1 possible loop exit points
+DEBUG: 	target #0: sw.epilog.loopexit1
+DEBUG: do.body162 has 1 possible loop exit points
+DEBUG: 	target #0: sw.epilog.loopexit2
+DEBUG: region name to id: rijndael_dec_decrypt is 10183903111963709538
+DEBUG: found 0 loops in function rijndael_dec_decrypt
+DEBUG: Writing kremlib calls to aes.kdump
+INFO: dumping function: rijndael_dec_set_key
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: rijndael_dec_decrypt
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

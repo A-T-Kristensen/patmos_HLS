@@ -1,0 +1,248 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x2f755f0>, <0x2f74920>, <0x2f71198>, <0x2f746e8>, <0x2f78b38>, <0x2f74920>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/fir2dim/fir2dim.c] [DW_LANG_C99]
+
+!{!"0x2e\00fir2dim_init\00fir2dim_init\00\0059\000\001\000\000\000\000\0060", <0x2f755f0>, <0x2f77e30>, <0x2f77f10>, null, void ()* @fir2dim_init, null, null, <0x2f74920>} ; [ DW_TAG_subprogram ] [line 59] [def] [scope 60] [fir2dim_init]
+
+!{!"0x2e\00fir2dim_return\00fir2dim_return\00\0090\000\001\000\000\000\000\0091", <0x2f755f0>, <0x2f77e30>, <0x2f78620>, null, i32 ()* @fir2dim_return, null, null, <0x2f74920>} ; [ DW_TAG_subprogram ] [line 90] [def] [scope 91] [fir2dim_return]
+
+!{!"0x2e\00fir2dim_pin_down\00fir2dim_pin_down\00\00100\000\001\000\000\00256\000\00101", <0x2f755f0>, <0x2f77e30>, <0x2f788f0>, null, void (float*, float*, float*, float*)* @fir2dim_pin_down, null, null, <0x2f74920>} ; [ DW_TAG_subprogram ] [line 100] [def] [scope 101] [fir2dim_pin_down]
+
+!{!"0x2e\00fir2dim_main\00fir2dim_main\00\00144\000\001\000\000\000\000\00145", <0x2f755f0>, <0x2f77e30>, <0x2f77f10>, null, void ()* @fir2dim_main, null, null, <0x2f74920>} ; [ DW_TAG_subprogram ] [line 144] [def] [scope 145] [fir2dim_main]
+
+!{!"0x2e\00main\00main\00\00191\000\001\000\000\00256\000\00192", <0x2f755f0>, <0x2f77e30>, <0x2f78620>, null, i32 ()* @main, null, null, <0x2f74920>} ; [ DW_TAG_subprogram ] [line 191] [def] [scope 192] [main]
+
+!{!"0x34\00fir2dim_result\00fir2dim_result\00\0052\000\001", null, <0x2f77e30>, <0x2f785b8>, i32* @fir2dim_result, null} ; [ DW_TAG_variable ] [fir2dim_result] [line 52] [def]
+
+!{!"0x34\00fir2dim_output\00fir2dim_output\00\0049\001\001", null, <0x2f77e30>, <0x2f7a3b0>, [16 x float]* @fir2dim_output, null} ; [ DW_TAG_variable ] [fir2dim_output] [line 49] [local] [def]
+
+!{!"0x34\00fir2dim_array\00fir2dim_array\00\0045\001\001", null, <0x2f77e30>, <0x2f7a630>, [36 x float]* @fir2dim_array, null} ; [ DW_TAG_variable ] [fir2dim_array] [line 45] [local] [def]
+
+!{!"0x34\00fir2dim_image\00fir2dim_image\00\0042\001\001", null, <0x2f77e30>, <0x2f7a3b0>, [16 x float]* @fir2dim_image, null} ; [ DW_TAG_variable ] [fir2dim_image] [line 42] [local] [def]
+
+!{!"0x34\00fir2dim_coefficients\00fir2dim_coefficients\00\0041\001\001", null, <0x2f77e30>, <0x2f79f90>, [9 x float]* @fir2dim_coefficients, null} ; [ DW_TAG_variable ] [fir2dim_coefficients] [line 41] [local] [def]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x1\00\000\00512\0032\000\000\000", null, null, <0x2f78838>, <0x2f7a348>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 512, align 32, offset 0] [from float]
+
+!{!"0x24\00float\000\0032\0032\000\000\004", null, null} ; [ DW_TAG_base_type ] [float] [line 0, size 32, align 32, offset 0, enc DW_ATE_float]
+
+!{!"0x1\00\000\001152\0032\000\000\000", null, null, <0x2f78838>, <0x2f7a5c8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 1152, align 32, offset 0] [from float]
+
+!{!"0x1\00\000\00288\0032\000\000\000", null, null, <0x2f78838>, <0x2f79f28>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 288, align 32, offset 0] [from float]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2f77ea8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2f77df8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2f78888>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2f78838>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from float]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2f74a38>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from unsigned char]
+
+!{!"0x24\00unsigned char\000\008\008\000\000\008", null, null} ; [ DW_TAG_base_type ] [unsigned char] [line 0, size 8, align 8, offset 0, enc DW_ATE_unsigned_char]
+
+Meta data for 5382996401911379412
+Meta data for 17066331508766619335
+Meta data for 17410749925670768219
+Meta data for 7049773298681799769
+Meta data for 13594098648744008529
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 1891336891801358173, name: fir2dim_init, fileName: fir2dim.c, startLine: 59, endLine: 59
+DEBUG: adding fir2dim_init (in module: fir2dim.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 1891336891801358173)
+DEBUG: assigning function fir2dim_init id 1891336891801358173
+DEBUG: new region: FuncRegion(id: 15581976640356805324, name: fir2dim_return, fileName: fir2dim.c, startLine: 90, endLine: 90
+DEBUG: adding fir2dim_return (in module: fir2dim.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 15581976640356805324)
+DEBUG: assigning function fir2dim_return id 15581976640356805324
+DEBUG: new region: FuncRegion(id: 14635786758566537246, name: fir2dim_pin_down, fileName: fir2dim.c, startLine: 100, endLine: 100
+DEBUG: adding fir2dim_pin_down (in module: fir2dim.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14635786758566537246)
+DEBUG: assigning function fir2dim_pin_down id 14635786758566537246
+DEBUG: new region: FuncRegion(id: 9739386045713850465, name: fir2dim_main, fileName: fir2dim.c, startLine: 144, endLine: 144
+DEBUG: adding fir2dim_main (in module: fir2dim.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 9739386045713850465)
+DEBUG: assigning function fir2dim_main id 9739386045713850465
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: fir2dim.c, startLine: 191, endLine: 191
+DEBUG: adding main (in module: fir2dim.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 5 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: fir2dim_init is 1891336891801358173
+DEBUG: found 4 loops in function fir2dim_init
+DEBUG: assigning id = 5382996401911379412 to loop with the following BBs:
+	for.cond31 for.body35 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5194070554296372841
+DEBUG: assigning id = 5194070554296372841 to body of loop
+DEBUG: assigning id = 17066331508766619335 to loop with the following BBs:
+	for.cond18 for.body22 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13094000016251182561
+DEBUG: assigning id = 13094000016251182561 to body of loop
+DEBUG: assigning id = 17410749925670768219 to loop with the following BBs:
+	for.cond5 for.body9 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16208629576685477343
+DEBUG: assigning id = 16208629576685477343 to body of loop
+DEBUG: assigning id = 7049773298681799769 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4669741572336014191
+DEBUG: assigning id = 4669741572336014191 to body of loop
+DEBUG: for.cond31 has 1 possible loop exit points
+DEBUG: 	target #0: for.end43
+DEBUG: for.cond18 has 1 possible loop exit points
+DEBUG: 	target #0: for.end30
+DEBUG: for.cond5 has 1 possible loop exit points
+DEBUG: 	target #0: for.end17
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: fir2dim_return is 15581976640356805324
+DEBUG: found 0 loops in function fir2dim_return
+DEBUG: region name to id: fir2dim_pin_down is 14635786758566537246
+DEBUG: found 8 loops in function fir2dim_pin_down
+DEBUG: assigning id = 13594098648744008529 to loop with the following BBs:
+	for.cond44 for.body46 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.srcMeta data for 18064699637837435967
+Meta data for 12319137510172475521
+Meta data for 8373071338369701852
+Meta data for 7301206335362560505
+Meta data for 10674050358667139212
+Meta data for 15636091629754726294
+Meta data for 442011326409149296
+Meta data for 2566715912752874797
+Meta data for 15710886116899648749
+Meta data for 8905498630933238478
+/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10743580285311726768
+DEBUG: assigning id = 10743580285311726768 to body of loop
+DEBUG: assigning id = 18064699637837435967 to loop with the following BBs:
+	for.cond37 for.body39 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 568481194117415327
+DEBUG: assigning id = 568481194117415327 to body of loop
+DEBUG: assigning id = 12319137510172475521 to loop with the following BBs:
+	for.cond21 for.body23 for.cond25 for.end32 for.body27 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 652265968670364860
+DEBUG: assigning id = 652265968670364860 to body of loop
+DEBUG: assigning id = 8373071338369701852 to loop with the following BBs:
+	for.cond25 for.body27 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9912318232673154319
+DEBUG: assigning id = 9912318232673154319 to body of loop
+DEBUG: assigning id = 7301206335362560505 to loop with the following BBs:
+	for.cond14 for.body16 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16473733904811693573
+DEBUG: assigning id = 16473733904811693573 to body of loop
+DEBUG: assigning id = 10674050358667139212 to loop with the following BBs:
+	for.cond7 for.body9 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3216307590629682308
+DEBUG: assigning id = 3216307590629682308 to body of loop
+DEBUG: assigning id = 15636091629754726294 to loop with the following BBs:
+	for.cond for.body for.cond1 for.inc4 for.body3 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13539822284689831876
+DEBUG: assigning id = 13539822284689831876 to body of loop
+DEBUG: assigning id = 442011326409149296 to loop with the following BBs:
+	for.cond1 for.body3 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10308459366834291897
+DEBUG: assigning id = 10308459366834291897 to body of loop
+DEBUG: for.cond44 has 1 possible loop exit points
+DEBUG: 	target #0: for.end50
+DEBUG: for.cond37 has 1 possible loop exit points
+DEBUG: 	target #0: for.end43
+DEBUG: for.cond21 has 1 possible loop exit points
+DEBUG: 	target #0: for.end36
+DEBUG: for.cond25 has 1 possible loop exit points
+DEBUG: 	target #0: for.end32
+DEBUG: for.cond14 has 1 possible loop exit points
+DEBUG: 	target #0: for.end20
+DEBUG: for.cond7 has 1 possible loop exit points
+DEBUG: 	target #0: for.end13
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end6
+DEBUG: for.cond1 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc4
+DEBUG: region name to id: fir2dim_main is 9739386045713850465
+DEBUG: found 5 loops in function fir2dim_main
+DEBUG: assigning id = 2566715912752874797 to loop with the following BBs:
+	for.cond for.body for.cond1 for.inc36 for.body3 for.cond6 for.end for.cond12 for.end21 for.cond22 for.end31 for.body24 for.body14 for.body8 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17159571151735678829
+DEBUG: assigning id = 17159571151735678829 to body of loop
+DEBUG: assigning id = 15710886116899648749 to loop with the following BBs:
+	for.cond1 for.body3 for.cond6 for.end for.cond12 for.end21 for.cond22 for.end31 for.body24 for.body14 for.body8 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9854536499007516290
+DEBUG: assigning id = 9854536499007516290 to body of loop
+DEBUG: assigning id = 8905498630933238478 to loop with the following BBs:
+	for.cond6 for.body8 
+DEBUG: /home/patmos/DMeta data for 2013554740435723738
+Meta data for 6448986998791827529
+eveloper/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16055738733532722574
+DEBUG: assigning id = 16055738733532722574 to body of loop
+DEBUG: assigning id = 2013554740435723738 to loop with the following BBs:
+	for.cond12 for.body14 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10205840147768222097
+DEBUG: assigning id = 10205840147768222097 to body of loop
+DEBUG: assigning id = 6448986998791827529 to loop with the following BBs:
+	for.cond22 for.body24 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6436668762400443940
+DEBUG: assigning id = 6436668762400443940 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end38
+DEBUG: for.cond1 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc36
+DEBUG: for.cond6 has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: for.cond12 has 1 possible loop exit points
+DEBUG: 	target #0: for.end21
+DEBUG: for.cond22 has 1 possible loop exit points
+DEBUG: 	target #0: for.end31
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to fir2dim.kdump
+INFO: dumping function: fir2dim_init
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: fir2dim_return
+INFO: dumping function: fir2dim_pin_down
+INFO: dumping function: fir2dim_main
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

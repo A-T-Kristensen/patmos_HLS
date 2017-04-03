@@ -1,0 +1,363 @@
+FUNC: audiobeam_init
+	23 : ?? : phi
+	10 : ?? : phi
+	9 : 117 : icmp
+	6 : 118 : load
+	7 : 118 : load
+	3 : 113 : trunc
+	17 : 128 : load
+	27 : ?? : phi
+	20 : ?? : phi
+	19 : 127 : icmp
+	16 : 128 : load
+	28 : 127 : getelementptr
+	21 : ?? : phi
+	5 : ?? : phi
+	4 : 112 : icmp
+	1 : 113 : load
+	2 : 113 : load
+	25 : ?? : phi
+	15 : ?? : phi
+	11 : 123 : load
+	12 : 123 : load
+	13 : 123 : trunc
+	26 : 122 : getelementptr
+	18 : 128 : trunc
+	22 : 112 : getelementptr
+	8 : 118 : trunc
+	24 : 117 : getelementptr
+	14 : 122 : icmp
+
+FUNC: audiobeam_return
+	2 : 134 : zext
+	1 : 134 : load
+
+FUNC: audiobeam_preprocess_delays
+	6 : ?? : phi
+	5 : 148 : icmp
+	1 : 149 : load
+	2 : 150 : load
+	3 : 150 : call
+	4 : 150 : fptosi
+	7 : 151 : load
+	8 : 151 : call
+	9 : 151 : fptosi
+	10 : 152 : load
+	11 : 152 : load
+	12 : 152 : fsub
+
+FUNC: audiobeam_parse_line
+	5 : 162 : icmp
+	4 : 162 : sext
+	6 : ?? : phi
+	2 : 163 : load
+	3 : 163 : add
+	8 : 163 : sext
+	7 : 163 : load
+	1: ARG : 1
+
+FUNC: audiobeam_find_max_in_arr
+	9 : 175 : sext
+	7 : ?? : phi
+	5 : ?? : phi
+	10 : 175 : icmp
+	2 : 176 : load
+	11 : 176 : fcmp
+	3 : 177 : load
+	8 : ?? : phi
+	4 : 180 : call
+	6 : 180 : fptosi
+	1: ARG : 1
+
+FUNC: audiobeam_find_min_in_arr
+	1: ARG : 1
+	2 : 187 : load
+	10 : 190 : sext
+	8 : ?? : phi
+	6 : ?? : phi
+	11 : 190 : icmp
+	9 : ?? : phi
+	3 : 191 : load
+	12 : 191 : fcmp
+	4 : 192 : load
+	5 : 195 : call
+	7 : 195 : fptosi
+
+FUNC: audiobeam_wrapped_inc_offset
+	7 : 201 : icmp
+	6 : 202 : add
+	4 : ?? : phi
+	5 : 202 : sub
+	3: ARG : 2
+	2: ARG : 1
+	1: ARG : 0
+
+FUNC: audiobeam_wrapped_dec_offset
+	7 : 210 : icmp
+	5 : 211 : add
+	6 : 213 : sub
+	4 : ?? : phi
+	3: ARG : 2
+	2: ARG : 1
+	1: ARG : 0
+
+FUNC: audiobeam_wrapped_inc
+	3 : 219 : call
+	2: ARG : 1
+	1: ARG : 0
+
+FUNC: audiobeam_wrapped_dec
+	1: ARG : 0
+	2: ARG : 1
+	3 : 225 : call
+
+FUNC: audiobeam_init_data_queue
+	1: ARG : 0
+	2: ARG : 1
+	3 : 237 : trunc
+	5 : 237 : call
+	4 : 237 : bitcast
+	15 : 241 : sext
+	8 : ?? : phi
+	7 : 241 : icmp
+	6 : 242 : trunc
+	11 : 242 : call
+	10 : 242 : bitcast
+	9 : 242 : load
+	14 : ?? : phi
+	16 : 245 : icmp
+	12 : 246 : load
+	13 : 246 : load
+
+FUNC: audiobeam_init_delays
+	4 : 267 : bitcast
+	9 : ?? : phi
+	7 : 271 : sext
+	3 : 267 : trunc
+	1: ARG : 0
+	2: ARG : 1
+	5 : 267 : call
+	8 : 271 : icmp
+	6 : 272 : trunc
+	12 : 272 : call
+	11 : 272 : bitcast
+	10 : 272 : load
+
+FUNC: audiobeam_calc_distances
+	7 : 293 : load
+	8 : 294 : load
+	9 : 295 : load
+	10 : 296 : load
+	1: ARG : 3
+	16 : 287 : sext
+	18 : ?? : phi
+	17 : 287 : icmp
+	2 : 288 : load
+	3 : 289 : load
+	4 : 290 : load
+	5 : 291 : load
+	6 : 292 : load
+	11 : 297 : load
+	12 : 298 : load
+	13 : 299 : load
+	15 : 288 : fadd
+	14 : 288 : call
+
+FUNC: audiobeam_calc_delays
+	6 : 310 : sext
+	8 : ?? : phi
+	7 : 310 : icmp
+	1: ARG : 2
+	2: ARG : 3
+	3: ARG : 4
+	4 : 311 : load
+	5 : 311 : fmul
+
+FUNC: audiobeam_adjust_delays
+	1: ARG : 1
+	2 : 318 : call
+	5 : 318 : sub
+	6 : 321 : sext
+	8 : ?? : phi
+	7 : 321 : icmp
+	3 : 322 : load
+	4 : 322 : fsub
+
+FUNC: audiobeam_calc_weights_lr
+	11 : 344 : call
+	15 : 344 : fptrunc
+	25 : 343 : add
+	17 : 335 : trunc
+	20 : 335 : sub
+	1: ARG : 0
+	2 : 328 : trunc
+	6 : 332 : sdiv
+	19 : ?? : select
+	18 : ?? : zext
+	16 : ?? : phi
+	8 : ?? : phi
+	7 : 335 : icmp
+	23 : ?? : sext
+	21 : ?? : phi
+	5 : ?? : phi
+	9 : 337 : icmp
+	4 : 338 : fptrunc
+	3 : 338 : call
+	10 : 338 : fptrunc
+	22 : 337 : add
+	26 : ?? : sext
+	24 : ?? : phi
+	13 : ?? : phi
+	14 : 343 : icmp
+	12 : 344 : fptrunc
+
+FUNC: audiobeam_calc_weights_left_only
+	2 : 356 : trunc
+	1: ARG : 0
+	6 : 360 : sdiv
+	10 : 363 : sub
+	9 : ?? : phi
+	5 : ?? : phi
+	7 : 363 : icmp
+	4 : 364 : fptrunc
+	3 : 364 : call
+	8 : 364 : fptrunc
+	11 : 363 : add
+
+FUNC: audiobeam_calculate_energy
+	1: ARG : 1
+	7 : 378 : sext
+	5 : ?? : phi
+	4 : ?? : phi
+	8 : 378 : icmp
+	2 : 379 : load
+	3 : 379 : load
+	6 : 379 : fadd
+
+FUNC: audiobeam_do_beamforming
+	1: ARG : 2
+	2: ARG : 3
+	3: ARG : 4
+	31: ARG : 5
+	20 : 403 : sext
+	18 : ?? : phi
+	17 : ?? : phi
+	21 : 403 : icmp
+	4 : 404 : load
+	5 : 405 : load
+	24 : 409 : add
+	25 : 410 : icmp
+	23 : 411 : trunc
+	22 : ?? : phi
+	28 : 414 : add
+	29 : 415 : icmp
+	27 : 416 : trunc
+	26 : ?? : phi
+	7 : 422 : sext
+	6 : 422 : load
+	8 : 422 : load
+	10 : 423 : sext
+	9 : 423 : load
+	11 : 423 : load
+	12 : 424 : load
+	14 : 425 : sext
+	13 : 425 : load
+	15 : 425 : load
+	33 : 428 : icmp
+	16 : 429 : load
+	30 : 429 : fadd
+	32 : 431 : fadd
+	19 : ?? : phi
+
+FUNC: audiobeam_process_signal
+	31 : 465 : or
+	19 : 466 : load
+	33 : 466 : icmp
+	20 : 467 : load
+	23 : 467 : sext
+	21 : 467 : load
+	22 : 467 : load
+	35 : ?? : phi
+	34 : 474 : icmp
+	1: ARG : 1
+	2: ARG : 2
+	49: ARG : 3
+	3: ARG : 5
+	4: ARG : 6
+	5 : 454 : load
+	6 : 454 : load
+	18 : ?? : phi
+	7 : 457 : load
+	17 : 457 : icmp
+	8 : 458 : load
+	47 : 458 : icmp
+	9 : 459 : load
+	12 : 459 : sext
+	10 : 459 : load
+	11 : 459 : load
+	13 : 462 : load
+	14 : 462 : load
+	16 : 462 : trunc
+	15 : 462 : call
+	29 : 465 : sext
+	30 : 465 : sext
+	32 : ?? : phi
+	24 : 476 : load
+	25 : 477 : load
+	26 : 478 : load
+	28 : 478 : trunc
+	27 : 477 : call
+	36 : 479 : load
+	37 : 475 : call
+	39 : 482 : fdiv
+	48 : 484 : icmp
+	38 : 485 : load
+	40 : 488 : load
+	41 : 489 : load
+	42 : 489 : load
+	44 : 489 : trunc
+	43 : 489 : call
+	46 : ?? : phi
+	45 : ?? : phi
+
+FUNC: audiobeam_calc_beamforming_result
+	9 : 509 : icmp
+	8 : 511 : call
+	12: ARG : 1
+	1: ARG : 4
+	2: ARG : 5
+	3: ARG : 6
+	7 : ?? : phi
+	4 : 516 : call
+	11 : 520 : icmp
+	13 : 522 : sext
+	10 : ?? : phi
+	14 : 522 : icmp
+	5 : 523 : load
+	6 : 523 : call
+
+FUNC: audiobeam_calc_single_pos
+	1: ARG : 2
+	3 : 541 : call
+	2 : 541 : bitcast
+	4 : 549 : load
+	5 : 549 : load
+	6 : 552 : load
+	7 : 552 : load
+	8 : 554 : load
+	9 : 554 : load
+	10 : 554 : call
+	11 : 556 : load
+	12 : 556 : trunc
+	13 : 558 : call
+	14 : 561 : load
+	15 : 561 : load
+	16 : 561 : load
+	17 : 561 : fptosi
+
+FUNC: audiobeam_main
+	1 : 574 : sext
+
+FUNC: main
+	1 : 583 : call
+

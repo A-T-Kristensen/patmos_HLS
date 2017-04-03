@@ -1,0 +1,480 @@
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 5161137975971298800, name: anagram_ReadDict, fileName: anagram.c, startLine: 290, endLine: 290
+DEBUG: adding anagram_ReadDict (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 5161137975971298800)
+DEBUG: assigning function anagram_ReadDict id 5161137975971298800
+DEBUG: new region: FuncRegion(id: 3575045478310906330, name: anagram_isalpha, fileName: anagram_ctype.h, startLine: 35, endLine: 35
+DEBUG: adding anagram_isalpha (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3575045478310906330)
+DEBUG: assigning function anagram_isalpha id 3575045478310906330
+DEBUG: new region: FuncRegion(id: 11653089228453488214, name: anagram_init, fileName: anagram.c, startLine: 337, endLine: 337
+DEBUG: adding anagram_init (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 11653089228453488214)
+DEBUG: assigning function anagram_init id 11653089228453488214
+DEBUG: new region: FuncRegion(id: 18216578678315996837, name: anagram_return, fileName: anagram.c, startLine: 343, endLine: 343
+DEBUG: adding anagram_return (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 18216578678315996837)
+DEBUG: assigning function anagram_return id 18216578678315996837
+DEBUG: new region: FuncRegion(id: 12600865771643665846, name: anagram_ch2i, fileName: anagram.c, startLine: 361, endLine: 361
+DEBUG: adding anagram_ch2i (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12600865771643665846)
+DEBUG: assigning function anagram_ch2i id 12600865771643665846
+DEBUG: new region: FuncRegion(id: 12428294163898323429, name: anagram_CompareFrequency, fileName: anagram.c, startLine: 367, endLine: 367
+DEBUG: adding anagram_CompareFrequency (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12428294163898323429)
+DEBUG: assigning function anagram_CompareFrequency id 12428294163898323429
+DEBUG: new region: FuncRegion(id: 893105852436979906, name: anagram_Reset, fileName: anagram.c, startLine: 378, endLine: 378
+DEBUG: adding anagram_Reset (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 893105852436979906)
+DEBUG: assigning function anagram_Reset id 893105852436979906
+DEBUG: new region: FuncRegion(id: 50422215346083407, name: anagram_BuildMask, fileName: anagram.c, startLine: 397, endLine: 397
+DEBUG: adding anagram_BuildMask (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 50422215346083407)
+DEBUG: assigning function anagram_BuildMask id 50422215346083407
+DEBUG: new region: FuncRegion(id: 15689840412349029159, name: anagram_tolower, fileName: anagram_ctype.h, startLine: 40, endLine: 40
+DEBUG: adding anagram_tolower (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 15689840412349029159)
+DEBUG: assigning function anagram_tolower id 15689840412349029159
+DEBUG: new region: FuncRegion(id: 10185384866200791930, name: anagram_NewWord, fileName: anagram.c, startLine: 448, endLine: 448
+DEBUG: adding anagram_NewWord (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 10185384866200791930)
+DEBUG: assigning function anagram_NewWord id 10185384866200791930
+DEBUG: new region: FuncRegion(id: 3126726476431835056, name: anagram_NextWord, fileName: anagram.c, startLine: 458, endLine: 458
+DEBUG: adding anagram_NextWord (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3126726476431835056)
+DEBUG: assigning function anagram_NextWord id 3126726476431835056
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x36f0710>, <0x36ecbc0>, <0x36ed1a8>, <0x36fd180>, <0x370a748>, <0x36ecbc0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/sequential/anagram/anagram.c] [DW_LANG_C99]
+
+!{!"0x2e\00anagram_ReadDict\00anagram_ReadDict\00\00290\000\001\000\000\00256\000\00291", <0x36f0710>, <0x36ed000>, <0x36f3b80>, null, void ()* @anagram_ReadDict, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 290] [def] [scope 291] [anagram_ReadDict]
+
+!{!"0x2e\00anagram_init\00anagram_init\00\00337\000\001\000\000\00256\000\00338", <0x36f0710>, <0x36ed000>, <0x36f3b80>, null, void ()* @anagram_init, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 337] [def] [scope 338] [anagram_init]
+
+!{!"0x2e\00anagram_return\00anagram_return\00\00343\000\001\000\000\00256\000\00344", <0x36f0710>, <0x36ed000>, <0x36f6c70>, null, i32 ()* @anagram_return, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 343] [def] [scope 344] [anagram_return]
+
+!{!"0x2e\00anagram_ch2i\00anagram_ch2i\00\00361\000\001\000\000\00256\000\00362", <0x36f0710>, <0x36ed000>, <0x36f6ed0>, null, i32 (i32)* @anagram_ch2i, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 361] [def] [scope 362] [anagram_ch2i]
+
+!{!"0x2e\00anagram_CompareFrequency\00anagram_CompareFrequency\00\00367\000\001\000\000\00256\000\00368", <0x36f0710>, <0x36ed000>, <0x36f3530>, null, i32 (i8*, i8*)* @anagram_CompareFrequency, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 367] [def] [scope 368] [anagram_CompareFrequency]
+
+!{!"0x2e\00anagram_Reset\00anagram_Reset\00\00378\000\001\000\000\00256\000\00379", <0x36f0710>, <0x36ed000>, <0x36f3b80>, null, void ()* @anagram_Reset, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 378] [def] [scope 379] [anagram_Reset]
+
+!{!"0x2e\00anagram_BuildMask\00anagram_BuildMask\00\00397\000\001\000\000\00256\000\00398", <0x36f0710>, <0x36ed000>, <0x36f7660>, null, void (i8*)* @anagram_BuildMask, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 397] [def] [scope 398] [anagram_BuildMask]
+
+!{!"0x2e\00anagram_NewWord\00anagram_NewWord\00\00448\000\001\000\000\00256\000\00449", <0x36f0710>, <0x36ed000>, <0x36fad00>, null, %struct.anagram_Word* ()* @anagram_NewWord, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 448] [def] [scope 449] [anagram_NewWord]
+
+!{!"0x2e\00anagram_NextWord\00anagram_NextWord\00\00458\000\001\000\000\00256\000\00459", <0x36f0710>, <0x36ed000>, <0x36fad00>, null, %struct.anagram_Word* ()* @anagram_NextWord, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 458] [def] [scope 459] [anagram_NextWord]
+
+!{!"0x2e\00anagram_BuildWord\00anagram_BuildWord\00\00471\000\001\000\000\00256\000\00472", <0x36f0710>, <0x36ed000>, <0x36fb0f0>, null, void (i8*)* @anagram_BuildWord, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 471] [def] [scope 472] [anagram_BuildWord]
+
+!{!"0x2e\00anagram_AddWords\00anagram_AddWords\00\00515\000\001\000\000\00256\000\00516", <0x36f0710>, <0x36ed000>, <0x36f3b80>, null, void ()* @anagram_AddWords, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 515] [def] [scope 516] [anagram_AddWords]
+
+!{!"0x2e\00anagram_DumpWords\00anagram_DumpWords\00\00532\000\001\000\000\00256\000\00533", <0x36f0710>, <0x36ed000>, <0x36f3b80>, null, void ()* @anagram_DumpWords, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 532] [def] [scope 533] [anagram_DumpWords]
+
+!{!"0x2e\00anagram_FindAnagram\00anagram_FindAnagram\00\00549\000\001\000\000\00256\000\00551", <0x36f0710>, <0x36ed000>, <0x36fc200>, null, void (i32*, %struct.anagram_Word**, i32)* @anagram_FindAnagram, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 549] [def] [scope 551] [anagram_FindAnagram]
+
+!{!"0x2e\00anagram_SortCandidates\00anagram_SortCandidates\00\00619\000\001\000\000\00256\000\00620", <0x36f0710>, <0x36ed000>, <0x36f3b80>, null, void ()* @anagram_SortCandidates, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 619] [def] [scope 620] [anagram_SortCandidates]
+
+!{!"0x2e\00anagram_main\00anagram_main\00\00631\000\001\000\000\00256\000\00632", <0x36f0710>, <0x36ed000>, <0x36f3b80>, null, void ()* @anagram_main, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 631] [def] [scope 632] [anagram_main]
+
+!{!"0x2e\00main\00main\00\00656\000\001\000\000\00256\000\00657", <0x36f0710>, <0x36ed000>, <0x36f6c70>, null, i32 ()* @main, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 656] [def] [scope 657] [main]
+
+!{!"0x2e\00anagram_tolower\00anagram_tolower\00\0040\001\001\000\000\00256\000\0041", <0x36fc8b0>, <0x36fc9c0>, <0x36f6ed0>, null, i32 (i32)* @anagram_tolower, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 40] [local] [def] [scope 41] [anagram_tolower]
+
+!{!"0x2e\00anagram_isupper\00anagram_isupper\00\0030\001\001\000\000\00256\000\0031", <0x36fc8b0>, <0x36fc9c0>, <0x36f6ed0>, null, i32 (i32)* @anagram_isupper, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 30] [local] [def] [scope 31] [anagram_isupper]
+
+!{!"0x2e\00anagram_isalpha\00anagram_isalpha\00\0035\001\001\000\000\00256\000\0036", <0x36fc8b0>, <0x36fc9c0>, <0x36f6ed0>, null, i32 (i32)* @anagram_isalpha, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 35] [local] [def] [scope 36] [anagram_isalpha]
+
+!{!"0x2e\00anagram_islower\00anagram_islower\00\0025\001\001\000\000\00256\000\0026", <0x36fc8b0>, <0x36fc9c0>, <0x36f6ed0>, null, i32 (i32)* @anagram_islower, null, null, <0x36ecbc0>} ; [ DW_TAG_subprogram ] [line 25] [local] [def] [scope 26] [anagram_islower]
+
+!{!"0x34\00anagram_cchMinLength\00anagram_cchMinLength\00\00257\001\001", null, <0x36ed000>, <0x36fc870>, i32 3, null} ; [ DW_TAG_variable ] [anagram_cchMinLength] [line 257] [local] [def]
+
+!{!"0x34\00anagram_apwCand\00anagram_apwCand\00\00242\001\001", null, <0x36ed000>, <0x36fd330>, [100 x %struct.anagram_Word*]* @anagram_apwCand, null} ; [ DW_TAG_variable ] [anagram_apwCand] [line 242] [local] [def]
+
+!{!"0x34\00anagram_cpwCand\00anagram_cpwCand\00\00244\001\001", null, <0x36ed000>, <0x36ecef8>, i32* @anagram_cpwCand, null} ; [ DW_TAG_variable ] [anagram_cpwCand] [line 244] [local] [def]
+
+!{!"0x34\00anagram_alPhrase\00anagram_alPhrase\00\00247\001\001", null, <0x36ed000>, <0x37089c0>, [26 x %struct.anagram_Letter]* @anagram_alPhrase, null} ; [ DW_TAG_variable ] [anagram_alPhrase] [line 247] [local] [def]
+
+!{!"0x34\00anagram_cchPhraseLength\00anagram_cchPhraseLength\00\00250\001\001", null, <0x36ed000>, <0x36ece38>, i32* @anagram_cchPhraseLength, null} ; [ DW_TAG_variable ] [anagram_cchPhraseLength] [line 250] [local] [def]
+
+!{!"0x34\00anagram_aqMainMask\00anagram_aqMainMask\00\00253\001\001", null, <0x36ed000>, <0x36ea140>, [2 x i32]* @anagram_aqMainMask, null} ; [ DW_TAG_variable ] [anagram_aqMainMask] [line 253] [local] [def]
+
+!{!"0x34\00anagram_aqMainSign\00anagram_aqMainSign\00\00255\001\001", null, <0x36ed000>, <0x36ea140>, [2 x i32]* @anagram_aqMainSign, null} ; [ DW_TAG_variable ] [anagram_aqMainSign] [line 255] [local] [def]
+
+!{!"0x34\00anagram_auGlobalFrequency\00anagram_auGlobalFrequency\00\00262\001\001", null, <0x36ed000>, <0x37097a0>, [26 x i32]* @anagram_auGlobalFrequency, null} ; [ DW_TAG_variable ] [anagram_auGlobalFrequency] [line 262] [local] [def]
+
+!{!"0x34\00anagram_achByFrequency\00anagram_achByFrequency\00\00263\001\001", null, <0x36ed000>, <0x3709960>, [26 x i32]* @anagram_achByFrequency, null} ; [ DW_TAG_variable ] [anagram_achByFrequency] [line 263] [local] [def]
+
+!{!"0x34\00anagram_pchDictionary\00anagram_pchDictionary\00\00266\001\001", null, <0x36ed000>, <0x36ecd20>, i8** @anagram_pchDictionary, null} ; [ DW_TAG_variable ] [anagram_pchDictionary] [line 266] [local] [def]
+
+!{!"0x34\00anagram_apwSol\00anagram_apwSol\00\00269\001\001", null, <0x36ed000>, <0x36fb860>, [51 x %struct.anagram_Word*]* @anagram_apwSol, null} ; [ DW_TAG_variable ] [anagram_apwSol] [line 269] [local] [def]
+
+!{!"0x34\00anagram_cpwLast\00anagram_cpwLast\00\00270\001\001", null, <0x36ed000>, <0x36ece38>, i32* @anagram_cpwLast, null} ; [ DW_TAG_variable ] [anagram_cpwLast] [line 270] [local] [def]
+
+!{!"0x34\00anagram_buffer\00anagram_buffer\00\00273\001\001", null, <0x36ed000>, <0x370a530>, [30 x i8]* @anagram_buffer, null} ; [ DW_TAG_variable ] [anagram_buffer] [line 273] [local] [def]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x36ece38>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from int]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x1\00\000\006400\0064\000\000\000", null, null, <0x36f37c0>, <0x36fbd28>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 6400, align 64, offset 0] [from anagram_PWord]
+
+!{!"0x16\00anagram_PWord\00198\000\000\000\000", <0x36f0710>, null, <0x36ed0d0>} ; [ DW_TAG_typedef ] [anagram_PWord] [line 198, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x36ecfc0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from anagram_Word]
+
+!{!"0x16\00anagram_Word\00197\000\000\000\000", <0x36f0710>, null, <0x36f4110>} ; [ DW_TAG_typedef ] [anagram_Word] [line 197, size 0, align 0, offset 0] [from ]
+
+!{!"0x13\00\00192\00192\0064\000\000\000", <0x36f0710>, null, null, <0x36f4020>, null, null, null} ; [ DW_TAG_structure_type ] [line 192, size 192, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00pchWord\00193\0064\0064\000\000", <0x36f0710>, <0x36f4110>, <0x36ecd20>} ; [ DW_TAG_member ] [pchWord] [line 193, size 64, align 64, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x36eccd8>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from char]
+
+!{!"0x24\00char\000\008\008\000\000\006", null, null} ; [ DW_TAG_base_type ] [char] [line 0, size 8, align 8, offset 0, enc DW_ATE_signed_char]
+
+!{!"0xd\00aqMask\00194\0064\0032\0064\000", <0x36f0710>, <0x36f4110>, <0x36ea140>} ; [ DW_TAG_member ] [aqMask] [line 194, size 64, align 32, offset 64] [from ]
+
+!{!"0x1\00\000\0064\0032\000\000\000", null, null, <0x36ecc10>, <0x36ed298>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 64, align 32, offset 0] [from anagram_Quad]
+
+!{!"0x16\00anagram_Quad\00189\000\000\000\000", <0x36f0710>, null, <0x36ecef8>} ; [ DW_TAG_typedef ] [anagram_Quad] [line 189, size 0, align 0, offset 0] [from unsigned int]
+
+!{!"0x24\00unsigned int\000\0032\0032\000\000\007", null, null} ; [ DW_TAG_base_type ] [unsigned int] [line 0, size 32, align 32, offset 0, enc DW_ATE_unsigned]
+
+!{!"0xd\00cchLength\00195\0032\0032\00128\000", <0x36f0710>, <0x36f4110>, <0x36ecef8>} ; [ DW_TAG_member ] [cchLength] [line 195, size 32, align 32, offset 128] [from unsigned int]
+
+!{!"0xd\00padding\00196\0032\008\00160\000", <0x36f0710>, <0x36f4110>, <0x36f3f00>} ; [ DW_TAG_member ] [padding] [line 196, size 32, align 8, offset 160] [from ]
+
+!{!"0x1\00\000\0032\008\000\000\000", null, null, <0x36eccd8>, <0x36f3e98>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 32, align 8, offset 0] [from char]
+
+!{!"0x1\00\000\003328\0032\000\000\000", null, null, <0x36f7320>, <0x36fc3a8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 3328, align 32, offset 0] [from anagram_Letter]
+
+!{!"0x16\00anagram_Letter\00208\000\000\000\000", <0x36f0710>, null, <0x36f7b10>} ; [ DW_TAG_typedef ] [anagram_Letter] [line 208, size 0, align 0, offset 0] [from ]
+
+!{!"0x13\00\00203\00128\0032\000\000\000", <0x36f0710>, null, null, <0x36f7a20>, null, null, null} ; [ DW_TAG_structure_type ] [line 203, size 128, align 32, offset 0] [def] [from ]
+
+!{!"0xd\00uFrequency\00204\0032\0032\000\000", <0x36f0710>, <0x36f7b10>, <0x36ecef8>} ; [ DW_TAG_member ] [uFrequency] [line 204, size 32, align 32, offset 0] [from unsigned int]
+
+!{!"0xd\00uShift\00205\0032\0032\0032\000", <0x36f0710>, <0x36f7b10>, <0x36ecef8>} ; [ DW_TAG_member ] [uShift] [line 205, size 32, align 32, offset 32] [from unsigned int]
+
+!{!"0xd\00uBits\00206\0032\0032\0064\000", <0x36f0710>, <0x36f7b10>, <0x36ecef8>} ; [ DW_TAG_member ] [uBits] [line 206, size 32, align 32, offset 64] [from unsigned int]
+
+!{!"0xd\00iq\00207\0032\0032\0096\000", <0x36f0710>, <0x36f7b10>, <0x36ecef8>} ; [ DW_TAG_member ] [iq] [line 207, size 32, align 32, offset 96] [from unsigned int]
+
+!{!"0x1\00\000\00832\0032\000\000\000", null, null, <0x36ecef8>, <0x36fc3a8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 832, align 32, offset 0] [from unsigned int]
+
+!{!"0x1\00\000\00832\0032\000\000\000", null, null, <0x36ece38>, <0x36fc3a8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 832, align 32, offset 0] [from int]
+
+!{!"0x1\00\000\003264\0064\000\000\000", null, null, <0x36f37c0>, <0x3709c08>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 3264, align 64, offset 0] [from anagram_PWord]
+
+!{!"0x1\00\000\00240\008\000\000\000", null, null, <0x36eccd8>, <0x370a4c8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 240, align 8, offset 0] [from char]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x36f3b18>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x36f6b98>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x36f6d40>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x36f6d88>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x36f3600>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x36f3a10>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x36eccd8>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from char]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x36f3908>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x36f3800>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x36fc110>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x36ecc10>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from anagram_Quad]
+
+!{!"0x16\00anagram_PPWord\00199\000\000\000\000", <0x36f0710>, null, <0x36fbf70>} ; [ DW_TAG_typedef ] [anagram_PPWord] [line 199, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x36ed0d0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+Meta data for 15758040716469556712
+Meta data for 3448839583252769597
+DEBUG: new region: FuncRegion(id: 17061964467462298208, name: anagram_BuildWord, fileName: anagram.c, startLine: 471, endLine: 471
+DEBUG: adding anagram_BuildWord (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17061964467462298208)
+DEBUG: assigning function anagram_BuildWord id 17061964467462298208
+DEBUG: new region: FuncRegion(id: 5530427916637886250, name: anagram_AddWords, fileName: anagram.c, startLine: 515, endLine: 515
+DEBUG: adding anagram_AddWords (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 5530427916637886250)
+DEBUG: assigning function anagram_AddWords id 5530427916637886250
+DEBUG: new region: FuncRegion(id: 12081717452657283138, name: anagram_DumpWords, fileName: anagram.c, startLine: 532, endLine: 532
+DEBUG: adding anagram_DumpWords (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12081717452657283138)
+DEBUG: assigning function anagram_DumpWords id 12081717452657283138
+DEBUG: new region: FuncRegion(id: 6845399804138618227, name: anagram_FindAnagram, fileName: anagram.c, startLine: 549, endLine: 549
+DEBUG: adding anagram_FindAnagram (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6845399804138618227)
+DEBUG: assigning function anagram_FindAnagram id 6845399804138618227
+DEBUG: new region: FuncRegion(id: 17037656672945434106, name: anagram_SortCandidates, fileName: anagram.c, startLine: 619, endLine: 619
+DEBUG: adding anagram_SortCandidates (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17037656672945434106)
+DEBUG: assigning function anagram_SortCandidates id 17037656672945434106
+DEBUG: new region: FuncRegion(id: 12818730866982610388, name: anagram_main, fileName: anagram.c, startLine: 631, endLine: 631
+DEBUG: adding anagram_main (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12818730866982610388)
+DEBUG: assigning function anagram_main id 12818730866982610388
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: anagram.c, startLine: 656, endLine: 656
+DEBUG: adding main (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: new region: FuncRegion(id: 12579540711038383744, name: anagram_isupper, fileName: anagram_ctype.h, startLine: 30, endLine: 30
+DEBUG: adding anagram_isupper (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12579540711038383744)
+DEBUG: assigning function anagram_isupper id 12579540711038383744
+DEBUG: new region: FuncRegion(id: 8995398475963679230, name: anagram_islower, fileName: anagram_ctype.h, startLine: 25, endLine: 25
+DEBUG: adding anagram_islower (in module: anagram.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 8995398475963679230)
+DEBUG: assigning function anagram_islower id 8995398475963679230
+DEBUG: found 20 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: anagram_ReadDict is 5161137975971298800
+DEBUG: found 4 loops in function anagram_ReadDict
+DEBUG: assigning id = 15758040716469556712 to loop with the following BBs:
+	for.cond7 for.body10 while.cond11 while.end36 while.body19 if.then if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 984025953569440620
+DEBUG: assigning id = 984025953569440620 to body of loop
+DEBUG: assigning id = 3448839583252769597 to loop with the following BBs:
+	while.cond11 while.body19 if.Meta data for 2959545230956053915
+Meta data for 496839367869202579
+Meta data for 17559552426936202297
+Meta data for 9302384251165436694
+Meta data for 7003800063089306111
+Meta data for 14439338734029966404
+then if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5799623829372346987
+DEBUG: assigning id = 5799623829372346987 to body of loop
+DEBUG: assigning id = 2959545230956053915 to loop with the following BBs:
+	for.cond for.body while.cond while.end while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12077334954131334403
+DEBUG: assigning id = 12077334954131334403 to body of loop
+DEBUG: assigning id = 496839367869202579 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17480921926650879708
+DEBUG: assigning id = 17480921926650879708 to body of loop
+DEBUG: for.cond7 has 1 possible loop exit points
+DEBUG: 	target #0: for.end44
+DEBUG: while.cond11 has 1 possible loop exit points
+DEBUG: 	target #0: while.end36
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: region name to id: anagram_isalpha is 3575045478310906330
+DEBUG: found 0 loops in function anagram_isalpha
+DEBUG: region name to id: anagram_init is 11653089228453488214
+DEBUG: found 0 loops in function anagram_init
+DEBUG: region name to id: anagram_return is 18216578678315996837
+DEBUG: found 1 loops in function anagram_return
+DEBUG: assigning id = 17559552426936202297 to loop with the following BBs:
+	for.cond for.body for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13469957791274442292
+DEBUG: assigning id = 13469957791274442292 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: for.body has 1 possible loop exit points
+DEBUG: 	target #0: if.then
+DEBUG: region name to id: anagram_ch2i is 12600865771643665846
+DEBUG: found 0 loops in function anagram_ch2i
+DEBUG: region name to id: anagram_CompareFrequency is 12428294163898323429
+DEBUG: found 0 loops in function anagram_CompareFrequency
+DEBUG: region name to id: anagram_Reset is 893105852436979906
+DEBUG: found 0 loops in function anagram_Reset
+DEBUG: region name to id: anagram_BuildMask is 50422215346083407
+DEBUG: found 3 loops in function anagram_BuildMask
+DEBUG: assigning id = 9302384251165436694 to loop with the following BBs:
+	for.cond for.body if.else for.cond17 for.end if.then27 if.end28 if.then32 if.end34 for.inc if.then12 for.inc51 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6341678873590742564
+DEBUG: assigning id = 6341678873590742564 to body of loop
+DEBUG: assigning id = 7003800063089306111 to loop with the following BBs:
+	for.cond17 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 314624697774525908
+DEBUG: assigning id = 314624697774525908 to body of loop
+DEBUG: assigning id = 14439338734029966404 to loop with the following BBs:
+	while.cond while.body if.then while.cond.backedge 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11497509533641255367
+DEBUG: assigning id = 11497509533641255367 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end53
+DEBUG: for.cond17 has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: region name to id: anagram_tolower is 15689840412349029159
+DEBUG: found 0 loops in function anagram_tolower
+DEBUG: region name to id: anagram_NewWord is 10185384866200791930
+DEBUG: found 0 loops in function anagram_NewWord
+DEBUG: region name to id: anagram_NextWord is 3126726476431835056
+DEBUG: found 0 loops in function Meta data for 16161869533773720906
+Meta data for 6424891859133385643
+Meta data for 12821071250010385786
+Meta data for 1119902511439774025
+Meta data for 2107014402313862798
+Meta data for 11617478363289095193
+Meta data for 14008601707462050868
+Meta data for 7840488359369341450
+Meta data for 11491779071484351433
+anagram_NextWord
+DEBUG: region name to id: anagram_BuildWord is 17061964467462298208
+DEBUG: found 4 loops in function anagram_BuildWord
+DEBUG: assigning id = 16161869533773720906 to loop with the following BBs:
+	for.cond24 for.body27 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11158265175566579511
+DEBUG: assigning id = 11158265175566579511 to body of loop
+DEBUG: assigning id = 6424891859133385643 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6559938569006345179
+DEBUG: assigning id = 6559938569006345179 to body of loop
+DEBUG: assigning id = 12821071250010385786 to loop with the following BBs:
+	while.cond.outer while.cond while.body if.end if.end10 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9634679905503774571
+DEBUG: assigning id = 9634679905503774571 to body of loop
+DEBUG: assigning id = 1119902511439774025 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11044018810572804670
+DEBUG: assigning id = 11044018810572804670 to body of loop
+DEBUG: for.cond24 has 1 possible loop exit points
+DEBUG: 	target #0: for.end40.loopexit
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: if.end has 1 possible loop exit points
+DEBUG: 	target #0: for.end40.loopexit1
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.cond.pre_exit.while.end
+DEBUG: while.body has 1 possible loop exit points
+DEBUG: 	target #0: if.end
+DEBUG: region name to id: anagram_AddWords is 5530427916637886250
+DEBUG: found 1 loops in function anagram_AddWords
+DEBUG: assigning id = 2107014402313862798 to loop with the following BBs:
+	while.cond while.body land.lhs.true lor.lhs.false if.then if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 18244796855984925144
+DEBUG: assigning id = 18244796855984925144 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: region name to id: anagram_DumpWords is 12081717452657283138
+DEBUG: found 2 loops in function anagram_DumpWords
+DEBUG: assigning id = 11617478363289095193 to loop with the following BBs:
+	for.cond for.body for.cond1 for.end for.body6 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12304124824250980549
+DEBUG: assigning id = 12304124824250980549 to body of loop
+DEBUG: assigning id = 14008601707462050868 to loop with the following BBs:
+	for.cond1 for.body6 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3114187376689653450
+DEBUG: assigning id = 3114187376689653450 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end20
+DEBUG: for.cond1 has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: anagram_FindAnagram is 6845399804138618227
+DEBUG: found 3 loops in function anagram_FindAnagram
+DEBUG: assigning id = 7840488359369341450 to loop with the following BBs:
+	while.cond.outer while.cond while.body14 if.end21 if.end31 if.end39 if.else if.then45 if.end49 if.then37 if.then29 if.then20 while.cond.outer.backedge 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 18028002676866851235
+DEBUG: assigning id = 18028002676866851235 to body of loop
+DEBUG: assigning id = 11491779071484351433 to loop with the following BBs:
+	while.cond while.body14 if.end21 if.end31 ifMeta data for 12790130494768752697
+Meta data for 18108061595050675853
+Meta data for 17794912767116804541
+.then37 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 18320119470296663069
+DEBUG: assigning id = 18320119470296663069 to body of loop
+DEBUG: assigning id = 12790130494768752697 to loop with the following BBs:
+	while.body if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13916373863328531304
+DEBUG: assigning id = 13916373863328531304 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end52
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.cond.pre_exit.while.end52
+DEBUG: while.body14 has 1 possible loop exit points
+DEBUG: 	target #0: if.then20
+DEBUG: if.end21 has 1 possible loop exit points
+DEBUG: 	target #0: if.then29
+DEBUG: if.end31 has 1 possible loop exit points
+DEBUG: 	target #0: if.end39
+DEBUG: while.body has 1 possible loop exit points
+DEBUG: 	target #0: while.cond.preheader
+DEBUG: region name to id: anagram_SortCandidates is 17037656672945434106
+DEBUG: found 1 loops in function anagram_SortCandidates
+DEBUG: assigning id = 18108061595050675853 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12061126799599365527
+DEBUG: assigning id = 12061126799599365527 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: anagram_main is 12818730866982610388
+DEBUG: found 1 loops in function anagram_main
+DEBUG: assigning id = 17794912767116804541 to loop with the following BBs:
+	for.cond for.body if.end for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9670914396308664069
+DEBUG: assigning id = 9670914396308664069 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: region name to id: anagram_isupper is 12579540711038383744
+DEBUG: found 0 loops in function anagram_isupper
+DEBUG: region name to id: anagram_islower is 8995398475963679230
+DEBUG: found 0 loops in function anagram_islower
+DEBUG: Writing kremlib calls to anagram.kdump
+INFO: dumping function: anagram_ReadDict
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: anagram_malloc
+INFO: dumping function: anagram_isalpha
+INFO: dumping function: anagram_init
+INFO: dumping function: anagram_return
+INFO: dumping function: anagram_ch2i
+INFO: dumping function: anagram_CompareFrequency
+INFO: dumping function: anagram_Reset
+INFO: dumping function: anagram_bzero
+INFO: dumping function: anagram_BuildMask
+INFO: dumping function: anagram_tolower
+INFO: dumping function: anagram_NewWord
+INFO: dumping function: anagram_NextWord
+INFO: dumping function: anagram_BuildWord
+INFO: dumping function: anagram_AddWords
+INFO: dumping function: anagram_DumpWords
+INFO: dumping function: anagram_FindAnagram
+INFO: dumping function: anagram_SortCandidates
+INFO: dumping function: anagram_qsort
+INFO: dumping function: anagram_main
+INFO: dumping function: main
+INFO: dumping function: anagram_isupper
+INFO: dumping function: anagram_islower
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

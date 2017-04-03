@@ -1,0 +1,27 @@
+FUNC: main
+	16: ARG : 0
+	14 : ?? : phi
+	19 : 29 : icmp
+	2 : 30 : load
+	18 : ?? : phi
+	3 : 36 : load
+	13 : ?? : phi
+	15 : 21 : icmp
+	17 : 26 : icmp
+	1 : 27 : load
+	4 : 36 : call
+	22 : 37 : icmp
+	5 : 38 : call
+	23 : 39 : icmp
+	6 : 47 : call
+	24 : 48 : icmp
+	7 : 50 : call
+	8 : 57 : load
+	9 : 57 : call
+	25 : 58 : icmp
+	10 : 59 : call
+	20 : 60 : icmp
+	11 : 66 : call
+	21 : 66 : icmp
+	12 : 67 : load
+

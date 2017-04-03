@@ -1,0 +1,71 @@
+FUNC: complex_updates_init
+	4 : 68 : icmp
+	1 : 69 : load
+	5 : ?? : phi
+	2 : 69 : load
+	3 : 69 : fadd
+	6 : 70 : load
+	7 : 70 : load
+	8 : 70 : fadd
+	9 : 71 : load
+	10 : 71 : load
+	11 : 71 : fadd
+	12 : 72 : load
+	13 : 72 : load
+	14 : 72 : fadd
+
+FUNC: complex_updates_pin_down
+	2 : ?? : phi
+	6 : ?? : phi
+	9 : ?? : phi
+	12 : ?? : phi
+	5 : 82 : icmp
+	13: ARG : 0
+	10: ARG : 1
+	7: ARG : 2
+	3: ARG : 3
+	1 : ?? : phi
+	14 : 84 : getelementptr
+	11 : 86 : getelementptr
+	8 : 88 : getelementptr
+	4 : 90 : getelementptr
+
+FUNC: complex_updates_return
+	4 : ?? : phi
+	3 : ?? : phi
+	6 : 100 : icmp
+	1 : 101 : load
+	5 : 101 : fadd
+	2 : 103 : zext
+
+FUNC: complex_updates_main
+	15 : 123 : load
+	24 : 123 : getelementptr
+	16 : 123 : load
+	17 : 123 : load
+	18 : 123 : fadd
+	6 : ?? : phi
+	19 : ?? : phi
+	21 : ?? : phi
+	23 : ?? : phi
+	25 : ?? : phi
+	5 : 118 : icmp
+	1 : 119 : load
+	2 : 119 : load
+	3 : 119 : load
+	4 : 119 : fadd
+	7 : 120 : load
+	8 : 120 : load
+	9 : 120 : load
+	10 : 120 : fsub
+	22 : 122 : getelementptr
+	11 : 122 : load
+	12 : 122 : load
+	13 : 122 : load
+	14 : 122 : fadd
+	20 : 123 : getelementptr
+	26 : 118 : getelementptr
+
+FUNC: main
+	1 : 134 : call
+

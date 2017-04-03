@@ -1,0 +1,711 @@
+FUNC: ammunition_add_unsigned_integer_without_overflow_reaction
+	1: ARG : 0
+	11 : ?? : sext
+	3 : ?? : phi
+	9 : ?? : phi
+	6 : 51 : icmp
+	2 : 52 : load
+	4 : 53 : load
+	15 : 52 : add
+	13 : 54 : icmp
+	14 : 55 : sub
+	12 : ?? : phi
+	7 : ?? : phi
+	5 : 59 : trunc
+	10 : 51 : add
+	8 : 61 : zext
+
+FUNC: ammunition_subtract_unsigned_integer_without_overflow_reaction
+	1: ARG : 0
+	11 : ?? : sext
+	3 : ?? : phi
+	9 : ?? : phi
+	6 : 77 : icmp
+	2 : 78 : load
+	4 : 79 : load
+	15 : 78 : sub
+	13 : 80 : icmp
+	14 : 81 : add
+	12 : ?? : phi
+	7 : ?? : phi
+	5 : 85 : trunc
+	10 : 77 : add
+	8 : 87 : zext
+
+FUNC: ammunition_make_complementary_code
+	8 : ?? : sext
+	3 : ?? : phi
+	1: ARG : 0
+	9 : ?? : phi
+	5 : 101 : icmp
+	2 : 102 : load
+	13 : 102 : sub
+	11 : 103 : icmp
+	12 : 104 : add
+	10 : ?? : phi
+	6 : ?? : phi
+	4 : 108 : trunc
+	7 : 101 : add
+
+FUNC: ammunition_multiply_unsigned_integer_by_digit_without_overflow_reaction
+	11 : ?? : sext
+	1: ARG : 0
+	2: ARG : 2
+	4 : ?? : phi
+	9 : ?? : phi
+	6 : 124 : icmp
+	3 : 125 : load
+	16 : 125 : add
+	14 : 126 : icmp
+	13 : 127 : udiv
+	15 : 128 : urem
+	12 : ?? : phi
+	7 : ?? : phi
+	5 : 131 : trunc
+	10 : 124 : add
+	8 : 133 : zext
+
+FUNC: ammunition_arithmetic_overflow_reaction
+
+FUNC: ammunition_arithmetic_unsigned_overflow_reaction
+
+FUNC: ammunition_add_unsigned_integer
+	1: ARG : 0
+	2 : 165 : call
+	3 : 167 : load
+	4 : 167 : icmp
+
+FUNC: ammunition_add_integer
+	3 : 184 : load
+	4 : 184 : load
+	5 : 185 : call
+	2 : 183 : load
+	1: ARG : 0
+	11 : 187 : icmp
+	6 : 188 : load
+	10 : 188 : icmp
+	8 : ?? : phi
+	7 : 187 : zext
+	9 : 189 : load
+	12 : 189 : icmp
+
+FUNC: ammunition_subtract_unsigned_integer
+	1: ARG : 0
+	2 : 208 : call
+	3 : 210 : load
+	4 : 210 : icmp
+
+FUNC: ammunition_subtract_integer
+	1: ARG : 0
+	2 : 226 : load
+	3 : 227 : load
+	4 : 227 : load
+	5 : 228 : call
+	11 : 230 : icmp
+	6 : 231 : load
+	10 : 231 : icmp
+	8 : ?? : phi
+	7 : 230 : zext
+	9 : 232 : load
+	12 : 232 : icmp
+
+FUNC: ammunition_multiply_unsigned_integer_without_overflow_reaction
+	1: ARG : 0
+	4 : 263 : load
+	6 : 264 : load
+	8 : 265 : add
+	7 : 265 : load
+	21 : ?? : sext
+	19 : ?? : sext
+	3 : ?? : phi
+	10 : 257 : icmp
+	2 : 258 : load
+	11 : 258 : icmp
+	5 : ?? : phi
+	13 : ?? : phi
+	12 : 260 : icmp
+	9 : 268 : trunc
+	22 : 269 : trunc
+	20 : 260 : add
+	14 : 271 : trunc
+	18 : 257 : add
+	25 : ?? : sext
+	16 : ?? : phi
+	24 : 277 : icmp
+	15 : 279 : load
+	26 : 279 : icmp
+	23 : 277 : add
+	17 : ?? : phi
+
+FUNC: ammunition_multiply_unsigned_integer
+	2 : 300 : call
+	3 : 302 : load
+	4 : 302 : icmp
+	1: ARG : 0
+
+FUNC: ammunition_multiply_integer
+	1: ARG : 0
+	13: ARG : 1
+	18: ARG : 2
+	12 : ?? : alloca
+	17 : ?? : alloca
+	2 : 322 : load
+	3 : 322 : load
+	4 : 323 : load
+	14 : 323 : icmp
+	11 : 327 : getelementptr
+	10 : ?? : phi
+	5 : 330 : load
+	19 : 330 : icmp
+	16 : 334 : getelementptr
+	15 : ?? : phi
+	6 : 338 : call
+	7 : 340 : load
+	20 : 341 : icmp
+	21 : 343 : icmp
+	22 : 343 : icmp
+	8 : 345 : load
+	23 : 345 : icmp
+	9 : 348 : load
+	24 : 348 : icmp
+
+FUNC: ammunition_divide_unsigned_integer_without_overflow_reaction
+	59 : 437 : icmp
+	58 : 444 : add
+	36 : 449 : sub
+	41 : 452 : add
+	40 : 451 : call
+	44 : 455 : add
+	31 : 440 : load
+	33 : 442 : sext
+	1: ARG : 0
+	63 : 374 : sext
+	52 : ?? : phi
+	64 : 374 : icmp
+	53 : 374 : trunc
+	2 : 375 : load
+	65 : 375 : icmp
+	9 : ?? : phi
+	62 : 379 : icmp
+	10 : 384 : icmp
+	4 : 391 : sext
+	3 : 391 : load
+	13 : 391 : zext
+	8 : 395 : sext
+	12 : ?? : phi
+	7 : ?? : phi
+	11 : 395 : icmp
+	5 : 397 : load
+	54 : 398 : urem
+	6 : 400 : trunc
+	15 : 405 : sext
+	14 : 405 : load
+	18 : 405 : sdiv
+	17 : 411 : add
+	16 : 410 : call
+	19 : 415 : call
+	37 : 419 : sext
+	39 : ?? : phi
+	38 : 420 : icmp
+	20 : 427 : load
+	22 : 428 : sext
+	21 : 428 : load
+	57 : 427 : icmp
+	23 : 432 : load
+	25 : 433 : add
+	24 : 433 : load
+	27 : 434 : sext
+	26 : 434 : load
+	56 : 432 : sdiv
+	55 : ?? : phi
+	42 : ?? : phi
+	29 : 437 : sext
+	28 : 437 : load
+	30 : 438 : load
+	32 : 442 : load
+	35 : 443 : add
+	34 : 443 : load
+	43 : 454 : call
+	61 : 454 : icmp
+	60 : 459 : add
+	45 : 462 : sub
+	47 : 466 : add
+	46 : 465 : call
+	49 : ?? : phi
+	48 : 472 : trunc
+	50 : 475 : sub
+	51 : ?? : phi
+
+FUNC: ammunition_divide_unsigned_integer
+	1: ARG : 0
+	2 : 489 : call
+	3 : 491 : load
+	4 : 491 : icmp
+
+FUNC: ammunition_divide_integer
+	2 : 511 : load
+	3 : 511 : load
+	4 : 512 : load
+	14 : 512 : icmp
+	11 : 516 : getelementptr
+	15 : ?? : phi
+	6 : 527 : call
+	7 : 529 : load
+	20 : 530 : icmp
+	21 : 532 : icmp
+	22 : 532 : icmp
+	8 : 534 : load
+	23 : 534 : icmp
+	1: ARG : 0
+	13: ARG : 1
+	18: ARG : 2
+	12 : ?? : alloca
+	17 : ?? : alloca
+	10 : ?? : phi
+	5 : 519 : load
+	19 : 519 : icmp
+	16 : 523 : getelementptr
+	9 : 537 : load
+	24 : 537 : icmp
+
+FUNC: ammunition_unsigned_integer_remainder
+	1: ARG : 0
+	2 : 558 : load
+	3 : 558 : icmp
+
+FUNC: ammunition_unsigned_integer_shift_right
+	1: ARG : 0
+	2: ARG : 2
+	19 : 589 : icmp
+	3 : 590 : sub
+	7 : 593 : sdiv
+	15 : 594 : srem
+	20 : 596 : icmp
+	18 : 596 : sub
+	17 : 596 : phi
+	24 : ?? : sext
+	22 : 596 : sext
+	5 : ?? : phi
+	23 : 597 : icmp
+	4 : 598 : load
+	25 : 598 : icmp
+	21 : 596 : add
+	29 : 602 : icmp
+	6 : 606 : sub
+	13 : 608 : icmp
+	27 : ?? : sext
+	12 : 611 : sext
+	9 : ?? : phi
+	11 : ?? : phi
+	14 : 611 : icmp
+	8 : 613 : load
+	10 : 615 : trunc
+	28 : 616 : and
+	26 : 611 : add
+	30 : 618 : icmp
+	16 : 621 : load
+	31 : 621 : icmp
+
+FUNC: ammunition_unsigned_integer_shift_left
+	1: ARG : 0
+	2: ARG : 2
+	19 : 704 : icmp
+	3 : 705 : sub
+	6 : 708 : sdiv
+	13 : 709 : srem
+	20 : 711 : sext
+	22 : 711 : sext
+	15 : ?? : phi
+	21 : 711 : icmp
+	23 : 711 : icmp
+	4 : 713 : load
+	24 : 713 : icmp
+	25 : 717 : icmp
+	5 : 721 : sub
+	11 : 724 : icmp
+	17 : ?? : sext
+	8 : ?? : phi
+	10 : ?? : phi
+	12 : 728 : icmp
+	7 : 729 : load
+	9 : 731 : trunc
+	18 : 732 : lshr
+	16 : 727 : add
+	26 : 734 : icmp
+	14 : 737 : load
+	27 : 737 : icmp
+
+FUNC: ammunition_integer_shift_right
+	1: ARG : 0
+	2: ARG : 2
+	22 : 645 : icmp
+	3 : 646 : sub
+	4 : 648 : load
+	10 : 650 : sdiv
+	18 : 651 : srem
+	23 : 653 : icmp
+	21 : 653 : sub
+	20 : 653 : phi
+	27 : ?? : sext
+	25 : 653 : sext
+	6 : ?? : phi
+	26 : 654 : icmp
+	5 : 655 : load
+	28 : 655 : icmp
+	24 : 653 : add
+	33 : 659 : icmp
+	7 : 661 : select
+	8 : 664 : sub
+	9 : 665 : select
+	16 : 667 : icmp
+	31 : 669 : and
+	30 : ?? : sext
+	15 : 672 : sext
+	12 : ?? : phi
+	14 : ?? : phi
+	17 : 672 : icmp
+	11 : 673 : load
+	13 : 675 : trunc
+	32 : 676 : and
+	29 : 672 : add
+	34 : 678 : icmp
+	19 : 681 : load
+	35 : 681 : icmp
+
+FUNC: ammunition_integer_shift_left
+	21 : 761 : icmp
+	3 : 762 : sub
+	4 : 764 : load
+	26 : 764 : ashr
+	7 : 766 : sdiv
+	1: ARG : 0
+	2: ARG : 2
+	14 : 767 : srem
+	22 : 769 : sext
+	24 : 769 : sext
+	17 : ?? : phi
+	23 : 769 : icmp
+	25 : 769 : icmp
+	5 : 771 : load
+	27 : 771 : icmp
+	28 : 776 : icmp
+	6 : 780 : sub
+	12 : 783 : icmp
+	19 : ?? : sext
+	9 : ?? : phi
+	11 : ?? : phi
+	13 : 787 : icmp
+	8 : 788 : load
+	10 : 790 : trunc
+	20 : 791 : lshr
+	18 : 786 : add
+	29 : 793 : icmp
+	15 : 797 : load
+	30 : 797 : icmp
+	16 : 799 : load
+	31 : 799 : icmp
+
+FUNC: ammunition_integer_or
+	1: ARG : 0
+	5 : 818 : sext
+	7 : ?? : phi
+	6 : 818 : icmp
+	2 : 820 : load
+	3 : 821 : load
+	4 : 820 : trunc
+
+FUNC: ammunition_unsigned_integer_or
+	1: ARG : 0
+
+FUNC: ammunition_integer_and
+	1: ARG : 0
+	5 : 845 : sext
+	7 : ?? : phi
+	6 : 845 : icmp
+	2 : 847 : load
+	3 : 848 : load
+	4 : 847 : trunc
+
+FUNC: ammunition_unsigned_integer_and
+	1: ARG : 0
+
+FUNC: ammunition_integer_not
+	1: ARG : 0
+	4 : 871 : sext
+	6 : ?? : phi
+	5 : 871 : icmp
+	2 : 873 : load
+	3 : 873 : trunc
+
+FUNC: ammunition_unsigned_integer_not
+	1: ARG : 0
+
+FUNC: ammunition_eq_unsigned_integer
+	1: ARG : 0
+	2 : 898 : call
+	3 : 898 : zext
+
+FUNC: ammunition_eq_integer
+	1: ARG : 0
+	2 : 907 : call
+	3 : 907 : zext
+
+FUNC: ammunition_ne_unsigned_integer
+	1: ARG : 0
+	2 : 917 : call
+	3 : 917 : zext
+
+FUNC: ammunition_ne_integer
+	1: ARG : 0
+	2 : 926 : call
+	3 : 926 : zext
+
+FUNC: ammunition_bytes_comparison
+	12: ARG : 0
+	15: ARG : 1
+	1: ARG : 2
+	7 : ?? : phi
+	11 : ?? : phi
+	14 : ?? : phi
+	9 : 942 : icmp
+	2 : 942 : load
+	3 : 942 : load
+	10 : 942 : icmp
+	13 : 943 : getelementptr
+	16 : 944 : getelementptr
+	8 : 945 : add
+	17 : ?? : phi
+	18 : ?? : phi
+	19 : ?? : phi
+	20 : 947 : icmp
+	4 : 950 : load
+	5 : 950 : load
+	21 : 950 : icmp
+	6 : ?? : phi
+
+FUNC: ammunition_gt_unsigned_integer
+	1: ARG : 0
+	2 : 964 : call
+	3 : 964 : zext
+
+FUNC: ammunition_gt_integer
+	1: ARG : 0
+	2 : 973 : load
+	9 : 973 : icmp
+	3 : 974 : load
+	10 : 974 : icmp
+	4 : 975 : call
+	7 : 975 : zext
+	5 : 982 : call
+	8 : 982 : zext
+	6 : ?? : phi
+
+FUNC: ammunition_lt_unsigned_integer
+	2 : 993 : call
+	3 : 993 : zext
+	1: ARG : 0
+
+FUNC: ammunition_lt_integer
+	1: ARG : 0
+	2 : 1003 : load
+	9 : 1003 : icmp
+	3 : 1004 : load
+	10 : 1004 : icmp
+	4 : 1005 : call
+	7 : 1005 : zext
+	5 : 1012 : call
+	8 : 1012 : zext
+	6 : ?? : phi
+
+FUNC: ammunition_ge_unsigned_integer
+	1: ARG : 0
+	2 : 1023 : call
+	3 : 1023 : zext
+
+FUNC: ammunition_ge_integer
+	1: ARG : 0
+	2 : 1034 : load
+	9 : 1034 : icmp
+	3 : 1035 : load
+	10 : 1035 : icmp
+	4 : 1036 : call
+	7 : 1036 : zext
+	5 : 1043 : call
+	8 : 1043 : zext
+	6 : ?? : phi
+
+FUNC: ammunition_le_unsigned_integer
+	1: ARG : 0
+	2 : 1054 : call
+	3 : 1054 : zext
+
+FUNC: ammunition_le_integer
+	1: ARG : 0
+	2 : 1065 : load
+	9 : 1065 : icmp
+	3 : 1066 : load
+	10 : 1066 : icmp
+	4 : 1067 : call
+	7 : 1067 : zext
+	5 : 1074 : call
+	8 : 1074 : zext
+	6 : ?? : phi
+
+FUNC: ammunition_change_unsigned_integer_size
+	1: ARG : 0
+	2: ARG : 2
+	7 : 1093 : icmp
+	3 : 1096 : sub
+	6 : ?? : phi
+	8 : 1100 : icmp
+	4 : 1102 : load
+	9 : 1102 : icmp
+	5 : 1111 : load
+	10 : 1111 : icmp
+
+FUNC: ammunition_change_integer_size
+	1: ARG : 0
+	2: ARG : 2
+	3 : 1127 : load
+	12 : 1127 : ashr
+	10 : 1128 : icmp
+	4 : 1131 : select
+	5 : 1132 : sub
+	9 : ?? : phi
+	11 : 1136 : icmp
+	6 : 1138 : load
+	13 : 1138 : icmp
+	7 : 1147 : load
+	14 : 1147 : icmp
+	8 : 1150 : load
+	15 : 1150 : icmp
+
+FUNC: ammunition_unsigned_integer_to_based_string
+	19 : ?? : phi
+	18 : 1197 : icmp
+	12 : 1198 : load
+	14 : 1199 : sub
+	13 : 1199 : load
+	15 : 1200 : trunc
+	1: ARG : 0
+	2: ARG : 2
+	6 : 1182 : sext
+	16 : ?? : phi
+	8 : ?? : phi
+	5 : ?? : phi
+	21 : ?? : phi
+	7 : 1185 : icmp
+	3 : 1186 : load
+	20 : 1187 : urem
+	4 : 1188 : trunc
+	9 : 1189 : load
+	23 : 1189 : icmp
+	22 : ?? : phi
+	26 : 1192 : icmp
+	24 : 1192 : add
+	25 : 1193 : sub
+	11 : 1192 : phi
+	10 : 1192 : trunc
+	27 : 1194 : icmp
+	17 : 1195 : trunc
+
+FUNC: ammunition_unsigned_integer_to_string
+	1: ARG : 0
+
+FUNC: ammunition_integer_to_based_string
+	1: ARG : 0
+	2: ARG : 2
+	5: ARG : 3
+	3 : 1231 : load
+	7 : 1231 : icmp
+	6 : 1232 : call
+	4 : ?? : phi
+
+FUNC: ammunition_integer_to_string
+	1: ARG : 0
+
+FUNC: ammunition_add_digit_to_unsigned_integer_without_overflow_reaction
+	1: ARG : 0
+	2: ARG : 2
+	11 : ?? : sext
+	4 : ?? : phi
+	9 : ?? : phi
+	6 : 1270 : icmp
+	3 : 1272 : load
+	16 : 1272 : add
+	14 : 1273 : icmp
+	13 : 1274 : udiv
+	15 : 1275 : urem
+	12 : ?? : phi
+	7 : ?? : phi
+	5 : 1278 : trunc
+	10 : 1270 : add
+	8 : 1280 : zext
+
+FUNC: ammunition_string_to_unsigned_integer_without_overflow_reaction
+	12: ARG : 1
+	1: ARG : 0
+	10 : ?? : phi
+	11 : ?? : phi
+	2 : 1298 : load
+	3 : 1298 : call
+	8 : 1298 : icmp
+	17 : 1300 : icmp
+	4 : 1301 : call
+	16 : 1300 : icmp
+	9 : ?? : phi
+	19 : 1304 : icmp
+	5 : 1306 : load
+	7 : 1306 : sub
+	6 : 1305 : call
+	18 : 1304 : icmp
+	15 : ?? : phi
+	14 : 1304 : zext
+	13 : 1298 : getelementptr
+
+FUNC: ammunition_unsigned_integer_from_string
+	1: ARG : 0
+	9: ARG : 1
+	8 : ?? : phi
+	2 : 1329 : load
+	4 : 1329 : sext
+	3 : 1329 : call
+	11 : 1329 : icmp
+	10 : 1330 : getelementptr
+	5 : 1332 : call
+	6 : 1334 : load
+	12 : 1334 : icmp
+	7 : 1336 : load
+
+FUNC: ammunition_integer_from_string
+	1: ARG : 0
+	16: ARG : 1
+	15 : ?? : phi
+	2 : 1357 : load
+	4 : 1357 : sext
+	3 : 1357 : call
+	18 : 1357 : icmp
+	17 : 1358 : getelementptr
+	5 : 1360 : load
+	22 : 1360 : icmp
+	20 : 1361 : getelementptr
+	6 : 1363 : load
+	23 : 1363 : icmp
+	21 : 1364 : getelementptr
+	19 : ?? : phi
+	24 : ?? : phi
+	7 : 1368 : call
+	8 : 1370 : load
+	29 : 1371 : icmp
+	9 : 1376 : load
+	26 : 1376 : icmp
+	27 : 1377 : icmp
+	28 : 1378 : icmp
+	10 : 1379 : load
+	25 : 1379 : icmp
+	12 : ?? : phi
+	11 : 1376 : zext
+	13 : 1380 : load
+	30 : 1380 : icmp
+	14 : 1382 : load
+

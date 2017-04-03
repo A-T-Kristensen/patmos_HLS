@@ -1,0 +1,73 @@
+FUNC: local_scan
+	7 : ?? : phi
+	6 : 13 : icmp
+	9 : ?? : phi
+	8 : 14 : icmp
+	4 : 15 : add
+	2 : 16 : sub
+	1 : 16 : load
+	3 : 16 : load
+	5 : 16 : add
+	10 : 14 : add
+
+FUNC: sum_scan
+	7 : ?? : phi
+	6 : 25 : icmp
+	4 : 26 : sub
+	2 : 27 : sub
+	1 : 27 : load
+	3 : 27 : load
+	5 : 27 : add
+	8 : 25 : add
+
+FUNC: last_step_scan
+	5 : 34 : icmp
+	6 : ?? : phi
+	8 : ?? : phi
+	7 : 35 : icmp
+	2 : 36 : add
+	1 : 37 : load
+	3 : 37 : load
+	4 : 37 : add
+
+FUNC: init
+	1 : ?? : phi
+	2 : 45 : icmp
+
+FUNC: hist
+	5 : 58 : sext
+	7 : 54 : icmp
+	1: ARG : 2
+	8 : ?? : phi
+	10 : ?? : phi
+	9 : 55 : icmp
+	3 : 56 : add
+	2 : 57 : load
+	4 : 58 : load
+	6 : 58 : add
+
+FUNC: update
+	5 : 71 : add
+	9 : 73 : sext
+	8 : 73 : load
+	10 : 73 : add
+	1: ARG : 3
+	12 : ?? : phi
+	11 : 68 : icmp
+	14 : ?? : phi
+	13 : 69 : icmp
+	3 : 70 : add
+	2 : 70 : load
+	4 : 72 : load
+	7 : 72 : sext
+	6 : 72 : load
+
+FUNC: ss_sort
+	1 : ?? : phi
+	4 : ?? : phi
+	3 : 84 : icmp
+	7 : 86 : icmp
+	6 : 96 : icmp
+	5 : ?? : phi
+	2 : 84 : add
+

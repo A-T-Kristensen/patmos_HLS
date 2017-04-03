@@ -1,0 +1,147 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x2c052f0>, <0x2c07aa0>, <0x2c07aa0>, <0x2c05488>, <0x2c0d130>, <0x2c07aa0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/complex_updates/complex_updates.c] [DW_LANG_C99]
+
+!{!"0x2e\00complex_updates_init\00complex_updates_init\00\0058\000\001\000\000\00256\000\0059", <0x2c052f0>, <0x2c053a0>, <0x2c0a270>, null, void ()* @complex_updates_init, null, null, <0x2c07aa0>} ; [ DW_TAG_subprogram ] [line 58] [def] [scope 59] [complex_updates_init]
+
+!{!"0x2e\00complex_updates_pin_down\00complex_updates_pin_down\00\0077\000\001\000\000\00256\000\0078", <0x2c052f0>, <0x2c053a0>, <0x2c0afd0>, null, void (float*, float*, float*, float*)* @complex_updates_pin_down, null, null, <0x2c07aa0>} ; [ DW_TAG_subprogram ] [line 77] [def] [scope 78] [complex_updates_pin_down]
+
+!{!"0x2e\00complex_updates_return\00complex_updates_return\00\0095\000\001\000\000\00256\000\0096", <0x2c052f0>, <0x2c053a0>, <0x2c0b250>, null, i32 ()* @complex_updates_return, null, null, <0x2c07aa0>} ; [ DW_TAG_subprogram ] [line 95] [def] [scope 96] [complex_updates_return]
+
+!{!"0x2e\00complex_updates_main\00complex_updates_main\00\00111\000\001\000\000\00256\000\00112", <0x2c052f0>, <0x2c053a0>, <0x2c0a270>, null, void ()* @complex_updates_main, null, null, <0x2c07aa0>} ; [ DW_TAG_subprogram ] [line 111] [def] [scope 112] [complex_updates_main]
+
+!{!"0x2e\00main\00main\00\00128\000\001\000\000\00256\000\00129", <0x2c052f0>, <0x2c053a0>, <0x2c0b250>, null, i32 ()* @main, null, null, <0x2c07aa0>} ; [ DW_TAG_subprogram ] [line 128] [def] [scope 129] [main]
+
+!{!"0x34\00complex_updates_A\00complex_updates_A\00\0050\000\001", null, <0x2c053a0>, <0x2c051e0>, [32 x float]* @complex_updates_A, null} ; [ DW_TAG_variable ] [complex_updates_A] [line 50] [def]
+
+!{!"0x34\00complex_updates_B\00complex_updates_B\00\0050\000\001", null, <0x2c053a0>, <0x2c051e0>, [32 x float]* @complex_updates_B, null} ; [ DW_TAG_variable ] [complex_updates_B] [line 50] [def]
+
+!{!"0x34\00complex_updates_C\00complex_updates_C\00\0051\000\001", null, <0x2c053a0>, <0x2c051e0>, [32 x float]* @complex_updates_C, null} ; [ DW_TAG_variable ] [complex_updates_C] [line 51] [def]
+
+!{!"0x34\00complex_updates_D\00complex_updates_D\00\0051\000\001", null, <0x2c053a0>, <0x2c051e0>, [32 x float]* @complex_updates_D, null} ; [ DW_TAG_variable ] [complex_updates_D] [line 51] [def]
+
+!{!"0x1\00\000\001024\0032\000\000\000", null, null, <0x2c0a848>, <0x2c05178>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 1024, align 32, offset 0] [from float]
+
+!{!"0x24\00float\000\0032\0032\000\000\004", null, null} ; [ DW_TAG_base_type ] [float] [line 0, size 32, align 32, offset 0, enc DW_ATE_float]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2c0a208>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2c05438>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2c0a848>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from float]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2c07b68>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+Meta data for 5292591964842834102
+Meta data for 8540110810951539039
+Meta data for 6868753202566187518
+Meta data for 14467733820088611267
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 10463635498377630450, name: complex_updates_init, fileName: complex_updates.c, startLine: 58, endLine: 58
+DEBUG: adding complex_updates_init (in module: complex_updates.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 10463635498377630450)
+DEBUG: assigning function complex_updates_init id 10463635498377630450
+DEBUG: new region: FuncRegion(id: 14118525038956209837, name: complex_updates_pin_down, fileName: complex_updates.c, startLine: 77, endLine: 77
+DEBUG: adding complex_updates_pin_down (in module: complex_updates.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14118525038956209837)
+DEBUG: assigning function complex_updates_pin_down id 14118525038956209837
+DEBUG: new region: FuncRegion(id: 4191172677581703500, name: complex_updates_return, fileName: complex_updates.c, startLine: 95, endLine: 95
+DEBUG: adding complex_updates_return (in module: complex_updates.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 4191172677581703500)
+DEBUG: assigning function complex_updates_return id 4191172677581703500
+DEBUG: new region: FuncRegion(id: 12757733490879457328, name: complex_updates_main, fileName: complex_updates.c, startLine: 111, endLine: 111
+DEBUG: adding complex_updates_main (in module: complex_updates.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12757733490879457328)
+DEBUG: assigning function complex_updates_main id 12757733490879457328
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: complex_updates.c, startLine: 128, endLine: 128
+DEBUG: adding main (in module: complex_updates.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 5 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: complex_updates_init is 10463635498377630450
+DEBUG: found 1 loops in function complex_updates_init
+DEBUG: assigning id = 5292591964842834102 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6017700501443308740
+DEBUG: assigning id = 6017700501443308740 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: complex_updates_pin_down is 14118525038956209837
+DEBUG: found 1 loops in function complex_updates_pin_down
+DEBUG: assigning id = 8540110810951539039 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8010743165052868723
+DEBUG: assigning id = 8010743165052868723 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: complex_updates_return is 4191172677581703500
+DEBUG: found 1 loops in function complex_updates_return
+DEBUG: assigning id = 6868753202566187518 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13446634500313289927
+DEBUG: assigning id = 13446634500313289927 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: complex_updates_main is 12757733490879457328
+DEBUG: found 1 loops in function complex_updates_main
+DEBUG: assigning id = 14467733820088611267 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5702313402175787429
+DEBUG: assigning id = 5702313402175787429 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to complex_updates.kdump
+INFO: dumping function: complex_updates_init
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: complex_updates_pin_down
+INFO: dumping function: complex_updates_return
+INFO: dumping function: complex_updates_main
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

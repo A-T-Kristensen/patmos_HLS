@@ -1,0 +1,105 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x203bb10>, <0x203a900>, <0x2042bb0>, <0x20437d8>, <0x2042d28>, <0x203a900>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/bitcount/bitcnt_4.c] [DW_LANG_C99]
+
+!{!"0x2e\00bitcount_init4\00bitcount_init4\00\0032\000\001\000\000\00256\000\0033", <0x203bb10>, <0x2042bf0>, <0x2042b10>, null, void ()* @bitcount_init4, null, null, <0x203a900>} ; [ DW_TAG_subprogram ] [line 32] [def] [scope 33] [bitcount_init4]
+
+!{!"0x2e\00bitcount_ntbl_bitcnt\00bitcount_ntbl_bitcnt\00\0058\000\001\000\000\00256\000\0059", <0x203bb10>, <0x2042bf0>, <0x20436b0>, null, i32 (i64)* @bitcount_ntbl_bitcnt, null, null, <0x203a900>} ; [ DW_TAG_subprogram ] [line 58] [def] [scope 59] [bitcount_ntbl_bitcnt]
+
+!{!"0x2e\00bitcount_btbl_bitcnt\00bitcount_btbl_bitcnt\00\0072\000\001\000\000\00256\000\0073", <0x203bb10>, <0x2042bf0>, <0x20436b0>, null, i32 (i64)* @bitcount_btbl_bitcnt, null, null, <0x203a900>} ; [ DW_TAG_subprogram ] [line 72] [def] [scope 73] [bitcount_btbl_bitcnt]
+
+!{!"0x34\00bitcount_bits\00bitcount_bits\00\0023\001\001", null, <0x2042bf0>, <0x2040290>, [256 x i8]* @bitcount_bits, null} ; [ DW_TAG_variable ] [bitcount_bits] [line 23] [local] [def]
+
+!{!"0x1\00\000\002048\008\000\000\000", null, null, <0x2042b78>, <0x2040228>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 2048, align 8, offset 0] [from char]
+
+!{!"0x24\00char\000\008\008\000\000\006", null, null} ; [ DW_TAG_base_type ] [char] [line 0, size 8, align 8, offset 0, enc DW_ATE_signed_char]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2042c68>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2043640>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x24\00long unsigned int\000\0064\0064\000\000\007", null, null} ; [ DW_TAG_base_type ] [long unsigned int] [line 0, size 64, align 64, offset 0, enc DW_ATE_unsigned]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2042b78>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from char]
+
+Meta data for 834934744618355164
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 16155131210355414963, name: bitcount_init4, fileName: bitcnt_4.c, startLine: 32, endLine: 32
+DEBUG: adding bitcount_init4 (in module: bitcnt_4.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 16155131210355414963)
+DEBUG: assigning function bitcount_init4 id 16155131210355414963
+DEBUG: new region: FuncRegion(id: 16349765655895797186, name: bitcount_ntbl_bitcnt, fileName: bitcnt_4.c, startLine: 58, endLine: 58
+DEBUG: adding bitcount_ntbl_bitcnt (in module: bitcnt_4.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 16349765655895797186)
+DEBUG: assigning function bitcount_ntbl_bitcnt id 16349765655895797186
+DEBUG: new region: FuncRegion(id: 17068121782752481238, name: bitcount_btbl_bitcnt, fileName: bitcnt_4.c, startLine: 72, endLine: 72
+DEBUG: adding bitcount_btbl_bitcnt (in module: bitcnt_4.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17068121782752481238)
+DEBUG: assigning function bitcount_btbl_bitcnt id 17068121782752481238
+DEBUG: found 3 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: bitcount_init4 is 16155131210355414963
+DEBUG: found 1 loops in function bitcount_init4
+DEBUG: assigning id = 834934744618355164 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17188621764466180049
+DEBUG: assigning id = 17188621764466180049 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: bitcount_ntbl_bitcnt is 16349765655895797186
+DEBUG: found 0 loops in function bitcount_ntbl_bitcnt
+DEBUG: region name to id: bitcount_btbl_bitcnt is 17068121782752481238
+DEBUG: found 0 loops in function bitcount_btbl_bitcnt
+DEBUG: Writing kremlib calls to bitcnt_4.kdump
+INFO: dumping function: bitcount_init4
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: llvm.memcpy.p0i8.p0i8.i64
+INFO: dumping function: bitcount_ntbl_bitcnt
+INFO: dumping function: bitcount_btbl_bitcnt
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

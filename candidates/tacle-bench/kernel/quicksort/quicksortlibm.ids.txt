@@ -1,0 +1,426 @@
+FUNC: quicksort___ieee754_powf
+	22 : 236 : load
+	23 : 237 : and
+	24 : 237 : load
+	25 : 239 : add
+	27 : 239 : load
+	29 : 241 : sext
+	28 : 241 : load
+	2: ARG : 1
+	1: ARG : 0
+	102 : 203 : fsub
+	131 : 139 : icmp
+	3 : 99 : load
+	4 : 100 : load
+	95 : 101 : and
+	133 : 105 : icmp
+	143 : 109 : fcmp
+	142 : 111 : fcmp
+	5 : 111 : call
+	144 : 111 : icmp
+	75 : 115 : or
+	116 : 116 : fadd
+	74 : 124 : icmp
+	73 : 125 : icmp
+	80 : ?? : phi
+	88 : 166 : icmp
+	72 : 128 : icmp
+	71 : 132 : icmp
+	70 : 133 : sub
+	9 : ?? : phi
+	132 : 138 : icmp
+	85 : 168 : fdiv
+	87 : 171 : icmp
+	117 : 140 : fsub
+	78 : 142 : icmp
+	118 : 143 : select
+	79 : 145 : icmp
+	77 : 145 : fsub
+	76 : 145 : phi
+	130 : 147 : icmp
+	129 : 148 : icmp
+	119 : 149 : fdiv
+	135 : 153 : icmp
+	120 : 154 : fmul
+	134 : 155 : and
+	6 : 157 : call
+	7 : 160 : call
+	82 : 162 : or
+	83 : 164 : icmp
+	81 : 165 : fdiv
+	21 : 234 : fmul
+	89 : 167 : icmp
+	86 : 172 : fsub
+	84 : ?? : phi
+	104 : 179 : icmp
+	121 : 180 : fdiv
+	92 : 183 : icmp
+	105 : 185 : icmp
+	122 : 186 : select
+	106 : 188 : icmp
+	123 : 189 : select
+	8 : 200 : fadd
+	10 : 201 : load
+	11 : 202 : and
+	12 : 202 : load
+	32 : 253 : and
+	33 : 253 : load
+	93 : 209 : icmp
+	13 : 210 : fmul
+	91 : 211 : sub
+	14 : 212 : load
+	90 : ?? : phi
+	94 : ?? : phi
+	98 : 214 : add
+	100 : 217 : or
+	96 : 218 : icmp
+	97 : 222 : icmp
+	99 : 226 : add
+	101 : 227 : sub
+	26 : ?? : phi
+	43 : ?? : phi
+	15 : ?? : phi
+	16 : 229 : load
+	18 : 232 : sext
+	17 : 232 : load
+	20 : 233 : sext
+	19 : 233 : load
+	60 : 318 : load
+	61 : 319 : and
+	62 : 319 : load
+	63 : 329 : fsub
+	64 : 330 : load
+	67 : 331 : add
+	30 : 251 : fadd
+	31 : 252 : load
+	34 : 259 : fadd
+	35 : 260 : load
+	36 : 261 : and
+	37 : 261 : load
+	39 : 264 : sext
+	38 : 264 : load
+	41 : 267 : sext
+	40 : 267 : load
+	42 : 267 : fadd
+	44 : 268 : load
+	45 : 269 : and
+	46 : 269 : load
+	48 : 270 : sext
+	47 : 270 : load
+	103 : 270 : fsub
+	53 : ?? : phi
+	54 : ?? : phi
+	49 : 278 : load
+	50 : 279 : and
+	51 : 279 : load
+	113 : 281 : fmul
+	52 : 282 : fadd
+	55 : 283 : load
+	136 : 284 : icmp
+	124 : 285 : fmul
+	137 : 288 : icmp
+	138 : 289 : fcmp
+	125 : 290 : fmul
+	139 : 293 : icmp
+	127 : 294 : fmul
+	140 : 297 : icmp
+	141 : 298 : fcmp
+	128 : 299 : fmul
+	110 : 308 : icmp
+	56 : 311 : and
+	57 : 311 : load
+	109 : 312 : ashr
+	111 : 313 : icmp
+	108 : 314 : sub
+	107 : ?? : phi
+	112 : 315 : fsub
+	59 : ?? : phi
+	66 : ?? : phi
+	58 : 317 : fadd
+	115 : 332 : icmp
+	65 : 333 : call
+	68 : 335 : load
+	114 : ?? : phi
+	126 : 337 : fmul
+	69 : ?? : phi
+
+FUNC: quicksort___isinff
+	1: ARG : 0
+	2 : 1123 : load
+	3 : 1127 : and
+
+FUNC: quicksort___ieee754_sqrtf
+	19 : 395 : or
+	20 : 396 : icmp
+	18 : 397 : add
+	17 : ?? : phi
+	28 : 401 : add
+	10 : 388 : icmp
+	8 : ?? : phi
+	12 : ?? : phi
+	11 : 390 : icmp
+	9 : 391 : shl
+	13 : 392 : sub
+	4 : ?? : phi
+	16 : ?? : phi
+	1: ARG : 0
+	2 : 369 : load
+	43 : 372 : icmp
+	41 : 373 : fadd
+	15 : 377 : icmp
+	44 : 378 : icmp
+	45 : 382 : icmp
+	42 : 383 : fdiv
+	14 : 387 : ashr
+	21 : ?? : phi
+	25 : ?? : phi
+	27 : ?? : phi
+	24 : ?? : phi
+	23 : 406 : icmp
+	33 : 408 : icmp
+	34 : 409 : add
+	35 : 410 : sub
+	32 : 411 : add
+	22 : ?? : phi
+	26 : ?? : phi
+	30 : ?? : phi
+	29 : 413 : add
+	31 : 414 : lshr
+	38 : 418 : icmp
+	39 : 420 : fcmp
+	40 : 422 : fcmp
+	36 : 423 : add
+	37 : 425 : add
+	5 : ?? : phi
+	3 : 429 : add
+	6 : 430 : load
+	7 : ?? : phi
+
+FUNC: quicksort___fabsf
+	1: ARG : 0
+	2 : 1036 : load
+	3 : 1037 : and
+	4 : 1037 : load
+
+FUNC: quicksort___scalbnf
+	2: ARG : 1
+	1: ARG : 0
+	3 : 1076 : load
+	18 : 1077 : ashr
+	19 : 1078 : icmp
+	20 : 1079 : icmp
+	4 : 1081 : fmul
+	5 : 1082 : load
+	17 : 1083 : sub
+	10 : ?? : phi
+	11 : ?? : phi
+	7 : ?? : phi
+	26 : 1086 : icmp
+	21 : 1087 : fadd
+	27 : 1089 : or
+	6 : 1091 : call
+	22 : 1091 : fmul
+	28 : 1092 : icmp
+	8 : 1094 : call
+	23 : 1094 : fmul
+	29 : 1095 : icmp
+	9 : 1096 : or
+	12 : 1096 : load
+	30 : 1100 : icmp
+	13 : 1102 : call
+	24 : 1102 : fmul
+	14 : 1104 : or
+	15 : 1104 : load
+	25 : 1105 : fmul
+	16 : ?? : phi
+
+FUNC: quicksort___copysignf
+	2: ARG : 1
+	1: ARG : 0
+	3 : 467 : load
+	4 : 468 : load
+	5 : 469 : or
+	6 : 469 : load
+
+FUNC: quicksort___ieee754_rem_pio2f
+	1: ARG : 0
+	2 : 548 : load
+	48 : 550 : icmp
+	49 : 557 : icmp
+	50 : 558 : icmp
+	52 : 560 : icmp
+	3 : 561 : fsub
+	4 : 562 : load
+	5 : 562 : fsub
+	6 : 565 : fsub
+	7 : 566 : load
+	8 : 566 : fsub
+	53 : 571 : icmp
+	9 : 572 : fadd
+	10 : 573 : load
+	11 : 573 : fadd
+	12 : 576 : fadd
+	13 : 577 : load
+	14 : 577 : fadd
+	39 : 583 : icmp
+	15 : 584 : call
+	47 : 585 : fptosi
+	36 : 587 : fsub
+	43 : 588 : fmul
+	40 : 590 : icmp
+	17 : 591 : sext
+	16 : 591 : load
+	54 : 590 : icmp
+	18 : 592 : fsub
+	19 : 597 : fsub
+	20 : 598 : load
+	21 : 598 : load
+	41 : 600 : icmp
+	38 : 603 : fsub
+	45 : 604 : fsub
+	22 : 605 : fsub
+	23 : 606 : load
+	24 : 606 : load
+	42 : 608 : icmp
+	37 : 611 : fsub
+	44 : 612 : fsub
+	25 : 613 : fsub
+	28 : ?? : phi
+	29 : ?? : phi
+	26 : 618 : load
+	27 : 618 : fsub
+	51 : 619 : icmp
+	30 : 620 : load
+	31 : 620 : fsub
+	32 : 621 : load
+	33 : 621 : fsub
+	46 : 622 : sub
+	55 : 630 : icmp
+	34 : 631 : fsub
+	35 : ?? : phi
+
+FUNC: quicksort___kernel_cosf
+	1: ARG : 0
+	2: ARG : 1
+	3 : 677 : load
+	12 : 679 : icmp
+	13 : 680 : icmp
+	8 : 687 : icmp
+	10 : 688 : fsub
+	9 : 690 : icmp
+	4 : 693 : sub
+	5 : 693 : load
+	7 : ?? : phi
+	11 : 697 : fsub
+	6 : ?? : phi
+
+FUNC: quicksort___kernel_sinf
+	3: ARG : 2
+	2: ARG : 1
+	1: ARG : 0
+	4 : 742 : load
+	8 : 744 : icmp
+	9 : 745 : icmp
+	10 : 754 : icmp
+	6 : 755 : fadd
+	7 : 758 : fsub
+	5 : ?? : phi
+
+FUNC: quicksort___atanf
+	10 : 875 : load
+	11 : 876 : load
+	12 : 877 : load
+	13 : 879 : load
+	14 : 880 : load
+	15 : 881 : load
+	16 : 882 : load
+	17 : 883 : load
+	38 : 885 : icmp
+	43 : 886 : fsub
+	19 : 888 : sext
+	18 : 888 : load
+	21 : 889 : sext
+	20 : 889 : load
+	1: ARG : 0
+	2 : 831 : load
+	24 : 833 : icmp
+	44 : 834 : icmp
+	40 : 835 : fadd
+	45 : 836 : icmp
+	3 : 837 : load
+	4 : 837 : load
+	41 : 837 : fadd
+	5 : 839 : load
+	42 : 839 : fsub
+	25 : 841 : icmp
+	26 : 842 : icmp
+	46 : 843 : fcmp
+	6 : 848 : call
+	27 : 849 : icmp
+	28 : 850 : icmp
+	31 : 852 : fdiv
+	32 : 855 : fdiv
+	29 : 858 : icmp
+	33 : 860 : fdiv
+	34 : 863 : fdiv
+	23 : ?? : phi
+	30 : ?? : phi
+	7 : 872 : load
+	8 : 873 : load
+	9 : 874 : load
+	37 : 888 : fsub
+	39 : 890 : icmp
+	36 : 890 : fsub
+	35 : 890 : phi
+	22 : ?? : phi
+
+FUNC: quicksort___cosf
+	21 : 925 : icmp
+	3 : 926 : call
+	22 : 930 : icmp
+	18 : 931 : fsub
+	4 : 935 : call
+	23 : 937 : and
+	5 : 939 : load
+	6 : 939 : load
+	7 : 939 : call
+	8 : 941 : load
+	9 : 941 : load
+	10 : 941 : call
+	20 : 941 : fsub
+	11 : 943 : load
+	12 : 943 : load
+	13 : 943 : call
+	19 : 943 : fsub
+	14 : 945 : load
+	15 : 945 : load
+	16 : 945 : call
+	1: ARG : 0
+	2 : 921 : load
+	17 : ?? : phi
+
+FUNC: quicksort___sinf
+	1: ARG : 0
+	2 : 977 : load
+	21 : 981 : icmp
+	3 : 982 : call
+	22 : 986 : icmp
+	18 : 987 : fsub
+	4 : 991 : call
+	23 : 993 : and
+	5 : 995 : load
+	6 : 995 : load
+	7 : 995 : call
+	8 : 997 : load
+	9 : 997 : load
+	10 : 997 : call
+	11 : 999 : load
+	12 : 999 : load
+	13 : 999 : call
+	20 : 999 : fsub
+	14 : 1001 : load
+	15 : 1001 : load
+	16 : 1001 : call
+	19 : 1001 : fsub
+	17 : ?? : phi
+

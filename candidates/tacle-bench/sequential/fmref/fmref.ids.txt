@@ -1,0 +1,126 @@
+FUNC: main
+
+FUNC: begin
+	7 : ?? : phi
+	8 : 95 : icmp
+	1 : 96 : load
+	2 : 96 : load
+	9 : 96 : icmp
+	10 : 104 : icmp
+	5 : 107 : load
+	6 : 107 : load
+	11 : 107 : icmp
+	3 : 104 : load
+	4 : 104 : add
+
+FUNC: init_lpf_data
+	7 : 174 : sext
+	4 : 176 : fptrunc
+	11 : 178 : fmul
+	10 : 178 : call
+	13 : 179 : fptrunc
+	12 : 179 : call
+	14 : 178 : fptrunc
+	9 : 167 : fsub
+	1: ARG : 1
+	8 : 174 : icmp
+	3: ARG : 3
+	15 : 175 : fcmp
+	6 : ?? : phi
+	2: ARG : 2
+	5 : 165 : fptrunc
+
+FUNC: init_equalizer
+	2 : 231 : phi
+	3 : ?? : phi
+	10 : 219 : icmp
+	9 : 231 : fcmp
+	6 : 231 : fsub
+	8 : 231 : fadd
+	1 : 220 : load
+	4 : ?? : phi
+	11 : 224 : icmp
+	5 : ?? : phi
+	7 : 228 : icmp
+
+FUNC: get_floats
+	1 : 155 : load
+	5 : 155 : icmp
+	2 : 156 : load
+	6 : 156 : sitofp
+	3 : 156 : load
+	4 : 156 : add
+	7 : 157 : load
+	8 : 157 : add
+
+FUNC: run_lpf
+	13 : ?? : phi
+	12 : ?? : phi
+	1 : 189 : load
+	15 : 189 : icmp
+	2 : 190 : load
+	4 : 190 : sext
+	3 : 190 : load
+	5 : 190 : load
+	14 : 190 : fadd
+	6 : 193 : load
+	7 : 193 : load
+	8 : 193 : add
+	9 : 196 : call
+	10 : 197 : load
+	11 : 197 : add
+
+FUNC: run_demod
+	1 : 204 : load
+	3 : 204 : sext
+	2 : 204 : load
+	4 : 204 : load
+	6 : 204 : sext
+	5 : 204 : load
+	8 : 204 : fmul
+	7 : 205 : call
+	14 : 205 : fmul
+	9 : 206 : load
+	10 : 206 : add
+	11 : 207 : call
+	12 : 208 : load
+	13 : 208 : add
+
+FUNC: run_equalizer
+	4 : 247 : icmp
+	1 : 243 : load
+	5 : ?? : phi
+	2 : 250 : load
+	3 : 250 : add
+	7 : 250 : sext
+	6 : 250 : load
+	15 : ?? : phi
+	14 : ?? : phi
+	17 : 256 : icmp
+	8 : 257 : load
+	9 : 257 : load
+	10 : 257 : load
+	16 : 257 : fadd
+	11 : 260 : call
+	12 : 261 : load
+	13 : 261 : add
+
+FUNC: fb_compact
+	1 : 123 : load
+	8 : ?? : phi
+	2 : 125 : load
+	3 : 125 : load
+	9 : 125 : icmp
+	4 : 126 : load
+	5 : 128 : load
+	6 : 128 : load
+	7 : 128 : sub
+
+FUNC: fb_ensure_writable
+	1: ARG : 1
+	2 : 134 : load
+	5 : 135 : icmp
+	3 : 141 : load
+	6 : 142 : icmp
+	4 : ?? : phi
+

@@ -1,0 +1,134 @@
+FUNC: ammunition_isdigit
+	1: ARG : 0
+	3 : 16 : icmp
+	2 : ?? : phi
+
+FUNC: ammunition_isspace
+	1: ARG : 0
+	2 : 24 : or
+
+FUNC: ammunition_memcpy
+	1: ARG : 2
+	3 : ?? : phi
+	4 : 31 : icmp
+	2 : 32 : load
+
+FUNC: ammunition_memset
+	1: ARG : 1
+	2: ARG : 2
+	5 : ?? : phi
+	4 : 42 : icmp
+	3 : 43 : trunc
+
+FUNC: ammunition_memcmp
+	2 : 54 : load
+	3 : 54 : load
+	10 : 54 : icmp
+	13 : 57 : getelementptr
+	12: ARG : 0
+	15: ARG : 1
+	1: ARG : 2
+	7 : ?? : phi
+	11 : ?? : phi
+	14 : ?? : phi
+	8 : 53 : add
+	9 : 53 : icmp
+	4 : 55 : load
+	5 : 55 : load
+	17 : 55 : sub
+	16 : 57 : getelementptr
+	6 : ?? : phi
+
+FUNC: ammunition_memmove
+	8: ARG : 0
+	10 : 79 : icmp
+	3 : 80 : load
+	9: ARG : 1
+	1: ARG : 2
+	14 : 69 : icmp
+	16 : 69 : icmp
+	15 : 70 : icmp
+	17 : 71 : icmp
+	13 : 72 : call
+	7 : 73 : icmp
+	18 : 73 : icmp
+	5 : ?? : phi
+	19 : 75 : icmp
+	2 : 76 : load
+	11 : ?? : sext
+	4 : ?? : phi
+	6 : 79 : add
+	12 : ?? : phi
+
+FUNC: ammunition_strcmp
+	13: ARG : 0
+	8: ARG : 1
+	7 : ?? : phi
+	12 : ?? : phi
+	1 : 88 : load
+	11 : 88 : icmp
+	2 : 88 : load
+	3 : 88 : load
+	15 : 88 : icmp
+	10 : ?? : phi
+	14 : 89 : getelementptr
+	9 : 89 : getelementptr
+	4 : 90 : load
+	5 : 90 : load
+	6 : 90 : sub
+
+FUNC: ammunition_atoi
+	1 : 96 : load
+	2 : 99 : load
+	12 : 99 : icmp
+	3 : 99 : load
+	16 : 99 : icmp
+	11 : 100 : add
+	10 : ?? : phi
+	13 : ?? : sext
+	5 : ?? : phi
+	9 : ?? : phi
+	7 : 105 : add
+	4 : 104 : load
+	15 : 104 : add
+	6 : 105 : load
+	14 : 105 : icmp
+	8 : 107 : mul
+
+FUNC: ammunition_sprintf_d
+	1: ARG : 1
+	7 : 116 : sext
+	5 : ?? : phi
+	6 : ?? : phi
+	12 : 119 : add
+	8 : 120 : sdiv
+	9 : 121 : icmp
+	13 : 124 : icmp
+	11 : 125 : add
+	10 : ?? : phi
+	17 : 130 : sext
+	14 : ?? : phi
+	3 : ?? : phi
+	2 : 133 : trunc
+	15 : 133 : add
+	18 : 135 : sdiv
+	16 : 136 : icmp
+	4 : 138 : add
+
+FUNC: ammunition_sprintf_u
+	14 : 157 : zext
+	10 : ?? : phi
+	3 : ?? : phi
+	2 : 160 : trunc
+	12 : 160 : add
+	1: ARG : 1
+	7 : 147 : zext
+	5 : ?? : phi
+	6 : ?? : phi
+	11 : 150 : add
+	8 : 151 : udiv
+	9 : 152 : icmp
+	15 : 161 : udiv
+	13 : 162 : icmp
+	4 : 164 : sext
+

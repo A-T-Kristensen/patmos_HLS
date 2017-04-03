@@ -1,0 +1,151 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x26575a0>, <0x265c350>, <0x265d048>, <0x26616c0>, <0x265dcd8>, <0x265c350>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/MachSuite/kmp/kmp/local_support.c] [DW_LANG_C99]
+
+!{!"0x2e\00run_benchmark\00run_benchmark\00\006\000\001\000\000\00256\000\006", <0x26575a0>, <0x265d3c0>, <0x265db10>, null, void (i8*)* @run_benchmark, null, null, <0x265c350>} ; [ DW_TAG_subprogram ] [line 6] [def] [run_benchmark]
+
+!{!"0x2e\00input_to_data\00input_to_data\00\0018\000\001\000\000\00256\000\0018", <0x26575a0>, <0x265d3c0>, <0x265d540>, null, void (i32, i8*)* @input_to_data, null, null, <0x265c350>} ; [ DW_TAG_subprogram ] [line 18] [def] [input_to_data]
+
+!{!"0x2e\00data_to_input\00data_to_input\00\0034\000\001\000\000\00256\000\0034", <0x26575a0>, <0x265d3c0>, <0x265d540>, null, void (i32, i8*)* @data_to_input, null, null, <0x265c350>} ; [ DW_TAG_subprogram ] [line 34] [def] [data_to_input]
+
+!{!"0x2e\00output_to_data\00output_to_data\00\0049\000\001\000\000\00256\000\0049", <0x26575a0>, <0x265d3c0>, <0x265d540>, null, void (i32, i8*)* @output_to_data, null, null, <0x265c350>} ; [ DW_TAG_subprogram ] [line 49] [def] [output_to_data]
+
+!{!"0x2e\00data_to_output\00data_to_output\00\0062\000\001\000\000\00256\000\0062", <0x26575a0>, <0x265d3c0>, <0x265d540>, null, void (i32, i8*)* @data_to_output, null, null, <0x265c350>} ; [ DW_TAG_subprogram ] [line 62] [def] [data_to_output]
+
+!{!"0x2e\00check_data\00check_data\00\0069\000\001\000\000\00256\000\0069", <0x26575a0>, <0x265d3c0>, <0x2661540>, null, i32 (i8*, i8*)* @check_data, null, null, <0x265c350>} ; [ DW_TAG_subprogram ] [line 69] [def] [check_data]
+
+!{!"0x34\00INPUT_SIZE\00INPUT_SIZE\00\004\000\001", null, <0x265d3c0>, <0x265df58>, i32* @INPUT_SIZE, null} ; [ DW_TAG_variable ] [INPUT_SIZE] [line 4] [def]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x265daa0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, null} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x265dbe8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x265d618>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x265e440>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from bench_args_t]
+
+!{!"0x13\00bench_args_t\0017\00259488\0032\000\000\000", <0x265c3d0>, null, null, <0x265e350>, null, null, null} ; [ DW_TAG_structure_type ] [bench_args_t] [line 17, size 259488, align 32, offset 0] [def] [from ]
+
+!{!"0xd\00pattern\0018\0032\008\000\000", <0x265c3d0>, <0x265e440>, <0x265d210>} ; [ DW_TAG_member ] [pattern] [line 18, size 32, align 8, offset 0] [from ]
+
+!{!"0x1\00\000\0032\008\000\000\000", null, null, <0x265d118>, <0x265d1a8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 32, align 8, offset 0] [from char]
+
+!{!"0x24\00char\000\008\008\000\000\006", null, null} ; [ DW_TAG_base_type ] [char] [line 0, size 8, align 8, offset 0, enc DW_ATE_signed_char]
+
+!{!"0xd\00input\0019\00259288\008\0032\000", <0x265c3d0>, <0x265e440>, <0x265c0e0>} ; [ DW_TAG_member ] [input] [line 19, size 259288, align 8, offset 32] [from ]
+
+!{!"0x1\00\000\00259288\008\000\000\000", null, null, <0x265d118>, <0x265c078>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 259288, align 8, offset 0] [from char]
+
+!{!"0xd\00kmpNext\0020\00128\0032\00259328\000", <0x265c3d0>, <0x265e440>, <0x265e010>} ; [ DW_TAG_member ] [kmpNext] [line 20, size 128, align 32, offset 259328] [from ]
+
+!{!"0x1\00\000\00128\0032\000\000\000", null, null, <0x265dfa0>, <0x265d1a8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 128, align 32, offset 0] [from int32_t]
+
+!{!"0x16\00int32_t\00196\000\000\000\000", <0x265de80>, null, <0x265df58>} ; [ DW_TAG_typedef ] [int32_t] [line 196, size 0, align 0, offset 0] [from int]
+
+!{!"0xd\00n_matches\0021\0032\0032\00259456\000", <0x265c3d0>, <0x265e440>, <0x265e230>} ; [ DW_TAG_member ] [n_matches] [line 21, size 32, align 32, offset 259456] [from ]
+
+!{!"0x1\00\000\0032\0032\000\000\000", null, null, <0x265dfa0>, <0x265e1c8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 32, align 32, offset 0] [from int32_t]
+
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 3862668819228705092, name: run_benchmark, fileName: local_support.c, startLine: 6, endLine: 6
+DEBUG: adding run_benchmark (in module: local_support.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3862668819228705092)
+DEBUG: assigning function run_benchmark id 3862668819228705092
+DEBUG: new region: FuncRegion(id: 11825262910647353991, name: input_to_data, fileName: local_support.c, startLine: 18, endLine: 18
+DEBUG: adding input_to_data (in module: local_support.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 11825262910647353991)
+DEBUG: assigning function input_to_data id 11825262910647353991
+DEBUG: new region: FuncRegion(id: 8265711678329185454, name: data_to_input, fileName: local_support.c, startLine: 34, endLine: 34
+DEBUG: adding data_to_input (in module: local_support.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 8265711678329185454)
+DEBUG: assigning function data_to_input id 8265711678329185454
+DEBUG: new region: FuncRegion(id: 13681209210925323440, name: output_to_data, fileName: local_support.c, startLine: 49, endLine: 49
+DEBUG: adding output_to_data (in module: local_support.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 13681209210925323440)
+DEBUG: assigning function output_to_data id 13681209210925323440
+DEBUG: new region: FuncRegion(id: 2262382145700601508, name: data_to_output, fileName: local_support.c, startLine: 62, endLine: 62
+DEBUG: adding data_to_output (in module: local_support.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2262382145700601508)
+DEBUG: assigning function data_to_output id 2262382145700601508
+DEBUG: new region: FuncRegion(id: 12664787391234327508, name: check_data, fileName: local_support.c, startLine: 69, endLine: 69
+DEBUG: adding check_data (in module: local_support.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12664787391234327508)
+DEBUG: assigning function check_data id 12664787391234327508
+DEBUG: found 6 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: run_benchmark is 3862668819228705092
+DEBUG: found 0 loops in function run_benchmark
+DEBUG: region name to id: input_to_data is 11825262910647353991
+DEBUG: found 0 loops in function input_to_data
+DEBUG: region name to id: data_to_input is 8265711678329185454
+DEBUG: found 0 loops in function data_to_input
+DEBUG: region name to id: output_to_data is 13681209210925323440
+DEBUG: found 0 loops in function output_to_data
+DEBUG: region name to id: data_to_output is 2262382145700601508
+DEBUG: found 0 loops in function data_to_output
+DEBUG: region name to id: check_data is 12664787391234327508
+DEBUG: found 0 loops in function check_data
+DEBUG: Writing kremlib calls to local_support.kdump
+INFO: dumping function: run_benchmark
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: kmp
+INFO: dumping function: input_to_data
+INFO: dumping function: llvm.memset.p0i8.i64
+INFO: dumping function: readfile
+INFO: dumping function: find_section_start
+INFO: dumping function: parse_string
+INFO: dumping function: free
+INFO: dumping function: data_to_input
+INFO: dumping function: write_section_header
+INFO: dumping function: write_string
+INFO: dumping function: output_to_data
+INFO: dumping function: parse_int32_t_array
+INFO: dumping function: data_to_output
+INFO: dumping function: write_int32_t_array
+INFO: dumping function: check_data
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

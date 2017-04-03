@@ -1,0 +1,25 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x2257ea0>, <0x2257db0>, <0x2257db0>, <0x2257db0>, <0x225ca08>, <0x2257db0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/sha/input_small.c] [DW_LANG_C99]
+
+!{!"0x34\00sha_data\00sha_data\00\0018\000\001", null, <0x2258b90>, <0x225c4b0>, [32743 x i8]* @sha_data, null} ; [ DW_TAG_variable ] [sha_data] [line 18] [def]
+
+!{!"0x1\00\000\00261944\008\000\000\000", null, null, <0x2258b50>, <0x225c448>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 261944, align 8, offset 0] [from ]
+
+!{!"0x35\00\000\000\000\000\000", null, null, <0x225c3e8>} ; [ DW_TAG_volatile_type ] [line 0, size 0, align 0, offset 0] [from unsigned char]
+
+!{!"0x24\00unsigned char\000\008\008\000\000\008", null, null} ; [ DW_TAG_base_type ] [unsigned char] [line 0, size 8, align 8, offset 0, enc DW_ATE_unsigned_char]
+
+INFO: Loop bodies will be given their own region id
+DEBUG: found 0 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: Writing kremlib calls to input_small.kdump
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

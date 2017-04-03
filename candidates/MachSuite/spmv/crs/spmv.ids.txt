@@ -1,0 +1,17 @@
+FUNC: spmv
+	9 : ?? : phi
+	11 : 12 : icmp
+	1 : 14 : load
+	2 : 15 : load
+	14 : ?? : sext
+	12 : 16 : sext
+	4 : ?? : phi
+	8 : ?? : phi
+	13 : 16 : icmp
+	3 : 17 : load
+	5 : 17 : load
+	7 : 17 : sext
+	6 : 17 : load
+	15 : 18 : fadd
+	10 : 16 : add
+

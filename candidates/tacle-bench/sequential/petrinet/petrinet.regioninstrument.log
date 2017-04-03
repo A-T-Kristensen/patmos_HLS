@@ -1,0 +1,151 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x347c190>, <0x34805f0>, <0x34805f0>, <0x347f8b0>, <0x3483148>, <0x34805f0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/sequential/petrinet/petrinet.c] [DW_LANG_C99]
+
+!{!"0x2e\00petrinet_main\00petrinet_main\00\0056\000\001\000\000\00256\000\0057", <0x347c190>, <0x347f7e0>, <0x3481730>, null, void ()* @petrinet_main, null, null, <0x34805f0>} ; [ DW_TAG_subprogram ] [line 56] [def] [scope 57] [petrinet_main]
+
+!{!"0x2e\00petrinet_init\00petrinet_init\00\00936\000\001\000\000\00256\000\00937", <0x347c190>, <0x347f7e0>, <0x3481730>, null, void ()* @petrinet_init, null, null, <0x34805f0>} ; [ DW_TAG_subprogram ] [line 936] [def] [scope 937] [petrinet_init]
+
+!{!"0x2e\00petrinet_return\00petrinet_return\00\00954\000\001\000\000\00256\000\00955", <0x347c190>, <0x347f7e0>, <0x3482c00>, null, i32 ()* @petrinet_return, null, null, <0x34805f0>} ; [ DW_TAG_subprogram ] [line 954] [def] [scope 955] [petrinet_return]
+
+!{!"0x2e\00main\00main\00\00973\000\001\000\000\00256\000\00974", <0x347c190>, <0x347f7e0>, <0x3482c00>, null, i32 ()* @main, null, null, <0x34805f0>} ; [ DW_TAG_subprogram ] [line 973] [def] [scope 974] [main]
+
+!{!"0x34\00petrinet_CHECKSUM\00petrinet_CHECKSUM\00\0054\000\001", null, <0x347f7e0>, <0x347f300>, i64* @petrinet_CHECKSUM, null} ; [ DW_TAG_variable ] [petrinet_CHECKSUM] [line 54] [def]
+
+!{!"0x34\00petrinet_P1_is_marked\00petrinet_P1_is_marked\00\0047\000\001", null, <0x347f7e0>, <0x3481f10>, i32* @petrinet_P1_is_marked, null} ; [ DW_TAG_variable ] [petrinet_P1_is_marked] [line 47] [def]
+
+!{!"0x34\00petrinet_P1_marking_member_0\00petrinet_P1_marking_member_0\00\0048\000\001", null, <0x347f7e0>, <0x34841b0>, [3 x i64]* @petrinet_P1_marking_member_0, null} ; [ DW_TAG_variable ] [petrinet_P1_marking_member_0] [line 48] [def]
+
+!{!"0x34\00petrinet_P2_is_marked\00petrinet_P2_is_marked\00\0049\000\001", null, <0x347f7e0>, <0x3481f10>, i32* @petrinet_P2_is_marked, null} ; [ DW_TAG_variable ] [petrinet_P2_is_marked] [line 49] [def]
+
+!{!"0x34\00petrinet_P2_marking_member_0\00petrinet_P2_marking_member_0\00\0050\000\001", null, <0x347f7e0>, <0x34845f0>, [5 x i64]* @petrinet_P2_marking_member_0, null} ; [ DW_TAG_variable ] [petrinet_P2_marking_member_0] [line 50] [def]
+
+!{!"0x34\00petrinet_P3_is_marked\00petrinet_P3_is_marked\00\0051\000\001", null, <0x347f7e0>, <0x3481f10>, i32* @petrinet_P3_is_marked, null} ; [ DW_TAG_variable ] [petrinet_P3_is_marked] [line 51] [def]
+
+!{!"0x34\00petrinet_P3_marking_member_0\00petrinet_P3_marking_member_0\00\0052\000\001", null, <0x347f7e0>, <0x3482ff0>, [6 x i64]* @petrinet_P3_marking_member_0, null} ; [ DW_TAG_variable ] [petrinet_P3_marking_member_0] [line 52] [def]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x3482e18>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from long int]
+
+!{!"0x24\00long int\000\0064\0064\000\000\005", null, null} ; [ DW_TAG_base_type ] [long int] [line 0, size 64, align 64, offset 0, enc DW_ATE_signed]
+
+!{!"0x35\00\000\000\000\000\000", null, null, <0x347f868>} ; [ DW_TAG_volatile_type ] [line 0, size 0, align 0, offset 0] [from int]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x1\00\000\00192\0064\000\000\000", null, null, <0x3484000>, <0x3484148>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 192, align 64, offset 0] [from ]
+
+!{!"0x35\00\000\000\000\000\000", null, null, <0x3482e18>} ; [ DW_TAG_volatile_type ] [line 0, size 0, align 0, offset 0] [from long int]
+
+!{!"0x1\00\000\00320\0064\000\000\000", null, null, <0x3484000>, <0x3484588>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 320, align 64, offset 0] [from ]
+
+!{!"0x1\00\000\00384\0064\000\000\000", null, null, <0x3484000>, <0x3482f88>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 384, align 64, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x347f8e8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x347f918>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+Meta data for 12833765395096434382
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 4579574831414792546, name: petrinet_main, fileName: petrinet.c, startLine: 56, endLine: 56
+DEBUG: adding petrinet_main (in module: petrinet.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 4579574831414792546)
+DEBUG: assigning function petrinet_main id 4579574831414792546
+DEBUG: new region: FuncRegion(id: 8038445351136137017, name: petrinet_init, fileName: petrinet.c, startLine: 936, endLine: 936
+DEBUG: adding petrinet_init (in module: petrinet.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 8038445351136137017)
+DEBUG: assigning function petrinet_init id 8038445351136137017
+DEBUG: new region: FuncRegion(id: 8065271443629256815, name: petrinet_return, fileName: petrinet.c, startLine: 954, endLine: 954
+DEBUG: adding petrinet_return (in module: petrinet.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 8065271443629256815)
+DEBUG: assigning function petrinet_return id 8065271443629256815
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: petrinet.c, startLine: 973, endLine: 973
+DEBUG: adding main (in module: petrinet.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 4 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: petrinet_main is 4579574831414792546
+DEBUG: found 1 loops in function petrinet_main
+DEBUG: assigning id = 12833765395096434382 to loop with the following BBs:
+	while.cond while.body land.lhs.true land.lhs.true3 if.then if.then6 if.end16 land.lhs.true18 land.lhs.true21 if.then23 if.then28 if.end42 land.lhs.true44 land.lhs.true47 if.then49 if.then54 if.end68 land.lhs.true70 land.lhs.true73 if.then75 if.then80 if.end94 land.lhs.true96 land.lhs.true99 if.then101 if.then106 if.end120 land.lhs.true122 land.lhs.true125 if.then127 if.then132 if.end146 land.lhs.true148 land.lhs.true151 land.lhs.true153 if.then155 if.then157 if.end171 land.lhs.true173 land.lhs.true176 land.lhs.true178 if.then180 if.then185 if.end199 land.lhs.true201 land.lhs.true204 land.lhs.true206 if.then208 if.then213 if.end227 land.lhs.true229 land.lhs.true232 land.lhs.true234 if.then236 if.then241 if.end255 land.lhs.true257 land.lhs.true260 land.lhs.true262 if.then264 if.then269 if.end283 land.lhs.true285 land.lhs.true288 land.lhs.true290 if.then292 if.then297 if.end311 land.lhs.true313 land.lhs.true316 land.lhs.true318 if.then320 if.then325 if.end339 land.lhs.true341 land.lhs.true344 land.lhs.true346 if.then348 if.then353 if.end367 land.lhs.true369 land.lhs.true372 land.lhs.true374 if.then376 if.then381 if.end395 land.lhs.true397 land.lhs.true400 land.lhs.true402 if.then404 if.then409 if.end423 land.lhs.true425 land.lhs.true428 land.lhs.true430 if.then432 if.then437 if.end451 land.lhs.true453 land.lhs.true456 land.lhs.true458 if.then460 if.then465 if.end479 land.lhs.true481 land.lhs.true484 land.lhs.true486 if.then488 if.then493 if.end507 land.lhs.true509 land.lhs.true512 land.lhs.true514 if.then516 if.then521 if.end535 land.lhs.true537 land.lhs.true540 land.lhs.true542 if.then544 if.then549 if.end563 land.lhs.true565 land.lhs.true568 land.lhs.true570 if.then572 if.then577 if.end591 land.lhs.true593 land.lhs.true596 land.lhs.true598 if.then600 if.then605 if.end619 land.lhs.true621 land.lhs.true624 land.lhs.true626 if.then628 if.then633 if.end647 land.lhs.true649 land.lhs.true652 land.lhs.true654 if.then656 if.then661 if.end675 land.lhs.true677 land.lhs.true680 land.lhs.true682 if.then684 if.then689 while.cond.backedge 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16947379605170163128
+DEBUG: assigning id =Meta data for 12257072123878295547
+Meta data for 3440312120946696618
+Meta data for 5590442446715509981
+ 16947379605170163128 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: region name to id: petrinet_init is 8038445351136137017
+DEBUG: found 0 loops in function petrinet_init
+DEBUG: region name to id: petrinet_return is 8065271443629256815
+DEBUG: found 3 loops in function petrinet_return
+DEBUG: assigning id = 12257072123878295547 to loop with the following BBs:
+	for.cond14 for.body17 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 584188580849943629
+DEBUG: assigning id = 584188580849943629 to body of loop
+DEBUG: assigning id = 3440312120946696618 to loop with the following BBs:
+	for.cond2 for.body5 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16611905590985145422
+DEBUG: assigning id = 16611905590985145422 to body of loop
+DEBUG: assigning id = 5590442446715509981 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16914771624756972138
+DEBUG: assigning id = 16914771624756972138 to body of loop
+DEBUG: for.cond14 has 1 possible loop exit points
+DEBUG: 	target #0: for.end25
+DEBUG: for.cond2 has 1 possible loop exit points
+DEBUG: 	target #0: for.end13
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to petrinet.kdump
+INFO: dumping function: petrinet_main
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: petrinet_init
+INFO: dumping function: petrinet_return
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

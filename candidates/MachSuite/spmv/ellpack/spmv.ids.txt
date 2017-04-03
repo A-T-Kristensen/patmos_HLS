@@ -1,0 +1,15 @@
+FUNC: ellpack
+	12 : 13 : icmp
+	1 : 14 : load
+	9 : ?? : phi
+	10 : ?? : phi
+	8 : ?? : phi
+	13 : 15 : icmp
+	3 : 16 : add
+	2 : 16 : load
+	5 : 16 : add
+	4 : 16 : load
+	7 : 16 : sext
+	6 : 16 : load
+	11 : 17 : fadd
+

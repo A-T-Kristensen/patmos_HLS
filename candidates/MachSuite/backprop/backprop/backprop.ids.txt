@@ -1,0 +1,256 @@
+FUNC: soft_max
+	5 : ?? : phi
+	12 : ?? : phi
+	4 : 8 : icmp
+	1 : 9 : load
+	3 : 9 : fsub
+	2 : 9 : call
+	13 : 9 : fadd
+	10 : ?? : phi
+	9 : 11 : icmp
+	6 : 12 : load
+	8 : 12 : fsub
+	7 : 12 : call
+	11 : 12 : fdiv
+
+FUNC: RELU
+	4 : 19 : fmul
+	8 : 20 : load
+	10 : 20 : fsub
+	1: ARG : 2
+	5 : 18 : sext
+	7 : ?? : phi
+	6 : 18 : icmp
+	2 : 19 : load
+	3 : 19 : load
+	9 : 20 : call
+	11 : 20 : fdiv
+
+FUNC: add_bias_to_activations
+	1: ARG : 2
+	5 : 28 : sext
+	7 : ?? : phi
+	6 : 28 : icmp
+	2 : 29 : load
+	3 : 29 : load
+	4 : 29 : fadd
+
+FUNC: matrix_vector_product_with_bias_input_layer
+	7 : ?? : phi
+	6 : 38 : icmp
+	9 : ?? : phi
+	8 : 40 : icmp
+	2 : 41 : add
+	1 : 41 : load
+	3 : 41 : load
+	4 : 41 : load
+	5 : 41 : fadd
+
+FUNC: matrix_vector_product_with_bias_second_layer
+	7 : ?? : phi
+	6 : 52 : icmp
+	9 : ?? : phi
+	8 : 54 : icmp
+	2 : 55 : add
+	1 : 55 : load
+	3 : 55 : load
+	4 : 55 : load
+	5 : 55 : fadd
+
+FUNC: matrix_vector_product_with_bias_output_layer
+	9 : ?? : phi
+	8 : 68 : icmp
+	7 : ?? : phi
+	6 : 66 : icmp
+	2 : 69 : add
+	1 : 69 : load
+	3 : 69 : load
+	4 : 69 : load
+	5 : 69 : fadd
+
+FUNC: take_difference
+	6 : ?? : phi
+	5 : 80 : icmp
+	1 : 81 : load
+	2 : 81 : load
+	3 : 81 : load
+	4 : 81 : fmul
+
+FUNC: get_delta_matrix_weights3
+	5 : ?? : phi
+	4 : 89 : icmp
+	7 : ?? : phi
+	6 : 90 : icmp
+	1 : 91 : load
+	2 : 91 : load
+	3 : 91 : fmul
+
+FUNC: get_oracle_activations2
+	4 : 104 : load
+	5 : 104 : fadd
+	10 : 106 : load
+	11 : 106 : load
+	12 : 106 : fmul
+	7 : ?? : phi
+	6 : 101 : icmp
+	9 : ?? : phi
+	8 : 103 : icmp
+	1 : 104 : load
+	3 : 104 : add
+	2 : 104 : load
+
+FUNC: get_delta_matrix_weights2
+	5 : ?? : phi
+	4 : 114 : icmp
+	7 : ?? : phi
+	6 : 115 : icmp
+	1 : 116 : load
+	2 : 116 : load
+	3 : 116 : fmul
+
+FUNC: get_oracle_activations1
+	7 : ?? : phi
+	6 : 126 : icmp
+	10 : 131 : load
+	11 : 131 : load
+	12 : 131 : fmul
+	9 : ?? : phi
+	8 : 128 : icmp
+	1 : 129 : load
+	3 : 129 : add
+	2 : 129 : load
+	4 : 129 : load
+	5 : 129 : fadd
+
+FUNC: get_delta_matrix_weights1
+	5 : ?? : phi
+	4 : 139 : icmp
+	7 : ?? : phi
+	6 : 140 : icmp
+	1 : 141 : load
+	2 : 141 : load
+	3 : 141 : fmul
+
+FUNC: update_weights
+	107 : 166 : fadd
+	18 : ?? : phi
+	7 : ?? : phi
+	22 : ?? : phi
+	6 : 163 : icmp
+	9 : ?? : phi
+	106 : ?? : phi
+	8 : 164 : icmp
+	2 : 165 : add
+	1 : 165 : load
+	4 : 165 : add
+	3 : 165 : load
+	5 : 165 : fsub
+	11 : 166 : add
+	10 : 166 : load
+	13 : 166 : add
+	12 : 166 : load
+	28 : 177 : icmp
+	31 : ?? : phi
+	30 : 178 : icmp
+	26 : 179 : add
+	25 : 179 : load
+	27 : 179 : fdiv
+	24 : ?? : phi
+	17 : 169 : icmp
+	14 : 170 : load
+	15 : 170 : load
+	109 : ?? : phi
+	43 : 190 : icmp
+	37 : 191 : add
+	16 : 170 : fsub
+	19 : 171 : load
+	20 : 171 : load
+	108 : 171 : fadd
+	21 : 174 : call
+	23 : 175 : call
+	29 : ?? : phi
+	74 : 217 : add
+	73 : 217 : load
+	75 : 217 : fsub
+	81 : 218 : add
+	80 : 218 : load
+	83 : 218 : add
+	82 : 218 : load
+	113 : 218 : fadd
+	35 : ?? : phi
+	34 : 182 : icmp
+	32 : 183 : load
+	33 : 183 : fdiv
+	42 : ?? : phi
+	57 : ?? : phi
+	41 : 189 : icmp
+	44 : ?? : phi
+	88 : ?? : phi
+	94 : ?? : phi
+	87 : 221 : icmp
+	84 : 222 : load
+	85 : 222 : load
+	86 : 222 : fsub
+	89 : 223 : load
+	36 : 191 : load
+	39 : 191 : add
+	38 : 191 : load
+	40 : 191 : fsub
+	46 : 192 : add
+	45 : 192 : load
+	48 : 192 : add
+	47 : 192 : load
+	110 : 192 : fadd
+	53 : ?? : phi
+	59 : ?? : phi
+	52 : 195 : icmp
+	49 : 196 : load
+	50 : 196 : load
+	51 : 196 : fsub
+	54 : 197 : load
+	55 : 197 : load
+	111 : 197 : fadd
+	56 : 200 : call
+	58 : 201 : call
+	64 : ?? : phi
+	63 : 203 : icmp
+	66 : ?? : phi
+	65 : 204 : icmp
+	61 : 205 : add
+	60 : 205 : load
+	62 : 205 : fdiv
+	70 : ?? : phi
+	69 : 208 : icmp
+	67 : 209 : load
+	68 : 209 : fdiv
+	77 : ?? : phi
+	92 : ?? : phi
+	76 : 215 : icmp
+	79 : ?? : phi
+	112 : ?? : phi
+	78 : 216 : icmp
+	72 : 217 : add
+	71 : 217 : load
+	90 : 223 : load
+	114 : 223 : fadd
+	91 : 226 : call
+	93 : 227 : call
+	99 : ?? : phi
+	98 : 229 : icmp
+	101 : ?? : phi
+	100 : 230 : icmp
+	96 : 231 : add
+	95 : 231 : load
+	97 : 231 : fdiv
+	105 : ?? : phi
+	104 : 234 : icmp
+	102 : 235 : load
+	103 : 235 : fdiv
+
+FUNC: backprop
+	2 : ?? : phi
+	4 : 265 : icmp
+	5 : 268 : icmp
+	1 : ?? : phi
+	3 : 264 : icmp
+

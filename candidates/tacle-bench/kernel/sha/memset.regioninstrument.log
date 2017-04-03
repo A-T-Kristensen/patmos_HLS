@@ -1,0 +1,115 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x32993e0>, <0x32a0bc0>, <0x32a2d68>, <0x32a2be8>, <0x32a0bc0>, <0x32a0bc0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/sha/memset.c] [DW_LANG_C99]
+
+!{!"0x2e\00sha_glibc_memset\00sha_glibc_memset\00\0023\000\001\000\000\00256\000\0024", <0x32993e0>, <0x32a29e0>, <0x32a3110>, null, i8* (i8*, i32, i32)* @sha_glibc_memset, null, null, <0x32a0bc0>} ; [ DW_TAG_subprogram ] [line 23] [def] [scope 24] [sha_glibc_memset]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x32a30a0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, null} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x16\00size_t\0026\000\000\000\000", <0x32a2aa0>, null, <0x32a3058>} ; [ DW_TAG_typedef ] [size_t] [line 26, size 0, align 0, offset 0] [from unsigned int]
+
+!{!"0x24\00unsigned int\000\0032\0032\000\000\007", null, null} ; [ DW_TAG_base_type ] [unsigned int] [line 0, size 32, align 32, offset 0, enc DW_ATE_unsigned]
+
+!{!"0x24\00long int\000\0064\0064\000\000\005", null, null} ; [ DW_TAG_base_type ] [long int] [line 0, size 64, align 64, offset 0, enc DW_ATE_signed]
+
+!{!"0x24\00unsigned char\000\008\008\000\000\008", null, null} ; [ DW_TAG_base_type ] [unsigned char] [line 0, size 8, align 8, offset 0, enc DW_ATE_unsigned_char]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x32a14d0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from BYTE]
+
+!{!"0x16\00BYTE\0024\000\000\000\000", <0x32a2aa0>, null, <0x32a15d8>} ; [ DW_TAG_typedef ] [BYTE] [line 24, size 0, align 0, offset 0] [from unsigned char]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x32a2bb8>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from long unsigned int]
+
+!{!"0x24\00long unsigned int\000\0064\0064\000\000\007", null, null} ; [ DW_TAG_base_type ] [long unsigned int] [line 0, size 64, align 64, offset 0, enc DW_ATE_unsigned]
+
+Meta data for 12621030991776753152
+Meta data for 1392567834862164794
+Meta data for 6019530494728295365
+Meta data for 447584225772563897
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 14085947931372695644, name: sha_glibc_memset, fileName: memset.c, startLine: 23, endLine: 23
+DEBUG: adding sha_glibc_memset (in module: memset.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14085947931372695644)
+DEBUG: assigning function sha_glibc_memset id 14085947931372695644
+DEBUG: found 1 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: sha_glibc_memset is 14085947931372695644
+DEBUG: found 4 loops in function sha_glibc_memset
+DEBUG: assigning id = 12621030991776753152 to loop with the following BBs:
+	while.cond44 while.body47 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17282653079734718250
+DEBUG: assigning id = 17282653079734718250 to body of loop
+DEBUG: assigning id = 1392567834862164794 to loop with the following BBs:
+	while.cond33 while.body36 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 18108480801536641907
+DEBUG: assigning id = 18108480801536641907 to body of loop
+DEBUG: assigning id = 6019530494728295365 to loop with the following BBs:
+	while.cond12 while.body15 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3931645347203377317
+DEBUG: assigning id = 3931645347203377317 to body of loop
+DEBUG: assigning id = 447584225772563897 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13728511587863066604
+DEBUG: assigning id = 13728511587863066604 to body of loop
+DEBUG: while.cond44 has 1 possible loop exit points
+DEBUG: 	target #0: while.end52
+DEBUG: while.cond33 has 1 possible loop exit points
+DEBUG: 	target #0: while.end40
+DEBUG: while.cond12 has 1 possible loop exit points
+DEBUG: 	target #0: while.end26
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: Writing kremlib calls to memset.kdump
+INFO: dumping function: sha_glibc_memset
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

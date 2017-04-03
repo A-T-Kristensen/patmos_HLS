@@ -1,0 +1,99 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x2118bb0>, <0x211f550>, <0x211f6f0>, <0x211f6b0>, <0x211f550>, <0x211f550>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/pm/pm_stdlib.c] [DW_LANG_C99]
+
+!{!"0x2e\00pm_memcpy\00pm_memcpy\00\0034\000\001\000\000\00256\000\0035", <0x2118bb0>, <0x211f730>, <0x21211a0>, null, void (i8*, i8*, i32)* @pm_memcpy, null, null, <0x211f550>} ; [ DW_TAG_subprogram ] [line 34] [def] [scope 35] [pm_memcpy]
+
+!{!"0x2e\00pm_memset\00pm_memset\00\0044\000\001\000\000\00256\000\0045", <0x2118bb0>, <0x211f730>, <0x21217b0>, null, void (i8*, i32, i32)* @pm_memset, null, null, <0x211f550>} ; [ DW_TAG_subprogram ] [line 44] [def] [scope 45] [pm_memset]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x211f670>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, null} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2121690>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x211f5d8>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from unsigned char]
+
+!{!"0x24\00unsigned char\000\008\008\000\000\008", null, null} ; [ DW_TAG_base_type ] [unsigned char] [line 0, size 8, align 8, offset 0, enc DW_ATE_unsigned_char]
+
+Meta data for 9046121708100429555
+Meta data for 783126138398084333
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 14771011425679918331, name: pm_memcpy, fileName: pm_stdlib.c, startLine: 34, endLine: 34
+DEBUG: adding pm_memcpy (in module: pm_stdlib.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14771011425679918331)
+DEBUG: assigning function pm_memcpy id 14771011425679918331
+DEBUG: new region: FuncRegion(id: 18089056584217851421, name: pm_memset, fileName: pm_stdlib.c, startLine: 44, endLine: 44
+DEBUG: adding pm_memset (in module: pm_stdlib.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 18089056584217851421)
+DEBUG: assigning function pm_memset id 18089056584217851421
+DEBUG: found 2 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: pm_memcpy is 14771011425679918331
+DEBUG: found 1 loops in function pm_memcpy
+DEBUG: assigning id = 9046121708100429555 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 2166259943734111527
+DEBUG: assigning id = 2166259943734111527 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: pm_memset is 18089056584217851421
+DEBUG: found 1 loops in function pm_memset
+DEBUG: assigning id = 783126138398084333 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10114756845383710451
+DEBUG: assigning id = 10114756845383710451 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: Writing kremlib calls to pm_stdlib.kdump
+INFO: dumping function: pm_memcpy
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: pm_memset
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

@@ -1,0 +1,108 @@
+FUNC: rijndael_enc_init
+	29 : 92 : icmp
+	2 : 73 : load
+	3 : 73 : xor
+	6 : 76 : load
+	7 : 76 : load
+	9 : 76 : trunc
+	12 : 86 : load
+	26 : 86 : icmp
+	16 : ?? : phi
+	25 : 88 : getelementptr
+	13 : 88 : load
+	15 : 88 : sext
+	14 : 88 : call
+	31 : 89 : icmp
+	32 : 89 : icmp
+	28 : 93 : add
+	19 : ?? : phi
+	22 : ?? : phi
+	24 : ?? : phi
+	18 : ?? : phi
+	23 : 86 : icmp
+	33 : 100 : icmp
+	17 : 101 : trunc
+	20 : 104 : load
+	11 : ?? : phi
+	4 : 75 : load
+	10 : 75 : icmp
+	5 : 76 : load
+	8 : 76 : zext
+	1 : 73 : load
+	27 : 90 : sub
+	30 : 92 : icmp
+	34 : 104 : icmp
+	35 : 108 : icmp
+	36 : 108 : icmp
+	21 : 113 : udiv
+
+FUNC: rijndael_enc_return
+	1 : 118 : load
+	2 : 118 : select
+
+FUNC: rijndael_enc_fillrand
+	1: ARG : 1
+	2 : 137 : load
+	17 : 137 : icmp
+	7 : 144 : sext
+	9 : ?? : phi
+	8 : 144 : icmp
+	3 : 145 : load
+	18 : 145 : icmp
+	4 : 146 : load
+	5 : 146 : load
+	6 : 146 : add
+	10 : 146 : load
+	11 : 146 : load
+	12 : 146 : add
+	13 : 146 : add
+	14 : 150 : load
+	15 : 150 : add
+	16 : 150 : load
+
+FUNC: rijndael_enc_encfile
+	1 : 162 : load
+	2 : 168 : load
+	3 : 168 : trunc
+	29 : ?? : phi
+	6 : ?? : phi
+	4 : 172 : call
+	10 : 172 : xor
+	5 : 175 : call
+	11 : 177 : icmp
+	13 : ?? : phi
+	12 : 180 : icmp
+	7 : 181 : load
+	8 : 181 : load
+	9 : 181 : trunc
+	14 : 183 : call
+	15 : 186 : load
+	16 : 186 : load
+	17 : 186 : add
+	30 : ?? : phi
+	31 : ?? : phi
+	33 : 198 : icmp
+	32 : 199 : add
+	22 : ?? : phi
+	21 : 201 : icmp
+	34 : ?? : phi
+	36 : 203 : icmp
+	35 : 204 : add
+	24 : ?? : phi
+	23 : 207 : icmp
+	18 : 208 : load
+	19 : 208 : load
+	20 : 208 : trunc
+	25 : 210 : call
+	26 : 212 : load
+	27 : 212 : load
+	28 : 212 : add
+
+FUNC: rijndael_enc_main
+	1 : 221 : load
+	3 : 221 : sext
+	2 : 221 : call
+
+FUNC: main
+	1 : 230 : call
+

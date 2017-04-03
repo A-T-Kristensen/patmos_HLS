@@ -1,0 +1,413 @@
+FUNC: readfile
+	1: ARG : 0
+	13 : 40 : icmp
+	2 : 41 : call
+	14 : 41 : icmp
+	3 : 42 : load
+	8 : 43 : icmp
+	4 : 44 : call
+	7 : ?? : phi
+	9 : 46 : icmp
+	6 : 47 : sub
+	5 : 47 : call
+	12 : 48 : icmp
+	11 : 49 : add
+	10 : 52 : call
+
+FUNC: find_section_start
+	22 : 71 : icmp
+	20 : ?? : phi
+	1: ARG : 1
+	14: ARG : 0
+	23 : 59 : icmp
+	9 : 60 : icmp
+	7 : ?? : phi
+	12 : ?? : phi
+	11 : 64 : icmp
+	2 : 64 : load
+	15 : 64 : icmp
+	10 : ?? : phi
+	3 : 66 : load
+	17 : 66 : icmp
+	4 : 66 : load
+	18 : 66 : icmp
+	5 : 66 : load
+	19 : 66 : icmp
+	16 : 67 : add
+	8 : ?? : phi
+	13 : 69 : getelementptr
+	6 : 71 : load
+	21 : 72 : getelementptr
+
+FUNC: parse_string
+	14: ARG : 0
+	1: ARG : 2
+	22 : 79 : icmp
+	13 : 81 : icmp
+	10 : ?? : phi
+	2 : 83 : load
+	15 : 83 : icmp
+	20 : 83 : trunc
+	3 : 83 : load
+	23 : 83 : icmp
+	5 : 83 : add
+	4 : 83 : load
+	16 : 83 : icmp
+	6 : 84 : load
+	17 : 84 : icmp
+	7 : 84 : load
+	18 : 84 : icmp
+	9 : 84 : add
+	8 : 84 : load
+	12 : 84 : icmp
+	11 : ?? : phi
+	24 : 84 : xor
+	19 : ?? : phi
+	21 : ?? : phi
+	25 : 92 : icmp
+
+FUNC: parse_uint8_t_array
+	15: ARG : 0
+	1: ARG : 2
+	14 : 132 : icmp
+	12 : 132 : call
+	18 : 132 : sext
+	11 : ?? : phi
+	2 : ?? : phi
+	16 : 132 : icmp
+	17 : 132 : icmp
+	8 : ?? : phi
+	3 : 132 : call
+	7 : 132 : trunc
+	4 : 132 : load
+	5 : 132 : load
+	19 : 132 : icmp
+	6 : 132 : load
+	9 : 132 : call
+	13 : 132 : call
+	20 : 132 : icmp
+	10 : 132 : call
+
+FUNC: parse_uint16_t_array
+	8 : ?? : phi
+	3 : 133 : call
+	7 : 133 : trunc
+	1: ARG : 2
+	15: ARG : 0
+	14 : 133 : icmp
+	12 : 133 : call
+	18 : 133 : sext
+	11 : ?? : phi
+	2 : ?? : phi
+	16 : 133 : icmp
+	17 : 133 : icmp
+	4 : 133 : load
+	5 : 133 : load
+	19 : 133 : icmp
+	6 : 133 : load
+	9 : 133 : call
+	13 : 133 : call
+	20 : 133 : icmp
+	10 : 133 : call
+
+FUNC: parse_uint32_t_array
+	1: ARG : 2
+	15: ARG : 0
+	14 : 134 : icmp
+	12 : 134 : call
+	18 : 134 : sext
+	11 : ?? : phi
+	2 : ?? : phi
+	16 : 134 : icmp
+	17 : 134 : icmp
+	8 : ?? : phi
+	3 : 134 : call
+	7 : 134 : trunc
+	4 : 134 : load
+	5 : 134 : load
+	19 : 134 : icmp
+	6 : 134 : load
+	9 : 134 : call
+	13 : 134 : call
+	20 : 134 : icmp
+	10 : 134 : call
+
+FUNC: parse_uint64_t_array
+	1: ARG : 2
+	13: ARG : 0
+	12 : 135 : icmp
+	10 : 135 : call
+	17 : 135 : sext
+	9 : ?? : phi
+	2 : ?? : phi
+	15 : 135 : icmp
+	16 : 135 : icmp
+	14 : ?? : phi
+	3 : 135 : call
+	4 : 135 : load
+	5 : 135 : load
+	18 : 135 : icmp
+	6 : 135 : load
+	7 : 135 : call
+	11 : 135 : call
+	19 : 135 : icmp
+	8 : 135 : call
+
+FUNC: parse_int8_t_array
+	18 : 136 : sext
+	11 : ?? : phi
+	2 : ?? : phi
+	16 : 136 : icmp
+	17 : 136 : icmp
+	8 : ?? : phi
+	1: ARG : 2
+	15: ARG : 0
+	14 : 136 : icmp
+	12 : 136 : call
+	3 : 136 : call
+	7 : 136 : trunc
+	4 : 136 : load
+	5 : 136 : load
+	19 : 136 : icmp
+	6 : 136 : load
+	9 : 136 : call
+	13 : 136 : call
+	20 : 136 : icmp
+	10 : 136 : call
+
+FUNC: parse_int16_t_array
+	1: ARG : 2
+	15: ARG : 0
+	14 : 137 : icmp
+	12 : 137 : call
+	18 : 137 : sext
+	11 : ?? : phi
+	2 : ?? : phi
+	16 : 137 : icmp
+	17 : 137 : icmp
+	8 : ?? : phi
+	3 : 137 : call
+	7 : 137 : trunc
+	4 : 137 : load
+	5 : 137 : load
+	19 : 137 : icmp
+	6 : 137 : load
+	9 : 137 : call
+	13 : 137 : call
+	20 : 137 : icmp
+	10 : 137 : call
+
+FUNC: parse_int32_t_array
+	1: ARG : 2
+	15: ARG : 0
+	14 : 138 : icmp
+	12 : 138 : call
+	18 : 138 : sext
+	11 : ?? : phi
+	2 : ?? : phi
+	16 : 138 : icmp
+	17 : 138 : icmp
+	8 : ?? : phi
+	3 : 138 : call
+	7 : 138 : trunc
+	4 : 138 : load
+	5 : 138 : load
+	19 : 138 : icmp
+	6 : 138 : load
+	9 : 138 : call
+	13 : 138 : call
+	20 : 138 : icmp
+	10 : 138 : call
+
+FUNC: parse_int64_t_array
+	1: ARG : 2
+	13: ARG : 0
+	12 : 139 : icmp
+	10 : 139 : call
+	17 : 139 : sext
+	9 : ?? : phi
+	2 : ?? : phi
+	15 : 139 : icmp
+	16 : 139 : icmp
+	14 : ?? : phi
+	3 : 139 : call
+	4 : 139 : load
+	5 : 139 : load
+	18 : 139 : icmp
+	6 : 139 : load
+	7 : 139 : call
+	11 : 139 : call
+	19 : 139 : icmp
+	8 : 139 : call
+
+FUNC: parse_float_array
+	1: ARG : 2
+	13: ARG : 0
+	17 : 141 : sext
+	9 : ?? : phi
+	2 : ?? : phi
+	15 : 141 : icmp
+	16 : 141 : icmp
+	14 : ?? : phi
+	12 : 141 : icmp
+	10 : 141 : call
+	3 : 141 : call
+	4 : 141 : load
+	5 : 141 : load
+	18 : 141 : icmp
+	6 : 141 : load
+	7 : 141 : call
+	11 : 141 : call
+	19 : 141 : icmp
+	8 : 141 : call
+
+FUNC: parse_double_array
+	1: ARG : 2
+	13: ARG : 0
+	12 : 142 : icmp
+	10 : 142 : call
+	17 : 142 : sext
+	9 : ?? : phi
+	2 : ?? : phi
+	15 : 142 : icmp
+	16 : 142 : icmp
+	14 : ?? : phi
+	3 : 142 : call
+	4 : 142 : load
+	5 : 142 : load
+	18 : 142 : icmp
+	6 : 142 : load
+	7 : 142 : call
+	11 : 142 : call
+	19 : 142 : icmp
+	8 : 142 : call
+
+FUNC: write_string
+	2: ARG : 2
+	1: ARG : 0
+	8 : 147 : icmp
+	12 : 148 : icmp
+	3 : 149 : call
+	11 : 149 : trunc
+	6 : ?? : phi
+	7 : ?? : phi
+	9 : 152 : icmp
+	5 : 153 : sext
+	4 : 153 : call
+	14 : 154 : icmp
+	13 : 155 : add
+	10 : 159 : call
+	16 : 159 : trunc
+	15 : 160 : icmp
+	17 : 161 : icmp
+
+FUNC: write_uint8_t_array
+	2: ARG : 2
+	1: ARG : 0
+	7 : 177 : icmp
+	6 : 177 : sext
+	9 : ?? : phi
+	8 : 177 : icmp
+	3 : 177 : load
+	5 : 177 : zext
+	4 : 177 : call
+
+FUNC: write_uint16_t_array
+	1: ARG : 0
+	2: ARG : 2
+	7 : 178 : icmp
+	6 : 178 : sext
+	9 : ?? : phi
+	8 : 178 : icmp
+	3 : 178 : load
+	5 : 178 : zext
+	4 : 178 : call
+
+FUNC: write_uint32_t_array
+	1: ARG : 0
+	2: ARG : 2
+	6 : 179 : icmp
+	7 : 179 : sext
+	5 : ?? : phi
+	8 : 179 : icmp
+	3 : 179 : load
+	4 : 179 : call
+
+FUNC: write_uint64_t_array
+	1: ARG : 0
+	2: ARG : 2
+	6 : 180 : icmp
+	7 : 180 : sext
+	5 : ?? : phi
+	8 : 180 : icmp
+	3 : 180 : load
+	4 : 180 : call
+
+FUNC: write_int8_t_array
+	1: ARG : 0
+	2: ARG : 2
+	7 : 181 : icmp
+	6 : 181 : sext
+	9 : ?? : phi
+	8 : 181 : icmp
+	3 : 181 : load
+	5 : 181 : sext
+	4 : 181 : call
+
+FUNC: write_int16_t_array
+	1: ARG : 0
+	2: ARG : 2
+	7 : 182 : icmp
+	6 : 182 : sext
+	9 : ?? : phi
+	8 : 182 : icmp
+	3 : 182 : load
+	5 : 182 : sext
+	4 : 182 : call
+
+FUNC: write_int32_t_array
+	1: ARG : 0
+	2: ARG : 2
+	6 : 183 : icmp
+	7 : 183 : sext
+	5 : ?? : phi
+	8 : 183 : icmp
+	3 : 183 : load
+	4 : 183 : call
+
+FUNC: write_int64_t_array
+	1: ARG : 0
+	2: ARG : 2
+	6 : 184 : icmp
+	7 : 184 : sext
+	5 : ?? : phi
+	8 : 184 : icmp
+	3 : 184 : load
+	4 : 184 : call
+
+FUNC: write_float_array
+	1: ARG : 0
+	2: ARG : 2
+	7 : 186 : icmp
+	6 : 186 : sext
+	9 : ?? : phi
+	8 : 186 : icmp
+	3 : 186 : load
+	5 : 186 : fpext
+	4 : 186 : call
+
+FUNC: write_double_array
+	1: ARG : 0
+	2: ARG : 2
+	6 : 187 : icmp
+	7 : 187 : sext
+	5 : ?? : phi
+	8 : 187 : icmp
+	3 : 187 : load
+	4 : 187 : call
+
+FUNC: write_section_header
+	1: ARG : 0
+	3 : 190 : icmp
+	2 : 191 : call
+

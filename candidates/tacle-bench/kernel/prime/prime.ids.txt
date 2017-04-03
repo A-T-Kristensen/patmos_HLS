@@ -1,0 +1,53 @@
+FUNC: prime_initSeed
+
+FUNC: prime_randomInteger
+	1 : 61 : load
+	2 : 61 : srem
+	3 : 62 : load
+
+FUNC: prime_init
+	1 : 70 : call
+	2 : 71 : call
+
+FUNC: prime_return
+	1 : 77 : load
+
+FUNC: prime_divides
+	1: ARG : 0
+	2: ARG : 1
+	3 : 87 : trunc
+
+FUNC: prime_even
+	1: ARG : 0
+	2 : 93 : call
+
+FUNC: prime_prime
+	2 : 100 : call
+	1: ARG : 0
+	7 : 100 : icmp
+	10 : 101 : trunc
+	4 : ?? : phi
+	8 : 104 : icmp
+	3 : 105 : call
+	9 : 105 : icmp
+	6 : 104 : add
+	11 : 108 : trunc
+	5 : ?? : phi
+
+FUNC: prime_swap
+	1 : 114 : load
+	2 : 115 : load
+
+FUNC: prime_main
+	1 : 128 : load
+	2 : 128 : call
+	8 : 128 : icmp
+	3 : 128 : load
+	4 : 128 : call
+	7 : 128 : xor
+	6 : ?? : phi
+	5 : 128 : zext
+
+FUNC: main
+	1 : 137 : call
+

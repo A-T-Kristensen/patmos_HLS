@@ -1,0 +1,320 @@
+FUNC: adpcm_dec_fabs
+	1: ARG : 0
+	4 : 211 : icmp
+	3 : 214 : sub
+	2 : ?? : phi
+
+FUNC: adpcm_dec_sin
+	1: ARG : 0
+	5 : ?? : phi
+	7 : 229 : icmp
+	11 : 229 : sub
+	6 : 230 : sub
+	8 : ?? : phi
+	10 : 233 : icmp
+	9 : 234 : add
+	18 : 233 : add
+	19 : 238 : sdiv
+	16 : 239 : add
+	13 : 240 : add
+	12 : ?? : phi
+	4 : ?? : phi
+	3 : ?? : phi
+	2 : 245 : call
+	15 : 245 : icmp
+	20 : 246 : sdiv
+	17 : 247 : add
+	14 : 248 : add
+
+FUNC: adpcm_dec_cos
+	1: ARG : 0
+	3 : 257 : sub
+	2 : 257 : call
+
+FUNC: adpcm_dec_decode
+	28 : 302 : call
+	29 : 305 : load
+	30 : 305 : call
+	31 : 309 : load
+	32 : 309 : load
+	33 : 309 : add
+	34 : 312 : load
+	35 : 316 : load
+	36 : 316 : load
+	37 : 317 : load
+	38 : 317 : load
+	39 : 318 : load
+	40 : 316 : call
+	41 : 321 : load
+	42 : 321 : load
+	43 : 322 : load
+	44 : 322 : load
+	2 : 274 : and
+	3 : 275 : ashr
+	5 : 284 : load
+	111 : 402 : load
+	6 : 284 : load
+	7 : 285 : load
+	87 : 372 : load
+	88 : 372 : load
+	89 : 372 : add
+	90 : 375 : load
+	1: ARG : 0
+	4 : 280 : call
+	45 : 321 : call
+	46 : 325 : load
+	47 : 325 : load
+	48 : 325 : add
+	8 : 285 : load
+	9 : 284 : call
+	10 : 287 : load
+	11 : 287 : load
+	12 : 287 : add
+	13 : 290 : load
+	14 : 291 : load
+	16 : 291 : sext
+	15 : 291 : load
+	17 : 290 : trunc
+	18 : 295 : load
+	19 : 296 : load
+	21 : 296 : sext
+	20 : 296 : load
+	22 : 295 : trunc
+	23 : 299 : load
+	24 : 299 : load
+	25 : 299 : add
+	26 : 302 : load
+	27 : 302 : load
+	132 : 396 : add
+	121 : 397 : getelementptr
+	106 : 397 : load
+	128 : 397 : getelementptr
+	107 : 397 : load
+	49 : 328 : load
+	50 : 329 : load
+	51 : 330 : load
+	52 : 331 : load
+	53 : 336 : call
+	54 : 340 : load
+	55 : 340 : load
+	56 : 341 : load
+	57 : 341 : load
+	58 : 340 : call
+	59 : 344 : load
+	60 : 344 : load
+	61 : 344 : add
+	62 : 347 : load
+	63 : 348 : load
+	65 : 348 : sext
+	64 : 348 : load
+	66 : 347 : trunc
+	67 : 351 : load
+	68 : 351 : load
+	69 : 351 : call
+	70 : 354 : load
+	71 : 354 : call
+	72 : 357 : load
+	73 : 357 : load
+	74 : 357 : add
+	75 : 360 : load
+	76 : 364 : load
+	77 : 364 : load
+	78 : 365 : load
+	79 : 365 : load
+	80 : 365 : load
+	81 : 364 : call
+	82 : 368 : load
+	83 : 368 : load
+	84 : 369 : load
+	85 : 369 : load
+	86 : 368 : call
+	119 : 419 : load
+	91 : 376 : load
+	92 : 377 : load
+	93 : 378 : load
+	94 : 383 : load
+	95 : 383 : load
+	96 : 383 : sub
+	97 : 384 : load
+	98 : 384 : load
+	99 : 384 : add
+	100 : 390 : load
+	101 : 390 : load
+	131 : 390 : mul
+	102 : 391 : load
+	127 : 391 : getelementptr
+	103 : 391 : load
+	129 : 391 : mul
+	120 : ?? : phi
+	124 : ?? : phi
+	126 : ?? : phi
+	115 : ?? : phi
+	113 : ?? : phi
+	123 : ?? : phi
+	122 : 395 : icmp
+	125 : 396 : getelementptr
+	104 : 396 : load
+	105 : 396 : load
+	130 : 397 : add
+	108 : 401 : load
+	109 : 401 : load
+	110 : 402 : load
+	112 : 405 : trunc
+	114 : 406 : trunc
+	138 : 409 : getelementptr
+	143 : 410 : getelementptr
+	133 : ?? : phi
+	137 : ?? : phi
+	140 : ?? : phi
+	136 : ?? : phi
+	142 : ?? : phi
+	135 : 413 : icmp
+	139 : 414 : getelementptr
+	116 : 414 : load
+	141 : 414 : getelementptr
+	144 : 415 : getelementptr
+	117 : 415 : load
+	134 : 415 : getelementptr
+	118 : 418 : load
+
+FUNC: adpcm_dec_filtez
+	18: ARG : 0
+	14: ARG : 1
+	17 : 433 : getelementptr
+	1 : 433 : load
+	13 : 433 : getelementptr
+	2 : 433 : load
+	7 : 433 : mul
+	6 : ?? : phi
+	10 : ?? : phi
+	12 : ?? : phi
+	16 : ?? : phi
+	9 : 437 : icmp
+	19 : 438 : getelementptr
+	3 : 438 : load
+	15 : 438 : getelementptr
+	4 : 438 : load
+	8 : 438 : add
+	11 : 437 : add
+	5 : 440 : trunc
+
+FUNC: adpcm_dec_filtep
+	4: ARG : 3
+	3: ARG : 2
+	2: ARG : 1
+	1: ARG : 0
+	5 : 456 : trunc
+
+FUNC: adpcm_dec_logscl
+	2: ARG : 1
+	1: ARG : 0
+	4 : 468 : sext
+	3 : 468 : load
+	5 : 472 : select
+
+FUNC: adpcm_dec_scalel
+	2: ARG : 1
+	1: ARG : 0
+	4 : 487 : sext
+	3 : 487 : load
+	5 : 489 : shl
+
+FUNC: adpcm_dec_upzero
+	1: ARG : 0
+	4 : 501 : icmp
+	6 : ?? : phi
+	5 : 503 : icmp
+	2 : 504 : load
+	3 : 504 : trunc
+	11 : ?? : phi
+	10 : 509 : icmp
+	7 : 510 : load
+	17 : 510 : icmp
+	12 : ?? : phi
+	8 : 515 : load
+	9 : 516 : add
+	13 : 522 : load
+	14 : 523 : load
+	15 : 524 : load
+	16 : 525 : load
+
+FUNC: adpcm_dec_uppol2
+	10 : 540 : mul
+	1: ARG : 0
+	2: ARG : 1
+	3: ARG : 2
+	4: ARG : 3
+	5: ARG : 4
+	11 : 541 : icmp
+	9 : 542 : sub
+	8 : ?? : phi
+	14 : 545 : icmp
+	12 : 546 : add
+	13 : 548 : sub
+	7 : ?? : phi
+	6 : 554 : select
+
+FUNC: adpcm_dec_uppol1
+	4: ARG : 3
+	3: ARG : 2
+	2: ARG : 1
+	1: ARG : 0
+	8 : 573 : sub
+	6 : ?? : phi
+	11 : 576 : sub
+	12 : 577 : icmp
+	10 : ?? : phi
+	14 : 579 : icmp
+	13 : 580 : sub
+	5 : ?? : phi
+	9 : 570 : icmp
+	7 : 571 : add
+
+FUNC: adpcm_dec_logsch
+	1: ARG : 0
+	2: ARG : 1
+	4 : 594 : sext
+	3 : 594 : load
+	5 : 598 : select
+
+FUNC: adpcm_dec_reset
+	1 : ?? : phi
+	4 : 627 : icmp
+	2 : ?? : phi
+	5 : 635 : icmp
+	3 : ?? : phi
+	6 : 643 : icmp
+
+FUNC: adpcm_dec_init
+	4 : ?? : phi
+	3 : 667 : icmp
+	2 : 668 : trunc
+	1 : 668 : call
+	5 : 668 : mul
+	6 : 671 : load
+	7 : 671 : load
+	8 : 671 : add
+
+FUNC: adpcm_dec_return
+	2 : ?? : phi
+	6 : ?? : phi
+	8 : 680 : icmp
+	1 : 682 : load
+	4 : 682 : add
+	3 : 682 : load
+	9 : 682 : add
+	7 : 680 : add
+	5 : 685 : zext
+
+FUNC: adpcm_dec_main
+	5 : ?? : phi
+	7 : 697 : icmp
+	2 : 698 : sext
+	1 : 698 : load
+	3 : 699 : load
+	4 : 700 : load
+	6 : 697 : add
+
+FUNC: main
+	1 : 711 : call
+

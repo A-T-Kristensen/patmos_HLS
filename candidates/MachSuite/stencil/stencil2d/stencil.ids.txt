@@ -1,0 +1,17 @@
+FUNC: stencil
+	6 : ?? : phi
+	10 : 7 : icmp
+	7 : ?? : phi
+	11 : 8 : icmp
+	8 : ?? : phi
+	5 : ?? : phi
+	12 : 10 : icmp
+	13 : ?? : phi
+	9 : ?? : phi
+	15 : 11 : icmp
+	2 : 12 : add
+	1 : 12 : load
+	4 : 12 : add
+	3 : 12 : load
+	14 : 13 : add
+

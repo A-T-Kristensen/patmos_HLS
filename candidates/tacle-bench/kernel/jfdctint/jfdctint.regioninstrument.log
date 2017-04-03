@@ -1,0 +1,139 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x23c3460>, <0x23c36a0>, <0x23bd0f8>, <0x23c5e18>, <0x23c7ea0>, <0x23c36a0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/jfdctint/jfdctint.c] [DW_LANG_C99]
+
+!{!"0x2e\00jfdctint_init\00jfdctint_init\00\00144\000\001\000\000\000\000\00145", <0x23c3460>, <0x23c4c90>, <0x23c4e30>, null, void ()* @jfdctint_init, null, null, <0x23c36a0>} ; [ DW_TAG_subprogram ] [line 144] [def] [scope 145] [jfdctint_init]
+
+!{!"0x2e\00jfdctint_return\00jfdctint_return\00\00161\000\001\000\000\000\000\00162", <0x23c3460>, <0x23c4c90>, <0x23c4d00>, null, i32 ()* @jfdctint_return, null, null, <0x23c36a0>} ; [ DW_TAG_subprogram ] [line 161] [def] [scope 162] [jfdctint_return]
+
+!{!"0x2e\00jfdctint_jpeg_fdct_islow\00jfdctint_jpeg_fdct_islow\00\00175\000\001\000\000\00256\000\00176", <0x23c3460>, <0x23c4c90>, <0x23c4e30>, null, void ()* @jfdctint_jpeg_fdct_islow, null, null, <0x23c36a0>} ; [ DW_TAG_subprogram ] [line 175] [def] [scope 176] [jfdctint_jpeg_fdct_islow]
+
+!{!"0x2e\00jfdctint_main\00jfdctint_main\00\00306\000\001\000\000\00256\000\00307", <0x23c3460>, <0x23c4c90>, <0x23c4e30>, null, void ()* @jfdctint_main, null, null, <0x23c36a0>} ; [ DW_TAG_subprogram ] [line 306] [def] [scope 307] [jfdctint_main]
+
+!{!"0x2e\00main\00main\00\00312\000\001\000\000\00256\000\00313", <0x23c3460>, <0x23c4c90>, <0x23c4d00>, null, i32 ()* @main, null, null, <0x23c36a0>} ; [ DW_TAG_subprogram ] [line 312] [def] [scope 313] [main]
+
+!{!"0x34\00jfdctint_CHECKSUM\00jfdctint_CHECKSUM\00\00142\000\001", null, <0x23c4c90>, <0x23c3320>, i32* @jfdctint_CHECKSUM, null} ; [ DW_TAG_variable ] [jfdctint_CHECKSUM] [line 142] [def]
+
+!{!"0x34\00jfdctint_data\00jfdctint_data\00\00139\000\001", null, <0x23c4c90>, <0x23c7d70>, [64 x i32]* @jfdctint_data, null} ; [ DW_TAG_variable ] [jfdctint_data] [line 139] [def]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x23c4c58>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from int]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x1\00\000\002048\0032\000\000\000", null, null, <0x23c4c58>, <0x23c54b8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 2048, align 32, offset 0] [from int]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x23c4dc8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x23bd0f8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+Meta data for 5608977045547930225
+Meta data for 8947196392642900940
+Meta data for 5218142360864429184
+Meta data for 15968689139370116721
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 11174077796334380765, name: jfdctint_init, fileName: jfdctint.c, startLine: 144, endLine: 144
+DEBUG: adding jfdctint_init (in module: jfdctint.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 11174077796334380765)
+DEBUG: assigning function jfdctint_init id 11174077796334380765
+DEBUG: new region: FuncRegion(id: 17132079431119055211, name: jfdctint_return, fileName: jfdctint.c, startLine: 161, endLine: 161
+DEBUG: adding jfdctint_return (in module: jfdctint.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17132079431119055211)
+DEBUG: assigning function jfdctint_return id 17132079431119055211
+DEBUG: new region: FuncRegion(id: 6672621774892820020, name: jfdctint_jpeg_fdct_islow, fileName: jfdctint.c, startLine: 175, endLine: 175
+DEBUG: adding jfdctint_jpeg_fdct_islow (in module: jfdctint.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6672621774892820020)
+DEBUG: assigning function jfdctint_jpeg_fdct_islow id 6672621774892820020
+DEBUG: new region: FuncRegion(id: 8816721825869249352, name: jfdctint_main, fileName: jfdctint.c, startLine: 306, endLine: 306
+DEBUG: adding jfdctint_main (in module: jfdctint.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 8816721825869249352)
+DEBUG: assigning function jfdctint_main id 8816721825869249352
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: jfdctint.c, startLine: 312, endLine: 312
+DEBUG: adding main (in module: jfdctint.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 5 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: jfdctint_init is 11174077796334380765
+DEBUG: found 1 loops in function jfdctint_init
+DEBUG: assigning id = 5608977045547930225 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8898888456827140221
+DEBUG: assigning id = 8898888456827140221 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: jfdctint_return is 17132079431119055211
+DEBUG: found 1 loops in function jfdctint_return
+DEBUG: assigning id = 8947196392642900940 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 2332994368574430784
+DEBUG: assigning id = 2332994368574430784 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: jfdctint_jpeg_fdct_islow is 6672621774892820020
+DEBUG: found 2 loops in function jfdctint_jpeg_fdct_islow
+DEBUG: assigning id = 5218142360864429184 to loop with the following BBs:
+	for.cond77 for.body79 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9984292626086224825
+DEBUG: assigning id = 9984292626086224825 to body of loop
+DEBUG: assigning id = 15968689139370116721 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4203141755738097040
+DEBUG: assigning id = 4203141755738097040 to body of loop
+DEBUG: for.cond77 has 1 possible loop exit points
+DEBUG: 	target #0: for.end166
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: jfdctint_main is 8816721825869249352
+DEBUG: found 0 loops in function jfdctint_main
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to jfdctint.kdump
+INFO: dumping function: jfdctint_init
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: jfdctint_return
+INFO: dumping function: jfdctint_jpeg_fdct_islow
+INFO: dumping function: jfdctint_main
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

@@ -1,0 +1,294 @@
+FUNC: anagram_ReadDict
+	30 : ?? : phi
+	24 : ?? : phi
+	21 : ?? : phi
+	6 : 319 : load
+	19 : 324 : trunc
+	29 : 326 : getelementptr
+	25 : ?? : phi
+	5 : 310 : call
+	4 : ?? : phi
+	28 : 302 : icmp
+	23 : 328 : trunc
+	20 : 327 : trunc
+	14 : 319 : icmp
+	8 : 320 : load
+	9 : 320 : load
+	11 : 320 : sext
+	10 : 320 : call
+	35 : 320 : icmp
+	26 : 307 : add
+	27 : ?? : phi
+	3 : 305 : zext
+	1 : 305 : load
+	2 : 305 : load
+	36 : 305 : icmp
+	13 : ?? : phi
+	22 : ?? : phi
+	12 : 313 : icmp
+	32 : 315 : getelementptr
+	15 : 322 : load
+	31 : ?? : phi
+	7 : 319 : load
+	16 : 322 : load
+	33 : 322 : getelementptr
+	17 : 324 : load
+	18 : 324 : load
+	34 : 321 : add
+
+FUNC: anagram_isalpha
+	2 : 37 : call
+	7 : 37 : icmp
+	1: ARG : 0
+	3 : 37 : call
+	6 : 37 : icmp
+	5 : ?? : phi
+	4 : 37 : zext
+
+FUNC: anagram_init
+
+FUNC: anagram_return
+	4 : ?? : phi
+	5 : 348 : icmp
+	1 : 349 : load
+	2 : 349 : load
+	6 : 349 : icmp
+	3 : ?? : phi
+
+FUNC: anagram_ch2i
+	1: ARG : 0
+	2 : 363 : sub
+
+FUNC: anagram_CompareFrequency
+	1 : 369 : load
+	3 : 369 : sext
+	2 : 369 : load
+	4 : 370 : load
+	6 : 370 : sext
+	5 : 370 : load
+	15 : 369 : icmp
+	7 : 372 : load
+	9 : 372 : sext
+	8 : 372 : load
+	10 : 373 : load
+	12 : 373 : sext
+	11 : 373 : load
+	14 : 372 : select
+	13 : 369 : phi
+
+FUNC: anagram_Reset
+
+FUNC: anagram_BuildMask
+	3 : 409 : sext
+	8 : 409 : icmp
+	2 : 410 : call
+	30 : ?? : phi
+	27: ARG : 0
+	26 : ?? : phi
+	28 : 409 : getelementptr
+	1 : 409 : load
+	40 : 410 : icmp
+	4 : 411 : call
+	5 : 412 : call
+	6 : 412 : load
+	7 : 412 : add
+	9 : 413 : load
+	10 : 413 : add
+	16 : ?? : phi
+	29 : ?? : phi
+	15 : 422 : icmp
+	11 : 423 : load
+	33 : 423 : icmp
+	31 : ?? : phi
+	14 : ?? : phi
+	12 : 429 : load
+	34 : 429 : icmp
+	32 : 430 : add
+	35 : 430 : shl
+	36 : 432 : icmp
+	25 : ?? : phi
+	13 : 434 : sub
+	38 : 435 : icmp
+	37 : 436 : shl
+	20 : ?? : phi
+	18 : 437 : zext
+	17 : 437 : load
+	19 : 437 : or
+	21 : 439 : load
+	23 : 438 : zext
+	22 : 438 : load
+	24 : 438 : or
+	39 : 442 : add
+
+FUNC: anagram_tolower
+	1: ARG : 0
+	2 : 42 : call
+	3 : 42 : select
+
+FUNC: anagram_NewWord
+
+FUNC: anagram_NextWord
+	1 : 461 : load
+	2 : 461 : add
+	4 : 461 : zext
+	3 : 461 : load
+	11 : 462 : icmp
+	6 : 464 : call
+	5 : 464 : load
+	7 : 465 : load
+	9 : 465 : zext
+	8 : 465 : load
+	10 : ?? : phi
+
+FUNC: anagram_BuildWord
+	26 : ?? : phi
+	25 : 507 : icmp
+	19 : 509 : load
+	20 : 509 : load
+	21 : 508 : load
+	17: ARG : 0
+	27 : ?? : phi
+	18 : ?? : phi
+	29 : ?? : phi
+	28 : 484 : getelementptr
+	1 : 484 : load
+	3 : 484 : sext
+	9 : 484 : icmp
+	2 : 485 : call
+	10 : 485 : icmp
+	4 : 487 : call
+	5 : 487 : call
+	7 : 488 : sext
+	6 : 488 : load
+	8 : 488 : add
+	11 : 488 : load
+	30 : 488 : icmp
+	16 : ?? : phi
+	15 : 495 : icmp
+	12 : 496 : load
+	13 : 496 : load
+	14 : 496 : add
+	23 : 508 : zext
+	22 : 508 : load
+	24 : 508 : or
+
+FUNC: anagram_AddWords
+	1 : 517 : load
+	9 : ?? : phi
+	2 : 522 : load
+	11 : 522 : icmp
+	3 : 523 : load
+	12 : 523 : icmp
+	4 : 524 : load
+	5 : 524 : load
+	13 : 524 : icmp
+	6 : 525 : load
+	7 : 525 : load
+	14 : 525 : icmp
+	8 : 527 : load
+	10 : 527 : getelementptr
+
+FUNC: anagram_DumpWords
+	5 : 540 : load
+	6 : 540 : load
+	7 : 540 : load
+	10 : 543 : add
+	8 : ?? : phi
+	9 : ?? : phi
+	1 : 537 : load
+	12 : 537 : icmp
+	11 : ?? : phi
+	2 : 539 : load
+	3 : 539 : load
+	4 : 539 : load
+	13 : 539 : icmp
+
+FUNC: anagram_FindAnagram
+	2 : 557 : load
+	49 : 613 : getelementptr
+	26 : 595 : load
+	27 : 601 : load
+	28 : 601 : add
+	1: ARG : 2
+	54: ARG : 1
+	43 : ?? : sext
+	4 : ?? : phi
+	3 : 561 : load
+	5 : 561 : load
+	6 : 562 : load
+	7 : 562 : load
+	8 : 563 : load
+	9 : 563 : load
+	29 : 562 : shl
+	11 : 564 : zext
+	10 : 564 : load
+	42 : 564 : icmp
+	55 : 557 : getelementptr
+	35 : 570 : trunc
+	41 : 560 : add
+	18 : ?? : phi
+	17 : 570 : icmp
+	12 : 571 : load
+	13 : 574 : load
+	14 : 574 : load
+	15 : 574 : sub
+	19 : 574 : load
+	46 : 574 : icmp
+	51 : 574 : getelementptr
+	48 : ?? : phi
+	52 : ?? : phi
+	16 : ?? : phi
+	45 : ?? : phi
+	20 : 578 : load
+	21 : 578 : load
+	22 : 578 : sub
+	23 : 578 : load
+	47 : 578 : icmp
+	50 : 578 : getelementptr
+	25 : 594 : zext
+	24 : 594 : load
+	30 : 594 : icmp
+	44 : 595 : getelementptr
+	31 : 602 : load
+	32 : 602 : load
+	33 : 602 : sub
+	57 : 602 : icmp
+	34 : 606 : load
+	56 : 606 : getelementptr
+	53 : ?? : phi
+	36 : 611 : load
+	37 : 611 : load
+	38 : 611 : add
+	39 : 612 : load
+	40 : 612 : add
+
+FUNC: anagram_SortCandidates
+	2 : ?? : phi
+	3 : 625 : icmp
+	1 : 626 : trunc
+
+FUNC: anagram_main
+	4 : ?? : phi
+	5 : 636 : icmp
+	1 : 638 : load
+	2 : 640 : load
+	3 : ?? : load
+	6 : 640 : or
+
+FUNC: main
+	1 : 661 : call
+
+FUNC: anagram_isupper
+	1: ARG : 0
+	5 : 32 : icmp
+	4 : 32 : icmp
+	3 : ?? : phi
+	2 : 32 : zext
+
+FUNC: anagram_islower
+	1: ARG : 0
+	5 : 27 : icmp
+	4 : 27 : icmp
+	3 : ?? : phi
+	2 : 27 : zext
+

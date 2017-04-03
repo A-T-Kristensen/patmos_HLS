@@ -1,0 +1,1183 @@
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 17902064576120844715, name: cjpeg_transupp_initSeed, fileName: cjpeg_transupp.c, startLine: 80, endLine: 80
+DEBUG: adding cjpeg_transupp_initSeed (in module: cjpeg_transupp.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17902064576120844715)
+DEBUG: assigning function cjpeg_transupp_initSeed id 17902064576120844715
+DEBUG: new region: FuncRegion(id: 2721134459638797177, name: cjpeg_transupp_randomInteger, fileName: cjpeg_transupp.c, startLine: 89, endLine: 89
+DEBUG: adding cjpeg_transupp_randomInteger (in module: cjpeg_transupp.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2721134459638797177)
+DEBUG: assigning function cjpeg_transupp_randomInteger id 2721134459638797177
+DEBUG: new region: FuncRegion(id: 14876481270882826097, name: cjpeg_transupp_init, fileName: cjpeg_transupp.c, startLine: 96, endLine: 96
+DEBUG: adding cjpeg_transupp_init (in module: cjpeg_transupp.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14876481270882826097)
+DEBUG: assigning function cjpeg_transupp_init id 14876481270882826097
+DEBUG: new region: FuncRegion(id: 7423429928801772801, name: cjpeg_transupp_return, fileName: cjpeg_transupp.c, startLine: 137, endLine: 137
+DEBUG: adding cjpeg_transupp_return (in module: cjpeg_transupp.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 7423429928801772801)
+DEBUG: assigning function cjpeg_transupp_return id 7423429928801772801
+DEBUG: new region: FuncRegion(id: 1245906981325134649, name: cjpeg_transupp_do_flip_v, fileName: cjpeg_transupp.c, startLine: 174, endLine: 174
+DEBUG: adding cjpeg_transupp_do_flip_v (in module: cjpeg_transupp.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 1245906981325134649)
+DEBUG: assigning function cjpeg_transupp_do_flip_v id 1245906981325134649
+DEBUG: new region: FuncRegion(id: 10914133955361673178, name: cjpeg_transupp_do_rot_90, fileName: cjpeg_transupp.c, startLine: 252, endLine: 252
+DEBUG: adding cjpeg_transupp_do_rot_90 (in module: cjpeg_transupp.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 10914133955361673178)
+DEBUG: assigning function cjpeg_transupp_do_rot_90 id 10914133955361673178
+DEBUG: new region: FuncRegion(id: 3928367365919001262, name: cjpeg_transupp_do_rot_270, fileName: cjpeg_transupp.c, startLine: 341, endLine: 341
+DEBUG: adding cjpeg_transupp_do_rot_270 (in module: cjpeg_transupp.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3928367365919001262)
+DEBUG: assigning function cjpeg_transupp_do_rot_270 id 3928367365919001262
+DEBUG: new region: FuncRegion(id: 14634537917055458798, name: cjpeg_transupp_do_rot_180, fileName: cjpeg_transupp.c, startLine: 427, endLine: 427
+DEBUG: adding cjpeg_transupp_do_rot_180 (in module: cjpeg_transupp.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14634537917055458798)
+DEBUG: assigning function cjpeg_transupp_do_rot_180 id 14634537917055458798
+DEBUG: new region: FuncRegion(id: 11404273609095493234, name: cjpeg_transupp_do_transverse, fileName: cjpeg_transupp.c, startLine: 560, endLine: 560
+DEBUG: adding cjpeg_transupp_do_transverse (in module: cjpeg_transupp.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 11404273609095493234)
+DEBUG: assigning function cjpeg_transupp_do_transverse id 11404273609095493234
+DEBUG: new region: FuncRegion(id: 16760423623165698859, name: cjpeg_transupp_main, fileName: cjpeg_transupp.c, startLine: 681, endLine: 681
+DEBUG: adding cjpeg_transupp_main (in module: cjpeg_transupp.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 16760423623165698859)
+DEBUG: assigning function cjpeg_transupp_main id 16760!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x2696320>, <0x26a2df0>, <0x26a2e20>, <0x26e0b88>, <0x26e2340>, <0x26a2e20>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/sequential/cjpeg_transupp/cjpeg_transupp.c] [DW_LANG_C99]
+
+!{!"0x2e\00cjpeg_transupp_initSeed\00cjpeg_transupp_initSeed\00\0080\000\001\000\000\00256\000\0081", <0x2696320>, <0x26a2980>, <0x26a3170>, null, void ()* @cjpeg_transupp_initSeed, null, null, <0x26a2e20>} ; [ DW_TAG_subprogram ] [line 80] [def] [scope 81] [cjpeg_transupp_initSeed]
+
+!{!"0x2e\00cjpeg_transupp_randomInteger\00cjpeg_transupp_randomInteger\00\0089\000\001\000\000\00256\000\0090", <0x2696320>, <0x26a2980>, <0x26a3740>, null, i8 ()* @cjpeg_transupp_randomInteger, null, null, <0x26a2e20>} ; [ DW_TAG_subprogram ] [line 89] [def] [scope 90] [cjpeg_transupp_randomInteger]
+
+!{!"0x2e\00cjpeg_transupp_init\00cjpeg_transupp_init\00\0096\000\001\000\000\00256\000\0097", <0x2696320>, <0x26a2980>, <0x26a3170>, null, void ()* @cjpeg_transupp_init, null, null, <0x26a2e20>} ; [ DW_TAG_subprogram ] [line 96] [def] [scope 97] [cjpeg_transupp_init]
+
+!{!"0x2e\00cjpeg_transupp_return\00cjpeg_transupp_return\00\00137\000\001\000\000\00256\000\00138", <0x2696320>, <0x26a2980>, <0x26a3bb0>, null, i32 ()* @cjpeg_transupp_return, null, null, <0x26a2e20>} ; [ DW_TAG_subprogram ] [line 137] [def] [scope 138] [cjpeg_transupp_return]
+
+!{!"0x2e\00cjpeg_transupp_do_flip_v\00cjpeg_transupp_do_flip_v\00\00174\000\001\000\000\00256\000\00175", <0x2696320>, <0x26a2980>, <0x26dc910>, null, void (%struct.jpeg_compress_struct*)* @cjpeg_transupp_do_flip_v, null, null, <0x26a2e20>} ; [ DW_TAG_subprogram ] [line 174] [def] [scope 175] [cjpeg_transupp_do_flip_v]
+
+!{!"0x2e\00cjpeg_transupp_do_rot_90\00cjpeg_transupp_do_rot_90\00\00252\000\001\000\000\00256\000\00253", <0x2696320>, <0x26a2980>, <0x26dc910>, null, void (%struct.jpeg_compress_struct*)* @cjpeg_transupp_do_rot_90, null, null, <0x26a2e20>} ; [ DW_TAG_subprogram ] [line 252] [def] [scope 253] [cjpeg_transupp_do_rot_90]
+
+!{!"0x2e\00cjpeg_transupp_do_rot_270\00cjpeg_transupp_do_rot_270\00\00341\000\001\000\000\00256\000\00342", <0x2696320>, <0x26a2980>, <0x26dc910>, null, void (%struct.jpeg_compress_struct*)* @cjpeg_transupp_do_rot_270, null, null, <0x26a2e20>} ; [ DW_TAG_subprogram ] [line 341] [def] [scope 342] [cjpeg_transupp_do_rot_270]
+
+!{!"0x2e\00cjpeg_transupp_do_rot_180\00cjpeg_transupp_do_rot_180\00\00427\000\001\000\000\00256\000\00428", <0x2696320>, <0x26a2980>, <0x26dc910>, null, void (%struct.jpeg_compress_struct*)* @cjpeg_transupp_do_rot_180, null, null, <0x26a2e20>} ; [ DW_TAG_subprogram ] [line 427] [def] [scope 428] [cjpeg_transupp_do_rot_180]
+
+!{!"0x2e\00cjpeg_transupp_do_transverse\00cjpeg_transupp_do_transverse\00\00560\000\001\000\000\00256\000\00561", <0x2696320>, <0x26a2980>, <0x26dc910>, null, void (%struct.jpeg_compress_struct*)* @cjpeg_transupp_do_transverse, null, null, <0x26a2e20>} ; [ DW_TAG_subprogram ] [line 560] [def] [scope 561] [cjpeg_transupp_do_transverse]
+
+!{!"0x2e\00cjpeg_transupp_main\00cjpeg_transupp_main\00\00681\000\001\000\000\00256\000\00682", <0x2696320>, <0x26a2980>, <0x26a3170>, null, void ()* @cjpeg_transupp_main, null, null, <0x26a2e20>} ; [ DW_TAG_subprogram ] [line 681] [def] [scope 682] [cjpeg_transupp_main]
+
+!{!"0x2e\00main\00main\00\00706\000\001\000\000\00256\000\00707", <0x2696320>, <0x26a2980>, <0x26a3bb0>, null, i32 ()* @main, null, null, <0x26a2e20>} ; [ DW_TAG_subprogram ] [line 706] [def] [scope 707] [main]
+
+!{!"0x34\00cjpeg_transupp_seed\00cjpeg_transupp_seed\00\0056\000\001", null, <0x26a2980>, <0x26e0a90>, i32* @cjpeg_transupp_seed, null} ; [ DW_TAG_variable ] [cjpeg_transupp_seed] [line 56] [def]
+
+!{!"0x34\00cjpeg_transupp_input\00cjpeg_transupp_input\00\0058\000\001", null, <0x26a2980>, <0x26e0dc0>, [256 x i8]* @cjpeg_transupp_input, null} ; [ DW_TAG_variable ] [cjpeg_transupp_input] [line 58] [def]
+
+!{!"0x34\00cjpeg_transupp_input2\00cjpeg_transupp_input2\00\0059\000\001", null, <0x26a2980>, <0x26e0fd0>, [80 x i8]* @cjpeg_transupp_input2, null} ; [ DW_TAG_variable ] [cjpeg_transupp_input2] [line 59] [def]
+
+!{!"0x34\00cjpeg_transupp_input3\00cjpeg_transupp_input3\00\0060\000\001", null, <0x26a2980>, <0x26e11f0>, [65 x i8]* @cjpeg_transupp_input3, null} ; [ DW_TAG_variable ] [cjpeg_transupp_input3] [line 60] [def]
+
+!{!"0x34\00cjpeg_transupp_input3_2\00cjpeg_transupp_input3_2\00\0061\000\001", null, <0x26a2980>, <0x26e11f0>, [65 x i8]* @cjpeg_transupp_input3_2, null} ; [ DW_TAG_variable ] [cjpeg_transupp_input3_2] [line 61] [def]
+
+!{!"0x34\00cjpeg_transupp_input4\00cjpeg_transupp_input4\00\0062\000\001", null, <0x26a2980>, <0x26a01a0>, [64 x i8]* @cjpeg_transupp_input4, null} ; [ DW_TAG_variable ] [cjpeg_transupp_input4] [line 62] [def]
+
+!{!"0x34\00cjpeg_transupp_input5\00cjpeg_transupp_input5\00\0063\000\001", null, <0x26a2980>, <0x26e11f0>, [65 x i8]* @cjpeg_transupp_input5, null} ; [ DW_TAG_variable ] [cjpeg_transupp_input5] [line 63] [def]
+
+!{!"0x34\00cjpeg_transupp_input5_2\00cjpeg_transupp_input5_2\00\0064\000\001", null, <0x26a2980>, <0x26e11f0>, [65 x i8]* @cjpeg_transupp_input5_2, null} ; [ DW_TAG_variable ] [cjpeg_transupp_input5_2] [line 64] [def]
+
+!{!"0x34\00cjpeg_transupp_output_data\00cjpeg_transupp_output_data\00\0067\000\001", null, <0x26a2980>, <0x26e19d0>, [512 x i8]* @cjpeg_transupp_output_data, null} ; [ DW_TAG_variable ] [cjpeg_transupp_output_data] [line 67] [def]
+
+!{!"0x34\00cjpeg_transupp_output_data2\00cjpeg_transupp_output_data2\00\0068\000\001", null, <0x26a2980>, <0x26e19d0>, [512 x i8]* @cjpeg_transupp_output_data2, null} ; [ DW_TAG_variable ] [cjpeg_transupp_output_data2] [line 68] [def]
+
+!{!"0x34\00cjpeg_transupp_output_data3\00cjpeg_transupp_output_data3\00\0069\000\001", null, <0x26a2980>, <0x26e19d0>, [512 x i8]* @cjpeg_transupp_output_data3, null} ; [ DW_TAG_variable ] [cjpeg_transupp_output_data3] [line 69] [def]
+
+!{!"0x34\00cjpeg_transupp_output_data4\00cjpeg_transupp_output_data4\00\0070\000\001", null, <0x26a2980>, <0x26e19d0>, [512 x i8]* @cjpeg_transupp_output_data4, null} ; [ DW_TAG_variable ] [cjpeg_transupp_output_data4] [line 70] [def]
+
+!{!"0x34\00cjpeg_transupp_output_data5\00cjpeg_transupp_output_data5\00\0071\000\001", null, <0x26a2980>, <0x26e19d0>, [512 x i8]* @cjpeg_transupp_output_data5, null} ; [ DW_TAG_variable ] [cjpeg_transupp_output_data5] [line 71] [def]
+
+!{!"0x34\00cjpeg_transupp_dstinfo\00cjpeg_transupp_dstinfo\00\0073\000\001", null, <0x26a2980>, <0x26dec50>, %struct.jpeg_compress_struct* @cjpeg_transupp_dstinfo, null} ; [ DW_TAG_variable ] [cjpeg_transupp_dstinfo] [line 73] [def]
+
+!{!"0x35\00\000\000\000\000\000", null, null, <0x26a3b18>} ; [ DW_TAG_volatile_type ] [line 0, size 0, align 0, offset 0] [from int]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x1\00\000\002048\008\000\000\000", null, null, <0x26a36d8>, <0x26d66c8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 2048, align 8, offset 0] [from signed char]
+
+!{!"0x24\00signed char\000\008\008\000\000\006", null, null} ; [ DW_TAG_base_type ] [signed char] [line 0, size 8, align 8, offset 0, enc DW_ATE_signed_char]
+
+!{!"0x1\00\000\00640\008\000\000\000", null, null, <0x26a36d8>, <0x26af1a8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 640, align 8, offset 0] [from signed char]
+
+!{!"0x1\00\000\00520\008\000\000\000", null, null, <0x26a36d8>, <0x26e1188>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 520, align 8, offset 0] [from signed char]
+
+!{!"0x1\00\000\00512\008\000\000\000", null, null, <0x26a36d8>, <0x26a0138>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 512, align 8, offset 0] [from signed char]
+
+!{!"0x1\00\000\004096\008\000\000\000", null, null, <0x26a36d8>, <0x26e1968>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 4096, align 8, offset 0] [from signed char]
+
+!{!"0x13\00jpeg_compress_struct\00337\004160\0064\000\000\000", <0x26a0290>, null, null, <0x26df028>, null, null, null} ; [ DW_TAG_structure_type ] [jpeg_compress_struct] [line 337, size 4160, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00err\00339\0064\0064\000\000", <0x26a0290>, <0x26dec50>, <0x26a9c70>} ; [ DW_TAG_member ] [err] [line 339, size 64, align 64, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26b0500>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jpeg_error_mgr]
+
+!{!"0x13\00jpeg_error_mgr\00573\001344\0064\000\000\000", <0x26a0290>, null, null, <0x26b05c0>, null, null, null} ; [ DW_TAG_structure_type ] [jpeg_error_mgr] [line 573, size 1344, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00error_exit\00575\0064\0064\000\000", <0x26a0290>, <0x26b0500>, <0x26a4310>} ; [ DW_TAG_member ] [error_exit] [line 575, size 64, align 64, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26a7070>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x26a42c0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x16\00j_common_ptr\00328\000\000\000\000", <0x26a0290>, null, <0x26acc50>} ; [ DW_TAG_typedef ] [j_common_ptr] [line 328, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26acc00>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jpeg_common_struct]
+
+!{!"0x13\00jpeg_common_struct\00317\00320\0064\000\000\000", <0x26a0290>, null, null, <0x26acb10>, null, null, null} ; [ DW_TAG_structure_type ] [jpeg_common_struct] [line 317, size 320, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00err\00319\0064\0064\000\000", <0x26a0290>, <0x26acc00>, <0x26a9c70>} ; [ DW_TAG_member ] [err] [line 319, size 64, align 64, offset 0] [from ]
+
+!{!"0xd\00mem\00319\0064\0064\0064\000", <0x26a0290>, <0x26acc00>, <0x26a5e40>} ; [ DW_TAG_member ] [mem] [line 319, size 64, align 64, offset 64] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26ab2f0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jpeg_memory_mgr]
+
+!{!"0x13\00jpeg_memory_mgr\00705\00832\0064\000\000\000", <0x26a0290>, null, null, <0x26ab3a8>, null, null, null} ; [ DW_TAG_structure_type ] [jpeg_memory_mgr] [line 705, size 832, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00alloc_small\00709\0064\0064\000\000", <0x26a0290>, <0x26ab2f0>, <0x26a5d70>} ; [ DW_TAG_member ] [alloc_small] [line 709, size 64, align 64, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26a4450>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x26a4360>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, null} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x24\00long unsigned int\000\0064\0064\000\000\007", null, null} ; [ DW_TAG_base_type ] [long unsigned int] [line 0, size 64, align 64, offset 0, enc DW_ATE_unsigned]
+
+!{!"0xd\00alloc_large\00712\0064\0064\0064\000", <0x26a0290>, <0x26ab2f0>, <0x26a5d70>} ; [ DW_TAG_member ] [alloc_large] [line 712, size 64, align 64, offset 64] [from ]
+
+!{!"0xd\00alloc_sarray\00715\0064\0064\00128\000", <0x26a0290>, <0x26ab2f0>, <0x26a8370>} ; [ DW_TAG_member ] [alloc_sarray] [line 715, size 64, align 64, offset 128] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26a82a0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x26a7ba8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x16\00JSAMPARRAY\0052\000\000\000\000", <0x26a0290>, null, <0x26a62a0>} ; [ DW_TAG_typedef ] [JSAMPARRAY] [line 52, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26a6250>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from JSAMPROW]
+
+!{!"0x16\00JSAMPROW\0049\000\000\000\000", <0x26a0290>, null, <0x26a6200>} ; [ DW_TAG_typedef ] [JSAMPROW] [line 49, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26a61b8>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from unsigned char]
+
+!{!"0x24\00unsigned char\000\008\008\000\000\008", null, null} ; [ DW_TAG_base_type ] [unsigned char] [line 0, size 8, align 8, offset 0, enc DW_ATE_unsigned_char]
+
+!{!"0x24\00unsigned int\000\0032\0032\000\000\007", null, null} ; [ DW_TAG_base_type ] [unsigned int] [line 0, size 32, align 32, offset 0, enc DW_ATE_unsigned]
+
+!{!"0xd\00alloc_barray\00719\0064\0064\00192\000", <0x26a0290>, <0x26ab2f0>, <0x26a40d0>} ; [ DW_TAG_member ] [alloc_barray] [line 719, size 64, align 64, offset 192] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26a4080>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x26a3f98>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x16\00JBLOCKARRAY\0061\000\000\000\000", <0x26a0290>, null, <0x26a3ef0>} ; [ DW_TAG_typedef ] [JBLOCKARRAY] [line 61, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26a3ea0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from JBLOCKROW]
+
+!{!"0x16\00JBLOCKROW\0058\000\000\000\000", <0x26a0290>, null, <0x26a3e50>} ; [ DW_TAG_typedef ] [JBLOCKROW] [line 58, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26a3e00>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from JBLOCK]
+
+!{!"0x16\00JBLOCK\0055\000\000\000\000", <0x26a0290>, null, <0x26a01a0>} ; [ DW_TAG_typedef ] [JBLOCK] [line 55, size 0, align 0, offset 0] [from ]
+
+!{!"0xd\00request_virt_sarray\00723\0064\0064\00256\000", <0x26a0290>, <0x26ab2f0>, <0x26a9510>} ; [ DW_TAG_member ] [request_virt_sarray] [line 723, size 64, align 64, offset 256] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26a9440>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x26a9358>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x16\00jvirt_sarray_ptr\00702\000\000\000\000", <0x26a0290>, null, <0x26a92a0>} ; [ DW_TAG_typedef ] [jvirt_sarray_ptr] [line 702, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26a9250>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jvirt_sarray_control]
+
+!{!"0x13\00jvirt_sarray_control\00702\000\000\000\004\000", <0x26a0290>, null, null, null, null, null, null} ; [ DW_TAG_structure_type ] [jvirt_sarray_control] [line 702, size 0, align 0, offset 0] [decl] [from ]
+
+!{!"0xd\00request_virt_barray\00727\0064\0064\00320\000", <0x26a0290>, <0x26ab2f0>, <0x26a9a80>} ; [ DW_TAG_member ] [request_virt_barray] [line 727, size 64, align 64, offset 320] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26a99b0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x26a98c8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x16\00jvirt_barray_ptr\00703\000\000\000\000", <0x26a0290>, null, <0x26a9810>} ; [ DW_TAG_typedef ] [jvirt_barray_ptr] [line 703, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26a97c0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jvirt_barray_control]
+
+!{!"0x13\00jvirt_barray_control\00703\000\000\000\004\000", <0x26a0290>, null, null, null, null, null, null} ; [ DW_TAG_structure_type ] [jvirt_barray_control] [line 703, size 0, align 0, offset 0] [decl] [from ]
+
+!{!"0xd\00realize_virt_arrays\00731\0064\0064\00384\000", <0x26a0290>, <0x26ab2f0>, <0x26a4310>} ; [ DW_TAG_member ] [realize_virt_arrays] [line 731, size 64, align 64, offset 384] [from ]
+
+!{!"0xd\00access_virt_sarray\00733\0064\0064\00448\000", <0x26a0290>, <0x26ab2f0>, <0x26a9ff0>} ; [ DW_TAG_member ] [access_virt_sarray] [line 733, size 64, align 64, offset 448] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26a9f20>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x26a9e30>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xd\00access_virt_barray\00737\0064\0064\00512\000", <0x26a0290>, <0x26ab2f0>, <0x26aa3b0>} ; [ DW_TAG_member ] [access_virt_barray] [line 737, size 64, align 64, offset 512] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26aa2e0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x26aa1f0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xd\00free_pool\00741\0064\0064\00576\000", <0x26a0290>, <0x26ab2f0>, <0x26aa740>} ; [ DW_TAG_member ] [free_pool] [line 741, size 64, align 64, offset 576] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26aa670>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x26aa588>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xd\00self_destruct\00743\0064\0064\00640\000", <0x26a0290>, <0x26ab2f0>, <0x26a4310>} ; [ DW_TAG_member ] [self_destruct] [line 743, size 64, align 64, offset 640] [from ]
+
+!{!"0xd\00max_memory_to_use\00751\0064\0064\00704\000", <0x26a0290>, <0x26ab2f0>, <0x26ab098>} ; [ DW_TAG_member ] [max_memory_to_use] [line 751, size 64, align 64, offset 704] [from long int]
+
+!{!"0x24\00long int\000\0064\0064\000\000\005", null, null} ; [ DW_TAG_base_type ] [long int] [line 0, size 64, align 64, offset 0, enc DW_ATE_signed]
+
+!{!"0xd\00max_alloc_chunk\00754\0064\0064\00768\000", <0x26a0290>, <0x26ab2f0>, <0x26ab098>} ; [ DW_TAG_member ] [max_alloc_chunk] [line 754, size 64, align 64, offset 768] [from long int]
+
+!{!"0xd\00progress\00319\0064\0064\00128\000", <0x26a0290>, <0x26acc00>, <0x26abd30>} ; [ DW_TAG_member ] [progress] [line 319, size 64, align 64, offset 128] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26acdd0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jpeg_progress_mgr]
+
+!{!"0x13\00jpeg_progress_mgr\00656\00256\0064\000\000\000", <0x26a0290>, null, null, <0x26a88b8>, null, null, null} ; [ DW_TAG_structure_type ] [jpeg_progress_mgr] [line 656, size 256, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00progress_monitor\00657\0064\0064\000\000", <0x26a0290>, <0x26acdd0>, <0x26a4310>} ; [ DW_TAG_member ] [progress_monitor] [line 657, size 64, align 64, offset 0] [from ]
+
+!{!"0xd\00pass_counter\00660\0064\0064\0064\000", <0x26a0290>, <0x26acdd0>, <0x26ab098>} ; [ DW_TAG_member ] [pass_counter] [line 660, size 64, align 64, offset 64] [from long int]
+
+!{!"0xd\00pass_limit\00663\0064\0064\00128\000", <0x26a0290>, <0x26acdd0>, <0x26ab098>} ; [ DW_TAG_member ] [pass_limit] [line 663, size 64, align 64, offset 128] [from long int]
+
+!{!"0xd\00completed_passes\00666\0032\0032\00192\000", <0x26a0290>, <0x26acdd0>, <0x26a3b18>} ; [ DW_TAG_member ] [completed_passes] [line 666, size 32, align 32, offset 192] [from int]
+
+!{!"0xd\00total_passes\00669\0032\0032\00224\000", <0x26a0290>, <0x26acdd0>, <0x26a3b18>} ; [ DW_TAG_member ] [total_passes] [line 669, size 32, align 32, offset 224] [from int]
+
+!{!"0xd\00client_data\00319\0064\0064\00192\000", <0x26a0290>, <0x26acc00>, <0x26a41f0>} ; [ DW_TAG_member ] [client_data] [line 319, size 64, align 64, offset 192] [from ]
+
+!{!"0xd\00is_decompressor\00319\0032\0032\00256\000", <0x26a0290>, <0x26acc00>, <0x26a3b18>} ; [ DW_TAG_member ] [is_decompressor] [line 319, size 32, align 32, offset 256] [from int]
+
+!{!"0xd\00global_state\00319\0032\0032\00288\000", <0x26a0290>, <0x26acc00>, <0x26a3b18>} ; [ DW_TAG_member ] [global_state] [line 319, size 32, align 32, offset 288] [from int]
+
+!{!"0xd\00emit_message\00578\0064\0064\0064\000", <0x26a0290>, <0x26b0500>, <0x26aa740>} ; [ DW_TAG_member ] [emit_message] [line 578, size 64, align 64, offset 64] [from ]
+
+!{!"0xd\00output_message\00581\0064\0064\00128\000", <0x26a0290>, <0x26b0500>, <0x26a4310>} ; [ DW_TAG_member ] [output_message] [line 581, size 64, align 64, offset 128] [from ]
+
+!{!"0xd\00format_message\00584\0064\0064\00192\000", <0x26a0290>, <0x26b0500>, <0x26ae9e0>} ; [ DW_TAG_member ] [format_message] [line 584, size 64, align 64, offset 192] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26ae910>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x26ae828>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26ae798>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from char]
+
+!{!"0x24\00char\000\008\008\000\000\006", null, null} ; [ DW_TAG_base_type ] [char] [line 0, size 8, align 8, offset 0, enc DW_ATE_signed_char]
+
+!{!"0xd\00reset_error_mgr\00587\0064\0064\00256\000", <0x26a0290>, <0x26b0500>, <0x26a4310>} ; [ DW_TAG_member ] [reset_error_mgr] [line 587, size 64, align 64, offset 256] [from ]
+
+!{!"0xd\00msg_code\00593\0032\0032\00320\000", <0x26a0290>, <0x26b0500>, <0x26a3b18>} ; [ DW_TAG_member ] [msg_code] [line 593, size 32, align 32, offset 320] [from int]
+
+!{!"0xd\00msg_parm\00598\00640\0032\00352\000", <0x26a0290>, <0x26b0500>, <0x26afa20>} ; [ DW_TAG_member ] [msg_parm] [line 598, size 640, align 32, offset 352] [from ]
+
+!{!"0x17\00\00595\00640\0032\000\000\000", <0x26a0290>, <0x26b0500>, null, <0x26af930>, null, null, null} ; [ DW_TAG_union_type ] [line 595, size 640, align 32, offset 0] [def] [from ]
+
+!{!"0xd\00i\00596\00256\0032\000\000", <0x26a0290>, <0x26afa20>, <0x26aef30>} ; [ DW_TAG_member ] [i] [line 596, size 256, align 32, offset 0] [from ]
+
+!{!"0x1\00\000\00256\0032\000\000\000", null, null, <0x26a3b18>, <0x26aeec8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 256, align 32, offset 0] [from int]
+
+!{!"0xd\00s\00597\00640\008\000\000", <0x26a0290>, <0x26afa20>, <0x26af210>} ; [ DW_TAG_member ] [s] [line 597, size 640, align 8, offset 0] [from ]
+
+!{!"0x1\00\000\00640\008\000\000\000", null, null, <0x26ae798>, <0x26af1a8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 640, align 8, offset 0] [from char]
+
+!{!"0xd\00trace_level\00606\0032\0032\00992\000", <0x26a0290>, <0x26b0500>, <0x26a3b18>} ; [ DW_TAG_member ] [trace_level] [line 606, size 32, align 32, offset 992] [from int]
+
+!{!"0xd\00num_warnings\00616\0064\0064\001024\000", <0x26a0290>, <0x26b0500>, <0x26ab098>} ; [ DW_TAG_member ] [num_warnings] [line 616, size 64, align 64, offset 1024] [from long int]
+
+!{!"0xd\00jpeg_message_table\00631\0064\0064\001088\000", <0x26a0290>, <0x26b0500>, <0x26af690>} ; [ DW_TAG_member ] [jpeg_message_table] [line 631, size 64, align 64, offset 1088] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26af640>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x26af5f0>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26af5a0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x26ae798>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from char]
+
+!{!"0xd\00last_jpeg_message\00634\0032\0032\001152\000", <0x26a0290>, <0x26b0500>, <0x26a3b18>} ; [ DW_TAG_member ] [last_jpeg_message] [line 634, size 32, align 32, offset 1152] [from int]
+
+!{!"0xd\00addon_message_table\00642\0064\0064\001216\000", <0x26a0290>, <0x26b0500>, <0x26af690>} ; [ DW_TAG_member ] [addon_message_table] [line 642, size 64, align 64, offset 1216] [from ]
+
+!{!"0xd\00first_addon_message\00645\0032\0032\001280\000", <0x26a0290>, <0x26b0500>, <0x26a3b18>} ; [ DW_TAG_member ] [first_addon_message] [line 645, size 32, align 32, offset 1280] [from int]
+
+!{!"0xd\00last_addon_message\00648\0032\0032\001312\000", <0x26a0290>, <0x26b0500>, <0x26a3b18>} ; [ DW_TAG_member ] [last_addon_message] [line 648, size 32, align 32, offset 1312] [from int]
+
+!{!"0xd\00mem\00339\0064\0064\0064\000", <0x26a0290>, <0x26dec50>, <0x26a5e40>} ; [ DW_TAG_member ] [mem] [line 339, size 64, align 64, offset 64] [from ]
+
+!{!"0xd\00progress\00339\0064\0064\00128\000", <0x26a0290>, <0x26dec50>, <0x26abd30>} ; [ DW_TAG_member ] [progress] [line 339, size 64, align 64, offset 128] [from ]
+
+!{!"0xd\00client_data\00339\0064\0064\00192\000", <0x26a0290>, <0x26dec50>, <0x26a41f0>} ; [ DW_TAG_member ] [client_data] [line 339, size 64, align 64, offset 192] [from ]
+
+!{!"0xd\00is_decompressor\00339\0032\0032\00256\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [is_decompressor] [line 339, size 32, align 32, offset 256] [from int]
+
+!{!"0xd\00global_state\00339\0032\0032\00288\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [global_state] [line 339, size 32, align 32, offset 288] [from int]
+
+!{!"0xd\00dest\00342\0064\0064\00320\000", <0x26a0290>, <0x26dec50>, <0x26a8950>} ; [ DW_TAG_member ] [dest] [line 342, size 64, align 64, offset 320] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26b19e0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jpeg_destination_mgr]
+
+!{!"0x13\00jpeg_destination_mgr\00677\00320\0064\000\000\000", <0x26a0290>, null, null, <0x26b18f8>, null, null, null} ; [ DW_TAG_structure_type ] [jpeg_destination_mgr] [line 677, size 320, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00next_output_byte\00679\0064\0064\000\000", <0x26a0290>, <0x26b19e0>, <0x26a6200>} ; [ DW_TAG_member ] [next_output_byte] [line 679, size 64, align 64, offset 0] [from ]
+
+!{!"0xd\00free_in_buffer\00682\0064\0064\0064\000", <0x26a0290>, <0x26b19e0>, <0x26a4288>} ; [ DW_TAG_member ] [free_in_buffer] [line 682, size 64, align 64, offset 64] [from long unsigned int]
+
+!{!"0xd\00init_destination\00684\0064\0064\00128\000", <0x26a0290>, <0x26b19e0>, <0x26a8cb0>} ; [ DW_TAG_member ] [init_destination] [line 684, size 64, align 64, offset 128] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26dc910>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x26a3050>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x16\00j_compress_ptr\00329\000\000\000\000", <0x26a0290>, null, <0x26a3010>} ; [ DW_TAG_typedef ] [j_compress_ptr] [line 329, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26dec50>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jpeg_compress_struct]
+
+!{!"0xd\00empty_output_buffer\00685\0064\0064\00192\000", <0x26a0290>, <0x26b19e0>, <0x26b1020>} ; [ DW_TAG_member ] [empty_output_buffer] [line 685, size 64, align 64, offset 192] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26b0f50>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x26a6e40>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xd\00term_destination\00686\0064\0064\00256\000", <0x26a0290>, <0x26b19e0>, <0x26a8cb0>} ; [ DW_TAG_member ] [term_destination] [line 686, size 64, align 64, offset 256] [from ]
+
+!{!"0xd\00image_width\00351\0032\0032\00384\000", <0x26a0290>, <0x26dec50>, <0x26a7b58>} ; [ DW_TAG_member ] [image_width] [line 351, size 32, align 32, offset 384] [from unsigned int]
+
+!{!"0xd\00image_height\00354\0032\0032\00416\000", <0x26a0290>, <0x26dec50>, <0x26a7b58>} ; [ DW_TAG_member ] [image_height] [line 354, size 32, align 32, offset 416] [from unsigned int]
+
+!{!"0xd\00input_components\00357\0032\0032\00448\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [input_components] [line 357, size 32, align 32, offset 448] [from int]
+
+!{!"0xd\00in_color_space\00360\0032\0032\00480\000", <0x26a0290>, <0x26dec50>, <0x26b1fa0>} ; [ DW_TAG_member ] [in_color_space] [line 360, size 32, align 32, offset 480] [from J_COLOR_SPACE]
+
+!{!"0x16\00J_COLOR_SPACE\00273\000\000\000\000", <0x26a0290>, null, <0x26a2af0>} ; [ DW_TAG_typedef ] [J_COLOR_SPACE] [line 273, size 0, align 0, offset 0] [from ]
+
+!{!"0x4\00\00255\0032\0032\000\000\000", <0x26a0290>, null, null, <0x26a2a80>, null, null, null} ; [ DW_TAG_enumeration_type ] [line 255, size 32, align 32, offset 0] [def] [from ]
+
+!{!"0xd\00input_gamma\00363\0064\0064\00512\000", <0x26a0290>, <0x26dec50>, <0x26cf428>} ; [ DW_TAG_member ] [input_gamma] [line 363, size 64, align 64, offset 512] [from double]
+
+!{!"0x24\00double\000\0064\0064\000\000\004", null, null} ; [ DW_TAG_base_type ] [double] [line 0, size 64, align 64, offset 0, enc DW_ATE_float]
+
+!{!"0xd\00data_precision\00375\0032\0032\00576\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [data_precision] [line 375, size 32, align 32, offset 576] [from int]
+
+!{!"0xd\00num_components\00378\0032\0032\00608\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [num_components] [line 378, size 32, align 32, offset 608] [from int]
+
+!{!"0xd\00jpeg_color_space\00381\0032\0032\00640\000", <0x26a0290>, <0x26dec50>, <0x26b1fa0>} ; [ DW_TAG_member ] [jpeg_color_space] [line 381, size 32, align 32, offset 640] [from J_COLOR_SPACE]
+
+!{!"0xd\00comp_info\00384\0064\0064\00704\000", <0x26a0290>, <0x26dec50>, <0x26d5860>} ; [ DW_TAG_member ] [comp_info] [line 384, size 64, align 64, offset 704] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26d2280>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jpeg_component_info]
+
+!{!"0x16\00jpeg_component_info\00229\000\000\000\000", <0x26a0290>, null, <0x26d4d20>} ; [ DW_TAG_typedef ] [jpeg_component_info] [line 229, size 0, align 0, offset 0] [from ]
+
+!{!"0x13\00\00120\00768\0064\000\000\000", <0x26a0290>, null, null, <0x26d4e38>, null, null, null} ; [ DW_TAG_structure_type ] [line 120, size 768, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00component_id\00128\0032\0032\000\000", <0x26a0290>, <0x26d4d20>, <0x26a3b18>} ; [ DW_TAG_member ] [component_id] [line 128, size 32, align 32, offset 0] [from int]
+
+!{!"0xd\00component_index\00131\0032\0032\0032\000", <0x26a0290>, <0x26d4d20>, <0x26a3b18>} ; [ DW_TAG_member ] [component_index] [line 131, size 32, align 32, offset 32] [from int]
+
+!{!"0xd\00h_samp_factor\00134\0032\0032\0064\000", <0x26a0290>, <0x26d4d20>, <0x26a3b18>} ; [ DW_TAG_member ] [h_samp_factor] [line 134, size 32, align 32, offset 64] [from int]
+
+!{!"0xd\00v_samp_factor\00137\0032\0032\0096\000", <0x26a0290>, <0x26d4d20>, <0x26a3b18>} ; [ DW_TAG_member ] [v_samp_factor] [line 137, size 32, align 32, offset 96] [from int]
+
+!{!"0xd\00quant_tbl_no\00140\0032\0032\00128\000", <0x26a0290>, <0x26d4d20>, <0x26a3b18>} ; [ DW_TAG_member ] [quant_tbl_no] [line 140, size 32, align 32, offset 128] [from int]
+
+!{!"0xd\00dc_tbl_no\00149\0032\0032\00160\000", <0x26a0290>, <0x26d4d20>, <0x26a3b18>} ; [ DW_TAG_member ] [dc_tbl_no] [line 149, size 32, align 32, offset 160] [from int]
+
+!{!"0xd\00ac_tbl_no\00152\0032\0032\00192\000", <0x26a0290>, <0x26d4d20>, <0x26a3b18>} ; [ DW_TAG_member ] [ac_tbl_no] [line 152, size 32, align 32, offset 192] [from int]
+
+!{!"0xd\00width_in_blocks\00162\0032\0032\00224\000", <0x26a0290>, <0x26d4d20>, <0x26a7b58>} ; [ DW_TAG_member ] [width_in_blocks] [line 162, size 32, align 32, offset 224] [from unsigned int]
+
+!{!"0xd\00height_in_blocks\00163\0032\0032\00256\000", <0x26a0290>, <0x26d4d20>, <0x26a7b58>} ; [ DW_TAG_member ] [height_in_blocks] [line 163, size 32, align 32, offset 256] [from unsigned int]
+
+!{!"0xd\00DCT_scaled_size\00172\0032\0032\00288\000", <0x26a0290>, <0x26d4d20>, <0x26a3b18>} ; [ DW_TAG_member ] [DCT_scaled_size] [line 172, size 32, align 32, offset 288] [from int]
+
+!{!"0xd\00downsampled_width\00183\0032\0032\00320\000", <0x26a0290>, <0x26d4d20>, <0x26a7b58>} ; [ DW_TAG_member ] [downsampled_width] [line 183, size 32, align 32, offset 320] [from unsigned int]
+
+!{!"0xd\00downsampled_height\00186\0032\0032\00352\000", <0x26a0290>, <0x26d4d20>, <0x26a7b58>} ; [ DW_TAG_member ] [downsampled_height] [line 186, size 32, align 32, offset 352] [from unsigned int]
+
+!{!"0xd\00component_needed\00195\0032\0032\00384\000", <0x26a0290>, <0x26d4d20>, <0x26a3b18>} ; [ DW_TAG_member ] [component_needed] [line 195, size 32, align 32, offset 384] [from int]
+
+!{!"0xd\00MCU_width\00203\0032\0032\00416\000", <0x26a0290>, <0x26d4d20>, <0x26a3b18>} ; [ DW_TAG_member ] [MCU_width] [line 203, size 32, align 32, offset 416] [from int]
+
+!{!"0xd\00MCU_height\00206\0032\0032\00448\000", <0x26a0290>, <0x26d4d20>, <0x26a3b18>} ; [ DW_TAG_member ] [MCU_height] [line 206, size 32, align 32, offset 448] [from int]
+
+!{!"0xd\00MCU_blocks\00209\0032\0032\00480\000", <0x26a0290>, <0x26d4d20>, <0x26a3b18>} ; [ DW_TAG_member ] [MCU_blocks] [line 209, size 32, align 32, offset 480] [from int]
+
+!{!"0xd\00MCU_sample_width\00212\0032\0032\00512\000", <0x26a0290>, <0x26d4d20>, <0x26a3b18>} ; [ DW_TAG_member ] [MCU_sample_width] [line 212, size 32, align 32, offset 512] [from int]
+
+!{!"0xd\00last_col_width\00215\0032\0032\00544\000", <0x26a0290>, <0x26d4d20>, <0x26a3b18>} ; [ DW_TAG_member ] [last_col_width] [line 215, size 32, align 32, offset 544] [from int]
+
+!{!"0xd\00last_row_height\00218\0032\0032\00576\000", <0x26a0290>, <0x26d4d20>, <0x26a3b18>} ; [ DW_TAG_member ] [last_row_height] [line 218, size 32, align 32, offset 576] [from int]
+
+!{!"0xd\00quant_table\00225\0064\0064\00640\000", <0x26a0290>, <0x26d4d20>, <0x26d4a90>} ; [ DW_TAG_member ] [quant_table] [line 225, size 64, align 64, offset 640] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26d4820>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from JQUANT_TBL]
+
+!{!"0x16\00JQUANT_TBL\0088\000\000\000\000", <0x26a0290>, null, <0x26d5180>} ; [ DW_TAG_typedef ] [JQUANT_TBL] [line 88, size 0, align 0, offset 0] [from ]
+
+!{!"0x13\00\0071\001056\0032\000\000\000", <0x26a0290>, null, null, <0x26d5090>, null, null, null} ; [ DW_TAG_structure_type ] [line 71, size 1056, align 32, offset 0] [def] [from ]
+
+!{!"0xd\00quantval\0078\001024\0016\000\000", <0x26a0290>, <0x26d5180>, <0x26d47d0>} ; [ DW_TAG_member ] [quantval] [line 78, size 1024, align 16, offset 0] [from ]
+
+!{!"0x1\00\000\001024\0016\000\000\000", null, null, <0x26ac658>, <0x26a0138>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 1024, align 16, offset 0] [from unsigned short]
+
+!{!"0x24\00unsigned short\000\0016\0016\000\000\007", null, null} ; [ DW_TAG_base_type ] [unsigned short] [line 0, size 16, align 16, offset 0, enc DW_ATE_unsigned]
+
+!{!"0xd\00sent_table\0087\0032\0032\001024\000", <0x26a0290>, <0x26d5180>, <0x26a3b18>} ; [ DW_TAG_member ] [sent_table] [line 87, size 32, align 32, offset 1024] [from int]
+
+!{!"0xd\00dct_table\00228\0064\0064\00704\000", <0x26a0290>, <0x26d4d20>, <0x26a41f0>} ; [ DW_TAG_member ] [dct_table] [line 228, size 64, align 64, offset 704] [from ]
+
+!{!"0xd\00quant_tbl_ptrs\00387\00256\0064\00768\000", <0x26a0290>, <0x26dec50>, <0x26d24a0>} ; [ DW_TAG_member ] [quant_tbl_ptrs] [line 387, size 256, align 64, offset 768] [from ]
+
+!{!"0x1\00\000\00256\0064\000\000\000", null, null, <0x26d4a90>, <0x26d22b8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 256, align 64, offset 0] [from ]
+
+!{!"0xd\00dc_huff_tbl_ptrs\00390\00256\0064\001024\000", <0x26a0290>, <0x26dec50>, <0x26d6940>} ; [ DW_TAG_member ] [dc_huff_tbl_ptrs] [line 390, size 256, align 64, offset 1024] [from ]
+
+!{!"0x1\00\000\00256\0064\000\000\000", null, null, <0x26d6850>, <0x26d22b8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 256, align 64, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26d2890>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from JHUFF_TBL]
+
+!{!"0x16\00JHUFF_TBL\00113\000\000\000\000", <0x26a0290>, null, <0x26d7080>} ; [ DW_TAG_typedef ] [JHUFF_TBL] [line 113, size 0, align 0, offset 0] [from ]
+
+!{!"0x13\00\0095\002240\0032\000\000\000", <0x26a0290>, null, null, <0x26d6f98>, null, null, null} ; [ DW_TAG_structure_type ] [line 95, size 2240, align 32, offset 0] [def] [from ]
+
+!{!"0xd\00bits\00100\00136\008\000\000", <0x26a0290>, <0x26d7080>, <0x26d2840>} ; [ DW_TAG_member ] [bits] [line 100, size 136, align 8, offset 0] [from ]
+
+!{!"0x1\00\000\00136\008\000\000\000", null, null, <0x26a61b8>, <0x26d27d8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 136, align 8, offset 0] [from unsigned char]
+
+!{!"0xd\00huffval\00109\002048\008\00136\000", <0x26a0290>, <0x26d7080>, <0x26d6730>} ; [ DW_TAG_member ] [huffval] [line 109, size 2048, align 8, offset 136] [from ]
+
+!{!"0x1\00\000\002048\008\000\000\000", null, null, <0x26a61b8>, <0x26d66c8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 2048, align 8, offset 0] [from unsigned char]
+
+!{!"0xd\00sent_table\00112\0032\0032\002208\000", <0x26a0290>, <0x26d7080>, <0x26a3b18>} ; [ DW_TAG_member ] [sent_table] [line 112, size 32, align 32, offset 2208] [from int]
+
+!{!"0xd\00ac_huff_tbl_ptrs\00391\00256\0064\001280\000", <0x26a0290>, <0x26dec50>, <0x26d6940>} ; [ DW_TAG_member ] [ac_huff_tbl_ptrs] [line 391, size 256, align 64, offset 1280] [from ]
+
+!{!"0xd\00arith_dc_L\00394\00128\008\001536\000", <0x26a0290>, <0x26dec50>, <0x26d6cc0>} ; [ DW_TAG_member ] [arith_dc_L] [line 394, size 128, align 8, offset 1536] [from ]
+
+!{!"0x1\00\000\00128\008\000\000\000", null, null, <0x26a61b8>, <0x26d6c58>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 128, align 8, offset 0] [from unsigned char]
+
+!{!"0xd\00arith_dc_U\00397\00128\008\001664\000", <0x26a0290>, <0x26dec50>, <0x26d6cc0>} ; [ DW_TAG_member ] [arith_dc_U] [line 397, size 128, align 8, offset 1664] [from ]
+
+!{!"0xd\00arith_ac_K\00400\00128\008\001792\000", <0x26a0290>, <0x26dec50>, <0x26d6cc0>} ; [ DW_TAG_member ] [arith_ac_K] [line 400, size 128, align 8, offset 1792] [from ]
+
+!{!"0xd\00num_scans\00403\0032\0032\001920\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [num_scans] [line 403, size 32, align 32, offset 1920] [from int]
+
+!{!"0xd\00scan_info\00411\0064\0064\001984\000", <0x26a0290>, <0x26dec50>, <0x26d85d0>} ; [ DW_TAG_member ] [scan_info] [line 411, size 64, align 64, offset 1984] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26d8500>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x26d81d0>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from jpeg_scan_info]
+
+!{!"0x16\00jpeg_scan_info\00248\000\000\000\000", <0x26a0290>, null, <0x26d9050>} ; [ DW_TAG_typedef ] [jpeg_scan_info] [line 248, size 0, align 0, offset 0] [from ]
+
+!{!"0x13\00\00236\00288\0032\000\000\000", <0x26a0290>, null, null, <0x26d8f60>, null, null, null} ; [ DW_TAG_structure_type ] [line 236, size 288, align 32, offset 0] [def] [from ]
+
+!{!"0xd\00comps_in_scan\00238\0032\0032\000\000", <0x26a0290>, <0x26d9050>, <0x26a3b18>} ; [ DW_TAG_member ] [comps_in_scan] [line 238, size 32, align 32, offset 0] [from int]
+
+!{!"0xd\00component_index\00241\00128\0032\0032\000", <0x26a0290>, <0x26d9050>, <0x26d83e0>} ; [ DW_TAG_member ] [component_index] [line 241, size 128, align 32, offset 32] [from ]
+
+!{!"0x1\00\000\00128\0032\000\000\000", null, null, <0x26a3b18>, <0x26d22b8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 128, align 32, offset 0] [from int]
+
+!{!"0xd\00Ss\00244\0032\0032\00160\000", <0x26a0290>, <0x26d9050>, <0x26a3b18>} ; [ DW_TAG_member ] [Ss] [line 244, size 32, align 32, offset 160] [from int]
+
+!{!"0xd\00Se\00244\0032\0032\00192\000", <0x26a0290>, <0x26d9050>, <0x26a3b18>} ; [ DW_TAG_member ] [Se] [line 244, size 32, align 32, offset 192] [from int]
+
+!{!"0xd\00Ah\00247\0032\0032\00224\000", <0x26a0290>, <0x26d9050>, <0x26a3b18>} ; [ DW_TAG_member ] [Ah] [line 247, size 32, align 32, offset 224] [from int]
+
+!{!"0xd\00Al\00247\0032\0032\00256\000", <0x26a0290>, <0x26d9050>, <0x26a3b18>} ; [ DW_TAG_member ] [Al] [line 247, size 32, align 32, offset 256] [from int]
+
+!{!"0xd\00raw_data_in\00414\0032\0032\002048\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [raw_data_in] [line 414, size 32, align 32, offset 2048] [from int]
+
+!{!"0xd\00arith_code\00417\0032\0032\002080\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [arith_code] [line 417, size 32, align 32, offset 2080] [from int]
+
+!{!"0xd\00optimize_coding\00420\0032\0032\002112\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [optimize_coding] [line 420, size 32, align 32, offset 2112] [from int]
+
+!{!"0xd\00CCIR601_sampling\00423\0032\0032\002144\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [CCIR601_sampling] [line 423, size 32, align 32, offset 2144] [from int]
+
+!{!"0xd\00smoothing_factor\00426\0032\0032\002176\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [smoothing_factor] [line 426, size 32, align 32, offset 2176] [from int]
+
+!{!"0xd\00dct_method\00429\0032\0032\002208\000", <0x26a0290>, <0x26dec50>, <0x26d99f0>} ; [ DW_TAG_member ] [dct_method] [line 429, size 32, align 32, offset 2208] [from J_DCT_METHOD]
+
+!{!"0x16\00J_DCT_METHOD\00289\000\000\000\000", <0x26a0290>, null, <0x26a2db0>} ; [ DW_TAG_typedef ] [J_DCT_METHOD] [line 289, size 0, align 0, offset 0] [from ]
+
+!{!"0x4\00\00280\0032\0032\000\000\000", <0x26a0290>, null, null, <0x26a2d48>, null, null, null} ; [ DW_TAG_enumeration_type ] [line 280, size 32, align 32, offset 0] [def] [from ]
+
+!{!"0xd\00restart_interval\00439\0032\0032\002240\000", <0x26a0290>, <0x26dec50>, <0x26a7b58>} ; [ DW_TAG_member ] [restart_interval] [line 439, size 32, align 32, offset 2240] [from unsigned int]
+
+!{!"0xd\00restart_in_rows\00442\0032\0032\002272\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [restart_in_rows] [line 442, size 32, align 32, offset 2272] [from int]
+
+!{!"0xd\00write_JFIF_header\00450\0032\0032\002304\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [write_JFIF_header] [line 450, size 32, align 32, offset 2304] [from int]
+
+!{!"0xd\00JFIF_major_version\00453\008\008\002336\000", <0x26a0290>, <0x26dec50>, <0x26a61b8>} ; [ DW_TAG_member ] [JFIF_major_version] [line 453, size 8, align 8, offset 2336] [from unsigned char]
+
+!{!"0xd\00JFIF_minor_version\00454\008\008\002344\000", <0x26a0290>, <0x26dec50>, <0x26a61b8>} ; [ DW_TAG_member ] [JFIF_minor_version] [line 454, size 8, align 8, offset 2344] [from unsigned char]
+
+!{!"0xd\00density_unit\00464\008\008\002352\000", <0x26a0290>, <0x26dec50>, <0x26a61b8>} ; [ DW_TAG_member ] [density_unit] [line 464, size 8, align 8, offset 2352] [from unsigned char]
+
+!{!"0xd\00X_density\00467\0016\0016\002368\000", <0x26a0290>, <0x26dec50>, <0x26ac658>} ; [ DW_TAG_member ] [X_density] [line 467, size 16, align 16, offset 2368] [from unsigned short]
+
+!{!"0xd\00Y_density\00470\0016\0016\002384\000", <0x26a0290>, <0x26dec50>, <0x26ac658>} ; [ DW_TAG_member ] [Y_density] [line 470, size 16, align 16, offset 2384] [from unsigned short]
+
+!{!"0xd\00write_Adobe_marker\00473\0032\0032\002400\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [write_Adobe_marker] [line 473, size 32, align 32, offset 2400] [from int]
+
+!{!"0xd\00next_scanline\00482\0032\0032\002432\000", <0x26a0290>, <0x26dec50>, <0x26a7b58>} ; [ DW_TAG_member ] [next_scanline] [line 482, size 32, align 32, offset 2432] [from unsigned int]
+
+!{!"0xd\00progressive_mode\00495\0032\0032\002464\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [progressive_mode] [line 495, size 32, align 32, offset 2464] [from int]
+
+!{!"0xd\00max_h_samp_factor\00498\0032\0032\002496\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [max_h_samp_factor] [line 498, size 32, align 32, offset 2496] [from int]
+
+!{!"0xd\00max_v_samp_factor\00501\0032\0032\002528\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [max_v_samp_factor] [line 501, size 32, align 32, offset 2528] [from int]
+
+!{!"0xd\00total_iMCU_rows\00510\0032\0032\002560\000", <0x26a0290>, <0x26dec50>, <0x26a7b58>} ; [ DW_TAG_member ] [total_iMCU_rows] [line 510, size 32, align 32, offset 2560] [from unsigned int]
+
+!{!"0xd\00comps_in_scan\00518\0032\0032\002592\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [comps_in_scan] [line 518, size 32, align 32, offset 2592] [from int]
+
+!{!"0xd\00cur_comp_info\00521\00256\0064\002624\000", <0x26a0290>, <0x26dec50>, <0x26ceec0>} ; [ DW_TAG_member ] [cur_comp_info] [line 521, size 256, align 64, offset 2624] [from ]
+
+!{!"0x1\00\000\00256\0064\000\000\000", null, null, <0x26d5860>, <0x26d22b8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 256, align 64, offset 0] [from ]
+
+!{!"0xd\00MCUs_per_row\00524\0032\0032\002880\000", <0x26a0290>, <0x26dec50>, <0x26a7b58>} ; [ DW_TAG_member ] [MCUs_per_row] [line 524, size 32, align 32, offset 2880] [from unsigned int]
+
+!{!"0xd\00MCU_rows_in_scan\00527\0032\0032\002912\000", <0x26a0290>, <0x26dec50>, <0x26a7b58>} ; [ DW_TAG_member ] [MCU_rows_in_scan] [line 527, size 32, align 32, offset 2912] [from unsigned int]
+
+!{!"0xd\00blocks_in_MCU\00530\0032\0032\002944\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [blocks_in_MCU] [line 530, size 32, align 32, offset 2944] [from int]
+
+!{!"0xd\00MCU_membership\00536\00320\0032\002976\000", <0x26a0290>, <0x26dec50>, <0x26a6590>} ; [ DW_TAG_member ] [MCU_membership] [line 536, size 320, align 32, offset 2976] [from ]
+
+!{!"0x1\00\000\00320\0032\000\000\000", null, null, <0x26a3b18>, <0x26a6528>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 320, align 32, offset 0] [from int]
+
+!{!"0xd\00Ss\00539\0032\0032\003296\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [Ss] [line 539, size 32, align 32, offset 3296] [from int]
+
+!{!"0xd\00Se\00539\0032\0032\003328\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [Se] [line 539, size 32, align 32, offset 3328] [from int]
+
+!{!"0xd\00Ah\00539\0032\0032\003360\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [Ah] [line 539, size 32, align 32, offset 3360] [from int]
+
+!{!"0xd\00Al\00539\0032\0032\003392\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [Al] [line 539, size 32, align 32, offset 3392] [from int]
+
+!{!"0xd\00master\00545\0064\0064\003456\000", <0x26a0290>, <0x26dec50>, <0x26dd0f0>} ; [ DW_TAG_member ] [master] [line 545, size 64, align 64, offset 3456] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26dd0a0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jpeg_comp_master]
+
+!{!"0x13\00jpeg_comp_master\00545\000\000\000\004\000", <0x26a0290>, null, null, null, null, null, null} ; [ DW_TAG_structure_type ] [jpeg_comp_master] [line 545, size 0, align 0, offset 0] [decl] [from ]
+
+!{!"0xd\00main\00546\0064\0064\003520\000", <0x26a0290>, <0x26dec50>, <0x26dd350>} ; [ DW_TAG_member ] [main] [line 546, size 64, align 64, offset 3520] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26dd300>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jpeg_c_main_controller]
+
+!{!"0x13\00jpeg_c_main_controller\00546\000\000\000\004\000", <0x26a0290>, null, null, null, null, null, null} ; [ DW_TAG_structure_type ] [jpeg_c_main_controller] [line 546, size 0, align 0, offset 0] [decl] [from ]
+
+!{!"0xd\00prep\00547\0064\0064\003584\000", <0x26a0290>, <0x26dec50>, <0x26dd570>} ; [ DW_TAG_member ] [prep] [line 547, size 64, align 64, offset 3584] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26dd520>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jpeg_c_prep_controller]
+
+!{!"0x13\00jpeg_c_prep_controller\00547\000\000\000\004\000", <0x26a0290>, null, null, null, null, null, null} ; [ DW_TAG_structure_type ] [jpeg_c_prep_controller] [line 547, size 0, align 0, offset 0] [decl] [from ]
+
+!{!"0xd\00coef\00548\0064\0064\003648\000", <0x26a0290>, <0x26dec50>, <0x26dd790>} ; [ DW_TAG_member ] [coef] [line 548, size 64, align 64, offset 3648] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26dd740>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jpeg_c_coef_controller]
+
+!{!"0x13\00jpeg_c_coef_controller\00548\000\000\000\004\000", <0x26a0290>, null, null, null, null, null, null} ; [ DW_TAG_structure_type ] [jpeg_c_coef_controller] [line 548, size 0, align 0, offset 0] [decl] [from ]
+
+!{!"0xd\00marker\00549\0064\0064\003712\000", <0x26a0290>, <0x26dec50>, <0x26dd970>} ; [ DW_TAG_member ] [marker] [line 549, size 64, align 64, offset 3712] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26dd920>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jpeg_marker_writer]
+
+!{!"0x13\00jpeg_marker_writer\00549\000\000\000\004\000", <0x26a0290>, null, null, null, null, null, null} ; [ DW_TAG_structure_type ] [jpeg_marker_writer] [line 549, size 0, align 0, offset 0] [decl] [from ]
+
+!{!"0xd\00cconvert\00550\0064\0064\003776\000", <0x26a0290>, <0x26dec50>, <0x26ddb90>} ; [ DW_TAG_member ] [cconvert] [line 550, size 64, align 64, offset 3776] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26ddb40>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jpeg_color_converter]
+
+!{!"0x13\00jpeg_color_converter\00550\000\000\000\004\000", <0x26a0290>, null, null, null, null, null, null} ; [ DW_TAG_structure_type ] [jpeg_color_converter] [line 550, size 0, align 0, offset 0] [decl] [from ]
+
+!{!"0xd\00downsample\00551\0064\0064\003840\000", <0x26a0290>, <0x26dec50>, <0x26dddb0>} ; [ DW_TAG_member ] [downsample] [line 551, size 64, align 64, offset 3840] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26ddd60>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jpeg_downsampler]
+
+!{!"0x13\00jpeg_downsampler\00551\000\000\000\004\000", <0x26a0290>, null, null, null, null, null, null} ; [ DW_TAG_structure_type ] [jpeg_downsampler] [line 551, size 0, align 0, offset 0] [decl] [from ]
+
+!{!"0xd\00fdct\00552\0064\0064\003904\000", <0x26a0290>, <0x26dec50>, <0x26ddfd0>} ; [ DW_TAG_member ] [fdct] [line 552, size 64, align 64, offset 3904] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26ddf80>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jpeg_forward_dct]
+
+!{!"0x13\00jpeg_forward_dct\00552\000\000\000\004\000", <0x26a0290>, null, null, null, null, null, null} ; [ DW_TAG_structure_type ] [jpeg_forward_dct] [line 552, size 0, align 0, offset 0] [decl] [from ]
+
+!{!"0xd\00entropy\00553\0064\0064\003968\000", <0x26a0290>, <0x26dec50>, <0x26de1f0>} ; [ DW_TAG_member ] [entropy] [line 553, size 64, align 64, offset 3968] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26de1a0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jpeg_entropy_encoder]
+
+!{!"0x13\00jpeg_entropy_encoder\00553\000\000\000\004\000", <0x26a0290>, null, null, null, null, null, null} ; [ DW_TAG_structure_type ] [jpeg_entropy_encoder] [line 553, size 0, align 0, offset 0] [decl] [from ]
+
+!{!"0xd\00script_space\00556\0064\0064\004032\000", <0x26a0290>, <0x26dec50>, <0x26de360>} ; [ DW_TAG_member ] [script_space] [line 556, size 64, align 64, offset 4032] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26d81d0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from jpeg_scan_info]
+
+!{!"0xd\00script_space_size\00558\0032\0032\004096\000", <0x26a0290>, <0x26dec50>, <0x26a3b18>} ; [ DW_TAG_member ] [script_space_size] [line 558, size 32, align 32, offset 4096] [from int]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x26a29f8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x26a2a28>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x26a3b48>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+Meta data for 14628746168046588558
+Meta data for 9598435523950372403
+Meta data for 257538058564555439
+Meta data for 309024255240196937
+Meta data for 6433607851219205596
+Meta data for 13714680836273008895
+Meta data for 18077874576939620057
+Meta data for 7036811858393859511
+423623165698859
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: cjpeg_transupp.c, startLine: 706, endLine: 706
+DEBUG: adding main (in module: cjpeg_transupp.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 11 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: cjpeg_transupp_initSeed is 17902064576120844715
+DEBUG: found 0 loops in function cjpeg_transupp_initSeed
+DEBUG: region name to id: cjpeg_transupp_randomInteger is 2721134459638797177
+DEBUG: found 0 loops in function cjpeg_transupp_randomInteger
+DEBUG: region name to id: cjpeg_transupp_init is 14876481270882826097
+DEBUG: found 7 loops in function cjpeg_transupp_init
+DEBUG: assigning id = 14628746168046588558 to loop with the following BBs:
+	for.cond46 for.body48 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13196450504023266873
+DEBUG: assigning id = 13196450504023266873 to body of loop
+DEBUG: assigning id = 9598435523950372403 to loop with the following BBs:
+	for.cond37 for.body39 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5454524154902342063
+DEBUG: assigning id = 5454524154902342063 to body of loop
+DEBUG: assigning id = 257538058564555439 to loop with the following BBs:
+	for.cond28 for.body30 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17566016600001870281
+DEBUG: assigning id = 17566016600001870281 to body of loop
+DEBUG: assigning id = 309024255240196937 to loop with the following BBs:
+	for.cond19 for.body21 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6259333947719060493
+DEBUG: assigning id = 6259333947719060493 to body of loop
+DEBUG: assigning id = 6433607851219205596 to loop with the following BBs:
+	for.cond10 for.body12 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6795268626703786798
+DEBUG: assigning id = 6795268626703786798 to body of loop
+DEBUG: assigning id = 13714680836273008895 to loop with the following BBs:
+	for.cond1 for.body3 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17625831904688226111
+DEBUG: assigning id = 17625831904688226111 to body of loop
+DEBUG: assigning id = 18077874576939620057 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17151301318359280995
+DEBUG: assigning id = 17151301318359280995 to body of loop
+DEBUG: for.cond46 has 1 possible loop exit points
+DEBUG: 	target #0: for.end54
+DEBUG: for.cond37 has 1 possible loop exit points
+DEBUG: 	target #0: for.end45
+DEBUG: for.cond28 has 1 possible loop exit points
+DEBUG: 	target #0: for.end36
+DEBUG: for.cond19 has 1 possible loop exit points
+DEBUG: 	target #0: for.end27
+DEBUG: for.cond10 has 1 possible loop exit points
+DEBUG: 	target #0: for.end18
+DEBUG: for.cond1 has 1 possible loop exit points
+DEBUG: 	target #0: for.end9
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: cjpeg_transupp_return is 7423429928801772801
+DEBUG: found 5 loops in function cjpeg_transupp_return
+DEBUG: assigning id = 7036811858393859511 to loop with the following BBs:
+	for.cond34 for.body37 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16866996031730479935
+DEBUG: assigMeta data for 1133900953085106447
+Meta data for 9362972355879697857
+Meta data for 16788463960077051196
+Meta data for 1938111323645144024
+Meta data for 12475541291117676883
+Meta data for 14806726413922189862
+Meta data for 12055912837867490297
+Meta data for 3739550110609348950
+Meta data for 1958733170535693119
+ning id = 16866996031730479935 to body of loop
+DEBUG: assigning id = 1133900953085106447 to loop with the following BBs:
+	for.cond23 for.body26 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7731603390403886750
+DEBUG: assigning id = 7731603390403886750 to body of loop
+DEBUG: assigning id = 9362972355879697857 to loop with the following BBs:
+	for.cond12 for.body15 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3969152451303402756
+DEBUG: assigning id = 3969152451303402756 to body of loop
+DEBUG: assigning id = 16788463960077051196 to loop with the following BBs:
+	for.cond1 for.body4 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12666865207163185984
+DEBUG: assigning id = 12666865207163185984 to body of loop
+DEBUG: assigning id = 1938111323645144024 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16394399674866317371
+DEBUG: assigning id = 16394399674866317371 to body of loop
+DEBUG: for.cond34 has 1 possible loop exit points
+DEBUG: 	target #0: for.end44
+DEBUG: for.cond23 has 1 possible loop exit points
+DEBUG: 	target #0: for.end33
+DEBUG: for.cond12 has 1 possible loop exit points
+DEBUG: 	target #0: for.end22
+DEBUG: for.cond1 has 1 possible loop exit points
+DEBUG: 	target #0: for.end11
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: cjpeg_transupp_do_flip_v is 1245906981325134649
+DEBUG: found 7 loops in function cjpeg_transupp_do_flip_v
+DEBUG: assigning id = 12475541291117676883 to loop with the following BBs:
+	for.cond for.body for.cond2 for.inc41 for.body4 for.cond5 for.inc38 for.body7 if.then for.cond9 for.inc35.loopexit for.inc35 for.body11 for.cond12 for.inc31 for.body14 do.body if.then16 if.end do.end do.body19 if.then21 if.end25 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10814231652107014769
+DEBUG: assigning id = 10814231652107014769 to body of loop
+DEBUG: assigning id = 14806726413922189862 to loop with the following BBs:
+	for.cond2 for.body4 for.cond5 for.inc38 for.body7 if.then for.cond9 for.inc35.loopexit for.inc35 for.body11 for.cond12 for.inc31 for.body14 do.body if.then16 if.end do.end do.body19 if.then21 if.end25 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4889552972822423351
+DEBUG: assigning id = 4889552972822423351 to body of loop
+DEBUG: assigning id = 12055912837867490297 to loop with the following BBs:
+	for.cond5 for.body7 if.then for.cond9 for.inc35.loopexit for.inc35 for.body11 for.cond12 for.inc31 for.body14 do.body if.then16 if.end do.end do.body19 if.then21 if.end25 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17334478576572100400
+DEBUG: assigning id = 17334478576572100400 to body of loop
+DEBUG: assigning id = 3739550110609348950 to loop with the following BBs:
+	for.cond9 for.body11 for.cond12 for.inc31 for.body14 do.body if.then16 if.end do.end do.body19 if.then21 if.end25 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5652016685874314908
+DEBUG: assigning id = 5652016685874314908 to body of loop
+DEBUG: assigning id = 1958733170535693119 to loop with the following BBs:
+	for.cond12 for.body14 do.body if.then16 if.end do.end do.body19 if.then21 if.end25 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6594895444511573124
+DEBUG: assigning id = 659Meta data for 4584970403900661952
+Meta data for 13818715723153754387
+Meta data for 12267813947475140259
+Meta data for 547153073952605243
+Meta data for 381683394158747945
+Meta data for 8160460049877421894
+Meta data for 4170193757543459980
+4895444511573124 to body of loop
+DEBUG: assigning id = 4584970403900661952 to loop with the following BBs:
+	do.body if.then16 if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 156770956301656190
+DEBUG: assigning id = 156770956301656190 to body of loop
+DEBUG: assigning id = 13818715723153754387 to loop with the following BBs:
+	do.body19 if.then21 if.end25 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 15546912522205672043
+DEBUG: assigning id = 15546912522205672043 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end43
+DEBUG: for.cond2 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc41
+DEBUG: for.cond5 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc38
+DEBUG: for.cond9 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc35.loopexit
+DEBUG: for.cond12 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc31
+DEBUG: if.end has 1 possible loop exit points
+DEBUG: 	target #0: do.end
+DEBUG: if.end25 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc
+DEBUG: region name to id: cjpeg_transupp_do_rot_90 is 10914133955361673178
+DEBUG: found 10 loops in function cjpeg_transupp_do_rot_90
+DEBUG: assigning id = 12267813947475140259 to loop with the following BBs:
+	for.cond for.body for.cond2 for.inc83 for.body4 for.cond5 for.inc80 for.body7 for.cond8 for.inc77 for.body10 for.cond11 for.inc74 for.body13 for.cond45.preheader for.cond45 for.cond52.preheader for.cond52 for.inc71.loopexit1 for.body55 if.then58 for.inc67 for.body48 for.cond15.preheader for.cond15 for.inc71.loopexit for.inc71 for.body17 for.cond18 for.end for.cond27 for.inc42 for.body29 for.body20 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 500826463657485509
+DEBUG: assigning id = 500826463657485509 to body of loop
+DEBUG: assigning id = 547153073952605243 to loop with the following BBs:
+	for.cond2 for.body4 for.cond5 for.inc80 for.body7 for.cond8 for.inc77 for.body10 for.cond11 for.inc74 for.body13 for.cond45.preheader for.cond45 for.cond52.preheader for.cond52 for.inc71.loopexit1 for.body55 if.then58 for.inc67 for.body48 for.cond15.preheader for.cond15 for.inc71.loopexit for.inc71 for.body17 for.cond18 for.end for.cond27 for.inc42 for.body29 for.body20 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5154188624399938422
+DEBUG: assigning id = 5154188624399938422 to body of loop
+DEBUG: assigning id = 381683394158747945 to loop with the following BBs:
+	for.cond5 for.body7 for.cond8 for.inc77 for.body10 for.cond11 for.inc74 for.body13 for.cond45.preheader for.cond45 for.cond52.preheader for.cond52 for.inc71.loopexit1 for.body55 if.then58 for.inc67 for.body48 for.cond15.preheader for.cond15 for.inc71.loopexit for.inc71 for.body17 for.cond18 for.end for.cond27 for.inc42 for.body29 for.body20 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7370845358737145436
+DEBUG: assigning id = 7370845358737145436 to body of loop
+DEBUG: assigning id = 8160460049877421894 to loop with the following BBs:
+	for.cond8 for.body10 for.cond11 for.inc74 for.body13 for.cond45.preheader for.cond45 for.cond52.preheader for.cond52 for.inc71.loopexit1 for.body55 if.then58 for.inc67 for.body48 for.cond15.preheader for.cond15 for.inc71.loopexit for.inc71 for.body17 for.cond18 for.end for.cond27 for.inc42 for.body29 for.body20 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11009271112448342463
+DEBUG: assigning id = 11009271112448342463 to body of loop
+DEBUG: assigning id = 4170193757543459980 to loop with the following BBs:
+	for.cond11 for.body13 for.cond45.preheader for.cond45 for.cond52.preheadMeta data for 11569613531555136798
+Meta data for 7814702804229428802
+Meta data for 10565680143849539118
+Meta data for 10719566693860808160
+Meta data for 1294342724935997850
+Meta data for 18087455055584212521
+Meta data for 13737913247806803310
+er for.cond52 for.inc71.loopexit1 for.body55 if.then58 for.inc67 for.body48 for.cond15.preheader for.cond15 for.inc71.loopexit for.inc71 for.body17 for.cond18 for.end for.cond27 for.inc42 for.body29 for.body20 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12928253087380276170
+DEBUG: assigning id = 12928253087380276170 to body of loop
+DEBUG: assigning id = 11569613531555136798 to loop with the following BBs:
+	for.cond45 for.body48 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16540384846145009853
+DEBUG: assigning id = 16540384846145009853 to body of loop
+DEBUG: assigning id = 7814702804229428802 to loop with the following BBs:
+	for.cond52 for.body55 if.then58 for.inc67 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6807835566786680907
+DEBUG: assigning id = 6807835566786680907 to body of loop
+DEBUG: assigning id = 10565680143849539118 to loop with the following BBs:
+	for.cond15 for.body17 for.cond18 for.end for.cond27 for.inc42 for.body29 for.body20 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6214852002080864488
+DEBUG: assigning id = 6214852002080864488 to body of loop
+DEBUG: assigning id = 10719566693860808160 to loop with the following BBs:
+	for.cond18 for.body20 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12532847441890882578
+DEBUG: assigning id = 12532847441890882578 to body of loop
+DEBUG: assigning id = 1294342724935997850 to loop with the following BBs:
+	for.cond27 for.body29 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17306764148175300358
+DEBUG: assigning id = 17306764148175300358 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end85
+DEBUG: for.cond2 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc83
+DEBUG: for.cond5 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc80
+DEBUG: for.cond8 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc77
+DEBUG: for.cond11 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc74
+DEBUG: for.cond45 has 1 possible loop exit points
+DEBUG: 	target #0: for.cond52.preheader
+DEBUG: for.cond52 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc71.loopexit1
+DEBUG: for.cond15 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc71.loopexit
+DEBUG: for.cond18 has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: for.cond27 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc42
+DEBUG: region name to id: cjpeg_transupp_do_rot_270 is 3928367365919001262
+DEBUG: found 9 loops in function cjpeg_transupp_do_rot_270
+DEBUG: assigning id = 18087455055584212521 to loop with the following BBs:
+	for.cond for.body for.cond2 for.inc77 for.body4 for.cond5 for.inc74 for.body7 for.cond8 for.inc71 for.body10 for.cond11 for.inc68 for.body13 if.else for.cond39 for.cond46.preheader for.cond46 for.inc65.loopexit1 for.body49 if.then52 for.inc61 for.body42 if.then for.cond15 for.inc65.loopexit for.inc65 for.body17 for.cond18 for.inc36 for.body20 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8703928245289012715
+DEBUG: assigning id = 8703928245289012715 to body of loop
+DEBUG: assigning id = 13737913247806803310 to loop with the following BBs:
+	for.cond2 for.body4 for.cond5 for.inc74 for.body7 for.cond8 for.inc71 for.body10 for.cond11 for.inc68 for.body13 if.else for.cond39 for.cond46.preheader for.cond46 for.inc65.loopexit1 for.body49 if.then52 for.inc61 for.body42 if.then for.cond15 for.inc65.loopexit for.inc65 for.body17 for.cond18 for.inc36 for.body20 
+DEBUG: /home/patmos/DevelopMeta data for 5007452346000199183
+Meta data for 11154213108352499728
+Meta data for 8541925006782250193
+Meta data for 16895877531904562073
+Meta data for 4635230633471108626
+Meta data for 17421791112628058193
+Meta data for 7022095331863871676
+Meta data for 1005472125247740325
+er/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16025489293286563232
+DEBUG: assigning id = 16025489293286563232 to body of loop
+DEBUG: assigning id = 5007452346000199183 to loop with the following BBs:
+	for.cond5 for.body7 for.cond8 for.inc71 for.body10 for.cond11 for.inc68 for.body13 if.else for.cond39 for.cond46.preheader for.cond46 for.inc65.loopexit1 for.body49 if.then52 for.inc61 for.body42 if.then for.cond15 for.inc65.loopexit for.inc65 for.body17 for.cond18 for.inc36 for.body20 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16617509133912595509
+DEBUG: assigning id = 16617509133912595509 to body of loop
+DEBUG: assigning id = 11154213108352499728 to loop with the following BBs:
+	for.cond8 for.body10 for.cond11 for.inc68 for.body13 if.else for.cond39 for.cond46.preheader for.cond46 for.inc65.loopexit1 for.body49 if.then52 for.inc61 for.body42 if.then for.cond15 for.inc65.loopexit for.inc65 for.body17 for.cond18 for.inc36 for.body20 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3784734129206479665
+DEBUG: assigning id = 3784734129206479665 to body of loop
+DEBUG: assigning id = 8541925006782250193 to loop with the following BBs:
+	for.cond11 for.body13 if.else for.cond39 for.cond46.preheader for.cond46 for.inc65.loopexit1 for.body49 if.then52 for.inc61 for.body42 if.then for.cond15 for.inc65.loopexit for.inc65 for.body17 for.cond18 for.inc36 for.body20 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11478820155589818214
+DEBUG: assigning id = 11478820155589818214 to body of loop
+DEBUG: assigning id = 16895877531904562073 to loop with the following BBs:
+	for.cond39 for.body42 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17971401197512105561
+DEBUG: assigning id = 17971401197512105561 to body of loop
+DEBUG: assigning id = 4635230633471108626 to loop with the following BBs:
+	for.cond46 for.body49 if.then52 for.inc61 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9702345919908637278
+DEBUG: assigning id = 9702345919908637278 to body of loop
+DEBUG: assigning id = 17421791112628058193 to loop with the following BBs:
+	for.cond15 for.body17 for.cond18 for.inc36 for.body20 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4698557125183856879
+DEBUG: assigning id = 4698557125183856879 to body of loop
+DEBUG: assigning id = 7022095331863871676 to loop with the following BBs:
+	for.cond18 for.body20 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14219964221482598189
+DEBUG: assigning id = 14219964221482598189 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end79
+DEBUG: for.cond2 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc77
+DEBUG: for.cond5 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc74
+DEBUG: for.cond8 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc71
+DEBUG: for.cond11 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc68
+DEBUG: for.cond39 has 1 possible loop exit points
+DEBUG: 	target #0: for.cond46.preheader
+DEBUG: for.cond46 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc65.loopexit1
+DEBUG: for.cond15 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc65.loopexit
+DEBUG: for.cond18 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc36
+DEBUG: region name to id: cjpeg_transupp_do_rot_180 is 14634537917055458798
+DEBUG: found 15 loops in function cjpeg_transupp_do_rot_180
+DEBUG: assigning id = 1005472125247740325 to loop with the followingMeta data for 14186239131381023611
+Meta data for 1253561384575588519
+Meta data for 2465573528518359798
+Meta data for 1906976981231897160
+Meta data for 744391279499727638
+Meta data for 1139102389123286301
+Meta data for 2856132068858077042
+ BBs:
+	for.cond for.body for.cond5 for.inc121 for.body7 for.cond8 for.inc118 for.body10 do.body.preheader do.body while.cond while.end for.cond99.preheader for.cond99 for.inc115.loopexit1 for.body102 do.body103 for.inc111 while.body for.cond12.preheader for.cond12 for.cond50.preheader for.cond50 for.inc115.loopexit for.inc115 for.body53 for.cond54 for.inc82 for.body57 for.cond58 for.end66 for.cond67 for.inc79 for.body70 for.body61 for.body14 for.cond15 for.inc48 for.body17 for.cond18 for.end for.cond27 for.inc45 for.body30 if.then33 for.inc42 for.body20 if.then22 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6647859783492583630
+DEBUG: assigning id = 6647859783492583630 to body of loop
+DEBUG: assigning id = 14186239131381023611 to loop with the following BBs:
+	for.cond5 for.body7 for.cond8 for.inc118 for.body10 do.body.preheader do.body while.cond while.end for.cond99.preheader for.cond99 for.inc115.loopexit1 for.body102 do.body103 for.inc111 while.body for.cond12.preheader for.cond12 for.cond50.preheader for.cond50 for.inc115.loopexit for.inc115 for.body53 for.cond54 for.inc82 for.body57 for.cond58 for.end66 for.cond67 for.inc79 for.body70 for.body61 for.body14 for.cond15 for.inc48 for.body17 for.cond18 for.end for.cond27 for.inc45 for.body30 if.then33 for.inc42 for.body20 if.then22 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16287682766284016465
+DEBUG: assigning id = 16287682766284016465 to body of loop
+DEBUG: assigning id = 1253561384575588519 to loop with the following BBs:
+	for.cond8 for.body10 do.body.preheader do.body while.cond while.end for.cond99.preheader for.cond99 for.inc115.loopexit1 for.body102 do.body103 for.inc111 while.body for.cond12.preheader for.cond12 for.cond50.preheader for.cond50 for.inc115.loopexit for.inc115 for.body53 for.cond54 for.inc82 for.body57 for.cond58 for.end66 for.cond67 for.inc79 for.body70 for.body61 for.body14 for.cond15 for.inc48 for.body17 for.cond18 for.end for.cond27 for.inc45 for.body30 if.then33 for.inc42 for.body20 if.then22 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16797322229873656208
+DEBUG: assigning id = 16797322229873656208 to body of loop
+DEBUG: assigning id = 2465573528518359798 to loop with the following BBs:
+	do.body while.cond while.end while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12493554145333843368
+DEBUG: assigning id = 12493554145333843368 to body of loop
+DEBUG: assigning id = 1906976981231897160 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3679543118897548047
+DEBUG: assigning id = 3679543118897548047 to body of loop
+DEBUG: assigning id = 744391279499727638 to loop with the following BBs:
+	for.cond99 for.body102 do.body103 for.inc111 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11138071854099717219
+DEBUG: assigning id = 11138071854099717219 to body of loop
+DEBUG: assigning id = 1139102389123286301 to loop with the following BBs:
+	do.body103 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 15489022865508938285
+DEBUG: assigning id = 15489022865508938285 to body of loop
+DEBUG: assigning id = 2856132068858077042 to loop with the following BBs:
+	for.cond12 for.body14 for.cond15 for.inc48 for.body17 for.cond18 for.end for.cond27 for.inc45 for.body30 if.then33 for.inc42 for.body20 if.then22 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for Meta data for 6822980541815043148
+Meta data for 16491686410897224052
+Meta data for 16979975076593712850
+Meta data for 15958574138918865126
+Meta data for 16238742925415949494
+Meta data for 3633022036782611483
+Meta data for 12257726513990111248
+Meta data for 6978623046451834263
+6501840604288518283
+DEBUG: assigning id = 6501840604288518283 to body of loop
+DEBUG: assigning id = 6822980541815043148 to loop with the following BBs:
+	for.cond15 for.body17 for.cond18 for.end for.cond27 for.inc45 for.body30 if.then33 for.inc42 for.body20 if.then22 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16190856519449409153
+DEBUG: assigning id = 16190856519449409153 to body of loop
+DEBUG: assigning id = 16491686410897224052 to loop with the following BBs:
+	for.cond18 for.body20 if.then22 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3778907549685274455
+DEBUG: assigning id = 3778907549685274455 to body of loop
+DEBUG: assigning id = 16979975076593712850 to loop with the following BBs:
+	for.cond27 for.body30 if.then33 for.inc42 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12856279362835252259
+DEBUG: assigning id = 12856279362835252259 to body of loop
+DEBUG: assigning id = 15958574138918865126 to loop with the following BBs:
+	for.cond50 for.body53 for.cond54 for.inc82 for.body57 for.cond58 for.end66 for.cond67 for.inc79 for.body70 for.body61 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8416387844359815022
+DEBUG: assigning id = 8416387844359815022 to body of loop
+DEBUG: assigning id = 16238742925415949494 to loop with the following BBs:
+	for.cond54 for.body57 for.cond58 for.end66 for.cond67 for.inc79 for.body70 for.body61 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17811918642892977310
+DEBUG: assigning id = 17811918642892977310 to body of loop
+DEBUG: assigning id = 3633022036782611483 to loop with the following BBs:
+	for.cond58 for.body61 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9639127052988458205
+DEBUG: assigning id = 9639127052988458205 to body of loop
+DEBUG: assigning id = 12257726513990111248 to loop with the following BBs:
+	for.cond67 for.body70 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14705973952034504059
+DEBUG: assigning id = 14705973952034504059 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end123
+DEBUG: for.cond5 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc121
+DEBUG: for.cond8 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc118
+DEBUG: while.end has 1 possible loop exit points
+DEBUG: 	target #0: for.cond99.preheader
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: for.cond99 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc115.loopexit1
+DEBUG: do.body103 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc111
+DEBUG: for.cond12 has 1 possible loop exit points
+DEBUG: 	target #0: for.cond50.preheader
+DEBUG: for.cond15 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc48
+DEBUG: for.cond18 has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: for.cond27 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc45
+DEBUG: for.cond50 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc115.loopexit
+DEBUG: for.cond54 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc82
+DEBUG: for.cond58 has 1 possible loop exit points
+DEBUG: 	target #0: for.end66
+DEBUG: for.cond67 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc79
+DEBUG: region name to id: cjpeg_transupp_do_transverse is 11404273609095493234
+DEBUG: found 15 loops in function cjpeg_transupp_do_transverse
+DEBUG: assigning id = 6978623046451834263 to loop with the following BBs:
+	for.cond for.body for.cond5 for.inc196 for.body7 do.body do.body8 fMeta data for 10148908523200233968
+Meta data for 4795650910327877664
+Meta data for 5916766603117346875
+Meta data for 4395588402731984312
+or.cond9 do.cond do.end for.inc193 for.body11 if.else112 for.cond158.preheader for.cond158 for.cond165.preheader for.cond165 if.end181.loopexit3 for.body168 for.body161 for.cond116.preheader for.cond116 if.end181.loopexit2 for.body119 for.cond120 for.end134 for.cond136 for.inc154 for.body139 for.body123 if.then for.cond73.preheader for.cond73 if.end181.loopexit1 for.body76 for.cond77 for.inc108 for.body80 if.then83 if.end92 for.cond15.preheader for.cond15 if.end181.loopexit if.end181 for.body17 for.cond18 for.end for.cond39 for.inc70 for.body42 if.then45 if.end57 for.body20 if.then22 if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 764299835692037054
+DEBUG: assigning id = 764299835692037054 to body of loop
+DEBUG: assigning id = 10148908523200233968 to loop with the following BBs:
+	for.cond5 for.body7 do.body do.body8 for.cond9 do.cond do.end for.inc193 for.body11 if.else112 for.cond158.preheader for.cond158 for.cond165.preheader for.cond165 if.end181.loopexit3 for.body168 for.body161 for.cond116.preheader for.cond116 if.end181.loopexit2 for.body119 for.cond120 for.end134 for.cond136 for.inc154 for.body139 for.body123 if.then for.cond73.preheader for.cond73 if.end181.loopexit1 for.body76 for.cond77 for.inc108 for.body80 if.then83 if.end92 for.cond15.preheader for.cond15 if.end181.loopexit if.end181 for.body17 for.cond18 for.end for.cond39 for.inc70 for.body42 if.then45 if.end57 for.body20 if.then22 if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7625000909491831030
+DEBUG: assigning id = 7625000909491831030 to body of loop
+DEBUG: assigning id = 4795650910327877664 to loop with the following BBs:
+	do.body do.body8 for.cond9 do.cond do.end for.body11 if.else112 for.cond158.preheader for.cond158 for.cond165.preheader for.cond165 if.end181.loopexit3 for.body168 for.body161 for.cond116.preheader for.cond116 if.end181.loopexit2 for.body119 for.cond120 for.end134 for.cond136 for.inc154 for.body139 for.body123 if.then for.cond73.preheader for.cond73 if.end181.loopexit1 for.body76 for.cond77 for.inc108 for.body80 if.then83 if.end92 for.cond15.preheader for.cond15 if.end181.loopexit if.end181 for.body17 for.cond18 for.end for.cond39 for.inc70 for.body42 if.then45 if.end57 for.body20 if.then22 if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14231159186399221330
+DEBUG: assigning id = 14231159186399221330 to body of loop
+DEBUG: assigning id = 5916766603117346875 to loop with the following BBs:
+	do.body8 for.cond9 do.cond for.body11 if.else112 for.cond158.preheader for.cond158 for.cond165.preheader for.cond165 if.end181.loopexit3 for.body168 for.body161 for.cond116.preheader for.cond116 if.end181.loopexit2 for.body119 for.cond120 for.end134 for.cond136 for.inc154 for.body139 for.body123 if.then for.cond73.preheader for.cond73 if.end181.loopexit1 for.body76 for.cond77 for.inc108 for.body80 if.then83 if.end92 for.cond15.preheader for.cond15 if.end181.loopexit if.end181 for.body17 for.cond18 for.end for.cond39 for.inc70 for.body42 if.then45 if.end57 for.body20 if.then22 if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 15307644876601699247
+DEBUG: assigning id = 15307644876601699247 to body of loop
+DEBUG: assigning id = 4395588402731984312 to loop with the following BBs:
+	for.cond9 for.body11 if.else112 for.cond158.preheader for.cond158 for.cond165.preheader for.cond165 if.end181.loopexit3 for.body168 for.body161 for.cond116.preheader for.cond116 if.end181.loopexit2 for.body119 for.cond120 for.end134 for.cond136 for.inc154 for.body139 for.body123 if.then for.cond73.preheader for.cond73 if.end181.loopexit1 for.body76 for.cond77 for.inc108 for.body80 if.then83 if.end92 for.cond15.preheader for.cond15 if.end181.loopexit if.end181 for.body17 for.cond18 for.end foMeta data for 15243765310365916065
+Meta data for 2112375461706371687
+Meta data for 12633139361872686441
+Meta data for 13013437398661455061
+Meta data for 14870134335667858505
+Meta data for 18275911596277586720
+Meta data for 9079040940971237026
+Meta data for 7371678142480895912
+Meta data for 5584025683779950522
+Meta data for 2210074163379014102
+r.cond39 for.inc70 for.body42 if.then45 if.end57 for.body20 if.then22 if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9855851357297129200
+DEBUG: assigning id = 9855851357297129200 to body of loop
+DEBUG: assigning id = 15243765310365916065 to loop with the following BBs:
+	for.cond158 for.body161 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8959364554763688281
+DEBUG: assigning id = 8959364554763688281 to body of loop
+DEBUG: assigning id = 2112375461706371687 to loop with the following BBs:
+	for.cond165 for.body168 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 1429071867616685420
+DEBUG: assigning id = 1429071867616685420 to body of loop
+DEBUG: assigning id = 12633139361872686441 to loop with the following BBs:
+	for.cond116 for.body119 for.cond120 for.end134 for.cond136 for.inc154 for.body139 for.body123 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12981365306362312699
+DEBUG: assigning id = 12981365306362312699 to body of loop
+DEBUG: assigning id = 13013437398661455061 to loop with the following BBs:
+	for.cond120 for.body123 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5404454506381000324
+DEBUG: assigning id = 5404454506381000324 to body of loop
+DEBUG: assigning id = 14870134335667858505 to loop with the following BBs:
+	for.cond136 for.body139 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14179009249907564839
+DEBUG: assigning id = 14179009249907564839 to body of loop
+DEBUG: assigning id = 18275911596277586720 to loop with the following BBs:
+	for.cond73 for.body76 for.cond77 for.inc108 for.body80 if.then83 if.end92 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3777463156861451399
+DEBUG: assigning id = 3777463156861451399 to body of loop
+DEBUG: assigning id = 9079040940971237026 to loop with the following BBs:
+	for.cond77 for.body80 if.then83 if.end92 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3858720937911489728
+DEBUG: assigning id = 3858720937911489728 to body of loop
+DEBUG: assigning id = 7371678142480895912 to loop with the following BBs:
+	for.cond15 for.body17 for.cond18 for.end for.cond39 for.inc70 for.body42 if.then45 if.end57 for.body20 if.then22 if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6050187924726506341
+DEBUG: assigning id = 6050187924726506341 to body of loop
+DEBUG: assigning id = 5584025683779950522 to loop with the following BBs:
+	for.cond18 for.body20 if.then22 if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16397989666999208858
+DEBUG: assigning id = 16397989666999208858 to body of loop
+DEBUG: assigning id = 2210074163379014102 to loop with the following BBs:
+	for.cond39 for.body42 if.then45 if.end57 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10120599601512616108
+DEBUG: assigning id = 10120599601512616108 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end198
+DEBUG: for.cond5 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc196
+DEBUG: do.end has 1 possible loop exit points
+DEBUG: 	target #0: for.inc193
+DEBUG: do.cond has 1 possible loop exit points
+DEBUG: 	target #0: do.end
+DEBUG: for.cond9 has 1 possible loop exit points
+DEBUG: 	target #0: do.cond
+DEBUG: for.cond158 has 1 possible loop exit points
+DEBUG: 	target #0: for.cond165.preheader
+DEBUG: for.cond165 has 1 possible loop exit points
+DEBUG: 	target #0: if.end181.loopexit3
+DEBUG: for.cond116 has 1 possible loop exit points
+DEBUG: 	target #0: if.end181.loopexit2
+DEBUG: for.cond120 has 1 possible loop exit points
+DEBUG: 	target #0: for.end134
+DEBUG: for.cond136 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc154
+DEBUG: for.cond73 has 1 possible loop exit points
+DEBUG: 	target #0: if.end181.loopexit1
+DEBUG: for.cond77 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc108
+DEBUG: for.cond15 has 1 possible loop exit points
+DEBUG: 	target #0: if.end181.loopexit
+DEBUG: for.cond18 has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: for.cond39 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc70
+DEBUG: region name to id: cjpeg_transupp_main is 16760423623165698859
+DEBUG: found 0 loops in function cjpeg_transupp_main
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to cjpeg_transupp.kdump
+INFO: dumping function: cjpeg_transupp_initSeed
+INFO: dumping function: cjpeg_transupp_randomInteger
+INFO: dumping function: cjpeg_transupp_init
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: cjpeg_transupp_return
+INFO: dumping function: cjpeg_transupp_do_flip_v
+INFO: dumping function: cjpeg_transupp_do_rot_90
+INFO: dumping function: cjpeg_transupp_do_rot_270
+INFO: dumping function: cjpeg_transupp_do_rot_180
+INFO: dumping function: cjpeg_transupp_do_transverse
+INFO: dumping function: cjpeg_transupp_main
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

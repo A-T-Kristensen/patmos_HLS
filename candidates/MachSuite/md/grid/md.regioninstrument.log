@@ -1,0 +1,146 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x2e19820>, <0x2e1a580>, <0x2e1a580>, <0x2e1b408>, <0x2e1a580>, <0x2e1a580>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/MachSuite/md/grid/md.c] [DW_LANG_C99]
+
+!{!"0x2e\00md\00md\00\006\000\001\000\000\00256\000\009", <0x2e19820>, <0x2e1a600>, <0x2e1b2c0>, null, void ([4 x [4 x i32]]*, [4 x [4 x [10 x %struct.dvector_t]]]*, [4 x [4 x [10 x %struct.dvector_t]]]*)* @md, null, null, <0x2e1a580>} ; [ DW_TAG_subprogram ] [line 6] [def] [scope 9] [md]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2e1b1d0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2e1a8e0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x1\00\000\00512\0032\000\000\000", null, null, <0x2e1a7d8>, <0x2e1a870>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 512, align 32, offset 0] [from int]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2e1b030>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x1\00\000\0030720\0064\000\000\000", null, null, <0x2e1a930>, <0x2e1a978>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 30720, align 64, offset 0] [from dvector_t]
+
+!{!"0x16\00dvector_t\0025\000\000\000\000", <0x2e19680>, null, <0x2e1b7d0>} ; [ DW_TAG_typedef ] [dvector_t] [line 25, size 0, align 0, offset 0] [from ]
+
+!{!"0x13\00\0023\00192\0064\000\000\000", <0x2e19680>, null, null, <0x2e1b6e8>, null, null, null} ; [ DW_TAG_structure_type ] [line 23, size 192, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00x\0024\0064\0064\000\000", <0x2e19680>, <0x2e1b7d0>, <0x2e1ac88>} ; [ DW_TAG_member ] [x] [line 24, size 64, align 64, offset 0] [from double]
+
+!{!"0x24\00double\000\0064\0064\000\000\004", null, null} ; [ DW_TAG_base_type ] [double] [line 0, size 64, align 64, offset 0, enc DW_ATE_float]
+
+!{!"0xd\00y\0024\0064\0064\0064\000", <0x2e19680>, <0x2e1b7d0>, <0x2e1ac88>} ; [ DW_TAG_member ] [y] [line 24, size 64, align 64, offset 64] [from double]
+
+!{!"0xd\00z\0024\0064\0064\00128\000", <0x2e19680>, <0x2e1b7d0>, <0x2e1ac88>} ; [ DW_TAG_member ] [z] [line 24, size 64, align 64, offset 128] [from double]
+
+Meta data for 6532848029218295971
+Meta data for 863873934625983397
+Meta data for 163249589289851279
+Meta data for 8985360254065455442
+Meta data for 15204298126916849848
+Meta data for 17627566953582262887
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 6938543384145441147, name: md, fileName: md.c, startLine: 6, endLine: 6
+DEBUG: adding md (in module: md.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6938543384145441147)
+DEBUG: assigning function md id 6938543384145441147
+DEBUG: found 1 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: md is 6938543384145441147
+DEBUG: found 8 loops in function md
+DEBUG: assigning id = 6532848029218295971 to loop with the following BBs:
+	for.cond loop_grid0_y for.cond2 for.inc245 loop_grid0_z for.cond6 for.inc241 loop_grid1_x cond.false cond.end for.cond15 cond.false20 cond.end23 for.inc237 loop_grid1_y cond.false31 cond.end34 for.cond37 cond.false43 cond.end46 for.inc233 loop_grid1_z cond.false54 cond.end57 for.cond60 cond.false66 cond.end69 for.inc229 for.body72 for.cond89 for.inc225 for.body100 for.cond148 for.end for.body150 lor.lhs.false lor.lhs.false157 if.then for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14369057183041814177
+DEBUG: assigning id = 14369057183041814177 to body of loop
+DEBUG: assigning id = 863873934625983397 to loop with the following BBs:
+	for.cond2 loop_grid0_z for.cond6 for.inc241 loop_grid1_x cond.false cond.end for.cond15 cond.false20 cond.end23 for.inc237 loop_grid1_y cond.false31 cond.end34 for.cond37 cond.false43 cond.end46 for.inc233 loop_grid1_z cond.false54 cond.end57 for.cond60 cond.false66 cond.end69 for.inc229 for.body72 for.cond89 for.inc225 for.body100 for.cond148 for.end for.body150 lor.lhs.false lor.lhs.false157 if.then for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7694617943354862863
+DEBUG: assigning id = 7694617943354862863 to body of loop
+DEBUG: assigning id = 163249589289851279 to loop with the following BBs:
+	for.cond6 loop_grid1_x cond.false cond.end for.cond15 cond.false20 cond.end23 for.inc237 loop_grid1_y cond.false31 cond.end34 for.cond37 cond.false43 cond.end46 for.inc233 loop_grid1_z cond.false54 cond.end57 for.cond60 cond.false66 cond.end69 for.inc229 for.body72 for.cond89 for.inc225 for.body100 for.cond148 for.end for.body150 lor.lhs.false lor.lhs.false157 if.then for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8774279757990800454
+DEBUG: assigning id = 8774279757990800454 to body of loop
+DEBUG: assigning id = 8985360254065455442 to loop with the following BBs:
+	for.cond15 cond.false20 cond.end23 loop_grid1_y cond.false31 cond.end34 for.cond37 cond.false43 cond.end46 for.inc233 loop_grid1_z cond.false54 cond.end57 for.cond60 cond.false66 cond.end69 for.inc229 for.body72 for.cond89 for.inc225 for.body100 for.cond148 for.end for.body150 lor.lhs.false lor.lhs.false157 if.then for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13987477391692841873
+DEBUG: assigning id = 13987477391692841873 to body of loop
+DEBUG: assigning id = 15204298126916849848 to loop with the following BBs:
+	for.cond37 cond.false43 cond.end46 loop_grid1_z cond.false54 cond.end57 for.cond60 cond.false66 cond.end69 for.inc229 for.body72 for.cond89 for.inc225 for.body100 for.cond148 for.end for.body150 lor.lhs.false lor.lhs.false157 if.then for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10197584139125417278
+DEBUG: assigning id = 10197584139125417278 to body of loop
+DEBUG: assigning id = 17627566953582262887 to loop with the following BBs:
+	for.cond60 cond.false66 cond.end69 for.body72 for.cond89 for.inc225 for.body100 for.cond148 for.end for.bMeta data for 6677497793097693965
+Meta data for 13117450918727830991
+ody150 lor.lhs.false lor.lhs.false157 if.then for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3896548342711503207
+DEBUG: assigning id = 3896548342711503207 to body of loop
+DEBUG: assigning id = 6677497793097693965 to loop with the following BBs:
+	for.cond89 for.body100 for.cond148 for.end for.body150 lor.lhs.false lor.lhs.false157 if.then for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8231795958216419715
+DEBUG: assigning id = 8231795958216419715 to body of loop
+DEBUG: assigning id = 13117450918727830991 to loop with the following BBs:
+	for.cond148 for.body150 lor.lhs.false lor.lhs.false157 if.then for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12810608787965730770
+DEBUG: assigning id = 12810608787965730770 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end248
+DEBUG: for.cond2 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc245
+DEBUG: for.cond6 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc241
+DEBUG: cond.end23 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc237
+DEBUG: cond.end46 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc233
+DEBUG: cond.end69 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc229
+DEBUG: for.cond89 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc225
+DEBUG: for.cond148 has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: Writing kremlib calls to md.kdump
+INFO: dumping function: md
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: llvm.memcpy.p0i8.p0i8.i64
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

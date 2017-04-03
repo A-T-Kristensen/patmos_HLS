@@ -1,0 +1,23 @@
+FUNC: md_kernel
+	14 : ?? : phi
+	19 : 31 : icmp
+	5 : 33 : add
+	17 : 48 : fadd
+	15 : ?? : phi
+	18 : 24 : icmp
+	1 : 25 : load
+	2 : 26 : load
+	3 : 27 : load
+	16 : ?? : phi
+	12 : ?? : phi
+	13 : ?? : phi
+	4 : 33 : load
+	7 : 35 : sext
+	6 : 35 : load
+	9 : 36 : sext
+	8 : 36 : load
+	11 : 37 : sext
+	10 : 37 : load
+	20 : 49 : fadd
+	21 : 50 : fadd
+

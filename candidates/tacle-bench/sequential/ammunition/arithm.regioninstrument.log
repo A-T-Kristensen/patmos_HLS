@@ -1,0 +1,767 @@
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 6580936810143831019, name: ammunition_add_unsigned_integer_without_overflow_reaction, fileName: arithm.c, startLine: 43, endLine: 43
+DEBUG: adding ammunition_add_unsigned_integer_without_overflow_reaction (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6580936810143831019)
+DEBUG: assigning function ammunition_add_unsigned_integer_without_overflow_reaction id 6580936810143831019
+DEBUG: new region: FuncRegion(id: 3864958961084288702, name: ammunition_subtract_unsigned_integer_without_overflow_reaction, fileName: arithm.c, startLine: 69, endLine: 69
+DEBUG: adding ammunition_subtract_unsigned_integer_without_overflow_reaction (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3864958961084288702)
+DEBUG: assigning function ammunition_subtract_unsigned_integer_without_overflow_reaction id 3864958961084288702
+DEBUG: new region: FuncRegion(id: 11000307209827520561, name: ammunition_make_complementary_code, fileName: arithm.c, startLine: 93, endLine: 93
+DEBUG: adding ammunition_make_complementary_code (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 11000307209827520561)
+DEBUG: assigning function ammunition_make_complementary_code id 11000307209827520561
+DEBUG: new region: FuncRegion(id: 16246256670196005902, name: ammunition_multiply_unsigned_integer_by_digit_without_overflow_reaction, fileName: arithm.c, startLine: 116, endLine: 116
+DEBUG: adding ammunition_multiply_unsigned_integer_by_digit_without_overflow_reaction (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 16246256670196005902)
+DEBUG: assigning function ammunition_multiply_unsigned_integer_by_digit_without_overflow_reaction id 16246256670196005902
+DEBUG: new region: FuncRegion(id: 17293615803859902282, name: ammunition_arithmetic_overflow_reaction, fileName: arithm.c, startLine: 141, endLine: 141
+DEBUG: adding ammunition_arithmetic_overflow_reaction (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17293615803859902282)
+DEBUG: assigning function ammunition_arithmetic_overflow_reaction id 17293615803859902282
+DEBUG: new region: FuncRegion(id: 950116228090375210, name: ammunition_arithmetic_unsigned_overflow_reaction, fileName: arithm.c, startLine: 149, endLine: 149
+DEBUG: adding ammunition_arithmetic_unsigned_overflow_reaction (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 950116228090375210)
+DEBUG: assigning function ammunition_arithmetic_unsigned_overflow_reaction id 950116228090375210
+DEBUG: new region: FuncRegion(id: 4638792989003540002, name: ammunition_add_unsigned_integer, fileName: arithm.c, startLine: 161, endLine: 161
+DEBUG: adding ammunition_add_unsigned_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 4638792989003540002)
+DEBUG: assigning function ammunition_add_unsigned_integer id 4638792989003540002
+DEBUG: new region: FuncRegion(id: 2127568884603014552, name: ammunition_add_integer, fileName: arithm.c, startLine: 177, endLine: 177
+DEBUG: adding ammunition_add_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2127568884603014552)
+DEBUG: assigning function ammunition_add_integer id 2127568884603014552
+DEBUG: new region: FuncRegion(id: 13945866967415506862, name: ammunition_subtract_unsigned_integer, fileName: arithm.c, startLine: 203, endLine: 203
+DEBUG: adding ammunition_subtract_unsigned_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 13945866967415506862)
+DEBUG: assigning function ammunition_subtract_unsigned_integer id 13945866967415506862
+DEBUG: new region: FuncRegion(id: 10140993583112838589, name: ammunition_subtract_integer, fileName: arithm.c, startLine: 220, endLine: 220
+DEBUG: adding ammunition_subtract_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 10140993583112838589)
+DEBUG: assigning function ammunition_subtract_integer id 10140993583112838589
+DEBUG: new region: FuncRegion(id: 2392327470081317175, name: ammunition_multiply_unsigned_integer_without_overflow_reaction, fileName: arithm.c, startLine: 244, endLine: 244
+DEBUG: adding ammunition_multiply_unsigned_integer_without_overflow_reaction (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2392327470081317175)
+DEBUG: assigning function ammunition_multiply_unsigned_integer_without_overflow_reaction id 2392327470081317175
+DEBUG: new region: FuncRegion(id: 8215749280161057285, name: ammunition_multiply_unsigned_integer, fileName: arithm.c, startLine: 295, endLine: 295
+DEBUG: adding ammunition_multiply_unsigned_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 8215749280161057285)
+DEBUG: assigning function ammunition_multiply_unsigned_integer id 8215749280161057285
+DEBUG: new region: FuncRegion(id: 6182416376656845390, name: ammunition_multiply_integer, fileName: arithm.c, startLine: 312, endLine: 312
+DEBUG: adding ammunition_multiply_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6182416376656845390)
+DEBUG: assigning function ammunition_multiply_integer id 6182416376656845390
+DEBUG: new region: FuncRegion(id: 863704263440403781, name: ammunition_divide_unsigned_integer_without_overflow_reaction, fileName: arithm.c, startLine: 361, endLine: 361
+DEBUG: adding ammunition_divide_unsigned_integer_without_overflow_reaction (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 863704263440403781)
+DEBUG: assigning function ammunition_divide_unsigned_integer_without_overflow_reaction id 863704263440403781
+DEBUG: new region: FuncRegion(id: 1423626482936756939, name: ammunition_divide_unsigned_integer, fileName: arithm.c, startLine: 485, endLine: 485
+DEBUG: adding ammunition_divide_unsigned_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 1423626482936756939)
+DEBUG: assigning function ammunition_divide_unsigned_integer id 1423626482936756939
+DEBUG: new region: FuncRegion(id: 14018725462908787369, name: ammunition_divide_integer, fileName: arithm.c, startLine: 501, endLine: 501
+DEBUG: adding ammunition_divide_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14018725462908787369)
+DEBUG: assigning function ammunition_divide_integer id 14018725462908787369
+DEBUG: new region: FuncRegion(id: 9578609858353164913, name: ammunition_unsigned_integer_remainder, fileName: arithm.c, startLine: 551, endLine: 551
+DEBUG: adding ammunition_unsigned_integer_remainder (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 9578609858353164913)
+DEBUG: assigning function ammunition_unsigned_integer_remainder id 9578609858353164913
+DEBUG: new region: FuncRegion(id: 12834783603577254754, name: ammunition_unsigned_integer_shift_right, fileName: arithm.c, startLine: 579, endLine: 579
+DEBUG: adding ammunition_unsigned_integer_shift_right (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12834783603577254754)
+DEBUG: assigning function ammunition_unsigned_integer_shift_right id 12834783603577254754
+DEBUG: new region: FuncRegion(id: 8286630832073378864, name: ammunition_unsigned_integer_shift_left, fileName: arithm.c, startLine: 695, endLine: 695
+DEBUG: adding ammunition_unsigned_integer_shift_left (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 8286630832073378864)
+DEBUG: assigning function ammunition_unsigned_integer_shift_left id 8286630832073378864
+DEBUG: new region: FuncRegion(id: 1018555459832480750, name: ammunition_integer_shift_right, fileName: arithm.c, startLine: 635, endLine: 635
+DEBUG: adding ammunition_integer_shift_right (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 1018555459832480750)
+DEBUG: assigning function ammunition_integer_shift_right id 1018555459832480750
+DEBUG: new region: FuncRegion(id: 13448800198591570048, name: ammunition_integer_shift_left, fileName: arithm.c, startLine: 751, endLine: 751
+DEBUG: adding ammunition_integer_shift_left (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 13448800198591570048)
+DEBUG: assigning function ammunition_integer_shift_left id 13448800198591570048
+DEBUG: new region: FuncRegion(id: 2026105577929384044, name: ammunition_integer_or, fileName: arithm.c, startLine: 812, endLine: 812
+DEBUG: adding ammunition_integer_or (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2026105577929384044)
+DEBUG: assigning function ammunition_integer_or id 2026105577929384044
+DEBUG: new region: FuncRegion(id: 13939479392486257461, name: ammunition_unsigned_integer_or, fileName: arithm.c, startLine: 829, endLine: 829
+DEBUG: adding ammunition_unsigned_integer_or (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 13939479392486257461)
+DEBUG: assigning function ammunition_unsigned_integer_or id 13939479392486257461
+DEBUG: new region: FuncRegion(id: 5959025998023103885, name: ammunition_integer_and, fileName: arithm.c, startLine: 839, endLine: 839
+DEBUG: adding ammunition_integer_and (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 5959025998023103885)
+DEBUG: assigning function ammunition_integer_and id 5959025998023103885
+DEBUG: new region: FuncRegion(id: 14822837727418684950, name: ammunition_unsigned_integer_and, fileName: arithm.c, startLine: 856, endLine: 856
+DEBUG: adding ammunition_unsigned_integer_and (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14822837727418684950)
+DEBUG: assigning function ammunition_unsigned_integer_and id 14822837727418684950
+DEBUG: new region: FuncRegion(id: 2626170684574793034, name: ammunition_integer_not, fileName: arithm.c, startLine: 866, endLine: 866
+DEBUG: adding ammunition_integer_not (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2626170684574793034)
+DEBUG: assigning function ammunition_integer_not id 2626170684574793034
+DEBUG: new region: FuncRegion(id: 345189948639057087, name: ammunition_unsigned_integer_not, fileName: arithm.c, startLine: 881, endLine: 881
+DEBUG: adding ammunition_unsigned_integer_not (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 345189948639057087)
+DEBUG: assigning function ammunition_unsigned_integer_not id 345189948639057087
+DEBUG: new region: FuncRegion(id: 5488900904900832047, name: ammunition_eq_unsigned_integer, fileName: arithm.c, startLine: 896, endLine: 896
+DEBUG: adding ammunition_eq_unsigned_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 5488900904900832047)
+DEBUG: assigning function ammunition_eq_unsigned_integer id 5488900904900832047
+DEBUG: new region: FuncRegion(id: 6543670896201543201, name: ammunition_eq_integer, fileName: arithm.c, startLine: 905, endLine: 905
+DEBUG: adding ammunition_eq_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6543670896201543201)
+DEBUG: assigning function ammunition_eq_integer id 6543670896201543201
+DEBUG: new region: FuncRegion(id: 11230534868376698789, name: ammunition_ne_unsigned_integer, fileName: arithm.c, startLine: 915, endLine: 915
+DEBUG: adding ammunition_ne_unsigned_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 11230534868376698789)
+DEBUG: assigning function ammunition_ne_unsigned_integer id 11230534868376698789
+DEBUG: new region: FuncRegion(id: 11470672746389609013, name: ammunition_ne_integer, fileName: arithm.c, startLine: 924, endLine: 924
+DEBUG: adding ammunition_ne_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 11470672746389609013)
+DEBUG: assigning function ammunition_ne_integer id 11470672746389609013
+DEBUG: new region: FuncRegion(id: 14153242370384372638, name: ammunition_bytes_comparison, fileName: arithm.c, startLine: 936, endLine: 936
+DEBUG: adding ammunition_bytes_comparison (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14153242370384372638)
+DEBUG: assigning function ammunition_bytes_comparison id 14153242370384372638
+DEBUG: new region: FuncRegion(id: 5618897305615596752, name: ammunition_gt_unsigned_integer, fileName: arithm.c, startLine: 962, endLine: 962
+DEBUG: adding ammunition_gt_unsigned_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 5618897305615596752)
+DEBUG: assigning function ammunition_gt_unsigned_integer id 5618897305615596752
+DEBUG: new region: FuncRegion(id: 14838935418891487355, name: ammunition_gt_integer, fileName: arithm.c, startLine: 971, endLine: 971
+DEBUG: adding ammunition_gt_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14838935418891487355)
+DEBUG: assigning function ammunition_gt_integer id 14838935418891487355
+DEBUG: new region: FuncRegion(id: 12375720529882129679, name: ammunition_lt_unsigned_integer, fileName: arithm.c, startLine: 991, endLine: 991
+DEBUG: adding ammunition_lt_unsigned_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12375720529882129679)
+DEBUG: assigning function ammunition_lt_unsigned_integer id 12375720529882129679
+DEBUG: new region: FuncRegion(id: 1808193277086043806, name: ammunition_lt_integer, fileName: arithm.c, startLine: 1001, endLine: 1001
+DEBUG: adding ammunition_lt_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 1808193277086043806)
+DEBUG: assigning function ammunition_lt_integer id 1808193277086043806
+DEBUG: new region: FuncRegion(id: 12386971894474098973, name: ammunition_ge_unsigned_integer, fileName: arithm.c, startLine: 1021, endLine: 1021
+DEBUG: adding ammunition_ge_unsigned_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12386971894474098973)
+DEBUG: assigning function ammunition_ge_unsigned_integer id 12386971894474098973
+DEBUG: new region: FuncRegion(id: 1676784608638847384, name: ammunition_ge_integer, fileName: arithm.c, startLine: 1032, endLine: 1032
+DEBUG: adding ammunition_ge_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 1676784608638847384)
+DEBUG: assigning function ammunition_ge_integer id 1676784608638847384
+DEBUG: new region: FuncRegion(id: 5763498089624625062, name: ammunition_le_unsigned_integer, fileName: arithm.c, startLine: 1052, endLine: 1052
+DEBUG: adding ammunition_le_unsigned_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 5763498089624625062)
+DEBUG: assigning function ammunition_le_unsigned_integer id 5763498089624625062
+DEBUG: new region: FuncRegion(id: 772792584178043243, name: ammunition_le_integer, fileName: arithm.c, startLine: 1063, endLine: 1063
+DEBUG: adding ammunition_le_integer (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 772792584178043243)
+DEBUG: assigning function ammunition_le_integer id 772792584178043243
+DEBUG: new region: FuncRegion(id: 10064226918589155061, name: ammunition_change_unsigned_integer_size, fileName: arithm.c, startLine: 1087, endLine: 1087
+DEBUG: adding ammunition_change_unsigned_integer_size (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 10064226918589155061)
+DEBUG: assigning function ammunition_change_unsigned_integer_size id 10064226918589155061
+DEBUG: new region: FuncRegion(id: 14152896066368475683, name: ammunition_change_integer_size, fileName: arithm.c, startLine: 1120, endLine: 1120
+DEBUG: adding ammunition_change_integer_size (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14152896066368475683)
+DEBUG: assigning function ammunition_change_integer_size id 14152896066368475683
+DEBUG: new region: FuncRegion(id: 15440765241294079473, name: ammunition_unsigned_integer_to_based_string, fileName: arithm.c, startLine: 1166, endLine: 1166
+DEBUG: adding ammunition_unsigned_integer_to_based_string (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 15440765241294079473)
+DEBUG: assigning function ammunition_unsigned_integer_to_based_string id 15440765241294079473
+DEBUG: new region: FuncRegion(id: 16079086407868348655, name: ammunition_unsigned_integer_to_string, fileName: arithm.c, startLine: 1211, endLine: 1211
+DEBUG: adding ammunition_unsigned_integer_to_string (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 16079086407868348655)
+DEBUG: assigning function ammunition_unsigned_integer_to_string id 16079086407868348655
+DEBUG: new region: FuncRegion(id: 12196993465531339956, name: ammunition_integer_to_based_string, fileName: arithm.c, startLine: 1226, endLine: 1226
+DEBUG: adding ammunition_integer_to_based_string (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12196993465531339956)
+DEBUG: assigning function ammunition_integer_to_based_string id 12196993465531339956
+DEBUG: new region: FuncRegion(id: 1041032272457773628, name: ammunition_integer_to_string, fileName: arithm.c, startLine: 1250, endLine: 1250
+DEBUG: adding ammunition_integer_to_string (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 1041032272457773628)
+DEBUG: assigning function ammunition_integer_to_string id 1041032272457773628
+DEBUG: new region: FuncRegion(id: 12379803978056726962, name: ammunition_add_digit_to_unsigned_integer_without_overflow_reaction, fileName: arithm.c, startLine: 1262, endLine: 1262
+DEBUG: adding ammunition_add_digit_to_unsigned_integer_without_overflow_reaction (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12379803978056726962)
+DEBUG: assigning function ammunition_add_digit_to_unsigned_integer_without_overflow_reaction id 12379803978056726962
+DEBUG: new region: FuncRegion(id: 4731856180059736467, name: ammunition_string_to_unsigned_integer_without_overflow_reaction, fileName: arithm.c, startLine: 1291, endLine: 1291
+DEBUG: adding ammunition_string_to_unsigned_integer_without_overflow_reaction (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 4731856180059736467)
+DEBUG: assigning function ammunition_string_to_unsigned_integer_without_overflow_reaction id 4731856180059736467
+DEBUG: new region: FuncRegion(id: 3112512495565164008, name: ammunit!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x1ffca40>, <0x1ff37b0>, <0x1ffc958>, <0x200f790>, <0x1ffe938>, <0x1ff37b0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/sequential/ammunition/arithm.c] [DW_LANG_C99]
+
+!{!"0x2e\00ammunition_add_unsigned_integer_without_overflow_reaction\00ammunition_add_unsigned_integer_without_overflow_reaction\00\0043\000\001\000\000\00256\000\0045", <0x1ffca40>, <0x1ff31a0>, <0x1ffd790>, null, i32 (i32, i8*, i8*, i8*)* @ammunition_add_unsigned_integer_without_overflow_reaction, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 43] [def] [scope 45] [ammunition_add_unsigned_integer_without_overflow_reaction]
+
+!{!"0x2e\00ammunition_subtract_unsigned_integer_without_overflow_reaction\00ammunition_subtract_unsigned_integer_without_overflow_reaction\00\0069\000\001\000\000\00256\000\0071", <0x1ffca40>, <0x1ff31a0>, <0x1ffd790>, null, i32 (i32, i8*, i8*, i8*)* @ammunition_subtract_unsigned_integer_without_overflow_reaction, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 69] [def] [scope 71] [ammunition_subtract_unsigned_integer_without_overflow_reaction]
+
+!{!"0x2e\00ammunition_make_complementary_code\00ammunition_make_complementary_code\00\0093\000\001\000\000\00256\000\0095", <0x1ffca40>, <0x1ff31a0>, <0x1ffe900>, null, void (i32, i8*, i8*)* @ammunition_make_complementary_code, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 93] [def] [scope 95] [ammunition_make_complementary_code]
+
+!{!"0x2e\00ammunition_multiply_unsigned_integer_by_digit_without_overflow_reaction\00ammunition_multiply_unsigned_integer_by_digit_without_overflow_reaction\00\00116\000\001\000\000\00256\000\00118", <0x1ffca40>, <0x1ff31a0>, <0x1ffed30>, null, i32 (i32, i8*, i32)* @ammunition_multiply_unsigned_integer_by_digit_without_overflow_reaction, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 116] [def] [scope 118] [ammunition_multiply_unsigned_integer_by_digit_without_overflow_reaction]
+
+!{!"0x2e\00ammunition_arithmetic_overflow_reaction\00ammunition_arithmetic_overflow_reaction\00\00141\000\001\000\000\00256\000\00142", <0x1ffca40>, <0x1ff31a0>, <0x1ffef50>, null, void ()* @ammunition_arithmetic_overflow_reaction, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 141] [def] [scope 142] [ammunition_arithmetic_overflow_reaction]
+
+!{!"0x2e\00ammunition_arithmetic_unsigned_overflow_reaction\00ammunition_arithmetic_unsigned_overflow_reaction\00\00149\000\001\000\000\00256\000\00150", <0x1ffca40>, <0x1ff31a0>, <0x1ffef50>, null, void ()* @ammunition_arithmetic_unsigned_overflow_reaction, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 149] [def] [scope 150] [ammunition_arithmetic_unsigned_overflow_reaction]
+
+!{!"0x2e\00ammunition_add_unsigned_integer\00ammunition_add_unsigned_integer\00\00161\000\001\000\000\00256\000\00163", <0x1ffca40>, <0x1ff31a0>, <0x1fff310>, null, void (i32, i8*, i8*, i8*)* @ammunition_add_unsigned_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 161] [def] [scope 163] [ammunition_add_unsigned_integer]
+
+!{!"0x2e\00ammunition_add_integer\00ammunition_add_integer\00\00177\000\001\000\000\00256\000\00179", <0x1ffca40>, <0x1ff31a0>, <0x1fff310>, null, void (i32, i8*, i8*, i8*)* @ammunition_add_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 177] [def] [scope 179] [ammunition_add_integer]
+
+!{!"0x2e\00ammunition_subtract_unsigned_integer\00ammunition_subtract_unsigned_integer\00\00203\000\001\000\000\00256\000\00206", <0x1ffca40>, <0x1ff31a0>, <0x1fff310>, null, void (i32, i8*, i8*, i8*)* @ammunition_subtract_unsigned_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 203] [def] [scope 206] [ammunition_subtract_unsigned_integer]
+
+!{!"0x2e\00ammunition_subtract_integer\00ammunition_subtract_integer\00\00220\000\001\000\000\00256\000\00222", <0x1ffca40>, <0x1ff31a0>, <0x1fff310>, null, void (i32, i8*, i8*, i8*)* @ammunition_subtract_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 220] [def] [scope 222] [ammunition_subtract_integer]
+
+!{!"0x2e\00ammunition_multiply_unsigned_integer_without_overflow_reaction\00ammunition_multiply_unsigned_integer_without_overflow_reaction\00\00244\000\001\000\000\00256\000\00246", <0x1ffca40>, <0x1ff31a0>, <0x1ffd790>, null, i32 (i32, i8*, i8*, i8*)* @ammunition_multiply_unsigned_integer_without_overflow_reaction, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 244] [def] [scope 246] [ammunition_multiply_unsigned_integer_without_overflow_reaction]
+
+!{!"0x2e\00ammunition_multiply_unsigned_integer\00ammunition_multiply_unsigned_integer\00\00295\000\001\000\000\00256\000\00298", <0x1ffca40>, <0x1ff31a0>, <0x1fff310>, null, void (i32, i8*, i8*, i8*)* @ammunition_multiply_unsigned_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 295] [def] [scope 298] [ammunition_multiply_unsigned_integer]
+
+!{!"0x2e\00ammunition_multiply_integer\00ammunition_multiply_integer\00\00312\000\001\000\000\00256\000\00314", <0x1ffca40>, <0x1ff31a0>, <0x1fff310>, null, void (i32, i8*, i8*, i8*)* @ammunition_multiply_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 312] [def] [scope 314] [ammunition_multiply_integer]
+
+!{!"0x2e\00ammunition_divide_unsigned_integer_without_overflow_reaction\00ammunition_divide_unsigned_integer_without_overflow_reaction\00\00361\000\001\000\000\00256\000\00363", <0x1ffca40>, <0x1ff31a0>, <0x1ffd790>, null, i32 (i32, i8*, i8*, i8*)* @ammunition_divide_unsigned_integer_without_overflow_reaction, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 361] [def] [scope 363] [ammunition_divide_unsigned_integer_without_overflow_reaction]
+
+!{!"0x2e\00ammunition_divide_unsigned_integer\00ammunition_divide_unsigned_integer\00\00485\000\001\000\000\00256\000\00487", <0x1ffca40>, <0x1ff31a0>, <0x1fff310>, null, void (i32, i8*, i8*, i8*)* @ammunition_divide_unsigned_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 485] [def] [scope 487] [ammunition_divide_unsigned_integer]
+
+!{!"0x2e\00ammunition_divide_integer\00ammunition_divide_integer\00\00501\000\001\000\000\00256\000\00503", <0x1ffca40>, <0x1ff31a0>, <0x1fff310>, null, void (i32, i8*, i8*, i8*)* @ammunition_divide_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 501] [def] [scope 503] [ammunition_divide_integer]
+
+!{!"0x2e\00ammunition_unsigned_integer_remainder\00ammunition_unsigned_integer_remainder\00\00551\000\001\000\000\00256\000\00554", <0x1ffca40>, <0x1ff31a0>, <0x1fff310>, null, void (i32, i8*, i8*, i8*)* @ammunition_unsigned_integer_remainder, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 551] [def] [scope 554] [ammunition_unsigned_integer_remainder]
+
+!{!"0x2e\00ammunition_unsigned_integer_shift_right\00ammunition_unsigned_integer_shift_right\00\00579\000\001\000\000\00256\000\00581", <0x1ffca40>, <0x1ff31a0>, <0x20035c0>, null, void (i32, i8*, i32, i8*)* @ammunition_unsigned_integer_shift_right, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 579] [def] [scope 581] [ammunition_unsigned_integer_shift_right]
+
+!{!"0x2e\00ammunition_integer_shift_right\00ammunition_integer_shift_right\00\00635\000\001\000\000\00256\000\00637", <0x1ffca40>, <0x1ff31a0>, <0x20035c0>, null, void (i32, i8*, i32, i8*)* @ammunition_integer_shift_right, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 635] [def] [scope 637] [ammunition_integer_shift_right]
+
+!{!"0x2e\00ammunition_unsigned_integer_shift_left\00ammunition_unsigned_integer_shift_left\00\00695\000\001\000\000\00256\000\00697", <0x1ffca40>, <0x1ff31a0>, <0x20035c0>, null, void (i32, i8*, i32, i8*)* @ammunition_unsigned_integer_shift_left, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 695] [def] [scope 697] [ammunition_unsigned_integer_shift_left]
+
+!{!"0x2e\00ammunition_integer_shift_left\00ammunition_integer_shift_left\00\00751\000\001\000\000\00256\000\00753", <0x1ffca40>, <0x1ff31a0>, <0x20035c0>, null, void (i32, i8*, i32, i8*)* @ammunition_integer_shift_left, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 751] [def] [scope 753] [ammunition_integer_shift_left]
+
+!{!"0x2e\00ammunition_integer_or\00ammunition_integer_or\00\00812\000\001\000\000\00256\000\00814", <0x1ffca40>, <0x1ff31a0>, <0x1fff310>, null, void (i32, i8*, i8*, i8*)* @ammunition_integer_or, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 812] [def] [scope 814] [ammunition_integer_or]
+
+!{!"0x2e\00ammunition_unsigned_integer_or\00ammunition_unsigned_integer_or\00\00829\000\001\000\000\00256\000\00831", <0x1ffca40>, <0x1ff31a0>, <0x1fff310>, null, void (i32, i8*, i8*, i8*)* @ammunition_unsigned_integer_or, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 829] [def] [scope 831] [ammunition_unsigned_integer_or]
+
+!{!"0x2e\00ammunition_integer_and\00ammunition_integer_and\00\00839\000\001\000\000\00256\000\00841", <0x1ffca40>, <0x1ff31a0>, <0x1fff310>, null, void (i32, i8*, i8*, i8*)* @ammunition_integer_and, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 839] [def] [scope 841] [ammunition_integer_and]
+
+!{!"0x2e\00ammunition_unsigned_integer_and\00ammunition_unsigned_integer_and\00\00856\000\001\000\000\00256\000\00858", <0x1ffca40>, <0x1ff31a0>, <0x1fff310>, null, void (i32, i8*, i8*, i8*)* @ammunition_unsigned_integer_and, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 856] [def] [scope 858] [ammunition_unsigned_integer_and]
+
+!{!"0x2e\00ammunition_integer_not\00ammunition_integer_not\00\00866\000\001\000\000\00256\000\00867", <0x1ffca40>, <0x1ff31a0>, <0x1ffe900>, null, void (i32, i8*, i8*)* @ammunition_integer_not, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 866] [def] [scope 867] [ammunition_integer_not]
+
+!{!"0x2e\00ammunition_unsigned_integer_not\00ammunition_unsigned_integer_not\00\00881\000\001\000\000\00256\000\00882", <0x1ffca40>, <0x1ff31a0>, <0x1ffe900>, null, void (i32, i8*, i8*)* @ammunition_unsigned_integer_not, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 881] [def] [scope 882] [ammunition_unsigned_integer_not]
+
+!{!"0x2e\00ammunition_eq_unsigned_integer\00ammunition_eq_unsigned_integer\00\00896\000\001\000\000\00256\000\00897", <0x1ffca40>, <0x1ff31a0>, <0x2004690>, null, i32 (i32, i8*, i8*)* @ammunition_eq_unsigned_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 896] [def] [scope 897] [ammunition_eq_unsigned_integer]
+
+!{!"0x2e\00ammunition_eq_integer\00ammunition_eq_integer\00\00905\000\001\000\000\00256\000\00906", <0x1ffca40>, <0x1ff31a0>, <0x2004690>, null, i32 (i32, i8*, i8*)* @ammunition_eq_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 905] [def] [scope 906] [ammunition_eq_integer]
+
+!{!"0x2e\00ammunition_ne_unsigned_integer\00ammunition_ne_unsigned_integer\00\00915\000\001\000\000\00256\000\00916", <0x1ffca40>, <0x1ff31a0>, <0x2004690>, null, i32 (i32, i8*, i8*)* @ammunition_ne_unsigned_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 915] [def] [scope 916] [ammunition_ne_unsigned_integer]
+
+!{!"0x2e\00ammunition_ne_integer\00ammunition_ne_integer\00\00924\000\001\000\000\00256\000\00925", <0x1ffca40>, <0x1ff31a0>, <0x2004690>, null, i32 (i32, i8*, i8*)* @ammunition_ne_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 924] [def] [scope 925] [ammunition_ne_integer]
+
+!{!"0x2e\00ammunition_bytes_comparison\00ammunition_bytes_comparison\00\00936\000\001\000\000\00256\000\00937", <0x1ffca40>, <0x1ff31a0>, <0x200cb60>, null, i32 (i8*, i8*, i32)* @ammunition_bytes_comparison, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 936] [def] [scope 937] [ammunition_bytes_comparison]
+
+!{!"0x2e\00ammunition_gt_unsigned_integer\00ammunition_gt_unsigned_integer\00\00962\000\001\000\000\00256\000\00963", <0x1ffca40>, <0x1ff31a0>, <0x2004690>, null, i32 (i32, i8*, i8*)* @ammunition_gt_unsigned_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 962] [def] [scope 963] [ammunition_gt_unsigned_integer]
+
+!{!"0x2e\00ammunition_gt_integer\00ammunition_gt_integer\00\00971\000\001\000\000\00256\000\00972", <0x1ffca40>, <0x1ff31a0>, <0x2004690>, null, i32 (i32, i8*, i8*)* @ammunition_gt_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 971] [def] [scope 972] [ammunition_gt_integer]
+
+!{!"0x2e\00ammunition_lt_unsigned_integer\00ammunition_lt_unsigned_integer\00\00991\000\001\000\000\00256\000\00992", <0x1ffca40>, <0x1ff31a0>, <0x2004690>, null, i32 (i32, i8*, i8*)* @ammunition_lt_unsigned_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 991] [def] [scope 992] [ammunition_lt_unsigned_integer]
+
+!{!"0x2e\00ammunition_lt_integer\00ammunition_lt_integer\00\001001\000\001\000\000\00256\000\001002", <0x1ffca40>, <0x1ff31a0>, <0x2004690>, null, i32 (i32, i8*, i8*)* @ammunition_lt_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 1001] [def] [scope 1002] [ammunition_lt_integer]
+
+!{!"0x2e\00ammunition_ge_unsigned_integer\00ammunition_ge_unsigned_integer\00\001021\000\001\000\000\00256\000\001022", <0x1ffca40>, <0x1ff31a0>, <0x2004690>, null, i32 (i32, i8*, i8*)* @ammunition_ge_unsigned_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 1021] [def] [scope 1022] [ammunition_ge_unsigned_integer]
+
+!{!"0x2e\00ammunition_ge_integer\00ammunition_ge_integer\00\001032\000\001\000\000\00256\000\001033", <0x1ffca40>, <0x1ff31a0>, <0x2004690>, null, i32 (i32, i8*, i8*)* @ammunition_ge_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 1032] [def] [scope 1033] [ammunition_ge_integer]
+
+!{!"0x2e\00ammunition_le_unsigned_integer\00ammunition_le_unsigned_integer\00\001052\000\001\000\000\00256\000\001053", <0x1ffca40>, <0x1ff31a0>, <0x2004690>, null, i32 (i32, i8*, i8*)* @ammunition_le_unsigned_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 1052] [def] [scope 1053] [ammunition_le_unsigned_integer]
+
+!{!"0x2e\00ammunition_le_integer\00ammunition_le_integer\00\001063\000\001\000\000\00256\000\001064", <0x1ffca40>, <0x1ff31a0>, <0x2004690>, null, i32 (i32, i8*, i8*)* @ammunition_le_integer, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 1063] [def] [scope 1064] [ammunition_le_integer]
+
+!{!"0x2e\00ammunition_change_unsigned_integer_size\00ammunition_change_unsigned_integer_size\00\001087\000\001\000\000\00256\000\001089", <0x1ffca40>, <0x1ff31a0>, <0x20035c0>, null, void (i32, i8*, i32, i8*)* @ammunition_change_unsigned_integer_size, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 1087] [def] [scope 1089] [ammunition_change_unsigned_integer_size]
+
+!{!"0x2e\00ammunition_change_integer_size\00ammunition_change_integer_size\00\001120\000\001\000\000\00256\000\001122", <0x1ffca40>, <0x1ff31a0>, <0x20035c0>, null, void (i32, i8*, i32, i8*)* @ammunition_change_integer_size, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 1120] [def] [scope 1122] [ammunition_change_integer_size]
+
+!{!"0x2e\00ammunition_unsigned_integer_to_based_string\00ammunition_unsigned_integer_to_based_string\00\001166\000\001\000\000\00256\000\001169", <0x1ffca40>, <0x1ff31a0>, <0x200e0c0>, null, i8* (i32, i8*, i32, i8*)* @ammunition_unsigned_integer_to_based_string, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 1166] [def] [scope 1169] [ammunition_unsigned_integer_to_based_string]
+
+!{!"0x2e\00ammunition_unsigned_integer_to_string\00ammunition_unsigned_integer_to_string\00\001211\000\001\000\000\00256\000\001213", <0x1ffca40>, <0x1ff31a0>, <0x200e310>, null, i8* (i32, i8*, i8*)* @ammunition_unsigned_integer_to_string, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 1211] [def] [scope 1213] [ammunition_unsigned_integer_to_string]
+
+!{!"0x2e\00ammunition_integer_to_based_string\00ammunition_integer_to_based_string\00\001226\000\001\000\000\00256\000\001228", <0x1ffca40>, <0x1ff31a0>, <0x200e0c0>, null, i8* (i32, i8*, i32, i8*)* @ammunition_integer_to_based_string, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 1226] [def] [scope 1228] [ammunition_integer_to_based_string]
+
+!{!"0x2e\00ammunition_integer_to_string\00ammunition_integer_to_string\00\001250\000\001\000\000\00256\000\001251", <0x1ffca40>, <0x1ff31a0>, <0x200e310>, null, i8* (i32, i8*, i8*)* @ammunition_integer_to_string, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 1250] [def] [scope 1251] [ammunition_integer_to_string]
+
+!{!"0x2e\00ammunition_add_digit_to_unsigned_integer_without_overflow_reaction\00ammunition_add_digit_to_unsigned_integer_without_overflow_reaction\00\001262\000\001\000\000\00256\000\001264", <0x1ffca40>, <0x1ff31a0>, <0x1ffed30>, null, i32 (i32, i8*, i32)* @ammunition_add_digit_to_unsigned_integer_without_overflow_reaction, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 1262] [def] [scope 1264] [ammunition_add_digit_to_unsigned_integer_without_overflow_reaction]
+
+!{!"0x2e\00ammunition_string_to_unsigned_integer_without_overflow_reaction\00ammunition_string_to_unsigned_integer_without_overflow_reaction\00\001291\000\001\000\000\00256\000\001293", <0x1ffca40>, <0x1ff31a0>, <0x200eb10>, null, i32 (i32, i8*, i8*, i8**)* @ammunition_string_to_unsigned_integer_without_overflow_reaction, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 1291] [def] [scope 1293] [ammunition_string_to_unsigned_integer_without_overflow_reaction]
+
+!{!"0x2e\00ammunition_unsigned_integer_from_string\00ammunition_unsigned_integer_from_string\00\001323\000\001\000\000\00256\000\001325", <0x1ffca40>, <0x1ff31a0>, <0x1ffe480>, null, i8* (i32, i8*, i8*)* @ammunition_unsigned_integer_from_string, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 1323] [def] [scope 1325] [ammunition_unsigned_integer_from_string]
+
+!{!"0x2e\00ammunition_integer_from_string\00ammunition_integer_from_string\00\001350\000\001\000\000\00256\000\001351", <0x1ffca40>, <0x1ff31a0>, <0x1ffe480>, null, i8* (i32, i8*, i8*)* @ammunition_integer_from_string, null, null, <0x1ff37b0>} ; [ DW_TAG_subprogram ] [line 1350] [def] [scope 1351] [ammunition_integer_from_string]
+
+!{!"0x34\00ammunition_overflow_bit\00ammunition_overflow_bit\00\0036\000\001", null, <0x1ff31a0>, <0x1ffc898>, i32* @ammunition_overflow_bit, null} ; [ DW_TAG_variable ] [ammunition_overflow_bit] [line 36] [def]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x1ff3548>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x1ffc8e0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, null} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, null} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x1ffeb30>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x1ffec10>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x24\00unsigned int\000\0032\0032\000\000\007", null, null} ; [ DW_TAG_base_type ] [unsigned int] [line 0, size 32, align 32, offset 0, enc DW_ATE_unsigned]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x1ff3978>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x1ffed88>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2003558>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x1ff3780>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x1fffaa0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x200ce58>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x1ffd908>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from char]
+
+!{!"0x24\00char\000\008\008\000\000\006", null, null} ; [ DW_TAG_base_type ] [char] [line 0, size 8, align 8, offset 0, enc DW_ATE_signed_char]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x200e2a0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x200eaa8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x200e7a0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x1ffd908>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from char]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x1ffd950>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x1ff3720>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x1ff3878>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from unsigned char]
+
+!{!"0x24\00unsigned char\000\008\008\000\000\008", null, null} ; [ DW_TAG_base_type ] [unsigned char] [line 0, size 8, align 8, offset 0, enc DW_ATE_unsigned_char]
+
+!{!"0x16\00size_t\005\000\000\000\000", <0x1ffcb00>, null, <0x1ffcb88>} ; [ DW_TAG_typedef ] [size_t] [line 5, size 0, align 0, offset 0] [from unsigned int]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x1ffcbd0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x1ff3878>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from unsigned char]
+
+!{!"0x24\00long unsigned int\000\0064\0064\000\000\007", null, null} ; [ DW_TAG_base_type ] [long unsigned int] [line 0, size 64, align 64, offset 0, enc DW_ATE_unsigned]
+
+Meta data for 10755250974748682545
+Meta data for 17335549094700418310
+Meta data for 4508333549892627686
+Meta data for 11555728711924515231
+ion_unsigned_integer_from_string, fileName: arithm.c, startLine: 1323, endLine: 1323
+DEBUG: adding ammunition_unsigned_integer_from_string (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3112512495565164008)
+DEBUG: assigning function ammunition_unsigned_integer_from_string id 3112512495565164008
+DEBUG: new region: FuncRegion(id: 11444195690337076634, name: ammunition_integer_from_string, fileName: arithm.c, startLine: 1350, endLine: 1350
+DEBUG: adding ammunition_integer_from_string (in module: arithm.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 11444195690337076634)
+DEBUG: assigning function ammunition_integer_from_string id 11444195690337076634
+DEBUG: found 50 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: ammunition_add_unsigned_integer_without_overflow_reaction is 6580936810143831019
+DEBUG: found 1 loops in function ammunition_add_unsigned_integer_without_overflow_reaction
+DEBUG: assigning id = 10755250974748682545 to loop with the following BBs:
+	for.cond for.body if.else if.then if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11047368798974265321
+DEBUG: assigning id = 11047368798974265321 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: ammunition_subtract_unsigned_integer_without_overflow_reaction is 3864958961084288702
+DEBUG: found 1 loops in function ammunition_subtract_unsigned_integer_without_overflow_reaction
+DEBUG: assigning id = 17335549094700418310 to loop with the following BBs:
+	for.cond for.body if.else if.then if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7418661409233511024
+DEBUG: assigning id = 7418661409233511024 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: ammunition_make_complementary_code is 11000307209827520561
+DEBUG: found 1 loops in function ammunition_make_complementary_code
+DEBUG: assigning id = 4508333549892627686 to loop with the following BBs:
+	for.cond for.body if.else if.then if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4844895969601810873
+DEBUG: assigning id = 4844895969601810873 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: ammunition_multiply_unsigned_integer_by_digit_without_overflow_reaction is 16246256670196005902
+DEBUG: found 1 loops in function ammunition_multiply_unsigned_integer_by_digit_without_overflow_reaction
+DEBUG: assigning id = 11555728711924515231 to loop with the following BBs:
+	for.cond for.body if.else if.then if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 1116415089745932037
+DEBUG: assigning id = 1116415089745932037 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: ammunition_arithmetic_overflow_reaction is 17293615803859902282
+DEBUG: found 0 loops in function ammunition_arithmetic_overflow_reaction
+DEBUG: region name to id: ammunition_arithmetic_unsigned_overflow_reaction is 950116228090375210
+DEBUG: found 0 loops in function ammunition_arithmetic_unsigned_overflow_reaction
+DEBUG: region name to id: ammunition_add_unsigned_integer is 4638792989003540002
+DEBUG: found 0 loops in function ammunition_add_unsigned_integer
+DEBUG: region name to id: ammunition_add_integer is 2127568884603014552
+DEBUG: found 0 loops in function ammunition_add_integer
+DEBUG: region name to id: ammunition_subtract_unsigned_integer is 139458669674155Meta data for 4480737710711383876
+Meta data for 10184276574470030206
+Meta data for 15299844028648563542
+Meta data for 4919782214858866163
+Meta data for 192732590955167935
+Meta data for 9720370629427710168
+Meta data for 14139700217801751942
+06862
+DEBUG: found 0 loops in function ammunition_subtract_unsigned_integer
+DEBUG: region name to id: ammunition_subtract_integer is 10140993583112838589
+DEBUG: found 0 loops in function ammunition_subtract_integer
+DEBUG: region name to id: ammunition_multiply_unsigned_integer_without_overflow_reaction is 2392327470081317175
+DEBUG: found 3 loops in function ammunition_multiply_unsigned_integer_without_overflow_reaction
+DEBUG: assigning id = 4480737710711383876 to loop with the following BBs:
+	for.cond36 for.body39 for.inc47 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11661988627662398222
+DEBUG: assigning id = 11661988627662398222 to body of loop
+DEBUG: assigning id = 10184276574470030206 to loop with the following BBs:
+	for.cond for.body if.else if.then for.cond4 for.end for.inc32 for.body7 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13978260367264899793
+DEBUG: assigning id = 13978260367264899793 to body of loop
+DEBUG: assigning id = 15299844028648563542 to loop with the following BBs:
+	for.cond4 for.body7 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12868116111500308401
+DEBUG: assigning id = 12868116111500308401 to body of loop
+DEBUG: for.cond36 has 1 possible loop exit points
+DEBUG: 	target #0: for.end49.loopexit
+DEBUG: for.body39 has 1 possible loop exit points
+DEBUG: 	target #0: if.then45
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end34
+DEBUG: for.cond4 has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: ammunition_multiply_unsigned_integer is 8215749280161057285
+DEBUG: found 0 loops in function ammunition_multiply_unsigned_integer
+DEBUG: region name to id: ammunition_multiply_integer is 6182416376656845390
+DEBUG: found 0 loops in function ammunition_multiply_integer
+DEBUG: region name to id: ammunition_divide_unsigned_integer_without_overflow_reaction is 863704263440403781
+DEBUG: found 4 loops in function ammunition_divide_unsigned_integer_without_overflow_reaction
+DEBUG: assigning id = 4919782214858866163 to loop with the following BBs:
+	for.cond13 for.body16 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6109104536423716352
+DEBUG: assigning id = 6109104536423716352 to body of loop
+DEBUG: assigning id = 192732590955167935 to loop with the following BBs:
+	for.cond44 for.body47 if.else57 if.then56 while.cond.preheader while.cond while.end if.then122 if.end142 while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16378848182773759700
+DEBUG: assigning id = 16378848182773759700 to body of loop
+DEBUG: assigning id = 9720370629427710168 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13726378941901109896
+DEBUG: assigning id = 13726378941901109896 to body of loop
+DEBUG: assigning id = 14139700217801751942 to loop with the following BBs:
+	for.cond for.body for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8324692899181000641
+DEBUG: assigning id = 8324692899181000641 to body of loop
+DEBUG: for.cond13 has 1 possible loop exit points
+DEBUG: 	target #0: for.end27
+DEBUG: for.cond44 has 1 possible loop exit points
+DEBUG: 	target #0: for.end151
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: for.body has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: ammunition_divide_unsigned_integer is 1423626482936756939
+DEBUG: found 0 looMeta data for 14512129811010666245
+Meta data for 318729601445353276
+Meta data for 3220208823999887923
+Meta data for 7586931867961443497
+Meta data for 2221075742403753810
+Meta data for 4526080533520729103
+Meta data for 4526067384149037143
+Meta data for 11642150558375439106
+ps in function ammunition_divide_unsigned_integer
+DEBUG: region name to id: ammunition_divide_integer is 14018725462908787369
+DEBUG: found 0 loops in function ammunition_divide_integer
+DEBUG: region name to id: ammunition_unsigned_integer_remainder is 9578609858353164913
+DEBUG: found 0 loops in function ammunition_unsigned_integer_remainder
+DEBUG: region name to id: ammunition_unsigned_integer_shift_right is 12834783603577254754
+DEBUG: found 2 loops in function ammunition_unsigned_integer_shift_right
+DEBUG: assigning id = 14512129811010666245 to loop with the following BBs:
+	for.cond18 for.body21 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 15910881402739622427
+DEBUG: assigning id = 15910881402739622427 to body of loop
+DEBUG: assigning id = 318729601445353276 to loop with the following BBs:
+	for.cond for.body for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 990178272249796739
+DEBUG: assigning id = 990178272249796739 to body of loop
+DEBUG: for.cond18 has 1 possible loop exit points
+DEBUG: 	target #0: for.end31
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end.loopexit
+DEBUG: for.body has 1 possible loop exit points
+DEBUG: 	target #0: if.then6
+DEBUG: region name to id: ammunition_unsigned_integer_shift_left is 8286630832073378864
+DEBUG: found 2 loops in function ammunition_unsigned_integer_shift_left
+DEBUG: assigning id = 3220208823999887923 to loop with the following BBs:
+	for.cond22 for.body25 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7852669719761442522
+DEBUG: assigning id = 7852669719761442522 to body of loop
+DEBUG: assigning id = 7586931867961443497 to loop with the following BBs:
+	for.cond land.rhs for.body for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10914911039003044387
+DEBUG: assigning id = 10914911039003044387 to body of loop
+DEBUG: for.cond22 has 1 possible loop exit points
+DEBUG: 	target #0: for.end34
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end.loopexit
+DEBUG: land.rhs has 1 possible loop exit points
+DEBUG: 	target #0: for.end.loopexit
+DEBUG: for.body has 1 possible loop exit points
+DEBUG: 	target #0: if.then5
+DEBUG: region name to id: ammunition_integer_shift_right is 1018555459832480750
+DEBUG: found 2 loops in function ammunition_integer_shift_right
+DEBUG: assigning id = 2221075742403753810 to loop with the following BBs:
+	for.cond27 for.body30 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 42944302172288670
+DEBUG: assigning id = 42944302172288670 to body of loop
+DEBUG: assigning id = 4526080533520729103 to loop with the following BBs:
+	for.cond for.body for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 1235340953970567461
+DEBUG: assigning id = 1235340953970567461 to body of loop
+DEBUG: for.cond27 has 1 possible loop exit points
+DEBUG: 	target #0: for.end43
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end.loopexit
+DEBUG: for.body has 1 possible loop exit points
+DEBUG: 	target #0: if.then9
+DEBUG: region name to id: ammunition_integer_shift_left is 13448800198591570048
+DEBUG: found 2 loops in function ammunition_integer_shift_left
+DEBUG: assigning id = 4526067384149037143 to loop with the following BBs:
+	for.cond25 for.body28 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10503552136487108731
+DEBUG: assigning id = 10503552136487108731 to body of loop
+DEBUG: assigning id = 11642150558375439106 to loop with the following BBs:
+	for.cond land.rhs for.body for.inc 
+DEBUG: /homMeta data for 3025647983930435275
+Meta data for 8151874547103293691
+Meta data for 1718221456148892631
+Meta data for 239676754710778751
+e/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9085169047023311002
+DEBUG: assigning id = 9085169047023311002 to body of loop
+DEBUG: for.cond25 has 1 possible loop exit points
+DEBUG: 	target #0: for.end38
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end.loopexit
+DEBUG: land.rhs has 1 possible loop exit points
+DEBUG: 	target #0: for.end.loopexit
+DEBUG: for.body has 1 possible loop exit points
+DEBUG: 	target #0: if.then8
+DEBUG: region name to id: ammunition_integer_or is 2026105577929384044
+DEBUG: found 1 loops in function ammunition_integer_or
+DEBUG: assigning id = 3025647983930435275 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7352169359674776798
+DEBUG: assigning id = 7352169359674776798 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: ammunition_unsigned_integer_or is 13939479392486257461
+DEBUG: found 0 loops in function ammunition_unsigned_integer_or
+DEBUG: region name to id: ammunition_integer_and is 5959025998023103885
+DEBUG: found 1 loops in function ammunition_integer_and
+DEBUG: assigning id = 8151874547103293691 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7432751462031268895
+DEBUG: assigning id = 7432751462031268895 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: ammunition_unsigned_integer_and is 14822837727418684950
+DEBUG: found 0 loops in function ammunition_unsigned_integer_and
+DEBUG: region name to id: ammunition_integer_not is 2626170684574793034
+DEBUG: found 1 loops in function ammunition_integer_not
+DEBUG: assigning id = 1718221456148892631 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7833426610726515589
+DEBUG: assigning id = 7833426610726515589 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: ammunition_unsigned_integer_not is 345189948639057087
+DEBUG: found 0 loops in function ammunition_unsigned_integer_not
+DEBUG: region name to id: ammunition_eq_unsigned_integer is 5488900904900832047
+DEBUG: found 0 loops in function ammunition_eq_unsigned_integer
+DEBUG: region name to id: ammunition_eq_integer is 6543670896201543201
+DEBUG: found 0 loops in function ammunition_eq_integer
+DEBUG: region name to id: ammunition_ne_unsigned_integer is 11230534868376698789
+DEBUG: found 0 loops in function ammunition_ne_unsigned_integer
+DEBUG: region name to id: ammunition_ne_integer is 11470672746389609013
+DEBUG: found 0 loops in function ammunition_ne_integer
+DEBUG: region name to id: ammunition_bytes_comparison is 14153242370384372638
+DEBUG: found 1 loops in function ammunition_bytes_comparison
+DEBUG: assigning id = 239676754710778751 to loop with the following BBs:
+	while.cond land.rhs while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9278944115162527661
+DEBUG: assigning id = 9278944115162527661 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: land.rhs has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: region name to id: ammunition_gt_unsigned_integer is 5618897305615596752
+DEBUG: found 0 loops in function ammunition_gt_unsigned_integer
+DEBUG: region name to id: ammunition_gt_integer is 14838935418891487355
+DEBUG: found 0 loops in function ammunition_gt_integer
+DEBUG: region name to id: ammunition_lt_unsigned_integer is 12375720529882129679
+DEBUG: found 0 loops in function ammunition_lt_unsigned_integer
+DEBUG: region name Meta data for 4465739172158511642
+Meta data for 6221458798475701012
+Meta data for 11153182781425641810
+Meta data for 2893839376917208211
+Meta data for 14701012831873429246
+Meta data for 3186559601476138699
+to id: ammunition_lt_integer is 1808193277086043806
+DEBUG: found 0 loops in function ammunition_lt_integer
+DEBUG: region name to id: ammunition_ge_unsigned_integer is 12386971894474098973
+DEBUG: found 0 loops in function ammunition_ge_unsigned_integer
+DEBUG: region name to id: ammunition_ge_integer is 1676784608638847384
+DEBUG: found 0 loops in function ammunition_ge_integer
+DEBUG: region name to id: ammunition_le_unsigned_integer is 5763498089624625062
+DEBUG: found 0 loops in function ammunition_le_unsigned_integer
+DEBUG: region name to id: ammunition_le_integer is 772792584178043243
+DEBUG: found 0 loops in function ammunition_le_integer
+DEBUG: region name to id: ammunition_change_unsigned_integer_size is 10064226918589155061
+DEBUG: found 1 loops in function ammunition_change_unsigned_integer_size
+DEBUG: assigning id = 4465739172158511642 to loop with the following BBs:
+	for.cond for.body for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 13085411587441487841
+DEBUG: assigning id = 13085411587441487841 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end.loopexit
+DEBUG: for.body has 1 possible loop exit points
+DEBUG: 	target #0: if.then8
+DEBUG: region name to id: ammunition_change_integer_size is 14152896066368475683
+DEBUG: found 1 loops in function ammunition_change_integer_size
+DEBUG: assigning id = 6221458798475701012 to loop with the following BBs:
+	for.cond for.body for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 345811191551152931
+DEBUG: assigning id = 345811191551152931 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end.loopexit
+DEBUG: for.body has 1 possible loop exit points
+DEBUG: 	target #0: if.then13
+DEBUG: region name to id: ammunition_unsigned_integer_to_based_string is 15440765241294079473
+DEBUG: found 3 loops in function ammunition_unsigned_integer_to_based_string
+DEBUG: assigning id = 11153182781425641810 to loop with the following BBs:
+	for.cond21 for.body25 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17912284973197431414
+DEBUG: assigning id = 17912284973197431414 to body of loop
+DEBUG: assigning id = 2893839376917208211 to loop with the following BBs:
+	do.body for.cond for.end cond.false cond.true cond.end for.body if.then for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12026169167860735734
+DEBUG: assigning id = 12026169167860735734 to body of loop
+DEBUG: assigning id = 14701012831873429246 to loop with the following BBs:
+	for.cond for.body if.then for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4434661003020369355
+DEBUG: assigning id = 4434661003020369355 to body of loop
+DEBUG: for.cond21 has 1 possible loop exit points
+DEBUG: 	target #0: for.end42
+DEBUG: cond.end has 1 possible loop exit points
+DEBUG: 	target #0: do.end
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: ammunition_unsigned_integer_to_string is 16079086407868348655
+DEBUG: found 0 loops in function ammunition_unsigned_integer_to_string
+DEBUG: region name to id: ammunition_integer_to_based_string is 12196993465531339956
+DEBUG: found 0 loops in function ammunition_integer_to_based_string
+DEBUG: region name to id: ammunition_integer_to_string is 1041032272457773628
+DEBUG: found 0 loops in function ammunition_integer_to_string
+DEBUG: region name to id: ammunition_add_digit_to_unsigned_integer_without_overflow_reaction is 12379803978056726962
+DEBUG: found 1 loops in function ammunition_add_digit_to_unsigned_integer_without_overflow_reaction
+DEBUG: assigning id = 3186559601476138699 to loop with the following BBs:
+	for.cond for.body if.elMeta data for 13890757903758547478
+Meta data for 1039423756832551571
+Meta data for 17754556790250022793
+se if.then if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14673990531996358859
+DEBUG: assigning id = 14673990531996358859 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: ammunition_string_to_unsigned_integer_without_overflow_reaction is 4731856180059736467
+DEBUG: found 1 loops in function ammunition_string_to_unsigned_integer_without_overflow_reaction
+DEBUG: assigning id = 13890757903758547478 to loop with the following BBs:
+	for.cond for.body lor.rhs lor.end lor.rhs6 lor.end9 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6581311500061343505
+DEBUG: assigning id = 6581311500061343505 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: ammunition_unsigned_integer_from_string is 3112512495565164008
+DEBUG: found 1 loops in function ammunition_unsigned_integer_from_string
+DEBUG: assigning id = 1039423756832551571 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8233446053176072816
+DEBUG: assigning id = 8233446053176072816 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: region name to id: ammunition_integer_from_string is 11444195690337076634
+DEBUG: found 1 loops in function ammunition_integer_from_string
+DEBUG: assigning id = 17754556790250022793 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10198817738945708253
+DEBUG: assigning id = 10198817738945708253 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: Writing kremlib calls to arithm.kdump
+INFO: dumping function: ammunition_add_unsigned_integer_without_overflow_reaction
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: ammunition_subtract_unsigned_integer_without_overflow_reaction
+INFO: dumping function: ammunition_make_complementary_code
+INFO: dumping function: ammunition_multiply_unsigned_integer_by_digit_without_overflow_reaction
+INFO: dumping function: ammunition_arithmetic_overflow_reaction
+INFO: dumping function: ammunition_arithmetic_unsigned_overflow_reaction
+INFO: dumping function: ammunition_add_unsigned_integer
+INFO: dumping function: ammunition_add_integer
+INFO: dumping function: ammunition_subtract_unsigned_integer
+INFO: dumping function: ammunition_subtract_integer
+INFO: dumping function: ammunition_multiply_unsigned_integer_without_overflow_reaction
+INFO: dumping function: ammunition_memset
+INFO: dumping function: ammunition_memcpy
+INFO: dumping function: ammunition_multiply_unsigned_integer
+INFO: dumping function: ammunition_multiply_integer
+INFO: dumping function: ammunition_divide_unsigned_integer_without_overflow_reaction
+INFO: dumping function: ammunition_divide_unsigned_integer
+INFO: dumping function: ammunition_divide_integer
+INFO: dumping function: ammunition_unsigned_integer_remainder
+INFO: dumping function: ammunition_unsigned_integer_shift_right
+INFO: dumping function: ammunition_unsigned_integer_shift_left
+INFO: dumping function: ammunition_memmove
+INFO: dumping function: ammunition_integer_shift_right
+INFO: dumping function: ammunition_integer_shift_left
+INFO: dumping function: ammunition_integer_or
+INFO: dumping function: ammunition_unsigned_integer_or
+INFO: dumping function: ammunition_integer_and
+INFO: dumping function: ammunition_unsigned_integer_and
+INFO: dumping function: ammunition_integer_not
+INFO: dumping function: ammunition_unsigned_integer_not
+INFO: dumping function: ammunition_eq_unsigned_integer
+INFO: dumping function: ammunition_memcmp
+INFO: dumping function: ammunition_eq_integer
+INFO: dumping function: ammunition_ne_unsigned_integer
+INFO: dumping function: ammunition_ne_integer
+INFO: dumping function: ammunition_bytes_comparison
+INFO: dumping function: ammunition_gt_unsigned_integer
+INFO: dumping function: ammunition_gt_integer
+INFO: dumping function: ammunition_lt_unsigned_integer
+INFO: dumping function: ammunition_lt_integer
+INFO: dumping function: ammunition_ge_unsigned_integer
+INFO: dumping function: ammunition_ge_integer
+INFO: dumping function: ammunition_le_unsigned_integer
+INFO: dumping function: ammunition_le_integer
+INFO: dumping function: ammunition_change_unsigned_integer_size
+INFO: dumping function: ammunition_change_integer_size
+INFO: dumping function: ammunition_unsigned_integer_to_based_string
+INFO: dumping function: ammunition_unsigned_integer_to_string
+INFO: dumping function: ammunition_integer_to_based_string
+INFO: dumping function: ammunition_integer_to_string
+INFO: dumping function: ammunition_add_digit_to_unsigned_integer_without_overflow_reaction
+INFO: dumping function: ammunition_string_to_unsigned_integer_without_overflow_reaction
+INFO: dumping function: ammunition_isdigit
+INFO: dumping function: ammunition_unsigned_integer_from_string
+INFO: dumping function: ammunition_isspace
+INFO: dumping function: ammunition_integer_from_string
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

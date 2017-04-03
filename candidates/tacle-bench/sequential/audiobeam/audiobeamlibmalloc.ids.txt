@@ -1,0 +1,6 @@
+FUNC: audiobeam_malloc
+	1: ARG : 0
+	3 : 12 : load
+	4 : 12 : add
+	2 : 10 : load
+

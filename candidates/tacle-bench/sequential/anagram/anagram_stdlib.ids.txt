@@ -1,0 +1,86 @@
+FUNC: anagram_qsort
+	1: ARG : 1
+	2: ARG : 2
+
+FUNC: anagram_qsorts
+	28 : 97 : icmp
+	7 : 97 : call
+	15 : 112 : getelementptr
+	16: ARG : 0
+	1: ARG : 1
+	2: ARG : 2
+	13 : ?? : phi
+	11 : ?? : phi
+	3 : ?? : phi
+	6 : 79 : icmp
+	20 : 80 : icmp
+	18 : 81 : call
+	19 : 83 : getelementptr
+	17 : ?? : phi
+	25 : 87 : getelementptr
+	21 : ?? : phi
+	24 : ?? : phi
+	4 : 93 : load
+	5 : 93 : add
+	26 : ?? : phi
+	27 : 96 : getelementptr
+	32 : 97 : icmp
+	22 : ?? : phi
+	29 : ?? : phi
+	30 : 100 : getelementptr
+	31 : 101 : icmp
+	8 : 101 : call
+	33 : 101 : icmp
+	10 : ?? : phi
+	23 : 102 : icmp
+	9 : 107 : udiv
+	12 : 109 : sub
+	14 : 110 : icmp
+
+FUNC: anagram_malloc
+	1: ARG : 0
+	2 : 136 : load
+	3 : 138 : load
+	4 : 138 : add
+
+FUNC: anagram_bzero
+	4: ARG : 0
+	1: ARG : 1
+	2 : ?? : phi
+	3 : ?? : phi
+	6 : 147 : icmp
+	5 : 148 : getelementptr
+
+FUNC: anagram_pivot
+	12 : 52 : getelementptr
+	7 : 65 : call
+	17 : 65 : icmp
+	1: ARG : 1
+	10: ARG : 0
+	2: ARG : 2
+	9 : 54 : getelementptr
+	11 : 55 : getelementptr
+	3 : 56 : call
+	13 : 56 : icmp
+	4 : 57 : call
+	14 : 57 : icmp
+	5 : 58 : call
+	15 : 58 : icmp
+	6 : 64 : call
+	16 : 64 : icmp
+	8 : ?? : phi
+
+FUNC: anagram_swapi
+	8: ARG : 0
+	11: ARG : 1
+	1: ARG : 2
+	4 : ?? : phi
+	7 : ?? : phi
+	10 : ?? : phi
+	2 : 39 : load
+	3 : 40 : load
+	9 : 40 : getelementptr
+	12 : 41 : getelementptr
+	5 : 42 : sub
+	6 : 43 : icmp
+

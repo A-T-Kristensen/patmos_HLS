@@ -1,0 +1,308 @@
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ReductionVars.cpp:20 Constructing ReductionVars with id: -17
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ReductionVars.cpp:25 Destructing ReductionVars with id: -17
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ReductionVars.cpp:20 Constructing ReductionVars with id: -17
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/CriticalPath.cpp:86 instrumenting module: bitcnt_2.simplifycfg.mem2reg.indvars.elimsinglephis.bc
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/CriticalPath.cpp:133 instrumenting function bitcount_bitcount
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:95 Getting immediate dominator of 
+entry:
+  call void @llvm.dbg.value(metadata i64 %i, i64 0, metadata !14, metadata !15), !dbg !16
+  %and = and i64 %i, 2863311530, !dbg !17
+  %shr = ashr i64 %and, 1, !dbg !18
+  %and1 = and i64 %i, 1431655765, !dbg !19
+  %add = add nsw i64 %shr, %and1, !dbg !20
+  call void @llvm.dbg.value(metadata i64 %add, i64 0, metadata !14, metadata !15), !dbg !16
+  %and2 = and i64 %add, 3435973836, !dbg !21
+  %shr3 = ashr i64 %and2, 2, !dbg !22
+  %and4 = and i64 %add, 858993459, !dbg !23
+  %add5 = add nsw i64 %shr3, %and4, !dbg !24
+  call void @llvm.dbg.value(metadata i64 %add5, i64 0, metadata !14, metadata !15), !dbg !16
+  %and6 = and i64 %add5, 4042322160, !dbg !25
+  %shr7 = ashr i64 %and6, 4, !dbg !26
+  %and8 = and i64 %add5, 252645135, !dbg !27
+  %add9 = add nsw i64 %shr7, %and8, !dbg !28
+  call void @llvm.dbg.value(metadata i64 %add9, i64 0, metadata !14, metadata !15), !dbg !16
+  %and10 = and i64 %add9, 4278255360, !dbg !29
+  %shr11 = ashr i64 %and10, 8, !dbg !30
+  %and12 = and i64 %add9, 16711935, !dbg !31
+  %add13 = add nsw i64 %shr11, %and12, !dbg !32
+  call void @llvm.dbg.value(metadata i64 %add13, i64 0, metadata !14, metadata !15), !dbg !16
+  %and14 = and i64 %add13, 4294901760, !dbg !33
+  %shr15 = ashr i64 %and14, 16, !dbg !34
+  %and16 = and i64 %add13, 65535, !dbg !35
+  %add17 = add nsw i64 %shr15, %and16, !dbg !36
+  call void @llvm.dbg.value(metadata i64 %add17, i64 0, metadata !14, metadata !15), !dbg !16
+  %conv = trunc i64 %add17 to i32, !dbg !37
+  ret i32 %conv, !dbg !38
+
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %i, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/CallableHandler.tcc:122 examining:   call void @llvm.dbg.value(metadata i64 %i, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/CallableHandler.tcc:133 ignoring call to function: llvm.dbg.value
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/DynamicMemoryHandler.cpp:81 handling:   call void @llvm.dbg.value(metadata i64 %i, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and = and i64 %i, 2863311530, !dbg !17
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr = ashr i64 %and, 1, !dbg !18
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and1 = and i64 %i, 1431655765, !dbg !19
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add = add nsw i64 %shr, %and1, !dbg !20
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/CallableHandler.tcc:122 examining:   call void @llvm.dbg.value(metadata i64 %add, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/CallableHandler.tcc:133 ignoring call to function: llvm.dbg.value
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/DynamicMemoryHandler.cpp:81 handling:   call void @llvm.dbg.value(metadata i64 %add, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and2 = and i64 %add, 3435973836, !dbg !21
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr3 = ashr i64 %and2, 2, !dbg !22
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and4 = and i64 %add, 858993459, !dbg !23
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add5 = add nsw i64 %shr3, %and4, !dbg !24
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add5, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/CallableHandler.tcc:122 examining:   call void @llvm.dbg.value(metadata i64 %add5, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/CallableHandler.tcc:133 ignoring call to function: llvm.dbg.value
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/DynamicMemoryHandler.cpp:81 handling:   call void @llvm.dbg.value(metadata i64 %add5, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and6 = and i64 %add5, 4042322160, !dbg !25
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr7 = ashr i64 %and6, 4, !dbg !26
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and8 = and i64 %add5, 252645135, !dbg !27
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add9 = add nsw i64 %shr7, %and8, !dbg !28
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add9, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/CallableHandler.tcc:122 examining:   call void @llvm.dbg.value(metadata i64 %add9, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/CallableHandler.tcc:133 ignoring call to function: llvm.dbg.value
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/DynamicMemoryHandler.cpp:81 handling:   call void @llvm.dbg.value(metadata i64 %add9, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and10 = and i64 %add9, 4278255360, !dbg !29
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr11 = ashr i64 %and10, 8, !dbg !30
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and12 = and i64 %add9, 16711935, !dbg !31
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add13 = add nsw i64 %shr11, %and12, !dbg !32
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add13, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/CallableHandler.tcc:122 examining:   call void @llvm.dbg.value(metadata i64 %add13, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/CallableHandler.tcc:133 ignoring call to function: llvm.dbg.value
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/DynamicMemoryHandler.cpp:81 handling:   call void @llvm.dbg.value(metadata i64 %add13, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and14 = and i64 %add13, 4294901760, !dbg !33
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr15 = ashr i64 %and14, 16, !dbg !34
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and16 = and i64 %add13, 65535, !dbg !35
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add17 = add nsw i64 %shr15, %and16, !dbg !36
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add17, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/CallableHandler.tcc:122 examining:   call void @llvm.dbg.value(metadata i64 %add17, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/CallableHandler.tcc:133 ignoring call to function: llvm.dbg.value
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/DynamicMemoryHandler.cpp:81 handling:   call void @llvm.dbg.value(metadata i64 %add17, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %conv = trunc i64 %add17 to i32, !dbg !37
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   ret i32 %conv, !dbg !38
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/ReturnHandler.cpp:64 returning non-const value
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %conv = trunc i64 %add17 to i32, !dbg !37
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %add17 = add nsw i64 %shr15, %and16, !dbg !36
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %shr15 = ashr i64 %and14, 16, !dbg !34
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %and14 = and i64 %add13, 4294901760, !dbg !33
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %add13 = add nsw i64 %shr11, %and12, !dbg !32
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %shr11 = ashr i64 %and10, 8, !dbg !30
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %and10 = and i64 %add9, 4278255360, !dbg !29
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %add9 = add nsw i64 %shr7, %and8, !dbg !28
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %shr7 = ashr i64 %and6, 4, !dbg !26
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %and6 = and i64 %add5, 4042322160, !dbg !25
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %add5 = add nsw i64 %shr3, %and4, !dbg !24
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %shr3 = ashr i64 %and2, 2, !dbg !22
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %and2 = and i64 %add, 3435973836, !dbg !21
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %add = add nsw i64 %shr, %and1, !dbg !20
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %shr = ashr i64 %and, 1, !dbg !18
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %and = and i64 %i, 2863311530, !dbg !17
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for i64 %i
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for i64 %i: (i64 %i,0) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for i64 2863311530
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for i64 2863311530: 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %and = and i64 %i, 2863311530, !dbg !17: (i64 %i,1) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for i64 1
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for i64 1: 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %shr = ashr i64 %and, 1, !dbg !18: (i64 %i,2) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %and1 = and i64 %i, 1431655765, !dbg !19
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for i64 %i
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for i64 %i: (i64 %i,0) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for i64 1431655765
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for i64 1431655765: 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %and1 = and i64 %i, 1431655765, !dbg !19: (i64 %i,1) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %add = add nsw i64 %shr, %and1, !dbg !20: (i64 %i,3) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for i64 3435973836
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for i64 3435973836: 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %and2 = and i64 %add, 3435973836, !dbg !21: (i64 %i,4) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for i64 2
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for i64 2: 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %shr3 = ashr i64 %and2, 2, !dbg !22: (i64 %i,5) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %and4 = and i64 %add, 858993459, !dbg !23
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %add = add nsw i64 %shr, %and1, !dbg !20
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %add = add nsw i64 %shr, %and1, !dbg !20: (i64 %i,3) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for i64 858993459
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for i64 858993459: 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %and4 = and i64 %add, 858993459, !dbg !23: (i64 %i,4) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %add5 = add nsw i64 %shr3, %and4, !dbg !24: (i64 %i,6) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for i64 4042322160
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for i64 4042322160: 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %and6 = and i64 %add5, 4042322160, !dbg !25: (i64 %i,7) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for i64 4
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for i64 4: 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %shr7 = ashr i64 %and6, 4, !dbg !26: (i64 %i,8) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %and8 = and i64 %add5, 252645135, !dbg !27
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %add5 = add nsw i64 %shr3, %and4, !dbg !24
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %add5 = add nsw i64 %shr3, %and4, !dbg !24: (i64 %i,6) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for i64 252645135
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for i64 252645135: 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %and8 = and i64 %add5, 252645135, !dbg !27: (i64 %i,7) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %add9 = add nsw i64 %shr7, %and8, !dbg !28: (i64 %i,9) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for i64 4278255360
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for i64 4278255360: 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %and10 = and i64 %add9, 4278255360, !dbg !29: (i64 %i,10) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for i64 8
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for i64 8: 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %shr11 = ashr i64 %and10, 8, !dbg !30: (i64 %i,11) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %and12 = and i64 %add9, 16711935, !dbg !31
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %add9 = add nsw i64 %shr7, %and8, !dbg !28
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %add9 = add nsw i64 %shr7, %and8, !dbg !28: (i64 %i,9) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for i64 16711935
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for i64 16711935: 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %and12 = and i64 %add9, 16711935, !dbg !31: (i64 %i,10) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %add13 = add nsw i64 %shr11, %and12, !dbg !32: (i64 %i,12) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for i64 4294901760
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for i64 4294901760: 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %and14 = and i64 %add13, 4294901760, !dbg !33: (i64 %i,13) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for i64 16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for i64 16: 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %shr15 = ashr i64 %and14, 16, !dbg !34: (i64 %i,14) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %and16 = and i64 %add13, 65535, !dbg !35
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for   %add13 = add nsw i64 %shr11, %and12, !dbg !32
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %add13 = add nsw i64 %shr11, %and12, !dbg !32: (i64 %i,12) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:30 getting TS for i64 65535
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for i64 65535: 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %and16 = and i64 %add13, 65535, !dbg !35: (i64 %i,13) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %add17 = add nsw i64 %shr15, %and16, !dbg !36: (i64 %i,15) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/TimestampAnalysis.cpp:48 	TS for   %conv = trunc i64 %add17 to i32, !dbg !37: (i64 %i,15) 
+DEBUG: DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/timestamp/KInstructionToLogFunctionConverter.cpp:54 Converting inst:   %conv = trunc i64 %add17 to i32, !dbg !37
+INFO: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:74 Placing begins
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:118 Getting common dom
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:126 Getting earliest inst
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:118 Getting common dom
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:126 Getting earliest inst
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:118 Getting common dom
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:126 Getting earliest inst
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:118 Getting common dom
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:126 Getting earliest inst
+INFO: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:145 Placing finishes
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @_KWork(i32 20)
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @_KDeqArg(i32 1)
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %i, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and = and i64 %i, 2863311530, !dbg !17
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr = ashr i64 %and, 1, !dbg !18
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and1 = and i64 %i, 1431655765, !dbg !19
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add = add nsw i64 %shr, %and1, !dbg !20
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and2 = and i64 %add, 3435973836, !dbg !21
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr3 = ashr i64 %and2, 2, !dbg !22
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and4 = and i64 %add, 858993459, !dbg !23
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add5 = add nsw i64 %shr3, %and4, !dbg !24
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add5, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and6 = and i64 %add5, 4042322160, !dbg !25
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr7 = ashr i64 %and6, 4, !dbg !26
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and8 = and i64 %add5, 252645135, !dbg !27
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add9 = add nsw i64 %shr7, %and8, !dbg !28
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add9, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and10 = and i64 %add9, 4278255360, !dbg !29
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr11 = ashr i64 %and10, 8, !dbg !30
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and12 = and i64 %add9, 16711935, !dbg !31
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add13 = add nsw i64 %shr11, %and12, !dbg !32
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add13, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and14 = and i64 %add13, 4294901760, !dbg !33
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr15 = ashr i64 %and14, 16, !dbg !34
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and16 = and i64 %add13, 65535, !dbg !35
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add17 = add nsw i64 %shr15, %and16, !dbg !36
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add17, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %conv = trunc i64 %add17 to i32, !dbg !37
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @_KTimestamp1(i32 2, i32 1, i32 15)
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @_KReturn(i32 2)
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   ret i32 %conv, !dbg !38
+INFO: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:74 Placing begins
+INFO: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:145 Placing finishes
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:221 Controlling block search of entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:289   ret i32 %conv, !dbg !38
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ControlDependence.cpp:297 No controlling val found for bb: entry
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @_KWork(i32 20)
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @_KDeqArg(i32 1)
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %i, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and = and i64 %i, 2863311530, !dbg !17
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr = ashr i64 %and, 1, !dbg !18
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and1 = and i64 %i, 1431655765, !dbg !19
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add = add nsw i64 %shr, %and1, !dbg !20
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and2 = and i64 %add, 3435973836, !dbg !21
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr3 = ashr i64 %and2, 2, !dbg !22
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and4 = and i64 %add, 858993459, !dbg !23
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add5 = add nsw i64 %shr3, %and4, !dbg !24
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add5, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and6 = and i64 %add5, 4042322160, !dbg !25
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr7 = ashr i64 %and6, 4, !dbg !26
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and8 = and i64 %add5, 252645135, !dbg !27
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add9 = add nsw i64 %shr7, %and8, !dbg !28
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add9, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and10 = and i64 %add9, 4278255360, !dbg !29
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr11 = ashr i64 %and10, 8, !dbg !30
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and12 = and i64 %add9, 16711935, !dbg !31
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add13 = add nsw i64 %shr11, %and12, !dbg !32
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add13, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and14 = and i64 %add13, 4294901760, !dbg !33
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr15 = ashr i64 %and14, 16, !dbg !34
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and16 = and i64 %add13, 65535, !dbg !35
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add17 = add nsw i64 %shr15, %and16, !dbg !36
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add17, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %conv = trunc i64 %add17 to i32, !dbg !37
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @_KTimestamp1(i32 2, i32 1, i32 15)
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @_KReturn(i32 2)
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   ret i32 %conv, !dbg !38
+INFO: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:74 Placing begins
+INFO: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:145 Placing finishes
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @_KWork(i32 20)
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @_KDeqArg(i32 1)
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %i, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and = and i64 %i, 2863311530, !dbg !17
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr = ashr i64 %and, 1, !dbg !18
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and1 = and i64 %i, 1431655765, !dbg !19
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add = add nsw i64 %shr, %and1, !dbg !20
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and2 = and i64 %add, 3435973836, !dbg !21
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr3 = ashr i64 %and2, 2, !dbg !22
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and4 = and i64 %add, 858993459, !dbg !23
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add5 = add nsw i64 %shr3, %and4, !dbg !24
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add5, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and6 = and i64 %add5, 4042322160, !dbg !25
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr7 = ashr i64 %and6, 4, !dbg !26
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and8 = and i64 %add5, 252645135, !dbg !27
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add9 = add nsw i64 %shr7, %and8, !dbg !28
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add9, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and10 = and i64 %add9, 4278255360, !dbg !29
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr11 = ashr i64 %and10, 8, !dbg !30
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and12 = and i64 %add9, 16711935, !dbg !31
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add13 = add nsw i64 %shr11, %and12, !dbg !32
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add13, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and14 = and i64 %add13, 4294901760, !dbg !33
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %shr15 = ashr i64 %and14, 16, !dbg !34
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %and16 = and i64 %add13, 65535, !dbg !35
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %add17 = add nsw i64 %shr15, %and16, !dbg !36
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @llvm.dbg.value(metadata i64 %add17, i64 0, metadata !14, metadata !15), !dbg !16
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   %conv = trunc i64 %add17 to i32, !dbg !37
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @_KTimestamp1(i32 2, i32 1, i32 15)
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   call void @_KReturn(i32 2)
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/TimestampPlacer.cpp:195 inserting instrumentation for:   ret i32 %conv, !dbg !38
+INFO: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:74 Placing begins
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:118 Getting common dom
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:126 Getting earliest inst
+INFO: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/Placer.cpp:145 Placing finishes
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/CriticalPath.cpp:250 elapsed time for instrumenting bitcount_bitcount: 0.002 s
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/analysis/ReductionVars.cpp:25 Destructing ReductionVars with id: -17

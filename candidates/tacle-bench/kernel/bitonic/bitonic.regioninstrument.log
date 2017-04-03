@@ -1,0 +1,156 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x2e8c470>, <0x2e8c4a0>, <0x2e8c4a0>, <0x2e90828>, <0x2e95b88>, <0x2e8c4a0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/bitonic/bitonic.c] [DW_LANG_C99]
+
+!{!"0x2e\00bitonic_init\00bitonic_init\00\0048\000\001\000\000\00256\000\0049", <0x2e8c470>, <0x2e90b10>, <0x2e8dda0>, null, void ()* @bitonic_init, null, null, <0x2e8c4a0>} ; [ DW_TAG_subprogram ] [line 48] [def] [scope 49] [bitonic_init]
+
+!{!"0x2e\00bitonic_return\00bitonic_return\00\0059\000\001\000\000\00256\000\0060", <0x2e8c470>, <0x2e90b10>, <0x2e92320>, null, i32 ()* @bitonic_return, null, null, <0x2e8c4a0>} ; [ DW_TAG_subprogram ] [line 59] [def] [scope 60] [bitonic_return]
+
+!{!"0x2e\00bitonic_compare\00bitonic_compare\00\0078\000\001\000\000\00256\000\0079", <0x2e8c470>, <0x2e90b10>, <0x2e93280>, null, void (i32, i32, i32)* @bitonic_compare, null, null, <0x2e8c4a0>} ; [ DW_TAG_subprogram ] [line 78] [def] [scope 79] [bitonic_compare]
+
+!{!"0x2e\00bitonic_merge\00bitonic_merge\00\0093\000\001\000\000\00256\000\0094", <0x2e8c470>, <0x2e90b10>, <0x2e93280>, null, void (i32, i32, i32)* @bitonic_merge, null, null, <0x2e8c4a0>} ; [ DW_TAG_subprogram ] [line 93] [def] [scope 94] [bitonic_merge]
+
+!{!"0x2e\00bitonic_sort\00bitonic_sort\00\00112\000\001\000\000\00256\000\00113", <0x2e8c470>, <0x2e90b10>, <0x2e93280>, null, void (i32, i32, i32)* @bitonic_sort, null, null, <0x2e8c4a0>} ; [ DW_TAG_subprogram ] [line 112] [def] [scope 113] [bitonic_sort]
+
+!{!"0x2e\00bitonic_main\00bitonic_main\00\00134\000\001\000\000\00256\000\00135", <0x2e8c470>, <0x2e90b10>, <0x2e8dda0>, null, void ()* @bitonic_main, null, null, <0x2e8c4a0>} ; [ DW_TAG_subprogram ] [line 134] [def] [scope 135] [bitonic_main]
+
+!{!"0x2e\00main\00main\00\00151\000\001\000\000\00256\000\00152", <0x2e8c470>, <0x2e90b10>, <0x2e92320>, null, i32 ()* @main, null, null, <0x2e8c4a0>} ; [ DW_TAG_subprogram ] [line 151] [def] [scope 152] [main]
+
+!{!"0x34\00bitonic_numiters\00bitonic_numiters\00\0037\000\001", null, <0x2e90b10>, <0x2e92968>, i32* @bitonic_numiters, null} ; [ DW_TAG_variable ] [bitonic_numiters] [line 37] [def]
+
+!{!"0x34\00bitonic_ASCENDING\00bitonic_ASCENDING\00\0039\000\001", null, <0x2e90b10>, <0x2e95600>, i32* @bitonic_ASCENDING, null} ; [ DW_TAG_variable ] [bitonic_ASCENDING] [line 39] [def]
+
+!{!"0x34\00bitonic_DESCENDING\00bitonic_DESCENDING\00\0040\000\001", null, <0x2e90b10>, <0x2e95600>, i32* @bitonic_DESCENDING, null} ; [ DW_TAG_variable ] [bitonic_DESCENDING] [line 40] [def]
+
+!{!"0x34\00bitonic_CHECKSUM\00bitonic_CHECKSUM\00\0042\000\001", null, <0x2e90b10>, <0x2e95600>, i32* @bitonic_CHECKSUM, null} ; [ DW_TAG_variable ] [bitonic_CHECKSUM] [line 42] [def]
+
+!{!"0x34\00bitonic_a\00bitonic_a\00\0038\000\001", null, <0x2e90b10>, <0x2e95a40>, [32 x i32]* @bitonic_a, null} ; [ DW_TAG_variable ] [bitonic_a] [line 38] [def]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x2e92968>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from int]
+
+!{!"0x1\00\000\001024\0032\000\000\000", null, null, <0x2e92968>, <0x2e90858>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 1024, align 32, offset 0] [from int]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2e90ba8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2e92878>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2e894f0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+Meta data for 12857933293963848050
+Meta data for 13806813449463792657
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 16835452869477709154, name: bitonic_init, fileName: bitonic.c, startLine: 48, endLine: 48
+DEBUG: adding bitonic_init (in module: bitonic.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 16835452869477709154)
+DEBUG: assigning function bitonic_init id 16835452869477709154
+DEBUG: new region: FuncRegion(id: 17833320634676934325, name: bitonic_return, fileName: bitonic.c, startLine: 59, endLine: 59
+DEBUG: adding bitonic_return (in module: bitonic.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17833320634676934325)
+DEBUG: assigning function bitonic_return id 17833320634676934325
+DEBUG: new region: FuncRegion(id: 11636717788183184085, name: bitonic_compare, fileName: bitonic.c, startLine: 78, endLine: 78
+DEBUG: adding bitonic_compare (in module: bitonic.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 11636717788183184085)
+DEBUG: assigning function bitonic_compare id 11636717788183184085
+DEBUG: new region: FuncRegion(id: 13128654593701156502, name: bitonic_merge, fileName: bitonic.c, startLine: 93, endLine: 93
+DEBUG: adding bitonic_merge (in module: bitonic.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 13128654593701156502)
+DEBUG: assigning function bitonic_merge id 13128654593701156502
+DEBUG: new region: FuncRegion(id: 3417557582785453683, name: bitonic_sort, fileName: bitonic.c, startLine: 112, endLine: 112
+DEBUG: adding bitonic_sort (in module: bitonic.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3417557582785453683)
+DEBUG: assigning function bitonic_sort id 3417557582785453683
+DEBUG: new region: FuncRegion(id: 300613296356090049, name: bitonic_main, fileName: bitonic.c, startLine: 134, endLine: 134
+DEBUG: adding bitonic_main (in module: bitonic.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 300613296356090049)
+DEBUG: assigning function bitonic_main id 300613296356090049
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: bitonic.c, startLine: 151, endLine: 151
+DEBUG: adding main (in module: bitonic.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 7 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: bitonic_init is 16835452869477709154
+DEBUG: found 1 loops in function bitonic_init
+DEBUG: assigning id = 12857933293963848050 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16729368334449556354
+DEBUG: assigning id = 16729368334449556354 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: bitonic_return is 17833320634676934325
+DEBUG: found 0 loops in function bitonic_return
+DEBUG: region name to id: bitonic_compare is 11636717788183184085
+DEBUG: found 0 loops in function bitonic_compare
+DEBUG: region name to id: bitonic_merge is 13128654593701156502
+DEBUG: found 1 loops in function bitonic_merge
+DEBUG: assigning id = 13806813449463792657 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10385209420456896764
+DEBUG: assigning id = 10385209420456896764 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: bitonic_sort is 3417557582785453683
+DEBUG: found 0 loops in function bitonic_sort
+DEBUG: region name to id: bitMeta data for 9679045926186905761
+onic_main is 300613296356090049
+DEBUG: found 1 loops in function bitonic_main
+DEBUG: assigning id = 9679045926186905761 to loop with the following BBs:
+	for.cond for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9669821555776833903
+DEBUG: assigning id = 9669821555776833903 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to bitonic.kdump
+INFO: dumping function: bitonic_init
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: bitonic_return
+INFO: dumping function: bitonic_compare
+INFO: dumping function: bitonic_merge
+INFO: dumping function: bitonic_sort
+INFO: dumping function: bitonic_main
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

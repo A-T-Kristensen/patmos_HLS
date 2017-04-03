@@ -1,0 +1,9 @@
+Import('*')
+
+bench_name = 'a.out'
+
+bench = build_benchmark(bench_name)
+kremlin_bin = create_kremlin_bin(bench)
+#kremlin_ref_bin = create_reference_bin(kremlin_bin)
+
+Return('bench kremlin_bin')

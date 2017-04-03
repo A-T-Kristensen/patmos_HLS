@@ -1,0 +1,44 @@
+FUNC: bsort_Initialize
+	2 : ?? : phi
+	3 : 56 : icmp
+	1 : 57 : trunc
+
+FUNC: bsort_init
+	1 : 65 : call
+
+FUNC: bsort_return
+	6 : ?? : phi
+	5 : ?? : phi
+	8 : 74 : icmp
+	11 : 75 : icmp
+	1 : 75 : load
+	3 : 75 : add
+	2 : 75 : load
+	10 : 75 : icmp
+	9 : ?? : phi
+	7 : 75 : zext
+	4 : 77 : sub
+
+FUNC: bsort_BubbleSort
+	12 : ?? : phi
+	5 : ?? : phi
+	9 : ?? : phi
+	13 : 93 : sub
+	8 : 93 : icmp
+	11 : ?? : phi
+	7 : ?? : phi
+	14 : 96 : icmp
+	1 : 99 : load
+	2 : 99 : load
+	15 : 99 : icmp
+	3 : 100 : load
+	4 : 101 : load
+	6 : 93 : add
+	10 : 107 : icmp
+
+FUNC: bsort_main
+	1 : 117 : call
+
+FUNC: main
+	1 : 130 : call
+

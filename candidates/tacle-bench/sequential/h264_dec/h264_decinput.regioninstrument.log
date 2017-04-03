@@ -1,0 +1,35 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x2396c10>, <0x239ca90>, <0x239ca90>, <0x239ca90>, <0x23a3668>, <0x239ca90>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/sequential/h264_dec/h264_decinput.c] [DW_LANG_C99]
+
+!{!"0x34\00h264_dec_mv_array\00h264_dec_mv_array\00\001\000\001", null, <0x239cad0>, <0x239cd90>, [65 x [65 x [2 x i8]]]* @h264_dec_mv_array, null} ; [ DW_TAG_variable ] [h264_dec_mv_array] [line 1] [def]
+
+!{!"0x34\00h264_dec_list_imgUV\00h264_dec_list_imgUV\00\00329\000\001", null, <0x239cad0>, <0x239fdd0>, [2 x [45 x [45 x i16]]]* @h264_dec_list_imgUV, null} ; [ DW_TAG_variable ] [h264_dec_list_imgUV] [line 329] [def]
+
+!{!"0x34\00h264_dec_img_m7\00h264_dec_img_m7\00\00784\000\001", null, <0x239cad0>, <0x239ce70>, [16 x [16 x i32]]* @h264_dec_img_m7, null} ; [ DW_TAG_variable ] [h264_dec_img_m7] [line 784] [def]
+
+!{!"0x1\00\000\0067600\008\000\000\000", null, null, <0x239cc58>, <0x239cd28>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 67600, align 8, offset 0] [from signed char]
+
+!{!"0x24\00signed char\000\008\008\000\000\006", null, null} ; [ DW_TAG_base_type ] [signed char] [line 0, size 8, align 8, offset 0, enc DW_ATE_signed_char]
+
+!{!"0x1\00\000\0064800\0016\000\000\000", null, null, <0x23a2368>, <0x239fd68>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 64800, align 16, offset 0] [from short]
+
+!{!"0x24\00short\000\0016\0016\000\000\005", null, null} ; [ DW_TAG_base_type ] [short] [line 0, size 16, align 16, offset 0, enc DW_ATE_signed]
+
+!{!"0x1\00\000\008192\0032\000\000\000", null, null, <0x23a2708>, <0x239ce00>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 8192, align 32, offset 0] [from int]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+INFO: Loop bodies will be given their own region id
+DEBUG: found 0 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: Writing kremlib calls to h264_decinput.kdump
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

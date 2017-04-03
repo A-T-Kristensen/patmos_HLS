@@ -1,0 +1,8 @@
+env = Environment()
+env.Append(CCFLAGS = ' -Wall -Wno-unused-label   -I../../common')
+input_files = ['#aes.c', '#local_support.c', '#../../common/support.c', '#../../common/harness.c']
+target = 'link'
+output_file = '#aes'
+make_output_file = ''
+Export('env input_files target output_file make_output_file')
+SConscript('/home/patmos/Developer/kremlin/bin/../instrument/make/SConscript')

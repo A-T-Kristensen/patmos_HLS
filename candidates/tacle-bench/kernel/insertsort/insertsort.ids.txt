@@ -1,0 +1,53 @@
+FUNC: insertsort_initialize
+	5 : 57 : load
+	6 : 56 : load
+	1 : 56 : load
+	8 : 56 : icmp
+	2 : 57 : load
+	4 : 57 : sext
+	3 : 57 : load
+	7 : 56 : add
+
+FUNC: insertsort_init
+
+FUNC: insertsort_return
+	4 : ?? : phi
+	3 : ?? : phi
+	6 : 80 : icmp
+	1 : 81 : load
+	5 : 81 : add
+	2 : 83 : zext
+
+FUNC: insertsort_main
+	5 : 109 : load
+	8 : 109 : add
+	7 : 109 : load
+	11 : 109 : icmp
+	9 : 111 : load
+	15 : 120 : load
+	4 : ?? : phi
+	1 : 102 : load
+	3 : 100 : icmp
+	2 : 102 : add
+	6 : ?? : phi
+	14 : 119 : load
+	25 : 119 : icmp
+	10 : 111 : add
+	12 : 113 : load
+	13 : 114 : load
+	16 : 121 : load
+	17 : 121 : load
+	26 : 121 : icmp
+	18 : 122 : load
+	24 : 100 : add
+	19 : 127 : load
+	27 : 127 : icmp
+	20 : 128 : load
+	21 : 129 : load
+	22 : 129 : load
+	28 : 129 : icmp
+	23 : 130 : load
+
+FUNC: main
+	1 : 137 : call
+

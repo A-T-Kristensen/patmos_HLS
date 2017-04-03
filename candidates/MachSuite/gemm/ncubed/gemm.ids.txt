@@ -1,0 +1,14 @@
+FUNC: gemm
+	6 : ?? : phi
+	10 : 8 : icmp
+	7 : ?? : phi
+	11 : 9 : icmp
+	8 : ?? : phi
+	5 : ?? : phi
+	12 : 12 : icmp
+	2 : 14 : add
+	1 : 14 : load
+	4 : 14 : add
+	3 : 14 : load
+	9 : 15 : fadd
+

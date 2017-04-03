@@ -1,0 +1,128 @@
+FUNC: run_benchmark
+
+FUNC: input_to_data
+	2 : 32 : call
+	3 : 35 : call
+	1: ARG : 0
+	4 : 38 : call
+	5 : 41 : call
+	6 : 44 : call
+	7 : 47 : call
+	8 : 50 : call
+	9 : 53 : call
+
+FUNC: data_to_input
+	1: ARG : 0
+	2 : 60 : call
+	3 : 61 : call
+	4 : 63 : call
+	5 : 64 : call
+	6 : 66 : call
+	7 : 67 : call
+	8 : 69 : call
+	9 : 70 : call
+	10 : 72 : call
+	11 : 73 : call
+	12 : 75 : call
+	13 : 76 : call
+	14 : 78 : call
+	15 : 79 : call
+	16 : 81 : call
+	17 : 82 : call
+
+FUNC: output_to_data
+	1: ARG : 0
+	4 : 105 : call
+	5 : 108 : call
+	2 : 99 : call
+	3 : 102 : call
+	6 : 111 : call
+	7 : 114 : call
+
+FUNC: data_to_output
+	2 : 122 : call
+	1: ARG : 0
+	3 : 123 : call
+	4 : 125 : call
+	5 : 126 : call
+	6 : 128 : call
+	7 : 129 : call
+	8 : 131 : call
+	9 : 132 : call
+	10 : 134 : call
+	11 : 135 : call
+	12 : 137 : call
+	13 : 138 : call
+
+FUNC: check_data
+	21 : ?? : phi
+	40 : 158 : fcmp
+	39 : 158 : fcmp
+	38 : ?? : phi
+	36 : 158 : or
+	58 : ?? : phi
+	59 : ?? : phi
+	61 : 171 : icmp
+	15 : 172 : load
+	22 : ?? : phi
+	24 : 149 : icmp
+	25 : ?? : phi
+	23 : ?? : phi
+	27 : 150 : icmp
+	2 : 151 : add
+	1 : 151 : load
+	4 : 151 : add
+	3 : 151 : load
+	30 : 152 : fcmp
+	29 : 152 : fcmp
+	28 : ?? : phi
+	26 : 152 : or
+	31 : ?? : phi
+	32 : ?? : phi
+	34 : 155 : icmp
+	35 : ?? : phi
+	33 : ?? : phi
+	37 : 156 : icmp
+	6 : 157 : add
+	5 : 157 : load
+	8 : 157 : add
+	14 : 168 : load
+	7 : 157 : load
+	44 : 161 : icmp
+	45 : ?? : phi
+	43 : ?? : phi
+	47 : 162 : icmp
+	10 : 163 : add
+	41 : ?? : phi
+	42 : ?? : phi
+	9 : 163 : load
+	12 : 163 : add
+	11 : 163 : load
+	50 : 164 : fcmp
+	49 : 164 : fcmp
+	48 : ?? : phi
+	46 : 164 : or
+	51 : ?? : phi
+	52 : ?? : phi
+	54 : 167 : icmp
+	13 : 168 : load
+	57 : 169 : fcmp
+	56 : 169 : fcmp
+	55 : ?? : phi
+	53 : 169 : or
+	16 : 172 : load
+	64 : 173 : fcmp
+	63 : 173 : fcmp
+	62 : ?? : phi
+	60 : 173 : or
+	65 : ?? : phi
+	20 : ?? : phi
+	67 : 175 : icmp
+	17 : 176 : load
+	18 : 176 : load
+	70 : 177 : fcmp
+	69 : 177 : fcmp
+	68 : ?? : phi
+	66 : 177 : or
+	19 : 180 : zext
+

@@ -1,0 +1,247 @@
+FUNC: audiobeam___ieee754_rem_pio2f
+	2 : 82 : load
+	48 : 84 : icmp
+	1: ARG : 0
+	12 : 108 : fadd
+	13 : 109 : load
+	35 : ?? : phi
+	51 : 89 : icmp
+	50 : 90 : icmp
+	52 : 92 : icmp
+	3 : 93 : fsub
+	4 : 94 : load
+	5 : 94 : fsub
+	6 : 97 : fsub
+	7 : 98 : load
+	8 : 98 : fsub
+	53 : 103 : icmp
+	9 : 104 : fadd
+	10 : 105 : load
+	11 : 105 : fadd
+	38 : 131 : fsub
+	23 : 134 : load
+	24 : 134 : load
+	14 : 109 : fadd
+	42 : 114 : icmp
+	15 : 115 : call
+	47 : 116 : fptosi
+	36 : 118 : fsub
+	43 : 119 : fmul
+	41 : 120 : icmp
+	17 : 120 : sext
+	16 : 120 : load
+	54 : 120 : icmp
+	18 : 121 : fsub
+	19 : 125 : fsub
+	20 : 126 : load
+	21 : 126 : load
+	39 : 128 : icmp
+	45 : 132 : fsub
+	22 : 133 : fsub
+	40 : 136 : icmp
+	37 : 139 : fsub
+	44 : 140 : fsub
+	25 : 141 : fsub
+	28 : ?? : phi
+	29 : ?? : phi
+	26 : 145 : load
+	27 : 145 : fsub
+	49 : 146 : icmp
+	30 : 147 : load
+	31 : 147 : fsub
+	32 : 148 : load
+	33 : 148 : fsub
+	46 : 149 : sub
+	55 : 152 : icmp
+	34 : 153 : fsub
+
+FUNC: audiobeam___fabsf
+	1: ARG : 0
+	2 : 249 : load
+	3 : 250 : and
+	4 : 250 : load
+
+FUNC: audiobeam___kernel_cosf
+	2: ARG : 1
+	1: ARG : 0
+	3 : 165 : load
+	12 : 167 : icmp
+	13 : 168 : icmp
+	8 : 174 : icmp
+	10 : 175 : fsub
+	9 : 177 : icmp
+	4 : 180 : sub
+	5 : 180 : load
+	7 : ?? : phi
+	11 : 183 : fsub
+	6 : ?? : phi
+
+FUNC: audiobeam___kernel_sinf
+	9 : 195 : icmp
+	3: ARG : 2
+	2: ARG : 1
+	1: ARG : 0
+	4 : 192 : load
+	8 : 194 : icmp
+	10 : 200 : icmp
+	6 : 200 : fadd
+	7 : 201 : fsub
+	5 : ?? : phi
+
+FUNC: audiobeam___copysignf
+	2: ARG : 1
+	3 : 208 : load
+	1: ARG : 0
+	4 : 209 : load
+	5 : 210 : or
+	6 : 210 : load
+
+FUNC: audiobeam___cosf
+	1: ARG : 0
+	2 : 220 : load
+	21 : 223 : icmp
+	3 : 223 : call
+	22 : 226 : icmp
+	18 : 226 : fsub
+	4 : 231 : call
+	23 : 232 : and
+	5 : 234 : load
+	6 : 234 : load
+	7 : 234 : call
+	8 : 236 : load
+	9 : 236 : load
+	10 : 236 : call
+	20 : 236 : fsub
+	11 : 238 : load
+	12 : 238 : load
+	13 : 238 : call
+	19 : 238 : fsub
+	14 : 240 : load
+	15 : 240 : load
+	16 : 240 : call
+	17 : ?? : phi
+
+FUNC: audiobeam___floorf
+	1: ARG : 0
+	2 : 259 : load
+	11 : 261 : icmp
+	12 : 262 : icmp
+	13 : 263 : fcmp
+	14 : 264 : icmp
+	15 : 267 : icmp
+	16 : 272 : icmp
+	8 : 273 : fcmp
+	9 : 274 : icmp
+	7 : 274 : add
+	6 : ?? : phi
+	10 : 275 : and
+	18 : 279 : icmp
+	17 : 279 : fadd
+	3 : ?? : phi
+	4 : 282 : load
+	5 : ?? : phi
+
+FUNC: audiobeam___isinff
+	1: ARG : 0
+	2 : 290 : load
+	3 : 294 : and
+
+FUNC: audiobeam___scalbnf
+	2: ARG : 1
+	1: ARG : 0
+	3 : 301 : load
+	18 : 302 : ashr
+	19 : 303 : icmp
+	20 : 304 : icmp
+	4 : 305 : fmul
+	5 : 306 : load
+	17 : 307 : sub
+	10 : ?? : phi
+	11 : ?? : phi
+	7 : ?? : phi
+	26 : 309 : icmp
+	21 : 309 : fadd
+	27 : 311 : or
+	6 : 312 : call
+	22 : 312 : fmul
+	28 : 314 : icmp
+	8 : 315 : call
+	23 : 315 : fmul
+	29 : 317 : icmp
+	9 : 318 : or
+	12 : 318 : load
+	30 : 321 : icmp
+	13 : 322 : call
+	24 : 322 : fmul
+	14 : 325 : or
+	15 : 325 : load
+	25 : 326 : fmul
+	16 : ?? : phi
+
+FUNC: audiobeam___ceilf
+	12 : 338 : icmp
+	13 : 339 : fcmp
+	14 : 340 : icmp
+	15 : 343 : icmp
+	16 : 348 : icmp
+	1: ARG : 0
+	2 : 335 : load
+	11 : 337 : icmp
+	8 : 349 : fcmp
+	9 : 350 : icmp
+	7 : 350 : add
+	6 : ?? : phi
+	10 : 351 : and
+	18 : 355 : icmp
+	17 : 355 : fadd
+	3 : ?? : phi
+	4 : 358 : load
+	5 : ?? : phi
+
+FUNC: audiobeam___ieee754_sqrtf
+	2 : 370 : load
+	43 : 372 : icmp
+	41 : 373 : fadd
+	15 : 374 : icmp
+	44 : 375 : icmp
+	45 : 377 : icmp
+	1: ARG : 0
+	42 : 378 : fdiv
+	14 : 380 : ashr
+	10 : 381 : icmp
+	8 : ?? : phi
+	12 : ?? : phi
+	11 : 383 : icmp
+	9 : 384 : shl
+	13 : 385 : sub
+	4 : ?? : phi
+	16 : ?? : phi
+	19 : 388 : or
+	20 : 389 : icmp
+	18 : 390 : add
+	17 : ?? : phi
+	28 : 393 : add
+	21 : ?? : phi
+	25 : ?? : phi
+	27 : ?? : phi
+	24 : ?? : phi
+	23 : 398 : icmp
+	33 : 400 : icmp
+	34 : 401 : add
+	35 : 402 : sub
+	32 : 403 : add
+	22 : ?? : phi
+	26 : ?? : phi
+	30 : ?? : phi
+	29 : 405 : add
+	31 : 406 : lshr
+	38 : 409 : icmp
+	39 : 411 : fcmp
+	40 : 413 : fcmp
+	36 : 414 : add
+	37 : 416 : add
+	5 : ?? : phi
+	3 : 420 : add
+	6 : 421 : load
+	7 : ?? : phi
+

@@ -1,0 +1,186 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x2639410>, <0x263eca0>, <0x263eca0>, <0x2642510>, <0x263eca0>, <0x263eca0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/MachSuite/fft/transpose/fft.c] [DW_LANG_C99]
+
+!{!"0x2e\00twiddles8\00twiddles8\00\0023\000\001\000\000\00256\000\0023", <0x2639410>, <0x2636860>, <0x2641b10>, null, void (double*, double*, i32, i32)* @twiddles8, null, null, <0x263eca0>} ; [ DW_TAG_subprogram ] [line 23] [def] [twiddles8]
+
+!{!"0x2e\00loadx8\00loadx8\00\0091\000\001\000\000\00256\000\0091", <0x2639410>, <0x2636860>, <0x2641b10>, null, void (double*, double*, i32, i32)* @loadx8, null, null, <0x263eca0>} ; [ DW_TAG_subprogram ] [line 91] [def] [loadx8]
+
+!{!"0x2e\00loady8\00loady8\00\00102\000\001\000\000\00256\000\00102", <0x2639410>, <0x2636860>, <0x2641b10>, null, void (double*, double*, i32, i32)* @loady8, null, null, <0x263eca0>} ; [ DW_TAG_subprogram ] [line 102] [def] [loady8]
+
+!{!"0x2e\00fft1D_512\00fft1D_512\00\00113\000\001\000\000\00256\000\00113", <0x2639410>, <0x2636860>, <0x2642430>, null, void (double*, double*)* @fft1D_512, null, null, <0x263eca0>} ; [ DW_TAG_subprogram ] [line 113] [def] [fft1D_512]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2641aa8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x26419d8>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from double]
+
+!{!"0x24\00double\000\0064\0064\000\000\004", null, null} ; [ DW_TAG_base_type ] [double] [line 0, size 64, align 64, offset 0, enc DW_ATE_float]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2642178>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+Meta data for 15487463994293617345
+Meta data for 2213583167360954418
+Meta data for 13804747827935074468
+Meta data for 6717461202596488996
+Meta data for 3702322475211168582
+Meta data for 16267903934465119458
+Meta data for 10380584741600920326
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 17573049657617863139, name: twiddles8, fileName: fft.c, startLine: 23, endLine: 23
+DEBUG: adding twiddles8 (in module: fft.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17573049657617863139)
+DEBUG: assigning function twiddles8 id 17573049657617863139
+DEBUG: new region: FuncRegion(id: 2019713881898400535, name: loadx8, fileName: fft.c, startLine: 91, endLine: 91
+DEBUG: adding loadx8 (in module: fft.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2019713881898400535)
+DEBUG: assigning function loadx8 id 2019713881898400535
+DEBUG: new region: FuncRegion(id: 16843616368258450394, name: loady8, fileName: fft.c, startLine: 102, endLine: 102
+DEBUG: adding loady8 (in module: fft.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 16843616368258450394)
+DEBUG: assigning function loady8 id 16843616368258450394
+DEBUG: new region: FuncRegion(id: 10984226779646701755, name: fft1D_512, fileName: fft.c, startLine: 113, endLine: 113
+DEBUG: adding fft1D_512 (in module: fft.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 10984226779646701755)
+DEBUG: assigning function fft1D_512 id 10984226779646701755
+DEBUG: found 4 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: twiddles8 is 17573049657617863139
+DEBUG: found 1 loops in function twiddles8
+DEBUG: assigning id = 15487463994293617345 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 1957932882469142970
+DEBUG: assigning id = 1957932882469142970 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: loadx8 is 2019713881898400535
+DEBUG: found 0 loops in function loadx8
+DEBUG: region name to id: loady8 is 16843616368258450394
+DEBUG: found 0 loops in function loady8
+DEBUG: region name to id: fft1D_512 is 10984226779646701755
+DEBUG: found 11 loops in function fft1D_512
+DEBUG: assigning id = 2213583167360954418 to loop with the following BBs:
+	for.cond1531 for.body1533 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9584416327450538866
+DEBUG: assigning id = 9584416327450538866 to body of loop
+DEBUG: assigning id = 13804747827935074468 to loop with the following BBs:
+	for.cond1439 for.body1441 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5676439450990061964
+DEBUG: assigning id = 5676439450990061964 to body of loop
+DEBUG: assigning id = 6717461202596488996 to loop with the following BBs:
+	for.cond1365 for.body1367 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3887151743045969676
+DEBUG: assigning id = 3887151743045969676 to body of loop
+DEBUG: assigning id = 3702322475211168582 to loop with the following BBs:
+	for.cond1291 for.body1293 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17657341865329357835
+DEBUG: assigning id = 17657341865329357835 to body of loop
+DEBUG: assigning id = 16267903934465119458 to loop with the following BBs:
+	for.cond1217 for.body1219 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3140926554423482306
+DEBUG: assigning id = 3140926554423482306 to body of loop
+DEBUG: assigning id = 10380584741600920326 to loop with the following BBs:
+	for.cond744 for.body746 
+DEBUG: /home/patmos/DevelopMeta data for 12215038181662444884
+Meta data for 18372875406833279366
+Meta data for 4926673469073545777
+Meta data for 8491933677061238669
+Meta data for 1234604843572139943
+er/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17088704662169954358
+DEBUG: assigning id = 17088704662169954358 to body of loop
+DEBUG: assigning id = 12215038181662444884 to loop with the following BBs:
+	for.cond653 for.body655 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 515331823642719066
+DEBUG: assigning id = 515331823642719066 to body of loop
+DEBUG: assigning id = 18372875406833279366 to loop with the following BBs:
+	for.cond579 for.body581 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 27730412008063719
+DEBUG: assigning id = 27730412008063719 to body of loop
+DEBUG: assigning id = 4926673469073545777 to loop with the following BBs:
+	for.cond505 for.body507 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7172282910852156191
+DEBUG: assigning id = 7172282910852156191 to body of loop
+DEBUG: assigning id = 8491933677061238669 to loop with the following BBs:
+	for.cond433 for.body435 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8763344198421117729
+DEBUG: assigning id = 8763344198421117729 to body of loop
+DEBUG: assigning id = 1234604843572139943 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4050023479837143715
+DEBUG: assigning id = 4050023479837143715 to body of loop
+DEBUG: for.cond1531 has 1 possible loop exit points
+DEBUG: 	target #0: for.end2032
+DEBUG: for.cond1439 has 1 possible loop exit points
+DEBUG: 	target #0: loop11
+DEBUG: for.cond1365 has 1 possible loop exit points
+DEBUG: 	target #0: loop10
+DEBUG: for.cond1291 has 1 possible loop exit points
+DEBUG: 	target #0: for.end1364
+DEBUG: for.cond1217 has 1 possible loop exit points
+DEBUG: 	target #0: for.end1290
+DEBUG: for.cond744 has 1 possible loop exit points
+DEBUG: 	target #0: for.end1216
+DEBUG: for.cond653 has 1 possible loop exit points
+DEBUG: 	target #0: loop6
+DEBUG: for.cond579 has 1 possible loop exit points
+DEBUG: 	target #0: loop5
+DEBUG: for.cond505 has 1 possible loop exit points
+DEBUG: 	target #0: for.end578
+DEBUG: for.cond433 has 1 possible loop exit points
+DEBUG: 	target #0: for.end504
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: Writing kremlib calls to fft.kdump
+INFO: dumping function: twiddles8
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: llvm.memcpy.p0i8.p0i8.i64
+INFO: dumping function: cos
+INFO: dumping function: sin
+INFO: dumping function: loadx8
+INFO: dumping function: loady8
+INFO: dumping function: fft1D_512
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

@@ -1,0 +1,88 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x34470a0>, <0x3446f50>, <0x3446f50>, <0x343e918>, <0x34480e8>, <0x3446f50>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/sequential/cjpeg_wrbmp/input.c] [DW_LANG_C99]
+
+!{!"0x2e\00cjpeg_wrbmp_initInput\00cjpeg_wrbmp_initInput\00\0022\000\001\000\000\00256\000\0023", <0x34470a0>, <0x3446f90>, <0x3444010>, null, void ()* @cjpeg_wrbmp_initInput, null, null, <0x3446f50>} ; [ DW_TAG_subprogram ] [line 22] [def] [scope 23] [cjpeg_wrbmp_initInput]
+
+!{!"0x34\00cjpeg_wrbmp_colormap\00cjpeg_wrbmp_colormap\00\0020\000\001", null, <0x3446f90>, <0x3447fc0>, [3 x [256 x i8]]* @cjpeg_wrbmp_colormap, null} ; [ DW_TAG_variable ] [cjpeg_wrbmp_colormap] [line 20] [def]
+
+!{!"0x1\00\000\006144\008\000\000\000", null, null, <0x34442f8>, <0x3447f50>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 6144, align 8, offset 0] [from unsigned char]
+
+!{!"0x24\00unsigned char\000\008\008\000\000\008", null, null} ; [ DW_TAG_base_type ] [unsigned char] [line 0, size 8, align 8, offset 0, enc DW_ATE_unsigned_char]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3443fa8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+Meta data for 16539789473227154434
+Meta data for 17635990490903147889
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 16080259719871761753, name: cjpeg_wrbmp_initInput, fileName: input.c, startLine: 22, endLine: 22
+DEBUG: adding cjpeg_wrbmp_initInput (in module: input.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 16080259719871761753)
+DEBUG: assigning function cjpeg_wrbmp_initInput id 16080259719871761753
+DEBUG: found 1 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: cjpeg_wrbmp_initInput is 16080259719871761753
+DEBUG: found 2 loops in function cjpeg_wrbmp_initInput
+DEBUG: assigning id = 16539789473227154434 to loop with the following BBs:
+	for.cond for.body for.cond1 for.inc10 for.body3 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 2766320674503856306
+DEBUG: assigning id = 2766320674503856306 to body of loop
+DEBUG: assigning id = 17635990490903147889 to loop with the following BBs:
+	for.cond1 for.body3 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3835687356662995844
+DEBUG: assigning id = 3835687356662995844 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end12
+DEBUG: for.cond1 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc10
+DEBUG: Writing kremlib calls to input.kdump
+INFO: dumping function: cjpeg_wrbmp_initInput
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: llvm.memcpy.p0i8.p0i8.i64
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

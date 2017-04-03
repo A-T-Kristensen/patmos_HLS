@@ -1,0 +1,373 @@
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 11133386070635728319, name: g723_enc_fmult, fileName: g723_enc.c, startLine: 200, endLine: 200
+DEBUG: adding g723_enc_fmult (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 11133386070635728319)
+DEBUG: assigning function g723_enc_fmult id 11133386070635728319
+DEBUG: new region: FuncRegion(id: 2409907107709545627, name: g723_enc_quan, fileName: g723_enc.c, startLine: 242, endLine: 242
+DEBUG: adding g723_enc_quan (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2409907107709545627)
+DEBUG: assigning function g723_enc_quan id 2409907107709545627
+DEBUG: new region: FuncRegion(id: 2062668655082158238, name: g723_enc_abs, fileName: g723_enc.c, startLine: 223, endLine: 223
+DEBUG: adding g723_enc_abs (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2062668655082158238)
+DEBUG: assigning function g723_enc_abs id 2062668655082158238
+DEBUG: new region: FuncRegion(id: 14649455128728298744, name: g723_enc_predictor_zero, fileName: g723_enc.c, startLine: 273, endLine: 273
+DEBUG: adding g723_enc_predictor_zero (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14649455128728298744)
+DEBUG: assigning function g723_enc_predictor_zero id 14649455128728298744
+DEBUG: new region: FuncRegion(id: 6057200378094907870, name: g723_enc_predictor_pole, fileName: g723_enc.c, startLine: 295, endLine: 295
+DEBUG: adding g723_enc_predictor_pole (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6057200378094907870)
+DEBUG: assigning function g723_enc_predictor_pole id 6057200378094907870
+DEBUG: new region: FuncRegion(id: 16302314117632264165, name: g723_enc_step_size, fileName: g723_enc.c, startLine: 309, endLine: 309
+DEBUG: adding g723_enc_step_size (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 16302314117632264165)
+DEBUG: assigning function g723_enc_step_size id 16302314117632264165
+DEBUG: new region: FuncRegion(id: 7177727188634784197, name: g723_enc_quantize, fileName: g723_enc.c, startLine: 342, endLine: 342
+DEBUG: adding g723_enc_quantize (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 7177727188634784197)
+DEBUG: assigning function g723_enc_quantize id 7177727188634784197
+DEBUG: new region: FuncRegion(id: 1452581711807128058, name: g723_enc_reconstruct, fileName: g723_enc.c, startLine: 395, endLine: 395
+DEBUG: adding g723_enc_reconstruct (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 1452581711807128058)
+DEBUG: assigning function g723_enc_reconstruct id 1452581711807128058
+DEBUG: new region: FuncRegion(id: 13327192572675816585, name: g723_enc_update, fileName: g723_enc.c, startLine: 424, endLine: 424
+DEBUG: adding g723_enc_update (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 13327192572675816585)
+DEBUG: assigning function g723_enc_update id 13327192572675816585
+DEBUG: new region: FuncRegion(id: 7274670289251517487, name: g723_enc_alaw2linear, fileName: g723_enc.c, startLine: 637, endLine: 637
+DEBUG: adding g723_enc_alaw2linear (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 7274670289251517487)
+DEBUG: assigning function g723_enc_alaw2linear id 7274670289251517487
+DEBUG: new region: FuncRegion(id: 4156000398956227190, name: g723_enc_ulaw2linear, fileName: g723_enc.c, startLine: 672, endLine: 672
+DEBUG: adding g723_enc_ulaw2linear (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x2a53950>, <0x2a4ce80>, <0x2a4d0b0>, <0x2a5f6e0>, <0x2a6bf78>, <0x2a4ce80>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/sequential/g723_enc/g723_enc.c] [DW_LANG_C99]
+
+!{!"0x2e\00g723_enc_pack_output\00g723_enc_pack_output\00\00750\000\001\000\000\00256\000\00753", <0x2a53950>, <0x2a4d0f0>, <0x2a5e9a0>, null, i32 (i8, i32)* @g723_enc_pack_output, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 750] [def] [scope 753] [g723_enc_pack_output]
+
+!{!"0x2e\00g723_enc_fmult\00g723_enc_fmult\00\00200\000\001\000\000\00256\000\00203", <0x2a53950>, <0x2a4d0f0>, <0x2a4d050>, null, i32 (i32, i32)* @g723_enc_fmult, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 200] [def] [scope 203] [g723_enc_fmult]
+
+!{!"0x2e\00g723_enc_abs\00g723_enc_abs\00\00223\000\001\000\000\00256\000\00224", <0x2a53950>, <0x2a4d0f0>, <0x2a53580>, null, i32 (i32)* @g723_enc_abs, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 223] [def] [scope 224] [g723_enc_abs]
+
+!{!"0x2e\00g723_enc_quan\00g723_enc_quan\00\00242\000\001\000\000\00256\000\00246", <0x2a53950>, <0x2a4d0f0>, <0x2a540a0>, null, i32 (i32, i16*, i32)* @g723_enc_quan, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 242] [def] [scope 246] [g723_enc_quan]
+
+!{!"0x2e\00g723_enc_predictor_zero\00g723_enc_predictor_zero\00\00273\000\001\000\000\00256\000\00275", <0x2a53950>, <0x2a4d0f0>, <0x2a57190>, null, i32 (%struct.g723_enc_state_t*)* @g723_enc_predictor_zero, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 273] [def] [scope 275] [g723_enc_predictor_zero]
+
+!{!"0x2e\00g723_enc_predictor_pole\00g723_enc_predictor_pole\00\00295\000\001\000\000\00256\000\00297", <0x2a53950>, <0x2a4d0f0>, <0x2a57190>, null, i32 (%struct.g723_enc_state_t*)* @g723_enc_predictor_pole, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 295] [def] [scope 297] [g723_enc_predictor_pole]
+
+!{!"0x2e\00g723_enc_step_size\00g723_enc_step_size\00\00309\000\001\000\000\00256\000\00311", <0x2a53950>, <0x2a4d0f0>, <0x2a57190>, null, i32 (%struct.g723_enc_state_t*)* @g723_enc_step_size, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 309] [def] [scope 311] [g723_enc_step_size]
+
+!{!"0x2e\00g723_enc_quantize\00g723_enc_quantize\00\00342\000\001\000\000\00256\000\00347", <0x2a53950>, <0x2a4d0f0>, <0x2a5d6c0>, null, i32 (i32, i32, i16*, i32)* @g723_enc_quantize, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 342] [def] [scope 347] [g723_enc_quantize]
+
+!{!"0x2e\00g723_enc_reconstruct\00g723_enc_reconstruct\00\00395\000\001\000\000\00256\000\00399", <0x2a53950>, <0x2a4d0f0>, <0x2a4cd20>, null, i32 (i32, i32, i32)* @g723_enc_reconstruct, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 395] [def] [scope 399] [g723_enc_reconstruct]
+
+!{!"0x2e\00g723_enc_update\00g723_enc_update\00\00424\000\001\000\000\00256\000\00433", <0x2a53950>, <0x2a4d0f0>, <0x2a5dda0>, null, void (i32, i32, i32, i32, i32, i32, i32, %struct.g723_enc_state_t*)* @g723_enc_update, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 424] [def] [scope 433] [g723_enc_update]
+
+!{!"0x2e\00g723_enc_alaw2linear\00g723_enc_alaw2linear\00\00637\000\001\000\000\00256\000\00639", <0x2a53950>, <0x2a4d0f0>, <0x2a5e1b0>, null, i32 (i8)* @g723_enc_alaw2linear, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 637] [def] [scope 639] [g723_enc_alaw2linear]
+
+!{!"0x2e\00g723_enc_ulaw2linear\00g723_enc_ulaw2linear\00\00672\000\001\000\000\00256\000\00674", <0x2a53950>, <0x2a4d0f0>, <0x2a5e1b0>, null, i32 (i8)* @g723_enc_ulaw2linear, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 672] [def] [scope 674] [g723_enc_ulaw2linear]
+
+!{!"0x2e\00g723_enc_g723_24_encoder\00g723_enc_g723_24_encoder\00\00698\000\001\000\000\00256\000\00702", <0x2a53950>, <0x2a4d0f0>, <0x2a5e630>, null, i32 (i32, i32, %struct.g723_enc_state_t*)* @g723_enc_g723_24_encoder, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 698] [def] [scope 702] [g723_enc_g723_24_encoder]
+
+!{!"0x2e\00g723_enc_init_state\00g723_enc_init_state\00\00786\000\001\000\000\00256\000\00788", <0x2a53950>, <0x2a4d0f0>, <0x2a5ec60>, null, void (%struct.g723_enc_state_t*)* @g723_enc_init_state, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 786] [def] [scope 788] [g723_enc_init_state]
+
+!{!"0x2e\00g723_enc_init\00g723_enc_init\00\00812\000\001\000\000\000\000\00813", <0x2a53950>, <0x2a4d0f0>, <0x2a5ef60>, null, void ()* @g723_enc_init, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 812] [def] [scope 813] [g723_enc_init]
+
+!{!"0x2e\00g723_enc_return\00g723_enc_return\00\00825\000\001\000\000\000\000\00826", <0x2a53950>, <0x2a4d0f0>, <0x2a5f160>, null, i32 ()* @g723_enc_return, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 825] [def] [scope 826] [g723_enc_return]
+
+!{!"0x2e\00g723_enc_main\00g723_enc_main\00\00842\000\001\000\000\000\000\00843", <0x2a53950>, <0x2a4d0f0>, <0x2a5ef60>, null, void ()* @g723_enc_main, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 842] [def] [scope 843] [g723_enc_main]
+
+!{!"0x2e\00main\00main\00\00871\000\001\000\000\00256\000\00872", <0x2a53950>, <0x2a4d0f0>, <0x2a5f160>, null, i32 ()* @main, null, null, <0x2a4ce80>} ; [ DW_TAG_subprogram ] [line 871] [def] [scope 872] [main]
+
+!{!"0x34\00g723_enc_INPUT\00g723_enc_INPUT\00\00117\000\001", null, <0x2a4d0f0>, <0x2a5f5f0>, [256 x i32]* @g723_enc_INPUT, null} ; [ DW_TAG_variable ] [g723_enc_INPUT] [line 117] [def]
+
+!{!"0x34\00g723_enc_power2\00g723_enc_power2\00\00140\000\001", null, <0x2a4d0f0>, <0x2a56840>, [15 x i16]* @g723_enc_power2, null} ; [ DW_TAG_variable ] [g723_enc_power2] [line 140] [def]
+
+!{!"0x34\00g723_enc_qtab_723_24\00g723_enc_qtab_723_24\00\00150\000\001", null, <0x2a4d0f0>, <0x2a55d50>, [3 x i16]* @g723_enc_qtab_723_24, null} ; [ DW_TAG_variable ] [g723_enc_qtab_723_24] [line 150] [def]
+
+!{!"0x34\00g723_enc_dqlntab\00g723_enc_dqlntab\00\00156\000\001", null, <0x2a4d0f0>, <0x2a55fd0>, [16 x i16]* @g723_enc_dqlntab, null} ; [ DW_TAG_variable ] [g723_enc_dqlntab] [line 156] [def]
+
+!{!"0x34\00g723_enc_witab\00g723_enc_witab\00\00161\000\001", null, <0x2a4d0f0>, <0x2a55fd0>, [16 x i16]* @g723_enc_witab, null} ; [ DW_TAG_variable ] [g723_enc_witab] [line 161] [def]
+
+!{!"0x34\00g723_enc_fitab\00g723_enc_fitab\00\00169\000\001", null, <0x2a4d0f0>, <0x2a55fd0>, [16 x i16]* @g723_enc_fitab, null} ; [ DW_TAG_variable ] [g723_enc_fitab] [line 169] [def]
+
+!{!"0x34\00out_buffer\00out_buffer\00\00754\001\001", <0x2a5eb38>, <0x2a4d0f0>, <0x2a4cf58>, i32* @g723_enc_pack_output.out_buffer, null} ; [ DW_TAG_variable ] [out_buffer] [line 754] [local] [def]
+
+!{!"0x34\00out_bits\00out_bits\00\00755\001\001", <0x2a5eb38>, <0x2a4d0f0>, <0x2a53a18>, i32* @g723_enc_pack_output.out_bits, null} ; [ DW_TAG_variable ] [out_bits] [line 755] [local] [def]
+
+!{!"0x34\00i\00i\00\00757\001\001", <0x2a5eb38>, <0x2a4d0f0>, <0x2a53a18>, i32* @g723_enc_pack_output.i, null} ; [ DW_TAG_variable ] [i] [line 757] [local] [def]
+
+!{!"0x34\00g723_enc_state\00g723_enc_state\00\00115\000\001", null, <0x2a4d0f0>, <0x2a56e80>, %struct.g723_enc_state_t* @g723_enc_state, null} ; [ DW_TAG_variable ] [g723_enc_state] [line 115] [def]
+
+!{!"0x34\00g723_enc_OUTPUT\00g723_enc_OUTPUT\00\00138\000\001", null, <0x2a4d0f0>, <0x2a5f5f0>, [256 x i32]* @g723_enc_OUTPUT, null} ; [ DW_TAG_variable ] [g723_enc_OUTPUT] [line 138] [def]
+
+!{!"0x1\00\000\008192\0032\000\000\000", null, null, <0x2a4cf58>, <0x2a5f288>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 8192, align 32, offset 0] [from unsigned int]
+
+!{!"0x24\00unsigned int\000\0032\0032\000\000\007", null, null} ; [ DW_TAG_base_type ] [unsigned int] [line 0, size 32, align 32, offset 0, enc DW_ATE_unsigned]
+
+!{!"0x1\00\000\00240\0016\000\000\000", null, null, <0x2a53fe8>, <0x2a567d8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 240, align 16, offset 0] [from short]
+
+!{!"0x24\00short\000\0016\0016\000\000\005", null, null} ; [ DW_TAG_base_type ] [short] [line 0, size 16, align 16, offset 0, enc DW_ATE_signed]
+
+!{!"0x1\00\000\0048\0016\000\000\000", null, null, <0x2a53fe8>, <0x2a55ce8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 48, align 16, offset 0] [from short]
+
+!{!"0x1\00\000\00256\0016\000\000\000", null, null, <0x2a53fe8>, <0x2a55f68>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 256, align 16, offset 0] [from short]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2a5e7d8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x24\00unsigned char\000\008\008\000\000\008", null, null} ; [ DW_TAG_base_type ] [unsigned char] [line 0, size 8, align 8, offset 0, enc DW_ATE_unsigned_char]
+
+!{!"0x13\00g723_enc_state_t\0033\00448\0064\000\000\000", <0x2a53950>, null, null, <0x2a56f28>, null, null, null} ; [ DW_TAG_structure_type ] [g723_enc_state_t] [line 33, size 448, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00yl\0034\0064\0064\000\000", <0x2a53950>, <0x2a56e80>, <0x2a537a8>} ; [ DW_TAG_member ] [yl] [line 34, size 64, align 64, offset 0] [from long int]
+
+!{!"0x24\00long int\000\0064\0064\000\000\005", null, null} ; [ DW_TAG_base_type ] [long int] [line 0, size 64, align 64, offset 0, enc DW_ATE_signed]
+
+!{!"0xd\00yu\0035\0016\0016\0064\000", <0x2a53950>, <0x2a56e80>, <0x2a53fe8>} ; [ DW_TAG_member ] [yu] [line 35, size 16, align 16, offset 64] [from short]
+
+!{!"0xd\00dms\0036\0016\0016\0080\000", <0x2a53950>, <0x2a56e80>, <0x2a53fe8>} ; [ DW_TAG_member ] [dms] [line 36, size 16, align 16, offset 80] [from short]
+
+!{!"0xd\00dml\0037\0016\0016\0096\000", <0x2a53950>, <0x2a56e80>, <0x2a53fe8>} ; [ DW_TAG_member ] [dml] [line 37, size 16, align 16, offset 96] [from short]
+
+!{!"0xd\00ap\0038\0016\0016\00112\000", <0x2a53950>, <0x2a56e80>, <0x2a53fe8>} ; [ DW_TAG_member ] [ap] [line 38, size 16, align 16, offset 112] [from short]
+
+!{!"0xd\00a\0040\0032\0016\00128\000", <0x2a53950>, <0x2a56e80>, <0x2a564a0>} ; [ DW_TAG_member ] [a] [line 40, size 32, align 16, offset 128] [from ]
+
+!{!"0x1\00\000\0032\0016\000\000\000", null, null, <0x2a53fe8>, <0x2a56438>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 32, align 16, offset 0] [from short]
+
+!{!"0xd\00b\0041\0096\0016\00160\000", <0x2a53950>, <0x2a56e80>, <0x2a55770>} ; [ DW_TAG_member ] [b] [line 41, size 96, align 16, offset 160] [from ]
+
+!{!"0x1\00\000\0096\0016\000\000\000", null, null, <0x2a53fe8>, <0x2a55708>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 96, align 16, offset 0] [from short]
+
+!{!"0xd\00pk\0042\0032\0016\00256\000", <0x2a53950>, <0x2a56e80>, <0x2a564a0>} ; [ DW_TAG_member ] [pk] [line 42, size 32, align 16, offset 256] [from ]
+
+!{!"0xd\00dq\0046\0096\0016\00288\000", <0x2a53950>, <0x2a56e80>, <0x2a55770>} ; [ DW_TAG_member ] [dq] [line 46, size 96, align 16, offset 288] [from ]
+
+!{!"0xd\00sr\0051\0032\0016\00384\000", <0x2a53950>, <0x2a56e80>, <0x2a564a0>} ; [ DW_TAG_member ] [sr] [line 51, size 32, align 16, offset 384] [from ]
+
+!{!"0xd\00td\0056\008\008\00416\000", <0x2a53950>, <0x2a56e80>, <0x2a56d48>} ; [ DW_TAG_member ] [td] [line 56, size 8, align 8, offset 416] [from char]
+
+!{!"0x24\00char\000\008\008\000\000\006", null, null} ; [ DW_TAG_base_type ] [char] [line 0, size 8, align 8, offset 0, enc DW_ATE_signed_char]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2a53a58>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2a53a90>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2a54030>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2a53fe8>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from short]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2a542c0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2a56e80>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from g723_enc_state_t]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2a5cd88>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2a5d7a0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2a5de38>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2a4ce40>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2a4ce00>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2a5eb70>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2a56098>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2a5d568>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x2a4cf58>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from unsigned int]
+
+Meta data for 3855407950766437222
+Meta data for 10060724200761472809
+id: 4156000398956227190)
+DEBUG: assigning function g723_enc_ulaw2linear id 4156000398956227190
+DEBUG: new region: FuncRegion(id: 17182327017935181545, name: g723_enc_g723_24_encoder, fileName: g723_enc.c, startLine: 698, endLine: 698
+DEBUG: adding g723_enc_g723_24_encoder (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 17182327017935181545)
+DEBUG: assigning function g723_enc_g723_24_encoder id 17182327017935181545
+DEBUG: new region: FuncRegion(id: 1825280541839274342, name: g723_enc_pack_output, fileName: g723_enc.c, startLine: 750, endLine: 750
+DEBUG: adding g723_enc_pack_output (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 1825280541839274342)
+DEBUG: assigning function g723_enc_pack_output id 1825280541839274342
+DEBUG: new region: FuncRegion(id: 3445630946792296174, name: g723_enc_init_state, fileName: g723_enc.c, startLine: 786, endLine: 786
+DEBUG: adding g723_enc_init_state (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3445630946792296174)
+DEBUG: assigning function g723_enc_init_state id 3445630946792296174
+DEBUG: new region: FuncRegion(id: 3638659183748335277, name: g723_enc_init, fileName: g723_enc.c, startLine: 812, endLine: 812
+DEBUG: adding g723_enc_init (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3638659183748335277)
+DEBUG: assigning function g723_enc_init id 3638659183748335277
+DEBUG: new region: FuncRegion(id: 2764685039993314616, name: g723_enc_return, fileName: g723_enc.c, startLine: 825, endLine: 825
+DEBUG: adding g723_enc_return (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2764685039993314616)
+DEBUG: assigning function g723_enc_return id 2764685039993314616
+DEBUG: new region: FuncRegion(id: 14039042329559143743, name: g723_enc_main, fileName: g723_enc.c, startLine: 842, endLine: 842
+DEBUG: adding g723_enc_main (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14039042329559143743)
+DEBUG: assigning function g723_enc_main id 14039042329559143743
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: g723_enc.c, startLine: 871, endLine: 871
+DEBUG: adding main (in module: g723_enc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 18 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: g723_enc_fmult is 11133386070635728319
+DEBUG: found 0 loops in function g723_enc_fmult
+DEBUG: region name to id: g723_enc_quan is 2409907107709545627
+DEBUG: found 1 loops in function g723_enc_quan
+DEBUG: assigning id = 3855407950766437222 to loop with the following BBs:
+	for.cond for.body if.then if.then3 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3175715765871837543
+DEBUG: assigning id = 3175715765871837543 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: g723_enc_abs is 2062668655082158238
+DEBUG: found 0 loops in function g723_enc_abs
+DEBUG: region name to id: g723_enc_predictor_zero is 14649455128728298744
+DEBUG: found 1 loops in function g723_enc_predictor_zero
+DEBUG: assigning id = 10060724200761472809 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6911288816084863226
+DEBUG: assigning id = 6911288816084863226 to body of loop
+DEBUG: for.cond has 1 possible loop eMeta data for 15980110504298113786
+Meta data for 954635163484703637
+Meta data for 18408047549380054615
+Meta data for 8871749950239604233
+Meta data for 9310554621904567454
+Meta data for 2641405572823614911
+Meta data for 3814120250494497135
+xit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: g723_enc_predictor_pole is 6057200378094907870
+DEBUG: found 0 loops in function g723_enc_predictor_pole
+DEBUG: region name to id: g723_enc_step_size is 16302314117632264165
+DEBUG: found 0 loops in function g723_enc_step_size
+DEBUG: region name to id: g723_enc_quantize is 7177727188634784197
+DEBUG: found 0 loops in function g723_enc_quantize
+DEBUG: region name to id: g723_enc_reconstruct is 1452581711807128058
+DEBUG: found 0 loops in function g723_enc_reconstruct
+DEBUG: region name to id: g723_enc_update is 13327192572675816585
+DEBUG: found 2 loops in function g723_enc_update
+DEBUG: assigning id = 15980110504298113786 to loop with the following BBs:
+	for.cond282 for.body285 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16190692743968550851
+DEBUG: assigning id = 16190692743968550851 to body of loop
+DEBUG: assigning id = 954635163484703637 to loop with the following BBs:
+	for.cond for.body if.else242 if.then231 if.end254 if.then257 if.else272 if.then265 for.inc 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16891605496441833596
+DEBUG: assigning id = 16891605496441833596 to body of loop
+DEBUG: for.cond282 has 1 possible loop exit points
+DEBUG: 	target #0: for.end294
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: if.end281.loopexit
+DEBUG: region name to id: g723_enc_alaw2linear is 7274670289251517487
+DEBUG: found 0 loops in function g723_enc_alaw2linear
+DEBUG: region name to id: g723_enc_ulaw2linear is 4156000398956227190
+DEBUG: found 0 loops in function g723_enc_ulaw2linear
+DEBUG: region name to id: g723_enc_g723_24_encoder is 17182327017935181545
+DEBUG: found 0 loops in function g723_enc_g723_24_encoder
+DEBUG: region name to id: g723_enc_pack_output is 1825280541839274342
+DEBUG: found 0 loops in function g723_enc_pack_output
+DEBUG: region name to id: g723_enc_init_state is 3445630946792296174
+DEBUG: found 2 loops in function g723_enc_init_state
+DEBUG: assigning id = 18408047549380054615 to loop with the following BBs:
+	for.cond5 for.body7 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16974033695940983971
+DEBUG: assigning id = 16974033695940983971 to body of loop
+DEBUG: assigning id = 8871749950239604233 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12088142119531757032
+DEBUG: assigning id = 12088142119531757032 to body of loop
+DEBUG: for.cond5 has 1 possible loop exit points
+DEBUG: 	target #0: for.end14
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: g723_enc_init is 3638659183748335277
+DEBUG: found 1 loops in function g723_enc_init
+DEBUG: assigning id = 9310554621904567454 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5852752460557925383
+DEBUG: assigning id = 5852752460557925383 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: g723_enc_return is 2764685039993314616
+DEBUG: found 1 loops in function g723_enc_return
+DEBUG: assigning id = 2641405572823614911 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16772332463593122174
+DEBUG: assigning id = 16772332463593122174 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: g723_enc_main is 14039042329559143743
+DEBUG: found 2 loops in function g723_enc_main
+DEBUG: assigning id = 3814120250494497135 to loop with the followiMeta data for 11703019829010341673
+ng BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7707732753888357546
+DEBUG: assigning id = 7707732753888357546 to body of loop
+DEBUG: assigning id = 11703019829010341673 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9887928167575449404
+DEBUG: assigning id = 9887928167575449404 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.cond.preheader
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to g723_enc.kdump
+INFO: dumping function: g723_enc_fmult
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: g723_enc_quan
+INFO: dumping function: g723_enc_abs
+INFO: dumping function: g723_enc_predictor_zero
+INFO: dumping function: g723_enc_predictor_pole
+INFO: dumping function: g723_enc_step_size
+INFO: dumping function: g723_enc_quantize
+INFO: dumping function: g723_enc_reconstruct
+INFO: dumping function: g723_enc_update
+INFO: dumping function: g723_enc_alaw2linear
+INFO: dumping function: g723_enc_ulaw2linear
+INFO: dumping function: g723_enc_g723_24_encoder
+INFO: dumping function: g723_enc_pack_output
+INFO: dumping function: g723_enc_init_state
+INFO: dumping function: g723_enc_init
+INFO: dumping function: g723_enc_return
+INFO: dumping function: g723_enc_main
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

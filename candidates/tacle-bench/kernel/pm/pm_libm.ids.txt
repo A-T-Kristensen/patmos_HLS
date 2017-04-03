@@ -1,0 +1,65 @@
+FUNC: pm_math_init
+
+FUNC: pm_pow10f
+	1: ARG : 0
+	20 : 141 : load
+	21 : 141 : fadd
+	2 : 105 : load
+	3 : 107 : load
+	4 : 109 : load
+	5 : 111 : load
+	6 : 113 : load
+	7 : 115 : load
+	8 : 117 : load
+	17 : 135 : load
+	9 : 119 : load
+	10 : 121 : load
+	11 : 123 : load
+	12 : 125 : load
+	13 : 127 : load
+	14 : 129 : load
+	15 : 131 : load
+	16 : 133 : load
+	18 : 137 : load
+	19 : 139 : load
+
+FUNC: pm_log10f
+	8 : 173 : load
+	9 : 175 : load
+	10 : 177 : load
+	1: ARG : 0
+	7 : 171 : load
+	17 : 191 : load
+	18 : 193 : fmul
+	2 : 161 : load
+	3 : 163 : load
+	4 : 165 : load
+	5 : 167 : load
+	6 : 169 : load
+	11 : 179 : load
+	12 : 181 : load
+	13 : 183 : load
+	14 : 185 : load
+	15 : 187 : load
+	16 : 189 : load
+
+FUNC: pm_fabs
+	1: ARG : 0
+	4 : 201 : fcmp
+	3 : 204 : fsub
+	2 : ?? : phi
+
+FUNC: pm_floor
+	1: ARG : 0
+	5 : 210 : fcmp
+	3 : 210 : sitofp
+	4 : 211 : sitofp
+	2 : ?? : phi
+
+FUNC: pm_ceil
+	1: ARG : 0
+	5 : 217 : fcmp
+	3 : 217 : sitofp
+	4 : 218 : sitofp
+	2 : ?? : phi
+

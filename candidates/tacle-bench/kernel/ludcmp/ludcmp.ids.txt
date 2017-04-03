@@ -1,0 +1,129 @@
+FUNC: ludcmp_init
+	8 : 58 : load
+	18 : 58 : fadd
+	9 : 60 : load
+	3 : 50 : icmp
+	2 : ?? : phi
+	5 : ?? : phi
+	13 : ?? : phi
+	4 : 53 : icmp
+	1 : 54 : sitofp
+	19 : 56 : icmp
+	6 : 57 : load
+	7 : 57 : fmul
+	20 : 60 : icmp
+	10 : 61 : load
+	11 : 61 : load
+	12 : 61 : fadd
+	14 : 66 : load
+	21 : 66 : icmp
+	15 : 67 : load
+	16 : 67 : load
+	17 : 67 : fadd
+
+FUNC: ludcmp_return
+	1 : 75 : load
+	7 : 75 : sitofp
+	5 : ?? : phi
+	6 : ?? : phi
+	9 : 78 : icmp
+	2 : 79 : load
+	8 : 79 : fadd
+	11 : 83 : fcmp
+	10 : 83 : fcmp
+	4 : ?? : phi
+	3 : 83 : select
+
+FUNC: ludcmp_fabs
+	1: ARG : 0
+	4 : 90 : fcmp
+	3 : 93 : fsub
+	2 : ?? : phi
+
+FUNC: ludcmp_test
+	62 : 130 : icmp
+	21 : 131 : load
+	22 : 131 : load
+	61 : 131 : fsub
+	70 : 144 : icmp
+	27 : 145 : load
+	1: ARG : 0
+	2: ARG : 1
+	12 : 104 : or
+	10 : 108 : sext
+	58 : 108 : sext
+	11 : 108 : sext
+	14 : ?? : phi
+	45 : ?? : phi
+	47 : ?? : phi
+	49 : ?? : phi
+	13 : 108 : icmp
+	3 : 109 : load
+	4 : 109 : call
+	15 : 109 : fcmp
+	17 : ?? : phi
+	16 : 113 : icmp
+	5 : 114 : load
+	55 : 116 : icmp
+	52 : ?? : phi
+	53 : ?? : phi
+	56 : 118 : icmp
+	6 : 119 : load
+	7 : 119 : load
+	54 : 119 : fsub
+	18 : ?? : phi
+	8 : 122 : load
+	9 : 122 : fdiv
+	51 : 113 : add
+	20 : ?? : phi
+	59 : 126 : icmp
+	19 : 127 : load
+	60 : ?? : phi
+	23 : ?? : phi
+	57 : 126 : add
+	50 : 108 : add
+	46 : 108 : add
+	48 : 108 : add
+	24 : 137 : load
+	64 : 140 : sext
+	26 : ?? : phi
+	66 : ?? : phi
+	65 : 140 : icmp
+	25 : 141 : load
+	68 : ?? : phi
+	29 : ?? : phi
+	28 : 145 : load
+	69 : 145 : fsub
+	63 : 140 : add
+	67 : 140 : add
+	31 : 150 : sext
+	30 : 150 : load
+	33 : 150 : sext
+	32 : 150 : load
+	34 : 150 : fdiv
+	76 : 153 : sext
+	72 : ?? : sext
+	36 : ?? : phi
+	73 : ?? : phi
+	78 : ?? : sext
+	43 : 153 : icmp
+	35 : 154 : load
+	38 : ?? : phi
+	42 : ?? : phi
+	77 : 157 : icmp
+	37 : 158 : load
+	39 : 158 : load
+	79 : 158 : fsub
+	75 : 157 : add
+	40 : 160 : load
+	41 : 160 : fdiv
+	74 : 153 : add
+	71 : 153 : add
+	44 : ?? : phi
+
+FUNC: ludcmp_main
+	1 : 170 : call
+
+FUNC: main
+	1 : 178 : call
+

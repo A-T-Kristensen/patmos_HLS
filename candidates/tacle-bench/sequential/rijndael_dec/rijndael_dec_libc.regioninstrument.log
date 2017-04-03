@@ -1,0 +1,165 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x218bdb0>, <0x218d1e8>, <0x218cff8>, <0x2194aa0>, <0x218d3a0>, <0x218d3a0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/sequential/rijndael_dec/rijndael_dec_libc.c] [DW_LANG_C99]
+
+!{!"0x2e\00rijndael_dec_toupper\00rijndael_dec_toupper\00\003\000\001\000\000\00256\000\004", <0x218bdb0>, <0x218d4a0>, <0x218d6f0>, null, i32 (i32)* @rijndael_dec_toupper, null, null, <0x218d3a0>} ; [ DW_TAG_subprogram ] [line 3] [def] [scope 4] [rijndael_dec_toupper]
+
+!{!"0x2e\00rijndael_dec_fread\00rijndael_dec_fread\00\0010\000\001\000\000\00256\000\0012", <0x218bdb0>, <0x218d4a0>, <0x218e850>, null, i64 (i8*, i64, i64, %struct.rijndael_dec_FILE*)* @rijndael_dec_fread, null, null, <0x218d3a0>} ; [ DW_TAG_subprogram ] [line 10] [def] [scope 12] [rijndael_dec_fread]
+
+!{!"0x2e\00rijndael_dec_fwrite\00rijndael_dec_fwrite\00\0024\000\001\000\000\00256\000\0026", <0x218bdb0>, <0x218d4a0>, <0x218fcf0>, null, i64 (i8*, i64, i64, %struct.rijndael_dec_FILE*)* @rijndael_dec_fwrite, null, null, <0x218d3a0>} ; [ DW_TAG_subprogram ] [line 24] [def] [scope 26] [rijndael_dec_fwrite]
+
+!{!"0x2e\00rijndael_dec_fseek\00rijndael_dec_fseek\00\0038\000\001\000\000\00256\000\0040", <0x218bdb0>, <0x218d4a0>, <0x218d620>, null, i32 (%struct.rijndael_dec_FILE*, i64, i32)* @rijndael_dec_fseek, null, null, <0x218d3a0>} ; [ DW_TAG_subprogram ] [line 38] [def] [scope 40] [rijndael_dec_fseek]
+
+!{!"0x2e\00rijndael_dec_fgetpos\00rijndael_dec_fgetpos\00\0056\000\001\000\000\00256\000\0058", <0x218bdb0>, <0x218d4a0>, <0x21945b0>, null, i32 (%struct.rijndael_dec_FILE*, i32*)* @rijndael_dec_fgetpos, null, null, <0x218d3a0>} ; [ DW_TAG_subprogram ] [line 56] [def] [scope 58] [rijndael_dec_fgetpos]
+
+!{!"0x2e\00rijndael_dec_feof\00rijndael_dec_feof\00\0063\000\001\000\000\00256\000\0064", <0x218bdb0>, <0x218d4a0>, <0x2194930>, null, i32 (%struct.rijndael_dec_FILE*)* @rijndael_dec_feof, null, null, <0x218d3a0>} ; [ DW_TAG_subprogram ] [line 63] [def] [scope 64] [rijndael_dec_feof]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2185d90>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x218e768>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x24\00long unsigned int\000\0064\0064\000\000\007", null, null} ; [ DW_TAG_base_type ] [long unsigned int] [line 0, size 64, align 64, offset 0, enc DW_ATE_unsigned]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, null} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x218efe0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from rijndael_dec_FILE]
+
+!{!"0x13\00rijndael_dec_FILE\008\00192\0064\000\000\000", <0x218bef0>, null, null, <0x218eef8>, null, null, null} ; [ DW_TAG_structure_type ] [rijndael_dec_FILE] [line 8, size 192, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00data\009\0064\0064\000\000", <0x218bef0>, <0x218efe0>, <0x218be70>} ; [ DW_TAG_member ] [data] [line 9, size 64, align 64, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x218d378>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from unsigned char]
+
+!{!"0x24\00unsigned char\000\008\008\000\000\008", null, null} ; [ DW_TAG_base_type ] [unsigned char] [line 0, size 8, align 8, offset 0, enc DW_ATE_unsigned_char]
+
+!{!"0xd\00size\0010\0064\0064\0064\000", <0x218bef0>, <0x218efe0>, <0x218d298>} ; [ DW_TAG_member ] [size] [line 10, size 64, align 64, offset 64] [from long unsigned int]
+
+!{!"0xd\00cur_pos\0011\0032\0032\00128\000", <0x218bef0>, <0x218efe0>, <0x218ede8>} ; [ DW_TAG_member ] [cur_pos] [line 11, size 32, align 32, offset 128] [from unsigned int]
+
+!{!"0x24\00unsigned int\000\0032\0032\000\000\007", null, null} ; [ DW_TAG_base_type ] [unsigned int] [line 0, size 32, align 32, offset 0, enc DW_ATE_unsigned]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x218ebf8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x218e9b0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, null} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x218d530>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x24\00long int\000\0064\0064\000\000\005", null, null} ; [ DW_TAG_base_type ] [long int] [line 0, size 64, align 64, offset 0, enc DW_ATE_signed]
+
+!{!"0x16\00Origin\007\000\000\000\000", <0x218bef0>, null, <0x218d1b0>} ; [ DW_TAG_typedef ] [Origin] [line 7, size 0, align 0, offset 0] [from _Origin_]
+
+!{!"0x4\00_Origin_\006\0032\0032\000\000\000", <0x218bef0>, null, null, <0x218d148>, null, null, null} ; [ DW_TAG_enumeration_type ] [_Origin_] [line 6, size 32, align 32, offset 0] [def] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x21944c8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x218ede8>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from unsigned int]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x2194750>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+Meta data for 9343706220107358067
+Meta data for 17457357154692085260
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 6780740279087917252, name: rijndael_dec_toupper, fileName: rijndael_dec_libc.c, startLine: 3, endLine: 3
+DEBUG: adding rijndael_dec_toupper (in module: rijndael_dec_libc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6780740279087917252)
+DEBUG: assigning function rijndael_dec_toupper id 6780740279087917252
+DEBUG: new region: FuncRegion(id: 11744326712337226519, name: rijndael_dec_fread, fileName: rijndael_dec_libc.c, startLine: 10, endLine: 10
+DEBUG: adding rijndael_dec_fread (in module: rijndael_dec_libc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 11744326712337226519)
+DEBUG: assigning function rijndael_dec_fread id 11744326712337226519
+DEBUG: new region: FuncRegion(id: 2998776218379164955, name: rijndael_dec_fwrite, fileName: rijndael_dec_libc.c, startLine: 24, endLine: 24
+DEBUG: adding rijndael_dec_fwrite (in module: rijndael_dec_libc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2998776218379164955)
+DEBUG: assigning function rijndael_dec_fwrite id 2998776218379164955
+DEBUG: new region: FuncRegion(id: 15997946463526428209, name: rijndael_dec_fseek, fileName: rijndael_dec_libc.c, startLine: 38, endLine: 38
+DEBUG: adding rijndael_dec_fseek (in module: rijndael_dec_libc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 15997946463526428209)
+DEBUG: assigning function rijndael_dec_fseek id 15997946463526428209
+DEBUG: new region: FuncRegion(id: 13676232925167295394, name: rijndael_dec_fgetpos, fileName: rijndael_dec_libc.c, startLine: 56, endLine: 56
+DEBUG: adding rijndael_dec_fgetpos (in module: rijndael_dec_libc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 13676232925167295394)
+DEBUG: assigning function rijndael_dec_fgetpos id 13676232925167295394
+DEBUG: new region: FuncRegion(id: 14545528509649295397, name: rijndael_dec_feof, fileName: rijndael_dec_libc.c, startLine: 63, endLine: 63
+DEBUG: adding rijndael_dec_feof (in module: rijndael_dec_libc.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14545528509649295397)
+DEBUG: assigning function rijndael_dec_feof id 14545528509649295397
+DEBUG: found 6 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: rijndael_dec_toupper is 6780740279087917252
+DEBUG: found 0 loops in function rijndael_dec_toupper
+DEBUG: region name to id: rijndael_dec_fread is 11744326712337226519
+DEBUG: found 1 loops in function rijndael_dec_fread
+DEBUG: assigning id = 9343706220107358067 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4898259453472464989
+DEBUG: assigning id = 4898259453472464989 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: region name to id: rijndael_dec_fwrite is 2998776218379164955
+DEBUG: found 1 loops in function rijndael_dec_fwrite
+DEBUG: assigning id = 17457357154692085260 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5962551799048651217
+DEBUG: assigning id = 5962551799048651217 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: region name to id: rijndael_dec_fseek is 15997946463526428209
+DEBUG: found 0 loops in function rijndael_dec_fseek
+DEBUG: region name to id: rijndael_dec_fgetpos is 13676232925167295394
+DEBUG: found 0 loops in function rijndael_dec_fgetpos
+DEBUG: region name to id: rijndael_dec_feof is 14545528509649295397
+DEBUG: found 0 loops in function rijndael_dec_feof
+DEBUG: Writing kremlib calls to rijndael_dec_libc.kdump
+INFO: dumping function: rijndael_dec_toupper
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: rijndael_dec_fread
+INFO: dumping function: rijndael_dec_fwrite
+INFO: dumping function: rijndael_dec_fseek
+INFO: dumping function: rijndael_dec_fgetpos
+INFO: dumping function: rijndael_dec_feof
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

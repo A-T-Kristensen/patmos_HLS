@@ -1,0 +1,109 @@
+!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x1cb1d90>, <0x1cafba0>, <0x1cafba0>, <0x1cb9fd8>, <0x1cb9f80>, <0x1cafba0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/recursion/recursion.c] [DW_LANG_C99]
+
+!{!"0x2e\00recursion_init\00recursion_init\00\0038\000\001\000\000\00256\000\0039", <0x1cb1d90>, <0x1cb18a0>, <0x1cb8f30>, null, void ()* @recursion_init, null, null, <0x1cafba0>} ; [ DW_TAG_subprogram ] [line 38] [def] [scope 39] [recursion_init]
+
+!{!"0x2e\00recursion_fib\00recursion_fib\00\0045\000\001\000\000\00256\000\0046", <0x1cb1d90>, <0x1cb18a0>, <0x1cb8ea0>, null, i32 (i32)* @recursion_fib, null, null, <0x1cafba0>} ; [ DW_TAG_subprogram ] [line 45] [def] [scope 46] [recursion_fib]
+
+!{!"0x2e\00recursion_return\00recursion_return\00\0055\000\001\000\000\00256\000\0056", <0x1cb1d90>, <0x1cb18a0>, <0x1cb9eb0>, null, i32 ()* @recursion_return, null, null, <0x1cafba0>} ; [ DW_TAG_subprogram ] [line 55] [def] [scope 56] [recursion_return]
+
+!{!"0x2e\00recursion_main\00recursion_main\00\0060\000\001\000\000\00256\000\0061", <0x1cb1d90>, <0x1cb18a0>, <0x1cb8f30>, null, void ()* @recursion_main, null, null, <0x1cafba0>} ; [ DW_TAG_subprogram ] [line 60] [def] [scope 61] [recursion_main]
+
+!{!"0x2e\00main\00main\00\0067\000\001\000\000\00256\000\0068", <0x1cb1d90>, <0x1cb18a0>, <0x1cb9eb0>, null, i32 ()* @main, null, null, <0x1cafba0>} ; [ DW_TAG_subprogram ] [line 67] [def] [scope 68] [main]
+
+!{!"0x34\00recursion_result\00recursion_result\00\0025\000\001", null, <0x1cb18a0>, <0x1cb9558>, i32* @recursion_result, null} ; [ DW_TAG_variable ] [recursion_result] [line 25] [def]
+
+!{!"0x34\00recursion_input\00recursion_input\00\0026\000\001", null, <0x1cb18a0>, <0x1cb9558>, i32* @recursion_input, null} ; [ DW_TAG_variable ] [recursion_input] [line 26] [def]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x1cb8578>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x1cb9590>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x1cb9468>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 7117972404753086871, name: recursion_init, fileName: recursion.c, startLine: 38, endLine: 38
+DEBUG: adding recursion_init (in module: recursion.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 7117972404753086871)
+DEBUG: assigning function recursion_init id 7117972404753086871
+DEBUG: new region: FuncRegion(id: 4466015284037843443, name: recursion_fib, fileName: recursion.c, startLine: 45, endLine: 45
+DEBUG: adding recursion_fib (in module: recursion.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 4466015284037843443)
+DEBUG: assigning function recursion_fib id 4466015284037843443
+DEBUG: new region: FuncRegion(id: 4335982859770750758, name: recursion_return, fileName: recursion.c, startLine: 55, endLine: 55
+DEBUG: adding recursion_return (in module: recursion.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 4335982859770750758)
+DEBUG: assigning function recursion_return id 4335982859770750758
+DEBUG: new region: FuncRegion(id: 4833536154300229011, name: recursion_main, fileName: recursion.c, startLine: 60, endLine: 60
+DEBUG: adding recursion_main (in module: recursion.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 4833536154300229011)
+DEBUG: assigning function recursion_main id 4833536154300229011
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: recursion.c, startLine: 67, endLine: 67
+DEBUG: adding main (in module: recursion.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 5 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: recursion_init is 7117972404753086871
+DEBUG: found 0 loops in function recursion_init
+DEBUG: region name to id: recursion_fib is 4466015284037843443
+DEBUG: found 0 loops in function recursion_fib
+DEBUG: region name to id: recursion_return is 4335982859770750758
+DEBUG: found 0 loops in function recursion_return
+DEBUG: region name to id: recursion_main is 4833536154300229011
+DEBUG: found 0 loops in function recursion_main
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to recursion.kdump
+INFO: dumping function: recursion_init
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: recursion_fib
+INFO: dumping function: recursion_return
+INFO: dumping function: recursion_main
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

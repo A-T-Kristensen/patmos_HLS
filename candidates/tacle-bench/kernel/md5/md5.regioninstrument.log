@@ -1,0 +1,346 @@
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 7442143607960224042, name: md5_orig_init, fileName: md5.c, startLine: 246, endLine: 246
+DEBUG: adding md5_orig_init (in module: md5.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 7442143607960224042)
+DEBUG: assigning function md5_orig_init id 7442143607960224042
+DEBUG: new region: FuncRegion(id: 6718135206100796952, name: md5_update, fileName: md5.c, startLine: 274, endLine: 274
+DEBUG: adding md5_update (in module: md5.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6718135206100796952)
+DEBUG: assigning function md5_update id 6718135206100796952
+DEBUG: new region: FuncRegion(id: 8461345001934634745, name: md5_memcpy, fileName: md5.c, startLine: 478, endLine: 478
+DEBUG: adding md5_memcpy (in module: md5.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 8461345001934634745)
+DEBUG: assigning function md5_memcpy id 8461345001934634745
+DEBUG: new region: FuncRegion(id: 3886969788622743090, name: md5_transform, fileName: md5.c, startLine: 356, endLine: 356
+DEBUG: adding md5_transform (in module: md5.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3886969788622743090)
+DEBUG: assigning function md5_transform id 3886969788622743090
+DEBUG: new region: FuncRegion(id: 14860963409904482654, name: md5_final, fileName: md5.c, startLine: 315, endLine: 315
+DEBUG: adding md5_final (in module: md5.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14860963409904482654)
+DEBUG: assigning function md5_final id 14860963409904482654
+DEBUG: new region: FuncRegion(id: 9482923529681187012, name: md5_encode, fileName: md5.c, startLine: 447, endLine: 447
+DEBUG: adding md5_encode (in module: md5.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 9482923529681187012)
+DEBUG: assigning function md5_encode id 9482923529681187012
+DEBUG: new region: FuncRegion(id: 6784949024600134573, name: md5_memset, fileName: md5.c, startLine: 344, endLine: 344
+DEBUG: adding md5_memset (in module: md5.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6784949024600134573)
+DEBUG: assigning function md5_memset id 6784949024600134573
+DEBUG: new region: FuncRegion(id: 4188520207687177322, name: md5_decode, fileName: md5.c, startLine: 465, endLine: 465
+DEBUG: adding md5_decode (in module: md5.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 4188520207687177322)
+DEBUG: assigning function md5_decode id 4188520207687177322
+DEBUG: new region: FuncRegion(id: 6793552310716903347, name: md5_R_memset, fileName: md5.c, startLine: 490, endLine: 490
+DEBUG: adding md5_R_memset (in module: md5.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6793552310716903347)
+DEBUG: assigning function md5_R_memset id 6793552310716903347
+DEBUG: new region: FuncRegion(id: 4085459685799187793, name: md5_memset_x, fileName: md5.c, startLine: 501, endLine: 501
+DEBUG: adding md5_memset_x (in module: md5.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 4085459685799187793)
+DEBUG: assigning function md5_memset_x id 4085459685799187793
+DEBUG: new region: FuncRegion(id: 18091256268371609718, name: md5_R_RandomInit, fileName: md5.c, startLine: 512, endLine: 512
+DEBUG: adding md5_R_RandomInit (in module: md5.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 18091256268371609718)
+DEBUG: assigning function md5_R_RandomInit id 18091256268371609718
+DEBUG: new region: FuncRegion(id: 2035605774836478177, name: md5_R_RandomUpdate, fileName: md5.c, startLine: 522, endLine: 522
+DEBUG: adding md5_R_RandomUpdate (in module: md5.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x3147020>, <0x314c8f0>, <0x3146f40>, <0x3160f08>, <0x3160c50>, <0x314c8f0>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/tacle-bench/kernel/md5/md5.c] [DW_LANG_C99]
+
+!{!"0x2e\00md5_InitRandomStruct\00md5_InitRandomStruct\00\00564\000\001\000\000\00256\000\00565", <0x3147020>, <0x314da50>, <0x31503b0>, null, void (%struct.R_RANDOM_STRUCT*)* @md5_InitRandomStruct, null, null, <0x314c8f0>} ; [ DW_TAG_subprogram ] [line 564] [def] [scope 565] [md5_InitRandomStruct]
+
+!{!"0x2e\00md5_orig_init\00md5_orig_init\00\00246\000\001\000\000\00256\000\00247", <0x3147020>, <0x314da50>, <0x314e420>, null, void (%struct.MD5_CTX*)* @md5_orig_init, null, null, <0x314c8f0>} ; [ DW_TAG_subprogram ] [line 246] [def] [scope 247] [md5_orig_init]
+
+!{!"0x2e\00md5_update\00md5_update\00\00274\000\001\000\000\00256\000\00278", <0x3147020>, <0x314da50>, <0x314db60>, null, void (%struct.MD5_CTX*, i8*, i32)* @md5_update, null, null, <0x314c8f0>} ; [ DW_TAG_subprogram ] [line 274] [def] [scope 278] [md5_update]
+
+!{!"0x2e\00md5_final\00md5_final\00\00315\000\001\000\000\00256\000\00318", <0x3147020>, <0x314da50>, <0x31501b0>, null, void (i8*, %struct.MD5_CTX*)* @md5_final, null, null, <0x314c8f0>} ; [ DW_TAG_subprogram ] [line 315] [def] [scope 318] [md5_final]
+
+!{!"0x2e\00md5_memset\00md5_memset\00\00344\000\001\000\000\00256\000\00345", <0x3147020>, <0x314da50>, <0x3155050>, null, void (i8*, i32, i32)* @md5_memset, null, null, <0x314c8f0>} ; [ DW_TAG_subprogram ] [line 344] [def] [scope 345] [md5_memset]
+
+!{!"0x2e\00md5_transform\00md5_transform\00\00356\000\001\000\000\00256\000\00357", <0x3147020>, <0x314da50>, <0x31552b0>, null, void (i64*, i8*)* @md5_transform, null, null, <0x314c8f0>} ; [ DW_TAG_subprogram ] [line 356] [def] [scope 357] [md5_transform]
+
+!{!"0x2e\00md5_encode\00md5_encode\00\00447\000\001\000\000\00256\000\00448", <0x3147020>, <0x314da50>, <0x3155510>, null, void (i8*, i64*, i32)* @md5_encode, null, null, <0x314c8f0>} ; [ DW_TAG_subprogram ] [line 447] [def] [scope 448] [md5_encode]
+
+!{!"0x2e\00md5_decode\00md5_decode\00\00465\000\001\000\000\00256\000\00466", <0x3147020>, <0x314da50>, <0x314c770>, null, void (i64*, i8*, i32)* @md5_decode, null, null, <0x314c8f0>} ; [ DW_TAG_subprogram ] [line 465] [def] [scope 466] [md5_decode]
+
+!{!"0x2e\00md5_memcpy\00md5_memcpy\00\00478\000\001\000\000\00256\000\00479", <0x3147020>, <0x314da50>, <0x3155b90>, null, void (i8*, i8*, i32)* @md5_memcpy, null, null, <0x314c8f0>} ; [ DW_TAG_subprogram ] [line 478] [def] [scope 479] [md5_memcpy]
+
+!{!"0x2e\00md5_R_memset\00md5_R_memset\00\00490\000\001\000\000\00256\000\00494", <0x3147020>, <0x314da50>, <0x3155050>, null, void (i8*, i32, i32)* @md5_R_memset, null, null, <0x314c8f0>} ; [ DW_TAG_subprogram ] [line 490] [def] [scope 494] [md5_R_memset]
+
+!{!"0x2e\00md5_memset_x\00md5_memset_x\00\00501\000\001\000\000\00256\000\00502", <0x3147020>, <0x314da50>, <0x3155f70>, null, void (i8*, i32, i64)* @md5_memset_x, null, null, <0x314c8f0>} ; [ DW_TAG_subprogram ] [line 501] [def] [scope 502] [md5_memset_x]
+
+!{!"0x2e\00md5_R_RandomInit\00md5_R_RandomInit\00\00512\000\001\000\000\00256\000\00514", <0x3147020>, <0x314da50>, <0x3156640>, null, i32 (%struct.R_RANDOM_STRUCT*)* @md5_R_RandomInit, null, null, <0x314c8f0>} ; [ DW_TAG_subprogram ] [line 512] [def] [scope 514] [md5_R_RandomInit]
+
+!{!"0x2e\00md5_R_RandomUpdate\00md5_R_RandomUpdate\00\00522\000\001\000\000\00256\000\00526", <0x3147020>, <0x314da50>, <0x3157b10>, null, i32 (%struct.R_RANDOM_STRUCT*, i8*, i32)* @md5_R_RandomUpdate, null, null, <0x314c8f0>} ; [ DW_TAG_subprogram ] [line 522] [def] [scope 526] [md5_R_RandomUpdate]
+
+!{!"0x2e\00md5_R_GetRandomBytesNeeded\00md5_R_GetRandomBytesNeeded\00\00584\000\001\000\000\00256\000\00587", <0x3147020>, <0x314da50>, <0x3160630>, null, i32 (i32*, %struct.R_RANDOM_STRUCT*)* @md5_R_GetRandomBytesNeeded, null, null, <0x314c8f0>} ; [ DW_TAG_subprogram ] [line 584] [def] [scope 587] [md5_R_GetRandomBytesNeeded]
+
+!{!"0x2e\00md5_init\00md5_init\00\00593\000\001\000\000\00256\000\00594", <0x3147020>, <0x314da50>, <0x3160930>, null, void ()* @md5_init, null, null, <0x314c8f0>} ; [ DW_TAG_subprogram ] [line 593] [def] [scope 594] [md5_init]
+
+!{!"0x2e\00md5_main\00md5_main\00\00598\000\001\000\000\00256\000\00599", <0x3147020>, <0x314da50>, <0x3160b30>, null, i32 ()* @md5_main, null, null, <0x314c8f0>} ; [ DW_TAG_subprogram ] [line 598] [def] [scope 599] [md5_main]
+
+!{!"0x2e\00main\00main\00\00618\000\001\000\000\00256\000\00619", <0x3147020>, <0x314da50>, <0x3160b30>, null, i32 ()* @main, null, null, <0x314c8f0>} ; [ DW_TAG_subprogram ] [line 618] [def] [scope 619] [main]
+
+!{!"0x34\00md5_PADDING\00md5_PADDING\00\00202\000\001", null, <0x314da50>, <0x314e9f0>, [64 x i8]* @md5_PADDING, null} ; [ DW_TAG_variable ] [md5_PADDING] [line 202] [def]
+
+!{!"0x34\00seedByte\00seedByte\00\00566\001\001", <0x31505c8>, <0x314da50>, <0x314d818>, i8* @md5_InitRandomStruct.seedByte, null} ; [ DW_TAG_variable ] [seedByte] [line 566] [local] [def]
+
+!{!"0x1\00\000\00512\008\000\000\000", null, null, <0x314d818>, <0x314e988>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 512, align 8, offset 0] [from unsigned char]
+
+!{!"0x24\00unsigned char\000\008\008\000\000\008", null, null} ; [ DW_TAG_base_type ] [unsigned char] [line 0, size 8, align 8, offset 0, enc DW_ATE_unsigned_char]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x31567e0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x31561b0>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from R_RANDOM_STRUCT]
+
+!{!"0x16\00R_RANDOM_STRUCT\00180\000\000\000\000", <0x3147020>, null, <0x3156e00>} ; [ DW_TAG_typedef ] [R_RANDOM_STRUCT] [line 180, size 0, align 0, offset 0] [from ]
+
+!{!"0x13\00\00175\00320\0032\000\000\000", <0x3147020>, null, null, <0x3156d10>, null, null, null} ; [ DW_TAG_structure_type ] [line 175, size 320, align 32, offset 0] [def] [from ]
+
+!{!"0xd\00bytesNeeded\00176\0032\0032\000\000", <0x3147020>, <0x3156e00>, <0x314c978>} ; [ DW_TAG_member ] [bytesNeeded] [line 176, size 32, align 32, offset 0] [from unsigned int]
+
+!{!"0x24\00unsigned int\000\0032\0032\000\000\007", null, null} ; [ DW_TAG_base_type ] [unsigned int] [line 0, size 32, align 32, offset 0, enc DW_ATE_unsigned]
+
+!{!"0xd\00state\00177\00128\008\0032\000", <0x3147020>, <0x3156e00>, <0x31563b0>} ; [ DW_TAG_member ] [state] [line 177, size 128, align 8, offset 32] [from ]
+
+!{!"0x1\00\000\00128\008\000\000\000", null, null, <0x314d818>, <0x314dd48>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 128, align 8, offset 0] [from unsigned char]
+
+!{!"0xd\00outputAvailable\00178\0032\0032\00160\000", <0x3147020>, <0x3156e00>, <0x314c978>} ; [ DW_TAG_member ] [outputAvailable] [line 178, size 32, align 32, offset 160] [from unsigned int]
+
+!{!"0xd\00output\00179\00128\008\00192\000", <0x3147020>, <0x3156e00>, <0x31563b0>} ; [ DW_TAG_member ] [output] [line 179, size 128, align 8, offset 192] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x314d940>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x314d900>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from MD5_CTX]
+
+!{!"0x16\00MD5_CTX\00145\000\000\000\000", <0x3147020>, null, <0x314ebf0>} ; [ DW_TAG_typedef ] [MD5_CTX] [line 145, size 0, align 0, offset 0] [from ]
+
+!{!"0x13\00\00141\001664\0064\000\000\000", <0x3147020>, null, null, <0x314eb08>, null, null, null} ; [ DW_TAG_structure_type ] [line 141, size 1664, align 64, offset 0] [def] [from ]
+
+!{!"0xd\00state\00142\001024\0064\000\000", <0x3147020>, <0x314ebf0>, <0x314ddb0>} ; [ DW_TAG_member ] [state] [line 142, size 1024, align 64, offset 0] [from ]
+
+!{!"0x1\00\000\001024\0064\000\000\000", null, null, <0x314c340>, <0x314dd48>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 1024, align 64, offset 0] [from UINT4]
+
+!{!"0x16\00UINT4\0082\000\000\000\000", <0x3147020>, null, <0x31470f8>} ; [ DW_TAG_typedef ] [UINT4] [line 82, size 0, align 0, offset 0] [from long unsigned int]
+
+!{!"0x24\00long unsigned int\000\0064\0064\000\000\007", null, null} ; [ DW_TAG_base_type ] [long unsigned int] [line 0, size 64, align 64, offset 0, enc DW_ATE_unsigned]
+
+!{!"0xd\00count\00143\00128\0064\001024\000", <0x3147020>, <0x314ebf0>, <0x314e190>} ; [ DW_TAG_member ] [count] [line 143, size 128, align 64, offset 1024] [from ]
+
+!{!"0x1\00\000\00128\0064\000\000\000", null, null, <0x314c340>, <0x314e128>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 128, align 64, offset 0] [from UINT4]
+
+!{!"0xd\00buffer\00144\00512\008\001152\000", <0x3147020>, <0x314ebf0>, <0x314e9f0>} ; [ DW_TAG_member ] [buffer] [line 144, size 512, align 8, offset 1152] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x314e5c0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x314d818>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from unsigned char]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x314e578>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3154fe0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x16\00POINTER\0076\000\000\000\000", <0x3147020>, null, <0x314d860>} ; [ DW_TAG_typedef ] [POINTER] [line 76, size 0, align 0, offset 0] [from ]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3155128>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x314c340>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from UINT4]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x31553d0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x314c700>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x314c8b0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3155f00>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x31561f0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x31567a0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3160548>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x314c978>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from unsigned int]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3155cb8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x3155e48>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x24\00char\000\008\008\000\000\006", null, null} ; [ DW_TAG_base_type ] [char] [line 0, size 8, align 8, offset 0, enc DW_ATE_signed_char]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x31470a8>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from char]
+
+Meta data for 4967296377687917841
+Meta data for 5728349375327918602
+Meta data for 4492694761983041707
+Meta data for 15689803670540031324
+.bc) to list of defined functions (region_id: 2035605774836478177)
+DEBUG: assigning function md5_R_RandomUpdate id 2035605774836478177
+DEBUG: new region: FuncRegion(id: 2948782061592994937, name: md5_InitRandomStruct, fileName: md5.c, startLine: 564, endLine: 564
+DEBUG: adding md5_InitRandomStruct (in module: md5.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2948782061592994937)
+DEBUG: assigning function md5_InitRandomStruct id 2948782061592994937
+DEBUG: new region: FuncRegion(id: 3427208121567250671, name: md5_R_GetRandomBytesNeeded, fileName: md5.c, startLine: 584, endLine: 584
+DEBUG: adding md5_R_GetRandomBytesNeeded (in module: md5.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3427208121567250671)
+DEBUG: assigning function md5_R_GetRandomBytesNeeded id 3427208121567250671
+DEBUG: new region: FuncRegion(id: 3457401059527656561, name: md5_init, fileName: md5.c, startLine: 593, endLine: 593
+DEBUG: adding md5_init (in module: md5.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3457401059527656561)
+DEBUG: assigning function md5_init id 3457401059527656561
+DEBUG: new region: FuncRegion(id: 2882699441150737605, name: md5_main, fileName: md5.c, startLine: 598, endLine: 598
+DEBUG: adding md5_main (in module: md5.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 2882699441150737605)
+DEBUG: assigning function md5_main id 2882699441150737605
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: md5.c, startLine: 618, endLine: 618
+DEBUG: adding main (in module: md5.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 17 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: md5_orig_init is 7442143607960224042
+DEBUG: found 0 loops in function md5_orig_init
+DEBUG: region name to id: md5_update is 6718135206100796952
+DEBUG: found 1 loops in function md5_update
+DEBUG: assigning id = 4967296377687917841 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 15381909268371135117
+DEBUG: assigning id = 15381909268371135117 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: md5_memcpy is 8461345001934634745
+DEBUG: found 1 loops in function md5_memcpy
+DEBUG: assigning id = 5728349375327918602 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11967260248202734794
+DEBUG: assigning id = 11967260248202734794 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: md5_transform is 3886969788622743090
+DEBUG: found 0 loops in function md5_transform
+DEBUG: region name to id: md5_final is 14860963409904482654
+DEBUG: found 0 loops in function md5_final
+DEBUG: region name to id: md5_encode is 9482923529681187012
+DEBUG: found 1 loops in function md5_encode
+DEBUG: assigning id = 4492694761983041707 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 17773207413244675496
+DEBUG: assigning id = 17773207413244675496 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: md5_memset is 6784949024600134573
+DEBUG: found 1 loops in function md5_memset
+DEBUG: assigning id = 15689803670540031324 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /homMeta data for 11218392786682590642
+Meta data for 14237043845609510637
+Meta data for 132511424922967792
+Meta data for 623080928523069886
+Meta data for 1284329848220601280
+e/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 7329507832946499814
+DEBUG: assigning id = 7329507832946499814 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: md5_decode is 4188520207687177322
+DEBUG: found 1 loops in function md5_decode
+DEBUG: assigning id = 11218392786682590642 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 16527986962020749289
+DEBUG: assigning id = 16527986962020749289 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: md5_R_memset is 6793552310716903347
+DEBUG: found 0 loops in function md5_R_memset
+DEBUG: region name to id: md5_memset_x is 4085459685799187793
+DEBUG: found 1 loops in function md5_memset_x
+DEBUG: assigning id = 14237043845609510637 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10512053942245338740
+DEBUG: assigning id = 10512053942245338740 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: region name to id: md5_R_RandomInit is 18091256268371609718
+DEBUG: found 0 loops in function md5_R_RandomInit
+DEBUG: region name to id: md5_R_RandomUpdate is 2035605774836478177
+DEBUG: found 1 loops in function md5_R_RandomUpdate
+DEBUG: assigning id = 132511424922967792 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5545031199683313444
+DEBUG: assigning id = 5545031199683313444 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: md5_InitRandomStruct is 2948782061592994937
+DEBUG: found 1 loops in function md5_InitRandomStruct
+DEBUG: assigning id = 623080928523069886 to loop with the following BBs:
+	while.body if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6151180206867886174
+DEBUG: assigning id = 6151180206867886174 to body of loop
+DEBUG: while.body has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: region name to id: md5_R_GetRandomBytesNeeded is 3427208121567250671
+DEBUG: found 0 loops in function md5_R_GetRandomBytesNeeded
+DEBUG: region name to id: md5_init is 3457401059527656561
+DEBUG: found 0 loops in function md5_init
+DEBUG: region name to id: md5_main is 2882699441150737605
+DEBUG: found 1 loops in function md5_main
+DEBUG: assigning id = 1284329848220601280 to loop with the following BBs:
+	while.cond while.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14254076829906340586
+DEBUG: assigning id = 14254076829906340586 to body of loop
+DEBUG: while.cond has 1 possible loop exit points
+DEBUG: 	target #0: while.end
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to md5.kdump
+INFO: dumping function: md5_orig_init
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: md5_update
+INFO: dumping function: md5_memcpy
+INFO: dumping function: md5_transform
+INFO: dumping function: md5_final
+INFO: dumping function: md5_encode
+INFO: dumping function: md5_memset
+INFO: dumping function: md5_decode
+INFO: dumping function: md5_R_memset
+INFO: dumping function: md5_memset_x
+INFO: dumping function: md5_R_RandomInit
+INFO: dumping function: md5_R_RandomUpdate
+INFO: dumping function: md5_InitRandomStruct
+INFO: dumping function: md5_R_GetRandomBytesNeeded
+INFO: dumping function: md5_init
+INFO: dumping function: md5_main
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

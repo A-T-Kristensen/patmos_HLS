@@ -1,0 +1,46 @@
+FUNC: matrix1_pin_down
+	7 : 101 : icmp
+	2 : 102 : load
+	3 : ?? : phi
+	6 : 97 : icmp
+	1 : 98 : load
+	4 : ?? : phi
+	5 : ?? : phi
+	8 : 105 : icmp
+
+FUNC: matrix1_init
+
+FUNC: matrix1_return
+	4 : ?? : phi
+	3 : ?? : phi
+	6 : 125 : icmp
+	1 : 126 : load
+	5 : 126 : add
+	2 : 128 : select
+
+FUNC: matrix1_main
+	2 : 155 : load
+	3 : 155 : load
+	4 : 155 : add
+	19 : 155 : getelementptr
+	6 : ?? : phi
+	11 : ?? : phi
+	5 : 145 : icmp
+	8 : ?? : phi
+	13 : ?? : phi
+	15 : ?? : phi
+	7 : 149 : icmp
+	18 : 150 : getelementptr
+	10 : ?? : phi
+	17 : ?? : phi
+	20 : ?? : phi
+	9 : 154 : icmp
+	21 : 155 : getelementptr
+	1 : 155 : load
+	16 : ?? : getelementptr
+	14 : 157 : getelementptr
+	12 : ?? : getelementptr
+
+FUNC: main
+	1 : 168 : call
+
