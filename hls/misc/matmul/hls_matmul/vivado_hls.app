@@ -6,8 +6,8 @@
     </Simulation>
     <files xmlns="">
         <file name="../../matrixmul_test.cpp" sc="0" tb="1" cflags=" "/>
-        <file name="matrixmul.cpp" sc="0" tb="false" cflags=""/>
         <file name="matrixmul.h" sc="0" tb="false" cflags=""/>
+        <file name="matrixmul.cpp" sc="0" tb="false" cflags=""/>
     </files>
     <solutions xmlns="">
         <solution name="matrixmul_1b" status="inactive"/>

@@ -59,7 +59,7 @@ cd ../
 
 ap_puts_info "COSIM" 322 "Starting VHDL simulation..."
 
-ap_puts_info "COSIM" 15 "Starting Modelsim ..."
+ap_puts_info "COSIM" 15 "Starting XSIM ..."
 
 cd ../vhdl
 
@@ -67,16 +67,9 @@ file delete -force ".exit.err"
 file delete -force ".aesl_error"
 file delete -force "err.log"
 
-if {[file isfile compile_modelsim.sh]} {
-	catch {eval exec ./compile_modelsim.sh >&@ stdout} err
-
-	if {$err != ""} {
-		ap_puts_err "COSIM" 306 "Failed in preprocessing test bench: $err"
-		return -code error -errorcode $::errorCode
-	}
+if {[file isfile run_xsim.sh]} {
+	set ret [catch {eval exec "sh ./run_xsim.sh | tee temp2.log" >&@ stdout} err]
 }
-
-set ret [catch {eval exec "vsim -c -do cosim.modelsim.scr | tee temp2.log" >@ stdout} err]
 
 cd ../tv/rtldatafile
 

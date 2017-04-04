@@ -1,10 +1,10 @@
-#pragma line 1 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul.cpp"
+#pragma line 1 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul.cpp"
 #pragma line 1 "<built-in>"
 #pragma line 1 "<command-line>"
-#pragma line 1 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul.cpp"
-#pragma line 46 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul.cpp"
-#pragma line 1 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul.h" 1
-#pragma line 49 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul.h"
+#pragma line 1 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul.cpp"
+#pragma line 46 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul.cpp"
+#pragma line 1 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul.h" 1
+#pragma line 49 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul.h"
 #pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 1 3
 #pragma line 41 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
 #pragma empty_line
@@ -2162,7 +2162,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 #pragma empty_line
 #pragma empty_line
 }
-#pragma line 50 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul.h" 2
+#pragma line 50 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul.h" 2
 using namespace std;
 #pragma empty_line
 #pragma empty_line
@@ -2171,7 +2171,7 @@ using namespace std;
 #pragma empty_line
 #pragma empty_line
 void matrixmul(int a[3*4][4]);
-#pragma line 47 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul.cpp" 2
+#pragma line 47 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul.cpp" 2
 #pragma empty_line
 void matrixmul(int a[3*4][4])
 {

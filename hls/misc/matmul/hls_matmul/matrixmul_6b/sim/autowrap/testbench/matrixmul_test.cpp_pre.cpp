@@ -1,8 +1,8 @@
-# 1 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
+# 1 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
-# 46 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
+# 1 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
+# 46 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
 # 1 "/usr/include/stdio.h" 1 3 4
 # 27 "/usr/include/stdio.h" 3 4
 # 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 1 3 4
@@ -956,9 +956,9 @@ extern int ftrylockfile (FILE *__stream) throw () ;
 extern void funlockfile (FILE *__stream) throw ();
 # 942 "/usr/include/stdio.h" 3 4
 }
-# 47 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp" 2
-# 1 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul.h" 1
-# 49 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul.h"
+# 47 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp" 2
+# 1 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul.h" 1
+# 49 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul.h"
 # 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 1 3
 # 41 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
        
@@ -3101,7 +3101,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 50 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul.h" 2
+# 50 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul.h" 2
 using namespace std;
 
 
@@ -3110,7 +3110,7 @@ using namespace std;
 
 
 void matrixmul(int a[3*4][4]);
-# 48 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp" 2
+# 48 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp" 2
 
 int main(int argc, char **argv)
 {

@@ -1,4 +1,0 @@
-Running: xsim.dir/filterbank_core_hwa/xsimk -simmode gui -wdb filterbank_core_hwa.wdb -simrunnum 0 -socket 47903
-Design successfully loaded
-Design Loading Memory Usage: 49280 KB (Peak: 52152 KB)
-Design Loading CPU Usage: 10 ms

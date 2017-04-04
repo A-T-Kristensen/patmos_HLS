@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# xsim v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Tue Apr  4 11:07:04 2017
+# Process ID: 3560
+# Current directory: /home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl
+# Command line: xsim -mode tcl -source {xsim.dir/matrixmul/xsim_script.tcl}
+# Log file: /home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/xsim.log
+# Journal file: /home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/matrixmul/xsim_script.tcl
+# xsim {matrixmul} -autoloadwcfg -tclbatch {matrixmul.tcl}
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source matrixmul.tcl
+## run all
+Note: simulation done!
+Time: 915 ns  Iteration: 1  Process: /apatb_matrixmul_top/generate_sim_done_proc  File: /home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/matrixmul.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 915 ns  Iteration: 1  Process: /apatb_matrixmul_top/generate_sim_done_proc  File: /home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/matrixmul.autotb.vhd
+$finish called at time : 915 ns
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue Apr  4 11:07:13 2017...

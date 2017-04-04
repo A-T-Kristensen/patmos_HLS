@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'matrixmul'
 ================================================================
-* Date:           Mon Mar 27 21:02:46 2017
+* Date:           Tue Apr  4 11:06:19 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_matmul
@@ -951,10 +951,10 @@ The critical path consists of the following:
  <State 3>: 6.7ns
 The critical path consists of the following:
 	'load' operation ('b_copy[0][3]', matrixmul.cpp:76) on array 'a_2' [141]  (2.39 ns)
-	'select' operation ('b_copy[0][3]', matrixmul.cpp:63) [149]  (0 ns)
-	'select' operation ('b_copy[0][3]', matrixmul.cpp:63) [150]  (1.37 ns)
-	'select' operation ('b_copy[0][3]', matrixmul.cpp:63) [151]  (0 ns)
-	'select' operation ('b_copy[0][3]', matrixmul.cpp:74) [198]  (1.37 ns)
+	'select' operation ('b_copy[0][3]', matrixmul.cpp:63) [144]  (0 ns)
+	'select' operation ('b_copy[0][3]', matrixmul.cpp:63) [146]  (1.37 ns)
+	'select' operation ('b_copy[0][3]', matrixmul.cpp:63) [148]  (0 ns)
+	'select' operation ('b_copy[0][3]', matrixmul.cpp:74) [197]  (1.37 ns)
 	'mux' operation ('tmp_2', matrixmul.cpp:74) [201]  (1.57 ns)
 
  <State 4>: 8.05ns

@@ -62,6 +62,7 @@ void filterbank_core_hwa( float r[ 256 ],
     float Vect_Up[ 256 ] = {0}; /* output of the up sampler; */
     float Vect_F[ 256 ] = {0}; /* this is the output of the */
 
+
     /* convolving H */
     loop1:for ( j = 0; j < 256; j++ ) {
     	Vect_H[ j ] = 0;
