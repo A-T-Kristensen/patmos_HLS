@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="matrixmul.cpp" path="/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul.cpp"/>
     <originFiles name="matrixmul.h" path="/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul.h"/>
+    <originFiles name="matrixmul.cpp" path="/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul.cpp"/>
   </source>
   <testbench>
     <originFiles name="matrixmul_test.cpp" path="/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"/>

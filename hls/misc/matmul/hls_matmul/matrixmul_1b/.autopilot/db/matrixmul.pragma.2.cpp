@@ -1,5 +1,5 @@
-# 1 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_1b/.autopilot/db/matrixmul.pragma.1.cpp"
-# 1 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_1b/.autopilot/db/matrixmul.pragma.1.cpp" 1
+# 1 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_1b/.autopilot/db/matrixmul.pragma.1.cpp"
+# 1 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_1b/.autopilot/db/matrixmul.pragma.1.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 155 "<built-in>" 3
@@ -203,7 +203,7 @@ extern "C" {
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 # 6 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_1b/.autopilot/db/matrixmul.pragma.1.cpp" 2
+# 1 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_1b/.autopilot/db/matrixmul.pragma.1.cpp" 2
 # 1 "matrixmul.cpp"
 # 1 "matrixmul.cpp" 1
 # 1 "<built-in>" 1
@@ -4966,11 +4966,13 @@ using namespace std;
 
 
 
+typedef float mat_type;
+
 // Prototype of top level function for C-synthesis
-void matrixmul(int a[3*4][4]);
+void matrixmul(mat_type a[3*4][4]);
 # 47 "matrixmul.cpp" 2
 
-void matrixmul(int a[3*4][4])
+void matrixmul(mat_type a[3*4][4])
 {_ssdm_SpecArrayDimSize(a,3*4);
 _ssdm_SpecArrayPartition( a, 1, "BLOCK", 1, "");
 # 49 "matrixmul.cpp"
@@ -4981,16 +4983,17 @@ _ssdm_SpecArrayPartition( a, 1, "BLOCK", 1, "");
 _ssdm_op_SpecInterface(a, "bram", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecResource(a, "", "RAM_1P_BRAM", "", -1, "", "", "", "", "");
 
- int a_row[4];
- int b_copy[4][4];
- int tmp = 0;
+ mat_type a_row[4];
+ mat_type b_copy[4][4];
+ mat_type tmp = 0;
 
  // Generate the expected result
  // Iterate over the rows of the A matrix
  for(int i = 0; i < 4; i++) {
   col:for(int j = 0; j < 4; j++) {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
- tmp = 0;
+ //tmp = 0;
+   tmp = 0.0f;
 
     // Cache each row (so it's only read once per function)
     if (j == 0) {

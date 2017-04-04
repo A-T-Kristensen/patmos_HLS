@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'matrixmul'" level="0">
-<item name = "Date">Tue Apr  4 11:06:19 2017
+<item name = "Date">Tue Apr  4 19:42:20 2017
 </item>
 <item name = "Version">2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)</item>
 <item name = "Project">hls_matmul</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 8.05, 1.25</column>
+<column name="ap_clk">10.00, 8.52, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">73, 73, 74, 74, none</column>
+<column name="">88, 88, 89, 89, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- L_col">71, 71, 12, 4, 1, 16, yes</column>
+<column name="- L_col">86, 86, 27, 4, 1, 16, yes</column>
 </table>
 </item>
 </section>

@@ -30,10 +30,10 @@
 
 /* the FB core gets the input vector (r) , the filter responses H and F and */
 /* generates the output vector(y) */
-void filterbank_core_hwa( float r[ 256 ],
-                      float y[ 256 ],
-                      float H[ 8 ][ 32 ],
-                      float F[ 8 ][ 32 ] )
+void filterbank_core_hwa( TYPE r[ 256 ],
+		TYPE y[ 256 ],
+		TYPE H[ 8 ][ 32 ],
+		TYPE F[ 8 ][ 32 ] )
 {
 #pragma HLS INTERFACE ap_ctrl_hs port=return
 #pragma HLS RESOURCE variable=r core=RAM_1P_BRAM
@@ -48,24 +48,23 @@ void filterbank_core_hwa( float r[ 256 ],
 #pragma HLS RESOURCE variable=F core=RAM_1P_BRAM
 #pragma HLS INTERFACE bram port=F
 
-
   int i, j, k;
 
   for ( i = 0; i < 256; i++ ) {
   #pragma HLS PIPELINE
-	  y[ i ] = 0;
+  #pragma HLS UNROLL
+	  y[ i ] = 0.0f;
   }
 
   for ( i = 0; i < 8; i++ ) {
-    float Vect_H[ 256 ] = {0}; /* (output of the H) */
-    float Vect_Dn[32]; /* output of the down sampler; */
-    float Vect_Up[ 256 ] = {0}; /* output of the up sampler; */
-    float Vect_F[ 256 ] = {0}; /* this is the output of the */
+	  TYPE Vect_H[ 256 ] = {0.0f}; /* (output of the H) */
+	  TYPE Vect_Dn[32]; /* output of the down sampler; */
+	  TYPE Vect_Up[ 256 ] = {0.0f}; /* output of the up sampler; */
+	  TYPE Vect_F[ 256 ] = {0.0f}; /* this is the output of the */
 
 
     /* convolving H */
-    loop1:for ( j = 0; j < 256; j++ ) {
-    	Vect_H[ j ] = 0;
+    for ( j = 0; j < 256; j++ ) {
       for ( k = 0; ( ( k < 32 ) && ( ( j - k ) >= 0 ) ); k++ )
 		#pragma HLS PIPELINE
 		#pragma HLS UNROLL
@@ -73,7 +72,7 @@ void filterbank_core_hwa( float r[ 256 ],
     }
 
     /* Down Sampling */
-    loop2:for ( j = 0; j < 32; j++ ) {
+    for ( j = 0; j < 32; j++ ) {
 	#pragma HLS PIPELINE
 	#pragma HLS UNROLL
     	Vect_Dn[ j ] = Vect_H[ j * 8 ];
@@ -81,20 +80,15 @@ void filterbank_core_hwa( float r[ 256 ],
 
     /* Up Sampling */
 
-    for ( j = 0; j < 256; j++ )
-      Vect_Up[ j ] = 0;
-
-    loop3:for ( j = 0; j < 32; j++ ) {
+    for ( j = 0; j < 32; j++ ) {
 	#pragma HLS PIPELINE
 	#pragma HLS UNROLL
     	Vect_Up[ j * 8 ] = Vect_Dn[ j ];
     }
 
     /* convolving F */
-    for ( j = 0; j < 256; j++ )
-      Vect_F[ j ] = 0;
 
-    loop4:for ( j = 0; j < 256; j++ ) {
+    for ( j = 0; j < 256; j++ ) {
       for ( k = 0; ( ( k < 32 ) && ( ( j - k ) >= 0 ) ); k++ )
 		#pragma HLS PIPELINE
 		#pragma HLS UNROLL
@@ -103,8 +97,9 @@ void filterbank_core_hwa( float r[ 256 ],
 
     /* adding the results to the y matrix */
 
-    loop5:for ( j = 0; j < 256; j++ ) {
+    for ( j = 0; j < 256; j++ ) {
 	#pragma HLS PIPELINE
+	#pragma HLS UNROLL
     	y[ j ] += Vect_F[ j ];
     }
   }

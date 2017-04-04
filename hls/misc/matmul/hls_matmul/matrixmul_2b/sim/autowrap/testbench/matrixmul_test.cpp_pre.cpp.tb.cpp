@@ -5,11 +5,11 @@
 // 
 // ==============================================================
 
-#1 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
+#1 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
 #1 "<built-in>"
 #1 "<command-line>"
-#1 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
-#46 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
+#1 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
+#46 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
 #1 "/usr/include/stdio.h" 1 3 4
 #27 "/usr/include/stdio.h" 3 4
 #1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 1 3 4
@@ -963,9 +963,9 @@ extern int ftrylockfile (FILE *__stream) throw () ;
 extern void funlockfile (FILE *__stream) throw ();
 #942 "/usr/include/stdio.h" 3 4
 }
-#47 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp" 2
-#1 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul.h" 1
-#49 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul.h"
+#47 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp" 2
+#1 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul.h" 1
+#49 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul.h"
 #1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 1 3
 #41 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
 
@@ -3108,32 +3108,34 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-#50 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul.h" 2
+#50 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul.h" 2
 using namespace std;
 
 
 
 
 
+typedef int mat_type;
 
-void matrixmul(int a[3*4][4]);
-#48 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp" 2
+
+void matrixmul(mat_type a[3*4][4]);
+#48 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp" 2
 
 
 #ifndef HLS_FASTSIM
-#49 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
+#49 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
 
 #ifndef HLS_FASTSIM
 #include "apatb_matrixmul.h"
 #endif
 
-#49 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
+#49 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
 int main(int argc, char **argv)
 {
- int in_mat_a[4][4] = {0};
- int in_mat_b[4][4] = {0};
- int sw_result[4][4];
- int in_a[3*4][4] = {0};
+ mat_type in_mat_a[4][4] = {0};
+ mat_type in_mat_b[4][4] = {0};
+ mat_type sw_result[4][4];
+ mat_type in_a[3*4][4] = {0};
 
  int err_cnt = 0;
  int i, j;
@@ -3166,14 +3168,14 @@ int main(int argc, char **argv)
 
    for (int i = 0; i < 4; i++) {
       for (int j = 0; j < 4; j++) {
-       printf("%d ", in_mat_a[i][j]);
+       printf("%f ", in_mat_a[i][j]);
       }
       printf("\n");
    }
 
    for (int i = 0; i < 4; i++) {
       for (int j = 0; j < 4; j++) {
-       printf("%d ", in_mat_b[i][j]);
+       printf("%f ", in_mat_b[i][j]);
       }
       printf("\n");
    }
@@ -3186,24 +3188,24 @@ int main(int argc, char **argv)
 #define matrixmul AESL_WRAP_matrixmul
 #endif
 
-#102 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
+#102 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
 
 #ifndef HLS_FASTSIM
 #define matrixmul AESL_WRAP_matrixmul
 #endif
 
-#102 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
+#102 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
 matrixmul
 #undef matrixmul
-#102 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
+#102 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
 
 #undef matrixmul
-#102 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
+#102 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
 (in_a);
 
    for (int i = 0; i < 4; i++) {
       for (int j = 0; j < 4; j++) {
-       printf("%d ", sw_result[i][j]);
+       printf("%f ", sw_result[i][j]);
       }
       printf("\n");
    }
@@ -3213,7 +3215,7 @@ matrixmul
 
    for (int i = 0; i < 4; i++) {
       for (int j = 0; j < 4; j++) {
-       printf("%d ", in_a[i+2*4][j]);
+       printf("%f ", in_a[i+2*4][j]);
       }
       printf("\n");
    }
@@ -3236,4 +3238,4 @@ matrixmul
    return err_cnt;
 }
 #endif
-#137 "/home/patmos/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"
+#137 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp"

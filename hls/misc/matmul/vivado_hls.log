@@ -1,141 +1,83 @@
 INFO: [HLS 200-10] Running '/home/patmos/Xilinx/Vivado_HLS/2016.4/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'patmos' on host 'ubuntu' (Linux_x86_64 version 4.4.0-71-generic) on Tue Apr 04 11:06:55 CEST 2017
+INFO: [HLS 200-10] For user 'patmos' on host 'ubuntu' (Linux_x86_64 version 4.4.0-71-generic) on Tue Apr 04 20:00:55 CEST 2017
 INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
 INFO: [HLS 200-10] In directory '/home/patmos/github/bachelor_project_HLS/hls/misc/matmul'
 INFO: [HLS 200-10] Opening project '/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul'.
-INFO: [HLS 200-10] Opening solution '/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b'.
+INFO: [HLS 200-10] Adding design file 'matrixmul.h' to the project
+INFO: [HLS 200-10] Adding design file 'matrixmul.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'matrixmul_test.cpp' to the project
+INFO: [HLS 200-10] Opening solution '/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_2b'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7a100tcsg324-1'
-INFO: [COSIM 212-47] Using XSIM for RTL simulation.
-INFO: [COSIM 212-14] Instrumenting C test bench ...
-   Build using "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/g++"
-   Compiling matrixmul_test.cpp_pre.cpp.tb.cpp
-   Compiling apatb_matrixmul.cpp
-   Compiling matrixmul.cpp_pre.cpp.tb.cpp
-   Generating cosim.tv.exe
-INFO: [COSIM 212-302] Starting C TB testing ... 
-1 2 3 4 
-2 3 4 5 
-3 4 5 6 
-4 5 6 7 
-5 6 7 8 
-6 7 8 9 
-7 8 9 10 
-8 9 10 11 
-
-70 80 90 100 
-96 110 124 138 
-122 140 158 176 
-148 170 192 214 
-
-70 80 90 100 
-96 110 124 138 
-122 140 158 176 
-148 170 192 214 
-
-Test Passes:INFO: [COSIM 212-333] Generating C post check test bench ...
-INFO: [COSIM 212-12] Generating RTL test bench ...
-INFO: [COSIM 212-322] Starting VHDL simulation. 
-INFO: [COSIM 212-15] Starting XSIM ...
-INFO: [XSIM 43-3496] Using init file passed via -initfile option "/home/patmos/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini".
-Vivado Simulator 2016.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: /home/patmos/Xilinx/Vivado/2016.4/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_matrixmul_top -prj matrixmul.prj --initfile /home/patmos/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s matrixmul 
-Determining compilation order of HDL files.
-WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
-    LIBRARY_PATH
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/AESL_sim_pkg.vhd" into library xil_defaultlib
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/matrixmul_mux_42_bkb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity matrixmul_mux_42_bkb
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/matrixmul.autotb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity apatb_matrixmul_top
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/matrixmul.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity matrixmul
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/AESL_autobram_a_3.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity AESL_autobram_a_3
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/AESL_autobram_a_1.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity AESL_autobram_a_1
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/AESL_autobram_a_4.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity AESL_autobram_a_4
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/AESL_autobram_a_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity AESL_autobram_a_0
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/matrixmul_mul_32scud.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity matrixmul_mul_32scud_MulnS_0
-INFO: [VRFC 10-307] analyzing entity matrixmul_mul_32scud
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/AESL_autobram_a_2.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity AESL_autobram_a_2
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/AESL_autobram_a_5.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity AESL_autobram_a_5
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_textio
-Compiling architecture rtl of entity xil_defaultlib.matrixmul_mux_42_bkb [\matrixmul_mux_42_bkb(id=1,din5_...]
-Compiling architecture behav of entity xil_defaultlib.matrixmul_mul_32scud_MulnS_0 [matrixmul_mul_32scud_mulns_0_def...]
-Compiling architecture arch of entity xil_defaultlib.matrixmul_mul_32scud [\matrixmul_mul_32scud(id=1,num_s...]
-Compiling architecture behav of entity xil_defaultlib.matrixmul [matrixmul_default]
-Compiling architecture behav of entity xil_defaultlib.AESL_autobram_a_0 [aesl_autobram_a_0_default]
-Compiling architecture behav of entity xil_defaultlib.AESL_autobram_a_1 [aesl_autobram_a_1_default]
-Compiling architecture behav of entity xil_defaultlib.AESL_autobram_a_2 [aesl_autobram_a_2_default]
-Compiling architecture behav of entity xil_defaultlib.AESL_autobram_a_3 [aesl_autobram_a_3_default]
-Compiling architecture behav of entity xil_defaultlib.AESL_autobram_a_4 [aesl_autobram_a_4_default]
-Compiling architecture behav of entity xil_defaultlib.AESL_autobram_a_5 [aesl_autobram_a_5_default]
-Compiling architecture behav of entity xil_defaultlib.apatb_matrixmul_top
-Built simulation snapshot matrixmul
-
-****** Webtalk v2016.4 (64-bit)
-  **** SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
-  **** IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
-
-source /home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/xsim.dir/matrixmul/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] '/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/xsim.dir/matrixmul/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Apr  4 11:07:04 2017. For additional details about this file, please refer to the WebTalk help file at /home/patmos/Xilinx/Vivado/2016.4/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Tue Apr  4 11:07:04 2017...
-
-****** xsim v2016.4 (64-bit)
-  **** SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
-  **** IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
-
-source xsim.dir/matrixmul/xsim_script.tcl
-# xsim {matrixmul} -autoloadwcfg -tclbatch {matrixmul.tcl}
-Vivado Simulator 2016.4
-Time resolution is 1 ps
-source matrixmul.tcl
-## run all
-Note: simulation done!
-Time: 915 ns  Iteration: 1  Process: /apatb_matrixmul_top/generate_sim_done_proc  File: /home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/matrixmul.autotb.vhd
-Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
-Time: 915 ns  Iteration: 1  Process: /apatb_matrixmul_top/generate_sim_done_proc  File: /home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/matrixmul.autotb.vhd
-$finish called at time : 915 ns
-## quit
-INFO: [Common 17-206] Exiting xsim at Tue Apr  4 11:07:13 2017...
-INFO: [COSIM 212-316] Starting C post checking ...
-1 2 3 4 
-2 3 4 5 
-3 4 5 6 
-4 5 6 7 
-5 6 7 8 
-6 7 8 9 
-7 8 9 10 
-8 9 10 11 
-
-70 80 90 100 
-96 110 124 138 
-122 140 158 176 
-148 170 192 214 
-
-70 80 90 100 
-96 110 124 138 
-122 140 158 176 
-148 170 192 214 
-
-Test Passes:INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-10] Analyzing design file 'matrixmul.cpp' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+WARNING: [HLS 200-40] Directive 'PIPELINE' cannot be applied: Function 'matmul' does not exist in any synthesis source file.
+WARNING: [HLS 200-40] Directive 'INTERFACE' cannot be applied: Function 'matmul' does not exist in any synthesis source file.
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 326.352 ; gain = 12.586 ; free physical = 10765 ; free virtual = 15378
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 326.352 ; gain = 12.586 ; free physical = 10765 ; free virtual = 15378
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 326.352 ; gain = 12.586 ; free physical = 10763 ; free virtual = 15377
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 326.352 ; gain = 12.586 ; free physical = 10763 ; free virtual = 15377
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'col' (matrixmul.cpp:63) in function 'matrixmul' for pipelining.
+INFO: [XFORM 203-501] Unrolling loop 'Cache_Row' (matrixmul.cpp:71) in function 'matrixmul' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Cache_Col' (matrixmul.cpp:76) in function 'matrixmul' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Product' (matrixmul.cpp:81) in function 'matrixmul' completely.
+INFO: [XFORM 203-102] Partitioning array 'a_row' (matrixmul.cpp:56) automatically.
+INFO: [XFORM 203-102] Partitioning array 'b_copy' (matrixmul.cpp:57) in dimension 1 automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'b_copy.0' (matrixmul.cpp:57) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'b_copy.1' (matrixmul.cpp:57) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'b_copy.2' (matrixmul.cpp:57) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'b_copy.3' (matrixmul.cpp:57) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'a' (matrixmul.cpp:48) in dimension 1 with a block factor 2.
+INFO: [XFORM 203-101] Partitioning array 'b_copy.0' (matrixmul.cpp:57) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b_copy.1' (matrixmul.cpp:57) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b_copy.2' (matrixmul.cpp:57) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b_copy.3' (matrixmul.cpp:57) in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (matrixmul.cpp:63:35) to (matrixmul.cpp:63:29) in function 'matrixmul'... converting 25 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrixmul' (matrixmul.cpp:48)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 454.348 ; gain = 140.582 ; free physical = 10744 ; free virtual = 15357
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (matrixmul.cpp:62:15) in function 'matrixmul'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 454.348 ; gain = 140.582 ; free physical = 10751 ; free virtual = 15365
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrixmul' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'matrixmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_col'.
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 4, offset = 1)
+   between 'store' operation (matrixmul.cpp:85) of variable 'tmp_12_3', matrixmul.cpp:82 on array 'a_1' and 'load' operation ('b_copy[2][3]', matrixmul.cpp:77) on array 'a_1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('b_copy[0][3]', matrixmul.cpp:77) on array 'a_0' due to limited memory ports.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 6, Depth: 15.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 4.13 seconds; current allocated memory: 58.325 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 59.218 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul/a_0' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul/a_1' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrixmul' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'matrixmul_mux_42_32_1' to 'matrixmul_mux_42_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_mul_32s_32s_32_6' to 'matrixmul_mul_32scud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_urem_4ns_4ns_4_8' to 'matrixmul_urem_4ndEe' due to the length limit 20
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_0_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrixmul/a_0_Din_A' to 0.
+INFO: [RTGEN 206-100] Generating core module 'matrixmul_mul_32scud': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrixmul_mux_42_bkb': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrixmul_urem_4ndEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixmul'.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 60.560 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'matrixmul_mul_32scud_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'matrixmul_urem_4ndEe_div'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 454.348 ; gain = 140.582 ; free physical = 10740 ; free virtual = 15356
+INFO: [SYSC 207-301] Generating SystemC RTL for matrixmul.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrixmul.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrixmul.
+INFO: [HLS 200-112] Total elapsed time: 5.08 seconds; peak allocated memory: 60.560 MB.

@@ -1,3 +1,4 @@
-matrixmul_mux_42_bkb
-matrixmul_mul_32scud
+matrixmul_fadd_32bkb
+matrixmul_fmul_32cud
+matrixmul_mux_42_dEe
 matrixmul

@@ -4752,11 +4752,13 @@ using namespace std;
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
+typedef int mat_type;
+#pragma empty_line
 // Prototype of top level function for C-synthesis
-void matrixmul(int a[3*4][4]);
+void matrixmul(mat_type a[3*4][4]);
 #pragma line 47 "matrixmul.cpp" 2
 #pragma empty_line
-void matrixmul(int a[3*4][4])
+void matrixmul(mat_type a[3*4][4])
 {
 //#pragma HLS ARRAY_RESHAPE variable=b complete dim=1
 //#pragma HLS ARRAY_RESHAPE variable=a complete dim=2
@@ -4764,16 +4766,17 @@ void matrixmul(int a[3*4][4])
 #pragma HLS INTERFACE bram port=a
 #pragma HLS RESOURCE variable=a core=RAM_1P_BRAM
 #pragma empty_line
- int a_row[4];
- int b_copy[4][4];
- int tmp = 0;
+ mat_type a_row[4];
+ mat_type b_copy[4][4];
+ mat_type tmp = 0;
 #pragma empty_line
  // Generate the expected result
  // Iterate over the rows of the A matrix
  for(int i = 0; i < 4; i++) {
   col:for(int j = 0; j < 4; j++) {
 #pragma HLS PIPELINE
- tmp = 0;
+ //tmp = 0;
+   tmp = 0.0f;
 #pragma empty_line
     // Cache each row (so it's only read once per function)
     if (j == 0) {

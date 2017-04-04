@@ -48,10 +48,10 @@ ALL TIMES.
 
 int main(int argc, char **argv)
 {
-	int in_mat_a[DIM][DIM] = {0};
-	int in_mat_b[DIM][DIM] = {0};
-	int sw_result[DIM][DIM];
-	int in_a[3*DIM][DIM] = {0};
+	mat_type in_mat_a[DIM][DIM] = {0};
+	mat_type in_mat_b[DIM][DIM] = {0};
+	mat_type sw_result[DIM][DIM];
+	mat_type in_a[3*DIM][DIM] = {0};
 
 	int err_cnt = 0;
 	int i, j;

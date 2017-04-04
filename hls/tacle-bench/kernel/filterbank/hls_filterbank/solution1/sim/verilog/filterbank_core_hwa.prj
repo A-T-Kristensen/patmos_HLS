@@ -1,0 +1,12 @@
+vhdl xil_defaultlib "ip/xil_defaultlib/filterbank_core_hwa_ap_fadd_3_full_dsp_32.vhd"
+vhdl xil_defaultlib "ip/xil_defaultlib/filterbank_core_hwa_ap_fmul_2_max_dsp_32.vhd"
+sv xil_defaultlib "AESL_autobram_F.v"
+sv xil_defaultlib "AESL_autobram_H.v"
+sv xil_defaultlib "filterbank_core_heOg.v"
+sv xil_defaultlib "filterbank_core_hbkb.v"
+sv xil_defaultlib "AESL_autobram_y.v"
+sv xil_defaultlib "filterbank_core_hfYi.v"
+sv xil_defaultlib "filterbank_core_hwa.autotb.v"
+sv xil_defaultlib "AESL_autobram_r.v"
+sv xil_defaultlib "filterbank_core_hwa.v"
+

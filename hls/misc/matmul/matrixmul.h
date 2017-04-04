@@ -53,8 +53,10 @@ using namespace std;
 
 #define DIM 4
 
+typedef int mat_type;
+
 // Prototype of top level function for C-synthesis
-void matrixmul(int a[3*DIM][DIM]);
+void matrixmul(mat_type a[3*DIM][DIM]);
 
 #endif // __MATRIXMUL_H__ not defined
 

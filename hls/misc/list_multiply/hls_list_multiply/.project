@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>hls_matmul</name>
+	<name>hls_list_multiply</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -29,17 +29,12 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/.apc/.src</location>
+			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/hls_list_multiply/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/.apc/.tb</location>
-		</link>
-		<link>
-			<name>list_multiply/constraints</name>
-			<type>2</type>
-			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/list_multiply/.tcls</location>
+			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/hls_list_multiply/.apc/.tb</location>
 		</link>
 		<link>
 			<name>source/list_multiply.c</name>
@@ -52,24 +47,29 @@
 			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/list_multiply.h</location>
 		</link>
 		<link>
+			<name>test/constraints</name>
+			<type>2</type>
+			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/hls_list_multiply/test/.tcls</location>
+		</link>
+		<link>
 			<name>testbench/list_multiply_test.c</name>
 			<type>1</type>
 			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/list_multiply_test.c</location>
 		</link>
 		<link>
-			<name>list_multiply/constraints/.xml.directive</name>
+			<name>test/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/list_multiply/list_multiply.directive</location>
+			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/hls_list_multiply/test/test.directive</location>
 		</link>
 		<link>
-			<name>list_multiply/constraints/directives.tcl</name>
+			<name>test/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/list_multiply/directives.tcl</location>
+			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/hls_list_multiply/test/directives.tcl</location>
 		</link>
 		<link>
-			<name>list_multiply/constraints/script.tcl</name>
+			<name>test/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/list_multiply/script.tcl</location>
+			<location>/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/hls_list_multiply/test/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

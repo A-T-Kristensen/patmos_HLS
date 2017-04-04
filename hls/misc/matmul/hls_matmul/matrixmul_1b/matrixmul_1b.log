@@ -7,12 +7,84 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 
 @I [SYN-201] Setting up clock 'default' with a period of 10ns.
 @I [HLS-10] Setting target device to 'xc7a100tcsg324-1'
-@I [COSIM-47] Using XSIM for RTL simulation.
-@I [COSIM-14] Instrumenting C test bench ...
-@I [COSIM-302] Starting C TB testing ... 
-@I [COSIM-333] Generating C post check test bench ...
-@I [COSIM-12] Generating RTL test bench ...
-@I [COSIM-322] Starting VHDL simulation. 
-@I [COSIM-15] Starting XSIM ...
-@I [COSIM-316] Starting C post checking ...
-@I [COSIM-1000] *** C/RTL co-simulation finished: PASS ***
+@I [HLS-10] Analyzing design file 'matrixmul.cpp' ... 
+@I [HLS-10] Validating synthesis directives ...
+@W [HLS-40] Directive 'PIPELINE' cannot be applied: Function 'matmul' does not exist in any synthesis source file.
+@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'matmul' does not exist in any synthesis source file.
+@I [HLS-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 326.352 ; gain = 12.586 ; free physical = 12260 ; free virtual = 16224
+@I [HLS-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 326.352 ; gain = 12.586 ; free physical = 12260 ; free virtual = 16224
+@I [HLS-10] Starting code transformations ...
+@I [HLS-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 326.352 ; gain = 12.586 ; free physical = 12260 ; free virtual = 16224
+@I [HLS-10] Checking synthesizability ...
+@I [HLS-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 326.352 ; gain = 12.586 ; free physical = 12260 ; free virtual = 16224
+@I [XFORM-502] Unrolling all sub-loops inside loop 'col' (matrixmul.cpp:63) in function 'matrixmul' for pipelining.
+@I [XFORM-501] Unrolling loop 'Cache_Row' (matrixmul.cpp:71) in function 'matrixmul' completely.
+@I [XFORM-501] Unrolling loop 'Cache_Col' (matrixmul.cpp:76) in function 'matrixmul' completely.
+@I [XFORM-501] Unrolling loop 'Product' (matrixmul.cpp:81) in function 'matrixmul' completely.
+@I [XFORM-102] Partitioning array 'a_row' (matrixmul.cpp:56) automatically.
+@I [XFORM-102] Partitioning array 'b_copy' (matrixmul.cpp:57) in dimension 1 automatically.
+@W [XFORM-105] Cannot partition array 'a' (matrixmul.cpp:48): incorrect partition factor 1.
+@I [XFORM-102] Automatically partitioning small array 'b_copy.0' (matrixmul.cpp:57) completely based on array size.
+@I [XFORM-102] Automatically partitioning small array 'b_copy.1' (matrixmul.cpp:57) completely based on array size.
+@I [XFORM-102] Automatically partitioning small array 'b_copy.2' (matrixmul.cpp:57) completely based on array size.
+@I [XFORM-102] Automatically partitioning small array 'b_copy.3' (matrixmul.cpp:57) completely based on array size.
+@I [XFORM-101] Partitioning array 'b_copy.0' (matrixmul.cpp:57) in dimension 1 completely.
+@I [XFORM-101] Partitioning array 'b_copy.1' (matrixmul.cpp:57) in dimension 1 completely.
+@I [XFORM-101] Partitioning array 'b_copy.2' (matrixmul.cpp:57) in dimension 1 completely.
+@I [XFORM-101] Partitioning array 'b_copy.3' (matrixmul.cpp:57) in dimension 1 completely.
+@I [XFORM-401] Performing if-conversion on hyperblock from (matrixmul.cpp:63:35) to (matrixmul.cpp:63:29) in function 'matrixmul'... converting 25 basic blocks.
+@I [HLS-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 454.348 ; gain = 140.582 ; free physical = 12240 ; free virtual = 16204
+@I [XFORM-541] Flattening a loop nest 'Loop-1' (matrixmul.cpp:62:15) in function 'matrixmul'.
+@I [HLS-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 454.348 ; gain = 140.582 ; free physical = 12247 ; free virtual = 16212
+@I [HLS-10] Starting hardware synthesis ...
+@I [HLS-10] Synthesizing 'matrixmul' ...
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Implementing module 'matrixmul' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'L_col'.
+@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 1, distance = 5, offset = 1)
+   between 'store' operation (matrixmul.cpp:85) of variable 'tmp_12_3', matrixmul.cpp:82 on array 'a' and 'load' operation ('a_load', matrixmul.cpp:71) on array 'a'.
+@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 2, distance = 5, offset = 1)
+   between 'store' operation (matrixmul.cpp:85) of variable 'tmp_12_3', matrixmul.cpp:82 on array 'a' and 'load' operation ('a_load', matrixmul.cpp:71) on array 'a'.
+@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 3, distance = 5, offset = 1)
+   between 'store' operation (matrixmul.cpp:85) of variable 'tmp_12_3', matrixmul.cpp:82 on array 'a' and 'load' operation ('a_load', matrixmul.cpp:71) on array 'a'.
+@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 4, distance = 5, offset = 1)
+   between 'store' operation (matrixmul.cpp:85) of variable 'tmp_12_3', matrixmul.cpp:82 on array 'a' and 'load' operation ('a_load', matrixmul.cpp:71) on array 'a'.
+@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1)
+   between 'store' operation (matrixmul.cpp:85) of variable 'tmp_12_3', matrixmul.cpp:82 on array 'a' and 'load' operation ('a_load_1', matrixmul.cpp:71) on array 'a'.
+@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1)
+   between 'store' operation (matrixmul.cpp:85) of variable 'tmp_12_3', matrixmul.cpp:82 on array 'a' and 'load' operation ('a_load_1', matrixmul.cpp:71) on array 'a'.
+@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 16, distance = 1, offset = 1)
+   between 'store' operation (matrixmul.cpp:85) of variable 'tmp_12_3', matrixmul.cpp:82 on array 'a' and 'load' operation ('a_load_1', matrixmul.cpp:71) on array 'a'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 17, Depth: 25.
+@W [SCHED-21] Estimated clock period (16.5ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+@W [SCHED-21] The critical path consists of the following:
+	'fadd' operation ('tmp_12_1', matrixmul.cpp:82) (8.26 ns)
+	'fadd' operation ('tmp_12_2', matrixmul.cpp:82) (8.26 ns)
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111]  Elapsed time: 3.31 seconds; current allocated memory: 58.140 MB.
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111]  Elapsed time: 0.07 seconds; current allocated memory: 59.045 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'matrixmul' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-500] Setting interface mode on port 'matrixmul/a' to 'bram'.
+@I [RTGEN-500] Setting interface mode on function 'matrixmul' to 'ap_ctrl_hs'.
+@I [SYN-210] Renamed object name 'matrixmul_fadd_32ns_32ns_32_5_full_dsp' to 'matrixmul_fadd_32bkb' due to the length limit 20
+@I [SYN-210] Renamed object name 'matrixmul_fmul_32ns_32ns_32_4_max_dsp' to 'matrixmul_fmul_32cud' due to the length limit 20
+@I [SYN-210] Renamed object name 'matrixmul_mux_42_32_1' to 'matrixmul_mux_42_dEe' due to the length limit 20
+@I [RTGEN-100] Generating core module 'matrixmul_fadd_32bkb': 1 instance(s).
+@I [RTGEN-100] Generating core module 'matrixmul_fmul_32cud': 1 instance(s).
+@I [RTGEN-100] Generating core module 'matrixmul_mux_42_dEe': 4 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'matrixmul'.
+@I [HLS-111]  Elapsed time: 0.17 seconds; current allocated memory: 60.350 MB.
+@I [HLS-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 454.348 ; gain = 140.582 ; free physical = 12222 ; free virtual = 16189
+@I [SYSC-301] Generating SystemC RTL for matrixmul.
+@I [VHDL-304] Generating VHDL RTL for matrixmul.
+@I [VLOG-307] Generating Verilog RTL for matrixmul.
+@I [HLS-112] Total elapsed time: 4.12 seconds; peak allocated memory: 60.350 MB.

@@ -1,4 +1,4 @@
-; ModuleID = '/home/patmos/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_2b/.autopilot/db/a.o.2.bc'
+; ModuleID = '/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_2b/.autopilot/db/a.o.2.bc'
 target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
 target triple = "x86_64-unknown-linux-gnu"
 
@@ -343,7 +343,7 @@ entry:
 !0 = metadata !{null, metadata !1, metadata !2, metadata !3, metadata !4, metadata !5, metadata !6}
 !1 = metadata !{metadata !"kernel_arg_addr_space", i32 1}
 !2 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none"}
-!3 = metadata !{metadata !"kernel_arg_type", metadata !"int [4]*"}
+!3 = metadata !{metadata !"kernel_arg_type", metadata !"mat_type [4]*"}
 !4 = metadata !{metadata !"kernel_arg_type_qual", metadata !""}
 !5 = metadata !{metadata !"kernel_arg_name", metadata !"a"}
 !6 = metadata !{metadata !"reqd_work_group_size", i32 1, i32 1, i32 1}

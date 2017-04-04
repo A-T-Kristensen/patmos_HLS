@@ -3108,16 +3108,18 @@ using namespace std;
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
+typedef float mat_type;
 #pragma empty_line
-void matrixmul(int a[3*4][4]);
+#pragma empty_line
+void matrixmul(mat_type a[3*4][4]);
 #pragma line 48 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul_test.cpp" 2
 #pragma empty_line
 int main(int argc, char **argv)
 {
- int in_mat_a[4][4] = {0};
- int in_mat_b[4][4] = {0};
- int sw_result[4][4];
- int in_a[3*4][4] = {0};
+ mat_type in_mat_a[4][4] = {0};
+ mat_type in_mat_b[4][4] = {0};
+ mat_type sw_result[4][4];
+ mat_type in_a[3*4][4] = {0};
 #pragma empty_line
  int err_cnt = 0;
  int i, j;
@@ -3150,14 +3152,14 @@ int main(int argc, char **argv)
 #pragma empty_line
    for (int i = 0; i < 4; i++) {
       for (int j = 0; j < 4; j++) {
-       printf("%d ", in_mat_a[i][j]);
+       printf("%f ", in_mat_a[i][j]);
       }
       printf("\n");
    }
 #pragma empty_line
    for (int i = 0; i < 4; i++) {
       for (int j = 0; j < 4; j++) {
-       printf("%d ", in_mat_b[i][j]);
+       printf("%f ", in_mat_b[i][j]);
       }
       printf("\n");
    }
@@ -3169,7 +3171,7 @@ int main(int argc, char **argv)
 #pragma empty_line
    for (int i = 0; i < 4; i++) {
       for (int j = 0; j < 4; j++) {
-       printf("%d ", sw_result[i][j]);
+       printf("%f ", sw_result[i][j]);
       }
       printf("\n");
    }
@@ -3179,7 +3181,7 @@ int main(int argc, char **argv)
 #pragma empty_line
    for (int i = 0; i < 4; i++) {
       for (int j = 0; j < 4; j++) {
-       printf("%d ", in_a[i+2*4][j]);
+       printf("%f ", in_a[i+2*4][j]);
       }
       printf("\n");
    }

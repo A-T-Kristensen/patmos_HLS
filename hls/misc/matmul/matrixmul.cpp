@@ -45,7 +45,7 @@ ALL TIMES.
 *******************************************************************************/
 #include "matrixmul.h"
 
-void matrixmul(int a[3*DIM][DIM])
+void matrixmul(mat_type a[3*DIM][DIM])
 {
 //#pragma HLS ARRAY_RESHAPE variable=b complete dim=1
 //#pragma HLS ARRAY_RESHAPE variable=a complete dim=2
@@ -53,16 +53,17 @@ void matrixmul(int a[3*DIM][DIM])
 #pragma HLS INTERFACE bram port=a
 #pragma HLS RESOURCE variable=a core=RAM_1P_BRAM
 
-	int a_row[DIM];
-	int b_copy[DIM][DIM];
-	int tmp = 0;
+	mat_type a_row[DIM];
+	mat_type b_copy[DIM][DIM];
+	mat_type tmp = 0;
 
 	// Generate the expected result
 	// Iterate over the rows of the A matrix
 	for(int i = 0; i < DIM; i++) {
 		col:for(int j = 0; j < DIM; j++) {
 		#pragma HLS PIPELINE
-		  tmp = 0;
+		  //tmp = 0;
+			tmp = 0.0f;
 
 		  // Cache each row (so it's only read once per function)
 		  if (j == 0) {

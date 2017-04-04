@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'matrixmul'" level="0">
-<item name = "Date">Mon Mar 27 21:01:50 2017
+<item name = "Date">Tue Apr  4 20:00:59 2017
 </item>
 <item name = "Version">2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)</item>
 <item name = "Project">hls_matmul</item>
@@ -280,8 +280,8 @@
 <item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
 <keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
 <column name="'a_row_2_2_load'">load, 0.00, 0.00, -, -, -, -, -, -, -, -, &apos;a_row[2]&apos;, -, -</column>
-<column name="'a_row[2]', matrixmul.cpp:68">select, 1.37, 1.37, -, -, -, -, -, -, -, -, -, -, -</column>
-<column name="'tmp_11_2', matrixmul.cpp:81">mul, 6.68, 8.05, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'a_row[2]', matrixmul.cpp:69">select, 1.37, 1.37, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp_11_2', matrixmul.cpp:82">mul, 6.68, 8.05, -, -, -, -, -, -, -, -, -, -, -</column>
 </table>
 </item>
 </section>

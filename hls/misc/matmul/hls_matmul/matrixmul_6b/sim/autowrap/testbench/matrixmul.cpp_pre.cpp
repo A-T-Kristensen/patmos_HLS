@@ -2169,11 +2169,13 @@ using namespace std;
 
 
 
+typedef float mat_type;
 
-void matrixmul(int a[3*4][4]);
+
+void matrixmul(mat_type a[3*4][4]);
 # 47 "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/matrixmul.cpp" 2
 
-void matrixmul(int a[3*4][4])
+void matrixmul(mat_type a[3*4][4])
 {
 
 
@@ -2181,16 +2183,17 @@ void matrixmul(int a[3*4][4])
 #pragma HLS INTERFACE bram port=a
 #pragma HLS RESOURCE variable=a core=RAM_1P_BRAM
 
- int a_row[4];
- int b_copy[4][4];
- int tmp = 0;
+ mat_type a_row[4];
+ mat_type b_copy[4][4];
+ mat_type tmp = 0;
 
 
 
  for(int i = 0; i < 4; i++) {
   col:for(int j = 0; j < 4; j++) {
 #pragma HLS PIPELINE
-    tmp = 0;
+
+   tmp = 0.0f;
 
 
     if (j == 0) {
