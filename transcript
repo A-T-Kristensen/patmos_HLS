@@ -1,0 +1,14 @@
+# //  ModelSim SE 10.1b Apr 26 2012 Linux 4.4.0-66-generic
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading project patmos_sim
+where
+#  Current directory is: /home/patmos/t-crest/patmos/sim/work
+#  Project is: /home/patmos/t-crest/patmos/sim/work/patmos_sim.mpf
+# 

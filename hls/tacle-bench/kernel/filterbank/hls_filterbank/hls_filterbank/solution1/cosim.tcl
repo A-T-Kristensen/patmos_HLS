@@ -5,4 +5,4 @@
 ############################################################
 open_project hls_filterbank
 open_solution "solution1"
-cosim_design
+cosim_design -tool xsim

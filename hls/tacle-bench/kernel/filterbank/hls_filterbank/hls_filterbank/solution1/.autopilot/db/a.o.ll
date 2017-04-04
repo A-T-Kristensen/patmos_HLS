@@ -6,13 +6,13 @@ target triple = "x86_64-unknown-linux-gnu"
 @.str1 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1 ; [#uses=1 type=[1 x i8]*]
 @.str2 = private unnamed_addr constant [12 x i8] c"RAM_1P_BRAM\00", align 1 ; [#uses=1 type=[12 x i8]*]
 @.str3 = private unnamed_addr constant [5 x i8] c"bram\00", align 1 ; [#uses=1 type=[5 x i8]*]
-@.str4 = private unnamed_addr constant [12 x i8] c"hls_label_1\00", align 1 ; [#uses=1 type=[12 x i8]*]
+@.str4 = private unnamed_addr constant [12 x i8] c"hls_label_2\00", align 1 ; [#uses=1 type=[12 x i8]*]
 @.str5 = private unnamed_addr constant [6 x i8] c"loop1\00", align 1 ; [#uses=1 type=[6 x i8]*]
-@.str6 = private unnamed_addr constant [12 x i8] c"hls_label_2\00", align 1 ; [#uses=1 type=[12 x i8]*]
+@.str6 = private unnamed_addr constant [12 x i8] c"hls_label_0\00", align 1 ; [#uses=1 type=[12 x i8]*]
 @.str7 = private unnamed_addr constant [6 x i8] c"loop2\00", align 1 ; [#uses=1 type=[6 x i8]*]
 @.str8 = private unnamed_addr constant [6 x i8] c"loop3\00", align 1 ; [#uses=1 type=[6 x i8]*]
 @.str9 = private unnamed_addr constant [6 x i8] c"loop4\00", align 1 ; [#uses=1 type=[6 x i8]*]
-@.str10 = private unnamed_addr constant [12 x i8] c"hls_label_0\00", align 1 ; [#uses=1 type=[12 x i8]*]
+@.str10 = private unnamed_addr constant [12 x i8] c"hls_label_1\00", align 1 ; [#uses=1 type=[12 x i8]*]
 @.str11 = private unnamed_addr constant [6 x i8] c"loop5\00", align 1 ; [#uses=1 type=[6 x i8]*]
 
 ; [#uses=0]
@@ -22,12 +22,12 @@ define void @filterbank_core_hwa(float* %r, float* %y, [32 x float]* %H, [32 x f
   %3 = alloca [32 x float]*, align 8              ; [#uses=5 type=[32 x float]**]
   %4 = alloca [32 x float]*, align 8              ; [#uses=5 type=[32 x float]**]
   %i = alloca i32, align 4                        ; [#uses=11 type=i32*]
-  %j = alloca i32, align 4                        ; [#uses=32 type=i32*]
+  %j = alloca i32, align 4                        ; [#uses=43 type=i32*]
   %k = alloca i32, align 4                        ; [#uses=14 type=i32*]
-  %Vect_H = alloca [256 x float], align 16        ; [#uses=3 type=[256 x float]*]
+  %Vect_H = alloca [256 x float], align 16        ; [#uses=4 type=[256 x float]*]
   %Vect_Dn = alloca [32 x float], align 16        ; [#uses=2 type=[32 x float]*]
-  %Vect_Up = alloca [256 x float], align 16       ; [#uses=3 type=[256 x float]*]
-  %Vect_F = alloca [256 x float], align 16        ; [#uses=3 type=[256 x float]*]
+  %Vect_Up = alloca [256 x float], align 16       ; [#uses=4 type=[256 x float]*]
+  %Vect_F = alloca [256 x float], align 16        ; [#uses=4 type=[256 x float]*]
   store float* %r, float** %1, align 8
   call void @llvm.dbg.declare(metadata !{float** %1}, metadata !24), !dbg !25 ; [debug line = 33:33] [debug variable = r]
   store float* %y, float** %2, align 8
@@ -93,10 +93,10 @@ define void @filterbank_core_hwa(float* %r, float* %y, [32 x float]* %H, [32 x f
   store i32 0, i32* %i, align 4, !dbg !61         ; [debug line = 59:9]
   br label %29, !dbg !61                          ; [debug line = 59:9]
 
-; <label>:29                                      ; preds = %178, %28
+; <label>:29                                      ; preds = %203, %28
   %30 = load i32* %i, align 4, !dbg !61           ; [#uses=1 type=i32] [debug line = 59:9]
   %31 = icmp slt i32 %30, 8, !dbg !61             ; [#uses=1 type=i1] [debug line = 59:9]
-  br i1 %31, label %32, label %181, !dbg !61      ; [debug line = 59:9]
+  br i1 %31, label %32, label %206, !dbg !61      ; [debug line = 59:9]
 
 ; <label>:32                                      ; preds = %29
   call void @llvm.dbg.declare(metadata !{[256 x float]* %Vect_H}, metadata !63), !dbg !68 ; [debug line = 60:11] [debug variable = Vect_H]
@@ -115,273 +115,321 @@ define void @filterbank_core_hwa(float* %r, float* %y, [32 x float]* %H, [32 x f
   store i32 0, i32* %j, align 4, !dbg !78         ; [debug line = 66:17]
   br label %37, !dbg !78                          ; [debug line = 66:17]
 
-; <label>:37                                      ; preds = %77, %36
+; <label>:37                                      ; preds = %80, %36
   %38 = load i32* %j, align 4, !dbg !78           ; [#uses=1 type=i32] [debug line = 66:17]
   %39 = icmp slt i32 %38, 256, !dbg !78           ; [#uses=1 type=i1] [debug line = 66:17]
-  br i1 %39, label %40, label %80, !dbg !78       ; [debug line = 66:17]
+  br i1 %39, label %40, label %83, !dbg !78       ; [debug line = 66:17]
 
 ; <label>:40                                      ; preds = %37
   call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([6 x i8]* @.str5, i32 0, i32 0)) nounwind, !dbg !80 ; [debug line = 66:40]
   call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([6 x i8]* @.str5, i32 0, i32 0)) nounwind, !dbg !80 ; [debug line = 66:40]
-  store i32 0, i32* %k, align 4, !dbg !82         ; [debug line = 67:13]
-  br label %41, !dbg !82                          ; [debug line = 67:13]
+  %41 = load i32* %j, align 4, !dbg !82           ; [#uses=1 type=i32] [debug line = 67:6]
+  %42 = sext i32 %41 to i64, !dbg !82             ; [#uses=1 type=i64] [debug line = 67:6]
+  %43 = getelementptr inbounds [256 x float]* %Vect_H, i32 0, i64 %42, !dbg !82 ; [#uses=1 type=float*] [debug line = 67:6]
+  store float 0.000000e+00, float* %43, align 4, !dbg !82 ; [debug line = 67:6]
+  store i32 0, i32* %k, align 4, !dbg !83         ; [debug line = 68:13]
+  br label %44, !dbg !83                          ; [debug line = 68:13]
 
-; <label>:41                                      ; preds = %73, %40
-  %42 = load i32* %k, align 4, !dbg !82           ; [#uses=1 type=i32] [debug line = 67:13]
-  %43 = icmp slt i32 %42, 32, !dbg !82            ; [#uses=1 type=i1] [debug line = 67:13]
-  br i1 %43, label %44, label %49, !dbg !82       ; [debug line = 67:13]
+; <label>:44                                      ; preds = %76, %40
+  %45 = load i32* %k, align 4, !dbg !83           ; [#uses=1 type=i32] [debug line = 68:13]
+  %46 = icmp slt i32 %45, 32, !dbg !83            ; [#uses=1 type=i1] [debug line = 68:13]
+  br i1 %46, label %47, label %52, !dbg !83       ; [debug line = 68:13]
 
-; <label>:44                                      ; preds = %41
-  %45 = load i32* %j, align 4, !dbg !82           ; [#uses=1 type=i32] [debug line = 67:13]
-  %46 = load i32* %k, align 4, !dbg !82           ; [#uses=1 type=i32] [debug line = 67:13]
-  %47 = sub nsw i32 %45, %46, !dbg !82            ; [#uses=1 type=i32] [debug line = 67:13]
-  %48 = icmp sge i32 %47, 0, !dbg !82             ; [#uses=1 type=i1] [debug line = 67:13]
-  br label %49
+; <label>:47                                      ; preds = %44
+  %48 = load i32* %j, align 4, !dbg !83           ; [#uses=1 type=i32] [debug line = 68:13]
+  %49 = load i32* %k, align 4, !dbg !83           ; [#uses=1 type=i32] [debug line = 68:13]
+  %50 = sub nsw i32 %48, %49, !dbg !83            ; [#uses=1 type=i32] [debug line = 68:13]
+  %51 = icmp sge i32 %50, 0, !dbg !83             ; [#uses=1 type=i1] [debug line = 68:13]
+  br label %52
 
-; <label>:49                                      ; preds = %44, %41
-  %50 = phi i1 [ false, %41 ], [ %48, %44 ]       ; [#uses=1 type=i1]
-  br i1 %50, label %51, label %76
+; <label>:52                                      ; preds = %47, %44
+  %53 = phi i1 [ false, %44 ], [ %51, %47 ]       ; [#uses=1 type=i1]
+  br i1 %53, label %54, label %79
 
-; <label>:51                                      ; preds = %49
-  call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([12 x i8]* @.str6, i32 0, i32 0)) nounwind, !dbg !84 ; [debug line = 69:2]
-  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !86 ; [debug line = 68:1]
-  call void (...)* @_ssdm_Unroll(i32 0, i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !87 ; [debug line = 69:1]
-  %52 = load i32* %k, align 4, !dbg !88           ; [#uses=1 type=i32] [debug line = 70:2]
-  %53 = sext i32 %52 to i64, !dbg !88             ; [#uses=1 type=i64] [debug line = 70:2]
-  %54 = load i32* %i, align 4, !dbg !88           ; [#uses=1 type=i32] [debug line = 70:2]
-  %55 = sext i32 %54 to i64, !dbg !88             ; [#uses=1 type=i64] [debug line = 70:2]
-  %56 = load [32 x float]** %3, align 8, !dbg !88 ; [#uses=1 type=[32 x float]*] [debug line = 70:2]
-  %57 = getelementptr inbounds [32 x float]* %56, i64 %55, !dbg !88 ; [#uses=1 type=[32 x float]*] [debug line = 70:2]
-  %58 = getelementptr inbounds [32 x float]* %57, i32 0, i64 %53, !dbg !88 ; [#uses=1 type=float*] [debug line = 70:2]
-  %59 = load float* %58, align 4, !dbg !88        ; [#uses=1 type=float] [debug line = 70:2]
-  %60 = load i32* %j, align 4, !dbg !88           ; [#uses=1 type=i32] [debug line = 70:2]
-  %61 = load i32* %k, align 4, !dbg !88           ; [#uses=1 type=i32] [debug line = 70:2]
-  %62 = sub nsw i32 %60, %61, !dbg !88            ; [#uses=1 type=i32] [debug line = 70:2]
-  %63 = sext i32 %62 to i64, !dbg !88             ; [#uses=1 type=i64] [debug line = 70:2]
-  %64 = load float** %1, align 8, !dbg !88        ; [#uses=1 type=float*] [debug line = 70:2]
-  %65 = getelementptr inbounds float* %64, i64 %63, !dbg !88 ; [#uses=1 type=float*] [debug line = 70:2]
-  %66 = load float* %65, align 4, !dbg !88        ; [#uses=1 type=float] [debug line = 70:2]
-  %67 = fmul float %59, %66, !dbg !88             ; [#uses=1 type=float] [debug line = 70:2]
-  %68 = load i32* %j, align 4, !dbg !88           ; [#uses=1 type=i32] [debug line = 70:2]
-  %69 = sext i32 %68 to i64, !dbg !88             ; [#uses=1 type=i64] [debug line = 70:2]
-  %70 = getelementptr inbounds [256 x float]* %Vect_H, i32 0, i64 %69, !dbg !88 ; [#uses=2 type=float*] [debug line = 70:2]
-  %71 = load float* %70, align 4, !dbg !88        ; [#uses=1 type=float] [debug line = 70:2]
-  %72 = fadd float %71, %67, !dbg !88             ; [#uses=1 type=float] [debug line = 70:2]
-  store float %72, float* %70, align 4, !dbg !88  ; [debug line = 70:2]
-  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([12 x i8]* @.str6, i32 0, i32 0)) nounwind, !dbg !89 ; [debug line = 70:40]
-  br label %73, !dbg !89                          ; [debug line = 70:40]
+; <label>:54                                      ; preds = %52
+  call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([12 x i8]* @.str6, i32 0, i32 0)) nounwind, !dbg !85 ; [debug line = 70:2]
+  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !87 ; [debug line = 69:1]
+  call void (...)* @_ssdm_Unroll(i32 0, i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !88 ; [debug line = 70:1]
+  %55 = load i32* %k, align 4, !dbg !89           ; [#uses=1 type=i32] [debug line = 71:2]
+  %56 = sext i32 %55 to i64, !dbg !89             ; [#uses=1 type=i64] [debug line = 71:2]
+  %57 = load i32* %i, align 4, !dbg !89           ; [#uses=1 type=i32] [debug line = 71:2]
+  %58 = sext i32 %57 to i64, !dbg !89             ; [#uses=1 type=i64] [debug line = 71:2]
+  %59 = load [32 x float]** %3, align 8, !dbg !89 ; [#uses=1 type=[32 x float]*] [debug line = 71:2]
+  %60 = getelementptr inbounds [32 x float]* %59, i64 %58, !dbg !89 ; [#uses=1 type=[32 x float]*] [debug line = 71:2]
+  %61 = getelementptr inbounds [32 x float]* %60, i32 0, i64 %56, !dbg !89 ; [#uses=1 type=float*] [debug line = 71:2]
+  %62 = load float* %61, align 4, !dbg !89        ; [#uses=1 type=float] [debug line = 71:2]
+  %63 = load i32* %j, align 4, !dbg !89           ; [#uses=1 type=i32] [debug line = 71:2]
+  %64 = load i32* %k, align 4, !dbg !89           ; [#uses=1 type=i32] [debug line = 71:2]
+  %65 = sub nsw i32 %63, %64, !dbg !89            ; [#uses=1 type=i32] [debug line = 71:2]
+  %66 = sext i32 %65 to i64, !dbg !89             ; [#uses=1 type=i64] [debug line = 71:2]
+  %67 = load float** %1, align 8, !dbg !89        ; [#uses=1 type=float*] [debug line = 71:2]
+  %68 = getelementptr inbounds float* %67, i64 %66, !dbg !89 ; [#uses=1 type=float*] [debug line = 71:2]
+  %69 = load float* %68, align 4, !dbg !89        ; [#uses=1 type=float] [debug line = 71:2]
+  %70 = fmul float %62, %69, !dbg !89             ; [#uses=1 type=float] [debug line = 71:2]
+  %71 = load i32* %j, align 4, !dbg !89           ; [#uses=1 type=i32] [debug line = 71:2]
+  %72 = sext i32 %71 to i64, !dbg !89             ; [#uses=1 type=i64] [debug line = 71:2]
+  %73 = getelementptr inbounds [256 x float]* %Vect_H, i32 0, i64 %72, !dbg !89 ; [#uses=2 type=float*] [debug line = 71:2]
+  %74 = load float* %73, align 4, !dbg !89        ; [#uses=1 type=float] [debug line = 71:2]
+  %75 = fadd float %74, %70, !dbg !89             ; [#uses=1 type=float] [debug line = 71:2]
+  store float %75, float* %73, align 4, !dbg !89  ; [debug line = 71:2]
+  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([12 x i8]* @.str6, i32 0, i32 0)) nounwind, !dbg !90 ; [debug line = 71:40]
+  br label %76, !dbg !90                          ; [debug line = 71:40]
 
-; <label>:73                                      ; preds = %51
-  %74 = load i32* %k, align 4, !dbg !90           ; [#uses=1 type=i32] [debug line = 67:58]
-  %75 = add nsw i32 %74, 1, !dbg !90              ; [#uses=1 type=i32] [debug line = 67:58]
-  store i32 %75, i32* %k, align 4, !dbg !90       ; [debug line = 67:58]
-  br label %41, !dbg !90                          ; [debug line = 67:58]
+; <label>:76                                      ; preds = %54
+  %77 = load i32* %k, align 4, !dbg !91           ; [#uses=1 type=i32] [debug line = 68:58]
+  %78 = add nsw i32 %77, 1, !dbg !91              ; [#uses=1 type=i32] [debug line = 68:58]
+  store i32 %78, i32* %k, align 4, !dbg !91       ; [debug line = 68:58]
+  br label %44, !dbg !91                          ; [debug line = 68:58]
 
-; <label>:76                                      ; preds = %49
-  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([6 x i8]* @.str5, i32 0, i32 0)) nounwind, !dbg !91 ; [debug line = 71:5]
-  br label %77, !dbg !91                          ; [debug line = 71:5]
+; <label>:79                                      ; preds = %52
+  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([6 x i8]* @.str5, i32 0, i32 0)) nounwind, !dbg !92 ; [debug line = 72:5]
+  br label %80, !dbg !92                          ; [debug line = 72:5]
 
-; <label>:77                                      ; preds = %76
-  %78 = load i32* %j, align 4, !dbg !92           ; [#uses=1 type=i32] [debug line = 66:33]
-  %79 = add nsw i32 %78, 1, !dbg !92              ; [#uses=1 type=i32] [debug line = 66:33]
-  store i32 %79, i32* %j, align 4, !dbg !92       ; [debug line = 66:33]
-  br label %37, !dbg !92                          ; [debug line = 66:33]
+; <label>:80                                      ; preds = %79
+  %81 = load i32* %j, align 4, !dbg !93           ; [#uses=1 type=i32] [debug line = 66:33]
+  %82 = add nsw i32 %81, 1, !dbg !93              ; [#uses=1 type=i32] [debug line = 66:33]
+  store i32 %82, i32* %j, align 4, !dbg !93       ; [debug line = 66:33]
+  br label %37, !dbg !93                          ; [debug line = 66:33]
 
-; <label>:80                                      ; preds = %37
-  br label %81, !dbg !93                          ; [debug line = 71:5]
+; <label>:83                                      ; preds = %37
+  br label %84, !dbg !94                          ; [debug line = 72:5]
 
-; <label>:81                                      ; preds = %80
-  store i32 0, i32* %j, align 4, !dbg !94         ; [debug line = 74:17]
-  br label %82, !dbg !94                          ; [debug line = 74:17]
+; <label>:84                                      ; preds = %83
+  store i32 0, i32* %j, align 4, !dbg !95         ; [debug line = 75:17]
+  br label %85, !dbg !95                          ; [debug line = 75:17]
 
-; <label>:82                                      ; preds = %94, %81
-  %83 = load i32* %j, align 4, !dbg !94           ; [#uses=1 type=i32] [debug line = 74:17]
-  %84 = icmp slt i32 %83, 32, !dbg !94            ; [#uses=1 type=i1] [debug line = 74:17]
-  br i1 %84, label %85, label %97, !dbg !94       ; [debug line = 74:17]
+; <label>:85                                      ; preds = %97, %84
+  %86 = load i32* %j, align 4, !dbg !95           ; [#uses=1 type=i32] [debug line = 75:17]
+  %87 = icmp slt i32 %86, 32, !dbg !95            ; [#uses=1 type=i1] [debug line = 75:17]
+  br i1 %87, label %88, label %100, !dbg !95      ; [debug line = 75:17]
 
-; <label>:85                                      ; preds = %82
-  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([6 x i8]* @.str7, i32 0, i32 0)) nounwind, !dbg !96 ; [debug line = 74:39]
-  call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([6 x i8]* @.str7, i32 0, i32 0)) nounwind, !dbg !96 ; [debug line = 74:39]
-  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !98 ; [debug line = 75:1]
-  call void (...)* @_ssdm_Unroll(i32 0, i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !99 ; [debug line = 76:1]
-  %86 = load i32* %j, align 4, !dbg !100          ; [#uses=1 type=i32] [debug line = 77:2]
-  %87 = mul nsw i32 %86, 8, !dbg !100             ; [#uses=1 type=i32] [debug line = 77:2]
-  %88 = sext i32 %87 to i64, !dbg !100            ; [#uses=1 type=i64] [debug line = 77:2]
-  %89 = getelementptr inbounds [256 x float]* %Vect_H, i32 0, i64 %88, !dbg !100 ; [#uses=1 type=float*] [debug line = 77:2]
-  %90 = load float* %89, align 4, !dbg !100       ; [#uses=1 type=float] [debug line = 77:2]
-  %91 = load i32* %j, align 4, !dbg !100          ; [#uses=1 type=i32] [debug line = 77:2]
-  %92 = sext i32 %91 to i64, !dbg !100            ; [#uses=1 type=i64] [debug line = 77:2]
-  %93 = getelementptr inbounds [32 x float]* %Vect_Dn, i32 0, i64 %92, !dbg !100 ; [#uses=1 type=float*] [debug line = 77:2]
-  store float %90, float* %93, align 4, !dbg !100 ; [debug line = 77:2]
-  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([6 x i8]* @.str7, i32 0, i32 0)) nounwind, !dbg !101 ; [debug line = 78:5]
-  br label %94, !dbg !101                         ; [debug line = 78:5]
+; <label>:88                                      ; preds = %85
+  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([6 x i8]* @.str7, i32 0, i32 0)) nounwind, !dbg !97 ; [debug line = 75:39]
+  call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([6 x i8]* @.str7, i32 0, i32 0)) nounwind, !dbg !97 ; [debug line = 75:39]
+  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !99 ; [debug line = 76:1]
+  call void (...)* @_ssdm_Unroll(i32 0, i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !100 ; [debug line = 77:1]
+  %89 = load i32* %j, align 4, !dbg !101          ; [#uses=1 type=i32] [debug line = 78:2]
+  %90 = mul nsw i32 %89, 8, !dbg !101             ; [#uses=1 type=i32] [debug line = 78:2]
+  %91 = sext i32 %90 to i64, !dbg !101            ; [#uses=1 type=i64] [debug line = 78:2]
+  %92 = getelementptr inbounds [256 x float]* %Vect_H, i32 0, i64 %91, !dbg !101 ; [#uses=1 type=float*] [debug line = 78:2]
+  %93 = load float* %92, align 4, !dbg !101       ; [#uses=1 type=float] [debug line = 78:2]
+  %94 = load i32* %j, align 4, !dbg !101          ; [#uses=1 type=i32] [debug line = 78:2]
+  %95 = sext i32 %94 to i64, !dbg !101            ; [#uses=1 type=i64] [debug line = 78:2]
+  %96 = getelementptr inbounds [32 x float]* %Vect_Dn, i32 0, i64 %95, !dbg !101 ; [#uses=1 type=float*] [debug line = 78:2]
+  store float %93, float* %96, align 4, !dbg !101 ; [debug line = 78:2]
+  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([6 x i8]* @.str7, i32 0, i32 0)) nounwind, !dbg !102 ; [debug line = 79:5]
+  br label %97, !dbg !102                         ; [debug line = 79:5]
 
-; <label>:94                                      ; preds = %85
-  %95 = load i32* %j, align 4, !dbg !102          ; [#uses=1 type=i32] [debug line = 74:32]
-  %96 = add nsw i32 %95, 1, !dbg !102             ; [#uses=1 type=i32] [debug line = 74:32]
-  store i32 %96, i32* %j, align 4, !dbg !102      ; [debug line = 74:32]
-  br label %82, !dbg !102                         ; [debug line = 74:32]
+; <label>:97                                      ; preds = %88
+  %98 = load i32* %j, align 4, !dbg !103          ; [#uses=1 type=i32] [debug line = 75:32]
+  %99 = add nsw i32 %98, 1, !dbg !103             ; [#uses=1 type=i32] [debug line = 75:32]
+  store i32 %99, i32* %j, align 4, !dbg !103      ; [debug line = 75:32]
+  br label %85, !dbg !103                         ; [debug line = 75:32]
 
-; <label>:97                                      ; preds = %82
-  br label %98, !dbg !103                         ; [debug line = 78:5]
+; <label>:100                                     ; preds = %85
+  store i32 0, i32* %j, align 4, !dbg !104        ; [debug line = 83:11]
+  br label %101, !dbg !104                        ; [debug line = 83:11]
 
-; <label>:98                                      ; preds = %97
-  store i32 0, i32* %j, align 4, !dbg !104        ; [debug line = 82:17]
-  br label %99, !dbg !104                         ; [debug line = 82:17]
+; <label>:101                                     ; preds = %108, %100
+  %102 = load i32* %j, align 4, !dbg !104         ; [#uses=1 type=i32] [debug line = 83:11]
+  %103 = icmp slt i32 %102, 256, !dbg !104        ; [#uses=1 type=i1] [debug line = 83:11]
+  br i1 %103, label %104, label %111, !dbg !104   ; [debug line = 83:11]
 
-; <label>:99                                      ; preds = %111, %98
-  %100 = load i32* %j, align 4, !dbg !104         ; [#uses=1 type=i32] [debug line = 82:17]
-  %101 = icmp slt i32 %100, 32, !dbg !104         ; [#uses=1 type=i1] [debug line = 82:17]
-  br i1 %101, label %102, label %114, !dbg !104   ; [debug line = 82:17]
+; <label>:104                                     ; preds = %101
+  %105 = load i32* %j, align 4, !dbg !106         ; [#uses=1 type=i32] [debug line = 84:7]
+  %106 = sext i32 %105 to i64, !dbg !106          ; [#uses=1 type=i64] [debug line = 84:7]
+  %107 = getelementptr inbounds [256 x float]* %Vect_Up, i32 0, i64 %106, !dbg !106 ; [#uses=1 type=float*] [debug line = 84:7]
+  store float 0.000000e+00, float* %107, align 4, !dbg !106 ; [debug line = 84:7]
+  br label %108, !dbg !106                        ; [debug line = 84:7]
 
-; <label>:102                                     ; preds = %99
-  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([6 x i8]* @.str8, i32 0, i32 0)) nounwind, !dbg !106 ; [debug line = 82:39]
-  call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([6 x i8]* @.str8, i32 0, i32 0)) nounwind, !dbg !106 ; [debug line = 82:39]
-  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !108 ; [debug line = 83:1]
-  call void (...)* @_ssdm_Unroll(i32 0, i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !109 ; [debug line = 84:1]
-  %103 = load i32* %j, align 4, !dbg !110         ; [#uses=1 type=i32] [debug line = 85:2]
-  %104 = sext i32 %103 to i64, !dbg !110          ; [#uses=1 type=i64] [debug line = 85:2]
-  %105 = getelementptr inbounds [32 x float]* %Vect_Dn, i32 0, i64 %104, !dbg !110 ; [#uses=1 type=float*] [debug line = 85:2]
-  %106 = load float* %105, align 4, !dbg !110     ; [#uses=1 type=float] [debug line = 85:2]
-  %107 = load i32* %j, align 4, !dbg !110         ; [#uses=1 type=i32] [debug line = 85:2]
-  %108 = mul nsw i32 %107, 8, !dbg !110           ; [#uses=1 type=i32] [debug line = 85:2]
-  %109 = sext i32 %108 to i64, !dbg !110          ; [#uses=1 type=i64] [debug line = 85:2]
-  %110 = getelementptr inbounds [256 x float]* %Vect_Up, i32 0, i64 %109, !dbg !110 ; [#uses=1 type=float*] [debug line = 85:2]
-  store float %106, float* %110, align 4, !dbg !110 ; [debug line = 85:2]
-  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([6 x i8]* @.str8, i32 0, i32 0)) nounwind, !dbg !111 ; [debug line = 86:5]
-  br label %111, !dbg !111                        ; [debug line = 86:5]
+; <label>:108                                     ; preds = %104
+  %109 = load i32* %j, align 4, !dbg !107         ; [#uses=1 type=i32] [debug line = 83:27]
+  %110 = add nsw i32 %109, 1, !dbg !107           ; [#uses=1 type=i32] [debug line = 83:27]
+  store i32 %110, i32* %j, align 4, !dbg !107     ; [debug line = 83:27]
+  br label %101, !dbg !107                        ; [debug line = 83:27]
 
-; <label>:111                                     ; preds = %102
-  %112 = load i32* %j, align 4, !dbg !112         ; [#uses=1 type=i32] [debug line = 82:32]
-  %113 = add nsw i32 %112, 1, !dbg !112           ; [#uses=1 type=i32] [debug line = 82:32]
-  store i32 %113, i32* %j, align 4, !dbg !112     ; [debug line = 82:32]
-  br label %99, !dbg !112                         ; [debug line = 82:32]
+; <label>:111                                     ; preds = %101
+  br label %112, !dbg !108                        ; [debug line = 84:22]
 
-; <label>:114                                     ; preds = %99
-  br label %115, !dbg !113                        ; [debug line = 86:5]
+; <label>:112                                     ; preds = %111
+  store i32 0, i32* %j, align 4, !dbg !109        ; [debug line = 86:17]
+  br label %113, !dbg !109                        ; [debug line = 86:17]
 
-; <label>:115                                     ; preds = %114
-  store i32 0, i32* %j, align 4, !dbg !114        ; [debug line = 89:17]
-  br label %116, !dbg !114                        ; [debug line = 89:17]
+; <label>:113                                     ; preds = %125, %112
+  %114 = load i32* %j, align 4, !dbg !109         ; [#uses=1 type=i32] [debug line = 86:17]
+  %115 = icmp slt i32 %114, 32, !dbg !109         ; [#uses=1 type=i1] [debug line = 86:17]
+  br i1 %115, label %116, label %128, !dbg !109   ; [debug line = 86:17]
 
-; <label>:116                                     ; preds = %155, %115
-  %117 = load i32* %j, align 4, !dbg !114         ; [#uses=1 type=i32] [debug line = 89:17]
-  %118 = icmp slt i32 %117, 256, !dbg !114        ; [#uses=1 type=i1] [debug line = 89:17]
-  br i1 %118, label %119, label %158, !dbg !114   ; [debug line = 89:17]
+; <label>:116                                     ; preds = %113
+  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([6 x i8]* @.str8, i32 0, i32 0)) nounwind, !dbg !111 ; [debug line = 86:39]
+  call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([6 x i8]* @.str8, i32 0, i32 0)) nounwind, !dbg !111 ; [debug line = 86:39]
+  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !113 ; [debug line = 87:1]
+  call void (...)* @_ssdm_Unroll(i32 0, i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !114 ; [debug line = 88:1]
+  %117 = load i32* %j, align 4, !dbg !115         ; [#uses=1 type=i32] [debug line = 89:2]
+  %118 = sext i32 %117 to i64, !dbg !115          ; [#uses=1 type=i64] [debug line = 89:2]
+  %119 = getelementptr inbounds [32 x float]* %Vect_Dn, i32 0, i64 %118, !dbg !115 ; [#uses=1 type=float*] [debug line = 89:2]
+  %120 = load float* %119, align 4, !dbg !115     ; [#uses=1 type=float] [debug line = 89:2]
+  %121 = load i32* %j, align 4, !dbg !115         ; [#uses=1 type=i32] [debug line = 89:2]
+  %122 = mul nsw i32 %121, 8, !dbg !115           ; [#uses=1 type=i32] [debug line = 89:2]
+  %123 = sext i32 %122 to i64, !dbg !115          ; [#uses=1 type=i64] [debug line = 89:2]
+  %124 = getelementptr inbounds [256 x float]* %Vect_Up, i32 0, i64 %123, !dbg !115 ; [#uses=1 type=float*] [debug line = 89:2]
+  store float %120, float* %124, align 4, !dbg !115 ; [debug line = 89:2]
+  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([6 x i8]* @.str8, i32 0, i32 0)) nounwind, !dbg !116 ; [debug line = 90:5]
+  br label %125, !dbg !116                        ; [debug line = 90:5]
 
-; <label>:119                                     ; preds = %116
-  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([6 x i8]* @.str9, i32 0, i32 0)) nounwind, !dbg !116 ; [debug line = 89:40]
-  call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([6 x i8]* @.str9, i32 0, i32 0)) nounwind, !dbg !116 ; [debug line = 89:40]
-  store i32 0, i32* %k, align 4, !dbg !118        ; [debug line = 90:13]
-  br label %120, !dbg !118                        ; [debug line = 90:13]
+; <label>:125                                     ; preds = %116
+  %126 = load i32* %j, align 4, !dbg !117         ; [#uses=1 type=i32] [debug line = 86:32]
+  %127 = add nsw i32 %126, 1, !dbg !117           ; [#uses=1 type=i32] [debug line = 86:32]
+  store i32 %127, i32* %j, align 4, !dbg !117     ; [debug line = 86:32]
+  br label %113, !dbg !117                        ; [debug line = 86:32]
 
-; <label>:120                                     ; preds = %151, %119
-  %121 = load i32* %k, align 4, !dbg !118         ; [#uses=1 type=i32] [debug line = 90:13]
-  %122 = icmp slt i32 %121, 32, !dbg !118         ; [#uses=1 type=i1] [debug line = 90:13]
-  br i1 %122, label %123, label %128, !dbg !118   ; [debug line = 90:13]
+; <label>:128                                     ; preds = %113
+  store i32 0, i32* %j, align 4, !dbg !118        ; [debug line = 93:11]
+  br label %129, !dbg !118                        ; [debug line = 93:11]
 
-; <label>:123                                     ; preds = %120
-  %124 = load i32* %j, align 4, !dbg !118         ; [#uses=1 type=i32] [debug line = 90:13]
-  %125 = load i32* %k, align 4, !dbg !118         ; [#uses=1 type=i32] [debug line = 90:13]
-  %126 = sub nsw i32 %124, %125, !dbg !118        ; [#uses=1 type=i32] [debug line = 90:13]
-  %127 = icmp sge i32 %126, 0, !dbg !118          ; [#uses=1 type=i1] [debug line = 90:13]
-  br label %128
+; <label>:129                                     ; preds = %136, %128
+  %130 = load i32* %j, align 4, !dbg !118         ; [#uses=1 type=i32] [debug line = 93:11]
+  %131 = icmp slt i32 %130, 256, !dbg !118        ; [#uses=1 type=i1] [debug line = 93:11]
+  br i1 %131, label %132, label %139, !dbg !118   ; [debug line = 93:11]
 
-; <label>:128                                     ; preds = %123, %120
-  %129 = phi i1 [ false, %120 ], [ %127, %123 ]   ; [#uses=1 type=i1]
-  br i1 %129, label %130, label %154
+; <label>:132                                     ; preds = %129
+  %133 = load i32* %j, align 4, !dbg !120         ; [#uses=1 type=i32] [debug line = 94:7]
+  %134 = sext i32 %133 to i64, !dbg !120          ; [#uses=1 type=i64] [debug line = 94:7]
+  %135 = getelementptr inbounds [256 x float]* %Vect_F, i32 0, i64 %134, !dbg !120 ; [#uses=1 type=float*] [debug line = 94:7]
+  store float 0.000000e+00, float* %135, align 4, !dbg !120 ; [debug line = 94:7]
+  br label %136, !dbg !120                        ; [debug line = 94:7]
 
-; <label>:130                                     ; preds = %128
-  call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([12 x i8]* @.str10, i32 0, i32 0)) nounwind, !dbg !120 ; [debug line = 92:2]
-  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !122 ; [debug line = 91:1]
-  call void (...)* @_ssdm_Unroll(i32 0, i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !123 ; [debug line = 92:1]
-  %131 = load i32* %k, align 4, !dbg !124         ; [#uses=1 type=i32] [debug line = 93:2]
-  %132 = sext i32 %131 to i64, !dbg !124          ; [#uses=1 type=i64] [debug line = 93:2]
-  %133 = load i32* %i, align 4, !dbg !124         ; [#uses=1 type=i32] [debug line = 93:2]
-  %134 = sext i32 %133 to i64, !dbg !124          ; [#uses=1 type=i64] [debug line = 93:2]
-  %135 = load [32 x float]** %4, align 8, !dbg !124 ; [#uses=1 type=[32 x float]*] [debug line = 93:2]
-  %136 = getelementptr inbounds [32 x float]* %135, i64 %134, !dbg !124 ; [#uses=1 type=[32 x float]*] [debug line = 93:2]
-  %137 = getelementptr inbounds [32 x float]* %136, i32 0, i64 %132, !dbg !124 ; [#uses=1 type=float*] [debug line = 93:2]
-  %138 = load float* %137, align 4, !dbg !124     ; [#uses=1 type=float] [debug line = 93:2]
-  %139 = load i32* %j, align 4, !dbg !124         ; [#uses=1 type=i32] [debug line = 93:2]
-  %140 = load i32* %k, align 4, !dbg !124         ; [#uses=1 type=i32] [debug line = 93:2]
-  %141 = sub nsw i32 %139, %140, !dbg !124        ; [#uses=1 type=i32] [debug line = 93:2]
-  %142 = sext i32 %141 to i64, !dbg !124          ; [#uses=1 type=i64] [debug line = 93:2]
-  %143 = getelementptr inbounds [256 x float]* %Vect_Up, i32 0, i64 %142, !dbg !124 ; [#uses=1 type=float*] [debug line = 93:2]
-  %144 = load float* %143, align 4, !dbg !124     ; [#uses=1 type=float] [debug line = 93:2]
-  %145 = fmul float %138, %144, !dbg !124         ; [#uses=1 type=float] [debug line = 93:2]
-  %146 = load i32* %j, align 4, !dbg !124         ; [#uses=1 type=i32] [debug line = 93:2]
-  %147 = sext i32 %146 to i64, !dbg !124          ; [#uses=1 type=i64] [debug line = 93:2]
-  %148 = getelementptr inbounds [256 x float]* %Vect_F, i32 0, i64 %147, !dbg !124 ; [#uses=2 type=float*] [debug line = 93:2]
-  %149 = load float* %148, align 4, !dbg !124     ; [#uses=1 type=float] [debug line = 93:2]
-  %150 = fadd float %149, %145, !dbg !124         ; [#uses=1 type=float] [debug line = 93:2]
-  store float %150, float* %148, align 4, !dbg !124 ; [debug line = 93:2]
-  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([12 x i8]* @.str10, i32 0, i32 0)) nounwind, !dbg !125 ; [debug line = 93:46]
-  br label %151, !dbg !125                        ; [debug line = 93:46]
+; <label>:136                                     ; preds = %132
+  %137 = load i32* %j, align 4, !dbg !121         ; [#uses=1 type=i32] [debug line = 93:27]
+  %138 = add nsw i32 %137, 1, !dbg !121           ; [#uses=1 type=i32] [debug line = 93:27]
+  store i32 %138, i32* %j, align 4, !dbg !121     ; [debug line = 93:27]
+  br label %129, !dbg !121                        ; [debug line = 93:27]
 
-; <label>:151                                     ; preds = %130
-  %152 = load i32* %k, align 4, !dbg !126         ; [#uses=1 type=i32] [debug line = 90:58]
-  %153 = add nsw i32 %152, 1, !dbg !126           ; [#uses=1 type=i32] [debug line = 90:58]
-  store i32 %153, i32* %k, align 4, !dbg !126     ; [debug line = 90:58]
-  br label %120, !dbg !126                        ; [debug line = 90:58]
+; <label>:139                                     ; preds = %129
+  br label %140, !dbg !122                        ; [debug line = 94:21]
 
-; <label>:154                                     ; preds = %128
-  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([6 x i8]* @.str9, i32 0, i32 0)) nounwind, !dbg !127 ; [debug line = 94:5]
-  br label %155, !dbg !127                        ; [debug line = 94:5]
+; <label>:140                                     ; preds = %139
+  store i32 0, i32* %j, align 4, !dbg !123        ; [debug line = 96:17]
+  br label %141, !dbg !123                        ; [debug line = 96:17]
 
-; <label>:155                                     ; preds = %154
-  %156 = load i32* %j, align 4, !dbg !128         ; [#uses=1 type=i32] [debug line = 89:33]
-  %157 = add nsw i32 %156, 1, !dbg !128           ; [#uses=1 type=i32] [debug line = 89:33]
-  store i32 %157, i32* %j, align 4, !dbg !128     ; [debug line = 89:33]
-  br label %116, !dbg !128                        ; [debug line = 89:33]
+; <label>:141                                     ; preds = %180, %140
+  %142 = load i32* %j, align 4, !dbg !123         ; [#uses=1 type=i32] [debug line = 96:17]
+  %143 = icmp slt i32 %142, 256, !dbg !123        ; [#uses=1 type=i1] [debug line = 96:17]
+  br i1 %143, label %144, label %183, !dbg !123   ; [debug line = 96:17]
 
-; <label>:158                                     ; preds = %116
-  br label %159, !dbg !129                        ; [debug line = 94:5]
+; <label>:144                                     ; preds = %141
+  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([6 x i8]* @.str9, i32 0, i32 0)) nounwind, !dbg !125 ; [debug line = 96:40]
+  call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([6 x i8]* @.str9, i32 0, i32 0)) nounwind, !dbg !125 ; [debug line = 96:40]
+  store i32 0, i32* %k, align 4, !dbg !127        ; [debug line = 97:13]
+  br label %145, !dbg !127                        ; [debug line = 97:13]
 
-; <label>:159                                     ; preds = %158
-  store i32 0, i32* %j, align 4, !dbg !130        ; [debug line = 98:17]
-  br label %160, !dbg !130                        ; [debug line = 98:17]
+; <label>:145                                     ; preds = %176, %144
+  %146 = load i32* %k, align 4, !dbg !127         ; [#uses=1 type=i32] [debug line = 97:13]
+  %147 = icmp slt i32 %146, 32, !dbg !127         ; [#uses=1 type=i1] [debug line = 97:13]
+  br i1 %147, label %148, label %153, !dbg !127   ; [debug line = 97:13]
 
-; <label>:160                                     ; preds = %174, %159
-  %161 = load i32* %j, align 4, !dbg !130         ; [#uses=1 type=i32] [debug line = 98:17]
-  %162 = icmp slt i32 %161, 256, !dbg !130        ; [#uses=1 type=i1] [debug line = 98:17]
-  br i1 %162, label %163, label %177, !dbg !130   ; [debug line = 98:17]
+; <label>:148                                     ; preds = %145
+  %149 = load i32* %j, align 4, !dbg !127         ; [#uses=1 type=i32] [debug line = 97:13]
+  %150 = load i32* %k, align 4, !dbg !127         ; [#uses=1 type=i32] [debug line = 97:13]
+  %151 = sub nsw i32 %149, %150, !dbg !127        ; [#uses=1 type=i32] [debug line = 97:13]
+  %152 = icmp sge i32 %151, 0, !dbg !127          ; [#uses=1 type=i1] [debug line = 97:13]
+  br label %153
 
-; <label>:163                                     ; preds = %160
-  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([6 x i8]* @.str11, i32 0, i32 0)) nounwind, !dbg !132 ; [debug line = 98:40]
-  call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([6 x i8]* @.str11, i32 0, i32 0)) nounwind, !dbg !132 ; [debug line = 98:40]
-  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !134 ; [debug line = 99:1]
-  %164 = load i32* %j, align 4, !dbg !135         ; [#uses=1 type=i32] [debug line = 100:2]
-  %165 = sext i32 %164 to i64, !dbg !135          ; [#uses=1 type=i64] [debug line = 100:2]
-  %166 = getelementptr inbounds [256 x float]* %Vect_F, i32 0, i64 %165, !dbg !135 ; [#uses=1 type=float*] [debug line = 100:2]
-  %167 = load float* %166, align 4, !dbg !135     ; [#uses=1 type=float] [debug line = 100:2]
-  %168 = load i32* %j, align 4, !dbg !135         ; [#uses=1 type=i32] [debug line = 100:2]
-  %169 = sext i32 %168 to i64, !dbg !135          ; [#uses=1 type=i64] [debug line = 100:2]
-  %170 = load float** %2, align 8, !dbg !135      ; [#uses=1 type=float*] [debug line = 100:2]
-  %171 = getelementptr inbounds float* %170, i64 %169, !dbg !135 ; [#uses=2 type=float*] [debug line = 100:2]
-  %172 = load float* %171, align 4, !dbg !135     ; [#uses=1 type=float] [debug line = 100:2]
-  %173 = fadd float %172, %167, !dbg !135         ; [#uses=1 type=float] [debug line = 100:2]
-  store float %173, float* %171, align 4, !dbg !135 ; [debug line = 100:2]
-  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([6 x i8]* @.str11, i32 0, i32 0)) nounwind, !dbg !136 ; [debug line = 101:5]
-  br label %174, !dbg !136                        ; [debug line = 101:5]
+; <label>:153                                     ; preds = %148, %145
+  %154 = phi i1 [ false, %145 ], [ %152, %148 ]   ; [#uses=1 type=i1]
+  br i1 %154, label %155, label %179
 
-; <label>:174                                     ; preds = %163
-  %175 = load i32* %j, align 4, !dbg !137         ; [#uses=1 type=i32] [debug line = 98:33]
-  %176 = add nsw i32 %175, 1, !dbg !137           ; [#uses=1 type=i32] [debug line = 98:33]
-  store i32 %176, i32* %j, align 4, !dbg !137     ; [debug line = 98:33]
-  br label %160, !dbg !137                        ; [debug line = 98:33]
+; <label>:155                                     ; preds = %153
+  call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([12 x i8]* @.str10, i32 0, i32 0)) nounwind, !dbg !129 ; [debug line = 99:2]
+  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !131 ; [debug line = 98:1]
+  call void (...)* @_ssdm_Unroll(i32 0, i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !132 ; [debug line = 99:1]
+  %156 = load i32* %k, align 4, !dbg !133         ; [#uses=1 type=i32] [debug line = 100:2]
+  %157 = sext i32 %156 to i64, !dbg !133          ; [#uses=1 type=i64] [debug line = 100:2]
+  %158 = load i32* %i, align 4, !dbg !133         ; [#uses=1 type=i32] [debug line = 100:2]
+  %159 = sext i32 %158 to i64, !dbg !133          ; [#uses=1 type=i64] [debug line = 100:2]
+  %160 = load [32 x float]** %4, align 8, !dbg !133 ; [#uses=1 type=[32 x float]*] [debug line = 100:2]
+  %161 = getelementptr inbounds [32 x float]* %160, i64 %159, !dbg !133 ; [#uses=1 type=[32 x float]*] [debug line = 100:2]
+  %162 = getelementptr inbounds [32 x float]* %161, i32 0, i64 %157, !dbg !133 ; [#uses=1 type=float*] [debug line = 100:2]
+  %163 = load float* %162, align 4, !dbg !133     ; [#uses=1 type=float] [debug line = 100:2]
+  %164 = load i32* %j, align 4, !dbg !133         ; [#uses=1 type=i32] [debug line = 100:2]
+  %165 = load i32* %k, align 4, !dbg !133         ; [#uses=1 type=i32] [debug line = 100:2]
+  %166 = sub nsw i32 %164, %165, !dbg !133        ; [#uses=1 type=i32] [debug line = 100:2]
+  %167 = sext i32 %166 to i64, !dbg !133          ; [#uses=1 type=i64] [debug line = 100:2]
+  %168 = getelementptr inbounds [256 x float]* %Vect_Up, i32 0, i64 %167, !dbg !133 ; [#uses=1 type=float*] [debug line = 100:2]
+  %169 = load float* %168, align 4, !dbg !133     ; [#uses=1 type=float] [debug line = 100:2]
+  %170 = fmul float %163, %169, !dbg !133         ; [#uses=1 type=float] [debug line = 100:2]
+  %171 = load i32* %j, align 4, !dbg !133         ; [#uses=1 type=i32] [debug line = 100:2]
+  %172 = sext i32 %171 to i64, !dbg !133          ; [#uses=1 type=i64] [debug line = 100:2]
+  %173 = getelementptr inbounds [256 x float]* %Vect_F, i32 0, i64 %172, !dbg !133 ; [#uses=2 type=float*] [debug line = 100:2]
+  %174 = load float* %173, align 4, !dbg !133     ; [#uses=1 type=float] [debug line = 100:2]
+  %175 = fadd float %174, %170, !dbg !133         ; [#uses=1 type=float] [debug line = 100:2]
+  store float %175, float* %173, align 4, !dbg !133 ; [debug line = 100:2]
+  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([12 x i8]* @.str10, i32 0, i32 0)) nounwind, !dbg !134 ; [debug line = 100:46]
+  br label %176, !dbg !134                        ; [debug line = 100:46]
 
-; <label>:177                                     ; preds = %160
-  br label %178, !dbg !138                        ; [debug line = 102:3]
+; <label>:176                                     ; preds = %155
+  %177 = load i32* %k, align 4, !dbg !135         ; [#uses=1 type=i32] [debug line = 97:58]
+  %178 = add nsw i32 %177, 1, !dbg !135           ; [#uses=1 type=i32] [debug line = 97:58]
+  store i32 %178, i32* %k, align 4, !dbg !135     ; [debug line = 97:58]
+  br label %145, !dbg !135                        ; [debug line = 97:58]
 
-; <label>:178                                     ; preds = %177
-  %179 = load i32* %i, align 4, !dbg !139         ; [#uses=1 type=i32] [debug line = 59:23]
-  %180 = add nsw i32 %179, 1, !dbg !139           ; [#uses=1 type=i32] [debug line = 59:23]
-  store i32 %180, i32* %i, align 4, !dbg !139     ; [debug line = 59:23]
-  br label %29, !dbg !139                         ; [debug line = 59:23]
+; <label>:179                                     ; preds = %153
+  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([6 x i8]* @.str9, i32 0, i32 0)) nounwind, !dbg !136 ; [debug line = 101:5]
+  br label %180, !dbg !136                        ; [debug line = 101:5]
 
-; <label>:181                                     ; preds = %29
-  ret void, !dbg !140                             ; [debug line = 103:1]
+; <label>:180                                     ; preds = %179
+  %181 = load i32* %j, align 4, !dbg !137         ; [#uses=1 type=i32] [debug line = 96:33]
+  %182 = add nsw i32 %181, 1, !dbg !137           ; [#uses=1 type=i32] [debug line = 96:33]
+  store i32 %182, i32* %j, align 4, !dbg !137     ; [debug line = 96:33]
+  br label %141, !dbg !137                        ; [debug line = 96:33]
+
+; <label>:183                                     ; preds = %141
+  br label %184, !dbg !138                        ; [debug line = 101:5]
+
+; <label>:184                                     ; preds = %183
+  store i32 0, i32* %j, align 4, !dbg !139        ; [debug line = 105:17]
+  br label %185, !dbg !139                        ; [debug line = 105:17]
+
+; <label>:185                                     ; preds = %199, %184
+  %186 = load i32* %j, align 4, !dbg !139         ; [#uses=1 type=i32] [debug line = 105:17]
+  %187 = icmp slt i32 %186, 256, !dbg !139        ; [#uses=1 type=i1] [debug line = 105:17]
+  br i1 %187, label %188, label %202, !dbg !139   ; [debug line = 105:17]
+
+; <label>:188                                     ; preds = %185
+  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([6 x i8]* @.str11, i32 0, i32 0)) nounwind, !dbg !141 ; [debug line = 105:40]
+  call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([6 x i8]* @.str11, i32 0, i32 0)) nounwind, !dbg !141 ; [debug line = 105:40]
+  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i32 0, i32 0)) nounwind, !dbg !143 ; [debug line = 106:1]
+  %189 = load i32* %j, align 4, !dbg !144         ; [#uses=1 type=i32] [debug line = 107:2]
+  %190 = sext i32 %189 to i64, !dbg !144          ; [#uses=1 type=i64] [debug line = 107:2]
+  %191 = getelementptr inbounds [256 x float]* %Vect_F, i32 0, i64 %190, !dbg !144 ; [#uses=1 type=float*] [debug line = 107:2]
+  %192 = load float* %191, align 4, !dbg !144     ; [#uses=1 type=float] [debug line = 107:2]
+  %193 = load i32* %j, align 4, !dbg !144         ; [#uses=1 type=i32] [debug line = 107:2]
+  %194 = sext i32 %193 to i64, !dbg !144          ; [#uses=1 type=i64] [debug line = 107:2]
+  %195 = load float** %2, align 8, !dbg !144      ; [#uses=1 type=float*] [debug line = 107:2]
+  %196 = getelementptr inbounds float* %195, i64 %194, !dbg !144 ; [#uses=2 type=float*] [debug line = 107:2]
+  %197 = load float* %196, align 4, !dbg !144     ; [#uses=1 type=float] [debug line = 107:2]
+  %198 = fadd float %197, %192, !dbg !144         ; [#uses=1 type=float] [debug line = 107:2]
+  store float %198, float* %196, align 4, !dbg !144 ; [debug line = 107:2]
+  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([6 x i8]* @.str11, i32 0, i32 0)) nounwind, !dbg !145 ; [debug line = 108:5]
+  br label %199, !dbg !145                        ; [debug line = 108:5]
+
+; <label>:199                                     ; preds = %188
+  %200 = load i32* %j, align 4, !dbg !146         ; [#uses=1 type=i32] [debug line = 105:33]
+  %201 = add nsw i32 %200, 1, !dbg !146           ; [#uses=1 type=i32] [debug line = 105:33]
+  store i32 %201, i32* %j, align 4, !dbg !146     ; [debug line = 105:33]
+  br label %185, !dbg !146                        ; [debug line = 105:33]
+
+; <label>:202                                     ; preds = %185
+  br label %203, !dbg !147                        ; [debug line = 109:3]
+
+; <label>:203                                     ; preds = %202
+  %204 = load i32* %i, align 4, !dbg !148         ; [#uses=1 type=i32] [debug line = 59:23]
+  %205 = add nsw i32 %204, 1, !dbg !148           ; [#uses=1 type=i32] [debug line = 59:23]
+  store i32 %205, i32* %i, align 4, !dbg !148     ; [debug line = 59:23]
+  br label %29, !dbg !148                         ; [debug line = 59:23]
+
+; <label>:206                                     ; preds = %29
+  ret void, !dbg !149                             ; [debug line = 110:1]
 }
 
 ; [#uses=11]
@@ -500,62 +548,71 @@ declare void @_ssdm_Unroll(...) nounwind
 !79 = metadata !{i32 786443, metadata !64, i32 66, i32 11, metadata !6, i32 5} ; [ DW_TAG_lexical_block ]
 !80 = metadata !{i32 66, i32 40, metadata !81, null}
 !81 = metadata !{i32 786443, metadata !79, i32 66, i32 39, metadata !6, i32 6} ; [ DW_TAG_lexical_block ]
-!82 = metadata !{i32 67, i32 13, metadata !83, null}
-!83 = metadata !{i32 786443, metadata !81, i32 67, i32 7, metadata !6, i32 7} ; [ DW_TAG_lexical_block ]
-!84 = metadata !{i32 69, i32 2, metadata !85, null}
-!85 = metadata !{i32 786443, metadata !83, i32 69, i32 1, metadata !6, i32 8} ; [ DW_TAG_lexical_block ]
-!86 = metadata !{i32 68, i32 1, metadata !85, null}
-!87 = metadata !{i32 69, i32 1, metadata !85, null}
-!88 = metadata !{i32 70, i32 2, metadata !85, null}
-!89 = metadata !{i32 70, i32 40, metadata !85, null}
-!90 = metadata !{i32 67, i32 58, metadata !83, null}
-!91 = metadata !{i32 71, i32 5, metadata !81, null}
-!92 = metadata !{i32 66, i32 33, metadata !79, null}
-!93 = metadata !{i32 71, i32 5, metadata !79, null}
-!94 = metadata !{i32 74, i32 17, metadata !95, null}
-!95 = metadata !{i32 786443, metadata !64, i32 74, i32 11, metadata !6, i32 9} ; [ DW_TAG_lexical_block ]
-!96 = metadata !{i32 74, i32 39, metadata !97, null}
-!97 = metadata !{i32 786443, metadata !95, i32 74, i32 38, metadata !6, i32 10} ; [ DW_TAG_lexical_block ]
-!98 = metadata !{i32 75, i32 1, metadata !97, null}
-!99 = metadata !{i32 76, i32 1, metadata !97, null}
-!100 = metadata !{i32 77, i32 2, metadata !97, null}
-!101 = metadata !{i32 78, i32 5, metadata !97, null}
-!102 = metadata !{i32 74, i32 32, metadata !95, null}
-!103 = metadata !{i32 78, i32 5, metadata !95, null}
-!104 = metadata !{i32 82, i32 17, metadata !105, null}
-!105 = metadata !{i32 786443, metadata !64, i32 82, i32 11, metadata !6, i32 11} ; [ DW_TAG_lexical_block ]
-!106 = metadata !{i32 82, i32 39, metadata !107, null}
-!107 = metadata !{i32 786443, metadata !105, i32 82, i32 38, metadata !6, i32 12} ; [ DW_TAG_lexical_block ]
-!108 = metadata !{i32 83, i32 1, metadata !107, null}
-!109 = metadata !{i32 84, i32 1, metadata !107, null}
-!110 = metadata !{i32 85, i32 2, metadata !107, null}
-!111 = metadata !{i32 86, i32 5, metadata !107, null}
-!112 = metadata !{i32 82, i32 32, metadata !105, null}
-!113 = metadata !{i32 86, i32 5, metadata !105, null}
-!114 = metadata !{i32 89, i32 17, metadata !115, null}
-!115 = metadata !{i32 786443, metadata !64, i32 89, i32 11, metadata !6, i32 13} ; [ DW_TAG_lexical_block ]
-!116 = metadata !{i32 89, i32 40, metadata !117, null}
-!117 = metadata !{i32 786443, metadata !115, i32 89, i32 39, metadata !6, i32 14} ; [ DW_TAG_lexical_block ]
-!118 = metadata !{i32 90, i32 13, metadata !119, null}
-!119 = metadata !{i32 786443, metadata !117, i32 90, i32 7, metadata !6, i32 15} ; [ DW_TAG_lexical_block ]
-!120 = metadata !{i32 92, i32 2, metadata !121, null}
-!121 = metadata !{i32 786443, metadata !119, i32 92, i32 1, metadata !6, i32 16} ; [ DW_TAG_lexical_block ]
-!122 = metadata !{i32 91, i32 1, metadata !121, null}
-!123 = metadata !{i32 92, i32 1, metadata !121, null}
-!124 = metadata !{i32 93, i32 2, metadata !121, null}
-!125 = metadata !{i32 93, i32 46, metadata !121, null}
-!126 = metadata !{i32 90, i32 58, metadata !119, null}
-!127 = metadata !{i32 94, i32 5, metadata !117, null}
-!128 = metadata !{i32 89, i32 33, metadata !115, null}
-!129 = metadata !{i32 94, i32 5, metadata !115, null}
-!130 = metadata !{i32 98, i32 17, metadata !131, null}
-!131 = metadata !{i32 786443, metadata !64, i32 98, i32 11, metadata !6, i32 17} ; [ DW_TAG_lexical_block ]
-!132 = metadata !{i32 98, i32 40, metadata !133, null}
-!133 = metadata !{i32 786443, metadata !131, i32 98, i32 39, metadata !6, i32 18} ; [ DW_TAG_lexical_block ]
-!134 = metadata !{i32 99, i32 1, metadata !133, null}
-!135 = metadata !{i32 100, i32 2, metadata !133, null}
-!136 = metadata !{i32 101, i32 5, metadata !133, null}
-!137 = metadata !{i32 98, i32 33, metadata !131, null}
-!138 = metadata !{i32 102, i32 3, metadata !64, null}
-!139 = metadata !{i32 59, i32 23, metadata !62, null}
-!140 = metadata !{i32 103, i32 1, metadata !33, null}
+!82 = metadata !{i32 67, i32 6, metadata !81, null}
+!83 = metadata !{i32 68, i32 13, metadata !84, null}
+!84 = metadata !{i32 786443, metadata !81, i32 68, i32 7, metadata !6, i32 7} ; [ DW_TAG_lexical_block ]
+!85 = metadata !{i32 70, i32 2, metadata !86, null}
+!86 = metadata !{i32 786443, metadata !84, i32 70, i32 1, metadata !6, i32 8} ; [ DW_TAG_lexical_block ]
+!87 = metadata !{i32 69, i32 1, metadata !86, null}
+!88 = metadata !{i32 70, i32 1, metadata !86, null}
+!89 = metadata !{i32 71, i32 2, metadata !86, null}
+!90 = metadata !{i32 71, i32 40, metadata !86, null}
+!91 = metadata !{i32 68, i32 58, metadata !84, null}
+!92 = metadata !{i32 72, i32 5, metadata !81, null}
+!93 = metadata !{i32 66, i32 33, metadata !79, null}
+!94 = metadata !{i32 72, i32 5, metadata !79, null}
+!95 = metadata !{i32 75, i32 17, metadata !96, null}
+!96 = metadata !{i32 786443, metadata !64, i32 75, i32 11, metadata !6, i32 9} ; [ DW_TAG_lexical_block ]
+!97 = metadata !{i32 75, i32 39, metadata !98, null}
+!98 = metadata !{i32 786443, metadata !96, i32 75, i32 38, metadata !6, i32 10} ; [ DW_TAG_lexical_block ]
+!99 = metadata !{i32 76, i32 1, metadata !98, null}
+!100 = metadata !{i32 77, i32 1, metadata !98, null}
+!101 = metadata !{i32 78, i32 2, metadata !98, null}
+!102 = metadata !{i32 79, i32 5, metadata !98, null}
+!103 = metadata !{i32 75, i32 32, metadata !96, null}
+!104 = metadata !{i32 83, i32 11, metadata !105, null}
+!105 = metadata !{i32 786443, metadata !64, i32 83, i32 5, metadata !6, i32 11} ; [ DW_TAG_lexical_block ]
+!106 = metadata !{i32 84, i32 7, metadata !105, null}
+!107 = metadata !{i32 83, i32 27, metadata !105, null}
+!108 = metadata !{i32 84, i32 22, metadata !105, null}
+!109 = metadata !{i32 86, i32 17, metadata !110, null}
+!110 = metadata !{i32 786443, metadata !64, i32 86, i32 11, metadata !6, i32 12} ; [ DW_TAG_lexical_block ]
+!111 = metadata !{i32 86, i32 39, metadata !112, null}
+!112 = metadata !{i32 786443, metadata !110, i32 86, i32 38, metadata !6, i32 13} ; [ DW_TAG_lexical_block ]
+!113 = metadata !{i32 87, i32 1, metadata !112, null}
+!114 = metadata !{i32 88, i32 1, metadata !112, null}
+!115 = metadata !{i32 89, i32 2, metadata !112, null}
+!116 = metadata !{i32 90, i32 5, metadata !112, null}
+!117 = metadata !{i32 86, i32 32, metadata !110, null}
+!118 = metadata !{i32 93, i32 11, metadata !119, null}
+!119 = metadata !{i32 786443, metadata !64, i32 93, i32 5, metadata !6, i32 14} ; [ DW_TAG_lexical_block ]
+!120 = metadata !{i32 94, i32 7, metadata !119, null}
+!121 = metadata !{i32 93, i32 27, metadata !119, null}
+!122 = metadata !{i32 94, i32 21, metadata !119, null}
+!123 = metadata !{i32 96, i32 17, metadata !124, null}
+!124 = metadata !{i32 786443, metadata !64, i32 96, i32 11, metadata !6, i32 15} ; [ DW_TAG_lexical_block ]
+!125 = metadata !{i32 96, i32 40, metadata !126, null}
+!126 = metadata !{i32 786443, metadata !124, i32 96, i32 39, metadata !6, i32 16} ; [ DW_TAG_lexical_block ]
+!127 = metadata !{i32 97, i32 13, metadata !128, null}
+!128 = metadata !{i32 786443, metadata !126, i32 97, i32 7, metadata !6, i32 17} ; [ DW_TAG_lexical_block ]
+!129 = metadata !{i32 99, i32 2, metadata !130, null}
+!130 = metadata !{i32 786443, metadata !128, i32 99, i32 1, metadata !6, i32 18} ; [ DW_TAG_lexical_block ]
+!131 = metadata !{i32 98, i32 1, metadata !130, null}
+!132 = metadata !{i32 99, i32 1, metadata !130, null}
+!133 = metadata !{i32 100, i32 2, metadata !130, null}
+!134 = metadata !{i32 100, i32 46, metadata !130, null}
+!135 = metadata !{i32 97, i32 58, metadata !128, null}
+!136 = metadata !{i32 101, i32 5, metadata !126, null}
+!137 = metadata !{i32 96, i32 33, metadata !124, null}
+!138 = metadata !{i32 101, i32 5, metadata !124, null}
+!139 = metadata !{i32 105, i32 17, metadata !140, null}
+!140 = metadata !{i32 786443, metadata !64, i32 105, i32 11, metadata !6, i32 19} ; [ DW_TAG_lexical_block ]
+!141 = metadata !{i32 105, i32 40, metadata !142, null}
+!142 = metadata !{i32 786443, metadata !140, i32 105, i32 39, metadata !6, i32 20} ; [ DW_TAG_lexical_block ]
+!143 = metadata !{i32 106, i32 1, metadata !142, null}
+!144 = metadata !{i32 107, i32 2, metadata !142, null}
+!145 = metadata !{i32 108, i32 5, metadata !142, null}
+!146 = metadata !{i32 105, i32 33, metadata !140, null}
+!147 = metadata !{i32 109, i32 3, metadata !64, null}
+!148 = metadata !{i32 59, i32 23, metadata !62, null}
+!149 = metadata !{i32 110, i32 1, metadata !33, null}

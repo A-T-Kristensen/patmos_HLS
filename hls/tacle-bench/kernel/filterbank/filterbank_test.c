@@ -86,11 +86,11 @@ void filterbank_core_test( float r[ 256 ],
 
 int _Pragma( "entrypoint" ) filterbank_main( void )
 {
-  float r[ 256 ];
-  float y_sw[ 256 ];
-  float y_hw[ 256 ];
-  float H[ 8 ][ 32 ];
-  float F[ 8 ][ 32 ];
+  float r[ 256 ] = {0};
+  float y_sw[ 256 ] = {0};
+  float y_hw[ 256 ] = {0};
+  float H[ 8 ][ 32 ] = {0};
+  float F[ 8 ][ 32 ] = {0};
   int err_cnt = 0;
 
   int i, j;

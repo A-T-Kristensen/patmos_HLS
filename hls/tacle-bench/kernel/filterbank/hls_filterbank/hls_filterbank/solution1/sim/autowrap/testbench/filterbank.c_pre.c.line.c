@@ -55,6 +55,7 @@ void filterbank_core_hwa( float r[ 256 ],
 #pragma empty_line
 #pragma empty_line
     loop1:for ( j = 0; j < 256; j++ ) {
+     Vect_H[ j ] = 0;
       for ( k = 0; ( ( k < 32 ) && ( ( j - k ) >= 0 ) ); k++ )
 #pragma HLS PIPELINE
 #pragma HLS UNROLL
@@ -70,12 +71,18 @@ void filterbank_core_hwa( float r[ 256 ],
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
+    for ( j = 0; j < 256; j++ )
+      Vect_Up[ j ] = 0;
+#pragma empty_line
     loop3:for ( j = 0; j < 32; j++ ) {
 #pragma HLS PIPELINE
 #pragma HLS UNROLL
      Vect_Up[ j * 8 ] = Vect_Dn[ j ];
     }
 #pragma empty_line
+#pragma empty_line
+    for ( j = 0; j < 256; j++ )
+      Vect_F[ j ] = 0;
 #pragma empty_line
     loop4:for ( j = 0; j < 256; j++ ) {
       for ( k = 0; ( ( k < 32 ) && ( ( j - k ) >= 0 ) ); k++ )

@@ -477,6 +477,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 
     /* convolving H */
     loop1:for ( j = 0; j < 256; j++ ) {
+     Vect_H[ j ] = 0;
       for ( k = 0; ( ( k < 32 ) && ( ( j - k ) >= 0 ) ); k++ )
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 _ssdm_Unroll(0,0,0, "");
@@ -492,6 +493,9 @@ _ssdm_Unroll(0,0,0, "");
 
     /* Up Sampling */
 
+    for ( j = 0; j < 256; j++ )
+      Vect_Up[ j ] = 0;
+
     loop3:for ( j = 0; j < 32; j++ ) {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 _ssdm_Unroll(0,0,0, "");
@@ -499,6 +503,9 @@ _ssdm_Unroll(0,0,0, "");
     }
 
     /* convolving F */
+    for ( j = 0; j < 256; j++ )
+      Vect_F[ j ] = 0;
+
     loop4:for ( j = 0; j < 256; j++ ) {
       for ( k = 0; ( ( k < 32 ) && ( ( j - k ) >= 0 ) ); k++ )
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");

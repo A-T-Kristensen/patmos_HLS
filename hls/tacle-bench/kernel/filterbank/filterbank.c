@@ -64,6 +64,7 @@ void filterbank_core_hwa( float r[ 256 ],
 
     /* convolving H */
     loop1:for ( j = 0; j < 256; j++ ) {
+    	Vect_H[ j ] = 0;
       for ( k = 0; ( ( k < 32 ) && ( ( j - k ) >= 0 ) ); k++ )
 		#pragma HLS PIPELINE
 		#pragma HLS UNROLL
@@ -79,6 +80,9 @@ void filterbank_core_hwa( float r[ 256 ],
 
     /* Up Sampling */
 
+    for ( j = 0; j < 256; j++ )
+      Vect_Up[ j ] = 0;
+
     loop3:for ( j = 0; j < 32; j++ ) {
 	#pragma HLS PIPELINE
 	#pragma HLS UNROLL
@@ -86,6 +90,9 @@ void filterbank_core_hwa( float r[ 256 ],
     }
 
     /* convolving F */
+    for ( j = 0; j < 256; j++ )
+      Vect_F[ j ] = 0;
+
     loop4:for ( j = 0; j < 256; j++ ) {
       for ( k = 0; ( ( k < 32 ) && ( ( j - k ) >= 0 ) ); k++ )
 		#pragma HLS PIPELINE

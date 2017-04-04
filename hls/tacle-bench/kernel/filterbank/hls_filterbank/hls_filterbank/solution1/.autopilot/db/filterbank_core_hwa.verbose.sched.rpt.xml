@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'filterbank_core_hwa'" level="0">
-<item name = "Date">Mon Apr  3 12:52:28 2017
+<item name = "Date">Tue Apr  4 08:08:15 2017
 </item>
 <item name = "Version">2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)</item>
 <item name = "Project">hls_filterbank</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">60243, 1330003, 60244, 1330004, none</column>
+<column name="">64603, 1334363, 64604, 1334364, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -36,11 +36,13 @@
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
 <column name="- Loop 1">256, 256, 1, 1, 1, 256, yes</column>
-<column name="- Loop 2">59984, 1329744, 7498 ~ 166218, -, -, 8, no</column>
+<column name="- Loop 2">64344, 1334104, 8043 ~ 166763, -, -, 8, no</column>
 <column name=" + memset_Vect_H">255, 255, 1, -, -, 256, no</column>
 <column name=" + memset_Vect_Up">255, 255, 1, -, -, 256, no</column>
 <column name=" + memset_Vect_F">255, 255, 1, -, -, 256, no</column>
 <column name=" + loop1">3072, 82432, 12 ~ 322, -, -, 256, no</column>
+<column name=" + Loop 2.5">256, 256, 1, -, -, 256, no</column>
+<column name=" + Loop 2.6">256, 256, 1, -, -, 256, no</column>
 <column name=" + loop4">3072, 82432, 12 ~ 322, -, -, 256, no</column>
 <column name=" + loop5">517, 517, 8, 2, 1, 256, yes</column>
 </table>
