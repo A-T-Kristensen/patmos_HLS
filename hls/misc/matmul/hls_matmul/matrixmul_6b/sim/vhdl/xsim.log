@@ -2,12 +2,12 @@
 # xsim v2016.4 (64-bit)
 # SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
 # IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-# Start of session at: Tue Apr  4 19:42:58 2017
-# Process ID: 9293
-# Current directory: /home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl
+# Start of session at: Wed Apr  5 09:19:08 2017
+# Process ID: 18744
+# Current directory: /home/andreas/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl
 # Command line: xsim -mode tcl -source {xsim.dir/matrixmul/xsim_script.tcl}
-# Log file: /home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/xsim.log
-# Journal file: /home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/xsim.jou
+# Log file: /home/andreas/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/xsim.log
+# Journal file: /home/andreas/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/xsim.jou
 #-----------------------------------------------------------
 source xsim.dir/matrixmul/xsim_script.tcl
 # xsim {matrixmul} -autoloadwcfg -tclbatch {matrixmul.tcl}
@@ -15,26 +15,10 @@ Vivado Simulator 2016.4
 Time resolution is 1 ps
 source matrixmul.tcl
 ## run all
-Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
-Time: 100010 ps  Iteration: 0  Process: /apatb_matrixmul_top/AESL_inst_matrixmul/matrixmul_fadd_32bkb_U1/matrixmul_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2016.4/continuous/2016_12_14_1733598/data/vhdl/src/unisims/primitive/DSP48E1.vhd
-Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
-Time: 235 ns  Iteration: 14  Process: /apatb_matrixmul_top/AESL_inst_matrixmul/matrixmul_fadd_32bkb_U1/matrixmul_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2016.4/continuous/2016_12_14_1733598/data/vhdl/src/unisims/primitive/DSP48E1.vhd
-Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
-Time: 285 ns  Iteration: 13  Process: /apatb_matrixmul_top/AESL_inst_matrixmul/matrixmul_fadd_32bkb_U1/matrixmul_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2016.4/continuous/2016_12_14_1733598/data/vhdl/src/unisims/primitive/DSP48E1.vhd
-Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
-Time: 335 ns  Iteration: 13  Process: /apatb_matrixmul_top/AESL_inst_matrixmul/matrixmul_fadd_32bkb_U1/matrixmul_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2016.4/continuous/2016_12_14_1733598/data/vhdl/src/unisims/primitive/DSP48E1.vhd
-Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
-Time: 865 ns  Iteration: 13  Process: /apatb_matrixmul_top/AESL_inst_matrixmul/matrixmul_fadd_32bkb_U1/matrixmul_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2016.4/continuous/2016_12_14_1733598/data/vhdl/src/unisims/primitive/DSP48E1.vhd
-Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
-Time: 905 ns  Iteration: 13  Process: /apatb_matrixmul_top/AESL_inst_matrixmul/matrixmul_fadd_32bkb_U1/matrixmul_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2016.4/continuous/2016_12_14_1733598/data/vhdl/src/unisims/primitive/DSP48E1.vhd
-Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
-Time: 945 ns  Iteration: 13  Process: /apatb_matrixmul_top/AESL_inst_matrixmul/matrixmul_fadd_32bkb_U1/matrixmul_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2016.4/continuous/2016_12_14_1733598/data/vhdl/src/unisims/primitive/DSP48E1.vhd
-Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
-Time: 985 ns  Iteration: 13  Process: /apatb_matrixmul_top/AESL_inst_matrixmul/matrixmul_fadd_32bkb_U1/matrixmul_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2016.4/continuous/2016_12_14_1733598/data/vhdl/src/unisims/primitive/DSP48E1.vhd
 Note: simulation done!
-Time: 1065 ns  Iteration: 1  Process: /apatb_matrixmul_top/generate_sim_done_proc  File: /home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/matrixmul.autotb.vhd
+Time: 915 ns  Iteration: 1  Process: /apatb_matrixmul_top/generate_sim_done_proc  File: /home/andreas/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/matrixmul.autotb.vhd
 Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
-Time: 1065 ns  Iteration: 1  Process: /apatb_matrixmul_top/generate_sim_done_proc  File: /home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/matrixmul.autotb.vhd
-$finish called at time : 1065 ns
+Time: 915 ns  Iteration: 1  Process: /apatb_matrixmul_top/generate_sim_done_proc  File: /home/andreas/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/sim/vhdl/matrixmul.autotb.vhd
+$finish called at time : 915 ns
 ## quit
-INFO: [Common 17-206] Exiting xsim at Tue Apr  4 19:43:07 2017...
+INFO: [Common 17-206] Exiting xsim at Wed Apr  5 09:19:18 2017...

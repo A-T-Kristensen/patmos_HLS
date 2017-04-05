@@ -1,5 +1,6 @@
 set C_TypeInfoList {{ 
-"matrixmul" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"a": [[], {"array": [ {"array": [ {"scalar": "int"}, [4]]}, [12]]}] }],[],""]
+"matrixmul" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"a": [[], {"array": [ {"array": ["0", [4]]}, [12]]}] }],[],""], 
+"0": [ "mat_type", {"typedef": [[[], {"scalar": "int"}],""]}]
 }}
 set moduleName matrixmul
 set isCombinational 0

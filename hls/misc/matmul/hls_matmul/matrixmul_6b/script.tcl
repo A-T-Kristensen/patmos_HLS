@@ -5,8 +5,8 @@
 ############################################################
 open_project hls_matmul
 set_top matrixmul
-add_files matrixmul.h
 add_files matrixmul.cpp
+add_files matrixmul.h
 add_files -tb matrixmul_test.cpp
 open_solution "matrixmul_6b"
 set_part {xc7a100tcsg324-1}

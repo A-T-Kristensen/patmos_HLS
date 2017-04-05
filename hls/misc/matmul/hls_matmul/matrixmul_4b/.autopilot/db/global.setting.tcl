@@ -43,7 +43,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7a100t:csg324:-1"
 set SourceFiles {sc {} c ../../matrixmul.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {/home/patmos/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_4b/matrixmul_4b.directive}
+set DirectiveFile {/home/andreas/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_4b/matrixmul_4b.directive}
 set TBFiles {verilog ../../matrixmul_test.cpp bc ../../matrixmul_test.cpp vhdl ../../matrixmul_test.cpp sc ../../matrixmul_test.cpp cas ../../matrixmul_test.cpp c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

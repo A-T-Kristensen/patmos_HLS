@@ -1,12 +1,13 @@
-; ModuleID = '/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_2b/.autopilot/db/a.o.2.bc'
+; ModuleID = '/home/andreas/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_2b/.autopilot/db/a.o.2.bc'
 target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
 target triple = "x86_64-unknown-linux-gnu"
 
 @matrixmul_str = internal unnamed_addr constant [10 x i8] c"matrixmul\00"
 @L_col_str = internal unnamed_addr constant [6 x i8] c"L_col\00"
-@p_str4 = private unnamed_addr constant [4 x i8] c"col\00", align 1
-@p_str3 = private unnamed_addr constant [12 x i8] c"RAM_1P_BRAM\00", align 1
-@p_str2 = private unnamed_addr constant [5 x i8] c"bram\00", align 1
+@p_str5 = private unnamed_addr constant [4 x i8] c"col\00", align 1
+@p_str4 = private unnamed_addr constant [12 x i8] c"RAM_1P_BRAM\00", align 1
+@p_str3 = private unnamed_addr constant [5 x i8] c"bram\00", align 1
+@p_str2 = private unnamed_addr constant [11 x i8] c"ap_ctrl_hs\00", align 1
 @p_str1 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
 
 define void @matrixmul([24 x i32]* %a_0, [24 x i32]* %a_1) {
@@ -33,8 +34,9 @@ define void @matrixmul([24 x i32]* %a_0, [24 x i32]* %a_1) {
   call void (...)* @_ssdm_op_SpecBitsMap([24 x i32]* %a_1), !map !7
   call void (...)* @_ssdm_op_SpecBitsMap([24 x i32]* %a_0), !map !14
   call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @matrixmul_str) nounwind
-  call void (...)* @_ssdm_op_SpecInterface([24 x i32]* %a_0, [24 x i32]* %a_1, [5 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
-  call void (...)* @_ssdm_op_SpecMemCore([24 x i32]* %a_0, [24 x i32]* %a_1, [1 x i8]* @p_str1, [12 x i8]* @p_str3, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+  call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+  call void (...)* @_ssdm_op_SpecInterface([24 x i32]* %a_0, [24 x i32]* %a_1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+  call void (...)* @_ssdm_op_SpecMemCore([24 x i32]* %a_0, [24 x i32]* %a_1, [1 x i8]* @p_str1, [12 x i8]* @p_str4, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
   br label %.preheader7
 
 .preheader7:                                      ; preds = %.preheader7.preheader, %0
@@ -90,8 +92,8 @@ define void @matrixmul([24 x i32]* %a_0, [24 x i32]* %a_1) {
   %newIndex1_mid2_v_v = call i4 @_ssdm_op_BitConcatenate.i4.i1.i3(i1 true, i3 %i2_mid2_v)
   %newIndex1_mid2_v = urem i4 %newIndex1_mid2_v_v, 6
   %tmp_16 = call i6 @_ssdm_op_BitConcatenate.i6.i4.i2(i4 %newIndex1_mid2_v, i2 0)
-  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str4) nounwind
-  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str4) nounwind
+  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str5) nounwind
+  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str5) nounwind
   call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
   %tmp_5 = icmp eq i3 %j_mid2, 0
   %a_row_0 = load i32* %a_0_addr, align 4
@@ -190,7 +192,7 @@ define void @matrixmul([24 x i32]* %a_0, [24 x i32]* %a_1) {
   %tmp9 = add i32 %tmp_11_3, %tmp_11_2
   %tmp_12_3 = add nsw i32 %tmp8, %tmp9
   store i32 %tmp_12_3, i32* %a_1_addr_2, align 4
-  %empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str4, i32 %tmp_2) nounwind
+  %empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str5, i32 %tmp_2) nounwind
   %j_1 = add i3 1, %j_mid2
   store i32 %b_copy_3_3_3, i32* %b_copy_3_3_1
   store i32 %b_copy_3_3_16, i32* %b_copy_3_3_12

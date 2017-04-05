@@ -1,6 +1,6 @@
-Report time       : Mon Mar 27 21:01:03 CEST 2017.
+Report time       : Wed Apr  5 09:16:29 CEST 2017.
 Solution          : matrixmul_3b.
-Simulation tool   : modelsim.
+Simulation tool   : xsim.
 
 +----------+----------+-----------------------------------------------+-----------------------------------------------+
 |          |          |                    Latency                    |                    Interval                   |

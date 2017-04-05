@@ -2,6 +2,12 @@
 <sourceFile name="">
 <directive functionLabel="" functionName="matrixmul" label="">
 <pragma name="INTERFACE">
+<option name="ap_ctrl_hs" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="matrixmul" label="">
+<pragma name="INTERFACE">
 <option name="bram" positionalBoolean="mode" value=""/>
 <option name="port" positionalBoolean="4" value="a"/>
 </pragma>

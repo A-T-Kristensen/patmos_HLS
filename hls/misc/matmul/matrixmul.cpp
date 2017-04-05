@@ -47,6 +47,7 @@ ALL TIMES.
 
 void matrixmul(mat_type a[3*DIM][DIM])
 {
+#pragma HLS INTERFACE ap_ctrl_hs port=return
 //#pragma HLS ARRAY_RESHAPE variable=b complete dim=1
 //#pragma HLS ARRAY_RESHAPE variable=a complete dim=2
 
@@ -62,8 +63,7 @@ void matrixmul(mat_type a[3*DIM][DIM])
 	for(int i = 0; i < DIM; i++) {
 		col:for(int j = 0; j < DIM; j++) {
 		#pragma HLS PIPELINE
-		  //tmp = 0;
-			tmp = 0.0f;
+		  tmp = 0;
 
 		  // Cache each row (so it's only read once per function)
 		  if (j == 0) {

@@ -1,44 +1,46 @@
-; ModuleID = '/home/patmos/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/.autopilot/db/a.o.2.bc'
+; ModuleID = '/home/andreas/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_6b/.autopilot/db/a.o.2.bc'
 target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
 target triple = "x86_64-unknown-linux-gnu"
 
 @matrixmul_str = internal unnamed_addr constant [10 x i8] c"matrixmul\00"
 @L_col_str = internal unnamed_addr constant [6 x i8] c"L_col\00"
-@p_str4 = private unnamed_addr constant [4 x i8] c"col\00", align 1
-@p_str3 = private unnamed_addr constant [12 x i8] c"RAM_1P_BRAM\00", align 1
-@p_str2 = private unnamed_addr constant [5 x i8] c"bram\00", align 1
+@p_str5 = private unnamed_addr constant [4 x i8] c"col\00", align 1
+@p_str4 = private unnamed_addr constant [12 x i8] c"RAM_1P_BRAM\00", align 1
+@p_str3 = private unnamed_addr constant [5 x i8] c"bram\00", align 1
+@p_str2 = private unnamed_addr constant [11 x i8] c"ap_ctrl_hs\00", align 1
 @p_str1 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
 
-define void @matrixmul([8 x float]* %a_0, [8 x float]* %a_1, [8 x float]* %a_2, [8 x float]* %a_3, [8 x float]* %a_4, [8 x float]* %a_5) {
-  %a_row_load_s = alloca float
-  %a_row_load_9 = alloca float
-  %a_row_load_8 = alloca float
-  %a_row_load_7 = alloca float
-  %b_copy_0_3_11 = alloca float
-  %b_copy_0_3_8 = alloca float
-  %b_copy_0_3_12 = alloca float
-  %b_copy_0_3_1 = alloca float
-  %b_copy_1_3_11 = alloca float
-  %b_copy_1_3_8 = alloca float
-  %b_copy_1_3_12 = alloca float
-  %b_copy_1_3_1 = alloca float
-  %b_copy_2_3_11 = alloca float
-  %b_copy_2_3_8 = alloca float
-  %b_copy_2_3_12 = alloca float
-  %b_copy_2_3_1 = alloca float
-  %b_copy_3_3_11 = alloca float
-  %b_copy_3_3_8 = alloca float
-  %b_copy_3_3_12 = alloca float
-  %b_copy_3_3_1 = alloca float
-  call void (...)* @_ssdm_op_SpecBitsMap([8 x float]* %a_5), !map !7
-  call void (...)* @_ssdm_op_SpecBitsMap([8 x float]* %a_4), !map !14
-  call void (...)* @_ssdm_op_SpecBitsMap([8 x float]* %a_3), !map !20
-  call void (...)* @_ssdm_op_SpecBitsMap([8 x float]* %a_2), !map !26
-  call void (...)* @_ssdm_op_SpecBitsMap([8 x float]* %a_1), !map !32
-  call void (...)* @_ssdm_op_SpecBitsMap([8 x float]* %a_0), !map !38
+define void @matrixmul([8 x i32]* %a_0, [8 x i32]* %a_1, [8 x i32]* %a_2, [8 x i32]* %a_3, [8 x i32]* %a_4, [8 x i32]* %a_5) {
+  %a_row_0_3 = alloca i32
+  %a_row_1_3 = alloca i32
+  %a_row_2_3 = alloca i32
+  %a_row_3_1 = alloca i32
+  %b_copy_0_3_11 = alloca i32
+  %b_copy_0_3_8 = alloca i32
+  %b_copy_0_3_12 = alloca i32
+  %b_copy_0_3_1 = alloca i32
+  %b_copy_1_3_11 = alloca i32
+  %b_copy_1_3_8 = alloca i32
+  %b_copy_1_3_12 = alloca i32
+  %b_copy_1_3_1 = alloca i32
+  %b_copy_2_3_11 = alloca i32
+  %b_copy_2_3_8 = alloca i32
+  %b_copy_2_3_12 = alloca i32
+  %b_copy_2_3_1 = alloca i32
+  %b_copy_3_3_11 = alloca i32
+  %b_copy_3_3_8 = alloca i32
+  %b_copy_3_3_12 = alloca i32
+  %b_copy_3_3_1 = alloca i32
+  call void (...)* @_ssdm_op_SpecBitsMap([8 x i32]* %a_5), !map !7
+  call void (...)* @_ssdm_op_SpecBitsMap([8 x i32]* %a_4), !map !14
+  call void (...)* @_ssdm_op_SpecBitsMap([8 x i32]* %a_3), !map !20
+  call void (...)* @_ssdm_op_SpecBitsMap([8 x i32]* %a_2), !map !26
+  call void (...)* @_ssdm_op_SpecBitsMap([8 x i32]* %a_1), !map !32
+  call void (...)* @_ssdm_op_SpecBitsMap([8 x i32]* %a_0), !map !38
   call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @matrixmul_str) nounwind
-  call void (...)* @_ssdm_op_SpecInterface([8 x float]* %a_0, [8 x float]* %a_1, [8 x float]* %a_2, [8 x float]* %a_3, [8 x float]* %a_4, [8 x float]* %a_5, [5 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
-  call void (...)* @_ssdm_op_SpecMemCore([8 x float]* %a_0, [8 x float]* %a_1, [8 x float]* %a_2, [8 x float]* %a_3, [8 x float]* %a_4, [8 x float]* %a_5, [1 x i8]* @p_str1, [12 x i8]* @p_str3, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+  call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+  call void (...)* @_ssdm_op_SpecInterface([8 x i32]* %a_0, [8 x i32]* %a_1, [8 x i32]* %a_2, [8 x i32]* %a_3, [8 x i32]* %a_4, [8 x i32]* %a_5, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+  call void (...)* @_ssdm_op_SpecMemCore([8 x i32]* %a_0, [8 x i32]* %a_1, [8 x i32]* %a_2, [8 x i32]* %a_3, [8 x i32]* %a_4, [8 x i32]* %a_5, [1 x i8]* @p_str1, [12 x i8]* @p_str4, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
   br label %.preheader7
 
 .preheader7:                                      ; preds = %.loopexit101, %0
@@ -46,8 +48,8 @@ define void @matrixmul([8 x float]* %a_0, [8 x float]* %a_1, [8 x float]* %a_2, 
   %i = phi i3 [ 0, %0 ], [ %newIndex1_mid2_v_v, %.loopexit101 ]
   %j = phi i3 [ 0, %0 ], [ %j_1, %.loopexit101 ]
   %tmp = icmp eq i3 %i, 0
-  %tmp_11 = call i2 @_ssdm_op_PartSelect.i2.i3.i32.i32(i3 %i, i32 1, i32 2)
-  %icmp = icmp eq i2 %tmp_11, 0
+  %tmp_10 = call i2 @_ssdm_op_PartSelect.i2.i3.i32.i32(i3 %i, i32 1, i32 2)
+  %icmp = icmp eq i2 %tmp_10, 0
   %tmp_3 = call i2 @_ssdm_op_PartSelect.i2.i3.i32.i32(i3 %i, i32 1, i32 2)
   %tmp_1 = call i4 @_ssdm_op_BitConcatenate.i4.i1.i2.i1(i1 false, i2 %tmp_3, i1 false)
   %arrayNo92_mask = or i4 %tmp_1, -8
@@ -57,31 +59,31 @@ define void @matrixmul([8 x float]* %a_0, [8 x float]* %a_1, [8 x float]* %a_2, 
   br i1 %exitcond_flatten, label %1, label %.preheader7.preheader
 
 .loopexit101:                                     ; preds = %branch29, %branch28
-  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str4, i32 %tmp_4) nounwind
+  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str5, i32 %tmp_4) nounwind
   %j_1 = add i3 %j_mid2, 1
   br label %.preheader7
 
 .preheader7.preheader:                            ; preds = %.preheader7
-  %a_row_load_4 = load float* %a_row_load_s
-  %a_row_load_5 = load float* %a_row_load_9
-  %a_row_load_6 = load float* %a_row_load_8
-  %a_row_load_10 = load float* %a_row_load_7
-  %b_copy_0_3_11_load = load float* %b_copy_0_3_11
-  %b_copy_0_3_8_load = load float* %b_copy_0_3_8
-  %b_copy_0_3_12_load = load float* %b_copy_0_3_12
-  %b_copy_0_3_1_load = load float* %b_copy_0_3_1
-  %b_copy_1_3_11_load = load float* %b_copy_1_3_11
-  %b_copy_1_3_8_load = load float* %b_copy_1_3_8
-  %b_copy_1_3_12_load = load float* %b_copy_1_3_12
-  %b_copy_1_3_1_load = load float* %b_copy_1_3_1
-  %b_copy_2_3_11_load = load float* %b_copy_2_3_11
-  %b_copy_2_3_8_load = load float* %b_copy_2_3_8
-  %b_copy_2_3_12_load = load float* %b_copy_2_3_12
-  %b_copy_2_3_1_load = load float* %b_copy_2_3_1
-  %b_copy_3_3_11_load = load float* %b_copy_3_3_11
-  %b_copy_3_3_8_load = load float* %b_copy_3_3_8
-  %b_copy_3_3_12_load = load float* %b_copy_3_3_12
-  %b_copy_3_3_1_load = load float* %b_copy_3_3_1
+  %a_row_0_3_load = load i32* %a_row_0_3
+  %a_row_1_3_load = load i32* %a_row_1_3
+  %a_row_2_3_load = load i32* %a_row_2_3
+  %a_row_3_1_load = load i32* %a_row_3_1
+  %b_copy_0_3_11_load = load i32* %b_copy_0_3_11
+  %b_copy_0_3_8_load = load i32* %b_copy_0_3_8
+  %b_copy_0_3_12_load = load i32* %b_copy_0_3_12
+  %b_copy_0_3_1_load = load i32* %b_copy_0_3_1
+  %b_copy_1_3_11_load = load i32* %b_copy_1_3_11
+  %b_copy_1_3_8_load = load i32* %b_copy_1_3_8
+  %b_copy_1_3_12_load = load i32* %b_copy_1_3_12
+  %b_copy_1_3_1_load = load i32* %b_copy_1_3_1
+  %b_copy_2_3_11_load = load i32* %b_copy_2_3_11
+  %b_copy_2_3_8_load = load i32* %b_copy_2_3_8
+  %b_copy_2_3_12_load = load i32* %b_copy_2_3_12
+  %b_copy_2_3_1_load = load i32* %b_copy_2_3_1
+  %b_copy_3_3_11_load = load i32* %b_copy_3_3_11
+  %b_copy_3_3_8_load = load i32* %b_copy_3_3_8
+  %b_copy_3_3_12_load = load i32* %b_copy_3_3_12
+  %b_copy_3_3_1_load = load i32* %b_copy_3_3_1
   %i_1 = add i3 1, %i
   call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @L_col_str)
   %empty_5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)
@@ -90,170 +92,169 @@ define void @matrixmul([8 x float]* %a_0, [8 x float]* %a_1, [8 x float]* %a_2, 
   %tmp_mid1 = icmp eq i3 %i_1, 0
   %tmp_mid2 = select i1 %exitcond, i1 %tmp_mid1, i1 %tmp
   %newIndex1_mid2_v_v = select i1 %exitcond, i3 %i_1, i3 %i
-  %tmp_12 = shl i3 %newIndex1_mid2_v_v, 2
-  %tmp_13 = zext i3 %tmp_12 to i64
-  %tmp_13_cast = zext i3 %tmp_12 to i4
-  %a_0_addr = getelementptr [8 x float]* %a_0, i64 0, i64 %tmp_13
-  %tmp_14 = or i3 %tmp_12, 1
-  %tmp_15 = call i64 @_ssdm_op_BitConcatenate.i64.i61.i3(i61 0, i3 %tmp_14)
-  %a_0_addr_1 = getelementptr [8 x float]* %a_0, i64 0, i64 %tmp_15
-  %tmp_16 = or i3 %tmp_12, 2
-  %tmp_17 = call i64 @_ssdm_op_BitConcatenate.i64.i61.i3(i61 0, i3 %tmp_16)
-  %a_0_addr_2 = getelementptr [8 x float]* %a_0, i64 0, i64 %tmp_17
-  %tmp_18 = or i3 %tmp_12, 3
-  %tmp_19 = call i64 @_ssdm_op_BitConcatenate.i64.i61.i3(i61 0, i3 %tmp_18)
-  %a_0_addr_3 = getelementptr [8 x float]* %a_0, i64 0, i64 %tmp_19
-  %a_1_addr = getelementptr [8 x float]* %a_1, i64 0, i64 %tmp_13
-  %a_1_addr_1 = getelementptr [8 x float]* %a_1, i64 0, i64 %tmp_15
-  %a_1_addr_2 = getelementptr [8 x float]* %a_1, i64 0, i64 %tmp_17
-  %a_1_addr_3 = getelementptr [8 x float]* %a_1, i64 0, i64 %tmp_19
-  %tmp_23 = call i2 @_ssdm_op_PartSelect.i2.i3.i32.i32(i3 %i_1, i32 1, i32 2)
-  %icmp8 = icmp eq i2 %tmp_23, 0
+  %tmp_11 = shl i3 %newIndex1_mid2_v_v, 2
+  %tmp_12 = zext i3 %tmp_11 to i64
+  %tmp_12_cast = zext i3 %tmp_11 to i4
+  %a_0_addr = getelementptr [8 x i32]* %a_0, i64 0, i64 %tmp_12
+  %tmp_13 = or i3 %tmp_11, 1
+  %tmp_14 = call i64 @_ssdm_op_BitConcatenate.i64.i61.i3(i61 0, i3 %tmp_13)
+  %a_0_addr_1 = getelementptr [8 x i32]* %a_0, i64 0, i64 %tmp_14
+  %tmp_15 = or i3 %tmp_11, 2
+  %tmp_16 = call i64 @_ssdm_op_BitConcatenate.i64.i61.i3(i61 0, i3 %tmp_15)
+  %a_0_addr_2 = getelementptr [8 x i32]* %a_0, i64 0, i64 %tmp_16
+  %tmp_17 = or i3 %tmp_11, 3
+  %tmp_18 = call i64 @_ssdm_op_BitConcatenate.i64.i61.i3(i61 0, i3 %tmp_17)
+  %a_0_addr_3 = getelementptr [8 x i32]* %a_0, i64 0, i64 %tmp_18
+  %a_1_addr = getelementptr [8 x i32]* %a_1, i64 0, i64 %tmp_12
+  %a_1_addr_1 = getelementptr [8 x i32]* %a_1, i64 0, i64 %tmp_14
+  %a_1_addr_2 = getelementptr [8 x i32]* %a_1, i64 0, i64 %tmp_16
+  %a_1_addr_3 = getelementptr [8 x i32]* %a_1, i64 0, i64 %tmp_18
+  %tmp_22 = call i2 @_ssdm_op_PartSelect.i2.i3.i32.i32(i3 %i_1, i32 1, i32 2)
+  %icmp8 = icmp eq i2 %tmp_22, 0
   %cond1_mid2 = select i1 %exitcond, i1 %icmp8, i1 %icmp
-  %tmp_20 = call i2 @_ssdm_op_PartSelect.i2.i3.i32.i32(i3 %i_1, i32 1, i32 2)
-  %tmp_1_mid1 = call i4 @_ssdm_op_BitConcatenate.i4.i1.i2.i1(i1 false, i2 %tmp_20, i1 false)
+  %tmp_19 = call i2 @_ssdm_op_PartSelect.i2.i3.i32.i32(i3 %i_1, i32 1, i32 2)
+  %tmp_1_mid1 = call i4 @_ssdm_op_BitConcatenate.i4.i1.i2.i1(i1 false, i2 %tmp_19, i1 false)
   %arrayNo92_mask_mid1 = or i4 %tmp_1_mid1, -8
   %cond_mid1 = icmp eq i4 %arrayNo92_mask_mid1, -8
   %cond_mid2 = select i1 %exitcond, i1 %cond_mid1, i1 %cond
-  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str4) nounwind
-  %tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str4) nounwind
+  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str5) nounwind
+  %tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str5) nounwind
   call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
   %tmp_5 = icmp eq i3 %j_mid2, 0
-  %a_0_load = load float* %a_0_addr, align 4
-  %a_1_load = load float* %a_1_addr, align 4
-  %a_load_0_phi = select i1 %cond1_mid2, float %a_0_load, float %a_1_load
-  %a_0_load_1 = load float* %a_0_addr_1, align 4
-  %a_1_load_1 = load float* %a_1_addr_1, align 4
-  %a_load_17_phi = select i1 %cond1_mid2, float %a_0_load_1, float %a_1_load_1
-  %a_0_load_2 = load float* %a_0_addr_2, align 4
-  %a_1_load_2 = load float* %a_1_addr_2, align 4
-  %a_load_2_phi = select i1 %cond1_mid2, float %a_0_load_2, float %a_1_load_2
-  %a_0_load_3 = load float* %a_0_addr_3, align 4
-  %a_1_load_3 = load float* %a_1_addr_3, align 4
-  %sel_tmp = select i1 %tmp_5, float %a_1_load_3, float %a_row_load_10
+  %a_0_load = load i32* %a_0_addr, align 4
+  %a_1_load = load i32* %a_1_addr, align 4
+  %a_row_0 = select i1 %cond1_mid2, i32 %a_0_load, i32 %a_1_load
+  %a_0_load_1 = load i32* %a_0_addr_1, align 4
+  %a_1_load_1 = load i32* %a_1_addr_1, align 4
+  %a_row_1 = select i1 %cond1_mid2, i32 %a_0_load_1, i32 %a_1_load_1
+  %a_0_load_2 = load i32* %a_0_addr_2, align 4
+  %a_1_load_2 = load i32* %a_1_addr_2, align 4
+  %a_row_2 = select i1 %cond1_mid2, i32 %a_0_load_2, i32 %a_1_load_2
+  %a_0_load_3 = load i32* %a_0_addr_3, align 4
+  %a_1_load_3 = load i32* %a_1_addr_3, align 4
+  %sel_tmp = select i1 %tmp_5, i32 %a_1_load_3, i32 %a_row_3_1_load
   %sel_tmp1 = and i1 %tmp_5, %cond1_mid2
-  %a_row_load_3 = select i1 %sel_tmp1, float %a_0_load_3, float %sel_tmp
-  %sel_tmp2 = select i1 %tmp_5, float %a_load_2_phi, float %a_row_load_6
-  %a_row_load_2 = select i1 %sel_tmp1, float %a_load_2_phi, float %sel_tmp2
-  %sel_tmp3 = select i1 %tmp_5, float %a_load_17_phi, float %a_row_load_5
-  %a_row_load_1 = select i1 %sel_tmp1, float %a_load_17_phi, float %sel_tmp3
-  %sel_tmp4 = select i1 %tmp_5, float %a_load_0_phi, float %a_row_load_4
-  %a_row_load = select i1 %sel_tmp1, float %a_load_0_phi, float %sel_tmp4
+  %a_row_3_2 = select i1 %sel_tmp1, i32 %a_0_load_3, i32 %sel_tmp
+  %a_row_2_1 = select i1 %tmp_5, i32 %a_row_2, i32 %a_row_2_3_load
+  %a_row_2_2 = select i1 %sel_tmp1, i32 %a_row_2, i32 %a_row_2_1
+  %a_row_1_1 = select i1 %tmp_5, i32 %a_row_1, i32 %a_row_1_3_load
+  %a_row_1_2 = select i1 %sel_tmp1, i32 %a_row_1, i32 %a_row_1_1
+  %a_row_0_1 = select i1 %tmp_5, i32 %a_row_0, i32 %a_row_0_3_load
+  %a_row_0_2 = select i1 %sel_tmp1, i32 %a_row_0, i32 %a_row_0_1
   %tmp_8 = zext i3 %j_mid2 to i64
   %tmp_8_cast = zext i3 %j_mid2 to i4
-  %a_2_addr = getelementptr [8 x float]* %a_2, i64 0, i64 %tmp_8
-  %tmp_21 = add i4 4, %tmp_8_cast
+  %a_2_addr = getelementptr [8 x i32]* %a_2, i64 0, i64 %tmp_8
+  %tmp_20 = add i4 4, %tmp_8_cast
+  %tmp_20_cast = zext i4 %tmp_20 to i64
+  %a_2_addr_1 = getelementptr [8 x i32]* %a_2, i64 0, i64 %tmp_20_cast
+  %a_3_addr = getelementptr [8 x i32]* %a_3, i64 0, i64 %tmp_8
+  %a_3_addr_1 = getelementptr [8 x i32]* %a_3, i64 0, i64 %tmp_20_cast
+  %tmp_21 = add i4 %tmp_12_cast, %tmp_8_cast
   %tmp_21_cast = zext i4 %tmp_21 to i64
-  %a_2_addr_1 = getelementptr [8 x float]* %a_2, i64 0, i64 %tmp_21_cast
-  %a_3_addr = getelementptr [8 x float]* %a_3, i64 0, i64 %tmp_8
-  %a_3_addr_1 = getelementptr [8 x float]* %a_3, i64 0, i64 %tmp_21_cast
-  %tmp_22 = add i4 %tmp_13_cast, %tmp_8_cast
-  %tmp_22_cast = zext i4 %tmp_22 to i64
-  %a_4_addr = getelementptr [8 x float]* %a_4, i64 0, i64 %tmp_22_cast
-  %a_5_addr = getelementptr [8 x float]* %a_5, i64 0, i64 %tmp_22_cast
-  %b_copy_0_3_19 = load float* %a_2_addr, align 4
-  %tmp_24 = trunc i3 %j_mid2 to i2
-  %sel_tmp5 = icmp eq i2 %tmp_24, -2
-  %b_copy_0_3 = select i1 %sel_tmp5, float %b_copy_0_3_1_load, float %b_copy_0_3_19
-  %sel_tmp7 = icmp eq i2 %tmp_24, 1
-  %b_copy_0_3_4 = select i1 %sel_tmp7, float %b_copy_0_3_1_load, float %b_copy_0_3
-  %sel_tmp9 = icmp eq i2 %tmp_24, 0
-  %b_copy_0_3_2 = select i1 %sel_tmp9, float %b_copy_0_3_1_load, float %b_copy_0_3_4
-  %b_copy_0_3_5 = select i1 %sel_tmp5, float %b_copy_0_3_19, float %b_copy_0_3_12_load
-  %b_copy_0_3_6 = select i1 %sel_tmp7, float %b_copy_0_3_12_load, float %b_copy_0_3_5
-  %b_copy_0_3_7 = select i1 %sel_tmp9, float %b_copy_0_3_12_load, float %b_copy_0_3_6
-  %b_copy_0_3_9 = select i1 %sel_tmp7, float %b_copy_0_3_19, float %b_copy_0_3_8_load
-  %b_copy_0_3_14 = select i1 %sel_tmp9, float %b_copy_0_3_8_load, float %b_copy_0_3_9
-  %b_copy_0_3_15 = select i1 %sel_tmp9, float %b_copy_0_3_19, float %b_copy_0_3_11_load
-  %b_copy_1_3_19 = load float* %a_2_addr_1, align 4
-  %b_copy_1_3 = select i1 %sel_tmp5, float %b_copy_1_3_1_load, float %b_copy_1_3_19
-  %b_copy_1_3_4 = select i1 %sel_tmp7, float %b_copy_1_3_1_load, float %b_copy_1_3
-  %b_copy_1_3_2 = select i1 %sel_tmp9, float %b_copy_1_3_1_load, float %b_copy_1_3_4
-  %b_copy_1_3_5 = select i1 %sel_tmp5, float %b_copy_1_3_19, float %b_copy_1_3_12_load
-  %b_copy_1_3_6 = select i1 %sel_tmp7, float %b_copy_1_3_12_load, float %b_copy_1_3_5
-  %b_copy_1_3_7 = select i1 %sel_tmp9, float %b_copy_1_3_12_load, float %b_copy_1_3_6
-  %b_copy_1_3_9 = select i1 %sel_tmp7, float %b_copy_1_3_19, float %b_copy_1_3_8_load
-  %b_copy_1_3_14 = select i1 %sel_tmp9, float %b_copy_1_3_8_load, float %b_copy_1_3_9
-  %b_copy_1_3_15 = select i1 %sel_tmp9, float %b_copy_1_3_19, float %b_copy_1_3_11_load
-  %b_copy_2_3_19 = load float* %a_3_addr, align 4
-  %b_copy_2_3 = select i1 %sel_tmp5, float %b_copy_2_3_1_load, float %b_copy_2_3_19
-  %b_copy_2_3_4 = select i1 %sel_tmp7, float %b_copy_2_3_1_load, float %b_copy_2_3
-  %b_copy_2_3_2 = select i1 %sel_tmp9, float %b_copy_2_3_1_load, float %b_copy_2_3_4
-  %b_copy_2_3_5 = select i1 %sel_tmp5, float %b_copy_2_3_19, float %b_copy_2_3_12_load
-  %b_copy_2_3_6 = select i1 %sel_tmp7, float %b_copy_2_3_12_load, float %b_copy_2_3_5
-  %b_copy_2_3_7 = select i1 %sel_tmp9, float %b_copy_2_3_12_load, float %b_copy_2_3_6
-  %b_copy_2_3_9 = select i1 %sel_tmp7, float %b_copy_2_3_19, float %b_copy_2_3_8_load
-  %b_copy_2_3_14 = select i1 %sel_tmp9, float %b_copy_2_3_8_load, float %b_copy_2_3_9
-  %b_copy_2_3_15 = select i1 %sel_tmp9, float %b_copy_2_3_19, float %b_copy_2_3_11_load
-  %b_copy_3_3_19 = load float* %a_3_addr_1, align 4
-  %b_copy_3_3 = select i1 %sel_tmp5, float %b_copy_3_3_1_load, float %b_copy_3_3_19
-  %b_copy_3_3_4 = select i1 %sel_tmp7, float %b_copy_3_3_1_load, float %b_copy_3_3
-  %b_copy_3_3_2 = select i1 %sel_tmp9, float %b_copy_3_3_1_load, float %b_copy_3_3_4
-  %b_copy_3_3_5 = select i1 %sel_tmp5, float %b_copy_3_3_19, float %b_copy_3_3_12_load
-  %b_copy_3_3_6 = select i1 %sel_tmp7, float %b_copy_3_3_12_load, float %b_copy_3_3_5
-  %b_copy_3_3_7 = select i1 %sel_tmp9, float %b_copy_3_3_12_load, float %b_copy_3_3_6
-  %b_copy_3_3_9 = select i1 %sel_tmp7, float %b_copy_3_3_19, float %b_copy_3_3_8_load
-  %b_copy_3_3_14 = select i1 %sel_tmp9, float %b_copy_3_3_8_load, float %b_copy_3_3_9
-  %b_copy_3_3_15 = select i1 %sel_tmp9, float %b_copy_3_3_19, float %b_copy_3_3_11_load
-  %b_copy_3_3_3 = select i1 %tmp_mid2, float %b_copy_3_3_2, float %b_copy_3_3_1_load
-  %b_copy_3_3_16 = select i1 %tmp_mid2, float %b_copy_3_3_7, float %b_copy_3_3_12_load
-  %b_copy_3_3_17 = select i1 %tmp_mid2, float %b_copy_3_3_14, float %b_copy_3_3_8_load
-  %b_copy_3_3_18 = select i1 %tmp_mid2, float %b_copy_3_3_15, float %b_copy_3_3_11_load
-  %b_copy_2_3_3 = select i1 %tmp_mid2, float %b_copy_2_3_2, float %b_copy_2_3_1_load
-  %b_copy_2_3_16 = select i1 %tmp_mid2, float %b_copy_2_3_7, float %b_copy_2_3_12_load
-  %b_copy_2_3_17 = select i1 %tmp_mid2, float %b_copy_2_3_14, float %b_copy_2_3_8_load
-  %b_copy_2_3_18 = select i1 %tmp_mid2, float %b_copy_2_3_15, float %b_copy_2_3_11_load
-  %b_copy_1_3_3 = select i1 %tmp_mid2, float %b_copy_1_3_2, float %b_copy_1_3_1_load
-  %b_copy_1_3_16 = select i1 %tmp_mid2, float %b_copy_1_3_7, float %b_copy_1_3_12_load
-  %b_copy_1_3_17 = select i1 %tmp_mid2, float %b_copy_1_3_14, float %b_copy_1_3_8_load
-  %b_copy_1_3_18 = select i1 %tmp_mid2, float %b_copy_1_3_15, float %b_copy_1_3_11_load
-  %b_copy_0_3_3 = select i1 %tmp_mid2, float %b_copy_0_3_2, float %b_copy_0_3_1_load
-  %b_copy_0_3_16 = select i1 %tmp_mid2, float %b_copy_0_3_7, float %b_copy_0_3_12_load
-  %b_copy_0_3_17 = select i1 %tmp_mid2, float %b_copy_0_3_14, float %b_copy_0_3_8_load
-  %b_copy_0_3_18 = select i1 %tmp_mid2, float %b_copy_0_3_15, float %b_copy_0_3_11_load
-  %tmp_6 = call float @_ssdm_op_Mux.ap_auto.4float.i2(float %b_copy_0_3_18, float %b_copy_0_3_17, float %b_copy_0_3_16, float %b_copy_0_3_3, i2 %tmp_24)
-  %tmp_s = fmul float %a_row_load, %tmp_6
-  %tmp_2 = fadd float %tmp_s, 0.000000e+00
-  %tmp_7 = call float @_ssdm_op_Mux.ap_auto.4float.i2(float %b_copy_1_3_18, float %b_copy_1_3_17, float %b_copy_1_3_16, float %b_copy_1_3_3, i2 %tmp_24)
-  %tmp_11_1 = fmul float %a_row_load_1, %tmp_7
-  %tmp_12_1 = fadd float %tmp_2, %tmp_11_1
-  %tmp_9 = call float @_ssdm_op_Mux.ap_auto.4float.i2(float %b_copy_2_3_18, float %b_copy_2_3_17, float %b_copy_2_3_16, float %b_copy_2_3_3, i2 %tmp_24)
-  %tmp_11_2 = fmul float %a_row_load_2, %tmp_9
-  %tmp_12_2 = fadd float %tmp_12_1, %tmp_11_2
-  %tmp_10 = call float @_ssdm_op_Mux.ap_auto.4float.i2(float %b_copy_3_3_18, float %b_copy_3_3_17, float %b_copy_3_3_16, float %b_copy_3_3_3, i2 %tmp_24)
-  %tmp_11_3 = fmul float %a_row_load_3, %tmp_10
-  %tmp_12_3 = fadd float %tmp_12_2, %tmp_11_3
-  store float %b_copy_3_3_3, float* %b_copy_3_3_1
-  store float %b_copy_3_3_16, float* %b_copy_3_3_12
-  store float %b_copy_3_3_17, float* %b_copy_3_3_8
-  store float %b_copy_3_3_18, float* %b_copy_3_3_11
-  store float %b_copy_2_3_3, float* %b_copy_2_3_1
-  store float %b_copy_2_3_16, float* %b_copy_2_3_12
-  store float %b_copy_2_3_17, float* %b_copy_2_3_8
-  store float %b_copy_2_3_18, float* %b_copy_2_3_11
-  store float %b_copy_1_3_3, float* %b_copy_1_3_1
-  store float %b_copy_1_3_16, float* %b_copy_1_3_12
-  store float %b_copy_1_3_17, float* %b_copy_1_3_8
-  store float %b_copy_1_3_18, float* %b_copy_1_3_11
-  store float %b_copy_0_3_3, float* %b_copy_0_3_1
-  store float %b_copy_0_3_16, float* %b_copy_0_3_12
-  store float %b_copy_0_3_17, float* %b_copy_0_3_8
-  store float %b_copy_0_3_18, float* %b_copy_0_3_11
-  store float %a_row_load_3, float* %a_row_load_7
-  store float %a_row_load_2, float* %a_row_load_8
-  store float %a_row_load_1, float* %a_row_load_9
-  store float %a_row_load, float* %a_row_load_s
+  %a_4_addr = getelementptr [8 x i32]* %a_4, i64 0, i64 %tmp_21_cast
+  %a_5_addr = getelementptr [8 x i32]* %a_5, i64 0, i64 %tmp_21_cast
+  %b_copy_0_3_19 = load i32* %a_2_addr, align 4
+  %tmp_23 = trunc i3 %j_mid2 to i2
+  %sel_tmp5 = icmp eq i2 %tmp_23, -2
+  %b_copy_0_3 = select i1 %sel_tmp5, i32 %b_copy_0_3_1_load, i32 %b_copy_0_3_19
+  %sel_tmp7 = icmp eq i2 %tmp_23, 1
+  %b_copy_0_3_4 = select i1 %sel_tmp7, i32 %b_copy_0_3_1_load, i32 %b_copy_0_3
+  %sel_tmp9 = icmp eq i2 %tmp_23, 0
+  %b_copy_0_3_2 = select i1 %sel_tmp9, i32 %b_copy_0_3_1_load, i32 %b_copy_0_3_4
+  %b_copy_0_3_5 = select i1 %sel_tmp5, i32 %b_copy_0_3_19, i32 %b_copy_0_3_12_load
+  %b_copy_0_3_6 = select i1 %sel_tmp7, i32 %b_copy_0_3_12_load, i32 %b_copy_0_3_5
+  %b_copy_0_3_7 = select i1 %sel_tmp9, i32 %b_copy_0_3_12_load, i32 %b_copy_0_3_6
+  %b_copy_0_3_9 = select i1 %sel_tmp7, i32 %b_copy_0_3_19, i32 %b_copy_0_3_8_load
+  %b_copy_0_3_14 = select i1 %sel_tmp9, i32 %b_copy_0_3_8_load, i32 %b_copy_0_3_9
+  %b_copy_0_3_15 = select i1 %sel_tmp9, i32 %b_copy_0_3_19, i32 %b_copy_0_3_11_load
+  %b_copy_1_3_19 = load i32* %a_2_addr_1, align 4
+  %b_copy_1_3 = select i1 %sel_tmp5, i32 %b_copy_1_3_1_load, i32 %b_copy_1_3_19
+  %b_copy_1_3_4 = select i1 %sel_tmp7, i32 %b_copy_1_3_1_load, i32 %b_copy_1_3
+  %b_copy_1_3_2 = select i1 %sel_tmp9, i32 %b_copy_1_3_1_load, i32 %b_copy_1_3_4
+  %b_copy_1_3_5 = select i1 %sel_tmp5, i32 %b_copy_1_3_19, i32 %b_copy_1_3_12_load
+  %b_copy_1_3_6 = select i1 %sel_tmp7, i32 %b_copy_1_3_12_load, i32 %b_copy_1_3_5
+  %b_copy_1_3_7 = select i1 %sel_tmp9, i32 %b_copy_1_3_12_load, i32 %b_copy_1_3_6
+  %b_copy_1_3_9 = select i1 %sel_tmp7, i32 %b_copy_1_3_19, i32 %b_copy_1_3_8_load
+  %b_copy_1_3_14 = select i1 %sel_tmp9, i32 %b_copy_1_3_8_load, i32 %b_copy_1_3_9
+  %b_copy_1_3_15 = select i1 %sel_tmp9, i32 %b_copy_1_3_19, i32 %b_copy_1_3_11_load
+  %b_copy_2_3_19 = load i32* %a_3_addr, align 4
+  %b_copy_2_3 = select i1 %sel_tmp5, i32 %b_copy_2_3_1_load, i32 %b_copy_2_3_19
+  %b_copy_2_3_4 = select i1 %sel_tmp7, i32 %b_copy_2_3_1_load, i32 %b_copy_2_3
+  %b_copy_2_3_2 = select i1 %sel_tmp9, i32 %b_copy_2_3_1_load, i32 %b_copy_2_3_4
+  %b_copy_2_3_5 = select i1 %sel_tmp5, i32 %b_copy_2_3_19, i32 %b_copy_2_3_12_load
+  %b_copy_2_3_6 = select i1 %sel_tmp7, i32 %b_copy_2_3_12_load, i32 %b_copy_2_3_5
+  %b_copy_2_3_7 = select i1 %sel_tmp9, i32 %b_copy_2_3_12_load, i32 %b_copy_2_3_6
+  %b_copy_2_3_9 = select i1 %sel_tmp7, i32 %b_copy_2_3_19, i32 %b_copy_2_3_8_load
+  %b_copy_2_3_14 = select i1 %sel_tmp9, i32 %b_copy_2_3_8_load, i32 %b_copy_2_3_9
+  %b_copy_2_3_15 = select i1 %sel_tmp9, i32 %b_copy_2_3_19, i32 %b_copy_2_3_11_load
+  %b_copy_3_3_19 = load i32* %a_3_addr_1, align 4
+  %b_copy_3_3 = select i1 %sel_tmp5, i32 %b_copy_3_3_1_load, i32 %b_copy_3_3_19
+  %b_copy_3_3_4 = select i1 %sel_tmp7, i32 %b_copy_3_3_1_load, i32 %b_copy_3_3
+  %b_copy_3_3_2 = select i1 %sel_tmp9, i32 %b_copy_3_3_1_load, i32 %b_copy_3_3_4
+  %b_copy_3_3_5 = select i1 %sel_tmp5, i32 %b_copy_3_3_19, i32 %b_copy_3_3_12_load
+  %b_copy_3_3_6 = select i1 %sel_tmp7, i32 %b_copy_3_3_12_load, i32 %b_copy_3_3_5
+  %b_copy_3_3_7 = select i1 %sel_tmp9, i32 %b_copy_3_3_12_load, i32 %b_copy_3_3_6
+  %b_copy_3_3_9 = select i1 %sel_tmp7, i32 %b_copy_3_3_19, i32 %b_copy_3_3_8_load
+  %b_copy_3_3_14 = select i1 %sel_tmp9, i32 %b_copy_3_3_8_load, i32 %b_copy_3_3_9
+  %b_copy_3_3_15 = select i1 %sel_tmp9, i32 %b_copy_3_3_19, i32 %b_copy_3_3_11_load
+  %b_copy_3_3_3 = select i1 %tmp_mid2, i32 %b_copy_3_3_2, i32 %b_copy_3_3_1_load
+  %b_copy_3_3_16 = select i1 %tmp_mid2, i32 %b_copy_3_3_7, i32 %b_copy_3_3_12_load
+  %b_copy_3_3_17 = select i1 %tmp_mid2, i32 %b_copy_3_3_14, i32 %b_copy_3_3_8_load
+  %b_copy_3_3_18 = select i1 %tmp_mid2, i32 %b_copy_3_3_15, i32 %b_copy_3_3_11_load
+  %b_copy_2_3_3 = select i1 %tmp_mid2, i32 %b_copy_2_3_2, i32 %b_copy_2_3_1_load
+  %b_copy_2_3_16 = select i1 %tmp_mid2, i32 %b_copy_2_3_7, i32 %b_copy_2_3_12_load
+  %b_copy_2_3_17 = select i1 %tmp_mid2, i32 %b_copy_2_3_14, i32 %b_copy_2_3_8_load
+  %b_copy_2_3_18 = select i1 %tmp_mid2, i32 %b_copy_2_3_15, i32 %b_copy_2_3_11_load
+  %b_copy_1_3_3 = select i1 %tmp_mid2, i32 %b_copy_1_3_2, i32 %b_copy_1_3_1_load
+  %b_copy_1_3_16 = select i1 %tmp_mid2, i32 %b_copy_1_3_7, i32 %b_copy_1_3_12_load
+  %b_copy_1_3_17 = select i1 %tmp_mid2, i32 %b_copy_1_3_14, i32 %b_copy_1_3_8_load
+  %b_copy_1_3_18 = select i1 %tmp_mid2, i32 %b_copy_1_3_15, i32 %b_copy_1_3_11_load
+  %b_copy_0_3_3 = select i1 %tmp_mid2, i32 %b_copy_0_3_2, i32 %b_copy_0_3_1_load
+  %b_copy_0_3_16 = select i1 %tmp_mid2, i32 %b_copy_0_3_7, i32 %b_copy_0_3_12_load
+  %b_copy_0_3_17 = select i1 %tmp_mid2, i32 %b_copy_0_3_14, i32 %b_copy_0_3_8_load
+  %b_copy_0_3_18 = select i1 %tmp_mid2, i32 %b_copy_0_3_15, i32 %b_copy_0_3_11_load
+  %tmp_2 = call i32 @_ssdm_op_Mux.ap_auto.4i32.i2(i32 %b_copy_0_3_18, i32 %b_copy_0_3_17, i32 %b_copy_0_3_16, i32 %b_copy_0_3_3, i2 %tmp_23)
+  %tmp_s = mul nsw i32 %a_row_0_2, %tmp_2
+  %tmp_6 = call i32 @_ssdm_op_Mux.ap_auto.4i32.i2(i32 %b_copy_1_3_18, i32 %b_copy_1_3_17, i32 %b_copy_1_3_16, i32 %b_copy_1_3_3, i2 %tmp_23)
+  %tmp_11_1 = mul nsw i32 %a_row_1_2, %tmp_6
+  %tmp_7 = call i32 @_ssdm_op_Mux.ap_auto.4i32.i2(i32 %b_copy_2_3_18, i32 %b_copy_2_3_17, i32 %b_copy_2_3_16, i32 %b_copy_2_3_3, i2 %tmp_23)
+  %tmp_11_2 = mul nsw i32 %a_row_2_2, %tmp_7
+  %tmp_9 = call i32 @_ssdm_op_Mux.ap_auto.4i32.i2(i32 %b_copy_3_3_18, i32 %b_copy_3_3_17, i32 %b_copy_3_3_16, i32 %b_copy_3_3_3, i2 %tmp_23)
+  %tmp_11_3 = mul nsw i32 %a_row_3_2, %tmp_9
+  %tmp10 = add i32 %tmp_11_2, %tmp_s
+  %tmp11 = add i32 %tmp_11_3, %tmp_11_1
+  %tmp_12_3 = add nsw i32 %tmp10, %tmp11
+  store i32 %b_copy_3_3_3, i32* %b_copy_3_3_1
+  store i32 %b_copy_3_3_16, i32* %b_copy_3_3_12
+  store i32 %b_copy_3_3_17, i32* %b_copy_3_3_8
+  store i32 %b_copy_3_3_18, i32* %b_copy_3_3_11
+  store i32 %b_copy_2_3_3, i32* %b_copy_2_3_1
+  store i32 %b_copy_2_3_16, i32* %b_copy_2_3_12
+  store i32 %b_copy_2_3_17, i32* %b_copy_2_3_8
+  store i32 %b_copy_2_3_18, i32* %b_copy_2_3_11
+  store i32 %b_copy_1_3_3, i32* %b_copy_1_3_1
+  store i32 %b_copy_1_3_16, i32* %b_copy_1_3_12
+  store i32 %b_copy_1_3_17, i32* %b_copy_1_3_8
+  store i32 %b_copy_1_3_18, i32* %b_copy_1_3_11
+  store i32 %b_copy_0_3_3, i32* %b_copy_0_3_1
+  store i32 %b_copy_0_3_16, i32* %b_copy_0_3_12
+  store i32 %b_copy_0_3_17, i32* %b_copy_0_3_8
+  store i32 %b_copy_0_3_18, i32* %b_copy_0_3_11
+  store i32 %a_row_3_2, i32* %a_row_3_1
+  store i32 %a_row_2_2, i32* %a_row_2_3
+  store i32 %a_row_1_2, i32* %a_row_1_3
+  store i32 %a_row_0_2, i32* %a_row_0_3
   br i1 %cond_mid2, label %branch28, label %branch29
 
 ; <label>:1                                       ; preds = %.preheader7
   ret void
 
 branch28:                                         ; preds = %.preheader7.preheader
-  store float %tmp_12_3, float* %a_4_addr, align 4
+  store i32 %tmp_12_3, i32* %a_4_addr, align 4
   br label %.loopexit101
 
 branch29:                                         ; preds = %.preheader7.preheader
-  store float %tmp_12_3, float* %a_5_addr, align 4
+  store i32 %tmp_12_3, i32* %a_5_addr, align 4
   br label %.loopexit101
 }
 
@@ -317,7 +318,7 @@ entry:
 
 declare i1 @_ssdm_op_PartSelect.i1.i3.i32.i32(i3, i32, i32) nounwind readnone
 
-define weak float @_ssdm_op_Mux.ap_auto.4float.i2(float, float, float, float, i2) {
+define weak i32 @_ssdm_op_Mux.ap_auto.4i32.i2(i32, i32, i32, i32, i2) {
 entry:
   switch i2 %4, label %case3 [
     i2 0, label %case0
@@ -326,8 +327,8 @@ entry:
   ]
 
 case0:                                            ; preds = %case3, %case2, %case1, %entry
-  %merge = phi float [ %0, %entry ], [ %1, %case1 ], [ %2, %case2 ], [ %3, %case3 ]
-  ret float %merge
+  %merge = phi i32 [ %0, %entry ], [ %1, %case1 ], [ %2, %case2 ], [ %3, %case3 ]
+  ret i32 %merge
 
 case1:                                            ; preds = %entry
   br label %case0
@@ -377,37 +378,37 @@ declare i3 @_ssdm_op_BitConcatenate.i3.i1.i2(i1, i2) nounwind readnone
 !7 = metadata !{metadata !8}
 !8 = metadata !{i32 0, i32 31, metadata !9}
 !9 = metadata !{metadata !10}
-!10 = metadata !{metadata !"a", metadata !11, metadata !"float", i32 0, i32 31}
+!10 = metadata !{metadata !"a", metadata !11, metadata !"int", i32 0, i32 31}
 !11 = metadata !{metadata !12, metadata !13}
 !12 = metadata !{i32 10, i32 11, i32 1}
 !13 = metadata !{i32 0, i32 3, i32 1}
 !14 = metadata !{metadata !15}
 !15 = metadata !{i32 0, i32 31, metadata !16}
 !16 = metadata !{metadata !17}
-!17 = metadata !{metadata !"a", metadata !18, metadata !"float", i32 0, i32 31}
+!17 = metadata !{metadata !"a", metadata !18, metadata !"int", i32 0, i32 31}
 !18 = metadata !{metadata !19, metadata !13}
 !19 = metadata !{i32 8, i32 9, i32 1}
 !20 = metadata !{metadata !21}
 !21 = metadata !{i32 0, i32 31, metadata !22}
 !22 = metadata !{metadata !23}
-!23 = metadata !{metadata !"a", metadata !24, metadata !"float", i32 0, i32 31}
+!23 = metadata !{metadata !"a", metadata !24, metadata !"int", i32 0, i32 31}
 !24 = metadata !{metadata !25, metadata !13}
 !25 = metadata !{i32 6, i32 7, i32 1}
 !26 = metadata !{metadata !27}
 !27 = metadata !{i32 0, i32 31, metadata !28}
 !28 = metadata !{metadata !29}
-!29 = metadata !{metadata !"a", metadata !30, metadata !"float", i32 0, i32 31}
+!29 = metadata !{metadata !"a", metadata !30, metadata !"int", i32 0, i32 31}
 !30 = metadata !{metadata !31, metadata !13}
 !31 = metadata !{i32 4, i32 5, i32 1}
 !32 = metadata !{metadata !33}
 !33 = metadata !{i32 0, i32 31, metadata !34}
 !34 = metadata !{metadata !35}
-!35 = metadata !{metadata !"a", metadata !36, metadata !"float", i32 0, i32 31}
+!35 = metadata !{metadata !"a", metadata !36, metadata !"int", i32 0, i32 31}
 !36 = metadata !{metadata !37, metadata !13}
 !37 = metadata !{i32 2, i32 3, i32 1}
 !38 = metadata !{metadata !39}
 !39 = metadata !{i32 0, i32 31, metadata !40}
 !40 = metadata !{metadata !41}
-!41 = metadata !{metadata !"a", metadata !42, metadata !"float", i32 0, i32 31}
+!41 = metadata !{metadata !"a", metadata !42, metadata !"int", i32 0, i32 31}
 !42 = metadata !{metadata !43, metadata !13}
 !43 = metadata !{i32 0, i32 1, i32 1}

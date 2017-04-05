@@ -1,4 +1,4 @@
-   Build using "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/g++"
+   Build using "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/g++"
    Compiling matrixmul_test.cpp_pre.cpp.tb.cpp
    Compiling apatb_matrixmul.cpp
    Compiling matrixmul.cpp_pre.cpp.tb.cpp

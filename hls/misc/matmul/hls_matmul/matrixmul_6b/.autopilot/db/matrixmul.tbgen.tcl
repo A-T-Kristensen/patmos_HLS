@@ -1,6 +1,6 @@
 set C_TypeInfoList {{ 
 "matrixmul" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"a": [[], {"array": [ {"array": ["0", [4]]}, [12]]}] }],[],""], 
-"0": [ "mat_type", {"typedef": [[[], {"scalar": "float"}],""]}]
+"0": [ "mat_type", {"typedef": [[[], {"scalar": "int"}],""]}]
 }}
 set moduleName matrixmul
 set isCombinational 0
@@ -14,20 +14,20 @@ set StallSigGenFlag 0
 set C_modelName {matrixmul}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ a_0 float 32 regular {bram 8 { 1 } 1 1 }  }
-	{ a_1 float 32 regular {bram 8 { 1 } 1 1 }  }
-	{ a_2 float 32 regular {bram 8 { 1 } 1 1 }  }
-	{ a_3 float 32 regular {bram 8 { 1 } 1 1 }  }
-	{ a_4 float 32 regular {bram 8 { 0 } 0 1 }  }
-	{ a_5 float 32 regular {bram 8 { 0 } 0 1 }  }
+	{ a_0 int 32 regular {bram 8 { 1 } 1 1 }  }
+	{ a_1 int 32 regular {bram 8 { 1 } 1 1 }  }
+	{ a_2 int 32 regular {bram 8 { 1 } 1 1 }  }
+	{ a_3 int 32 regular {bram 8 { 1 } 1 1 }  }
+	{ a_4 int 32 regular {bram 8 { 0 } 0 1 }  }
+	{ a_5 int 32 regular {bram 8 { 0 } 0 1 }  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "a_0", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "a","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 1,"step" : 1},{"low" : 0,"up" : 3,"step" : 1}]}]}]} , 
- 	{ "Name" : "a_1", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "a","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 2,"up" : 3,"step" : 1},{"low" : 0,"up" : 3,"step" : 1}]}]}]} , 
- 	{ "Name" : "a_2", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "a","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 4,"up" : 5,"step" : 1},{"low" : 0,"up" : 3,"step" : 1}]}]}]} , 
- 	{ "Name" : "a_3", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "a","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 6,"up" : 7,"step" : 1},{"low" : 0,"up" : 3,"step" : 1}]}]}]} , 
- 	{ "Name" : "a_4", "interface" : "bram", "bitwidth" : 32, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "a","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 8,"up" : 9,"step" : 1},{"low" : 0,"up" : 3,"step" : 1}]}]}]} , 
- 	{ "Name" : "a_5", "interface" : "bram", "bitwidth" : 32, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "a","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 10,"up" : 11,"step" : 1},{"low" : 0,"up" : 3,"step" : 1}]}]}]} ]}
+	{ "Name" : "a_0", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "a","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 1,"step" : 1},{"low" : 0,"up" : 3,"step" : 1}]}]}]} , 
+ 	{ "Name" : "a_1", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "a","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 2,"up" : 3,"step" : 1},{"low" : 0,"up" : 3,"step" : 1}]}]}]} , 
+ 	{ "Name" : "a_2", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "a","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 4,"up" : 5,"step" : 1},{"low" : 0,"up" : 3,"step" : 1}]}]}]} , 
+ 	{ "Name" : "a_3", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "a","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 6,"up" : 7,"step" : 1},{"low" : 0,"up" : 3,"step" : 1}]}]}]} , 
+ 	{ "Name" : "a_4", "interface" : "bram", "bitwidth" : 32, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "a","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 8,"up" : 9,"step" : 1},{"low" : 0,"up" : 3,"step" : 1}]}]}]} , 
+ 	{ "Name" : "a_5", "interface" : "bram", "bitwidth" : 32, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "a","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 10,"up" : 11,"step" : 1},{"low" : 0,"up" : 3,"step" : 1}]}]}]} ]}
 # RTL Port declarations: 
 set portNum 48
 set portList { 
@@ -131,7 +131,7 @@ set NewPortList {[
  	{ "name": "a_5_Rst_A", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "a_5", "role": "Rst_A" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8"],
 		"CDFG" : "matrixmul",
 		"VariableLatency" : "1",
 		"AlignedPipeline" : "0",
@@ -146,18 +146,20 @@ set RtlHierarchyInfo {[
 		{"Name" : "a_3", "Type" : "Bram", "Direction" : "I"},
 		{"Name" : "a_4", "Type" : "Bram", "Direction" : "O"},
 		{"Name" : "a_5", "Type" : "Bram", "Direction" : "O"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matrixmul_fadd_32bkb_U1", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matrixmul_fmul_32cud_U2", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matrixmul_mux_42_dEe_U3", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matrixmul_mux_42_dEe_U4", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matrixmul_mux_42_dEe_U5", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matrixmul_mux_42_dEe_U6", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matrixmul_mux_42_bkb_U1", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matrixmul_mul_32scud_U2", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matrixmul_mux_42_bkb_U3", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matrixmul_mux_42_bkb_U4", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matrixmul_mux_42_bkb_U5", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matrixmul_mul_32scud_U6", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matrixmul_mul_32scud_U7", "Parent" : "0"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matrixmul_mul_32scud_U8", "Parent" : "0"}]}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "88", "Max" : "88"}
-	, {"Name" : "Interval", "Min" : "89", "Max" : "89"}
+	{"Name" : "Latency", "Min" : "73", "Max" : "73"}
+	, {"Name" : "Interval", "Min" : "74", "Max" : "74"}
 ]}
 
 set Spec2ImplPortList { 

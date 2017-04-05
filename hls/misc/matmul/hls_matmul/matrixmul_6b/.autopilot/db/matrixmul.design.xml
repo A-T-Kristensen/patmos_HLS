@@ -13,30 +13,30 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>1.25</ClockUncertainty>
-<EstimatedClockPeriod>8.52</EstimatedClockPeriod>
+<EstimatedClockPeriod>8.05</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>88</Best-caseLatency>
-<Average-caseLatency>88</Average-caseLatency>
-<Worst-caseLatency>88</Worst-caseLatency>
-<PipelineInitiationInterval>89</PipelineInitiationInterval>
+<Best-caseLatency>73</Best-caseLatency>
+<Average-caseLatency>73</Average-caseLatency>
+<Worst-caseLatency>73</Worst-caseLatency>
+<PipelineInitiationInterval>74</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <L_col>
 <Name>L_col</Name>
 <TripCount>16</TripCount>
-<Latency>86</Latency>
+<Latency>71</Latency>
 <PipelineII>4</PipelineII>
-<PipelineDepth>27</PipelineDepth>
+<PipelineDepth>12</PipelineDepth>
 </L_col>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<DSP48E>5</DSP48E>
-<FF>1525</FF>
-<LUT>2886</LUT>
+<DSP48E>16</DSP48E>
+<FF>1081</FF>
+<LUT>2377</LUT>
 <BRAM_18K>0</BRAM_18K>
 </Resources>
 </AreaEstimates>
@@ -117,7 +117,7 @@
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_0_EN_A</name>
@@ -129,7 +129,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_0_WEN_A</name>
@@ -141,7 +141,7 @@
 <Dir>out</Dir>
 <Bits>4</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_0_Din_A</name>
@@ -153,7 +153,7 @@
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_0_Dout_A</name>
@@ -165,7 +165,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_0_Clk_A</name>
@@ -177,7 +177,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_0_Rst_A</name>
@@ -189,7 +189,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_1_Addr_A</name>
@@ -201,7 +201,7 @@
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_1_EN_A</name>
@@ -213,7 +213,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_1_WEN_A</name>
@@ -225,7 +225,7 @@
 <Dir>out</Dir>
 <Bits>4</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_1_Din_A</name>
@@ -237,7 +237,7 @@
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_1_Dout_A</name>
@@ -249,7 +249,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_1_Clk_A</name>
@@ -261,7 +261,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_1_Rst_A</name>
@@ -273,7 +273,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_2_Addr_A</name>
@@ -285,7 +285,7 @@
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_2_EN_A</name>
@@ -297,7 +297,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_2_WEN_A</name>
@@ -309,7 +309,7 @@
 <Dir>out</Dir>
 <Bits>4</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_2_Din_A</name>
@@ -321,7 +321,7 @@
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_2_Dout_A</name>
@@ -333,7 +333,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_2_Clk_A</name>
@@ -345,7 +345,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_2_Rst_A</name>
@@ -357,7 +357,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_3_Addr_A</name>
@@ -369,7 +369,7 @@
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_3_EN_A</name>
@@ -381,7 +381,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_3_WEN_A</name>
@@ -393,7 +393,7 @@
 <Dir>out</Dir>
 <Bits>4</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_3_Din_A</name>
@@ -405,7 +405,7 @@
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_3_Dout_A</name>
@@ -417,7 +417,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_3_Clk_A</name>
@@ -429,7 +429,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_3_Rst_A</name>
@@ -441,7 +441,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_4_Addr_A</name>
@@ -453,7 +453,7 @@
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_4_EN_A</name>
@@ -465,7 +465,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_4_WEN_A</name>
@@ -477,7 +477,7 @@
 <Dir>out</Dir>
 <Bits>4</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_4_Din_A</name>
@@ -489,7 +489,7 @@
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_4_Dout_A</name>
@@ -501,7 +501,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_4_Clk_A</name>
@@ -513,7 +513,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_4_Rst_A</name>
@@ -525,7 +525,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_5_Addr_A</name>
@@ -537,7 +537,7 @@
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_5_EN_A</name>
@@ -549,7 +549,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_5_WEN_A</name>
@@ -561,7 +561,7 @@
 <Dir>out</Dir>
 <Bits>4</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_5_Din_A</name>
@@ -573,7 +573,7 @@
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_5_Dout_A</name>
@@ -585,7 +585,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_5_Clk_A</name>
@@ -597,7 +597,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>a_5_Rst_A</name>
@@ -609,7 +609,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 </InterfaceSummary>
 </Module>

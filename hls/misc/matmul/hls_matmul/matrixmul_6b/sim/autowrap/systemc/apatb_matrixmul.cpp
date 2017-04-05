@@ -109,10 +109,10 @@ class INTER_TCL_FILE {
 };
 
 extern void matrixmul (
-float a[12][4]);
+int a[12][4]);
 
 void AESL_WRAP_matrixmul (
-float a[12][4])
+int a[12][4])
 {
 	refine_signal_handler();
 	fstream wrapc_switch_file_token;
@@ -251,11 +251,11 @@ float a[12][4])
 									// ori_name               : a[i_0][i_1]
 									// sub_1st_elem           : 0 0
 									// ori_name_1st_elem      : a[0][0]
-									// output_left_conversion : *(int*)&a[i_0][i_1]
+									// output_left_conversion : a[i_0][i_1]
 									// output_type_conversion : (a_lv0_8_9_1_lv1_0_3_1[hls_map_index++]).to_uint64()
 									if (&(a[0][0]) != NULL) // check the null address if the c port is array or others
 									{
-										*(int*)&a[i_0][i_1] = (a_lv0_8_9_1_lv1_0_3_1[hls_map_index++]).to_uint64();
+										a[i_0][i_1] = (a_lv0_8_9_1_lv1_0_3_1[hls_map_index++]).to_uint64();
 									}
 								}
 							}
@@ -392,11 +392,11 @@ float a[12][4])
 									// ori_name               : a[i_0][i_1]
 									// sub_1st_elem           : 0 0
 									// ori_name_1st_elem      : a[0][0]
-									// output_left_conversion : *(int*)&a[i_0][i_1]
+									// output_left_conversion : a[i_0][i_1]
 									// output_type_conversion : (a_lv0_10_11_1_lv1_0_3_1[hls_map_index++]).to_uint64()
 									if (&(a[0][0]) != NULL) // check the null address if the c port is array or others
 									{
-										*(int*)&a[i_0][i_1] = (a_lv0_10_11_1_lv1_0_3_1[hls_map_index++]).to_uint64();
+										a[i_0][i_1] = (a_lv0_10_11_1_lv1_0_3_1[hls_map_index++]).to_uint64();
 									}
 								}
 							}
@@ -474,11 +474,11 @@ float a[12][4])
 							// sub_1st_elem          : 0 0
 							// ori_name_1st_elem     : a[0][0]
 							// regulate_c_name       : a
-							// input_type_conversion : *(int*)&a[i_0][i_1]
+							// input_type_conversion : a[i_0][i_1]
 							if (&(a[0][0]) != NULL) // check the null address if the c port is array or others
 							{
 								sc_lv<32> a_tmp_mem;
-								a_tmp_mem = *(int*)&a[i_0][i_1];
+								a_tmp_mem = a[i_0][i_1];
 								a_0_tvin_wrapc_buffer[hls_map_index++].range(31, 0) = a_tmp_mem.range(31, 0);
 							}
 						}
@@ -525,11 +525,11 @@ float a[12][4])
 							// sub_1st_elem          : 0 0
 							// ori_name_1st_elem     : a[0][0]
 							// regulate_c_name       : a
-							// input_type_conversion : *(int*)&a[i_0][i_1]
+							// input_type_conversion : a[i_0][i_1]
 							if (&(a[0][0]) != NULL) // check the null address if the c port is array or others
 							{
 								sc_lv<32> a_tmp_mem;
-								a_tmp_mem = *(int*)&a[i_0][i_1];
+								a_tmp_mem = a[i_0][i_1];
 								a_1_tvin_wrapc_buffer[hls_map_index++].range(31, 0) = a_tmp_mem.range(31, 0);
 							}
 						}
@@ -576,11 +576,11 @@ float a[12][4])
 							// sub_1st_elem          : 0 0
 							// ori_name_1st_elem     : a[0][0]
 							// regulate_c_name       : a
-							// input_type_conversion : *(int*)&a[i_0][i_1]
+							// input_type_conversion : a[i_0][i_1]
 							if (&(a[0][0]) != NULL) // check the null address if the c port is array or others
 							{
 								sc_lv<32> a_tmp_mem;
-								a_tmp_mem = *(int*)&a[i_0][i_1];
+								a_tmp_mem = a[i_0][i_1];
 								a_2_tvin_wrapc_buffer[hls_map_index++].range(31, 0) = a_tmp_mem.range(31, 0);
 							}
 						}
@@ -627,11 +627,11 @@ float a[12][4])
 							// sub_1st_elem          : 0 0
 							// ori_name_1st_elem     : a[0][0]
 							// regulate_c_name       : a
-							// input_type_conversion : *(int*)&a[i_0][i_1]
+							// input_type_conversion : a[i_0][i_1]
 							if (&(a[0][0]) != NULL) // check the null address if the c port is array or others
 							{
 								sc_lv<32> a_tmp_mem;
-								a_tmp_mem = *(int*)&a[i_0][i_1];
+								a_tmp_mem = a[i_0][i_1];
 								a_3_tvin_wrapc_buffer[hls_map_index++].range(31, 0) = a_tmp_mem.range(31, 0);
 							}
 						}
@@ -678,11 +678,11 @@ float a[12][4])
 							// sub_1st_elem          : 0 0
 							// ori_name_1st_elem     : a[0][0]
 							// regulate_c_name       : a
-							// input_type_conversion : *(int*)&a[i_0][i_1]
+							// input_type_conversion : a[i_0][i_1]
 							if (&(a[0][0]) != NULL) // check the null address if the c port is array or others
 							{
 								sc_lv<32> a_tmp_mem;
-								a_tmp_mem = *(int*)&a[i_0][i_1];
+								a_tmp_mem = a[i_0][i_1];
 								a_4_tvin_wrapc_buffer[hls_map_index++].range(31, 0) = a_tmp_mem.range(31, 0);
 							}
 						}
@@ -729,11 +729,11 @@ float a[12][4])
 							// sub_1st_elem          : 0 0
 							// ori_name_1st_elem     : a[0][0]
 							// regulate_c_name       : a
-							// input_type_conversion : *(int*)&a[i_0][i_1]
+							// input_type_conversion : a[i_0][i_1]
 							if (&(a[0][0]) != NULL) // check the null address if the c port is array or others
 							{
 								sc_lv<32> a_tmp_mem;
-								a_tmp_mem = *(int*)&a[i_0][i_1];
+								a_tmp_mem = a[i_0][i_1];
 								a_5_tvin_wrapc_buffer[hls_map_index++].range(31, 0) = a_tmp_mem.range(31, 0);
 							}
 						}
@@ -787,11 +787,11 @@ float a[12][4])
 							// sub_1st_elem          : 0 0
 							// ori_name_1st_elem     : a[0][0]
 							// regulate_c_name       : a
-							// input_type_conversion : *(int*)&a[i_0][i_1]
+							// input_type_conversion : a[i_0][i_1]
 							if (&(a[0][0]) != NULL) // check the null address if the c port is array or others
 							{
 								sc_lv<32> a_tmp_mem;
-								a_tmp_mem = *(int*)&a[i_0][i_1];
+								a_tmp_mem = a[i_0][i_1];
 								a_4_tvout_wrapc_buffer[hls_map_index++].range(31, 0) = a_tmp_mem.range(31, 0);
 							}
 						}
@@ -838,11 +838,11 @@ float a[12][4])
 							// sub_1st_elem          : 0 0
 							// ori_name_1st_elem     : a[0][0]
 							// regulate_c_name       : a
-							// input_type_conversion : *(int*)&a[i_0][i_1]
+							// input_type_conversion : a[i_0][i_1]
 							if (&(a[0][0]) != NULL) // check the null address if the c port is array or others
 							{
 								sc_lv<32> a_tmp_mem;
-								a_tmp_mem = *(int*)&a[i_0][i_1];
+								a_tmp_mem = a[i_0][i_1];
 								a_5_tvout_wrapc_buffer[hls_map_index++].range(31, 0) = a_tmp_mem.range(31, 0);
 							}
 						}

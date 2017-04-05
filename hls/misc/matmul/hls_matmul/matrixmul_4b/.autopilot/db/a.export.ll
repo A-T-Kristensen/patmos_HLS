@@ -1,12 +1,13 @@
-; ModuleID = '/home/patmos/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_4b/.autopilot/db/a.o.2.bc'
+; ModuleID = '/home/andreas/github/bachelor_project_HLS/hls/misc/matmul/hls_matmul/matrixmul_4b/.autopilot/db/a.o.2.bc'
 target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
 target triple = "x86_64-unknown-linux-gnu"
 
 @matrixmul_str = internal unnamed_addr constant [10 x i8] c"matrixmul\00"
 @L_col_str = internal unnamed_addr constant [6 x i8] c"L_col\00"
-@p_str4 = private unnamed_addr constant [4 x i8] c"col\00", align 1
-@p_str3 = private unnamed_addr constant [12 x i8] c"RAM_1P_BRAM\00", align 1
-@p_str2 = private unnamed_addr constant [5 x i8] c"bram\00", align 1
+@p_str5 = private unnamed_addr constant [4 x i8] c"col\00", align 1
+@p_str4 = private unnamed_addr constant [12 x i8] c"RAM_1P_BRAM\00", align 1
+@p_str3 = private unnamed_addr constant [5 x i8] c"bram\00", align 1
+@p_str2 = private unnamed_addr constant [11 x i8] c"ap_ctrl_hs\00", align 1
 @p_str1 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
 
 define void @matrixmul([12 x i32]* %a_0, [12 x i32]* %a_1, [12 x i32]* %a_2, [12 x i32]* %a_3) {
@@ -35,8 +36,9 @@ define void @matrixmul([12 x i32]* %a_0, [12 x i32]* %a_1, [12 x i32]* %a_2, [12
   call void (...)* @_ssdm_op_SpecBitsMap([12 x i32]* %a_1), !map !20
   call void (...)* @_ssdm_op_SpecBitsMap([12 x i32]* %a_0), !map !26
   call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @matrixmul_str) nounwind
-  call void (...)* @_ssdm_op_SpecInterface([12 x i32]* %a_0, [12 x i32]* %a_1, [12 x i32]* %a_2, [12 x i32]* %a_3, [5 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
-  call void (...)* @_ssdm_op_SpecMemCore([12 x i32]* %a_0, [12 x i32]* %a_1, [12 x i32]* %a_2, [12 x i32]* %a_3, [1 x i8]* @p_str1, [12 x i8]* @p_str3, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+  call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+  call void (...)* @_ssdm_op_SpecInterface([12 x i32]* %a_0, [12 x i32]* %a_1, [12 x i32]* %a_2, [12 x i32]* %a_3, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+  call void (...)* @_ssdm_op_SpecMemCore([12 x i32]* %a_0, [12 x i32]* %a_1, [12 x i32]* %a_2, [12 x i32]* %a_3, [1 x i8]* @p_str1, [12 x i8]* @p_str4, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
   br label %.preheader7
 
 .preheader7:                                      ; preds = %.loopexit75, %0
@@ -52,7 +54,7 @@ define void @matrixmul([12 x i32]* %a_0, [12 x i32]* %a_1, [12 x i32]* %a_2, [12
   br i1 %exitcond_flatten, label %1, label %.preheader7.preheader
 
 .loopexit75:                                      ; preds = %branch19, %branch18
-  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str4, i32 %tmp_2) nounwind
+  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str5, i32 %tmp_2) nounwind
   %j_1 = add i3 %j_mid2, 1
   br label %.preheader7
 
@@ -110,8 +112,8 @@ define void @matrixmul([12 x i32]* %a_0, [12 x i32]* %a_1, [12 x i32]* %a_2, [12
   %tmp_19_cast = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %tmp_18, i2 0)
   %tmp_mid1_4 = icmp ugt i3 %i, -4
   %tmp_mid2_5 = select i1 %exitcond, i1 %tmp_mid1_4, i1 %tmp_s
-  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str4) nounwind
-  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str4) nounwind
+  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str5) nounwind
+  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str5) nounwind
   call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
   %tmp_5 = icmp eq i3 %j_mid2, 0
   %a_0_load = load i32* %a_0_addr, align 4
@@ -371,7 +373,7 @@ entry:
 !0 = metadata !{null, metadata !1, metadata !2, metadata !3, metadata !4, metadata !5, metadata !6}
 !1 = metadata !{metadata !"kernel_arg_addr_space", i32 1}
 !2 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none"}
-!3 = metadata !{metadata !"kernel_arg_type", metadata !"int [4]*"}
+!3 = metadata !{metadata !"kernel_arg_type", metadata !"mat_type [4]*"}
 !4 = metadata !{metadata !"kernel_arg_type_qual", metadata !""}
 !5 = metadata !{metadata !"kernel_arg_name", metadata !"a"}
 !6 = metadata !{metadata !"reqd_work_group_size", i32 1, i32 1, i32 1}

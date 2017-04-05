@@ -5,12 +5,12 @@
 # 
 # ==============================================================
 
-set ::env(LD_LIBRARY_PATH) /home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/fpo_v7_0:$::env(LD_LIBRARY_PATH)
+set ::env(LD_LIBRARY_PATH) /opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/fpo_v7_0:$::env(LD_LIBRARY_PATH)
 
-set ::env(LD_LIBRARY_PATH) /home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/opencv:$::env(LD_LIBRARY_PATH)
-set ::env(LD_LIBRARY_PATH) /home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/fft_v9_0:$::env(LD_LIBRARY_PATH)
-set ::env(LD_LIBRARY_PATH) /home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/fir_v7_0:$::env(LD_LIBRARY_PATH)
-set ::env(LD_LIBRARY_PATH) /home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/dds_v6_0:$::env(LD_LIBRARY_PATH)
+set ::env(LD_LIBRARY_PATH) /opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/opencv:$::env(LD_LIBRARY_PATH)
+set ::env(LD_LIBRARY_PATH) /opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/fft_v9_0:$::env(LD_LIBRARY_PATH)
+set ::env(LD_LIBRARY_PATH) /opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/fir_v7_0:$::env(LD_LIBRARY_PATH)
+set ::env(LD_LIBRARY_PATH) /opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/dds_v6_0:$::env(LD_LIBRARY_PATH)
 set ::env(LD_LIBRARY_PATH) /usr/lib/x86_64-linux-gnu:$::env(LD_LIBRARY_PATH)
 
 source check_sim.tcl

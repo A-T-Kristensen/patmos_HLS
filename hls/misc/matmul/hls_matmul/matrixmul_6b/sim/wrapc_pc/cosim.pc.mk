@@ -13,7 +13,7 @@ __SIM_DDS__ = 1
 
 TARGET := cosim.pc.exe
 
-AUTOPILOT_ROOT := /home/patmos/Xilinx/Vivado_HLS/2016.4
+AUTOPILOT_ROOT := /opt/Xilinx/Vivado_HLS/2016.4
 AUTOPILOT_MACH := lnx64
 
 ifdef COSIM_M32
@@ -26,7 +26,7 @@ ifdef AP_GCC_M32
 endif
 IFLAG += -fPIC
 ifndef AP_GCC_PATH
-  AP_GCC_PATH := /home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin
+  AP_GCC_PATH := /opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin
 endif
 
 IFLAG += -g
