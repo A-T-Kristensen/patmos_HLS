@@ -26,20 +26,17 @@
     Original source: Turbo C Programming for Engineering by Hyun Soo Ahn
 */
 
-/* TODO
- * replace minver_fabs here with the hls library function
- * rewrite block with infinite loop
-*/
-
 #include "minver.h"
 
-int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps)
+
+
+int minver_minver(mat_type minver_a[3][3], int side, mat_type eps)
 {
+
   int work[ 500 ], i, j, k, iw;
   int r = 0;
   mat_type w, wmax, pivot, api, w1;
-  mat_type minver_det;
-
+  mat_type minver_det;  
 
   if ( side < 2 || side > 500 || eps <= 0.0 )
     return ( 999 );
@@ -105,4 +102,97 @@ int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps)
     i++;
   }
   minver_det = w1;
+  return ( 0 );
+
+}
+
+/*
+    Initialization- and return-value-related functions
+*/
+
+void minver_init(mat_type minver_a[3][3])
+{
+  int i,j;
+  volatile int x = 0;
+
+  for ( i = 0; i < 3; i++ ) {
+    for ( j = 0; j < 3; j++ )
+      minver_a[ i ][ j ] += x;
+  }
+}
+
+int minver_return(mat_type minver_a_i[3][3])
+{
+  int i,j;
+  mat_type check_sum = 0;
+
+  for ( i = 0; i < 3; i++ ) {
+    for ( j = 0; j < 3; j++ )
+      check_sum += minver_a_i[ i ][ j ];
+  }
+  /* Avoid mat_type comparison */
+  return (int)(check_sum*100) != 48;
+}
+
+/*
+    Test the hwa
+*/
+
+int minver_main()
+{
+  int i, j;
+  mat_type eps;
+  eps = 1.0e-6;
+
+  mat_type  minver_a[3][3] = {
+    {3.0, -6.0,  7.0},
+    {9.0,  0.0, -5.0},
+    {5.0, -8.0,  6.0},
+  };
+  mat_type minver_b[3][3];
+  mat_type minver_c[3][3];
+  mat_type minver_aa[3][3];
+  mat_type minver_a_i[3][3];
+
+  minver_init(minver_a);  
+
+  for ( i = 0; i < 3; i++ ) {
+    for ( j = 0; j < 3; j++ )
+      minver_aa[i][j] = minver_a[i][j]; // Store original matrix
+  }
+
+  // Perform matrix inversion
+  // for this benchmark, it is enough to just check with the checksum
+  //minver_minver(minver_a, 3, eps ); 
+  minver_minver_hwa(minver_a, 3, eps );   
+
+  for ( i = 0; i < 3; i++ ) {
+    for ( j = 0; j < 3; j++ )
+      minver_a_i[ i ][ j ] = minver_a[ i ][ j ];
+  }
+
+  minver_mmul(minver_a, minver_b, minver_c, 3, 3, 3, 3 );
+
+  for ( i = 0; i < 3; i++ ) {
+    for ( j = 0; j < 3; j++ ) {
+      printf("%lf ", minver_c[i][j]);
+    }
+    printf("\n");
+  }
+
+  return minver_return(minver_a_i);
+}
+
+int main( void )
+{
+  int err_cnt = 0;
+
+  err_cnt = minver_main();
+
+  if (err_cnt)
+    printf("ERROR: %d", err_cnt);
+  else
+    printf("Test Passes:");
+  return err_cnt;  
+
 }
