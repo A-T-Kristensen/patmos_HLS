@@ -10,8 +10,8 @@ use ieee.std_logic_1164.all;
 
 entity filterbank_core_hfYi is
     generic (
-        ID         : integer := 3;
-        NUM_STAGE  : integer := 4;
+        ID         : integer := 1;
+        NUM_STAGE  : integer := 5;
         din0_WIDTH : integer := 32;
         din1_WIDTH : integer := 32;
         dout_WIDTH : integer := 32
@@ -28,7 +28,7 @@ end entity;
 
 architecture arch of filterbank_core_hfYi is
     --------------------- Component ---------------------
-    component filterbank_core_hwa_ap_fmul_2_max_dsp_32 is
+    component filterbank_core_hwa_ap_fadd_3_full_dsp_32 is
         port (
             aclk                 : in  std_logic;
             aclken               : in  std_logic;
@@ -53,7 +53,7 @@ architecture arch of filterbank_core_hfYi is
     signal din1_buf1 : std_logic_vector(din1_WIDTH-1 downto 0);
 begin
     --------------------- Instantiation -----------------
-    filterbank_core_hwa_ap_fmul_2_max_dsp_32_u : component filterbank_core_hwa_ap_fmul_2_max_dsp_32
+    filterbank_core_hwa_ap_fadd_3_full_dsp_32_u : component filterbank_core_hwa_ap_fadd_3_full_dsp_32
     port map (
         aclk                 => aclk,
         aclken               => aclken,

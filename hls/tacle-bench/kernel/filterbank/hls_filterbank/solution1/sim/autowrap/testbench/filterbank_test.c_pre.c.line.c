@@ -1,31 +1,31 @@
-#pragma line 1 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 1 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma line 1 "<built-in>"
 #pragma line 1 "<command-line>"
-#pragma line 1 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 1 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
-#pragma line 1 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank.h" 1
-#pragma empty_line
-#pragma empty_line
+#pragma line 1 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank.h" 1
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/ap_cint.h" 1
-#pragma line 62 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/ap_cint.h"
+#pragma empty_line
+#pragma empty_line
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/include/ap_cint.h" 1
+#pragma line 62 "/opt/Xilinx/Vivado_HLS/2016.4/include/ap_cint.h"
 #pragma line 1 "/usr/include/string.h" 1 3 4
 #pragma line 25 "/usr/include/string.h" 3 4
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 1 3 4
-#pragma line 339 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 3 4
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 1 3 4
+#pragma line 339 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 3 4
 #pragma line 1 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 1 3 4
 #pragma line 410 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 3 4
 #pragma line 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
 #pragma line 411 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 2 3 4
-#pragma line 340 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 2 3 4
-#pragma line 362 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 3 4
+#pragma line 340 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 2 3 4
+#pragma line 362 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 3 4
 #pragma line 1 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 1 3 4
 #pragma line 10 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 3 4
 #pragma line 1 "/usr/include/x86_64-linux-gnu/gnu/stubs-64.h" 1 3 4
 #pragma line 11 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 2 3 4
-#pragma line 363 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 2 3 4
+#pragma line 363 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 2 3 4
 #pragma line 26 "/usr/include/string.h" 2 3 4
 #pragma empty_line
 #pragma empty_line
@@ -33,8 +33,8 @@
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
-#pragma line 212 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 3 4
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+#pragma line 212 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 3 4
 typedef long unsigned int size_t;
 #pragma line 33 "/usr/include/string.h" 2 3 4
 #pragma empty_line
@@ -284,14 +284,14 @@ extern char *stpncpy (char *__restrict __dest,
      __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
 #pragma line 658 "/usr/include/string.h" 3 4
 #pragma empty_line
-#pragma line 63 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/ap_cint.h" 2
+#pragma line 63 "/opt/Xilinx/Vivado_HLS/2016.4/include/ap_cint.h" 2
 #pragma line 1 "/usr/include/stdio.h" 1 3 4
 #pragma line 29 "/usr/include/stdio.h" 3 4
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
 #pragma line 34 "/usr/include/stdio.h" 2 3 4
 #pragma empty_line
 #pragma line 1 "/usr/include/x86_64-linux-gnu/bits/types.h" 1 3 4
@@ -414,22 +414,22 @@ typedef struct _IO_FILE __FILE;
 #pragma line 31 "/usr/include/libio.h" 3 4
 #pragma line 1 "/usr/include/_G_config.h" 1 3 4
 #pragma line 15 "/usr/include/_G_config.h" 3 4
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
 #pragma line 16 "/usr/include/_G_config.h" 2 3 4
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 1 3 4
-#pragma line 57 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
-#pragma line 353 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 3 4
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 1 3 4
+#pragma line 57 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+#pragma line 353 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 3 4
 typedef unsigned int wint_t;
-#pragma line 58 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 2 3 4
+#pragma line 58 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 2 3 4
 #pragma empty_line
 #pragma line 1 "/usr/include/x86_64-linux-gnu/bits/wchar.h" 1 3 4
-#pragma line 60 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 2 3 4
-#pragma line 85 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
+#pragma line 60 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 2 3 4
+#pragma line 85 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
 typedef struct
 {
   int __count;
@@ -452,8 +452,8 @@ typedef struct
 } _G_fpos64_t;
 #pragma line 32 "/usr/include/libio.h" 2 3 4
 #pragma line 49 "/usr/include/libio.h" 3 4
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdarg.h" 1 3 4
-#pragma line 40 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdarg.h" 3 4
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdarg.h" 1 3 4
+#pragma line 40 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdarg.h" 3 4
 typedef __builtin_va_list __gnuc_va_list;
 #pragma line 50 "/usr/include/libio.h" 2 3 4
 #pragma line 144 "/usr/include/libio.h" 3 4
@@ -1051,13 +1051,13 @@ extern int ftrylockfile (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)
 extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__));
 #pragma line 942 "/usr/include/stdio.h" 3 4
 #pragma empty_line
-#pragma line 64 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/ap_cint.h" 2
-#pragma line 77 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/ap_cint.h"
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_apint.h" 1
-#pragma line 57 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_apint.h"
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.h" 1
-#pragma line 97 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.h"
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.def" 1
+#pragma line 64 "/opt/Xilinx/Vivado_HLS/2016.4/include/ap_cint.h" 2
+#pragma line 77 "/opt/Xilinx/Vivado_HLS/2016.4/include/ap_cint.h"
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_apint.h" 1
+#pragma line 57 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_apint.h"
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.h" 1
+#pragma line 97 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.h"
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.def" 1
 #pragma empty_line
 #pragma empty_line
 typedef int __attribute__ ((bitwidth(1))) int1;
@@ -2096,8 +2096,8 @@ typedef int __attribute__ ((bitwidth(1021))) int1021;
 typedef int __attribute__ ((bitwidth(1022))) int1022;
 typedef int __attribute__ ((bitwidth(1023))) int1023;
 typedef int __attribute__ ((bitwidth(1024))) int1024;
-#pragma line 98 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.h" 2
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt_ext.def" 1
+#pragma line 98 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.h" 2
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt_ext.def" 1
 #pragma empty_line
 #pragma empty_line
 typedef int __attribute__ ((bitwidth(1025))) int1025;
@@ -3124,9 +3124,9 @@ typedef int __attribute__ ((bitwidth(2045))) int2045;
 typedef int __attribute__ ((bitwidth(2046))) int2046;
 typedef int __attribute__ ((bitwidth(2047))) int2047;
 typedef int __attribute__ ((bitwidth(2048))) int2048;
-#pragma line 99 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.h" 2
-#pragma line 108 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.h"
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.def" 1
+#pragma line 99 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.h" 2
+#pragma line 108 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.h"
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.def" 1
 #pragma empty_line
 #pragma empty_line
 typedef unsigned int __attribute__ ((bitwidth(1))) uint1;
@@ -4165,8 +4165,8 @@ typedef unsigned int __attribute__ ((bitwidth(1021))) uint1021;
 typedef unsigned int __attribute__ ((bitwidth(1022))) uint1022;
 typedef unsigned int __attribute__ ((bitwidth(1023))) uint1023;
 typedef unsigned int __attribute__ ((bitwidth(1024))) uint1024;
-#pragma line 109 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.h" 2
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt_ext.def" 1
+#pragma line 109 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.h" 2
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt_ext.def" 1
 #pragma empty_line
 #pragma empty_line
 typedef unsigned int __attribute__ ((bitwidth(1025))) uint1025;
@@ -5193,13 +5193,13 @@ typedef unsigned int __attribute__ ((bitwidth(2045))) uint2045;
 typedef unsigned int __attribute__ ((bitwidth(2046))) uint2046;
 typedef unsigned int __attribute__ ((bitwidth(2047))) uint2047;
 typedef unsigned int __attribute__ ((bitwidth(2048))) uint2048;
-#pragma line 110 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.h" 2
-#pragma line 131 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.h"
+#pragma line 110 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.h" 2
+#pragma line 131 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_dt.h"
 typedef int __attribute__ ((bitwidth(64))) int64;
 typedef unsigned int __attribute__ ((bitwidth(64))) uint64;
-#pragma line 58 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_apint.h" 2
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_ssdm_bits.h" 1
-#pragma line 64 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_ssdm_bits.h"
+#pragma line 58 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_apint.h" 2
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_ssdm_bits.h" 1
+#pragma line 64 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_ssdm_bits.h"
 #pragma line 1 "/usr/include/assert.h" 1 3 4
 #pragma line 66 "/usr/include/assert.h" 3 4
 #pragma empty_line
@@ -5222,7 +5222,7 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 65 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_ssdm_bits.h" 2
+#pragma line 65 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_ssdm_bits.h" 2
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
@@ -5232,8 +5232,8 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 #pragma empty_line
 #pragma line 1 "/usr/include/stdlib.h" 1 3 4
 #pragma line 32 "/usr/include/stdlib.h" 3 4
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
-#pragma line 324 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 3 4
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+#pragma line 324 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 3 4
 typedef int wchar_t;
 #pragma line 33 "/usr/include/stdlib.h" 2 3 4
 #pragma empty_line
@@ -5485,7 +5485,7 @@ typedef __clockid_t clockid_t;
 typedef __timer_t timer_t;
 #pragma line 133 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
 #pragma line 146 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
 #pragma line 147 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
 #pragma empty_line
 #pragma empty_line
@@ -5975,7 +5975,7 @@ extern void cfree (void *__ptr) __attribute__ ((__nothrow__ , __leaf__));
 #pragma empty_line
 #pragma line 1 "/usr/include/alloca.h" 1 3 4
 #pragma line 24 "/usr/include/alloca.h" 3 4
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
 #pragma line 25 "/usr/include/alloca.h" 2 3 4
 #pragma empty_line
 #pragma empty_line
@@ -6213,24 +6213,32 @@ extern int getloadavg (double __loadavg[], int __nelem)
 #pragma line 955 "/usr/include/stdlib.h" 2 3 4
 #pragma line 967 "/usr/include/stdlib.h" 3 4
 #pragma empty_line
-#pragma line 73 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_ssdm_bits.h" 2
-#pragma line 59 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_apint.h" 2
-#pragma line 78 "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/ap_cint.h" 2
-#pragma line 7 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank.h" 2
-#pragma line 17 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank.h"
+#pragma line 73 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_ssdm_bits.h" 2
+#pragma line 59 "/opt/Xilinx/Vivado_HLS/2016.4/include/etc/autopilot_apint.h" 2
+#pragma line 78 "/opt/Xilinx/Vivado_HLS/2016.4/include/ap_cint.h" 2
+#pragma line 7 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank.h" 2
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+typedef float vec_type;
+#pragma empty_line
+#pragma empty_line
 void filterbank_init( void );
 int filterbank_main( void );
 int filterbank_return( void );
-void filterbank_core_hwa( float r[ 256 ],
-  float y[ 256 ],
-  float H[ 8 ][ 32 ],
-  float F[ 8 ][ 32 ] );
+void filterbank_core_hwa( vec_type r[ 256 ],
+  vec_type y[ 256 ],
+  vec_type H[ 8 ][ 32 ],
+  vec_type F[ 8 ][ 32 ] );
 #pragma empty_line
-void filterbank_core_test( float r[ 256 ],
-  float y[ 256 ],
-  float H[ 8 ][ 32 ],
-  float F[ 8 ][ 32 ] );
-#pragma line 3 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c" 2
+void filterbank_core_test( vec_type r[ 256 ],
+  vec_type y[ 256 ],
+  vec_type H[ 8 ][ 32 ],
+  vec_type F[ 8 ][ 32 ] );
+#pragma line 3 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c" 2
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
@@ -6257,44 +6265,44 @@ int filterbank_return( void )
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-void filterbank_core_test( float r[ 256 ],
-  float y[ 256 ],
-  float H[ 8 ][ 32 ],
-  float F[ 8 ][ 32 ] )
+void filterbank_core_test( vec_type r[ 256 ],
+  vec_type y[ 256 ],
+  vec_type H[ 8 ][ 32 ],
+  vec_type F[ 8 ][ 32 ] )
 {
   int i, j, k;
 #pragma empty_line
 #pragma empty_line
-#pragma line 36 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 36 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 256 max 256
-#pragma line 36 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 36 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
   for ( i = 0; i < 256; i++ )
     y[ i ] = 0;
 #pragma empty_line
 #pragma empty_line
-#pragma line 40 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 40 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 8 max 8
-#pragma line 40 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 40 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
   for ( i = 0; i < 8; i++ ) {
-   float Vect_H[ 256 ];
-   float Vect_Dn[ ( int ) 256 / 8 ];
-   float Vect_Up[ 256 ];
-   float Vect_F[ 256 ];
+   vec_type Vect_H[ 256 ];
+   vec_type Vect_Dn[ ( int ) 256 / 8 ];
+   vec_type Vect_Up[ 256 ];
+   vec_type Vect_F[ 256 ];
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 48 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 48 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 256 max 256
-#pragma line 48 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 48 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
     for ( j = 0; j < 256; j++ ) {
       Vect_H[ j ] = 0;
 #pragma empty_line
-#pragma line 51 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 51 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 1 max 32
-#pragma line 51 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 51 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
       for ( k = 0; ( ( k < 32 ) & ( ( j - k ) >= 0 ) ); k++ )
         Vect_H[ j ] += H[ i ][ k ] * r[ j - k ];
@@ -6302,41 +6310,41 @@ void filterbank_core_test( float r[ 256 ],
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 57 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 57 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 32 max 32
-#pragma line 57 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 57 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
     for ( j = 0; j < 256 / 8; j++ )
       Vect_Dn[ j ] = Vect_H[ j * 8 ];
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 62 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 62 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 256 max 256
-#pragma line 62 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 62 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
     for ( j = 0; j < 256; j++ )
       Vect_Up[ j ] = 0;
 #pragma empty_line
-#pragma line 65 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 65 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 32 max 32
-#pragma line 65 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 65 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
     for ( j = 0; j < 256 / 8; j++ )
       Vect_Up[ j * 8 ] = Vect_Dn[ j ];
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 70 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 70 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 256 max 256
-#pragma line 70 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 70 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
     for ( j = 0; j < 256; j++ ) {
       Vect_F[ j ] = 0;
 #pragma empty_line
-#pragma line 73 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 73 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 1 max 32
-#pragma line 73 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 73 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
       for ( k = 0; ( ( k < 32 ) & ( ( j - k ) >= 0 ) ); k++ )
         Vect_F[ j ] += F[ i ][ k ] * Vect_Up[ j - k ];
@@ -6345,9 +6353,9 @@ void filterbank_core_test( float r[ 256 ],
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 80 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 80 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 256 max 256
-#pragma line 80 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 80 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
     for ( j = 0; j < 256; j++ )
       y[ j ] += Vect_F[ j ];
@@ -6356,39 +6364,39 @@ void filterbank_core_test( float r[ 256 ],
 #pragma empty_line
 #pragma empty_line
 int
-#pragma line 87 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 87 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma entrypoint
-#pragma line 87 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 87 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
  filterbank_main( void )
 {
- float r[ 256 ] = {0};
- float y_sw[ 256 ] = {0};
- float y_hw[ 256 ] = {0};
- float H[ 8 ][ 32 ] = {0};
- float F[ 8 ][ 32 ] = {0};
+ vec_type r[ 256 ] = {0};
+ vec_type y_sw[ 256 ] = {0};
+ vec_type y_hw[ 256 ] = {0};
+ vec_type H[ 8 ][ 32 ] = {0};
+ vec_type F[ 8 ][ 32 ] = {0};
   int err_cnt = 0;
 #pragma empty_line
   int i, j;
 #pragma empty_line
 #pragma empty_line
-#pragma line 98 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 98 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 256 max 256
-#pragma line 98 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 98 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
   for ( i = 0; i < 256; i++ )
     r[ i ] = i + 1;
 #pragma empty_line
 #pragma empty_line
-#pragma line 102 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 102 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 32 max 32
-#pragma line 102 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 102 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
   for ( i = 0; i < 32; i++ ) {
 #pragma empty_line
 #pragma empty_line
-#pragma line 105 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 105 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 8 max 8
-#pragma line 105 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 105 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
     for ( j = 0; j < 8; j++ ) {
       H[ j ][ i ] = i * 32 + j * 8 + j + i + j + 1;
@@ -6400,9 +6408,9 @@ int
   filterbank_init();
 #pragma empty_line
 #pragma empty_line
-#pragma line 115 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 115 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 2 max 2
-#pragma line 115 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 115 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
   while ( filterbank_numiters-- > 0 )
     filterbank_core_test( r, y_sw, H, F );

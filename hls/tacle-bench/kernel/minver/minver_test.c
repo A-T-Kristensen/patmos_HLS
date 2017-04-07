@@ -28,8 +28,6 @@
 
 #include "minver.h"
 
-
-
 int minver_minver(mat_type minver_a[3][3], int side, mat_type eps)
 {
 
@@ -40,9 +38,12 @@ int minver_minver(mat_type minver_a[3][3], int side, mat_type eps)
 
   if ( side < 2 || side > 500 || eps <= 0.0 )
     return ( 999 );
+
   w1 = 1.0;
+
   for ( i = 0; i < side; i++ )
     work[ i ] = i;
+
   for ( k = 0; k < side; k++ ) {
     wmax = 0.0;
     for ( i = k; i < side; i++ ) {
@@ -52,12 +53,14 @@ int minver_minver(mat_type minver_a[3][3], int side, mat_type eps)
         r = i;
       }
     }
+
     pivot = minver_a[ r ][ k ];
     api = minver_fabs( pivot );
     if ( api <= eps ) {
       minver_det = w1;
       return ( 1 );
     }
+
     w1 *= pivot;
     if ( r != k ) {
       w1 = -w;
@@ -70,8 +73,10 @@ int minver_minver(mat_type minver_a[3][3], int side, mat_type eps)
         minver_a[ r ][ j ] = w;
       }
     }
+
     for ( i = 0; i < side; i++ )
       minver_a[ k ][ i ] /= pivot;
+
     for ( i = 0; i < side; i++ ) {
       if ( i != k ) {
         w = minver_a[ i ][ k ];
@@ -86,6 +91,7 @@ int minver_minver(mat_type minver_a[3][3], int side, mat_type eps)
     }
     minver_a[ k ][ k ] = 1.0 / pivot;
   }
+
   for ( i = 0; i < side; ) {
     while ( 1 ) {
       k = work[ i ];
@@ -157,6 +163,13 @@ int minver_main()
   minver_init(minver_a);  
 
   for ( i = 0; i < 3; i++ ) {
+    for ( j = 0; j < 3; j++ ) {
+      printf("%lf ", minver_c[i][j]);
+    }
+    printf("\n");
+  }
+
+  for ( i = 0; i < 3; i++ ) {
     for ( j = 0; j < 3; j++ )
       minver_aa[i][j] = minver_a[i][j]; // Store original matrix
   }
@@ -171,7 +184,15 @@ int minver_main()
       minver_a_i[ i ][ j ] = minver_a[ i ][ j ];
   }
 
-  minver_mmul(minver_a, minver_b, minver_c, 3, 3, 3, 3 );
+  // This only gives out
+  minver_mmul(minver_a_i, minver_b, minver_c, 3, 3, 3, 3 );
+
+  for ( i = 0; i < 3; i++ ) {
+    for ( j = 0; j < 3; j++ ) {
+      printf("%lf ", minver_a_i[i][j]);
+    }
+    printf("\n");
+  }
 
   for ( i = 0; i < 3; i++ ) {
     for ( j = 0; j < 3; j++ ) {

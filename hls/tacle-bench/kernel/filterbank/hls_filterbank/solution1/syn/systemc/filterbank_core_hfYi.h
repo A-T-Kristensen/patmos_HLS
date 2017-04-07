@@ -7,7 +7,7 @@
 
 #ifndef __filterbank_core_hfYi__HH__
 #define __filterbank_core_hfYi__HH__
-#include "ACMP_fmul.h"
+#include "ACMP_fadd.h"
 #include <systemc>
 
 template<
@@ -26,15 +26,15 @@ SC_MODULE(filterbank_core_hfYi) {
 
 
 
-    ACMP_fmul<ID, 4, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_fmul_U;
+    ACMP_fadd<ID, 5, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_fadd_U;
 
-    SC_CTOR(filterbank_core_hfYi):  ACMP_fmul_U ("ACMP_fmul_U") {
-        ACMP_fmul_U.clk(clk);
-        ACMP_fmul_U.reset(reset);
-        ACMP_fmul_U.ce(ce);
-        ACMP_fmul_U.din0(din0);
-        ACMP_fmul_U.din1(din1);
-        ACMP_fmul_U.dout(dout);
+    SC_CTOR(filterbank_core_hfYi):  ACMP_fadd_U ("ACMP_fadd_U") {
+        ACMP_fadd_U.clk(clk);
+        ACMP_fadd_U.reset(reset);
+        ACMP_fadd_U.ce(ce);
+        ACMP_fadd_U.din0(din0);
+        ACMP_fadd_U.din1(din1);
+        ACMP_fadd_U.dout(dout);
 
     }
 

@@ -39,7 +39,7 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 2;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 1327944;
+parameter LATENCY_ESTIMATION = 822131;
 parameter LENGTH_r = 256;
 parameter LENGTH_y = 256;
 parameter LENGTH_H = 256;
@@ -317,10 +317,11 @@ assign bramy_Clk_A = y_CLK_A;
 assign bramy_Rst_A = y_RST_A;
 assign bramy_Addr_A = y_ADDR_A;
 assign bramy_EN_A = y_EN_A;
+assign y_DOUT_A = bramy_Dout_A;
 assign bramy_WEN_A = y_WEN_A;
 assign bramy_Din_A = y_DIN_A;
-assign bramy_ready= ready_initial | bramy_done;
-assign bramy_done =    AESL_done_delay;
+assign bramy_ready= ready;
+assign bramy_done = interface_done;
 
 
 //------------------------bramH Instantiation--------------

@@ -29,52 +29,47 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/.apc/.src</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/.apc/.tb</location>
-		</link>
-		<link>
-			<name>.reference/ap_cint.h</name>
-			<type>1</type>
-			<location>/home/patmos/Xilinx/Vivado_HLS/2016.4/include/ap_cint.h</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/.tcls</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/filterbank.c</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank.c</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank.c</location>
 		</link>
 		<link>
 			<name>source/filterbank.h</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank.h</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank.h</location>
 		</link>
 		<link>
 			<name>testbench/filterbank_test.c</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/solution1.directive</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/directives.tcl</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/script.tcl</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -8,7 +8,7 @@
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
 /* autopilot_ssdm_op.h*/
 /*
 #-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
@@ -61,7 +61,7 @@
  *
  * $Id$
  */
-#pragma line 283 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+#pragma line 283 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
 /*#define AP_SPEC_ATTR __attribute__ ((pure))*/
 #pragma empty_line
 #pragma empty_line
@@ -188,7 +188,7 @@
 #pragma empty_line
 /*#define _ssdm_op_WaitUntil(X) while (!(X)) _ssdm_op_Wait(1);
 #define _ssdm_op_Delayed(X) X */
-#pragma line 421 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+#pragma line 421 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 #pragma line 6 "<command line>" 2
 #pragma line 1 "<built-in>" 2
@@ -228,7 +228,7 @@
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_cint.h" 1
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_cint.h" 1
 /* ap_cint.h */
 /*
 #-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
@@ -281,7 +281,7 @@
  *
  * $Id$
  */
-#pragma line 62 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_cint.h"
+#pragma line 62 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_cint.h"
 #pragma line 1 "/usr/include/string.h" 1 3 4
 /* Copyright (C) 1991-2016 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
@@ -826,7 +826,7 @@
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
 /*===---- stddef.h - Basic type definitions --------------------------------===
  *
  * Copyright (c) 2008 Eli Friedman
@@ -867,7 +867,7 @@ typedef __typeof__(sizeof(int)) size_t;
 #pragma empty_line
 #pragma empty_line
 typedef int wchar_t;
-#pragma line 56 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+#pragma line 56 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
 /* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
 __WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
 #pragma line 33 "/usr/include/string.h" 2 3 4
@@ -1168,7 +1168,7 @@ extern char *__stpncpy (char *__restrict __dest,
 extern char *stpncpy (char *__restrict __dest,
         const char *__restrict __src, size_t __n)
      __attribute__ ((__nothrow__ )) __attribute__ ((__nonnull__ (1, 2)));
-#pragma line 63 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_cint.h" 2
+#pragma line 63 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_cint.h" 2
 #pragma line 1 "/usr/include/stdio.h" 1 3 4
 /* Define ISO C stdio on top of C++ iostreams.
    Copyright (C) 1991-2016 Free Software Foundation, Inc.
@@ -1192,7 +1192,7 @@ extern char *stpncpy (char *__restrict __dest,
  *	ISO C99 Standard: 7.19 Input/output	<stdio.h>
  */
 #pragma line 33 "/usr/include/stdio.h" 3 4
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
 /*===---- stddef.h - Basic type definitions --------------------------------===
  *
  * Copyright (c) 2008 Eli Friedman
@@ -1217,7 +1217,7 @@ extern char *stpncpy (char *__restrict __dest,
  *
  *===-----------------------------------------------------------------------===
  */
-#pragma line 56 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+#pragma line 56 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
 /* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
 __WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
 #pragma line 34 "/usr/include/stdio.h" 2 3 4
@@ -1491,7 +1491,7 @@ typedef struct _IO_FILE __FILE;
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
 /*===---- stddef.h - Basic type definitions --------------------------------===
  *
  * Copyright (c) 2008 Eli Friedman
@@ -1516,7 +1516,7 @@ typedef struct _IO_FILE __FILE;
  *
  *===-----------------------------------------------------------------------===
  */
-#pragma line 56 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+#pragma line 56 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
 /* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
 __WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
 #pragma line 16 "/usr/include/_G_config.h" 2 3 4
@@ -1597,7 +1597,7 @@ typedef struct
 /* This define avoids name pollution if we're using GNU stdarg.h */
 #pragma empty_line
 #pragma empty_line
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdarg.h" 1 3 4
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdarg.h" 1 3 4
 /*===---- stdarg.h - Variable argument handling ----------------------------===
  *
  * Copyright (c) 2008 Eli Friedman
@@ -2479,9 +2479,9 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ ));
 #pragma line 930 "/usr/include/stdio.h" 3 4
 /* If we are compiling with optimizing read this file.  It contains
    several optimizing inline functions and macros.  */
-#pragma line 64 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_cint.h" 2
-#pragma line 77 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_cint.h"
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_apint.h" 1
+#pragma line 64 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_cint.h" 2
+#pragma line 77 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_cint.h"
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_apint.h" 1
 /* autopilot_apint.h*/
 /*
 #-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
@@ -2539,7 +2539,7 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ ));
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h" 1
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h" 1
 /*-*-c++-*-*/
 /* autopilot_dt.h: defines all bit-accurate data types.*/
 /*
@@ -2593,8 +2593,8 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ ));
  *
  * $Id$
  */
-#pragma line 97 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h"
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.def" 1
+#pragma line 97 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h"
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.def" 1
 #pragma empty_line
 #pragma empty_line
 typedef int __attribute__ ((bitwidth(1))) int1;
@@ -3633,8 +3633,8 @@ typedef int __attribute__ ((bitwidth(1021))) int1021;
 typedef int __attribute__ ((bitwidth(1022))) int1022;
 typedef int __attribute__ ((bitwidth(1023))) int1023;
 typedef int __attribute__ ((bitwidth(1024))) int1024;
-#pragma line 98 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h" 2
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt_ext.def" 1
+#pragma line 98 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h" 2
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt_ext.def" 1
 #pragma empty_line
 #pragma empty_line
 typedef int __attribute__ ((bitwidth(1025))) int1025;
@@ -4661,9 +4661,9 @@ typedef int __attribute__ ((bitwidth(2045))) int2045;
 typedef int __attribute__ ((bitwidth(2046))) int2046;
 typedef int __attribute__ ((bitwidth(2047))) int2047;
 typedef int __attribute__ ((bitwidth(2048))) int2048;
-#pragma line 99 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h" 2
-#pragma line 108 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h"
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.def" 1
+#pragma line 99 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h" 2
+#pragma line 108 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h"
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.def" 1
 #pragma empty_line
 #pragma empty_line
 typedef unsigned int __attribute__ ((bitwidth(1))) uint1;
@@ -5702,8 +5702,8 @@ typedef unsigned int __attribute__ ((bitwidth(1021))) uint1021;
 typedef unsigned int __attribute__ ((bitwidth(1022))) uint1022;
 typedef unsigned int __attribute__ ((bitwidth(1023))) uint1023;
 typedef unsigned int __attribute__ ((bitwidth(1024))) uint1024;
-#pragma line 109 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h" 2
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt_ext.def" 1
+#pragma line 109 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h" 2
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt_ext.def" 1
 #pragma empty_line
 #pragma empty_line
 typedef unsigned int __attribute__ ((bitwidth(1025))) uint1025;
@@ -6730,14 +6730,14 @@ typedef unsigned int __attribute__ ((bitwidth(2045))) uint2045;
 typedef unsigned int __attribute__ ((bitwidth(2046))) uint2046;
 typedef unsigned int __attribute__ ((bitwidth(2047))) uint2047;
 typedef unsigned int __attribute__ ((bitwidth(2048))) uint2048;
-#pragma line 110 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h" 2
-#pragma line 131 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h"
+#pragma line 110 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h" 2
+#pragma line 131 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h"
 typedef int __attribute__ ((bitwidth(64))) int64;
 typedef unsigned int __attribute__ ((bitwidth(64))) uint64;
-#pragma line 147 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h"
+#pragma line 147 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_dt.h"
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#pragma line 58 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_apint.h" 2
-#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_bits.h" 1
+#pragma line 58 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_apint.h" 2
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_bits.h" 1
 /* autopilot_ssdm_bits.h */
 /*
 #-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
@@ -6790,65 +6790,65 @@ typedef unsigned int __attribute__ ((bitwidth(64))) uint64;
  *
  * $Id$
  */
-#pragma line 98 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_bits.h"
+#pragma line 98 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_bits.h"
 /* -- Concatination ----------------*/
-#pragma line 108 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_bits.h"
+#pragma line 108 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_bits.h"
 /* -- Bit get/set ----------------*/
-#pragma line 129 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_bits.h"
+#pragma line 129 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_bits.h"
 /* -- Part get/set ----------------*/
 #pragma empty_line
 /* GetRange: Notice that the order of the range indices comply with SystemC
  standards. */
-#pragma line 143 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_bits.h"
+#pragma line 143 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_bits.h"
 /* SetRange: Notice that the order of the range indices comply with SystemC
  standards. */
-#pragma line 156 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_bits.h"
+#pragma line 156 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_bits.h"
 /* -- Reduce operations ----------------*/
-#pragma line 192 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_bits.h"
+#pragma line 192 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_bits.h"
 /* -- String-Integer conversions ----------------*/
-#pragma line 358 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_bits.h"
+#pragma line 358 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_bits.h"
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#pragma line 59 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_apint.h" 2
-#pragma line 85 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_apint.h"
+#pragma line 59 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_apint.h" 2
+#pragma line 85 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_apint.h"
 /************************************************/
-#pragma line 114 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_apint.h"
+#pragma line 114 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_apint.h"
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#pragma line 78 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_cint.h" 2
-#pragma line 88 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_cint.h"
+#pragma line 78 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_cint.h" 2
+#pragma line 88 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_cint.h"
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 #pragma line 7 "./filterbank.h" 2
-//#include "ap_cin.h" //allow variables to be defined using any arbitrary bit size from 1 to 1024
 #pragma empty_line
 /*
   Forward declaration of functions
 */
 #pragma empty_line
-//#define TYPE int
-#pragma empty_line
-#pragma empty_line
+//#define vec_type int
+typedef float vec_type;
+//#define vec_type float
 #pragma empty_line
 void filterbank_init( void );
 int filterbank_main( void );
 int filterbank_return( void );
-void filterbank_core_hwa( float r[ 256 ],
-  float y[ 256 ],
-  float H[ 8 ][ 32 ],
-  float F[ 8 ][ 32 ] );
+void filterbank_core_hwa( vec_type r[ 256 ],
+  vec_type y[ 256 ],
+  vec_type H[ 8 ][ 32 ],
+  vec_type F[ 8 ][ 32 ] );
 #pragma empty_line
-void filterbank_core_test( float r[ 256 ],
-  float y[ 256 ],
-  float H[ 8 ][ 32 ],
-  float F[ 8 ][ 32 ] );
+void filterbank_core_test( vec_type r[ 256 ],
+  vec_type y[ 256 ],
+  vec_type H[ 8 ][ 32 ],
+  vec_type F[ 8 ][ 32 ] );
 #pragma line 30 "filterbank.c" 2
 #pragma empty_line
 /* the FB core gets the input vector (r) , the filter responses H and F and */
 /* generates the output vector(y) */
-void filterbank_core_hwa( float r[ 256 ],
-  float y[ 256 ],
-  float H[ 8 ][ 32 ],
-  float F[ 8 ][ 32 ] )
+void filterbank_core_hwa( vec_type r[ 256 ],
+  vec_type y[ 256 ],
+  vec_type H[ 8 ][ 32 ],
+  vec_type F[ 8 ][ 32 ] )
 {_ssdm_SpecArrayDimSize(r,256);_ssdm_SpecArrayDimSize(F,8);_ssdm_SpecArrayDimSize(H,8);_ssdm_SpecArrayDimSize(y,256);
 #pragma HLS INTERFACE ap_ctrl_hs port=return
+#pragma empty_line
 #pragma HLS RESOURCE variable=r core=RAM_1P_BRAM
 #pragma HLS INTERFACE bram port=r
 #pragma empty_line
@@ -6865,29 +6865,30 @@ void filterbank_core_hwa( float r[ 256 ],
 #pragma empty_line
   for ( i = 0; i < 256; i++ ) {
 #pragma HLS PIPELINE
-#pragma HLS UNROLL
- y[ i ] = 0.0f;
+ y[ i ] = 0;
   }
 #pragma empty_line
   for ( i = 0; i < 8; i++ ) {
-   float Vect_H[ 256 ] = {0.0f}; /* (output of the H) */
-   float Vect_Dn[32]; /* output of the down sampler; */
-   float Vect_Up[ 256 ] = {0.0f}; /* output of the up sampler; */
-   float Vect_F[ 256 ] = {0.0f}; /* this is the output of the */
+#pragma empty_line
+   vec_type Vect_H[256] = {0}; /* (output of the H) */
+#pragma empty_line
+   vec_type Vect_Dn[32]; /* output of the down sampler; */
+#pragma empty_line
+   vec_type Vect_Up[256] = {0}; /* output of the up sampler; */
+#pragma empty_line
+   vec_type Vect_F[256] = {0}; /* this is the output of the */
 #pragma empty_line
 #pragma empty_line
     /* convolving H */
     for ( j = 0; j < 256; j++ ) {
       for ( k = 0; ( ( k < 32 ) && ( ( j - k ) >= 0 ) ); k++ )
 #pragma HLS PIPELINE
-#pragma HLS UNROLL
  Vect_H[ j ] += H[ i ][ k ] * r[ j - k ];
     }
 #pragma empty_line
     /* Down Sampling */
     for ( j = 0; j < 32; j++ ) {
 #pragma HLS PIPELINE
-#pragma HLS UNROLL
  Vect_Dn[ j ] = Vect_H[ j * 8 ];
     }
 #pragma empty_line
@@ -6895,7 +6896,6 @@ void filterbank_core_hwa( float r[ 256 ],
 #pragma empty_line
     for ( j = 0; j < 32; j++ ) {
 #pragma HLS PIPELINE
-#pragma HLS UNROLL
  Vect_Up[ j * 8 ] = Vect_Dn[ j ];
     }
 #pragma empty_line
@@ -6904,7 +6904,6 @@ void filterbank_core_hwa( float r[ 256 ],
     for ( j = 0; j < 256; j++ ) {
       for ( k = 0; ( ( k < 32 ) && ( ( j - k ) >= 0 ) ); k++ )
 #pragma HLS PIPELINE
-#pragma HLS UNROLL
  Vect_F[ j ] += F[ i ][ k ] * Vect_Up[ j - k ];
     }
 #pragma empty_line
@@ -6912,7 +6911,6 @@ void filterbank_core_hwa( float r[ 256 ],
 #pragma empty_line
     for ( j = 0; j < 256; j++ ) {
 #pragma HLS PIPELINE
-#pragma HLS UNROLL
  y[ j ] += Vect_F[ j ];
     }
   }

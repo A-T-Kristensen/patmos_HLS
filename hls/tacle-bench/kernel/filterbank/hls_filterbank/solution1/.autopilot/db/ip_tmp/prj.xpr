@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="17" Path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/.autopilot/db/ip_tmp/prj.xpr">
+<Project Version="7" Minor="17" Path="/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/.autopilot/db/ip_tmp/prj.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="a5f4795062e34246a0ec7ca53134f8b9"/>
+    <Option Name="Id" Val="aad64d17d8ce4d1a8e8f21c9a30f2bfc"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -51,14 +51,14 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/ip/filterbank_core_hwa_ap_fadd_3_full_dsp_32/filterbank_core_hwa_ap_fadd_3_full_dsp_32.xci">
+      <File Path="$PSRCDIR/sources_1/ip/filterbank_core_hwa_ap_fmul_2_max_dsp_32/filterbank_core_hwa_ap_fmul_2_max_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/filterbank_core_hwa_ap_fmul_2_max_dsp_32/filterbank_core_hwa_ap_fmul_2_max_dsp_32.xci">
+      <File Path="$PSRCDIR/sources_1/ip/filterbank_core_hwa_ap_fadd_3_full_dsp_32/filterbank_core_hwa_ap_fadd_3_full_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

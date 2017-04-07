@@ -30,12 +30,13 @@
 
 /* the FB core gets the input vector (r) , the filter responses H and F and */
 /* generates the output vector(y) */
-void filterbank_core_hwa( TYPE r[ 256 ],
-		TYPE y[ 256 ],
-		TYPE H[ 8 ][ 32 ],
-		TYPE F[ 8 ][ 32 ] )
+void filterbank_core_hwa( vec_type r[ 256 ],
+		vec_type y[ 256 ],
+		vec_type H[ 8 ][ 32 ],
+		vec_type F[ 8 ][ 32 ] )
 {
 #pragma HLS INTERFACE ap_ctrl_hs port=return
+
 #pragma HLS RESOURCE variable=r core=RAM_1P_BRAM
 #pragma HLS INTERFACE bram port=r
 
@@ -51,38 +52,38 @@ void filterbank_core_hwa( TYPE r[ 256 ],
   int i, j, k;
 
   for ( i = 0; i < 256; i++ ) {
-  #pragma HLS PIPELINE
-  #pragma HLS UNROLL
-	  y[ i ] = 0.0f;
+	#pragma HLS PIPELINE
+	  y[ i ] = 0;
   }
 
   for ( i = 0; i < 8; i++ ) {
-	  TYPE Vect_H[ 256 ] = {0.0f}; /* (output of the H) */
-	  TYPE Vect_Dn[32]; /* output of the down sampler; */
-	  TYPE Vect_Up[ 256 ] = {0.0f}; /* output of the up sampler; */
-	  TYPE Vect_F[ 256 ] = {0.0f}; /* this is the output of the */
+
+	  vec_type Vect_H[256] = {0}; /* (output of the H) */
+
+	  vec_type Vect_Dn[32]; /* output of the down sampler; */
+
+	  vec_type Vect_Up[256] = {0}; /* output of the up sampler; */
+
+	  vec_type Vect_F[256] = {0}; /* this is the output of the */
 
 
     /* convolving H */
     for ( j = 0; j < 256; j++ ) {
       for ( k = 0; ( ( k < 32 ) && ( ( j - k ) >= 0 ) ); k++ )
 		#pragma HLS PIPELINE
-		#pragma HLS UNROLL
         Vect_H[ j ] += H[ i ][ k ] * r[ j - k ];
     }
 
     /* Down Sampling */
     for ( j = 0; j < 32; j++ ) {
-	#pragma HLS PIPELINE
-	#pragma HLS UNROLL
+		#pragma HLS PIPELINE
     	Vect_Dn[ j ] = Vect_H[ j * 8 ];
     }
 
     /* Up Sampling */
 
     for ( j = 0; j < 32; j++ ) {
-	#pragma HLS PIPELINE
-	#pragma HLS UNROLL
+		#pragma HLS PIPELINE
     	Vect_Up[ j * 8 ] = Vect_Dn[ j ];
     }
 
@@ -90,16 +91,14 @@ void filterbank_core_hwa( TYPE r[ 256 ],
 
     for ( j = 0; j < 256; j++ ) {
       for ( k = 0; ( ( k < 32 ) && ( ( j - k ) >= 0 ) ); k++ )
-		#pragma HLS PIPELINE
-		#pragma HLS UNROLL
+    	  #pragma HLS PIPELINE
         Vect_F[ j ] += F[ i ][ k ] * Vect_Up[ j - k ];
     }
 
     /* adding the results to the y matrix */
 
     for ( j = 0; j < 256; j++ ) {
-	#pragma HLS PIPELINE
-	#pragma HLS UNROLL
+		#pragma HLS PIPELINE
     	y[ j ] += Vect_F[ j ];
     }
   }

@@ -43,9 +43,11 @@ int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps)
 
   if ( side < 2 || side > 500 || eps <= 0.0 )
     return ( 999 );
+
   w1 = 1.0;
   for ( i = 0; i < side; i++ )
     work[ i ] = i;
+
   for ( k = 0; k < side; k++ ) {
     wmax = 0.0;
     for ( i = k; i < side; i++ ) {
@@ -73,8 +75,10 @@ int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps)
         minver_a[ r ][ j ] = w;
       }
     }
+
     for ( i = 0; i < side; i++ )
       minver_a[ k ][ i ] /= pivot;
+
     for ( i = 0; i < side; i++ ) {
       if ( i != k ) {
         w = minver_a[ i ][ k ];
@@ -88,14 +92,20 @@ int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps)
       }
     }
     minver_a[ k ][ k ] = 1.0 / pivot;
+
   }
+
   for ( i = 0; i < side; ) {
     while ( 1 ) {
+
       k = work[ i ];
-      if ( k == i ) break;
+
+      if ( k == i ) break; // This test passes with this
+
       iw = work[ k ];
       work[ k ] = work[ i ];
       work[ i ] = iw;
+
       for ( j = 0; j < side; j++ ) {
         w = minver_a [k ][ i ];
         minver_a[ k ][ i ] = minver_a[ k ][ k ];
@@ -104,5 +114,6 @@ int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps)
     }
     i++;
   }
+
   minver_det = w1;
 }

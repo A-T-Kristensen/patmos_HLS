@@ -10,8 +10,8 @@
 
 module filterbank_core_hfYi
 #(parameter
-    ID         = 3,
-    NUM_STAGE  = 4,
+    ID         = 1,
+    NUM_STAGE  = 5,
     din0_WIDTH = 32,
     din1_WIDTH = 32,
     dout_WIDTH = 32
@@ -35,7 +35,7 @@ wire [31:0]           r_tdata;
 reg  [din0_WIDTH-1:0] din0_buf1;
 reg  [din1_WIDTH-1:0] din1_buf1;
 //------------------------Instantiation------------------
-filterbank_core_hwa_ap_fmul_2_max_dsp_32 filterbank_core_hwa_ap_fmul_2_max_dsp_32_u (
+filterbank_core_hwa_ap_fadd_3_full_dsp_32 filterbank_core_hwa_ap_fadd_3_full_dsp_32_u (
     .aclk                 ( aclk ),
     .aclken               ( aclken ),
     .s_axis_a_tvalid      ( a_tvalid ),

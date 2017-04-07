@@ -34,8 +34,8 @@ using namespace sc_dt;
 // wrapc file define: "r"
 #define AUTOTB_TVIN_r  "../tv/cdatafile/c.filterbank_core_hwa.autotvin_r.dat"
 // wrapc file define: "y"
-#define AUTOTB_TVOUT_y  "../tv/cdatafile/c.filterbank_core_hwa.autotvout_y.dat"
 #define AUTOTB_TVIN_y  "../tv/cdatafile/c.filterbank_core_hwa.autotvin_y.dat"
+#define AUTOTB_TVOUT_y  "../tv/cdatafile/c.filterbank_core_hwa.autotvout_y.dat"
 // wrapc file define: "H"
 #define AUTOTB_TVIN_H  "../tv/cdatafile/c.filterbank_core_hwa.autotvin_H.dat"
 // wrapc file define: "F"
@@ -538,8 +538,8 @@ float F[8][32])
 		// release memory allocation: "r"
 		delete [] tvin_r;
 		// release memory allocation: "y"
-		delete [] tvout_y;
 		delete [] tvin_y;
+		delete [] tvout_y;
 		// release memory allocation: "H"
 		delete [] tvin_H;
 		// release memory allocation: "F"

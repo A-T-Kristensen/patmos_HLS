@@ -58,37 +58,19 @@
 <pragma name="PIPELINE"/>
 </directive>
 <directive functionLabel="" functionName="filterbank_core_hwa" label="">
-<pragma name="UNROLL"/>
+<pragma name="PIPELINE"/>
 </directive>
 <directive functionLabel="" functionName="filterbank_core_hwa" label="">
 <pragma name="PIPELINE"/>
 </directive>
 <directive functionLabel="" functionName="filterbank_core_hwa" label="">
-<pragma name="UNROLL"/>
+<pragma name="PIPELINE"/>
 </directive>
 <directive functionLabel="" functionName="filterbank_core_hwa" label="">
 <pragma name="PIPELINE"/>
 </directive>
 <directive functionLabel="" functionName="filterbank_core_hwa" label="">
-<pragma name="UNROLL"/>
-</directive>
-<directive functionLabel="" functionName="filterbank_core_hwa" label="">
 <pragma name="PIPELINE"/>
-</directive>
-<directive functionLabel="" functionName="filterbank_core_hwa" label="">
-<pragma name="UNROLL"/>
-</directive>
-<directive functionLabel="" functionName="filterbank_core_hwa" label="">
-<pragma name="PIPELINE"/>
-</directive>
-<directive functionLabel="" functionName="filterbank_core_hwa" label="">
-<pragma name="UNROLL"/>
-</directive>
-<directive functionLabel="" functionName="filterbank_core_hwa" label="">
-<pragma name="PIPELINE"/>
-</directive>
-<directive functionLabel="" functionName="filterbank_core_hwa" label="">
-<pragma name="UNROLL"/>
 </directive>
 </sourceFile>
 </AutoPilot:ProjectResources>

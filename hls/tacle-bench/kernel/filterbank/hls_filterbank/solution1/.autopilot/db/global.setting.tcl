@@ -43,7 +43,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7a100t:csg324:-1"
 set SourceFiles {sc {} c ../../filterbank.c}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/solution1.directive}
+set DirectiveFile {/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/solution1.directive}
 set TBFiles {verilog ../../filterbank_test.c bc ../../filterbank_test.c vhdl ../../filterbank_test.c sc ../../filterbank_test.c cas ../../filterbank_test.c c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

@@ -1,5 +1,6 @@
 set C_TypeInfoList {{ 
-"filterbank_core_hwa" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"r": [[], {"array": [ {"scalar": "float"}, [256]]}] }, {"y": [[], {"array": [ {"scalar": "float"}, [256]]}] }, {"H": [[], {"array": [ {"array": [ {"scalar": "float"}, [32]]}, [8]]}] }, {"F": [[], {"array": [ {"array": [ {"scalar": "float"}, [32]]}, [8]]}] }],[],""]
+"filterbank_core_hwa" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"r": [[], {"array": ["0", [256]]}] }, {"y": [[], {"array": ["0", [256]]}] }, {"H": [[], {"array": [ {"array": ["0", [32]]}, [8]]}] }, {"F": [[], {"array": [ {"array": ["0", [32]]}, [8]]}] }],[],""], 
+"0": [ "vec_type", {"typedef": [[[], {"scalar": "float"}],""]}]
 }}
 set moduleName filterbank_core_hwa
 set isCombinational 0
@@ -14,13 +15,13 @@ set C_modelName {filterbank_core_hwa}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ r float 32 regular {bram 256 { 1 } 1 1 }  }
-	{ y float 32 regular {bram 256 { 0 } 0 1 }  }
+	{ y float 32 regular {bram 256 { 2 } 1 1 }  }
 	{ H float 32 regular {bram 256 { 1 } 1 1 }  }
 	{ F float 32 regular {bram 256 { 1 } 1 1 }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "r", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "r","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 255,"step" : 1}]}]}]} , 
- 	{ "Name" : "y", "interface" : "bram", "bitwidth" : 32, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "y","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 255,"step" : 1}]}]}]} , 
+ 	{ "Name" : "y", "interface" : "bram", "bitwidth" : 32, "direction" : "READWRITE", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "y","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 255,"step" : 1}]}]}]} , 
  	{ "Name" : "H", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "H","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 7,"step" : 1},{"low" : 0,"up" : 31,"step" : 1}]}]}]} , 
  	{ "Name" : "F", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "F","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 7,"step" : 1},{"low" : 0,"up" : 31,"step" : 1}]}]}]} ]}
 # RTL Port declarations: 
@@ -108,21 +109,21 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1",
 		"Port" : [
 		{"Name" : "r", "Type" : "Bram", "Direction" : "I"},
-		{"Name" : "y", "Type" : "Bram", "Direction" : "O"},
+		{"Name" : "y", "Type" : "Bram", "Direction" : "IO"},
 		{"Name" : "H", "Type" : "Bram", "Direction" : "I"},
 		{"Name" : "F", "Type" : "Bram", "Direction" : "I"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Vect_H_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Vect_Up_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Vect_F_U", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.filterbank_core_heOg_U1", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.filterbank_core_heOg_U2", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.filterbank_core_hfYi_U3", "Parent" : "0"}]}
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Vect_Dn_U", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Vect_Up_U", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Vect_F_U", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.filterbank_core_hfYi_U1", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.filterbank_core_hg8j_U2", "Parent" : "0"}]}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "58184", "Max" : "1327944"}
-	, {"Name" : "Interval", "Min" : "58185", "Max" : "1327945"}
+	{"Name" : "Latency", "Min" : "60275", "Max" : "822131"}
+	, {"Name" : "Interval", "Min" : "60276", "Max" : "822132"}
 ]}
 
 set Spec2ImplPortList { 

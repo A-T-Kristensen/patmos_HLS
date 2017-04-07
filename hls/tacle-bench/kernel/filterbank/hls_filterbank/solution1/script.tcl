@@ -5,8 +5,8 @@
 ############################################################
 open_project hls_filterbank
 set_top filterbank_core_hwa
-add_files filterbank.c
 add_files filterbank.h
+add_files filterbank.c
 add_files -tb filterbank_test.c
 open_solution "solution1"
 set_part {xc7a100tcsg324-1} -tool vivado

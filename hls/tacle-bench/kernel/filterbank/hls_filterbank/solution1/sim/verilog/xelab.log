@@ -1,40 +1,44 @@
-INFO: [XSIM 43-3496] Using init file passed via -initfile option "/home/patmos/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini".
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini".
 Vivado Simulator 2016.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: /home/patmos/Xilinx/Vivado/2016.4/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_filterbank_core_hwa_top -prj filterbank_core_hwa.prj --initfile /home/patmos/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s filterbank_core_hwa 
+Running: /opt/Xilinx/Vivado/2016.4/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_filterbank_core_hwa_top -prj filterbank_core_hwa.prj --initfile /opt/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s filterbank_core_hwa 
+Multi-threading is on. Using 6 slave threads.
 Determining compilation order of HDL files.
 WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/AESL_autobram_F.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_autobram_F
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/AESL_autobram_H.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_autobram_H
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_heOg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module filterbank_core_heOg
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filterbank_core_hwa
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hcud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filterbank_core_hcud_ram
+INFO: [VRFC 10-311] analyzing module filterbank_core_hcud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/AESL_autobram_y.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autobram_y
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hbkb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module filterbank_core_hbkb_ram
 INFO: [VRFC 10-311] analyzing module filterbank_core_hbkb
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/AESL_autobram_y.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_autobram_y
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hfYi.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module filterbank_core_hfYi
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module apatb_filterbank_core_hwa_top
-INFO: [VRFC 10-2458] undeclared symbol bramr_Rst_A, assumed default net type wire [/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v:202]
-INFO: [VRFC 10-2458] undeclared symbol bramr_Rst_B, assumed default net type wire [/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v:209]
-INFO: [VRFC 10-2458] undeclared symbol bramy_Rst_A, assumed default net type wire [/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v:245]
-INFO: [VRFC 10-2458] undeclared symbol bramy_Rst_B, assumed default net type wire [/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v:252]
-INFO: [VRFC 10-2458] undeclared symbol bramH_Rst_A, assumed default net type wire [/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v:287]
-INFO: [VRFC 10-2458] undeclared symbol bramH_Rst_B, assumed default net type wire [/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v:294]
-INFO: [VRFC 10-2458] undeclared symbol bramF_Rst_A, assumed default net type wire [/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v:330]
-INFO: [VRFC 10-2458] undeclared symbol bramF_Rst_B, assumed default net type wire [/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v:337]
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/AESL_autobram_r.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/AESL_autobram_H.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autobram_H
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hg8j.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filterbank_core_hg8j
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/AESL_autobram_F.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autobram_F
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/AESL_autobram_r.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_autobram_r
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module filterbank_core_hwa
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/ip/xil_defaultlib/filterbank_core_hwa_ap_fadd_3_full_dsp_32.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity filterbank_core_hwa_ap_fadd_3_full_dsp_32
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/ip/xil_defaultlib/filterbank_core_hwa_ap_fmul_2_max_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hfYi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filterbank_core_hfYi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_filterbank_core_hwa_top
+INFO: [VRFC 10-2458] undeclared symbol bramr_Rst_A, assumed default net type wire [/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v:202]
+INFO: [VRFC 10-2458] undeclared symbol bramr_Rst_B, assumed default net type wire [/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v:209]
+INFO: [VRFC 10-2458] undeclared symbol bramy_Rst_A, assumed default net type wire [/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v:245]
+INFO: [VRFC 10-2458] undeclared symbol bramy_Rst_B, assumed default net type wire [/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v:252]
+INFO: [VRFC 10-2458] undeclared symbol bramH_Rst_A, assumed default net type wire [/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v:288]
+INFO: [VRFC 10-2458] undeclared symbol bramH_Rst_B, assumed default net type wire [/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v:295]
+INFO: [VRFC 10-2458] undeclared symbol bramF_Rst_A, assumed default net type wire [/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v:331]
+INFO: [VRFC 10-2458] undeclared symbol bramF_Rst_B, assumed default net type wire [/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/filterbank_core_hwa.autotb.v:338]
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/ip/xil_defaultlib/filterbank_core_hwa_ap_fmul_2_max_dsp_32.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity filterbank_core_hwa_ap_fmul_2_max_dsp_32
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/verilog/ip/xil_defaultlib/filterbank_core_hwa_ap_fadd_3_full_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity filterbank_core_hwa_ap_fadd_3_full_dsp_32
 Starting static elaboration
 WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:2255]
 WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:2240]
@@ -94,6 +98,8 @@ Compiling package ieee.vital_primitives
 Compiling package unisim.vpkg
 Compiling module xil_defaultlib.filterbank_core_hbkb_ram
 Compiling module xil_defaultlib.filterbank_core_hbkb(DataWidth=3...
+Compiling module xil_defaultlib.filterbank_core_hcud_ram
+Compiling module xil_defaultlib.filterbank_core_hcud(DataWidth=3...
 Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
 Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
 Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=7,length=0)\]
@@ -186,7 +192,7 @@ Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=3
 Compiling architecture xilinx of entity floating_point_v7_1_3.floating_point_v7_1_3_viv [\floating_point_v7_1_3_viv(c_xde...]
 Compiling architecture xilinx of entity floating_point_v7_1_3.floating_point_v7_1_3 [\floating_point_v7_1_3(c_xdevice...]
 Compiling architecture filterbank_core_hwa_ap_fadd_3_full_dsp_32_arch of entity xil_defaultlib.filterbank_core_hwa_ap_fadd_3_full_dsp_32 [filterbank_core_hwa_ap_fadd_3_fu...]
-Compiling module xil_defaultlib.filterbank_core_heOg
+Compiling module xil_defaultlib.filterbank_core_hfYi
 Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
 Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=17,length=0)\]
 Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
@@ -223,7 +229,7 @@ Compiling architecture rtl of entity floating_point_v7_1_3.flt_mult [\flt_mult(c
 Compiling architecture xilinx of entity floating_point_v7_1_3.floating_point_v7_1_3_viv [\floating_point_v7_1_3_viv(c_xde...]
 Compiling architecture xilinx of entity floating_point_v7_1_3.floating_point_v7_1_3 [\floating_point_v7_1_3(c_xdevice...]
 Compiling architecture filterbank_core_hwa_ap_fmul_2_max_dsp_32_arch of entity xil_defaultlib.filterbank_core_hwa_ap_fmul_2_max_dsp_32 [filterbank_core_hwa_ap_fmul_2_ma...]
-Compiling module xil_defaultlib.filterbank_core_hfYi(ID=1)
+Compiling module xil_defaultlib.filterbank_core_hg8j(ID=1)
 Compiling module xil_defaultlib.filterbank_core_hwa
 Compiling module xil_defaultlib.AESL_autobram_r
 Compiling module xil_defaultlib.AESL_autobram_y

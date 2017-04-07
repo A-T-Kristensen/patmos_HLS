@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# xsim v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Fri Apr  7 10:32:36 2017
+# Process ID: 3273
+# Current directory: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/minver_minver_hwa/xsim_script.tcl}
+# Log file: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/sim/verilog/xsim.log
+# Journal file: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/sim/verilog/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/minver_minver_hwa/xsim_script.tcl
+# xsim {minver_minver_hwa} -autoloadwcfg -tclbatch {minver_minver_hwa.tcl}
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source minver_minver_hwa.tcl
+## run all
+Note: 
+******************************************************
+  renorm_and_round_logic.vhd :
+    FULL_MANT_RND1_DEL is using fast_input
+    which will be faster, but create more FFs.
+******************************************************
+Time: 0 ps  Iteration: 0
+Note: 
+******************************************************
+  renorm_and_round_logic.vhd :
+    FULL_MANT_RND1_DEL is using fast_input
+    which will be faster, but create more FFs.
+******************************************************
+Time: 0 ps  Iteration: 0
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_minver_minver_hwa_top/AESL_inst_minver_minver_hwa/minver_minver_hwadEe_U2/minver_minver_hwa_ap_dmul_4_max_dsp_64_u/U0/i_synth/mult/OP/R_AND_R/logic/R_AND_R/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2016.4/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 001XXXX with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_minver_minver_hwa_top/AESL_inst_minver_minver_hwa/minver_minver_hwacud_U1/minver_minver_hwa_ap_dsub_4_full_dsp_64_u/U0/i_synth/addsub_op/ADDSUB/speed_op/logic/OP/ALIGN_BLK/FRAC_ADDSUB/dsp_add/FRAC_ADDSUB/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2016.4/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "125000"
+// RTL Simulation : 1 / 1 [n/a] @ "8845000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 8885 ns : File "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/sim/verilog/minver_minver_hwa.autotb.v" Line 408
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Apr  7 10:32:45 2017...

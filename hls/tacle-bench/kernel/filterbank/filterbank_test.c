@@ -20,16 +20,15 @@ int filterbank_return( void )
   return filterbank_return_value;
 }
 
-
 /*
   Core benchmark functions for test
 */
 
 
-void filterbank_core_test( TYPE r[ 256 ],
-		TYPE y[ 256 ],
-		TYPE H[ 8 ][ 32 ],
-		TYPE F[ 8 ][ 32 ] )
+void filterbank_core_test( vec_type r[ 256 ],
+		vec_type y[ 256 ],
+		vec_type H[ 8 ][ 32 ],
+		vec_type F[ 8 ][ 32 ] )
 {
   int i, j, k;
 
@@ -39,10 +38,10 @@ void filterbank_core_test( TYPE r[ 256 ],
 
   _Pragma( "loopbound min 8 max 8" )
   for ( i = 0; i < 8; i++ ) {
-	  TYPE Vect_H[ 256 ]; /* (output of the H) */
-	  TYPE Vect_Dn[ ( int ) 256 / 8 ]; /* output of the down sampler; */
-	  TYPE Vect_Up[ 256 ]; /* output of the up sampler; */
-	  TYPE Vect_F[ 256 ]; /* this is the output of the */
+	  vec_type Vect_H[ 256 ]; /* (output of the H) */
+	  vec_type Vect_Dn[ ( int ) 256 / 8 ]; /* output of the down sampler; */
+	  vec_type Vect_Up[ 256 ]; /* output of the up sampler; */
+	  vec_type Vect_F[ 256 ]; /* this is the output of the */
 
     /* convolving H */
     _Pragma( "loopbound min 256 max 256" )
@@ -86,11 +85,11 @@ void filterbank_core_test( TYPE r[ 256 ],
 
 int _Pragma( "entrypoint" ) filterbank_main( void )
 {
-	TYPE r[ 256 ] = {0};
-	TYPE y_sw[ 256 ] = {0};
-	TYPE y_hw[ 256 ] = {0};
-	TYPE H[ 8 ][ 32 ] = {0};
-	TYPE F[ 8 ][ 32 ] = {0};
+	vec_type r[ 256 ] = {0};
+	vec_type y_sw[ 256 ] = {0};
+	vec_type y_hw[ 256 ] = {0};
+	vec_type H[ 8 ][ 32 ] = {0};
+	vec_type F[ 8 ][ 32 ] = {0};
   int err_cnt = 0;
 
   int i, j;

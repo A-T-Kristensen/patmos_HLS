@@ -13,27 +13,34 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>1.25</ClockUncertainty>
-<EstimatedClockPeriod>9.97</EstimatedClockPeriod>
+<EstimatedClockPeriod>10.97</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>58184</Best-caseLatency>
-<Average-caseLatency>693064</Average-caseLatency>
-<Worst-caseLatency>1327944</Worst-caseLatency>
-<PipelineInitiationInterval>58185 ~ 1327945</PipelineInitiationInterval>
+<Best-caseLatency>60275</Best-caseLatency>
+<Average-caseLatency>428915</Average-caseLatency>
+<Worst-caseLatency>822131</Worst-caseLatency>
+<PipelineInitiationInterval>60276 ~ 822132</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <Loop1>
 <Name>Loop 1</Name>
+<TripCount>256</TripCount>
+<Latency>256</Latency>
+<PipelineII>1</PipelineII>
+<PipelineDepth>1</PipelineDepth>
+</Loop1>
+<Loop2>
+<Name>Loop 2</Name>
 <TripCount>8</TripCount>
-<Latency>57928 ~ 1327688</Latency>
+<Latency>60016 ~ 821872</Latency>
 <IterationLatency>
 <range>
-<min>7241</min>
-<max>165961</max>
+<min>7502</min>
+<max>102734</max>
 </range>
 </IterationLatency>
-<PipelineDepth>7241 ~ 165961</PipelineDepth>
+<PipelineDepth>7502 ~ 102734</PipelineDepth>
 <memset_Vect_H>
 <Name>memset_Vect_H</Name>
 <TripCount>256</TripCount>
@@ -55,39 +62,84 @@
 <IterationLatency>1</IterationLatency>
 <PipelineDepth>1</PipelineDepth>
 </memset_Vect_F>
-<Loop1.4>
-<Name>Loop 1.4</Name>
+<Loop2.4>
+<Name>Loop 2.4</Name>
 <TripCount>256</TripCount>
-<Latency>3072 ~ 82432</Latency>
+<Latency>3072 ~ 50688</Latency>
 <IterationLatency>
 <range>
 <min>12</min>
-<max>322</max>
+<max>198</max>
 </range>
 </IterationLatency>
-<PipelineDepth>12 ~ 322</PipelineDepth>
-</Loop1.4>
-<Loop1.5>
-<Name>Loop 1.5</Name>
+<PipelineDepth>12 ~ 198</PipelineDepth>
+<Loop2.4.1>
+<Name>Loop 2.4.1</Name>
+<TripCount>
+<range>
+<min>1</min>
+<max>32</max>
+</range>
+</TripCount>
+<Latency>9 ~ 195</Latency>
+<PipelineII>6</PipelineII>
+<PipelineDepth>10</PipelineDepth>
+</Loop2.4.1>
+</Loop2.4>
+<Loop2.5>
+<Name>Loop 2.5</Name>
+<TripCount>32</TripCount>
+<Latency>32</Latency>
+<PipelineII>1</PipelineII>
+<PipelineDepth>2</PipelineDepth>
+</Loop2.5>
+<Loop2.6>
+<Name>Loop 2.6</Name>
+<TripCount>32</TripCount>
+<Latency>32</Latency>
+<PipelineII>1</PipelineII>
+<PipelineDepth>2</PipelineDepth>
+</Loop2.6>
+<Loop2.7>
+<Name>Loop 2.7</Name>
 <TripCount>256</TripCount>
-<Latency>3072 ~ 82432</Latency>
+<Latency>3072 ~ 50688</Latency>
 <IterationLatency>
 <range>
 <min>12</min>
-<max>322</max>
+<max>198</max>
 </range>
 </IterationLatency>
-<PipelineDepth>12 ~ 322</PipelineDepth>
-</Loop1.5>
-</Loop1>
+<PipelineDepth>12 ~ 198</PipelineDepth>
+<Loop2.7.1>
+<Name>Loop 2.7.1</Name>
+<TripCount>
+<range>
+<min>1</min>
+<max>32</max>
+</range>
+</TripCount>
+<Latency>9 ~ 195</Latency>
+<PipelineII>6</PipelineII>
+<PipelineDepth>10</PipelineDepth>
+</Loop2.7.1>
+</Loop2.7>
+<Loop2.8>
+<Name>Loop 2.8</Name>
+<TripCount>256</TripCount>
+<Latency>517</Latency>
+<PipelineII>2</PipelineII>
+<PipelineDepth>8</PipelineDepth>
+</Loop2.8>
+</Loop2>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<BRAM_18K>6</BRAM_18K>
-<DSP48E>7</DSP48E>
-<FF>20783</FF>
-<LUT>27830</LUT>
+<BRAM_18K>4</BRAM_18K>
+<DSP48E>5</DSP48E>
+<FF>699</FF>
+<LUT>974</LUT>
 </Resources>
 </AreaEstimates>
 <InterfaceSummary>

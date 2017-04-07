@@ -126,30 +126,30 @@ initial begin : read_file_process
 end
 
 // Read data from array to RTL
-initial begin : read_array_A
-  while(1) begin
-      @(posedge Clk_A);
-      # 0.3;
-      if(EN_A)
-          Dout_A = mem[Addr_A*8/32];
+always @ (posedge Clk_A or Rst_A) begin
+  if(Rst_A === 1) begin
+	    Dout_A = 0;
   end
+  else begin
+	    if(EN_A)
+		    Dout_A <= mem[Addr_A*8/32];
+	end
 end
-initial begin : read_array_B
-  while(1) begin
-      @(posedge Clk_B);
-      # 0.3;
-      if(EN_B)
-          Dout_B = mem[Addr_B*8/32];
+always @ (posedge Clk_B or Rst_B) begin
+  if(Rst_B === 1) begin
+	    Dout_B = 0;
   end
+  else begin
+	    if(EN_B)
+		    Dout_B <= mem[Addr_B*8/32];
+	end
 end
 
 //------------------------Write array-------------------
 
 // Write data from RTL to array
-initial begin : write_array_A
-  while(1) begin
-      @(negedge Clk_A);
-      if(EN_A) begin
+always @ (posedge Clk_A) begin : write_data_A
+  if(EN_A) begin
           if(WEN_A[0]) begin
               mem[Addr_A*8/DATA_WIDTH][0*8+7 : 0*8] = Din_A[0*8+7 : 0*8];
           end
@@ -162,13 +162,10 @@ initial begin : write_array_A
           if(WEN_A[3]) begin
               mem[Addr_A*8/DATA_WIDTH][3*8+7 : 3*8] = Din_A[3*8+7 : 3*8];
           end
-      end
   end
 end
-initial begin : write_array_B
-  while(1) begin
-      @(negedge Clk_B);
-      if(EN_B) begin
+always @ (posedge Clk_B) begin : write_data_B
+  if(EN_B) begin
           if(WEN_B[0]) begin
               mem[Addr_B*8/DATA_WIDTH][0*8+7 : 0*8] = Din_B[0*8+7 : 0*8];
           end
@@ -181,7 +178,6 @@ initial begin : write_array_B
           if(WEN_B[3]) begin
               mem[Addr_B*8/DATA_WIDTH][3*8+7 : 3*8] = Din_B[3*8+7 : 3*8];
           end
-      end
   end
 end
 
