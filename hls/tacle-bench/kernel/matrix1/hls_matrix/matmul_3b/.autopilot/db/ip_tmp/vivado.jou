@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Wed Apr 19 13:55:55 2017
+# Process ID: 26796
+# Current directory: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/.autopilot/db/ip_tmp
+# Command line: vivado  -notrace -mode batch -source run_vivado.tcl
+# Log file: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/.autopilot/db/ip_tmp/vivado.log
+# Journal file: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/.autopilot/db/ip_tmp/vivado.jou
+#-----------------------------------------------------------
+source run_vivado.tcl -notrace

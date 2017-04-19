@@ -83,7 +83,6 @@ int matrix1_A[X * Y];
 int matrix1_B[Y * Z];
 int matrix1_C[X * Z];
 
-
 /*
   Initialization functions
 */

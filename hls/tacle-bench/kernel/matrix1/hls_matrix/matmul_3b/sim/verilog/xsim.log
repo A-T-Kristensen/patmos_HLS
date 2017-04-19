@@ -1,0 +1,115 @@
+#-----------------------------------------------------------
+# xsim v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Wed Apr 19 13:56:20 2017
+# Process ID: 26924
+# Current directory: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/matmul_hw/xsim_script.tcl}
+# Log file: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/xsim.log
+# Journal file: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/matmul_hw/xsim_script.tcl
+# xsim {matmul_hw} -autoloadwcfg -tclbatch {matmul_hw.tcl}
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source matmul_hw.tcl
+## log_wave -r /
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set c_group [add_wave_group c(bram) -into $coutputgroup]
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/c_Rst_A -into $c_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/c_Clk_A -into $c_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/c_Dout_A -into $c_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/c_Din_A -into $c_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/c_WEN_A -into $c_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/c_EN_A -into $c_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/c_Addr_A -into $c_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set b_group [add_wave_group b(bram) -into $cinputgroup]
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/b_Rst_A -into $b_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/b_Clk_A -into $b_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/b_Dout_A -into $b_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/b_Din_A -into $b_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/b_WEN_A -into $b_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/b_EN_A -into $b_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/b_Addr_A -into $b_group -radix hex
+## set a_group [add_wave_group a(bram) -into $cinputgroup]
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/a_Rst_A -into $a_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/a_Clk_A -into $a_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/a_Dout_A -into $a_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/a_Din_A -into $a_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/a_WEN_A -into $a_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/a_EN_A -into $a_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/a_Addr_A -into $a_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_start -into $blocksiggroup
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_done -into $blocksiggroup
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_idle -into $blocksiggroup
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_matmul_hw_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_matmul_hw_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_matmul_hw_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_matmul_hw_top/LENGTH_a -into $tb_portdepth_group -radix hex
+## add_wave /apatb_matmul_hw_top/LENGTH_b -into $tb_portdepth_group -radix hex
+## add_wave /apatb_matmul_hw_top/LENGTH_c -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_c_group [add_wave_group c(bram) -into $tbcoutputgroup]
+## add_wave /apatb_matmul_hw_top/c_RST_A -into $tb_c_group -radix hex
+## add_wave /apatb_matmul_hw_top/c_CLK_A -into $tb_c_group -radix hex
+## add_wave /apatb_matmul_hw_top/c_DOUT_A -into $tb_c_group -radix hex
+## add_wave /apatb_matmul_hw_top/c_DIN_A -into $tb_c_group -radix hex
+## add_wave /apatb_matmul_hw_top/c_WEN_A -into $tb_c_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/c_EN_A -into $tb_c_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/c_ADDR_A -into $tb_c_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_b_group [add_wave_group b(bram) -into $tbcinputgroup]
+## add_wave /apatb_matmul_hw_top/b_RST_A -into $tb_b_group -radix hex
+## add_wave /apatb_matmul_hw_top/b_CLK_A -into $tb_b_group -radix hex
+## add_wave /apatb_matmul_hw_top/b_DOUT_A -into $tb_b_group -radix hex
+## add_wave /apatb_matmul_hw_top/b_DIN_A -into $tb_b_group -radix hex
+## add_wave /apatb_matmul_hw_top/b_WEN_A -into $tb_b_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/b_EN_A -into $tb_b_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/b_ADDR_A -into $tb_b_group -radix hex
+## set tb_a_group [add_wave_group a(bram) -into $tbcinputgroup]
+## add_wave /apatb_matmul_hw_top/a_RST_A -into $tb_a_group -radix hex
+## add_wave /apatb_matmul_hw_top/a_CLK_A -into $tb_a_group -radix hex
+## add_wave /apatb_matmul_hw_top/a_DOUT_A -into $tb_a_group -radix hex
+## add_wave /apatb_matmul_hw_top/a_DIN_A -into $tb_a_group -radix hex
+## add_wave /apatb_matmul_hw_top/a_WEN_A -into $tb_a_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/a_EN_A -into $tb_a_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/a_ADDR_A -into $tb_a_group -radix hex
+## save_wave_config matmul_hw.wcfg
+## run all
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_matmul_hw_top/AESL_inst_matmul_hw/matmul_hw_fadd_32bkb_U1/matmul_hw_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2016.4/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 235 ns  Iteration: 12  Process: /apatb_matmul_hw_top/AESL_inst_matmul_hw/matmul_hw_fadd_32bkb_U1/matmul_hw_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2016.4/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 255 ns  Iteration: 12  Process: /apatb_matmul_hw_top/AESL_inst_matmul_hw/matmul_hw_fadd_32bkb_U1/matmul_hw_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2016.4/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 305 ns  Iteration: 12  Process: /apatb_matmul_hw_top/AESL_inst_matmul_hw/matmul_hw_fadd_32bkb_U1/matmul_hw_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2016.4/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 325 ns  Iteration: 12  Process: /apatb_matmul_hw_top/AESL_inst_matmul_hw/matmul_hw_fadd_32bkb_U1/matmul_hw_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2016.4/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 345 ns  Iteration: 11  Process: /apatb_matmul_hw_top/AESL_inst_matmul_hw/matmul_hw_fadd_32bkb_U1/matmul_hw_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2016.4/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+// RTL Simulation : 1 / 1 [0.00%] @ "385000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 425 ns : File "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/matmul_hw.autotb.v" Line 350
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Apr 19 13:56:30 2017...

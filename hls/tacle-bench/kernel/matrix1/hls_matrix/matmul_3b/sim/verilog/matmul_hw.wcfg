@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="matmul_hw.wdb" id="1">
+         <top_modules>
+            <top_module name="apatb_matmul_hw_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="group1">
+      <obj_property name="label">Design Top Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group2">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group3">
+            <obj_property name="label">c(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/c_Rst_A">
+               <obj_property name="ElementShortName">c_Rst_A</obj_property>
+               <obj_property name="ObjectShortName">c_Rst_A</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/c_Clk_A">
+               <obj_property name="ElementShortName">c_Clk_A</obj_property>
+               <obj_property name="ObjectShortName">c_Clk_A</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/c_Dout_A">
+               <obj_property name="ElementShortName">c_Dout_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">c_Dout_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/c_Din_A">
+               <obj_property name="ElementShortName">c_Din_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">c_Din_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/c_WEN_A">
+               <obj_property name="ElementShortName">c_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">c_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/c_EN_A">
+               <obj_property name="ElementShortName">c_EN_A</obj_property>
+               <obj_property name="ObjectShortName">c_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/c_Addr_A">
+               <obj_property name="ElementShortName">c_Addr_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">c_Addr_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group11">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group12">
+            <obj_property name="label">b(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/b_Rst_A">
+               <obj_property name="ElementShortName">b_Rst_A</obj_property>
+               <obj_property name="ObjectShortName">b_Rst_A</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/b_Clk_A">
+               <obj_property name="ElementShortName">b_Clk_A</obj_property>
+               <obj_property name="ObjectShortName">b_Clk_A</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/b_Dout_A">
+               <obj_property name="ElementShortName">b_Dout_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_Dout_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/b_Din_A">
+               <obj_property name="ElementShortName">b_Din_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_Din_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/b_WEN_A">
+               <obj_property name="ElementShortName">b_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">b_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/b_EN_A">
+               <obj_property name="ElementShortName">b_EN_A</obj_property>
+               <obj_property name="ObjectShortName">b_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/b_Addr_A">
+               <obj_property name="ElementShortName">b_Addr_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_Addr_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group20">
+            <obj_property name="label">a(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/a_Rst_A">
+               <obj_property name="ElementShortName">a_Rst_A</obj_property>
+               <obj_property name="ObjectShortName">a_Rst_A</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/a_Clk_A">
+               <obj_property name="ElementShortName">a_Clk_A</obj_property>
+               <obj_property name="ObjectShortName">a_Clk_A</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/a_Dout_A">
+               <obj_property name="ElementShortName">a_Dout_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_Dout_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/a_Din_A">
+               <obj_property name="ElementShortName">a_Din_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_Din_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/a_WEN_A">
+               <obj_property name="ElementShortName">a_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">a_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/a_EN_A">
+               <obj_property name="ElementShortName">a_EN_A</obj_property>
+               <obj_property name="ObjectShortName">a_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/a_Addr_A">
+               <obj_property name="ElementShortName">a_Addr_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_Addr_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group28">
+         <obj_property name="label">Block-level IO Handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_idle">
+            <obj_property name="ElementShortName">ap_idle</obj_property>
+            <obj_property name="ObjectShortName">ap_idle</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group33">
+         <obj_property name="label">Reset</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_rst">
+            <obj_property name="ElementShortName">ap_rst</obj_property>
+            <obj_property name="ObjectShortName">ap_rst</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group35">
+         <obj_property name="label">Clock</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_clk">
+            <obj_property name="ElementShortName">ap_clk</obj_property>
+            <obj_property name="ObjectShortName">ap_clk</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group37">
+      <obj_property name="label">Test Bench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group38">
+         <obj_property name="label">Internal Signals</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group39">
+            <obj_property name="label">Simulation Status</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/AUTOTB_TRANSACTION_NUM">
+               <obj_property name="ElementShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="ObjectShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/ready_cnt">
+               <obj_property name="ElementShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/done_cnt">
+               <obj_property name="ElementShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group40">
+            <obj_property name="label">Port Depth</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/LENGTH_a">
+               <obj_property name="ElementShortName">LENGTH_a[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_a[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/LENGTH_b">
+               <obj_property name="ElementShortName">LENGTH_b[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_b[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/LENGTH_c">
+               <obj_property name="ElementShortName">LENGTH_c[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_c[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group47">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group48">
+            <obj_property name="label">c(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/c_RST_A">
+               <obj_property name="ElementShortName">c_RST_A</obj_property>
+               <obj_property name="ObjectShortName">c_RST_A</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/c_CLK_A">
+               <obj_property name="ElementShortName">c_CLK_A</obj_property>
+               <obj_property name="ObjectShortName">c_CLK_A</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/c_DOUT_A">
+               <obj_property name="ElementShortName">c_DOUT_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">c_DOUT_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/c_DIN_A">
+               <obj_property name="ElementShortName">c_DIN_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">c_DIN_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/c_WEN_A">
+               <obj_property name="ElementShortName">c_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">c_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/c_EN_A">
+               <obj_property name="ElementShortName">c_EN_A</obj_property>
+               <obj_property name="ObjectShortName">c_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/c_ADDR_A">
+               <obj_property name="ElementShortName">c_ADDR_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">c_ADDR_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group56">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group57">
+            <obj_property name="label">b(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/b_RST_A">
+               <obj_property name="ElementShortName">b_RST_A</obj_property>
+               <obj_property name="ObjectShortName">b_RST_A</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/b_CLK_A">
+               <obj_property name="ElementShortName">b_CLK_A</obj_property>
+               <obj_property name="ObjectShortName">b_CLK_A</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/b_DOUT_A">
+               <obj_property name="ElementShortName">b_DOUT_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_DOUT_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/b_DIN_A">
+               <obj_property name="ElementShortName">b_DIN_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_DIN_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/b_WEN_A">
+               <obj_property name="ElementShortName">b_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">b_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/b_EN_A">
+               <obj_property name="ElementShortName">b_EN_A</obj_property>
+               <obj_property name="ObjectShortName">b_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/b_ADDR_A">
+               <obj_property name="ElementShortName">b_ADDR_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_ADDR_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group65">
+            <obj_property name="label">a(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/a_RST_A">
+               <obj_property name="ElementShortName">a_RST_A</obj_property>
+               <obj_property name="ObjectShortName">a_RST_A</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/a_CLK_A">
+               <obj_property name="ElementShortName">a_CLK_A</obj_property>
+               <obj_property name="ObjectShortName">a_CLK_A</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/a_DOUT_A">
+               <obj_property name="ElementShortName">a_DOUT_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_DOUT_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/a_DIN_A">
+               <obj_property name="ElementShortName">a_DIN_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_DIN_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/a_WEN_A">
+               <obj_property name="ElementShortName">a_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">a_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_matmul_hw_top/a_EN_A">
+               <obj_property name="ElementShortName">a_EN_A</obj_property>
+               <obj_property name="ObjectShortName">a_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_matmul_hw_top/a_ADDR_A">
+               <obj_property name="ElementShortName">a_ADDR_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_ADDR_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

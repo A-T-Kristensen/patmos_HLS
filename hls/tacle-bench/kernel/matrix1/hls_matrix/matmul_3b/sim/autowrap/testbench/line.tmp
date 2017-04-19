@@ -1,0 +1,7 @@
+#pragma line 1 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/matmul.c" ::: -10
+#pragma line 1 "<built-in>" ::: -9
+#pragma line 1 "<command-line>" ::: -8
+#pragma line 1 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/matmul.c" ::: -7
+#pragma line 1 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/matmul.h" 1 ::: -5
+#pragma line 13 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/matmul.h" ::: -4
+#pragma line 3 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/matmul.c" 2 ::: 6

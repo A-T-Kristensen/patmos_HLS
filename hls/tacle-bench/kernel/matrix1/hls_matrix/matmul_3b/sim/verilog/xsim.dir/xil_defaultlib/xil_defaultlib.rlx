@@ -1,0 +1,13 @@
+0.6
+2016.4
+Dec 14 2016
+22:45:39
+/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/AESL_autobram_a.v,1492602955,systemVerilog,,,,AESL_autobram_a,/opt/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/AESL_autobram_b.v,1492602955,systemVerilog,,,,AESL_autobram_b,/opt/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/AESL_autobram_c.v,1492602955,systemVerilog,,,,AESL_autobram_c,/opt/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/ip/xil_defaultlib/matmul_hw_ap_fadd_3_full_dsp_32.vhd,1492602968,vhdl,,,,matmul_hw_ap_fadd_3_full_dsp_32,/opt/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/ip/xil_defaultlib/matmul_hw_ap_fmul_2_max_dsp_32.vhd,1492602966,vhdl,,,,matmul_hw_ap_fmul_2_max_dsp_32,/opt/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/matmul_hw.autotb.v,1492602955,systemVerilog,,,,apatb_matmul_hw_top,/opt/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/matmul_hw.v,1492602941,systemVerilog,,,,matmul_hw,/opt/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/matmul_hw_fadd_32bkb.v,1492602941,systemVerilog,,,,matmul_hw_fadd_32bkb,/opt/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/matmul_hw_fmul_32cud.v,1492602941,systemVerilog,,,,matmul_hw_fmul_32cud,/opt/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,

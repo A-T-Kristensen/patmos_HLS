@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="matmul.h" path="/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/matmul.h"/>
+    <originFiles name="matmul.c" path="/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/matmul.c"/>
+  </source>
+  <testbench>
+    <originFiles name="matmul_test.c" path="/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/matmul_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

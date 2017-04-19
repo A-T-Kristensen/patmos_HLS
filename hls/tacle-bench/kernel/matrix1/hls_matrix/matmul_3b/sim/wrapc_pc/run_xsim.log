@@ -1,0 +1,362 @@
+Initialize matrices
+
+Run HwA
+
+Run software matmul
+
+Checking results
+
+Test Passes:
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2016.4/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_matmul_hw_top -prj matmul_hw.prj --initfile /opt/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s matmul_hw -debug wave 
+Multi-threading is on. Using 6 slave threads.
+Determining compilation order of HDL files.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/matmul_hw.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matmul_hw
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/matmul_hw_fadd_32bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matmul_hw_fadd_32bkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/AESL_autobram_c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autobram_c
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/AESL_autobram_b.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autobram_b
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/AESL_autobram_a.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autobram_a
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/matmul_hw.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_matmul_hw_top
+INFO: [VRFC 10-2458] undeclared symbol brama_Rst_A, assumed default net type wire [/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/matmul_hw.autotb.v:183]
+INFO: [VRFC 10-2458] undeclared symbol brama_Rst_B, assumed default net type wire [/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/matmul_hw.autotb.v:190]
+INFO: [VRFC 10-2458] undeclared symbol bramb_Rst_A, assumed default net type wire [/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/matmul_hw.autotb.v:226]
+INFO: [VRFC 10-2458] undeclared symbol bramb_Rst_B, assumed default net type wire [/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/matmul_hw.autotb.v:233]
+INFO: [VRFC 10-2458] undeclared symbol bramc_Rst_A, assumed default net type wire [/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/matmul_hw.autotb.v:269]
+INFO: [VRFC 10-2458] undeclared symbol bramc_Rst_B, assumed default net type wire [/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/matmul_hw.autotb.v:276]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/matmul_hw_fmul_32cud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matmul_hw_fmul_32cud
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/ip/xil_defaultlib/matmul_hw_ap_fmul_2_max_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity matmul_hw_ap_fmul_2_max_dsp_32
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/ip/xil_defaultlib/matmul_hw_ap_fadd_3_full_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity matmul_hw_ap_fadd_3_full_dsp_32
+Starting static elaboration
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:2255]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:2240]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:90362]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:13629]
+WARNING: [VRFC 10-982] library name floating_point_v7_1_3 of instantiated unit conflicts with visible identifier [ip/xil_defaultlib/matmul_hw_ap_fadd_3_full_dsp_32.vhd:189]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:90362]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:13629]
+WARNING: [VRFC 10-982] library name floating_point_v7_1_3 of instantiated unit conflicts with visible identifier [ip/xil_defaultlib/matmul_hw_ap_fmul_2_max_dsp_32.vhd:189]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package floating_point_v7_1_3.floating_point_v7_1_3_viv_comp
+Compiling package xbip_utils_v3_0_7.xbip_utils_v3_0_7_pkg
+Compiling package axi_utils_v2_0_3.axi_utils_v2_0_3_pkg
+Compiling package floating_point_v7_1_3.floating_point_v7_1_3_consts
+Compiling package ieee.math_real
+Compiling package floating_point_v7_1_3.floating_point_v7_1_3_exp_table_...
+Compiling package mult_gen_v12_0_12.mult_gen_v12_0_12_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package floating_point_v7_1_3.floating_point_v7_1_3_pkg
+Compiling package floating_point_v7_1_3.flt_utils
+Compiling package xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv_comp
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=7,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_3.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_3.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture struct of entity floating_point_v7_1_3.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=24,length=0,fast_in...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=16,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=4,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=48,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=24,length=0)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_3.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,c_wi...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [delay_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=13,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=27,length=0)\]
+Compiling architecture synth of entity floating_point_v7_1_3.align_add_dsp48e1_sgl [\align_add_dsp48e1_sgl(c_xdevice...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000001111...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000000000...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=5,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_3.lead_zero_encode_shift [\lead_zero_encode_shift(ab_fw=24...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=3,length=0)\]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111110010101001011...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00010001010111110000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11101110101000001111...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=2)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=25,length=0)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(adreg=0,alumodereg=0,ca...]
+Compiling architecture rtl of entity floating_point_v7_1_3.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,c_wi...]
+Compiling architecture rtl of entity floating_point_v7_1_3.norm_and_round_dsp48e1_sgl [\norm_and_round_dsp48e1_sgl(c_mu...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="10011001100110011001...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11111111000000001111...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=9,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_3.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=8,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=10)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=4,length=0,fast_inp...]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture fde_v of entity unisim.FDE [fde_default]
+Compiling architecture struct of entity floating_point_v7_1_3.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_3.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(fast_input=true)\]
+Compiling architecture rtl of entity floating_point_v7_1_3.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture struct of entity floating_point_v7_1_3.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_3.compare_gt [\compare_gt(c_xdevicefamily="art...]
+Compiling architecture synth of entity floating_point_v7_1_3.compare [\compare(c_xdevicefamily="artix7...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=8)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=9)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=2,length=2,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(length=2,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(length=0,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=2,length=0,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=12,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_3.flt_add_exp_sp [\flt_add_exp_sp(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=23)\]
+Compiling architecture synth of entity floating_point_v7_1_3.flt_dec_op [\flt_dec_op(c_xdevicefamily="art...]
+Compiling architecture rtl of entity floating_point_v7_1_3.flt_add_dsp [\flt_add_dsp(c_xdevicefamily="ar...]
+Compiling architecture rtl of entity floating_point_v7_1_3.flt_add [\flt_add(c_xdevicefamily="artix7...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=32,length=0)\]
+Compiling architecture xilinx of entity floating_point_v7_1_3.floating_point_v7_1_3_viv [\floating_point_v7_1_3_viv(c_xde...]
+Compiling architecture xilinx of entity floating_point_v7_1_3.floating_point_v7_1_3 [\floating_point_v7_1_3(c_xdevice...]
+Compiling architecture matmul_hw_ap_fadd_3_full_dsp_32_arch of entity xil_defaultlib.matmul_hw_ap_fadd_3_full_dsp_32 [matmul_hw_ap_fadd_3_full_dsp_32_...]
+Compiling module xil_defaultlib.matmul_hw_fadd_32bkb
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=17,length=0)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_3.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,b_wi...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_3.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,b_wi...]
+Compiling architecture struct of entity floating_point_v7_1_3.fix_mult_dsp48e1_sgl [\fix_mult_dsp48e1_sgl(registers=...]
+Compiling architecture rtl of entity floating_point_v7_1_3.fix_mult [\fix_mult(c_xdevicefamily="artix...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=8,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_3.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture struct of entity floating_point_v7_1_3.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_3.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_3.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=2,fast_input=true)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=4,fast_input=true)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=3,length=0,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=14,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_3.flt_mult_exp [\flt_mult_exp(c_xdevicefamily="a...]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=30,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=18,length=0)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_3.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=30,b_wi...]
+Compiling architecture struct of entity floating_point_v7_1_3.flt_round_dsp_opt_full [\flt_round_dsp_opt_full(c_xdevic...]
+Compiling architecture rtl of entity floating_point_v7_1_3.flt_mult_round [\flt_mult_round(c_xdevicefamily=...]
+Compiling architecture synth of entity floating_point_v7_1_3.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_3.flt_mult [\flt_mult(c_xdevicefamily="artix...]
+Compiling architecture xilinx of entity floating_point_v7_1_3.floating_point_v7_1_3_viv [\floating_point_v7_1_3_viv(c_xde...]
+Compiling architecture xilinx of entity floating_point_v7_1_3.floating_point_v7_1_3 [\floating_point_v7_1_3(c_xdevice...]
+Compiling architecture matmul_hw_ap_fmul_2_max_dsp_32_arch of entity xil_defaultlib.matmul_hw_ap_fmul_2_max_dsp_32 [matmul_hw_ap_fmul_2_max_dsp_32_d...]
+Compiling module xil_defaultlib.matmul_hw_fmul_32cud(ID=1)
+Compiling module xil_defaultlib.matmul_hw
+Compiling module xil_defaultlib.AESL_autobram_a
+Compiling module xil_defaultlib.AESL_autobram_b
+Compiling module xil_defaultlib.AESL_autobram_c
+Compiling module xil_defaultlib.apatb_matmul_hw_top
+Built simulation snapshot matmul_hw
+
+****** Webtalk v2016.4 (64-bit)
+  **** SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+  **** IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/xsim.dir/matmul_hw/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/xsim.dir/matmul_hw/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Apr 19 13:56:20 2017. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2016.4/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Apr 19 13:56:20 2017...
+
+****** xsim v2016.4 (64-bit)
+  **** SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+  **** IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/matmul_hw/xsim_script.tcl
+# xsim {matmul_hw} -autoloadwcfg -tclbatch {matmul_hw.tcl}
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source matmul_hw.tcl
+## log_wave -r /
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set c_group [add_wave_group c(bram) -into $coutputgroup]
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/c_Rst_A -into $c_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/c_Clk_A -into $c_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/c_Dout_A -into $c_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/c_Din_A -into $c_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/c_WEN_A -into $c_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/c_EN_A -into $c_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/c_Addr_A -into $c_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set b_group [add_wave_group b(bram) -into $cinputgroup]
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/b_Rst_A -into $b_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/b_Clk_A -into $b_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/b_Dout_A -into $b_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/b_Din_A -into $b_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/b_WEN_A -into $b_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/b_EN_A -into $b_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/b_Addr_A -into $b_group -radix hex
+## set a_group [add_wave_group a(bram) -into $cinputgroup]
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/a_Rst_A -into $a_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/a_Clk_A -into $a_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/a_Dout_A -into $a_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/a_Din_A -into $a_group -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/a_WEN_A -into $a_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/a_EN_A -into $a_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/a_Addr_A -into $a_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_start -into $blocksiggroup
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_done -into $blocksiggroup
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_idle -into $blocksiggroup
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_matmul_hw_top/AESL_inst_matmul_hw/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_matmul_hw_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_matmul_hw_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_matmul_hw_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_matmul_hw_top/LENGTH_a -into $tb_portdepth_group -radix hex
+## add_wave /apatb_matmul_hw_top/LENGTH_b -into $tb_portdepth_group -radix hex
+## add_wave /apatb_matmul_hw_top/LENGTH_c -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_c_group [add_wave_group c(bram) -into $tbcoutputgroup]
+## add_wave /apatb_matmul_hw_top/c_RST_A -into $tb_c_group -radix hex
+## add_wave /apatb_matmul_hw_top/c_CLK_A -into $tb_c_group -radix hex
+## add_wave /apatb_matmul_hw_top/c_DOUT_A -into $tb_c_group -radix hex
+## add_wave /apatb_matmul_hw_top/c_DIN_A -into $tb_c_group -radix hex
+## add_wave /apatb_matmul_hw_top/c_WEN_A -into $tb_c_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/c_EN_A -into $tb_c_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/c_ADDR_A -into $tb_c_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_b_group [add_wave_group b(bram) -into $tbcinputgroup]
+## add_wave /apatb_matmul_hw_top/b_RST_A -into $tb_b_group -radix hex
+## add_wave /apatb_matmul_hw_top/b_CLK_A -into $tb_b_group -radix hex
+## add_wave /apatb_matmul_hw_top/b_DOUT_A -into $tb_b_group -radix hex
+## add_wave /apatb_matmul_hw_top/b_DIN_A -into $tb_b_group -radix hex
+## add_wave /apatb_matmul_hw_top/b_WEN_A -into $tb_b_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/b_EN_A -into $tb_b_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/b_ADDR_A -into $tb_b_group -radix hex
+## set tb_a_group [add_wave_group a(bram) -into $tbcinputgroup]
+## add_wave /apatb_matmul_hw_top/a_RST_A -into $tb_a_group -radix hex
+## add_wave /apatb_matmul_hw_top/a_CLK_A -into $tb_a_group -radix hex
+## add_wave /apatb_matmul_hw_top/a_DOUT_A -into $tb_a_group -radix hex
+## add_wave /apatb_matmul_hw_top/a_DIN_A -into $tb_a_group -radix hex
+## add_wave /apatb_matmul_hw_top/a_WEN_A -into $tb_a_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/a_EN_A -into $tb_a_group -color #ffff00 -radix hex
+## add_wave /apatb_matmul_hw_top/a_ADDR_A -into $tb_a_group -radix hex
+## save_wave_config matmul_hw.wcfg
+## run all
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_matmul_hw_top/AESL_inst_matmul_hw/matmul_hw_fadd_32bkb_U1/matmul_hw_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2016.4/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 235 ns  Iteration: 12  Process: /apatb_matmul_hw_top/AESL_inst_matmul_hw/matmul_hw_fadd_32bkb_U1/matmul_hw_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2016.4/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 255 ns  Iteration: 12  Process: /apatb_matmul_hw_top/AESL_inst_matmul_hw/matmul_hw_fadd_32bkb_U1/matmul_hw_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2016.4/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 305 ns  Iteration: 12  Process: /apatb_matmul_hw_top/AESL_inst_matmul_hw/matmul_hw_fadd_32bkb_U1/matmul_hw_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2016.4/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 325 ns  Iteration: 12  Process: /apatb_matmul_hw_top/AESL_inst_matmul_hw/matmul_hw_fadd_32bkb_U1/matmul_hw_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2016.4/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 345 ns  Iteration: 11  Process: /apatb_matmul_hw_top/AESL_inst_matmul_hw/matmul_hw_fadd_32bkb_U1/matmul_hw_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2016.4/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+// RTL Simulation : 1 / 1 [0.00%] @ "385000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 425 ns : File "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/matmul_hw.autotb.v" Line 350
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Apr 19 13:56:30 2017...
+Initialize matrices
+
+Run HwA
+
+Run software matmul
+
+Checking results
+
+Test Passes:

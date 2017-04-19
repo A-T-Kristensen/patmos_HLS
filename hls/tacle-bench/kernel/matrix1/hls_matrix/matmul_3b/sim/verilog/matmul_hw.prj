@@ -1,0 +1,10 @@
+vhdl xil_defaultlib "ip/xil_defaultlib/matmul_hw_ap_fmul_2_max_dsp_32.vhd"
+vhdl xil_defaultlib "ip/xil_defaultlib/matmul_hw_ap_fadd_3_full_dsp_32.vhd"
+sv xil_defaultlib "matmul_hw.v"
+sv xil_defaultlib "matmul_hw_fadd_32bkb.v"
+sv xil_defaultlib "AESL_autobram_c.v"
+sv xil_defaultlib "AESL_autobram_b.v"
+sv xil_defaultlib "AESL_autobram_a.v"
+sv xil_defaultlib "matmul_hw.autotb.v"
+sv xil_defaultlib "matmul_hw_fmul_32cud.v"
+

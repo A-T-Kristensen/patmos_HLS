@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Wed Apr 19 13:56:18 2017
+# Process ID: 26884
+# Current directory: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog
+# Command line: wbtcv -mode batch -source /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/xsim.dir/matmul_hw/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/webtalk.log
+# Journal file: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/webtalk.jou
+#-----------------------------------------------------------
+source /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/sim/verilog/xsim.dir/matmul_hw/webtalk/xsim_webtalk.tcl -notrace

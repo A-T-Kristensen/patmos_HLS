@@ -1,0 +1,28 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../matmul_test.c in debug mode
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2016.4/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'andreas' on host 'andreas-W54xEU' (Linux_x86_64 version 4.4.0-71-generic) on Wed Apr 19 13:55:26 CEST 2017
+INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_andreas/263601492602926465855
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../matmul.c in debug mode
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2016.4/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'andreas' on host 'andreas-W54xEU' (Linux_x86_64 version 4.4.0-71-generic) on Wed Apr 19 13:55:27 CEST 2017
+INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1/hls_matrix1/matmul_3b/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_andreas/264151492602927941319
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+Initialize matrices
+
+Run HwA
+
+Run software matmul
+
+Checking results
+
+Test Passes:
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

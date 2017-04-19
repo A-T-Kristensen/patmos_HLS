@@ -18,3 +18,6 @@ I will first investigate
 * pm (high DOALL parallelism)
 * md5 (high DOALL parallelism)
 * filterbank
+* fir2dim
+* minver
+* st
