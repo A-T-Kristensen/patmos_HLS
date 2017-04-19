@@ -99,7 +99,7 @@ set NewPortList {[
  	{ "name": "F_Rst_A", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "F", "role": "Rst_A" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8"],
 		"CDFG" : "filterbank_core_hwa",
 		"VariableLatency" : "1",
 		"AlignedPipeline" : "0",
@@ -117,13 +117,15 @@ set RtlHierarchyInfo {[
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Vect_Up_U", "Parent" : "0"},
 	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Vect_F_U", "Parent" : "0"},
 	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.filterbank_core_hfYi_U1", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.filterbank_core_hg8j_U2", "Parent" : "0"}]}
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.filterbank_core_hfYi_U2", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.filterbank_core_hg8j_U3", "Parent" : "0"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.filterbank_core_hg8j_U4", "Parent" : "0"}]}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "60275", "Max" : "822131"}
-	, {"Name" : "Interval", "Min" : "60276", "Max" : "822132"}
+	{"Name" : "Latency", "Min" : "108131", "Max" : "108131"}
+	, {"Name" : "Interval", "Min" : "108132", "Max" : "108132"}
 ]}
 
 set Spec2ImplPortList { 

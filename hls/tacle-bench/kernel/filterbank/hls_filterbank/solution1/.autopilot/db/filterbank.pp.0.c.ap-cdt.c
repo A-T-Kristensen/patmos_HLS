@@ -6847,16 +6847,19 @@ void filterbank_core_hwa( vec_type r[ 256 ],
   vec_type H[ 8 ][ 32 ],
   vec_type F[ 8 ][ 32 ] )
 {_ssdm_SpecArrayDimSize(r,256);_ssdm_SpecArrayDimSize(F,8);_ssdm_SpecArrayDimSize(H,8);_ssdm_SpecArrayDimSize(y,256);
+#pragma empty_line
 #pragma HLS INTERFACE ap_ctrl_hs port=return
 #pragma empty_line
 #pragma HLS RESOURCE variable=r core=RAM_1P_BRAM
 #pragma HLS INTERFACE bram port=r
+//#pragma HLS ARRAY_RESHAPE variable=r block factor=8 dim=1
 #pragma empty_line
 #pragma HLS RESOURCE variable=y core=RAM_1P_BRAM
 #pragma HLS INTERFACE bram port=y
 #pragma empty_line
 #pragma HLS RESOURCE variable=H core=RAM_1P_BRAM
 #pragma HLS INTERFACE bram port=H
+//#pragma HLS ARRAY_RESHAPE variable=H cyclic factor=8 dim=2
 #pragma empty_line
 #pragma HLS RESOURCE variable=F core=RAM_1P_BRAM
 #pragma HLS INTERFACE bram port=F
@@ -6870,20 +6873,28 @@ void filterbank_core_hwa( vec_type r[ 256 ],
 #pragma empty_line
   for ( i = 0; i < 8; i++ ) {
 #pragma empty_line
-   vec_type Vect_H[256] = {0}; /* (output of the H) */
+   vec_type Vect_H[256]; /* (output of the H) */
 #pragma empty_line
    vec_type Vect_Dn[32]; /* output of the down sampler; */
 #pragma empty_line
-   vec_type Vect_Up[256] = {0}; /* output of the up sampler; */
+   vec_type Vect_Up[256];
+     /* output of the up sampler; */
+   //#pragma HLS RESOURCE variable=Vect_Up core=RAM_2P_BRAM
 #pragma empty_line
-   vec_type Vect_F[256] = {0}; /* this is the output of the */
-#pragma empty_line
+   vec_type Vect_F[256]; /* this is the output of the */
 #pragma empty_line
     /* convolving H */
+#pragma empty_line
+ // Compared to original code, we have
+ // moved some conditions out of the for loop condition
+ // and into and if statement
     for ( j = 0; j < 256; j++ ) {
-      for ( k = 0; ( ( k < 32 ) && ( ( j - k ) >= 0 ) ); k++ )
 #pragma HLS PIPELINE
- Vect_H[ j ] += H[ i ][ k ] * r[ j - k ];
+ Vect_H[j] = 0;
+      for ( k = 0; k < 32; k++ ) {
+       if( j - k < 0) break;
+       Vect_H[ j ] += H[ i ][ k ] * r[ j - k ];
+      }
     }
 #pragma empty_line
     /* Down Sampling */
@@ -6893,6 +6904,10 @@ void filterbank_core_hwa( vec_type r[ 256 ],
     }
 #pragma empty_line
     /* Up Sampling */
+    for ( j = 0; j < 256; j++ ) {
+#pragma HLS PIPELINE
+ Vect_Up[j] = 0;
+    }
 #pragma empty_line
     for ( j = 0; j < 32; j++ ) {
 #pragma HLS PIPELINE
@@ -6902,9 +6917,12 @@ void filterbank_core_hwa( vec_type r[ 256 ],
     /* convolving F */
 #pragma empty_line
     for ( j = 0; j < 256; j++ ) {
-      for ( k = 0; ( ( k < 32 ) && ( ( j - k ) >= 0 ) ); k++ )
 #pragma HLS PIPELINE
- Vect_F[ j ] += F[ i ][ k ] * Vect_Up[ j - k ];
+ Vect_F[j] = 0;
+      for ( k = 0; k < 32 ; k++ ) {
+       if( j - k < 0) break;
+          Vect_F[ j ] += F[ i ][ k ] * Vect_Up[ j - k ];
+      }
     }
 #pragma empty_line
     /* adding the results to the y matrix */

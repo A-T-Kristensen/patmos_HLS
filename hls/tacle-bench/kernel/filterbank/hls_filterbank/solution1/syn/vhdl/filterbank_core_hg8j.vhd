@@ -10,7 +10,7 @@ use ieee.std_logic_1164.all;
 
 entity filterbank_core_hg8j is
     generic (
-        ID         : integer := 2;
+        ID         : integer := 3;
         NUM_STAGE  : integer := 4;
         din0_WIDTH : integer := 32;
         din1_WIDTH : integer := 32;

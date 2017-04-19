@@ -39,15 +39,15 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 2;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 822131;
-parameter LENGTH_r = 256;
+parameter LATENCY_ESTIMATION = 289923;
+parameter LENGTH_r = 32;
 parameter LENGTH_y = 256;
-parameter LENGTH_H = 256;
+parameter LENGTH_H = 32;
 parameter LENGTH_F = 256;
 
 task read_token;
     input integer fp;
-    output reg [127 : 0] token;
+    output reg [535 : 0] token;
     integer ret;
     begin
         token = "";
@@ -79,9 +79,9 @@ wire ap_idle;
 wire ap_ready;
 wire [31 : 0] r_ADDR_A;
 wire  r_EN_A;
-wire [3 : 0] r_WEN_A;
-wire [31 : 0] r_DIN_A;
-wire [31 : 0] r_DOUT_A;
+wire [31 : 0] r_WEN_A;
+wire [255 : 0] r_DIN_A;
+wire [255 : 0] r_DOUT_A;
 wire  r_CLK_A;
 wire  r_RST_A;
 wire [31 : 0] y_ADDR_A;
@@ -93,9 +93,9 @@ wire  y_CLK_A;
 wire  y_RST_A;
 wire [31 : 0] H_ADDR_A;
 wire  H_EN_A;
-wire [3 : 0] H_WEN_A;
-wire [31 : 0] H_DIN_A;
-wire [31 : 0] H_DOUT_A;
+wire [31 : 0] H_WEN_A;
+wire [255 : 0] H_DIN_A;
+wire [255 : 0] H_DOUT_A;
 wire  H_CLK_A;
 wire  H_RST_A;
 wire [31 : 0] F_ADDR_A;
@@ -190,10 +190,10 @@ assign AESL_continue = tb_continue;
 // The input and output of bramr
 wire  bramr_Clk_A, bramr_Clk_B;
 wire  bramr_EN_A, bramr_EN_B;
-wire  [4 - 1 : 0] bramr_WEN_A, bramr_WEN_B;
+wire  [32 - 1 : 0] bramr_WEN_A, bramr_WEN_B;
 wire    [31 : 0]    bramr_Addr_A, bramr_Addr_B;
-wire    [31 : 0]    bramr_Din_A, bramr_Din_B;
-wire    [31 : 0]    bramr_Dout_A, bramr_Dout_B;
+wire    [255 : 0]    bramr_Din_A, bramr_Din_B;
+wire    [255 : 0]    bramr_Dout_A, bramr_Dout_B;
 wire    bramr_ready;
 wire    bramr_done;
 
@@ -276,10 +276,10 @@ assign bramy_done = interface_done;
 // The input and output of bramH
 wire  bramH_Clk_A, bramH_Clk_B;
 wire  bramH_EN_A, bramH_EN_B;
-wire  [4 - 1 : 0] bramH_WEN_A, bramH_WEN_B;
+wire  [32 - 1 : 0] bramH_WEN_A, bramH_WEN_B;
 wire    [31 : 0]    bramH_Addr_A, bramH_Addr_B;
-wire    [31 : 0]    bramH_Din_A, bramH_Din_B;
-wire    [31 : 0]    bramH_Dout_A, bramH_Dout_B;
+wire    [255 : 0]    bramH_Din_A, bramH_Din_B;
+wire    [255 : 0]    bramH_Dout_A, bramH_Dout_B;
 wire    bramH_ready;
 wire    bramH_done;
 

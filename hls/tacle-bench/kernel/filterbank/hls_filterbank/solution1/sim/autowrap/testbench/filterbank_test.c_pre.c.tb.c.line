@@ -6223,7 +6223,7 @@ extern int getloadavg (double __loadavg[], int __nelem)
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-typedef float vec_type;
+typedef int vec_type;
 #pragma empty_line
 #pragma empty_line
 void filterbank_init( void );
@@ -6264,7 +6264,6 @@ int filterbank_return( void )
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma empty_line
 void filterbank_core_test( vec_type r[ 256 ],
   vec_type y[ 256 ],
   vec_type H[ 8 ][ 32 ],
@@ -6273,17 +6272,17 @@ void filterbank_core_test( vec_type r[ 256 ],
   int i, j, k;
 #pragma empty_line
 #pragma empty_line
-#pragma line 36 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 35 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 256 max 256
-#pragma line 36 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 35 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
   for ( i = 0; i < 256; i++ )
     y[ i ] = 0;
 #pragma empty_line
 #pragma empty_line
-#pragma line 40 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 39 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 8 max 8
-#pragma line 40 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 39 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
   for ( i = 0; i < 8; i++ ) {
    vec_type Vect_H[ 256 ];
@@ -6293,16 +6292,16 @@ void filterbank_core_test( vec_type r[ 256 ],
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 48 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 47 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 256 max 256
-#pragma line 48 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 47 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
     for ( j = 0; j < 256; j++ ) {
       Vect_H[ j ] = 0;
 #pragma empty_line
-#pragma line 51 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 50 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 1 max 32
-#pragma line 51 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 50 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
       for ( k = 0; ( ( k < 32 ) & ( ( j - k ) >= 0 ) ); k++ )
         Vect_H[ j ] += H[ i ][ k ] * r[ j - k ];
@@ -6310,41 +6309,41 @@ void filterbank_core_test( vec_type r[ 256 ],
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 57 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 56 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 32 max 32
-#pragma line 57 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 56 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
     for ( j = 0; j < 256 / 8; j++ )
       Vect_Dn[ j ] = Vect_H[ j * 8 ];
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 62 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 61 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 256 max 256
-#pragma line 62 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 61 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
     for ( j = 0; j < 256; j++ )
       Vect_Up[ j ] = 0;
 #pragma empty_line
-#pragma line 65 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 64 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 32 max 32
-#pragma line 65 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 64 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
     for ( j = 0; j < 256 / 8; j++ )
       Vect_Up[ j * 8 ] = Vect_Dn[ j ];
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 70 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 69 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 256 max 256
-#pragma line 70 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 69 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
     for ( j = 0; j < 256; j++ ) {
       Vect_F[ j ] = 0;
 #pragma empty_line
-#pragma line 73 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 72 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 1 max 32
-#pragma line 73 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 72 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
       for ( k = 0; ( ( k < 32 ) & ( ( j - k ) >= 0 ) ); k++ )
         Vect_F[ j ] += F[ i ][ k ] * Vect_Up[ j - k ];
@@ -6353,9 +6352,9 @@ void filterbank_core_test( vec_type r[ 256 ],
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 80 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 79 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 256 max 256
-#pragma line 80 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 79 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
     for ( j = 0; j < 256; j++ )
       y[ j ] += Vect_F[ j ];
@@ -6368,11 +6367,11 @@ void filterbank_core_test( vec_type r[ 256 ],
 #include "apatb_filterbank_core_hwa.h"
 #endif
 
-#pragma line 87 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 86 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 int
-#pragma line 87 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 86 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma entrypoint
-#pragma line 87 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 86 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
  filterbank_main( void )
 {
  vec_type r[ 256 ] = {0};
@@ -6385,24 +6384,24 @@ int
   int i, j;
 #pragma empty_line
 #pragma empty_line
-#pragma line 98 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 97 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 256 max 256
-#pragma line 98 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 97 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
   for ( i = 0; i < 256; i++ )
     r[ i ] = i + 1;
 #pragma empty_line
 #pragma empty_line
-#pragma line 102 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 101 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 32 max 32
-#pragma line 102 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 101 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
   for ( i = 0; i < 32; i++ ) {
 #pragma empty_line
 #pragma empty_line
-#pragma line 105 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 104 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 8 max 8
-#pragma line 105 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 104 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
     for ( j = 0; j < 8; j++ ) {
       H[ j ][ i ] = i * 32 + j * 8 + j + i + j + 1;
@@ -6414,9 +6413,9 @@ int
   filterbank_init();
 #pragma empty_line
 #pragma empty_line
-#pragma line 115 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 114 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma loopbound min 2 max 2
-#pragma line 115 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 114 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 #pragma empty_line
   while ( filterbank_numiters-- > 0 )
     filterbank_core_test( r, y_sw, H, F );
@@ -6430,19 +6429,19 @@ int
 #define filterbank_core_hwa AESL_WRAP_filterbank_core_hwa
 #endif
 
-#pragma line 123 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 122 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 
 #ifndef HLS_FASTSIM
 #define filterbank_core_hwa AESL_WRAP_filterbank_core_hwa
 #endif
 
-#pragma line 123 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 122 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 filterbank_core_hwa
 #undef filterbank_core_hwa
-#pragma line 123 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 122 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 
 #undef filterbank_core_hwa
-#pragma line 123 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 122 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 ( r, y_hw, H, F );
 #pragma empty_line
 #pragma empty_line
@@ -6462,7 +6461,7 @@ filterbank_core_hwa
 #pragma empty_line
 
 #ifndef HLS_FASTSIM
-#pragma line 140 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 139 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
 int main( void )
 {
   int err_cnt = 0;
@@ -6476,4 +6475,4 @@ int main( void )
   return err_cnt;
 }
 #endif
-#pragma line 151 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"
+#pragma line 150 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank_test.c"

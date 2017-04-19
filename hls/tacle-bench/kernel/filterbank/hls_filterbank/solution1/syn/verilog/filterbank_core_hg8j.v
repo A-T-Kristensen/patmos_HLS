@@ -10,7 +10,7 @@
 
 module filterbank_core_hg8j
 #(parameter
-    ID         = 2,
+    ID         = 3,
     NUM_STAGE  = 4,
     din0_WIDTH = 32,
     din1_WIDTH = 32,

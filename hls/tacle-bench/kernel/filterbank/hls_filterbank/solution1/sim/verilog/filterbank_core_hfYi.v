@@ -6,59 +6,66 @@
 // ==============================================================
 
 
-`timescale 1ns/1ps
+`timescale 1 ns / 1 ps
 
-module filterbank_core_hfYi
-#(parameter
-    ID         = 1,
-    NUM_STAGE  = 5,
-    din0_WIDTH = 32,
-    din1_WIDTH = 32,
-    dout_WIDTH = 32
-)(
-    input  wire                  clk,
-    input  wire                  reset,
-    input  wire                  ce,
-    input  wire [din0_WIDTH-1:0] din0,
-    input  wire [din1_WIDTH-1:0] din1,
-    output wire [dout_WIDTH-1:0] dout
-);
-//------------------------Local signal-------------------
-wire                  aclk;
-wire                  aclken;
-wire                  a_tvalid;
-wire [31:0]           a_tdata;
-wire                  b_tvalid;
-wire [31:0]           b_tdata;
-wire                  r_tvalid;
-wire [31:0]           r_tdata;
-reg  [din0_WIDTH-1:0] din0_buf1;
-reg  [din1_WIDTH-1:0] din1_buf1;
-//------------------------Instantiation------------------
-filterbank_core_hwa_ap_fadd_3_full_dsp_32 filterbank_core_hwa_ap_fadd_3_full_dsp_32_u (
-    .aclk                 ( aclk ),
-    .aclken               ( aclken ),
-    .s_axis_a_tvalid      ( a_tvalid ),
-    .s_axis_a_tdata       ( a_tdata ),
-    .s_axis_b_tvalid      ( b_tvalid ),
-    .s_axis_b_tdata       ( b_tdata ),
-    .m_axis_result_tvalid ( r_tvalid ),
-    .m_axis_result_tdata  ( r_tdata )
-);
-//------------------------Body---------------------------
-assign aclk     = clk;
-assign aclken   = ce;
-assign a_tvalid = 1'b1;
-assign a_tdata  = din0_buf1;
-assign b_tvalid = 1'b1;
-assign b_tdata  = din1_buf1;
-assign dout     = r_tdata;
+module filterbank_core_hfYi_MulnS_0(clk, ce, a, b, p);
+input clk;
+input ce;
+input[32 - 1 : 0] a; // synthesis attribute keep a "true"
+input[32 - 1 : 0] b; // synthesis attribute keep b "true"
+output[32 - 1 : 0] p;
 
-always @(posedge clk) begin
+reg signed [32 - 1 : 0] a_reg0;
+reg signed [32 - 1 : 0] b_reg0;
+wire signed [32 - 1 : 0] tmp_product;
+reg signed [32 - 1 : 0] buff0;
+reg signed [32 - 1 : 0] buff1;
+reg signed [32 - 1 : 0] buff2;
+reg signed [32 - 1 : 0] buff3;
+
+assign p = buff3;
+assign tmp_product = a_reg0 * b_reg0;
+always @ (posedge clk) begin
     if (ce) begin
-        din0_buf1 <= din0;
-        din1_buf1 <= din1;
+        a_reg0 <= a;
+        b_reg0 <= b;
+        buff0 <= tmp_product;
+        buff1 <= buff0;
+        buff2 <= buff1;
+        buff3 <= buff2;
     end
 end
+endmodule
+
+`timescale 1 ns / 1 ps
+module filterbank_core_hfYi(
+    clk,
+    reset,
+    ce,
+    din0,
+    din1,
+    dout);
+
+parameter ID = 32'd1;
+parameter NUM_STAGE = 32'd1;
+parameter din0_WIDTH = 32'd1;
+parameter din1_WIDTH = 32'd1;
+parameter dout_WIDTH = 32'd1;
+input clk;
+input reset;
+input ce;
+input[din0_WIDTH - 1:0] din0;
+input[din1_WIDTH - 1:0] din1;
+output[dout_WIDTH - 1:0] dout;
+
+
+
+filterbank_core_hfYi_MulnS_0 filterbank_core_hfYi_MulnS_0_U(
+    .clk( clk ),
+    .ce( ce ),
+    .a( din0 ),
+    .b( din1 ),
+    .p( dout ));
 
 endmodule
+

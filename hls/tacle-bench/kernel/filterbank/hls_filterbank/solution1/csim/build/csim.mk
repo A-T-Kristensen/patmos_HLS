@@ -23,7 +23,7 @@ HLS_SOURCES = ../../../../filterbank_test.c ../../../../filterbank.c
 
 TARGET := csim.exe
 
-AUTOPILOT_ROOT := /home/patmos/Xilinx/Vivado_HLS/2016.4
+AUTOPILOT_ROOT := /opt/Xilinx/Vivado_HLS/2016.4
 AUTOPILOT_MACH := lnx64
 ifdef AP_GCC_M32
   AUTOPILOT_MACH := Linux_x86
@@ -31,7 +31,7 @@ ifdef AP_GCC_M32
 endif
 IFLAG += -fPIC
 ifndef AP_GCC_PATH
-  AP_GCC_PATH := /home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin
+  AP_GCC_PATH := /opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin
 endif
 AUTOPILOT_TOOL := ${AUTOPILOT_ROOT}/${AUTOPILOT_MACH}/tools
   AP_CLANG_PATH := ${AUTOPILOT_TOOL}/clang-3.9/bin

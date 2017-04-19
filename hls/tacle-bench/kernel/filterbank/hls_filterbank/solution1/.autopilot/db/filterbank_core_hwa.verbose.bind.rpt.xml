@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'filterbank_core_hwa'" level="0">
-<item name = "Date">Fri Apr  7 09:48:00 2017
+<item name = "Date">Wed Apr 19 16:58:12 2017
 </item>
 <item name = "Version">2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)</item>
 <item name = "Project">hls_filterbank</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 10.97, 1.25</column>
+<column name="ap_clk">10.00, 9.66, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">60275, 822131, 60276, 822132, none</column>
+<column name="">108131, 108131, 108132, 108132, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -36,17 +36,13 @@
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
 <column name="- Loop 1">256, 256, 1, 1, 1, 256, yes</column>
-<column name="- Loop 2">60016, 821872, 7502 ~ 102734, -, -, 8, no</column>
-<column name=" + memset_Vect_H">255, 255, 1, -, -, 256, no</column>
-<column name=" + memset_Vect_Up">255, 255, 1, -, -, 256, no</column>
-<column name=" + memset_Vect_F">255, 255, 1, -, -, 256, no</column>
-<column name=" + Loop 2.4">3072, 50688, 12 ~ 198, -, -, 256, no</column>
-<column name="  ++ Loop 2.4.1">9, 195, 10, 6, 1, 1 ~ 32, yes</column>
-<column name=" + Loop 2.5">32, 32, 2, 1, 1, 32, yes</column>
-<column name=" + Loop 2.6">32, 32, 2, 1, 1, 32, yes</column>
-<column name=" + Loop 2.7">3072, 50688, 12 ~ 198, -, -, 256, no</column>
-<column name="  ++ Loop 2.7.1">9, 195, 10, 6, 1, 1 ~ 32, yes</column>
-<column name=" + Loop 2.8">517, 517, 8, 2, 1, 256, yes</column>
+<column name="- Loop 2">107872, 107872, 13484, -, -, 8, no</column>
+<column name=" + Loop 2.1">8325, 8325, 166, 32, 1, 256, yes</column>
+<column name=" + Loop 2.2">32, 32, 2, 1, 1, 32, yes</column>
+<column name=" + Loop 2.3">256, 256, 1, 1, 1, 256, yes</column>
+<column name=" + Loop 2.4">32, 32, 2, 1, 1, 32, yes</column>
+<column name=" + Loop 2.5">4245, 4245, 166, 16, 1, 256, yes</column>
+<column name=" + Loop 2.6">517, 517, 8, 2, 1, 256, yes</column>
 </table>
 </item>
 </section>

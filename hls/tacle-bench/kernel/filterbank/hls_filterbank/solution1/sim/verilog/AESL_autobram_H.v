@@ -31,9 +31,9 @@ localparam
     TV_IN  = "../tv/cdatafile/c.filterbank_core_hwa.autotvin_H.dat", 
     TV_OUT = "../tv/rtldatafile/rtl.filterbank_core_hwa.autotvout_H.dat"; 
 //------------------------Local signal-------------------
-parameter DATA_WIDTH = 32'd 32;
+parameter DATA_WIDTH = 32'd 256;
 parameter ADDR_WIDTH = 32'd 32;
-parameter DEPTH = 32'd 256;
+parameter DEPTH = 32'd 32;
 
 // Input and Output
 input Clk_A,Clk_B;
@@ -58,7 +58,7 @@ reg writed_flag;
 //------------------------Task and function--------------
 task read_token;
 	input integer fp;
-	output reg [127 :0] token;
+	output reg [535 :0] token;
   integer ret;
   begin
       token = "";
@@ -74,7 +74,7 @@ initial begin : read_file_process
   integer fp;
   integer err;
   integer ret;
-  reg [127 : 0] token;
+  reg [535 : 0] token;
   reg [ 8*5 : 1] str;
   reg [ DATA_WIDTH - 1 : 0] mem_tmp;
   integer transaction_idx;
@@ -132,7 +132,7 @@ always @ (posedge Clk_A or Rst_A) begin
   end
   else begin
 	    if(EN_A)
-		    Dout_A <= mem[Addr_A*8/32];
+		    Dout_A <= mem[Addr_A*8/256];
 	end
 end
 always @ (posedge Clk_B or Rst_B) begin
@@ -141,7 +141,7 @@ always @ (posedge Clk_B or Rst_B) begin
   end
   else begin
 	    if(EN_B)
-		    Dout_B <= mem[Addr_B*8/32];
+		    Dout_B <= mem[Addr_B*8/256];
 	end
 end
 
@@ -162,6 +162,90 @@ always @ (posedge Clk_A) begin : write_data_A
           if(WEN_A[3]) begin
               mem[Addr_A*8/DATA_WIDTH][3*8+7 : 3*8] = Din_A[3*8+7 : 3*8];
           end
+          if(WEN_A[4]) begin
+              mem[Addr_A*8/DATA_WIDTH][4*8+7 : 4*8] = Din_A[4*8+7 : 4*8];
+          end
+          if(WEN_A[5]) begin
+              mem[Addr_A*8/DATA_WIDTH][5*8+7 : 5*8] = Din_A[5*8+7 : 5*8];
+          end
+          if(WEN_A[6]) begin
+              mem[Addr_A*8/DATA_WIDTH][6*8+7 : 6*8] = Din_A[6*8+7 : 6*8];
+          end
+          if(WEN_A[7]) begin
+              mem[Addr_A*8/DATA_WIDTH][7*8+7 : 7*8] = Din_A[7*8+7 : 7*8];
+          end
+          if(WEN_A[8]) begin
+              mem[Addr_A*8/DATA_WIDTH][8*8+7 : 8*8] = Din_A[8*8+7 : 8*8];
+          end
+          if(WEN_A[9]) begin
+              mem[Addr_A*8/DATA_WIDTH][9*8+7 : 9*8] = Din_A[9*8+7 : 9*8];
+          end
+          if(WEN_A[10]) begin
+              mem[Addr_A*8/DATA_WIDTH][10*8+7 : 10*8] = Din_A[10*8+7 : 10*8];
+          end
+          if(WEN_A[11]) begin
+              mem[Addr_A*8/DATA_WIDTH][11*8+7 : 11*8] = Din_A[11*8+7 : 11*8];
+          end
+          if(WEN_A[12]) begin
+              mem[Addr_A*8/DATA_WIDTH][12*8+7 : 12*8] = Din_A[12*8+7 : 12*8];
+          end
+          if(WEN_A[13]) begin
+              mem[Addr_A*8/DATA_WIDTH][13*8+7 : 13*8] = Din_A[13*8+7 : 13*8];
+          end
+          if(WEN_A[14]) begin
+              mem[Addr_A*8/DATA_WIDTH][14*8+7 : 14*8] = Din_A[14*8+7 : 14*8];
+          end
+          if(WEN_A[15]) begin
+              mem[Addr_A*8/DATA_WIDTH][15*8+7 : 15*8] = Din_A[15*8+7 : 15*8];
+          end
+          if(WEN_A[16]) begin
+              mem[Addr_A*8/DATA_WIDTH][16*8+7 : 16*8] = Din_A[16*8+7 : 16*8];
+          end
+          if(WEN_A[17]) begin
+              mem[Addr_A*8/DATA_WIDTH][17*8+7 : 17*8] = Din_A[17*8+7 : 17*8];
+          end
+          if(WEN_A[18]) begin
+              mem[Addr_A*8/DATA_WIDTH][18*8+7 : 18*8] = Din_A[18*8+7 : 18*8];
+          end
+          if(WEN_A[19]) begin
+              mem[Addr_A*8/DATA_WIDTH][19*8+7 : 19*8] = Din_A[19*8+7 : 19*8];
+          end
+          if(WEN_A[20]) begin
+              mem[Addr_A*8/DATA_WIDTH][20*8+7 : 20*8] = Din_A[20*8+7 : 20*8];
+          end
+          if(WEN_A[21]) begin
+              mem[Addr_A*8/DATA_WIDTH][21*8+7 : 21*8] = Din_A[21*8+7 : 21*8];
+          end
+          if(WEN_A[22]) begin
+              mem[Addr_A*8/DATA_WIDTH][22*8+7 : 22*8] = Din_A[22*8+7 : 22*8];
+          end
+          if(WEN_A[23]) begin
+              mem[Addr_A*8/DATA_WIDTH][23*8+7 : 23*8] = Din_A[23*8+7 : 23*8];
+          end
+          if(WEN_A[24]) begin
+              mem[Addr_A*8/DATA_WIDTH][24*8+7 : 24*8] = Din_A[24*8+7 : 24*8];
+          end
+          if(WEN_A[25]) begin
+              mem[Addr_A*8/DATA_WIDTH][25*8+7 : 25*8] = Din_A[25*8+7 : 25*8];
+          end
+          if(WEN_A[26]) begin
+              mem[Addr_A*8/DATA_WIDTH][26*8+7 : 26*8] = Din_A[26*8+7 : 26*8];
+          end
+          if(WEN_A[27]) begin
+              mem[Addr_A*8/DATA_WIDTH][27*8+7 : 27*8] = Din_A[27*8+7 : 27*8];
+          end
+          if(WEN_A[28]) begin
+              mem[Addr_A*8/DATA_WIDTH][28*8+7 : 28*8] = Din_A[28*8+7 : 28*8];
+          end
+          if(WEN_A[29]) begin
+              mem[Addr_A*8/DATA_WIDTH][29*8+7 : 29*8] = Din_A[29*8+7 : 29*8];
+          end
+          if(WEN_A[30]) begin
+              mem[Addr_A*8/DATA_WIDTH][30*8+7 : 30*8] = Din_A[30*8+7 : 30*8];
+          end
+          if(WEN_A[31]) begin
+              mem[Addr_A*8/DATA_WIDTH][31*8+7 : 31*8] = Din_A[31*8+7 : 31*8];
+          end
   end
 end
 always @ (posedge Clk_B) begin : write_data_B
@@ -177,6 +261,90 @@ always @ (posedge Clk_B) begin : write_data_B
           end
           if(WEN_B[3]) begin
               mem[Addr_B*8/DATA_WIDTH][3*8+7 : 3*8] = Din_B[3*8+7 : 3*8];
+          end
+          if(WEN_B[4]) begin
+              mem[Addr_B*8/DATA_WIDTH][4*8+7 : 4*8] = Din_B[4*8+7 : 4*8];
+          end
+          if(WEN_B[5]) begin
+              mem[Addr_B*8/DATA_WIDTH][5*8+7 : 5*8] = Din_B[5*8+7 : 5*8];
+          end
+          if(WEN_B[6]) begin
+              mem[Addr_B*8/DATA_WIDTH][6*8+7 : 6*8] = Din_B[6*8+7 : 6*8];
+          end
+          if(WEN_B[7]) begin
+              mem[Addr_B*8/DATA_WIDTH][7*8+7 : 7*8] = Din_B[7*8+7 : 7*8];
+          end
+          if(WEN_B[8]) begin
+              mem[Addr_B*8/DATA_WIDTH][8*8+7 : 8*8] = Din_B[8*8+7 : 8*8];
+          end
+          if(WEN_B[9]) begin
+              mem[Addr_B*8/DATA_WIDTH][9*8+7 : 9*8] = Din_B[9*8+7 : 9*8];
+          end
+          if(WEN_B[10]) begin
+              mem[Addr_B*8/DATA_WIDTH][10*8+7 : 10*8] = Din_B[10*8+7 : 10*8];
+          end
+          if(WEN_B[11]) begin
+              mem[Addr_B*8/DATA_WIDTH][11*8+7 : 11*8] = Din_B[11*8+7 : 11*8];
+          end
+          if(WEN_B[12]) begin
+              mem[Addr_B*8/DATA_WIDTH][12*8+7 : 12*8] = Din_B[12*8+7 : 12*8];
+          end
+          if(WEN_B[13]) begin
+              mem[Addr_B*8/DATA_WIDTH][13*8+7 : 13*8] = Din_B[13*8+7 : 13*8];
+          end
+          if(WEN_B[14]) begin
+              mem[Addr_B*8/DATA_WIDTH][14*8+7 : 14*8] = Din_B[14*8+7 : 14*8];
+          end
+          if(WEN_B[15]) begin
+              mem[Addr_B*8/DATA_WIDTH][15*8+7 : 15*8] = Din_B[15*8+7 : 15*8];
+          end
+          if(WEN_B[16]) begin
+              mem[Addr_B*8/DATA_WIDTH][16*8+7 : 16*8] = Din_B[16*8+7 : 16*8];
+          end
+          if(WEN_B[17]) begin
+              mem[Addr_B*8/DATA_WIDTH][17*8+7 : 17*8] = Din_B[17*8+7 : 17*8];
+          end
+          if(WEN_B[18]) begin
+              mem[Addr_B*8/DATA_WIDTH][18*8+7 : 18*8] = Din_B[18*8+7 : 18*8];
+          end
+          if(WEN_B[19]) begin
+              mem[Addr_B*8/DATA_WIDTH][19*8+7 : 19*8] = Din_B[19*8+7 : 19*8];
+          end
+          if(WEN_B[20]) begin
+              mem[Addr_B*8/DATA_WIDTH][20*8+7 : 20*8] = Din_B[20*8+7 : 20*8];
+          end
+          if(WEN_B[21]) begin
+              mem[Addr_B*8/DATA_WIDTH][21*8+7 : 21*8] = Din_B[21*8+7 : 21*8];
+          end
+          if(WEN_B[22]) begin
+              mem[Addr_B*8/DATA_WIDTH][22*8+7 : 22*8] = Din_B[22*8+7 : 22*8];
+          end
+          if(WEN_B[23]) begin
+              mem[Addr_B*8/DATA_WIDTH][23*8+7 : 23*8] = Din_B[23*8+7 : 23*8];
+          end
+          if(WEN_B[24]) begin
+              mem[Addr_B*8/DATA_WIDTH][24*8+7 : 24*8] = Din_B[24*8+7 : 24*8];
+          end
+          if(WEN_B[25]) begin
+              mem[Addr_B*8/DATA_WIDTH][25*8+7 : 25*8] = Din_B[25*8+7 : 25*8];
+          end
+          if(WEN_B[26]) begin
+              mem[Addr_B*8/DATA_WIDTH][26*8+7 : 26*8] = Din_B[26*8+7 : 26*8];
+          end
+          if(WEN_B[27]) begin
+              mem[Addr_B*8/DATA_WIDTH][27*8+7 : 27*8] = Din_B[27*8+7 : 27*8];
+          end
+          if(WEN_B[28]) begin
+              mem[Addr_B*8/DATA_WIDTH][28*8+7 : 28*8] = Din_B[28*8+7 : 28*8];
+          end
+          if(WEN_B[29]) begin
+              mem[Addr_B*8/DATA_WIDTH][29*8+7 : 29*8] = Din_B[29*8+7 : 29*8];
+          end
+          if(WEN_B[30]) begin
+              mem[Addr_B*8/DATA_WIDTH][30*8+7 : 30*8] = Din_B[30*8+7 : 30*8];
+          end
+          if(WEN_B[31]) begin
+              mem[Addr_B*8/DATA_WIDTH][31*8+7 : 31*8] = Din_B[31*8+7 : 31*8];
           end
   end
 end

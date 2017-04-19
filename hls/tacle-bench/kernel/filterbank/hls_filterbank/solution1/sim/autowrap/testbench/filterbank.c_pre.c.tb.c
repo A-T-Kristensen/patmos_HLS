@@ -6230,7 +6230,7 @@ extern int getloadavg (double __loadavg[], int __nelem)
 
 
 
-typedef float vec_type;
+typedef int vec_type;
 
 
 void filterbank_init( void );
@@ -6254,6 +6254,7 @@ void filterbank_core_hwa( vec_type r[ 256 ],
   vec_type H[ 8 ][ 32 ],
   vec_type F[ 8 ][ 32 ] )
 {
+#pragma HLS ARRAY_RESHAPE variable=r block factor=8 dim=1
 #pragma HLS INTERFACE ap_ctrl_hs port=return
 
 #pragma HLS RESOURCE variable=r core=RAM_1P_BRAM
@@ -6264,6 +6265,7 @@ void filterbank_core_hwa( vec_type r[ 256 ],
 
 #pragma HLS RESOURCE variable=H core=RAM_1P_BRAM
 #pragma HLS INTERFACE bram port=H
+#pragma HLS ARRAY_RESHAPE variable=H block factor=8 dim=2
 
 #pragma HLS RESOURCE variable=F core=RAM_1P_BRAM
 #pragma HLS INTERFACE bram port=F
@@ -6288,9 +6290,14 @@ void filterbank_core_hwa( vec_type r[ 256 ],
 
 
     for ( j = 0; j < 256; j++ ) {
-      for ( k = 0; ( ( k < 32 ) && ( ( j - k ) >= 0 ) ); k++ )
+#pragma HLS UNROLL factor = 8
+      for ( k = 0; k < 32; k++ ) {
 #pragma HLS PIPELINE
-        Vect_H[ j ] += H[ i ][ k ] * r[ j - k ];
+
+       if( j - k < 0) continue;
+       Vect_H[ j ] += H[ i ][ k ] * r[ j - k ];
+      }
+
     }
 
 
@@ -6305,13 +6312,13 @@ void filterbank_core_hwa( vec_type r[ 256 ],
 #pragma HLS PIPELINE
      Vect_Up[ j * 8 ] = Vect_Dn[ j ];
     }
-
-
-
+#104 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/filterbank.c"
     for ( j = 0; j < 256; j++ ) {
-      for ( k = 0; ( ( k < 32 ) && ( ( j - k ) >= 0 ) ); k++ )
+      for ( k = 0; k < 32 ; k++ ) {
+       if( j - k < 0) continue;
 #pragma HLS PIPELINE
-        Vect_F[ j ] += F[ i ][ k ] * Vect_Up[ j - k ];
+          Vect_F[ j ] += F[ i ][ k ] * Vect_Up[ j - k ];
+      }
     }
 
 

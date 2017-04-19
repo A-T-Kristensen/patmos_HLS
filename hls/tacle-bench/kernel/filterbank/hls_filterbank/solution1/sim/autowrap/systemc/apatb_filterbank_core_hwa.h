@@ -5,7 +5,7 @@
 // ==============================================================
 
 extern void AESL_WRAP_filterbank_core_hwa (
-float r[256],
-float y[256],
-float H[8][32],
-float F[8][32]);
+int r[256],
+int y[256],
+int H[8][32],
+int F[8][32]);

@@ -1,8 +1,8 @@
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2016.4/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'andreas' on host 'andreas-W54xEU' (Linux_x86_64 version 4.4.0-66-generic) on Fri Apr 07 09:48:17 CEST 2017
+INFO: [HLS 200-10] For user 'andreas' on host 'andreas-W54xEU' (Linux_x86_64 version 4.4.0-71-generic) on Wed Apr 19 16:01:58 CEST 2017
 INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
 INFO: [HLS 200-10] In directory '/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_andreas/316461491551297450246
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_andreas/130691492610518226240
 INFO: [APCC 202-1] APCC is done.

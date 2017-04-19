@@ -2,4 +2,6 @@ filterbank_core_hfYi
 filterbank_core_hg8j
 filterbank_core_hbkb
 filterbank_core_hcud
+filterbank_core_hdEe
+filterbank_core_heOg
 filterbank_core_hwa

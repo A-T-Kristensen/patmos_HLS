@@ -72,5 +72,8 @@
 <directive functionLabel="" functionName="filterbank_core_hwa" label="">
 <pragma name="PIPELINE"/>
 </directive>
+<directive functionLabel="" functionName="filterbank_core_hwa" label="">
+<pragma name="PIPELINE"/>
+</directive>
 </sourceFile>
 </AutoPilot:ProjectResources>

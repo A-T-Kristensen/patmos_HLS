@@ -96,16 +96,16 @@ class INTER_TCL_FILE {
 };
 
 extern "C" void filterbank_core_hwa (
-float r[256],
-float y[256],
-float H[8][32],
-float F[8][32]);
+int r[256],
+int y[256],
+int H[8][32],
+int F[8][32]);
 
 extern "C" void AESL_WRAP_filterbank_core_hwa (
-float r[256],
-float y[256],
-float H[8][32],
-float F[8][32])
+int r[256],
+int y[256],
+int H[8][32],
+int F[8][32])
 {
 	refine_signal_handler();
 	fstream wrapc_switch_file_token;
@@ -237,11 +237,11 @@ float F[8][32])
 								// ori_name               : y[i_0]
 								// sub_1st_elem           : 0
 								// ori_name_1st_elem      : y[0]
-								// output_left_conversion : *(int*)&y[i_0]
+								// output_left_conversion : y[i_0]
 								// output_type_conversion : (y_lv0_0_255_1[hls_map_index++]).to_uint64()
 								if (&(y[0]) != NULL) // check the null address if the c port is array or others
 								{
-									*(int*)&y[i_0] = (y_lv0_0_255_1[hls_map_index++]).to_uint64();
+									y[i_0] = (y_lv0_0_255_1[hls_map_index++]).to_uint64();
 								}
 							}
 						}
@@ -263,7 +263,7 @@ float F[8][32])
 		static AESL_FILE_HANDLER aesl_fh;
 
 		// "r"
-		char* tvin_r = new char[50];
+		char* tvin_r = new char[69];
 		aesl_fh.touch(AUTOTB_TVIN_r);
 
 		// "y"
@@ -273,7 +273,7 @@ float F[8][32])
 		aesl_fh.touch(AUTOTB_TVOUT_y);
 
 		// "H"
-		char* tvin_H = new char[50];
+		char* tvin_H = new char[69];
 		aesl_fh.touch(AUTOTB_TVIN_H);
 
 		// "F"
@@ -288,7 +288,7 @@ float F[8][32])
 		sprintf(tvin_r, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVIN_r, tvin_r);
 
-		sc_bv<32>* r_tvin_wrapc_buffer = new sc_bv<32>[256];
+		sc_bv<256>* r_tvin_wrapc_buffer = new sc_bv<256>[32];
 
 		// RTL Name: r
 		{
@@ -297,20 +297,181 @@ float F[8][32])
 				int hls_map_index = 0;
 				// celement: r(31, 0)
 				{
-					// carray: (0) => (255) @ (1)
-					for (int i_0 = 0; i_0 <= 255; i_0 += 1)
+					// carray: (0) => (31) @ (1)
+					for (int i_0 = 0; i_0 <= 31; i_0 += 1)
 					{
 						// sub                   : i_0
 						// ori_name              : r[i_0]
 						// sub_1st_elem          : 0
 						// ori_name_1st_elem     : r[0]
 						// regulate_c_name       : r
-						// input_type_conversion : *(int*)&r[i_0]
+						// input_type_conversion : r[i_0]
 						if (&(r[0]) != NULL) // check the null address if the c port is array or others
 						{
 							sc_lv<32> r_tmp_mem;
-							r_tmp_mem = *(int*)&r[i_0];
+							r_tmp_mem = r[i_0];
 							r_tvin_wrapc_buffer[hls_map_index++].range(31, 0) = r_tmp_mem.range(31, 0);
+						}
+					}
+				}
+			}
+			// bitslice(63, 32)
+			{
+				int hls_map_index = 0;
+				// celement: r(31, 0)
+				{
+					// carray: (32) => (63) @ (1)
+					for (int i_0 = 32; i_0 <= 63; i_0 += 1)
+					{
+						// sub                   : i_0
+						// ori_name              : r[i_0]
+						// sub_1st_elem          : 0
+						// ori_name_1st_elem     : r[0]
+						// regulate_c_name       : r
+						// input_type_conversion : r[i_0]
+						if (&(r[0]) != NULL) // check the null address if the c port is array or others
+						{
+							sc_lv<32> r_tmp_mem;
+							r_tmp_mem = r[i_0];
+							r_tvin_wrapc_buffer[hls_map_index++].range(63, 32) = r_tmp_mem.range(31, 0);
+						}
+					}
+				}
+			}
+			// bitslice(95, 64)
+			{
+				int hls_map_index = 0;
+				// celement: r(31, 0)
+				{
+					// carray: (64) => (95) @ (1)
+					for (int i_0 = 64; i_0 <= 95; i_0 += 1)
+					{
+						// sub                   : i_0
+						// ori_name              : r[i_0]
+						// sub_1st_elem          : 0
+						// ori_name_1st_elem     : r[0]
+						// regulate_c_name       : r
+						// input_type_conversion : r[i_0]
+						if (&(r[0]) != NULL) // check the null address if the c port is array or others
+						{
+							sc_lv<32> r_tmp_mem;
+							r_tmp_mem = r[i_0];
+							r_tvin_wrapc_buffer[hls_map_index++].range(95, 64) = r_tmp_mem.range(31, 0);
+						}
+					}
+				}
+			}
+			// bitslice(127, 96)
+			{
+				int hls_map_index = 0;
+				// celement: r(31, 0)
+				{
+					// carray: (96) => (127) @ (1)
+					for (int i_0 = 96; i_0 <= 127; i_0 += 1)
+					{
+						// sub                   : i_0
+						// ori_name              : r[i_0]
+						// sub_1st_elem          : 0
+						// ori_name_1st_elem     : r[0]
+						// regulate_c_name       : r
+						// input_type_conversion : r[i_0]
+						if (&(r[0]) != NULL) // check the null address if the c port is array or others
+						{
+							sc_lv<32> r_tmp_mem;
+							r_tmp_mem = r[i_0];
+							r_tvin_wrapc_buffer[hls_map_index++].range(127, 96) = r_tmp_mem.range(31, 0);
+						}
+					}
+				}
+			}
+			// bitslice(159, 128)
+			{
+				int hls_map_index = 0;
+				// celement: r(31, 0)
+				{
+					// carray: (128) => (159) @ (1)
+					for (int i_0 = 128; i_0 <= 159; i_0 += 1)
+					{
+						// sub                   : i_0
+						// ori_name              : r[i_0]
+						// sub_1st_elem          : 0
+						// ori_name_1st_elem     : r[0]
+						// regulate_c_name       : r
+						// input_type_conversion : r[i_0]
+						if (&(r[0]) != NULL) // check the null address if the c port is array or others
+						{
+							sc_lv<32> r_tmp_mem;
+							r_tmp_mem = r[i_0];
+							r_tvin_wrapc_buffer[hls_map_index++].range(159, 128) = r_tmp_mem.range(31, 0);
+						}
+					}
+				}
+			}
+			// bitslice(191, 160)
+			{
+				int hls_map_index = 0;
+				// celement: r(31, 0)
+				{
+					// carray: (160) => (191) @ (1)
+					for (int i_0 = 160; i_0 <= 191; i_0 += 1)
+					{
+						// sub                   : i_0
+						// ori_name              : r[i_0]
+						// sub_1st_elem          : 0
+						// ori_name_1st_elem     : r[0]
+						// regulate_c_name       : r
+						// input_type_conversion : r[i_0]
+						if (&(r[0]) != NULL) // check the null address if the c port is array or others
+						{
+							sc_lv<32> r_tmp_mem;
+							r_tmp_mem = r[i_0];
+							r_tvin_wrapc_buffer[hls_map_index++].range(191, 160) = r_tmp_mem.range(31, 0);
+						}
+					}
+				}
+			}
+			// bitslice(223, 192)
+			{
+				int hls_map_index = 0;
+				// celement: r(31, 0)
+				{
+					// carray: (192) => (223) @ (1)
+					for (int i_0 = 192; i_0 <= 223; i_0 += 1)
+					{
+						// sub                   : i_0
+						// ori_name              : r[i_0]
+						// sub_1st_elem          : 0
+						// ori_name_1st_elem     : r[0]
+						// regulate_c_name       : r
+						// input_type_conversion : r[i_0]
+						if (&(r[0]) != NULL) // check the null address if the c port is array or others
+						{
+							sc_lv<32> r_tmp_mem;
+							r_tmp_mem = r[i_0];
+							r_tvin_wrapc_buffer[hls_map_index++].range(223, 192) = r_tmp_mem.range(31, 0);
+						}
+					}
+				}
+			}
+			// bitslice(255, 224)
+			{
+				int hls_map_index = 0;
+				// celement: r(31, 0)
+				{
+					// carray: (224) => (255) @ (1)
+					for (int i_0 = 224; i_0 <= 255; i_0 += 1)
+					{
+						// sub                   : i_0
+						// ori_name              : r[i_0]
+						// sub_1st_elem          : 0
+						// ori_name_1st_elem     : r[0]
+						// regulate_c_name       : r
+						// input_type_conversion : r[i_0]
+						if (&(r[0]) != NULL) // check the null address if the c port is array or others
+						{
+							sc_lv<32> r_tmp_mem;
+							r_tmp_mem = r[i_0];
+							r_tvin_wrapc_buffer[hls_map_index++].range(255, 224) = r_tmp_mem.range(31, 0);
 						}
 					}
 				}
@@ -318,13 +479,13 @@ float F[8][32])
 		}
 
 		// dump tv to file
-		for (int i = 0; i < 256; i++)
+		for (int i = 0; i < 32; i++)
 		{
 			sprintf(tvin_r, "%s\n", (r_tvin_wrapc_buffer[i]).to_string(SC_HEX).c_str());
 			aesl_fh.write(AUTOTB_TVIN_r, tvin_r);
 		}
 
-		tcl_file.set_num(256, &tcl_file.r_depth);
+		tcl_file.set_num(32, &tcl_file.r_depth);
 		sprintf(tvin_r, "[[/transaction]] \n");
 		aesl_fh.write(AUTOTB_TVIN_r, tvin_r);
 
@@ -352,11 +513,11 @@ float F[8][32])
 						// sub_1st_elem          : 0
 						// ori_name_1st_elem     : y[0]
 						// regulate_c_name       : y
-						// input_type_conversion : *(int*)&y[i_0]
+						// input_type_conversion : y[i_0]
 						if (&(y[0]) != NULL) // check the null address if the c port is array or others
 						{
 							sc_lv<32> y_tmp_mem;
-							y_tmp_mem = *(int*)&y[i_0];
+							y_tmp_mem = y[i_0];
 							y_tvin_wrapc_buffer[hls_map_index++].range(31, 0) = y_tmp_mem.range(31, 0);
 						}
 					}
@@ -382,7 +543,7 @@ float F[8][32])
 		sprintf(tvin_H, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVIN_H, tvin_H);
 
-		sc_bv<32>* H_tvin_wrapc_buffer = new sc_bv<32>[256];
+		sc_bv<256>* H_tvin_wrapc_buffer = new sc_bv<256>[32];
 
 		// RTL Name: H
 		{
@@ -394,20 +555,209 @@ float F[8][32])
 					// carray: (0) => (7) @ (1)
 					for (int i_0 = 0; i_0 <= 7; i_0 += 1)
 					{
-						// carray: (0) => (31) @ (1)
-						for (int i_1 = 0; i_1 <= 31; i_1 += 1)
+						// carray: (0) => (3) @ (1)
+						for (int i_1 = 0; i_1 <= 3; i_1 += 1)
 						{
 							// sub                   : i_0 i_1
 							// ori_name              : H[i_0][i_1]
 							// sub_1st_elem          : 0 0
 							// ori_name_1st_elem     : H[0][0]
 							// regulate_c_name       : H
-							// input_type_conversion : *(int*)&H[i_0][i_1]
+							// input_type_conversion : H[i_0][i_1]
 							if (&(H[0][0]) != NULL) // check the null address if the c port is array or others
 							{
 								sc_lv<32> H_tmp_mem;
-								H_tmp_mem = *(int*)&H[i_0][i_1];
+								H_tmp_mem = H[i_0][i_1];
 								H_tvin_wrapc_buffer[hls_map_index++].range(31, 0) = H_tmp_mem.range(31, 0);
+							}
+						}
+					}
+				}
+			}
+			// bitslice(63, 32)
+			{
+				int hls_map_index = 0;
+				// celement: H(31, 0)
+				{
+					// carray: (0) => (7) @ (1)
+					for (int i_0 = 0; i_0 <= 7; i_0 += 1)
+					{
+						// carray: (4) => (7) @ (1)
+						for (int i_1 = 4; i_1 <= 7; i_1 += 1)
+						{
+							// sub                   : i_0 i_1
+							// ori_name              : H[i_0][i_1]
+							// sub_1st_elem          : 0 0
+							// ori_name_1st_elem     : H[0][0]
+							// regulate_c_name       : H
+							// input_type_conversion : H[i_0][i_1]
+							if (&(H[0][0]) != NULL) // check the null address if the c port is array or others
+							{
+								sc_lv<32> H_tmp_mem;
+								H_tmp_mem = H[i_0][i_1];
+								H_tvin_wrapc_buffer[hls_map_index++].range(63, 32) = H_tmp_mem.range(31, 0);
+							}
+						}
+					}
+				}
+			}
+			// bitslice(95, 64)
+			{
+				int hls_map_index = 0;
+				// celement: H(31, 0)
+				{
+					// carray: (0) => (7) @ (1)
+					for (int i_0 = 0; i_0 <= 7; i_0 += 1)
+					{
+						// carray: (8) => (11) @ (1)
+						for (int i_1 = 8; i_1 <= 11; i_1 += 1)
+						{
+							// sub                   : i_0 i_1
+							// ori_name              : H[i_0][i_1]
+							// sub_1st_elem          : 0 0
+							// ori_name_1st_elem     : H[0][0]
+							// regulate_c_name       : H
+							// input_type_conversion : H[i_0][i_1]
+							if (&(H[0][0]) != NULL) // check the null address if the c port is array or others
+							{
+								sc_lv<32> H_tmp_mem;
+								H_tmp_mem = H[i_0][i_1];
+								H_tvin_wrapc_buffer[hls_map_index++].range(95, 64) = H_tmp_mem.range(31, 0);
+							}
+						}
+					}
+				}
+			}
+			// bitslice(127, 96)
+			{
+				int hls_map_index = 0;
+				// celement: H(31, 0)
+				{
+					// carray: (0) => (7) @ (1)
+					for (int i_0 = 0; i_0 <= 7; i_0 += 1)
+					{
+						// carray: (12) => (15) @ (1)
+						for (int i_1 = 12; i_1 <= 15; i_1 += 1)
+						{
+							// sub                   : i_0 i_1
+							// ori_name              : H[i_0][i_1]
+							// sub_1st_elem          : 0 0
+							// ori_name_1st_elem     : H[0][0]
+							// regulate_c_name       : H
+							// input_type_conversion : H[i_0][i_1]
+							if (&(H[0][0]) != NULL) // check the null address if the c port is array or others
+							{
+								sc_lv<32> H_tmp_mem;
+								H_tmp_mem = H[i_0][i_1];
+								H_tvin_wrapc_buffer[hls_map_index++].range(127, 96) = H_tmp_mem.range(31, 0);
+							}
+						}
+					}
+				}
+			}
+			// bitslice(159, 128)
+			{
+				int hls_map_index = 0;
+				// celement: H(31, 0)
+				{
+					// carray: (0) => (7) @ (1)
+					for (int i_0 = 0; i_0 <= 7; i_0 += 1)
+					{
+						// carray: (16) => (19) @ (1)
+						for (int i_1 = 16; i_1 <= 19; i_1 += 1)
+						{
+							// sub                   : i_0 i_1
+							// ori_name              : H[i_0][i_1]
+							// sub_1st_elem          : 0 0
+							// ori_name_1st_elem     : H[0][0]
+							// regulate_c_name       : H
+							// input_type_conversion : H[i_0][i_1]
+							if (&(H[0][0]) != NULL) // check the null address if the c port is array or others
+							{
+								sc_lv<32> H_tmp_mem;
+								H_tmp_mem = H[i_0][i_1];
+								H_tvin_wrapc_buffer[hls_map_index++].range(159, 128) = H_tmp_mem.range(31, 0);
+							}
+						}
+					}
+				}
+			}
+			// bitslice(191, 160)
+			{
+				int hls_map_index = 0;
+				// celement: H(31, 0)
+				{
+					// carray: (0) => (7) @ (1)
+					for (int i_0 = 0; i_0 <= 7; i_0 += 1)
+					{
+						// carray: (20) => (23) @ (1)
+						for (int i_1 = 20; i_1 <= 23; i_1 += 1)
+						{
+							// sub                   : i_0 i_1
+							// ori_name              : H[i_0][i_1]
+							// sub_1st_elem          : 0 0
+							// ori_name_1st_elem     : H[0][0]
+							// regulate_c_name       : H
+							// input_type_conversion : H[i_0][i_1]
+							if (&(H[0][0]) != NULL) // check the null address if the c port is array or others
+							{
+								sc_lv<32> H_tmp_mem;
+								H_tmp_mem = H[i_0][i_1];
+								H_tvin_wrapc_buffer[hls_map_index++].range(191, 160) = H_tmp_mem.range(31, 0);
+							}
+						}
+					}
+				}
+			}
+			// bitslice(223, 192)
+			{
+				int hls_map_index = 0;
+				// celement: H(31, 0)
+				{
+					// carray: (0) => (7) @ (1)
+					for (int i_0 = 0; i_0 <= 7; i_0 += 1)
+					{
+						// carray: (24) => (27) @ (1)
+						for (int i_1 = 24; i_1 <= 27; i_1 += 1)
+						{
+							// sub                   : i_0 i_1
+							// ori_name              : H[i_0][i_1]
+							// sub_1st_elem          : 0 0
+							// ori_name_1st_elem     : H[0][0]
+							// regulate_c_name       : H
+							// input_type_conversion : H[i_0][i_1]
+							if (&(H[0][0]) != NULL) // check the null address if the c port is array or others
+							{
+								sc_lv<32> H_tmp_mem;
+								H_tmp_mem = H[i_0][i_1];
+								H_tvin_wrapc_buffer[hls_map_index++].range(223, 192) = H_tmp_mem.range(31, 0);
+							}
+						}
+					}
+				}
+			}
+			// bitslice(255, 224)
+			{
+				int hls_map_index = 0;
+				// celement: H(31, 0)
+				{
+					// carray: (0) => (7) @ (1)
+					for (int i_0 = 0; i_0 <= 7; i_0 += 1)
+					{
+						// carray: (28) => (31) @ (1)
+						for (int i_1 = 28; i_1 <= 31; i_1 += 1)
+						{
+							// sub                   : i_0 i_1
+							// ori_name              : H[i_0][i_1]
+							// sub_1st_elem          : 0 0
+							// ori_name_1st_elem     : H[0][0]
+							// regulate_c_name       : H
+							// input_type_conversion : H[i_0][i_1]
+							if (&(H[0][0]) != NULL) // check the null address if the c port is array or others
+							{
+								sc_lv<32> H_tmp_mem;
+								H_tmp_mem = H[i_0][i_1];
+								H_tvin_wrapc_buffer[hls_map_index++].range(255, 224) = H_tmp_mem.range(31, 0);
 							}
 						}
 					}
@@ -416,13 +766,13 @@ float F[8][32])
 		}
 
 		// dump tv to file
-		for (int i = 0; i < 256; i++)
+		for (int i = 0; i < 32; i++)
 		{
 			sprintf(tvin_H, "%s\n", (H_tvin_wrapc_buffer[i]).to_string(SC_HEX).c_str());
 			aesl_fh.write(AUTOTB_TVIN_H, tvin_H);
 		}
 
-		tcl_file.set_num(256, &tcl_file.H_depth);
+		tcl_file.set_num(32, &tcl_file.H_depth);
 		sprintf(tvin_H, "[[/transaction]] \n");
 		aesl_fh.write(AUTOTB_TVIN_H, tvin_H);
 
@@ -453,11 +803,11 @@ float F[8][32])
 							// sub_1st_elem          : 0 0
 							// ori_name_1st_elem     : F[0][0]
 							// regulate_c_name       : F
-							// input_type_conversion : *(int*)&F[i_0][i_1]
+							// input_type_conversion : F[i_0][i_1]
 							if (&(F[0][0]) != NULL) // check the null address if the c port is array or others
 							{
 								sc_lv<32> F_tmp_mem;
-								F_tmp_mem = *(int*)&F[i_0][i_1];
+								F_tmp_mem = F[i_0][i_1];
 								F_tvin_wrapc_buffer[hls_map_index++].range(31, 0) = F_tmp_mem.range(31, 0);
 							}
 						}
@@ -508,11 +858,11 @@ float F[8][32])
 						// sub_1st_elem          : 0
 						// ori_name_1st_elem     : y[0]
 						// regulate_c_name       : y
-						// input_type_conversion : *(int*)&y[i_0]
+						// input_type_conversion : y[i_0]
 						if (&(y[0]) != NULL) // check the null address if the c port is array or others
 						{
 							sc_lv<32> y_tmp_mem;
-							y_tmp_mem = *(int*)&y[i_0];
+							y_tmp_mem = y[i_0];
 							y_tvout_wrapc_buffer[hls_map_index++].range(31, 0) = y_tmp_mem.range(31, 0);
 						}
 					}
