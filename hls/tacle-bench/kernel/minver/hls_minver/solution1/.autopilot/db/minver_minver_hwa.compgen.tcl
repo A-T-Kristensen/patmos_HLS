@@ -275,7 +275,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 
 
 # Memory (RAM/ROM)  definition:
-set ID 5
+set ID 6
 set MemName minver_minver_hwabkb
 set CoreName ap_simcore_mem
 set PortList { 2 2 }
@@ -366,7 +366,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 6 \
+    id 7 \
     name side \
     type other \
     dir I \
@@ -381,7 +381,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 7 \
+    id 8 \
     name eps \
     type other \
     dir I \

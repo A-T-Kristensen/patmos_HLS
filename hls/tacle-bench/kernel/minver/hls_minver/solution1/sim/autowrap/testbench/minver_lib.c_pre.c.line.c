@@ -793,14 +793,15 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma empty_line
 typedef double mat_type;
+#pragma empty_line
+#pragma empty_line
 #pragma empty_line
 int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps );
 int minver_minver(mat_type minver_a[3][3], int side, mat_type eps);
 #pragma empty_line
-int minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3], mat_type minver_c[3][3],
-                  int row_a, int col_a, int row_b, int col_b );
+int minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3],
+    mat_type minver_c[3][3]);
 #pragma empty_line
 mat_type minver_fabs(mat_type n);
 #pragma empty_line
@@ -810,7 +811,6 @@ int minver_return(mat_type minver_a_i[3][3]);
 int minver_main();
 int main( void );
 #pragma line 3 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/minver_lib.c" 2
-#pragma empty_line
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
@@ -826,22 +826,20 @@ mat_type minver_fabs(mat_type n) {
   return f;
 }
 #pragma empty_line
-int minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3], mat_type minver_c[3][3],
-                  int row_a, int col_a, int row_b, int col_b )
+int minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3],
+    mat_type minver_c[3][3])
 {
-  int i, j, k, row_c, col_c;
+  int i, j, k;
   mat_type w;
 #pragma empty_line
-  row_c = row_a;
-  col_c = col_b;
 #pragma empty_line
-  if ( row_c < 1 || row_b < 1 || col_c < 1 || col_a != row_b )
+  if (3 < 1)
     return ( 999 );
 #pragma empty_line
-  for ( i = 0; i < row_c; i++ ) {
-    for ( j = 0; j < col_c; j++ ) {
+  for ( i = 0; i < 3; i++ ) {
+    for ( j = 0; j < 3; j++ ) {
       w = 0.0;
-      for ( k = 0; k < row_b; k++ )
+      for ( k = 0; k < 3; k++ )
         w += minver_a[ i ][ k ] * minver_b[ k ][ j ];
 #pragma empty_line
       minver_c[ i ][ j ] = w;

@@ -417,7 +417,6 @@
 */
 
 /* TODO
- * replace minver_fabs here with the hls library function
  * rewrite block with infinite loop
 */
 
@@ -2307,18 +2306,19 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ ));
 /* If we are compiling with optimizing read this file.  It contains
    several optimizing inline functions and macros.  */
 # 31 "./minver.h" 2
-
 /*
     Forward declaration of functions
 */
 
 typedef double mat_type;
 
+
+
 int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps );
 int minver_minver(mat_type minver_a[3][3], int side, mat_type eps);
 
-int minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3], mat_type minver_c[3][3],
-                  int row_a, int col_a, int row_b, int col_b );
+int minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3],
+    mat_type minver_c[3][3]);
 
 mat_type minver_fabs(mat_type n);
 
@@ -2327,21 +2327,19 @@ int minver_return(mat_type minver_a_i[3][3]);
 
 int minver_main();
 int main( void );
-# 35 "minver.c" 2
+# 34 "minver.c" 2
 
 int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps)
 {_ssdm_SpecArrayDimSize(minver_a,3);
+
+//#pragma HLS ARRAY_RESHAPE variable=minver_a block factor=2 dim=2
 _ssdm_op_SpecInterface(minver_a, "bram", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
-# 37 "minver.c"
-
 _ssdm_op_SpecInterface(0, "ap_ctrl_hs", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
-# 37 "minver.c"
 
-  int work[ 500 ], i, j, k, iw;
+ int work[ 500 ], i, j, k, iw;
   int r = 0;
   mat_type w, wmax, pivot, api, w1;
   mat_type minver_det;
-
 
   if ( side < 2 || side > 500 || eps <= 0.0 )
     return ( 999 );
@@ -2350,15 +2348,18 @@ _ssdm_op_SpecInterface(0, "ap_ctrl_hs", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, 
   for ( i = 0; i < side; i++ )
     work[ i ] = i;
 
+  // This has unknown bound
   for ( k = 0; k < side; k++ ) {
     wmax = 0.0;
     for ( i = k; i < side; i++ ) {
-      w = minver_fabs( minver_a[ i ][ k ] );
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ w = minver_fabs( minver_a[ i ][ k ] );
       if ( w > wmax ) {
         wmax = w;
         r = i;
       }
     }
+
     pivot = minver_a[ r ][ k ];
     api = minver_fabs( pivot );
     if ( api <= eps ) {
@@ -2372,24 +2373,27 @@ _ssdm_op_SpecInterface(0, "ap_ctrl_hs", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, 
       work[ k ] = work[ r ];
       work[ r ] = iw;
       for ( j = 0; j < side; j++ ) {
-        w = minver_a[ k ][ j ];
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ w = minver_a[ k ][ j ];
         minver_a[ k ][ j ] = minver_a[ r ][ j ];
         minver_a[ r ][ j ] = w;
       }
     }
 
-    for ( i = 0; i < side; i++ )
-      minver_a[ k ][ i ] /= pivot;
+    for ( i = 0; i < side; i++ ) {
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ minver_a[ k ][ i ] /= pivot;
+    }
 
     for ( i = 0; i < side; i++ ) {
-      if ( i != k ) {
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ if ( i != k ) {
         w = minver_a[ i ][ k ];
         if ( w != 0.0 ) {
           for ( j = 0; j < side; j++ ) {
             if ( j != k ) minver_a[ i ][ j ] -= w * minver_a[ k ][ j ];
           }
           minver_a[ i ][ k ] = -w / pivot;
-
         }
       }
     }
@@ -2398,6 +2402,7 @@ _ssdm_op_SpecInterface(0, "ap_ctrl_hs", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, 
   }
 
   for ( i = 0; i < side; ) {
+
     while ( 1 ) {
 
       k = work[ i ];
@@ -2409,11 +2414,13 @@ _ssdm_op_SpecInterface(0, "ap_ctrl_hs", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, 
       work[ i ] = iw;
 
       for ( j = 0; j < side; j++ ) {
-        w = minver_a [k ][ i ];
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ w = minver_a [k ][ i ];
         minver_a[ k ][ i ] = minver_a[ k ][ k ];
         minver_a[ k ][ k ] = w;
       }
     }
+
     i++;
   }
 

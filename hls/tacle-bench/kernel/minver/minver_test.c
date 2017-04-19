@@ -28,7 +28,7 @@
 
 #include "minver.h"
 
-int minver_minver(mat_type minver_a[3][3], int side, mat_type eps)
+int minver_minver(mat_type minver_a[DIM][DIM], int side, mat_type eps)
 {
 
   int work[ 500 ], i, j, k, iw;
@@ -116,7 +116,7 @@ int minver_minver(mat_type minver_a[3][3], int side, mat_type eps)
     Initialization- and return-value-related functions
 */
 
-void minver_init(mat_type minver_a[3][3])
+void minver_init(mat_type minver_a[DIM][DIM])
 {
   int i,j;
   volatile int x = 0;
@@ -127,13 +127,13 @@ void minver_init(mat_type minver_a[3][3])
   }
 }
 
-int minver_return(mat_type minver_a_i[3][3])
+int minver_return(mat_type minver_a_i[DIM][DIM])
 {
   int i,j;
   mat_type check_sum = 0;
 
-  for ( i = 0; i < 3; i++ ) {
-    for ( j = 0; j < 3; j++ )
+  for ( i = 0; i < DIM; i++ ) {
+    for ( j = 0; j < DIM; j++ )
       check_sum += minver_a_i[ i ][ j ];
   }
   /* Avoid mat_type comparison */
@@ -150,34 +150,34 @@ int minver_main()
   mat_type eps;
   eps = 1.0e-6;
 
-  mat_type  minver_a[3][3] = {
+  mat_type  minver_a[DIM][DIM] = {
     {3.0, -6.0,  7.0},
     {9.0,  0.0, -5.0},
     {5.0, -8.0,  6.0},
   };
-  mat_type minver_b[3][3];
-  mat_type minver_c[3][3];
-  mat_type minver_aa[3][3];
-  mat_type minver_a_i[3][3];
+  mat_type minver_b[DIM][DIM];
+  mat_type minver_c[DIM][DIM];
+  mat_type minver_aa[DIM][DIM];
+  mat_type minver_a_i[DIM][DIM];
 
   minver_init(minver_a);  
 
-  for ( i = 0; i < 3; i++ ) {
-    for ( j = 0; j < 3; j++ ) {
+  for ( i = 0; i < DIM; i++ ) {
+    for ( j = 0; j < DIM; j++ ) {
       printf("%lf ", minver_c[i][j]);
     }
     printf("\n");
   }
 
-  for ( i = 0; i < 3; i++ ) {
-    for ( j = 0; j < 3; j++ )
+  for ( i = 0; i < DIM; i++ ) {
+    for ( j = 0; j < DIM; j++ )
       minver_aa[i][j] = minver_a[i][j]; // Store original matrix
   }
 
   // Perform matrix inversion
   // for this benchmark, it is enough to just check with the checksum
   //minver_minver(minver_a, 3, eps ); 
-  minver_minver_hwa(minver_a, 3, eps );   
+  minver_minver_hwa(minver_a, DIM, eps );
 
   for ( i = 0; i < 3; i++ ) {
     for ( j = 0; j < 3; j++ )
@@ -185,17 +185,17 @@ int minver_main()
   }
 
   // This only gives out
-  minver_mmul(minver_a_i, minver_b, minver_c, 3, 3, 3, 3 );
+  minver_mmul(minver_a_i, minver_b, minver_c);
 
-  for ( i = 0; i < 3; i++ ) {
-    for ( j = 0; j < 3; j++ ) {
+  for ( i = 0; i < DIM; i++ ) {
+    for ( j = 0; j < DIM; j++ ) {
       printf("%lf ", minver_a_i[i][j]);
     }
     printf("\n");
   }
 
-  for ( i = 0; i < 3; i++ ) {
-    for ( j = 0; j < 3; j++ ) {
+  for ( i = 0; i < DIM; i++ ) {
+    for ( j = 0; j < DIM; j++ ) {
       printf("%lf ", minver_c[i][j]);
     }
     printf("\n");

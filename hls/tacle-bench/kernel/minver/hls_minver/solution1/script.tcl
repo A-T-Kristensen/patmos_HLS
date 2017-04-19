@@ -12,8 +12,8 @@ add_files -tb minver_test.c
 open_solution "solution1"
 set_part {xc7a100tcsg324-1} -tool vivado
 create_clock -period 10 -name default
-source "./hls_minver/solution1/directives.tcl"
-csim_design -compiler gcc
+#source "./hls_minver/solution1/directives.tcl"
+csim_design -clean -compiler gcc
 csynth_design
-cosim_design
+cosim_design -rtl vhdl
 export_design -format ip_catalog

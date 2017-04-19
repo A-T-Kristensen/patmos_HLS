@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Wed Apr 19 15:32:30 2017
+# Process ID: 5358
+# Current directory: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/sim/vhdl
+# Command line: xsim -mode tcl -source {xsim.dir/minver_minver_hwa/xsim_script.tcl}
+# Log file: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/sim/vhdl/xsim.log
+# Journal file: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/sim/vhdl/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/minver_minver_hwa/xsim_script.tcl
+source minver_minver_hwa.tcl

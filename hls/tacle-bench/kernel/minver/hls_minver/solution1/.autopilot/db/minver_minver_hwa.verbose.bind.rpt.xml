@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'minver_minver_hwa'" level="0">
-<item name = "Date">Fri Apr  7 10:31:33 2017
+<item name = "Date">Wed Apr 19 15:31:29 2017
 </item>
 <item name = "Version">2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)</item>
 <item name = "Project">hls_minver</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 8.66, 1.25</column>
+<column name="ap_clk">10.00, 9.64, 1.25</column>
 </table>
 </item>
 </section>
@@ -37,14 +37,14 @@
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
 <column name="- Loop 1">2, 500, 1, -, -, 2 ~ 500, no</column>
 <column name="- Loop 2">?, ?, ?, -, -, ?, no</column>
-<column name=" + Loop 2.1">?, ?, 5, -, -, ?, no</column>
-<column name=" + Loop 2.2">6, 1500, 3, -, -, 2 ~ 500, no</column>
-<column name=" + Loop 2.3">68, 17000, 34, -, -, 2 ~ 500, no</column>
+<column name=" + Loop 2.1">?, ?, 5, 1, 1, ?, yes</column>
+<column name=" + Loop 2.2">5, 1001, 4, 2, 1, 2 ~ 500, yes</column>
+<column name=" + Loop 2.3">34, 532, 34, 1, 1, 2 ~ 500, yes</column>
 <column name=" + Loop 2.4">4, 3768000, 2 ~ 7536, -, -, 2 ~ 500, no</column>
 <column name="  ++ Loop 2.4.1">4, 7500, 2 ~ 15, -, -, 2 ~ 500, no</column>
 <column name="- Loop 3">?, ?, ?, -, -, 2 ~ 500, no</column>
-<column name=" + Loop 3.1">?, ?, 11 ~ 1505, -, -, ?, no</column>
-<column name="  ++ Loop 3.1.1">6, 1500, 3, -, -, 2 ~ 500, no</column>
+<column name=" + Loop 3.1">?, ?, 12 ~ 1506, -, -, ?, no</column>
+<column name="  ++ Loop 3.1.1">6, 1500, 3, 3, 1, 2 ~ 500, yes</column>
 </table>
 </item>
 </section>

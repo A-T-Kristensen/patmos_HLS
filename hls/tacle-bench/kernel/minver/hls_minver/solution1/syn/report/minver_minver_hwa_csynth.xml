@@ -17,7 +17,7 @@
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>8.66</EstimatedClockPeriod>
+<EstimatedClockPeriod>9.64</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -50,7 +50,8 @@
 <Loop2.1>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
-<IterationLatency>5</IterationLatency>
+<PipelineII>1</PipelineII>
+<PipelineDepth>5</PipelineDepth>
 </Loop2.1>
 <Loop2.2>
 <TripCount>
@@ -61,11 +62,12 @@
 </TripCount>
 <Latency>
 <range>
-<min>6</min>
-<max>1500</max>
+<min>5</min>
+<max>1001</max>
 </range>
 </Latency>
-<IterationLatency>3</IterationLatency>
+<PipelineII>2</PipelineII>
+<PipelineDepth>4</PipelineDepth>
 </Loop2.2>
 <Loop2.3>
 <TripCount>
@@ -76,11 +78,12 @@
 </TripCount>
 <Latency>
 <range>
-<min>68</min>
-<max>17000</max>
+<min>34</min>
+<max>532</max>
 </range>
 </Latency>
-<IterationLatency>34</IterationLatency>
+<PipelineII>1</PipelineII>
+<PipelineDepth>34</PipelineDepth>
 </Loop2.3>
 <Loop2.4>
 <TripCount>
@@ -137,8 +140,8 @@
 <Latency>undef</Latency>
 <IterationLatency>
 <range>
-<min>11</min>
-<max>1505</max>
+<min>12</min>
+<max>1506</max>
 </range>
 </IterationLatency>
 <Loop3.1.1>
@@ -154,7 +157,8 @@
 <max>1500</max>
 </range>
 </Latency>
-<IterationLatency>3</IterationLatency>
+<PipelineII>3</PipelineII>
+<PipelineDepth>3</PipelineDepth>
 </Loop3.1.1>
 </Loop3.1>
 </Loop3>
@@ -165,8 +169,8 @@
 <Resources>
 <BRAM_18K>1</BRAM_18K>
 <DSP48E>14</DSP48E>
-<FF>5437</FF>
-<LUT>6520</LUT>
+<FF>5668</FF>
+<LUT>6740</LUT>
 </Resources>
 <AvailableResources>
 <BRAM_18K>270</BRAM_18K>

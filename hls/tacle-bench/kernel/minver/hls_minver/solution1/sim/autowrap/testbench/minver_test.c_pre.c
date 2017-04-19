@@ -793,14 +793,15 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)
 
 
 
-
 typedef double mat_type;
+
+
 
 int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps );
 int minver_minver(mat_type minver_a[3][3], int side, mat_type eps);
 
-int minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3], mat_type minver_c[3][3],
-                  int row_a, int col_a, int row_b, int col_b );
+int minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3],
+    mat_type minver_c[3][3]);
 
 mat_type minver_fabs(mat_type n);
 
@@ -946,6 +947,13 @@ int minver_main()
   minver_init(minver_a);
 
   for ( i = 0; i < 3; i++ ) {
+    for ( j = 0; j < 3; j++ ) {
+      printf("%lf ", minver_c[i][j]);
+    }
+    printf("\n");
+  }
+
+  for ( i = 0; i < 3; i++ ) {
     for ( j = 0; j < 3; j++ )
       minver_aa[i][j] = minver_a[i][j];
   }
@@ -960,11 +968,19 @@ int minver_main()
       minver_a_i[ i ][ j ] = minver_a[ i ][ j ];
   }
 
-  minver_mmul(minver_a, minver_b, minver_c, 3, 3, 3, 3 );
+
+  minver_mmul(minver_a_i, minver_b, minver_c);
 
   for ( i = 0; i < 3; i++ ) {
     for ( j = 0; j < 3; j++ ) {
-      printf("%f ", minver_c[i][j]);
+      printf("%lf ", minver_a_i[i][j]);
+    }
+    printf("\n");
+  }
+
+  for ( i = 0; i < 3; i++ ) {
+    for ( j = 0; j < 3; j++ ) {
+      printf("%lf ", minver_c[i][j]);
     }
     printf("\n");
   }

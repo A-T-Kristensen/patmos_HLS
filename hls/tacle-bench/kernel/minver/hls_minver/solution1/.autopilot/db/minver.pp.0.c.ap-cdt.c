@@ -222,7 +222,6 @@
 */
 #pragma empty_line
 /* TODO
- * replace minver_fabs here with the hls library function
  * rewrite block with infinite loop
 */
 #pragma empty_line
@@ -2106,18 +2105,19 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ ));
 /* If we are compiling with optimizing read this file.  It contains
    several optimizing inline functions and macros.  */
 #pragma line 31 "./minver.h" 2
-#pragma empty_line
 /*
     Forward declaration of functions
 */
 #pragma empty_line
 typedef double mat_type;
 #pragma empty_line
+#pragma empty_line
+#pragma empty_line
 int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps );
 int minver_minver(mat_type minver_a[3][3], int side, mat_type eps);
 #pragma empty_line
-int minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3], mat_type minver_c[3][3],
-                  int row_a, int col_a, int row_b, int col_b );
+int minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3],
+    mat_type minver_c[3][3]);
 #pragma empty_line
 mat_type minver_fabs(mat_type n);
 #pragma empty_line
@@ -2126,21 +2126,19 @@ int minver_return(mat_type minver_a_i[3][3]);
 #pragma empty_line
 int minver_main();
 int main( void );
-#pragma line 35 "minver.c" 2
+#pragma line 34 "minver.c" 2
 #pragma empty_line
 int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps)
 {_ssdm_SpecArrayDimSize(minver_a,3);
+#pragma empty_line
+//#pragma HLS ARRAY_RESHAPE variable=minver_a block factor=2 dim=2
 #pragma HLS INTERFACE bram port=minver_a
-#pragma line 37 "minver.c"
-
 #pragma HLS INTERFACE ap_ctrl_hs port=return
-#pragma line 37 "minver.c"
-
-  int work[ 500 ], i, j, k, iw;
+#pragma empty_line
+ int work[ 500 ], i, j, k, iw;
   int r = 0;
   mat_type w, wmax, pivot, api, w1;
   mat_type minver_det;
-#pragma empty_line
 #pragma empty_line
   if ( side < 2 || side > 500 || eps <= 0.0 )
     return ( 999 );
@@ -2149,15 +2147,18 @@ int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps)
   for ( i = 0; i < side; i++ )
     work[ i ] = i;
 #pragma empty_line
+  // This has unknown bound
   for ( k = 0; k < side; k++ ) {
     wmax = 0.0;
     for ( i = k; i < side; i++ ) {
-      w = minver_fabs( minver_a[ i ][ k ] );
+#pragma HLS PIPELINE
+ w = minver_fabs( minver_a[ i ][ k ] );
       if ( w > wmax ) {
         wmax = w;
         r = i;
       }
     }
+#pragma empty_line
     pivot = minver_a[ r ][ k ];
     api = minver_fabs( pivot );
     if ( api <= eps ) {
@@ -2171,24 +2172,27 @@ int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps)
       work[ k ] = work[ r ];
       work[ r ] = iw;
       for ( j = 0; j < side; j++ ) {
-        w = minver_a[ k ][ j ];
+#pragma HLS PIPELINE
+ w = minver_a[ k ][ j ];
         minver_a[ k ][ j ] = minver_a[ r ][ j ];
         minver_a[ r ][ j ] = w;
       }
     }
 #pragma empty_line
-    for ( i = 0; i < side; i++ )
-      minver_a[ k ][ i ] /= pivot;
+    for ( i = 0; i < side; i++ ) {
+#pragma HLS PIPELINE
+ minver_a[ k ][ i ] /= pivot;
+    }
 #pragma empty_line
     for ( i = 0; i < side; i++ ) {
-      if ( i != k ) {
+#pragma HLS PIPELINE
+ if ( i != k ) {
         w = minver_a[ i ][ k ];
         if ( w != 0.0 ) {
           for ( j = 0; j < side; j++ ) {
             if ( j != k ) minver_a[ i ][ j ] -= w * minver_a[ k ][ j ];
           }
           minver_a[ i ][ k ] = -w / pivot;
-#pragma empty_line
         }
       }
     }
@@ -2197,6 +2201,7 @@ int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps)
   }
 #pragma empty_line
   for ( i = 0; i < side; ) {
+#pragma empty_line
     while ( 1 ) {
 #pragma empty_line
       k = work[ i ];
@@ -2208,11 +2213,13 @@ int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps)
       work[ i ] = iw;
 #pragma empty_line
       for ( j = 0; j < side; j++ ) {
-        w = minver_a [k ][ i ];
+#pragma HLS PIPELINE
+ w = minver_a [k ][ i ];
         minver_a[ k ][ i ] = minver_a[ k ][ k ];
         minver_a[ k ][ k ] = w;
       }
     }
+#pragma empty_line
     i++;
   }
 #pragma empty_line

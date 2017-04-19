@@ -9,4 +9,4 @@
 * filterbank (can be synthesised)
 * fir2dim (starting to rewrite this)
 * iir
-* minver (rewritten, needs to be tested for synthesisability)
+* minver (Synthesises and passes co-simulation, fails as cpp and using hls_math)

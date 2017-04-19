@@ -28,23 +28,24 @@
 
 
 #include <stdio.h>
-
 /*
     Forward declaration of functions
 */
 
 typedef double mat_type;
 
-int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps );
-int minver_minver(mat_type minver_a[3][3], int side, mat_type eps);
+#define DIM 3
 
-int  minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3], mat_type minver_c[3][3], 
-                  int row_a, int col_a, int row_b, int col_b );
+int minver_minver_hwa(mat_type minver_a[DIM][DIM], int side, mat_type eps );
+int minver_minver(mat_type minver_a[DIM][DIM], int side, mat_type eps);
+
+int  minver_mmul(mat_type minver_a[DIM][DIM], mat_type minver_b[DIM][DIM],
+				mat_type minver_c[DIM][DIM]);
 
 mat_type minver_fabs(mat_type n);
 
-void minver_init(mat_type minver_a[3][3]);
-int minver_return(mat_type minver_a_i[3][3]);
+void minver_init(mat_type minver_a[DIM][DIM]);
+int minver_return(mat_type minver_a_i[DIM][DIM]);
 
 int minver_main();
 int main( void );

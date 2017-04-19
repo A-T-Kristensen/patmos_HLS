@@ -2273,18 +2273,19 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ ));
 /* If we are compiling with optimizing read this file.  It contains
    several optimizing inline functions and macros.  */
 # 31 "./minver.h" 2
-
 /*
     Forward declaration of functions
 */
 
 typedef double mat_type;
 
+
+
 int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps );
 int minver_minver(mat_type minver_a[3][3], int side, mat_type eps);
 
-int minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3], mat_type minver_c[3][3],
-                  int row_a, int col_a, int row_b, int col_b );
+int minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3],
+    mat_type minver_c[3][3]);
 
 mat_type minver_fabs(mat_type n);
 
@@ -2295,9 +2296,8 @@ int minver_main();
 int main( void );
 # 3 "minver_lib.c" 2
 
-
 /*
-    Arithmetic math functions
+   Arithmetic math functions
 */
 
 mat_type minver_fabs(mat_type n) {
@@ -2310,22 +2310,20 @@ mat_type minver_fabs(mat_type n) {
   return f;
 }
 
-int minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3], mat_type minver_c[3][3],
-                  int row_a, int col_a, int row_b, int col_b )
+int minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3],
+    mat_type minver_c[3][3])
 {_ssdm_SpecArrayDimSize(minver_a,3);_ssdm_SpecArrayDimSize(minver_c,3);_ssdm_SpecArrayDimSize(minver_b,3);
-  int i, j, k, row_c, col_c;
+  int i, j, k;
   mat_type w;
 
-  row_c = row_a;
-  col_c = col_b;
 
-  if ( row_c < 1 || row_b < 1 || col_c < 1 || col_a != row_b )
+  if (3 < 1)
     return ( 999 );
 
-  for ( i = 0; i < row_c; i++ ) {
-    for ( j = 0; j < col_c; j++ ) {
+  for ( i = 0; i < 3; i++ ) {
+    for ( j = 0; j < 3; j++ ) {
       w = 0.0;
-      for ( k = 0; k < row_b; k++ )
+      for ( k = 0; k < 3; k++ )
         w += minver_a[ i ][ k ] * minver_b[ k ][ j ];
 
       minver_c[ i ][ j ] = w;

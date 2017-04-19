@@ -1,0 +1,7 @@
+Running: xsim.dir/minver_minver_hwa/xsimk -simmode gui -wdb minver_minver_hwa.wdb -simrunnum 0 -socket 54610
+Design successfully loaded
+Design Loading Memory Usage: 56156 KB (Peak: 59996 KB)
+Design Loading CPU Usage: 40 ms
+Simulation completed
+Simulation Memory Usage: 138088 KB (Peak: 195424 KB)
+Simulation CPU Usage: 520 ms
