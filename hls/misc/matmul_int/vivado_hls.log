@@ -1,0 +1,134 @@
+INFO: [HLS 200-10] Running '/home/patmos/Xilinx/Vivado_HLS/2016.4/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'patmos' on host 'ubuntu' (Linux_x86_64 version 4.4.0-72-generic) on Thu Apr 20 16:50:06 CEST 2017
+INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int'
+INFO: [HLS 200-10] Opening project '/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int'.
+INFO: [HLS 200-10] Opening solution '/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a100tcsg324-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/g++"
+   Compiling apatb_matmul_hw.cpp
+   Compiling matmul.cpp_pre.cpp.tb.cpp
+   Compiling matmul_test.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+1 2 3 4 
+2 3 4 5 
+3 4 5 6 
+4 5 6 7 
+5 6 7 8 
+6 7 8 9 
+7 8 9 10 
+8 9 10 11 
+
+70 80 90 100 
+96 110 124 138 
+122 140 158 176 
+148 170 192 214 
+
+70 80 90 100 
+96 110 124 138 
+122 140 158 176 
+148 170 192 214 
+
+Test Passes:INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/home/patmos/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /home/patmos/Xilinx/Vivado/2016.4/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_matmul_hw_top -prj matmul_hw.prj --initfile /home/patmos/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s matmul_hw 
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/sim/verilog/matmul_hw.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_matmul_hw_top
+INFO: [VRFC 10-2458] undeclared symbol brama_0_Rst_A, assumed default net type wire [/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/sim/verilog/matmul_hw.autotb.v:183]
+INFO: [VRFC 10-2458] undeclared symbol brama_0_Rst_B, assumed default net type wire [/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/sim/verilog/matmul_hw.autotb.v:190]
+INFO: [VRFC 10-2458] undeclared symbol brama_1_Rst_A, assumed default net type wire [/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/sim/verilog/matmul_hw.autotb.v:226]
+INFO: [VRFC 10-2458] undeclared symbol brama_1_Rst_B, assumed default net type wire [/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/sim/verilog/matmul_hw.autotb.v:233]
+INFO: [VRFC 10-2458] undeclared symbol brama_2_Rst_A, assumed default net type wire [/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/sim/verilog/matmul_hw.autotb.v:269]
+INFO: [VRFC 10-2458] undeclared symbol brama_2_Rst_B, assumed default net type wire [/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/sim/verilog/matmul_hw.autotb.v:276]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/sim/verilog/matmul_hw.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matmul_hw
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/sim/verilog/AESL_autobram_a_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autobram_a_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/sim/verilog/matmul_hw_mux_42_bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matmul_hw_mux_42_bkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/sim/verilog/AESL_autobram_a_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autobram_a_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/sim/verilog/matmul_hw_mul_32scud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matmul_hw_mul_32scud_MulnS_0
+INFO: [VRFC 10-311] analyzing module matmul_hw_mul_32scud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/sim/verilog/AESL_autobram_a_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autobram_a_2
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.matmul_hw_mux_42_bkb(ID=1,din5_W...
+Compiling module xil_defaultlib.matmul_hw_mul_32scud_MulnS_0
+Compiling module xil_defaultlib.matmul_hw_mul_32scud(ID=1,NUM_ST...
+Compiling module xil_defaultlib.matmul_hw
+Compiling module xil_defaultlib.AESL_autobram_a_0
+Compiling module xil_defaultlib.AESL_autobram_a_1
+Compiling module xil_defaultlib.AESL_autobram_a_2
+Compiling module xil_defaultlib.apatb_matmul_hw_top
+Built simulation snapshot matmul_hw
+
+****** Webtalk v2016.4 (64-bit)
+  **** SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+  **** IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/sim/verilog/xsim.dir/matmul_hw/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/sim/verilog/xsim.dir/matmul_hw/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Apr 20 16:50:12 2017. For additional details about this file, please refer to the WebTalk help file at /home/patmos/Xilinx/Vivado/2016.4/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Apr 20 16:50:12 2017...
+
+****** xsim v2016.4 (64-bit)
+  **** SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+  **** IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/matmul_hw/xsim_script.tcl
+# xsim {matmul_hw} -autoloadwcfg -tclbatch {matmul_hw.tcl}
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source matmul_hw.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [0.00%] @ "875000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 915 ns : File "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/sim/verilog/matmul_hw.autotb.v" Line 350
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu Apr 20 16:50:22 2017...
+INFO: [COSIM 212-316] Starting C post checking ...
+1 2 3 4 
+2 3 4 5 
+3 4 5 6 
+4 5 6 7 
+5 6 7 8 
+6 7 8 9 
+7 8 9 10 
+8 9 10 11 
+
+70 80 90 100 
+96 110 124 138 
+122 140 158 176 
+148 170 192 214 
+
+70 80 90 100 
+96 110 124 138 
+122 140 158 176 
+148 170 192 214 
+
+Test Passes:INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***

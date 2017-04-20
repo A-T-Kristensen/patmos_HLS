@@ -1,0 +1,528 @@
+@I [HLS-0] Workspace /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b opened at Thu Apr 20 16:49:23 CEST 2017
+@I [HLS-100] Execute     config_clock -quiet -name default -period 10 -default=false 
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [HLS-100] Command     config_clock returned 0; 0 sec.
+@I [HLS-100] Execute     open_platform DefaultPlatform 
+@I [HLS-100] Command     open_platform returned 0; 0 sec.
+@I [HLS-100] Execute     import_lib /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7 
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.lib 
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/xilinx_interface.lib 
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.lib 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.lib 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.lib 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.lib 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.lib 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.lib 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.lib 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.lib 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.lib 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_old.lib 
+@I [HLS-100] Command       ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_vivado.lib 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.hlp 
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/target_info.tcl 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.hlp 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.hlp 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.hlp 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/dsp48e1.hlp 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       get_default_platform 
+@I [HLS-100] Command       get_default_platform returned 0; 0 sec.
+@I [HLS-100] Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+@I [HLS-100] Command       config_chip_info returned 0; 0 sec.
+@I [HLS-100] Execute       config_chip_info -quiet -speed medium 
+@I [HLS-100] Command       config_chip_info returned 0; 0 sec.
+@I [HLS-100] Command     import_lib returned 0; 0.02 sec.
+@I [HLS-100] Execute     source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7.gen 
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.08 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.1 sec.
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.1 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.1 sec.
+@I [HLS-100] Execute     open_platform DefaultPlatform 
+@I [HLS-100] Command     open_platform returned 0; 0 sec.
+@I [HLS-100] Execute     import_lib /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6 
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv7.lib 
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_hp.lib 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv.hlp 
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.hlp 
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/target_info.tcl 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.hlp 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.hlp 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.hlp 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_hp.hlp 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Command     import_lib returned 0; 0.02 sec.
+@I [HLS-100] Execute     source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6.gen 
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     set_part xc7a100tcsg324-1 
+@I [HLS-100] Execute       add_library xilinx/artix7/artix7:xc7a100t:csg324:-1 
+@I [HLS-100] Execute         get_default_platform 
+@I [HLS-100] Command         get_default_platform returned 0; 0 sec.
+@I [HLS-100] Execute         license_isbetapart xc7a100t 
+@I [HLS-100] Command         license_isbetapart returned 1; 0 sec.
+@I [HLS-100] Execute         get_default_platform 
+@I [HLS-100] Command         get_default_platform returned 0; 0 sec.
+@I [HLS-100] Execute         config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+@I [HLS-100] Command         config_chip_info returned 0; 0 sec.
+@I [HLS-100] Execute         config_chip_info -quiet -speed slow 
+@I [HLS-100] Command         config_chip_info returned 0; 0 sec.
+@I [HLS-100] Command       add_library returned 0; 0.01 sec.
+@I [HLS-100] Execute       add_library xilinx/artix7/artix7_fpv6 
+@I [HLS-100] Execute         get_default_platform 
+@I [HLS-100] Command         get_default_platform returned 0; 0 sec.
+@I [HLS-100] Command       add_library returned 0; 0 sec.
+@I [HLS-10] Setting target device to 'xc7a100tcsg324-1'
+@I [HLS-100] Command     set_part returned 0; 0.01 sec.
+@I [HLS-100] Execute     get_default_platform 
+@I [HLS-100] Command     get_default_platform returned 0; 0 sec.
+@I [HLS-100] Execute     config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+@I [HLS-100] Command     config_chip_info returned 0; 0 sec.
+@I [HLS-100] Execute     config_chip_info -quiet -speed slow 
+@I [HLS-100] Command     config_chip_info returned 0; 0 sec.
+@I [HLS-100] Command   open_solution returned 0; 0.15 sec.
+@I [HLS-100] Execute   set_part xc7a100tcsg324-1 
+@I [HLS-100] Execute     add_library xilinx/artix7/artix7:xc7a100t:csg324:-1 
+@I [HLS-100] Execute       get_default_platform 
+@I [HLS-100] Command       get_default_platform returned 0; 0 sec.
+@I [HLS-100] Execute       license_isbetapart xc7a100t 
+@I [HLS-100] Command       license_isbetapart returned 1; 0 sec.
+@I [HLS-100] Execute       get_default_platform 
+@I [HLS-100] Command       get_default_platform returned 0; 0 sec.
+@I [HLS-100] Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+@I [HLS-100] Command       config_chip_info returned 0; 0 sec.
+@I [HLS-100] Execute       config_chip_info -quiet -speed slow 
+@I [HLS-100] Command       config_chip_info returned 0; 0 sec.
+@I [HLS-100] Command     add_library returned 0; 0.01 sec.
+@I [HLS-100] Execute     add_library xilinx/artix7/artix7_fpv6 
+@I [HLS-100] Execute       get_default_platform 
+@I [HLS-100] Command       get_default_platform returned 0; 0 sec.
+@I [HLS-100] Command     add_library returned 0; 0 sec.
+@I [HLS-100] Command   set_part returned 0; 0.01 sec.
+@I [HLS-100] Execute   create_clock -period 10 -name default 
+@I [HLS-100] Execute     config_clock -quiet -name default -period 10 -default=false 
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [HLS-100] Command     config_clock returned 0; 0 sec.
+@I [HLS-100] Command   create_clock returned 0; 0 sec.
+@I [HLS-100] Execute   source ./hls_matmul_int/matmul_2b/directives.tcl 
+@I [HLS-100] Execute     set_directive_array_partition -type block -factor 2 -dim 1 matmul_hw a 
+@I [HLS-0] Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequireda block=positionBoolean0type factor=2 dim=1 
+@I [HLS-100] Command     set_directive_array_partition returned 0; 0 sec.
+@I [HLS-100] Command   ap_source returned 0; 0 sec.
+@I [HLS-100] Execute   csynth_design 
+@I [HLS-100] Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 
+@I [HLS-10] Analyzing design file 'matmul.cpp' ... 
+@I [HLS-0] Compiling one TU...
+@I [HLS-0] Handling matmul.cpp as C++
+@I [HLS-0] Syntax Checking before pre-processing...
+@I [HLS-100] Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -Wno-attributes -Wno-gcc-compat   -I "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/systemc/include" -I "/home/patmos/Xilinx/Vivado_HLS/2016.4/include" -I "/home/patmos/Xilinx/Vivado_HLS/2016.4/include/ap_sysc" -fexceptions -I "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot" -include etc/autopilot_ssdm_op.h "matmul.cpp"  -o "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul.pp.00.o" 
+@I [HLS-100] Command       clang returned 0; 0.1 sec.
+@I [HLS-100] Execute       is_encrypted /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul.pp.00.o 
+@I [HLS-100] Command       is_encrypted returned 0; 0 sec.
+@I [HLS-0] Source preprocessing
+@I [HLS-100] Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "matmul.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -Wno-attributes -Wno-gcc-compat -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot" -I "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul.pp.0.cpp" 
+@I [HLS-100] Command       clang returned 0; 0.11 sec.
+@I [HLS-0] GCC PP time: 0 seconds per iteration
+@I [HLS-0] Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequireda block=positionBoolean0type factor=2 dim=1 
+@I [HLS-100] Execute       list_core -type functional_unit 
+@I [HLS-100] Command       list_core returned 0; 0 sec.
+@I [HLS-0] CDT Preprocessing...
+@I [HLS-0] Marker-Pragma convertor: /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul.pp.0.cpp /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul.pp.0.cpp.ap-line.cpp /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul.pp.0.cpp.ap-line.cpp.CXX 1
+@I [HLS-0] Converting Markers to Pragmas...
+@I [HLS-100] Execute       cdt  "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul.pp.0.cpp.ap-line.cpp"  -m "matmul_hw" -o "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul.pp.0.cpp.ap-cdt.cpp" --pp --directive /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/matmul_2b.directive --source /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/matmul.cpp --error /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ve --vetcl /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db --ca --es --gf --pd --p2d /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db --sd --scff /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/.systemc_flag --ad 
+@I [HLS-100] Command       cdt returned 0; 0.98 sec.
+@I [HLS-0] Marker-Pragma convertor: /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul.pp.0.cpp.ap-cdt.cpp /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul.pragma.0.cpp /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul.pragma.0.cpp.ap-line.CXX 0
+@I [HLS-0] Converting Pragmas to Markers...
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/pragma.status.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-0] Pragma Handling...
+@I [HLS-0] Source preprocessing
+@I [HLS-100] Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -Wno-attributes -Wno-gcc-compat -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot" -I "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul.pragma.2.cpp" 
+@I [HLS-100] Command       clang returned 0; 0.09 sec.
+@I [HLS-0] Processing labels
+@I [HLS-100] Execute       clang  -fno-limit-debug-info -gcc-toolchain /home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot" -I "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul.g.bc" 
+@I [HLS-100] Command       clang returned 0; 0.09 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/ve_warning.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-10] Validating synthesis directives ...
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/pragma.status.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 326.352 ; gain = 12.586 ; free physical = 10047 ; free virtual = 15452
+@I [HLS-0] Linking Release ...
+@I [HLS-100] Execute       llvm-ld /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul.bc -disable-opt -L/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/lib -lm_basic -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.o 
+@I [HLS-100] Command       llvm-ld returned 0; 0.05 sec.
+@I [HLS-100] Execute       disassemble /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.o 
+@I [HLS-100] Execute         is_encrypted /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.o.bc 
+@I [HLS-100] Command         is_encrypted returned 0; 0 sec.
+@I [HLS-100] Command       disassemble returned 0; 0.04 sec.
+@I [HLS-0] Disassemble time: 0 seconds per iteration
+@I [HLS-0] Linking Debug ...
+@I [HLS-100] Execute       llvm-ld /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul.g.bc -disable-opt -L/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/lib -lm_basic -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.g 
+@I [HLS-100] Command       llvm-ld returned 0; 0.05 sec.
+@I [HLS-100] Execute       disassemble /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.g /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.g 
+@I [HLS-100] Execute         is_encrypted /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.g.bc 
+@I [HLS-100] Command         is_encrypted returned 0; 0 sec.
+@I [HLS-100] Command       disassemble returned 0; 0.04 sec.
+@I [HLS-0] Disassemble time: 0 seconds per iteration
+@I [HLS-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 326.352 ; gain = 12.586 ; free physical = 10047 ; free virtual = 15452
+@I [HLS-100] Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+@I [HLS-100] Execute         cleanup_all_models 
+@I [HLS-100] Command         cleanup_all_models returned 0; 0 sec.
+@I [HLS-10] Starting code transformations ...
+@I [HLS-100] Execute         transform -promote-dbg-pointer /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.pp.bc -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.pp.0.bc -f 
+@I [HLS-100] Command         transform returned 0; 0 sec.
+@I [HLS-100] Execute         llvm-ld /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.pp.0.bc -disable-opt -L/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/lib -lfloatconversion -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.g.0 
+@I [HLS-100] Command         llvm-ld returned 0; 0.04 sec.
+@I [HLS-0] Running Standard Transforms...
+@I [HLS-100] Execute         transform -hls -share-std-xform -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top matmul_hw -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -promote-dbg-pointer -norm-name /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.g.0.bc -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.g.1.bc -f -phase std-opt 
+@I [HLS-100] Command         transform returned 0; 0.03 sec.
+@I [HLS-100] Execute         disassemble /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.g.1 /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.g.1 
+@I [HLS-100] Execute           is_encrypted /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.g.1.bc 
+@I [HLS-100] Command           is_encrypted returned 0; 0 sec.
+@I [HLS-100] Command         disassemble returned 0; 0.04 sec.
+@I [HLS-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 326.352 ; gain = 12.586 ; free physical = 10047 ; free virtual = 15451
+@I [HLS-10] Checking synthesizability ...
+@I [HLS-0] Checking Synthesizability 1/2..
+@I [HLS-100] Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.g.1.bc -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.g.2.prechk.bc -f 
+@I [HLS-100] Command         transform returned 0; 0.04 sec.
+@I [HLS-0] Checking Synthesizability 2/2..
+@I [HLS-100] Execute         transform -syn-check /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.g.2.prechk.bc -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.g.2.bc -f -phase syn-check 
+@I [HLS-100] Command         transform returned 0; 0.01 sec.
+@I [HLS-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 326.352 ; gain = 12.586 ; free physical = 10047 ; free virtual = 15451
+@I [HLS-0] Compiler optimizing ...
+@I [HLS-0] Share syncheck's 1.bc for syn flow: copy /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.g.1.bc to /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.o.1.bc
+@I [HLS-0] Presyn 1...
+@I [HLS-100] Execute         transform -hls -tmp /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -simplifycfg -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.o.1.bc -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.o.1.tmp.bc -f 
+@I [XFORM-502] Unrolling all sub-loops inside loop 'col' (matmul.cpp:20) in function 'matmul_hw' for pipelining.
+@I [XFORM-501] Unrolling loop 'Cache_Row' (matmul.cpp:27) in function 'matmul_hw' completely.
+@I [XFORM-501] Unrolling loop 'Cache_Col' (matmul.cpp:32) in function 'matmul_hw' completely.
+@I [XFORM-501] Unrolling loop 'Product' (matmul.cpp:37) in function 'matmul_hw' completely.
+@I [XFORM-102] Partitioning array 'a_row' (matmul.cpp:13) automatically.
+@I [XFORM-102] Partitioning array 'b_copy' (matmul.cpp:14) in dimension 1 automatically.
+@I [XFORM-102] Automatically partitioning small array 'b_copy.0' (matmul.cpp:14) completely based on array size.
+@I [XFORM-102] Automatically partitioning small array 'b_copy.1' (matmul.cpp:14) completely based on array size.
+@I [XFORM-102] Automatically partitioning small array 'b_copy.2' (matmul.cpp:14) completely based on array size.
+@I [XFORM-102] Automatically partitioning small array 'b_copy.3' (matmul.cpp:14) completely based on array size.
+@I [XFORM-101] Partitioning array 'a' (matmul.cpp:4) in dimension 1 with a block factor 2.
+@I [XFORM-101] Partitioning array 'b_copy.0' (matmul.cpp:14) in dimension 1 completely.
+@I [XFORM-101] Partitioning array 'b_copy.1' (matmul.cpp:14) in dimension 1 completely.
+@I [XFORM-101] Partitioning array 'b_copy.2' (matmul.cpp:14) in dimension 1 completely.
+@I [XFORM-101] Partitioning array 'b_copy.3' (matmul.cpp:14) in dimension 1 completely.
+@I [HLS-100] Command         transform returned 0; 0.15 sec.
+@I [HLS-0] Presyn 2...
+@I [HLS-100] Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.o.1.tmp.bc -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.o.2.bc -f -phase presyn 
+@I [XFORM-401] Performing if-conversion on hyperblock from (matmul.cpp:20:35) to (matmul.cpp:20:29) in function 'matmul_hw'... converting 25 basic blocks.
+@I [XFORM-11] Balancing expressions in function 'matmul_hw' (matmul.cpp:4)...3 expression(s) balanced.
+@I [HLS-100] Command         transform returned 0; 0.08 sec.
+@I [HLS-100] Execute         disassemble /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.o.2 /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.o.2 
+@I [HLS-100] Execute           is_encrypted /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.o.2.bc 
+@I [HLS-100] Command           is_encrypted returned 0; 0 sec.
+@I [HLS-100] Command         disassemble returned 0; 0.05 sec.
+@I [HLS-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 454.348 ; gain = 140.582 ; free physical = 10026 ; free virtual = 15431
+@I [HLS-0] Building ssdm...
+@I [HLS-100] Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -interface-preproc -interface-gen -deadargelim -directive-preproc -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -read-loop-dep -dce -bitwidth -loop-dep -norm-name -legalize -cdfg-build /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.o.2.bc -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+@I [XFORM-541] Flattening a loop nest 'Loop-1' (matmul.cpp:19:15) in function 'matmul_hw'.
+@I [HLS-100] Command         transform returned 0; 0.2 sec.
+@I [HLS-100] Execute         disassemble /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.o.3 /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.o.3 
+@I [HLS-100] Execute           is_encrypted /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.o.3.bc 
+@I [HLS-100] Command           is_encrypted returned 0; 0 sec.
+@I [HLS-100] Command         disassemble returned 0; 0.04 sec.
+@I [HLS-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 454.348 ; gain = 140.582 ; free physical = 10034 ; free virtual = 15439
+@I [HLS-0] Finish building internal data model.
+@I [HLS-100] Command       opt_and_import_c returned 0; 0.7 sec.
+@I [HLS-100] Command     elaborate returned 0; 2.38 sec.
+@I [HLS-100] Execute     autosyn 
+@I [HLS-10] Starting hardware synthesis ...
+@I [HLS-0] Synthesizing C/C++ design ...
+@I [HLS-10] Synthesizing 'matmul_hw' ...
+@I [HLS-100] Execute       ap_set_top_model matmul_hw 
+@I [HLS-100] Command       ap_set_top_model returned 0; 0 sec.
+@I [HLS-100] Execute       get_model_list matmul_hw -filter all-wo-channel -topdown 
+@I [HLS-100] Command       get_model_list returned 0; 0 sec.
+@I [HLS-100] Execute       preproc_iomode -model matmul_hw 
+@I [HLS-100] Command       preproc_iomode returned 0; 0 sec.
+@I [HLS-100] Execute       get_model_list matmul_hw -filter all-wo-channel 
+@I [HLS-100] Command       get_model_list returned 0; 0 sec.
+@I [HLS-0] Model list for configure: matmul_hw
+@I [HLS-0] Configuring Module : matmul_hw ...
+@I [HLS-100] Execute       set_default_model matmul_hw 
+@I [HLS-100] Command       set_default_model returned 0; 0 sec.
+@I [HLS-100] Execute       apply_spec_resource_limit matmul_hw 
+@I [HLS-100] Command       apply_spec_resource_limit returned 0; 0 sec.
+@I [HLS-0] Model list for preprocess: matmul_hw
+@I [HLS-0] Preprocessing Module: matmul_hw ...
+@I [HLS-100] Execute       set_default_model matmul_hw 
+@I [HLS-100] Command       set_default_model returned 0; 0 sec.
+@I [HLS-100] Execute       cdfg_preprocess -model matmul_hw 
+@I [HLS-100] Command       cdfg_preprocess returned 0; 0 sec.
+@I [HLS-100] Execute       rtl_gen_preprocess matmul_hw 
+@I [HLS-100] Command       rtl_gen_preprocess returned 0; 0 sec.
+@I [HLS-0] Model list for synthesis: matmul_hw
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Implementing module 'matmul_hw' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-100] Execute       set_default_model matmul_hw 
+@I [HLS-100] Command       set_default_model returned 0; 0 sec.
+@I [HLS-100] Execute       schedule -model matmul_hw 
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'L_col'.
+@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 1, distance = 4, offset = 1)
+   between 'store' operation (matmul.cpp:41) of variable 'tmp_12_3', matmul.cpp:38 on array 'a_1' and 'load' operation ('b_copy[2][3]', matmul.cpp:33) on array 'a_1'.
+@W [SCHED-69] Unable to schedule 'load' operation ('b_copy[0][3]', matmul.cpp:33) on array 'a_0' due to limited memory ports.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 6, Depth: 15.
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command       schedule returned 0; 0.3 sec.
+@I [HLS-111]  Elapsed time: 3.13 seconds; current allocated memory: 58.192 MB.
+@I [HLS-100] Execute       report -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul_hw.verbose.sched.rpt -verbose -f 
+@I [HLS-100] Command       report returned 0; 0.01 sec.
+@I [HLS-100] Execute       db_write -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul_hw.sched.adb -f 
+@I [HLS-100] Command       db_write returned 0; 0.01 sec.
+@I [HLS-0] Finish scheduling matmul_hw.
+@I [HLS-100] Execute       set_default_model matmul_hw 
+@I [HLS-100] Command       set_default_model returned 0; 0 sec.
+@I [HLS-100] Execute       bind -model matmul_hw 
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=matmul_hw
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command       bind returned 0; 0.04 sec.
+@I [HLS-111]  Elapsed time: 0.06 seconds; current allocated memory: 59.092 MB.
+@I [HLS-100] Execute       report -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul_hw.verbose.bind.rpt -verbose -f 
+@I [HLS-100] Command       report returned 0; 0.1 sec.
+@I [HLS-100] Execute       db_write -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul_hw.bind.adb -f 
+@I [HLS-100] Command       db_write returned 0; 0 sec.
+@I [HLS-0] Finish binding matmul_hw.
+@I [HLS-100] Execute       get_model_list matmul_hw -filter all-wo-channel 
+@I [HLS-100] Command       get_model_list returned 0; 0 sec.
+@I [HLS-0] Preprocessing for RTLGen ...
+@I [HLS-100] Execute       rtl_gen_preprocess matmul_hw 
+@I [HLS-100] Command       rtl_gen_preprocess returned 0; 0.01 sec.
+@I [HLS-0] Model list for RTL generation: matmul_hw
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'matmul_hw' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-100] Execute       create_rtl_model matmul_hw -vendor xilinx -mg_file /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul_hw.compgen.tcl 
+@I [RTGEN-500] Setting interface mode on port 'matmul_hw/a_0' to 'bram'.
+@I [RTGEN-500] Setting interface mode on port 'matmul_hw/a_1' to 'bram'.
+@I [RTGEN-500] Setting interface mode on function 'matmul_hw' to 'ap_ctrl_hs'.
+@I [SYN-210] Renamed object name 'matmul_hw_mux_42_32_1' to 'matmul_hw_mux_42_bkb' due to the length limit 20
+@I [SYN-210] Renamed object name 'matmul_hw_mul_32s_32s_32_6' to 'matmul_hw_mul_32scud' due to the length limit 20
+@I [SYN-210] Renamed object name 'matmul_hw_urem_4ns_4ns_4_8' to 'matmul_hw_urem_4ndEe' due to the length limit 20
+@W [RTGEN-101] Setting dangling out port 'matmul_hw/a_0_WEN_A' to 0.
+@W [RTGEN-101] Setting dangling out port 'matmul_hw/a_0_Din_A' to 0.
+@I [RTGEN-100] Generating core module 'matmul_hw_mul_32scud': 4 instance(s).
+@I [RTGEN-100] Generating core module 'matmul_hw_mux_42_bkb': 4 instance(s).
+@I [RTGEN-100] Generating core module 'matmul_hw_urem_4ndEe': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'matmul_hw'.
+@I [HLS-100] Command       create_rtl_model returned 0; 0.05 sec.
+@I [HLS-111]  Elapsed time: 0.16 seconds; current allocated memory: 60.449 MB.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul_hw.rtl_wrap.cfg.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       gen_rtl matmul_hw -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/syn/systemc/matmul_hw -synmodules matmul_hw 
+@I [HLS-100] Command       gen_rtl returned 0; 0 sec.
+@I [HLS-100] Execute       gen_rtl matmul_hw -istop -style xilinx -f -lang vhdl -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/syn/vhdl/matmul_hw 
+@I [HLS-100] Command       gen_rtl returned 0; 0.07 sec.
+@I [HLS-100] Execute       gen_rtl matmul_hw -istop -style xilinx -f -lang vlog -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/syn/verilog/matmul_hw 
+@I [HLS-100] Command       gen_rtl returned 0; 0.04 sec.
+@I [HLS-100] Execute       export_constraint_db -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul_hw.constraint.tcl -f -tool general 
+@I [HLS-100] Command       export_constraint_db returned 0; 0 sec.
+@I [HLS-100] Execute       report -model matmul_hw -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul_hw.design.xml -verbose -f -dv 
+@I [HLS-100] Command       report returned 0; 0.07 sec.
+@I [HLS-100] Execute       report -model matmul_hw -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul_hw.sdaccel.xml -verbose -f -sdaccel 
+@I [HLS-100] Command       report returned 0; 0.1 sec.
+@I [HLS-100] Execute       gen_tb_info matmul_hw -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul_hw -p /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db 
+@I [HLS-100] Command       gen_tb_info returned 0; 0 sec.
+@I [HLS-100] Execute       report -model matmul_hw -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/syn/report/matmul_hw_csynth.rpt -f 
+@I [HLS-100] Command       report returned 0; 0.04 sec.
+@I [HLS-100] Execute       report -model matmul_hw -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/syn/report/matmul_hw_csynth.xml -f -x 
+@I [HLS-100] Command       report returned 0; 0.03 sec.
+@I [HLS-100] Execute       report -model matmul_hw -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul_hw.verbose.rpt -verbose -f 
+@I [HLS-100] Command       report returned 0; 0.12 sec.
+@I [HLS-100] Execute       db_write -model matmul_hw -o /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul_hw.adb -f 
+@I [HLS-100] Command       db_write returned 0; 0.04 sec.
+@I [HLS-100] Execute       sc_get_clocks matmul_hw 
+@I [HLS-100] Command       sc_get_clocks returned 0; 0 sec.
+@I [HLS-100] Execute       sc_get_portdomain matmul_hw 
+@I [HLS-100] Command       sc_get_portdomain returned 0; 0 sec.
+@I [HLS-0] Model list for RTL component generation: matmul_hw
+@I [HLS-0] Handling components in module [matmul_hw] ... 
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul_hw.compgen.tcl 
+@I [HLS-0] Found component matmul_hw_mux_42_bkb.
+@I [HLS-0] Append model matmul_hw_mux_42_bkb
+@I [HLS-0] Found component matmul_hw_mul_32scud.
+@I [HLS-0] Append model matmul_hw_mul_32scud
+@I [HLS-0] Found component matmul_hw_urem_4ndEe.
+@I [HLS-0] Append model matmul_hw_urem_4ndEe
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-0] Append model matmul_hw
+@I [HLS-0] Generating RTL model list ...
+@I [HLS-0] All models in this session: matmul_hw_mux_42_bkb matmul_hw_mul_32scud matmul_hw_urem_4ndEe matmul_hw
+@I [HLS-0] To file: write model matmul_hw_mux_42_bkb
+@I [HLS-0] To file: write model matmul_hw_mul_32scud
+@I [HLS-0] To file: write model matmul_hw_urem_4ndEe
+@I [HLS-0] To file: write model matmul_hw
+@I [HLS-0] Finished generating RTL model list.
+
+
+@I [HLS-0] RTL Generation done.
+@I [HLS-0] CAS Generation done.
+@I [HLS-0] CBC Generation done.
+@I [HLS-100] Execute       export_ssdm /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/a.export.ll 
+@I [HLS-100] Command       export_ssdm returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7.gen 
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
+@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
+@I [HLS-100] Command               ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
+@I [HLS-100] Command               ap_source returned 0; 0 sec.
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.06 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.09 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.09 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.09 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6.gen 
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.autopilot/db/matmul_hw.compgen.tcl 
+@I [RTMG-282] Generating pipelined core: 'matmul_hw_mul_32scud_MulnS_0'
+@I [RTMG-282] Generating pipelined core: 'matmul_hw_urem_4ndEe_div'
+@I [HLS-100] Command       ap_source returned 0; 0.03 sec.
+@I [HLS-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 454.348 ; gain = 140.582 ; free physical = 10021 ; free virtual = 15429
+@I [SYSC-301] Generating SystemC RTL for matmul_hw.
+@I [VHDL-304] Generating VHDL RTL for matmul_hw.
+@I [VLOG-307] Generating Verilog RTL for matmul_hw.
+@I [HLS-100] Command     autosyn returned 0; 1.2 sec.
+@I [HLS-100] Command   csynth_design returned 0; 3.58 sec.
+@I [HLS-100] Command ap_source returned 0; 3.75 sec.
+@I [HLS-100] Execute cleanup_all 
+@I [HLS-100] Command cleanup_all returned 0; 0 sec.

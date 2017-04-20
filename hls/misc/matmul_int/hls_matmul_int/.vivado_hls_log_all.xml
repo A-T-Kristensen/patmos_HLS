@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/a_0_Din_A' to 0." projectName="hls_matmul_int" solutionName="matmul_2b" date="2017-04-20T16:49:26.075+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/a_0_WEN_A' to 0." projectName="hls_matmul_int" solutionName="matmul_2b" date="2017-04-20T16:49:26.048+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('b_copy[0][3]', matmul.cpp:33) on array 'a_0' due to limited memory ports." projectName="hls_matmul_int" solutionName="matmul_2b" date="2017-04-20T16:49:25.816+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 4, offset = 1)&#xA;   between 'store' operation (matmul.cpp:41) of variable 'tmp_12_3', matmul.cpp:38 on array 'a_1' and 'load' operation ('b_copy[2][3]', matmul.cpp:33) on array 'a_1'." projectName="hls_matmul_int" solutionName="matmul_2b" date="2017-04-20T16:49:25.777+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/a_1_Din_A' to 0." projectName="hls_matmul_int" solutionName="matmul_3b" date="2017-04-20T16:49:21.517+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/a_1_WEN_A' to 0." projectName="hls_matmul_int" solutionName="matmul_3b" date="2017-04-20T16:49:21.504+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/a_0_Din_A' to 0." projectName="hls_matmul_int" solutionName="matmul_3b" date="2017-04-20T16:49:21.496+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/a_0_WEN_A' to 0." projectName="hls_matmul_int" solutionName="matmul_3b" date="2017-04-20T16:49:21.491+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('a_row[1]', matmul.cpp:27) on array 'a_0' due to limited memory ports." projectName="hls_matmul_int" solutionName="matmul_3b" date="2017-04-20T16:49:21.277+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('b_copy[0][3]', matmul.cpp:33) on array 'a' due to limited memory ports." projectName="hls_matmul_int" solutionName="matmul_1b" date="2017-04-20T16:49:16.432+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)&#xA;   between 'store' operation (matmul.cpp:41) of variable 'tmp_12_3', matmul.cpp:38 on array 'a' and 'load' operation ('a_row[1]', matmul.cpp:27) on array 'a'." projectName="hls_matmul_int" solutionName="matmul_1b" date="2017-04-20T16:49:16.407+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)&#xA;   between 'store' operation (matmul.cpp:41) of variable 'tmp_12_3', matmul.cpp:38 on array 'a' and 'load' operation ('a_row[1]', matmul.cpp:27) on array 'a'." projectName="hls_matmul_int" solutionName="matmul_1b" date="2017-04-20T16:49:16.383+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)&#xA;   between 'store' operation (matmul.cpp:41) of variable 'tmp_12_3', matmul.cpp:38 on array 'a' and 'load' operation ('a_row[1]', matmul.cpp:27) on array 'a'." projectName="hls_matmul_int" solutionName="matmul_1b" date="2017-04-20T16:49:16.380+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 5, offset = 1)&#xA;   between 'store' operation (matmul.cpp:41) of variable 'tmp_12_3', matmul.cpp:38 on array 'a' and 'load' operation ('a_row[0]', matmul.cpp:27) on array 'a'." projectName="hls_matmul_int" solutionName="matmul_1b" date="2017-04-20T16:49:16.370+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-105] Cannot partition array 'a' (matmul.cpp:4): incorrect partition factor 1." projectName="hls_matmul_int" solutionName="matmul_1b" date="2017-04-20T16:49:15.633+0200" type="Warning"/>
+      </synLog>
+      <simLog>
+        <logs message="WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the &quot;-mt off -v 1&quot; switches to see more information from the C compiler. The following environment variables have been detected:&#xA;    LIBRARY_PATH" projectName="hls_matmul_int" solutionName="matmul_3b" date="2017-04-20T16:50:09.962+0200" type="Warning"/>
+      </simLog>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

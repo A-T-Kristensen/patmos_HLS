@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/a_1_Din_A' to 0." projectName="hls_matmul_float" solutionName="matmul_3b" date="2017-04-20T16:46:24.447+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/a_1_WEN_A' to 0." projectName="hls_matmul_float" solutionName="matmul_3b" date="2017-04-20T16:46:24.426+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/a_0_Din_A' to 0." projectName="hls_matmul_float" solutionName="matmul_3b" date="2017-04-20T16:46:24.424+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/a_0_WEN_A' to 0." projectName="hls_matmul_float" solutionName="matmul_3b" date="2017-04-20T16:46:24.418+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('a_0_load_1', matmul.cpp:27) on array 'a_0' due to limited memory ports." projectName="hls_matmul_float" solutionName="matmul_3b" date="2017-04-20T16:46:24.126+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/a_0_Din_A' to 0." projectName="hls_matmul_float" solutionName="matmul_2b" date="2017-04-20T16:46:17.870+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/a_0_WEN_A' to 0." projectName="hls_matmul_float" solutionName="matmul_2b" date="2017-04-20T16:46:17.840+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('a_0_load_2', matmul.cpp:27) on array 'a_0' due to limited memory ports." projectName="hls_matmul_float" solutionName="matmul_2b" date="2017-04-20T16:46:17.586+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 3, distance = 4, offset = 1)&#xA;   between 'store' operation (matmul.cpp:41) of variable 'tmp_12_3', matmul.cpp:38 on array 'a_1' and 'load' operation ('b_copy[2][3]', matmul.cpp:33) on array 'a_1'." projectName="hls_matmul_float" solutionName="matmul_2b" date="2017-04-20T16:46:17.572+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 2, distance = 4, offset = 1)&#xA;   between 'store' operation (matmul.cpp:41) of variable 'tmp_12_3', matmul.cpp:38 on array 'a_1' and 'load' operation ('b_copy[2][3]', matmul.cpp:33) on array 'a_1'." projectName="hls_matmul_float" solutionName="matmul_2b" date="2017-04-20T16:46:17.568+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 4, offset = 1)&#xA;   between 'store' operation (matmul.cpp:41) of variable 'tmp_12_3', matmul.cpp:38 on array 'a_1' and 'load' operation ('b_copy[2][3]', matmul.cpp:33) on array 'a_1'." projectName="hls_matmul_float" solutionName="matmul_2b" date="2017-04-20T16:46:17.519+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path consists of the following:&#xA;&#x9;'fadd' operation ('tmp_12_1', matmul.cpp:38) (8.26 ns)&#xA;&#x9;'fadd' operation ('tmp_12_2', matmul.cpp:38) (8.26 ns)" projectName="hls_matmul_float" solutionName="matmul_1b" date="2017-04-20T16:46:12.611+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (16.5ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="hls_matmul_float" solutionName="matmul_1b" date="2017-04-20T16:46:12.608+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 16, distance = 1, offset = 1)&#xA;   between 'store' operation (matmul.cpp:41) of variable 'tmp_12_3', matmul.cpp:38 on array 'a' and 'load' operation ('a_load_1', matmul.cpp:27) on array 'a'." projectName="hls_matmul_float" solutionName="matmul_1b" date="2017-04-20T16:46:12.605+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1)&#xA;   between 'store' operation (matmul.cpp:41) of variable 'tmp_12_3', matmul.cpp:38 on array 'a' and 'load' operation ('a_load_1', matmul.cpp:27) on array 'a'." projectName="hls_matmul_float" solutionName="matmul_1b" date="2017-04-20T16:46:12.592+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1)&#xA;   between 'store' operation (matmul.cpp:41) of variable 'tmp_12_3', matmul.cpp:38 on array 'a' and 'load' operation ('a_load_1', matmul.cpp:27) on array 'a'." projectName="hls_matmul_float" solutionName="matmul_1b" date="2017-04-20T16:46:12.589+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 4, distance = 5, offset = 1)&#xA;   between 'store' operation (matmul.cpp:41) of variable 'tmp_12_3', matmul.cpp:38 on array 'a' and 'load' operation ('a_load', matmul.cpp:27) on array 'a'." projectName="hls_matmul_float" solutionName="matmul_1b" date="2017-04-20T16:46:12.581+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 3, distance = 5, offset = 1)&#xA;   between 'store' operation (matmul.cpp:41) of variable 'tmp_12_3', matmul.cpp:38 on array 'a' and 'load' operation ('a_load', matmul.cpp:27) on array 'a'." projectName="hls_matmul_float" solutionName="matmul_1b" date="2017-04-20T16:46:12.575+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 2, distance = 5, offset = 1)&#xA;   between 'store' operation (matmul.cpp:41) of variable 'tmp_12_3', matmul.cpp:38 on array 'a' and 'load' operation ('a_load', matmul.cpp:27) on array 'a'." projectName="hls_matmul_float" solutionName="matmul_1b" date="2017-04-20T16:46:12.561+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 5, offset = 1)&#xA;   between 'store' operation (matmul.cpp:41) of variable 'tmp_12_3', matmul.cpp:38 on array 'a' and 'load' operation ('a_load', matmul.cpp:27) on array 'a'." projectName="hls_matmul_float" solutionName="matmul_1b" date="2017-04-20T16:46:12.538+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-135] Cannot reshape array 'a' (matmul.cpp:4): incorrect reshape factor 1." projectName="hls_matmul_float" solutionName="matmul_1b" date="2017-04-20T16:46:11.985+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-135] Cannot reshape array 'a' (matmul.cpp:4): incorrect reshape factor 1." projectName="hls_matmul_float" solutionName="matmul_1b" date="2017-04-20T16:46:11.971+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

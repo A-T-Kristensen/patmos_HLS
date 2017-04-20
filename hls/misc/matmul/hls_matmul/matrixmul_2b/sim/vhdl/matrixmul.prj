@@ -1,9 +1,0 @@
-vhdl xil_defaultlib "AESL_sim_pkg.vhd"
-vhdl xil_defaultlib "AESL_autobram_a_1.vhd"
-vhdl xil_defaultlib "matrixmul_urem_4ndEe.vhd"
-vhdl xil_defaultlib "matrixmul.vhd"
-vhdl xil_defaultlib "matrixmul_mux_42_bkb.vhd"
-vhdl xil_defaultlib "matrixmul_mul_32scud.vhd"
-vhdl xil_defaultlib "matrixmul.autotb.vhd"
-vhdl xil_defaultlib "AESL_autobram_a_0.vhd"
-

@@ -1,7 +1,0 @@
-Running: xsim.dir/matmul_hw/xsimk -simmode gui -wdb matmul_hw.wdb -simrunnum 0 -socket 35648
-Design successfully loaded
-Design Loading Memory Usage: 53336 KB (Peak: 55284 KB)
-Design Loading CPU Usage: 10 ms
-Simulation completed
-Simulation Memory Usage: 151468 KB (Peak: 200608 KB)
-Simulation CPU Usage: 40 ms

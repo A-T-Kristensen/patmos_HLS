@@ -1,0 +1,613 @@
+
+
+================================================================
+== Vivado HLS Report for 'matmul_hw'
+================================================================
+* Date:           Thu Apr 20 16:52:12 2017
+
+* Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
+* Project:        hls_matmul_float
+* Solution:       matmul_3b
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.70|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   24|   24|   25|   25|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- L_col   |   22|   22|        17|          2|          1|     4|    yes   |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 17
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 19
+* Pipeline: 1
+  Pipeline-0: II = 2, D = 17, States = { 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	19  / (exitcond_flatten)
+	3  / (!exitcond_flatten)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	2  / true
+19 --> 
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: a_row_load_4 (4)  [1/1] 0.00ns
+:0  %a_row_load_4 = alloca float
+
+ST_1: a_row_load_3 (5)  [1/1] 0.00ns
+:1  %a_row_load_3 = alloca float
+
+ST_1: b_copy_0_1 (6)  [1/1] 0.00ns
+:2  %b_copy_0_1 = alloca float
+
+ST_1: b_copy_0_1_5 (7)  [1/1] 0.00ns
+:3  %b_copy_0_1_5 = alloca float
+
+ST_1: b_copy_1_1 (8)  [1/1] 0.00ns
+:4  %b_copy_1_1 = alloca float
+
+ST_1: b_copy_1_1_5 (9)  [1/1] 0.00ns
+:5  %b_copy_1_1_5 = alloca float
+
+ST_1: StgValue_26 (10)  [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecBitsMap([4 x float]* %a) nounwind, !map !7
+
+ST_1: StgValue_27 (11)  [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecBitsMap([4 x float]* %b) nounwind, !map !13
+
+ST_1: StgValue_28 (12)  [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecBitsMap([4 x float]* %c) nounwind, !map !17
+
+ST_1: StgValue_29 (13)  [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @matmul_hw_str) nounwind
+
+ST_1: StgValue_30 (14)  [1/1] 0.00ns  loc: matmul.c:6
+:10  call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_31 (15)  [1/1] 0.00ns
+:11  call void (...)* @_ssdm_op_SpecInterface([4 x float]* %a, [5 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_1: StgValue_32 (16)  [1/1] 0.00ns
+:12  call void (...)* @_ssdm_op_SpecMemCore([4 x float]* %a, [1 x i8]* @p_str1, [12 x i8]* @p_str3, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_33 (17)  [1/1] 0.00ns
+:13  call void (...)* @_ssdm_op_SpecInterface([4 x float]* %b, [5 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_1: StgValue_34 (18)  [1/1] 0.00ns
+:14  call void (...)* @_ssdm_op_SpecMemCore([4 x float]* %b, [1 x i8]* @p_str1, [12 x i8]* @p_str3, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_35 (19)  [1/1] 0.00ns
+:15  call void (...)* @_ssdm_op_SpecInterface([4 x float]* %c, [5 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_1: StgValue_36 (20)  [1/1] 0.00ns
+:16  call void (...)* @_ssdm_op_SpecMemCore([4 x float]* %c, [1 x i8]* @p_str1, [12 x i8]* @p_str3, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_37 (21)  [1/1] 1.57ns  loc: matmul.c:21
+:17  br label %.preheader7
+
+
+ <State 2>: 5.30ns
+ST_2: indvar_flatten (23)  [1/1] 0.00ns
+.preheader7:0  %indvar_flatten = phi i3 [ 0, %0 ], [ %indvar_flatten_next, %.preheader7.preheader ]
+
+ST_2: i (24)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7:1  %i = phi i2 [ 0, %0 ], [ %tmp_1_mid2_v, %.preheader7.preheader ]
+
+ST_2: j (25)  [1/1] 0.00ns
+.preheader7:2  %j = phi i2 [ 0, %0 ], [ %j_1, %.preheader7.preheader ]
+
+ST_2: exitcond_flatten (26)  [1/1] 1.94ns
+.preheader7:3  %exitcond_flatten = icmp eq i3 %indvar_flatten, -4
+
+ST_2: indvar_flatten_next (27)  [1/1] 0.75ns
+.preheader7:4  %indvar_flatten_next = add i3 %indvar_flatten, 1
+
+ST_2: StgValue_43 (28)  [1/1] 0.00ns
+.preheader7:5  br i1 %exitcond_flatten, label %1, label %.preheader7.preheader
+
+ST_2: i_1 (36)  [1/1] 0.75ns  loc: matmul.c:21
+.preheader7.preheader:6  %i_1 = add i2 1, %i
+
+ST_2: exitcond (39)  [1/1] 1.54ns  loc: matmul.c:23
+.preheader7.preheader:9  %exitcond = icmp eq i2 %j, -2
+
+ST_2: j_mid2 (40)  [1/1] 1.37ns  loc: matmul.c:23
+.preheader7.preheader:10  %j_mid2 = select i1 %exitcond, i2 0, i2 %j
+
+ST_2: tmp_mid1 (41)  [1/1] 1.54ns  loc: matmul.c:36
+.preheader7.preheader:11  %tmp_mid1 = icmp eq i2 %i_1, 0
+
+ST_2: tmp1 (42)  [1/1] 1.54ns  loc: matmul.c:36
+.preheader7.preheader:12  %tmp1 = icmp eq i2 %i, 0
+
+ST_2: tmp_mid2 (43)  [1/1] 1.37ns  loc: matmul.c:36
+.preheader7.preheader:13  %tmp_mid2 = select i1 %exitcond, i1 %tmp_mid1, i1 %tmp1
+
+ST_2: tmp_1_mid2_v (44)  [1/1] 1.37ns  loc: matmul.c:46
+.preheader7.preheader:14  %tmp_1_mid2_v = select i1 %exitcond, i2 %i_1, i2 %i
+
+ST_2: tmp_1 (45)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:15  %tmp_1 = call i3 @_ssdm_op_BitConcatenate.i3.i2.i1(i2 %tmp_1_mid2_v, i1 false)
+
+ST_2: tmp_4 (46)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:16  %tmp_4 = zext i3 %tmp_1 to i64
+
+ST_2: a_addr (48)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:18  %a_addr = getelementptr [4 x float]* %a, i64 0, i64 %tmp_4
+
+ST_2: a_load (56)  [2/2] 2.39ns  loc: matmul.c:32
+.preheader7.preheader:26  %a_load = load float* %a_addr, align 4
+
+ST_2: tmp_6 (60)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader7.preheader:30  %tmp_6 = zext i2 %j_mid2 to i64
+
+ST_2: b_addr (63)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader7.preheader:33  %b_addr = getelementptr [4 x float]* %b, i64 0, i64 %tmp_6
+
+ST_2: b_copy_0_0 (70)  [2/2] 2.39ns  loc: matmul.c:38
+.preheader7.preheader:40  %b_copy_0_0 = load float* %b_addr, align 4
+
+ST_2: tmp (71)  [1/1] 0.00ns  loc: matmul.c:23
+.preheader7.preheader:41  %tmp = trunc i2 %j_mid2 to i1
+
+
+ <State 3>: 3.14ns
+ST_3: tmp_7 (49)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:19  %tmp_7 = or i3 %tmp_1, 1
+
+ST_3: tmp_8 (50)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:20  %tmp_8 = call i64 @_ssdm_op_BitConcatenate.i64.i61.i3(i61 0, i3 %tmp_7)
+
+ST_3: a_addr_1 (51)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:21  %a_addr_1 = getelementptr [4 x float]* %a, i64 0, i64 %tmp_8
+
+ST_3: a_load (56)  [1/2] 2.39ns  loc: matmul.c:32
+.preheader7.preheader:26  %a_load = load float* %a_addr, align 4
+
+ST_3: a_load_1 (57)  [2/2] 2.39ns  loc: matmul.c:32
+.preheader7.preheader:27  %a_load_1 = load float* %a_addr_1, align 4
+
+ST_3: tmp_6_cast (62)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader7.preheader:32  %tmp_6_cast = zext i2 %j_mid2 to i3
+
+ST_3: tmp_9 (64)  [1/1] 0.75ns  loc: matmul.c:38
+.preheader7.preheader:34  %tmp_9 = add i3 2, %tmp_6_cast
+
+ST_3: tmp_9_cast (65)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader7.preheader:35  %tmp_9_cast = zext i3 %tmp_9 to i64
+
+ST_3: b_addr_1 (66)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader7.preheader:36  %b_addr_1 = getelementptr [4 x float]* %b, i64 0, i64 %tmp_9_cast
+
+ST_3: b_copy_0_0 (70)  [1/2] 2.39ns  loc: matmul.c:38
+.preheader7.preheader:40  %b_copy_0_0 = load float* %b_addr, align 4
+
+ST_3: b_copy_1_0 (74)  [2/2] 2.39ns  loc: matmul.c:38
+.preheader7.preheader:44  %b_copy_1_0 = load float* %b_addr_1, align 4
+
+ST_3: j_1 (89)  [1/1] 0.75ns  loc: matmul.c:23
+.preheader7.preheader:59  %j_1 = add i2 1, %j_mid2
+
+
+ <State 4>: 8.70ns
+ST_4: a_row_load_2 (30)  [1/1] 0.00ns
+.preheader7.preheader:0  %a_row_load_2 = load float* %a_row_load_4
+
+ST_4: a_row_load_5 (31)  [1/1] 0.00ns
+.preheader7.preheader:1  %a_row_load_5 = load float* %a_row_load_3
+
+ST_4: b_copy_0_1_load (32)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader7.preheader:2  %b_copy_0_1_load = load float* %b_copy_0_1
+
+ST_4: b_copy_0_1_5_load (33)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader7.preheader:3  %b_copy_0_1_5_load = load float* %b_copy_0_1_5
+
+ST_4: b_copy_1_1_load (34)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader7.preheader:4  %b_copy_1_1_load = load float* %b_copy_1_1
+
+ST_4: b_copy_1_1_5_load (35)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader7.preheader:5  %b_copy_1_1_5_load = load float* %b_copy_1_1_5
+
+ST_4: tmp_4_cast (47)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:17  %tmp_4_cast = zext i3 %tmp_1 to i4
+
+ST_4: tmp_3 (55)  [1/1] 1.54ns  loc: matmul.c:30
+.preheader7.preheader:25  %tmp_3 = icmp eq i2 %j_mid2, 0
+
+ST_4: a_load_1 (57)  [1/2] 2.39ns  loc: matmul.c:32
+.preheader7.preheader:27  %a_load_1 = load float* %a_addr_1, align 4
+
+ST_4: a_row_load_1 (58)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:28  %a_row_load_1 = select i1 %tmp_3, float %a_load_1, float %a_row_load_5
+
+ST_4: a_row_load (59)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:29  %a_row_load = select i1 %tmp_3, float %a_load, float %a_row_load_2
+
+ST_4: tmp_6_cast5 (61)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader7.preheader:31  %tmp_6_cast5 = zext i2 %j_mid2 to i4
+
+ST_4: tmp_10 (67)  [1/1] 0.75ns  loc: matmul.c:46
+.preheader7.preheader:37  %tmp_10 = add i4 %tmp_4_cast, %tmp_6_cast5
+
+ST_4: b_copy_0_1_1 (72)  [1/1] 0.00ns  loc: matmul.c:38 (grouped into LUT with out node b_copy_0_1_3)
+.preheader7.preheader:42  %b_copy_0_1_1 = select i1 %tmp, float %b_copy_0_0, float %b_copy_0_1_5_load
+
+ST_4: b_copy_0_1_2 (73)  [1/1] 0.00ns  loc: matmul.c:38 (grouped into LUT with out node b_copy_0_1_4)
+.preheader7.preheader:43  %b_copy_0_1_2 = select i1 %tmp, float %b_copy_0_1_load, float %b_copy_0_0
+
+ST_4: b_copy_1_0 (74)  [1/2] 2.39ns  loc: matmul.c:38
+.preheader7.preheader:44  %b_copy_1_0 = load float* %b_addr_1, align 4
+
+ST_4: b_copy_1_1_1 (75)  [1/1] 0.00ns  loc: matmul.c:38 (grouped into LUT with out node b_copy_1_1_3)
+.preheader7.preheader:45  %b_copy_1_1_1 = select i1 %tmp, float %b_copy_1_0, float %b_copy_1_1_5_load
+
+ST_4: b_copy_1_1_2 (76)  [1/1] 0.00ns  loc: matmul.c:38 (grouped into LUT with out node b_copy_1_1_4)
+.preheader7.preheader:46  %b_copy_1_1_2 = select i1 %tmp, float %b_copy_1_1_load, float %b_copy_1_0
+
+ST_4: b_copy_1_1_3 (77)  [1/1] 1.37ns  loc: matmul.c:36 (out node of the LUT)
+.preheader7.preheader:47  %b_copy_1_1_3 = select i1 %tmp_mid2, float %b_copy_1_1_1, float %b_copy_1_1_5_load
+
+ST_4: b_copy_1_1_4 (78)  [1/1] 1.37ns  loc: matmul.c:36 (out node of the LUT)
+.preheader7.preheader:48  %b_copy_1_1_4 = select i1 %tmp_mid2, float %b_copy_1_1_2, float %b_copy_1_1_load
+
+ST_4: b_copy_0_1_3 (79)  [1/1] 1.37ns  loc: matmul.c:36 (out node of the LUT)
+.preheader7.preheader:49  %b_copy_0_1_3 = select i1 %tmp_mid2, float %b_copy_0_1_1, float %b_copy_0_1_5_load
+
+ST_4: b_copy_0_1_4 (80)  [1/1] 1.37ns  loc: matmul.c:36 (out node of the LUT)
+.preheader7.preheader:50  %b_copy_0_1_4 = select i1 %tmp_mid2, float %b_copy_0_1_2, float %b_copy_0_1_load
+
+ST_4: b_copy_load_0_phi (81)  [1/1] 1.37ns  loc: matmul.c:43
+.preheader7.preheader:51  %b_copy_load_0_phi = select i1 %tmp, float %b_copy_0_1_3, float %b_copy_0_1_4
+
+ST_4: tmp_s (82)  [4/4] 5.78ns  loc: matmul.c:43
+.preheader7.preheader:52  %tmp_s = fmul float %a_row_load, %b_copy_load_0_phi
+
+ST_4: b_copy_load_1_phi (84)  [1/1] 1.37ns  loc: matmul.c:43
+.preheader7.preheader:54  %b_copy_load_1_phi = select i1 %tmp, float %b_copy_1_1_3, float %b_copy_1_1_4
+
+ST_4: StgValue_96 (90)  [1/1] 0.00ns  loc: matmul.c:36
+.preheader7.preheader:60  store float %b_copy_1_1_3, float* %b_copy_1_1_5
+
+ST_4: StgValue_97 (91)  [1/1] 0.00ns  loc: matmul.c:36
+.preheader7.preheader:61  store float %b_copy_1_1_4, float* %b_copy_1_1
+
+ST_4: StgValue_98 (92)  [1/1] 0.00ns  loc: matmul.c:36
+.preheader7.preheader:62  store float %b_copy_0_1_3, float* %b_copy_0_1_5
+
+ST_4: StgValue_99 (93)  [1/1] 0.00ns  loc: matmul.c:36
+.preheader7.preheader:63  store float %b_copy_0_1_4, float* %b_copy_0_1
+
+ST_4: StgValue_100 (94)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:64  store float %a_row_load_1, float* %a_row_load_3
+
+ST_4: StgValue_101 (95)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:65  store float %a_row_load, float* %a_row_load_4
+
+
+ <State 5>: 5.78ns
+ST_5: tmp_s (82)  [3/4] 5.78ns  loc: matmul.c:43
+.preheader7.preheader:52  %tmp_s = fmul float %a_row_load, %b_copy_load_0_phi
+
+ST_5: tmp_2_1 (85)  [4/4] 5.78ns  loc: matmul.c:43
+.preheader7.preheader:55  %tmp_2_1 = fmul float %a_row_load_1, %b_copy_load_1_phi
+
+
+ <State 6>: 5.78ns
+ST_6: tmp_s (82)  [2/4] 5.78ns  loc: matmul.c:43
+.preheader7.preheader:52  %tmp_s = fmul float %a_row_load, %b_copy_load_0_phi
+
+ST_6: tmp_2_1 (85)  [3/4] 5.78ns  loc: matmul.c:43
+.preheader7.preheader:55  %tmp_2_1 = fmul float %a_row_load_1, %b_copy_load_1_phi
+
+
+ <State 7>: 5.78ns
+ST_7: tmp_s (82)  [1/4] 5.78ns  loc: matmul.c:43
+.preheader7.preheader:52  %tmp_s = fmul float %a_row_load, %b_copy_load_0_phi
+
+ST_7: tmp_2_1 (85)  [2/4] 5.78ns  loc: matmul.c:43
+.preheader7.preheader:55  %tmp_2_1 = fmul float %a_row_load_1, %b_copy_load_1_phi
+
+
+ <State 8>: 8.26ns
+ST_8: tmp_5 (83)  [5/5] 8.26ns  loc: matmul.c:43
+.preheader7.preheader:53  %tmp_5 = fadd float %tmp_s, 0.000000e+00
+
+ST_8: tmp_2_1 (85)  [1/4] 5.78ns  loc: matmul.c:43
+.preheader7.preheader:55  %tmp_2_1 = fmul float %a_row_load_1, %b_copy_load_1_phi
+
+
+ <State 9>: 8.26ns
+ST_9: tmp_5 (83)  [4/5] 8.26ns  loc: matmul.c:43
+.preheader7.preheader:53  %tmp_5 = fadd float %tmp_s, 0.000000e+00
+
+
+ <State 10>: 8.26ns
+ST_10: tmp_5 (83)  [3/5] 8.26ns  loc: matmul.c:43
+.preheader7.preheader:53  %tmp_5 = fadd float %tmp_s, 0.000000e+00
+
+
+ <State 11>: 8.26ns
+ST_11: tmp_5 (83)  [2/5] 8.26ns  loc: matmul.c:43
+.preheader7.preheader:53  %tmp_5 = fadd float %tmp_s, 0.000000e+00
+
+
+ <State 12>: 8.26ns
+ST_12: tmp_5 (83)  [1/5] 8.26ns  loc: matmul.c:43
+.preheader7.preheader:53  %tmp_5 = fadd float %tmp_s, 0.000000e+00
+
+
+ <State 13>: 8.26ns
+ST_13: tmp_5_1 (86)  [5/5] 8.26ns  loc: matmul.c:43
+.preheader7.preheader:56  %tmp_5_1 = fadd float %tmp_5, %tmp_2_1
+
+
+ <State 14>: 8.26ns
+ST_14: tmp_5_1 (86)  [4/5] 8.26ns  loc: matmul.c:43
+.preheader7.preheader:56  %tmp_5_1 = fadd float %tmp_5, %tmp_2_1
+
+
+ <State 15>: 8.26ns
+ST_15: tmp_5_1 (86)  [3/5] 8.26ns  loc: matmul.c:43
+.preheader7.preheader:56  %tmp_5_1 = fadd float %tmp_5, %tmp_2_1
+
+
+ <State 16>: 8.26ns
+ST_16: tmp_5_1 (86)  [2/5] 8.26ns  loc: matmul.c:43
+.preheader7.preheader:56  %tmp_5_1 = fadd float %tmp_5, %tmp_2_1
+
+
+ <State 17>: 8.26ns
+ST_17: tmp_5_1 (86)  [1/5] 8.26ns  loc: matmul.c:43
+.preheader7.preheader:56  %tmp_5_1 = fadd float %tmp_5, %tmp_2_1
+
+
+ <State 18>: 2.39ns
+ST_18: StgValue_119 (37)  [1/1] 0.00ns
+.preheader7.preheader:7  call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @L_col_str)
+
+ST_18: empty (38)  [1/1] 0.00ns
+.preheader7.preheader:8  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind
+
+ST_18: StgValue_121 (52)  [1/1] 0.00ns  loc: matmul.c:23
+.preheader7.preheader:22  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str4) nounwind
+
+ST_18: tmp_2 (53)  [1/1] 0.00ns  loc: matmul.c:23
+.preheader7.preheader:23  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str4) nounwind
+
+ST_18: StgValue_123 (54)  [1/1] 0.00ns  loc: matmul.c:25
+.preheader7.preheader:24  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_18: tmp_10_cast (68)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:38  %tmp_10_cast = zext i4 %tmp_10 to i64
+
+ST_18: c_addr (69)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:39  %c_addr = getelementptr [4 x float]* %c, i64 0, i64 %tmp_10_cast
+
+ST_18: StgValue_126 (87)  [1/1] 2.39ns  loc: matmul.c:46
+.preheader7.preheader:57  store float %tmp_5_1, float* %c_addr, align 4
+
+ST_18: empty_3 (88)  [1/1] 0.00ns  loc: matmul.c:47
+.preheader7.preheader:58  %empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str4, i32 %tmp_2) nounwind
+
+ST_18: StgValue_128 (96)  [1/1] 0.00ns  loc: matmul.c:23
+.preheader7.preheader:66  br label %.preheader7
+
+
+ <State 19>: 0.00ns
+ST_19: StgValue_129 (98)  [1/1] 0.00ns  loc: matmul.c:49
+:0  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.57ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [23]  (1.57 ns)
+
+ <State 2>: 5.3ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', matmul.c:23) [25]  (0 ns)
+	'icmp' operation ('exitcond', matmul.c:23) [39]  (1.54 ns)
+	'select' operation ('tmp_1_mid2_v', matmul.c:46) [44]  (1.37 ns)
+	'getelementptr' operation ('a_addr', matmul.c:32) [48]  (0 ns)
+	'load' operation ('a_load', matmul.c:32) on array 'a' [56]  (2.39 ns)
+
+ <State 3>: 3.14ns
+The critical path consists of the following:
+	'add' operation ('tmp_9', matmul.c:38) [64]  (0.75 ns)
+	'getelementptr' operation ('b_addr_1', matmul.c:38) [66]  (0 ns)
+	'load' operation ('b_copy[1][0]', matmul.c:38) on array 'b' [74]  (2.39 ns)
+
+ <State 4>: 8.7ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_3', matmul.c:30) [55]  (1.54 ns)
+	'select' operation ('a_row_load', matmul.c:30) [59]  (1.37 ns)
+	'fmul' operation ('tmp_s', matmul.c:43) [82]  (5.78 ns)
+
+ <State 5>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', matmul.c:43) [82]  (5.78 ns)
+
+ <State 6>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', matmul.c:43) [82]  (5.78 ns)
+
+ <State 7>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', matmul.c:43) [82]  (5.78 ns)
+
+ <State 8>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', matmul.c:43) [83]  (8.26 ns)
+
+ <State 9>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', matmul.c:43) [83]  (8.26 ns)
+
+ <State 10>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', matmul.c:43) [83]  (8.26 ns)
+
+ <State 11>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', matmul.c:43) [83]  (8.26 ns)
+
+ <State 12>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', matmul.c:43) [83]  (8.26 ns)
+
+ <State 13>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5_1', matmul.c:43) [86]  (8.26 ns)
+
+ <State 14>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5_1', matmul.c:43) [86]  (8.26 ns)
+
+ <State 15>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5_1', matmul.c:43) [86]  (8.26 ns)
+
+ <State 16>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5_1', matmul.c:43) [86]  (8.26 ns)
+
+ <State 17>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5_1', matmul.c:43) [86]  (8.26 ns)
+
+ <State 18>: 2.39ns
+The critical path consists of the following:
+	'getelementptr' operation ('c_addr', matmul.c:46) [69]  (0 ns)
+	'store' operation (matmul.c:46) of variable 'tmp_5_1', matmul.c:43 on array 'c' [87]  (2.39 ns)
+
+ <State 19>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
