@@ -5,8 +5,8 @@
 ############################################################
 open_project hls_matmul_float
 set_top matmul_hw
-add_files matmul.cpp
 add_files matmul.h
+add_files matmul.cpp
 add_files -tb matmul_test.cpp
 open_solution "matmul_1b"
 set_part {xc7a100tcsg324-1} -tool vivado
@@ -15,4 +15,4 @@ source "./hls_matmul_float/matmul_1b/directives.tcl"
 csim_design
 csynth_design
 cosim_design
-export_design -format ip_catalog
+export_design -rtl vhdl -format ip_catalog

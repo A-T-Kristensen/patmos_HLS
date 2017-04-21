@@ -47,7 +47,7 @@ int main(int argc, char **argv)
 
    for (int i = 0; i < DIM; i++) {
       for (int j = 0; j < DIM; j++) {
-    	  printf("%d ", in_mat_b[i][j]);
+    	  printf("%f ", in_mat_b[i][j]);
       }
       printf("\n");
    }

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'matmul_hw'
 ================================================================
-* Date:           Thu Apr 20 16:46:12 2017
+* Date:           Thu Apr 20 19:03:01 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_matmul_float
@@ -924,10 +924,9 @@ The critical path consists of the following:
  <State 4>: 7.02ns
 The critical path consists of the following:
 	'load' operation ('b_copy[0][3]', matmul.cpp:33) on array 'a' [107]  (2.71 ns)
-	'select' operation ('b_copy[0][3]', matmul.cpp:20) [115]  (0 ns)
-	'select' operation ('b_copy[0][3]', matmul.cpp:20) [116]  (1.37 ns)
-	'select' operation ('b_copy[0][3]', matmul.cpp:20) [117]  (0 ns)
-	'select' operation ('b_copy[0][3]', matmul.cpp:31) [164]  (1.37 ns)
+	'select' operation ('b_copy[0][3]', matmul.cpp:20) [118]  (0 ns)
+	'select' operation ('b_copy[0][3]', matmul.cpp:20) [119]  (1.37 ns)
+	'select' operation ('b_copy[0][3]', matmul.cpp:31) [165]  (1.37 ns)
 	'mux' operation ('tmp_6', matmul.cpp:31) [167]  (1.57 ns)
 
  <State 5>: 7.15ns

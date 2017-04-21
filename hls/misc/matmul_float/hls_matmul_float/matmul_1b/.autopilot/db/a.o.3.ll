@@ -458,7 +458,7 @@ entry:
 !13 = metadata !{null, metadata !14}
 !14 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !15} ; [ DW_TAG_pointer_type ]
 !15 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 128, i64 32, i32 0, i32 0, metadata !16, metadata !18, i32 0, i32 0} ; [ DW_TAG_array_type ]
-!16 = metadata !{i32 786454, null, metadata !"mat_type", metadata !11, i32 12, i64 0, i64 0, i64 0, i32 0, metadata !17} ; [ DW_TAG_typedef ]
+!16 = metadata !{i32 786454, null, metadata !"mat_type", metadata !11, i32 9, i64 0, i64 0, i64 0, i32 0, metadata !17} ; [ DW_TAG_typedef ]
 !17 = metadata !{i32 786468, null, metadata !"float", null, i32 0, i64 32, i64 32, i64 0, i32 0, i32 4} ; [ DW_TAG_base_type ]
 !18 = metadata !{metadata !19}
 !19 = metadata !{i32 786465, i64 0, i64 3}        ; [ DW_TAG_subrange_type ]
