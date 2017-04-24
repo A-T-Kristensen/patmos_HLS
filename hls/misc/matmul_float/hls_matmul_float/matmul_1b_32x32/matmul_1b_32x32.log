@@ -9,12 +9,12 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [HLS-10] Setting target device to 'xc7a100tcsg324-1'
 @I [HLS-10] Analyzing design file 'matmul.cpp' ... 
 @I [HLS-10] Validating synthesis directives ...
-@I [HLS-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 328.277 ; gain = 12.586 ; free physical = 12024 ; free virtual = 16290
-@I [HLS-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 328.277 ; gain = 12.586 ; free physical = 12024 ; free virtual = 16290
+@I [HLS-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 328.273 ; gain = 12.586 ; free physical = 11336 ; free virtual = 16250
+@I [HLS-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 328.273 ; gain = 12.586 ; free physical = 11337 ; free virtual = 16250
 @I [HLS-10] Starting code transformations ...
-@I [HLS-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 328.277 ; gain = 12.586 ; free physical = 12023 ; free virtual = 16289
+@I [HLS-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 328.273 ; gain = 12.586 ; free physical = 11335 ; free virtual = 16249
 @I [HLS-10] Checking synthesizability ...
-@I [HLS-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 328.277 ; gain = 12.586 ; free physical = 12023 ; free virtual = 16289
+@I [HLS-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 328.273 ; gain = 12.586 ; free physical = 11335 ; free virtual = 16249
 @I [XFORM-502] Unrolling all sub-loops inside loop 'col' (matmul.cpp:20) in function 'matmul_hw' for pipelining.
 @I [XFORM-501] Unrolling loop 'Cache_Row' (matmul.cpp:27) in function 'matmul_hw' completely.
 @I [XFORM-501] Unrolling loop 'Cache_Col' (matmul.cpp:32) in function 'matmul_hw' completely.
@@ -22,9 +22,9 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [XFORM-102] Partitioning array 'a_row' (matmul.cpp:13) automatically.
 @I [XFORM-102] Partitioning array 'b_copy' (matmul.cpp:14) in dimension 1 automatically.
 @I [XFORM-401] Performing if-conversion on hyperblock from (matmul.cpp:20:36) to (matmul.cpp:31:4) in function 'matmul_hw'... converting 3 basic blocks.
-@I [HLS-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 456.273 ; gain = 140.582 ; free physical = 12003 ; free virtual = 16268
+@I [HLS-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 11315 ; free virtual = 16228
 @I [XFORM-541] Flattening a loop nest 'Loop-1' (matmul.cpp:19:15) in function 'matmul_hw'.
-@I [HLS-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 456.273 ; gain = 140.582 ; free physical = 12009 ; free virtual = 16275
+@I [HLS-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 11321 ; free virtual = 16234
 @I [HLS-10] Starting hardware synthesis ...
 @I [HLS-10] Synthesizing 'matmul_hw' ...
 @I [HLS-10] ----------------------------------------------------------------
@@ -58,13 +58,13 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 	'fadd' operation ('tmp_12_1', matmul.cpp:38) (8.26 ns)
 	'fadd' operation ('tmp_12_2', matmul.cpp:38) (8.26 ns)
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111]  Elapsed time: 3.44 seconds; current allocated memory: 62.912 MB.
+@I [HLS-111]  Elapsed time: 3.3 seconds; current allocated memory: 62.926 MB.
 @I [BIND-100] Starting micro-architecture generation ...
 @I [BIND-101] Performing variable lifetime analysis.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111]  Elapsed time: 0.34 seconds; current allocated memory: 65.719 MB.
+@I [HLS-111]  Elapsed time: 0.3 seconds; current allocated memory: 65.734 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'matmul_hw' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -75,9 +75,9 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [RTGEN-100] Generating core module 'matmul_hw_fadd_32bkb': 1 instance(s).
 @I [RTGEN-100] Generating core module 'matmul_hw_fmul_32cud': 1 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'matmul_hw'.
-@I [HLS-111]  Elapsed time: 0.53 seconds; current allocated memory: 70.033 MB.
+@I [HLS-111]  Elapsed time: 0.5 seconds; current allocated memory: 70.047 MB.
 @I [RTMG-278] Implementing memory 'matmul_hw_b_copy_0_ram' using block RAMs.
-@I [HLS-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 456.273 ; gain = 140.582 ; free physical = 11986 ; free virtual = 16253
+@I [HLS-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 11314 ; free virtual = 16213
 @I [SYSC-301] Generating SystemC RTL for matmul_hw.
 @I [VHDL-304] Generating VHDL RTL for matmul_hw.
 @I [VLOG-307] Generating Verilog RTL for matmul_hw.

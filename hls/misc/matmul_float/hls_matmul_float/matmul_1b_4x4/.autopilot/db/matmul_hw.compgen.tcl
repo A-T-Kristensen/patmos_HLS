@@ -140,85 +140,88 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-# Memory (RAM/ROM)  definition:
-set ID 3
-set MemName matmul_hw_b_copy_0
-set CoreName ap_simcore_mem
-set PortList { 2 3 }
-set DataWd 32
-set AddrRange 32
-set AddrWd 5
-set impl_style block
-set TrueReset 0
-set HasInitializer 0
-set IsROM 0
-set ROMData {}
-set NumOfStage 2
-set MaxLatency -1
-set DelayBudget 2.71
-set ClkPeriod 10
-set RegisteredInput 0
+set id 3
+set name matmul_hw_mux_42_dEe
+set corename simcore_mux
+set op mux
+set stage_num 1
+set max_latency -1
+set registered_input 1
+set in1_width 32
+set in1_signed 0
+set in2_width 32
+set in2_signed 0
+set in3_width 32
+set in3_signed 0
+set in4_width 32
+set in4_signed 0
+set in5_width 2
+set in5_signed 0
+set out_width 32
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
-    eval "ap_gen_simcore_mem { \
-    id ${ID} \
-    name ${MemName} \
-    corename ${CoreName}  \
-    op mem \
+if {[info proc ap_gen_simcore_mux] == "ap_gen_simcore_mux"} {
+eval "ap_gen_simcore_mux { \
+    id ${id} \
+    name ${name} \
+    corename ${corename} \
+    op ${op} \
     reset_level 1 \
     sync_rst true \
-    stage_num ${NumOfStage}  \
-    registered_input ${RegisteredInput} \
-    port_num 2 \
-    port_list \{${PortList}\} \
-    data_wd ${DataWd} \
-    addr_wd ${AddrWd} \
-    addr_range ${AddrRange} \
-    style ${impl_style} \
-    true_reset ${TrueReset} \
-    delay_budget ${DelayBudget} \
-    clk_period ${ClkPeriod} \
-    HasInitializer ${HasInitializer} \
-    rom_data \{${ROMData}\} \
- } "
+    stage_num ${stage_num} \
+    max_latency ${max_latency} \
+    registered_input ${registered_input} \
+    in1_width ${in1_width} \
+    in1_signed ${in1_signed} \
+    in2_width ${in2_width} \
+    in2_signed ${in2_signed} \
+    in3_width ${in3_width} \
+    in3_signed ${in3_signed} \
+    in4_width ${in4_width} \
+    in4_signed ${in4_signed} \
+    in5_width ${in5_width} \
+    in5_signed ${in5_signed} \
+    out_width ${out_width} \
+}"
 } else {
-    puts "@W \[IMPL-102\] Cannot find ap_gen_simcore_mem, check your platform lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mux, check your AutoPilot builtin lib"
 }
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-  ::AP::rtl_comp_handler $MemName
+	::AP::rtl_comp_handler ${name}
 }
 
 
-set CoreName RAM
+set op mux
+set corename MuxnS
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RAM"} {
-    eval "::AESL_LIB_VIRTEX::xil_gen_RAM { \
-    id ${ID} \
-    name ${MemName} \
-    corename ${CoreName}  \
-    op mem \
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_pipemux] == "::AESL_LIB_VIRTEX::xil_gen_pipemux"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_pipemux { \
+    id ${id} \
+    name ${name} \
+    corename ${corename} \
+    op ${op} \
     reset_level 1 \
     sync_rst true \
-    stage_num ${NumOfStage}  \
-    registered_input ${RegisteredInput} \
-    port_num 2 \
-    port_list \{${PortList}\} \
-    data_wd ${DataWd} \
-    addr_wd ${AddrWd} \
-    addr_range ${AddrRange} \
-    style ${impl_style} \
-    true_reset ${TrueReset} \
-    delay_budget ${DelayBudget} \
-    clk_period ${ClkPeriod} \
-    HasInitializer ${HasInitializer} \
-    rom_data \{${ROMData}\} \
- } "
-  } else {
-    puts "@W \[IMPL-104\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_RAM, check your platform lib"
-  }
+    stage_num ${stage_num} \
+    max_latency ${max_latency} \
+    registered_input ${registered_input} \
+    in1_width ${in1_width} \
+    in1_signed ${in1_signed} \
+    in2_width ${in2_width} \
+    in2_signed ${in2_signed} \
+    in3_width ${in3_width} \
+    in3_signed ${in3_signed} \
+    in4_width ${in4_width} \
+    in4_signed ${in4_signed} \
+    in5_width ${in5_width} \
+    in5_signed ${in5_signed} \
+    out_width ${out_width} \
+}"
+} else {
+puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your platform lib"
+}
 }
 
 

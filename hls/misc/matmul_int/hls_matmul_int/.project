@@ -37,19 +37,49 @@
 			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/.apc/.tb</location>
 		</link>
 		<link>
-			<name>matmul_1b/constraints</name>
+			<name>matmul_1b_16x16/constraints</name>
 			<type>2</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_1b/.tcls</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_1b_16x16/.tcls</location>
 		</link>
 		<link>
-			<name>matmul_2b/constraints</name>
+			<name>matmul_1b_32x32/constraints</name>
 			<type>2</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/.tcls</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_1b_32x32/.tcls</location>
 		</link>
 		<link>
-			<name>matmul_3b/constraints</name>
+			<name>matmul_1b_4x4/constraints</name>
 			<type>2</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/.tcls</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_1b_4x4/.tcls</location>
+		</link>
+		<link>
+			<name>matmul_2b_16x16/constraints</name>
+			<type>2</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b_16x16/.tcls</location>
+		</link>
+		<link>
+			<name>matmul_2b_32x32/constraints</name>
+			<type>2</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b_32x32/.tcls</location>
+		</link>
+		<link>
+			<name>matmul_2b_4x4/constraints</name>
+			<type>2</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b_4x4/.tcls</location>
+		</link>
+		<link>
+			<name>matmul_3b_16x16/constraints</name>
+			<type>2</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b_16x16/.tcls</location>
+		</link>
+		<link>
+			<name>matmul_3b_32x32/constraints</name>
+			<type>2</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b_32x32/.tcls</location>
+		</link>
+		<link>
+			<name>matmul_3b_4x4/constraints</name>
+			<type>2</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b_4x4/.tcls</location>
 		</link>
 		<link>
 			<name>source/matmul.cpp</name>
@@ -67,49 +97,139 @@
 			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/matmul_test.cpp</location>
 		</link>
 		<link>
-			<name>matmul_1b/constraints/.xml.directive</name>
+			<name>matmul_1b_16x16/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_1b/matmul_1b.directive</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_1b_16x16/matmul_1b_16x16.directive</location>
 		</link>
 		<link>
-			<name>matmul_1b/constraints/directives.tcl</name>
+			<name>matmul_1b_16x16/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_1b/directives.tcl</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_1b_16x16/directives.tcl</location>
 		</link>
 		<link>
-			<name>matmul_1b/constraints/script.tcl</name>
+			<name>matmul_1b_16x16/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_1b/script.tcl</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_1b_16x16/script.tcl</location>
 		</link>
 		<link>
-			<name>matmul_2b/constraints/.xml.directive</name>
+			<name>matmul_1b_32x32/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/matmul_2b.directive</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_1b_32x32/matmul_1b_32x32.directive</location>
 		</link>
 		<link>
-			<name>matmul_2b/constraints/directives.tcl</name>
+			<name>matmul_1b_32x32/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/directives.tcl</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_1b_32x32/directives.tcl</location>
 		</link>
 		<link>
-			<name>matmul_2b/constraints/script.tcl</name>
+			<name>matmul_1b_32x32/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b/script.tcl</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_1b_32x32/script.tcl</location>
 		</link>
 		<link>
-			<name>matmul_3b/constraints/.xml.directive</name>
+			<name>matmul_1b_4x4/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/matmul_3b.directive</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_1b_4x4/matmul_1b_4x4.directive</location>
 		</link>
 		<link>
-			<name>matmul_3b/constraints/directives.tcl</name>
+			<name>matmul_1b_4x4/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/directives.tcl</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_1b_4x4/directives.tcl</location>
 		</link>
 		<link>
-			<name>matmul_3b/constraints/script.tcl</name>
+			<name>matmul_1b_4x4/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b/script.tcl</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_1b_4x4/script.tcl</location>
+		</link>
+		<link>
+			<name>matmul_2b_16x16/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b_16x16/matmul_2b_16x16.directive</location>
+		</link>
+		<link>
+			<name>matmul_2b_16x16/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b_16x16/directives.tcl</location>
+		</link>
+		<link>
+			<name>matmul_2b_16x16/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b_16x16/script.tcl</location>
+		</link>
+		<link>
+			<name>matmul_2b_32x32/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b_32x32/matmul_2b_32x32.directive</location>
+		</link>
+		<link>
+			<name>matmul_2b_32x32/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b_32x32/directives.tcl</location>
+		</link>
+		<link>
+			<name>matmul_2b_32x32/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b_32x32/script.tcl</location>
+		</link>
+		<link>
+			<name>matmul_2b_4x4/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b_4x4/matmul_2b_4x4.directive</location>
+		</link>
+		<link>
+			<name>matmul_2b_4x4/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b_4x4/directives.tcl</location>
+		</link>
+		<link>
+			<name>matmul_2b_4x4/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_2b_4x4/script.tcl</location>
+		</link>
+		<link>
+			<name>matmul_3b_16x16/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b_16x16/matmul_3b_16x16.directive</location>
+		</link>
+		<link>
+			<name>matmul_3b_16x16/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b_16x16/directives.tcl</location>
+		</link>
+		<link>
+			<name>matmul_3b_16x16/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b_16x16/script.tcl</location>
+		</link>
+		<link>
+			<name>matmul_3b_32x32/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b_32x32/matmul_3b_32x32.directive</location>
+		</link>
+		<link>
+			<name>matmul_3b_32x32/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b_32x32/directives.tcl</location>
+		</link>
+		<link>
+			<name>matmul_3b_32x32/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b_32x32/script.tcl</location>
+		</link>
+		<link>
+			<name>matmul_3b_4x4/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b_4x4/matmul_3b_4x4.directive</location>
+		</link>
+		<link>
+			<name>matmul_3b_4x4/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b_4x4/directives.tcl</location>
+		</link>
+		<link>
+			<name>matmul_3b_4x4/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_int/hls_matmul_int/matmul_3b_4x4/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

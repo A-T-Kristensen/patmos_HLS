@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'matmul_hw'
 ================================================================
-* Date:           Mon Apr 24 20:11:06 2017
+* Date:           Mon Apr 24 20:32:17 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_matmul_float
@@ -1955,9 +1955,9 @@ The critical path consists of the following:
 The critical path consists of the following:
 	'phi' operation ('j') with incoming values : ('j', matmul.cpp:20) [47]  (0 ns)
 	'icmp' operation ('exitcond', matmul.cpp:20) [71]  (2.37 ns)
-	'select' operation ('j_mid2', matmul.cpp:20) [72]  (1.37 ns)
-	'getelementptr' operation ('a_1_addr', matmul.cpp:33) [185]  (0 ns)
-	'load' operation ('a_1_load', matmul.cpp:33) on array 'a_1' [224]  (2.71 ns)
+	'select' operation ('i2_mid2_v', matmul.cpp:20) [76]  (1.37 ns)
+	'getelementptr' operation ('a_0_addr', matmul.cpp:20) [80]  (0 ns)
+	'load' operation ('a_0_load', matmul.cpp:27) on array 'a_0' [130]  (2.71 ns)
 
  <State 3>: 5.1ns
 The critical path consists of the following:
