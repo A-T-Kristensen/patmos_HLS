@@ -41,15 +41,15 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7a100t:csg324:-1"
-set SourceFiles {sc {} c {../../matmul.cpp ../../matmul.h}}
-set SourceFlags {sc {} c {{ } { }}}
+set SourceFiles {sc {} c ../../matmul.cpp}
+set SourceFlags {sc {} c {{}}}
 set DirectiveFile {/home/patmos/github/bachelor_project_HLS/hls/misc/matmul_float/hls_matmul_float/matmul_1b_4x4/matmul_1b_4x4.directive}
-set TBFiles {verilog ../../matmul_test.cpp bc ../../matmul_test.cpp sc ../../matmul_test.cpp vhdl ../../matmul_test.cpp c {} cas ../../matmul_test.cpp}
+set TBFiles {verilog ../../matmul_test.cpp bc ../../matmul_test.cpp vhdl ../../matmul_test.cpp sc ../../matmul_test.cpp cas ../../matmul_test.cpp c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {verilog {} bc {} sc {} vhdl {} c {} cas {}}
-set TBInstNames {verilog {} bc {} sc {} vhdl {} c {} cas {}}
+set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
 set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set PlatformFiles {{DefaultPlatform {xilinx/artix7/artix7 xilinx/artix7/artix7_fpv6}}}

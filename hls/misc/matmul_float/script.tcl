@@ -8,9 +8,9 @@ set run_csynth   1
 set run_cosim    0 
 set run_export 	 1
 
-set run_4x4      0
+set run_4x4      1
 
-set run_1b_4x4   0
+set run_1b_4x4   1
 set run_2b_4x4   0
 set run_3b_4x4   0
 
@@ -20,11 +20,11 @@ set run_1b_16x16 0
 set run_2b_16x16 0
 set run_3b_16x16 0
 
-set run_32x32    1
+set run_32x32    0
 
-set run_1b_32x32 1
-set run_2b_32x32 1
-set run_3b_32x32 1
+set run_1b_32x32 0
+set run_2b_32x32 0
+set run_3b_32x32 0
 
 
 set part  {xc7a100tcsg324-1}

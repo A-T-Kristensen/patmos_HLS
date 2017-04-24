@@ -4,7 +4,7 @@
 
 // Compare TB vs HW C-model and/or RTL
 
-#define DIM 32
+#define DIM 4
 
 typedef float mat_type;
 

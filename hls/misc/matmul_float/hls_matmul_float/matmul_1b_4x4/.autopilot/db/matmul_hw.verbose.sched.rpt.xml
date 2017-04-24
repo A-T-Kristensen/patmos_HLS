@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'matmul_hw'" level="0">
-<item name = "Date">Mon Apr 24 20:03:54 2017
+<item name = "Date">Mon Apr 24 20:20:59 2017
 </item>
 <item name = "Version">2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)</item>
 <item name = "Project">hls_matmul_float</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">281, 281, 282, 282, none</column>
+<column name="">132105, 132105, 132106, 132106, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- L_col">279, 279, 25, 17, 1, 16, yes</column>
+<column name="- L_col">132103, 132103, 137, 129, 1, 1024, yes</column>
 </table>
 </item>
 </section>

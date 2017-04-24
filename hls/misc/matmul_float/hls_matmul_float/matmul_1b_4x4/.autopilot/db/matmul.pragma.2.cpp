@@ -423,11 +423,11 @@ extern "C" {
 typedef float mat_type;
 
 // Prototype of top level function for C-synthesis
-void matmul_hw(mat_type a[3*4][4]);
+void matmul_hw(mat_type a[3*32][32]);
 # 3 "matmul.cpp" 2
 
-void matmul_hw(mat_type a[3*4][4])
-{_ssdm_SpecArrayDimSize(a,3*4);
+void matmul_hw(mat_type a[3*32][32])
+{_ssdm_SpecArrayDimSize(a,3*32);
 _ssdm_op_SpecInterface(0, "ap_ctrl_hs", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 //#pragma HLS ARRAY_RESHAPE variable=b complete dim=1
 //#pragma HLS ARRAY_RESHAPE variable=a complete dim=2
@@ -435,35 +435,35 @@ _ssdm_op_SpecInterface(0, "ap_ctrl_hs", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, 
 _ssdm_op_SpecInterface(a, "bram", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecResource(a, "", "RAM_1P_BRAM", "", -1, "", "", "", "", "");
 
- mat_type a_row[4];
- mat_type b_copy[4][4];
+ mat_type a_row[32];
+ mat_type b_copy[32][32];
  mat_type tmp = 0;
 
  // Generate the expected result
  // Iterate over the rows of the A matrix
- for(int i = 0; i < 4; i++) {
-  col:for(int j = 0; j < 4; j++) {
+ for(int i = 0; i < 32; i++) {
+  col:for(int j = 0; j < 32; j++) {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
  tmp = 0;
 
     // Cache each row (so it's only read once per function)
     if (j == 0) {
-   Cache_Row: for(int k = 0; k < 4; k++)
+   Cache_Row: for(int k = 0; k < 32; k++)
      a_row[k] = a[i][k];
     }
 
      // Cache all cols (so they are only read once per function)
    if (i == 0) {
-    Cache_Col: for(int k = 0; k < 4; k++) {
-      b_copy[k][j] = a[k+4][j];
+    Cache_Col: for(int k = 0; k < 32; k++) {
+      b_copy[k][j] = a[k+32][j];
     }
    }
 
-    Product: for(int k = 0; k < 4; k++) {
+    Product: for(int k = 0; k < 32; k++) {
    tmp += a_row[k] * b_copy[k][j];
     }
 
-    a[i+2*4][j] = tmp;
+    a[i+2*32][j] = tmp;
   }
  }
 }
