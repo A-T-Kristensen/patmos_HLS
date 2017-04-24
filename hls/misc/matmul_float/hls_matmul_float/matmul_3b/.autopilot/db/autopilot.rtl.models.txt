@@ -1,4 +1,0 @@
-matmul_hw_fadd_32bkb
-matmul_hw_fmul_32cud
-matmul_hw_mux_42_dEe
-matmul_hw

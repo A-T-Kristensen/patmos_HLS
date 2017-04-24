@@ -1,0 +1,4575 @@
+
+
+================================================================
+== Vivado HLS Report for 'matmul_hw'
+================================================================
+* Date:           Mon Apr 24 20:12:48 2017
+
+* Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
+* Project:        hls_matmul_float
+* Solution:       matmul_2b_32x32
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.49|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  49273|  49273|  49274|  49274|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+        |          |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+        |- L_col   |  49271|  49271|       168|         48|          1|  1024|    yes   |
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 48, depth = 168
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 170
+* Pipeline: 1
+  Pipeline-0: II = 48, D = 168, States = { 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	170  / (exitcond_flatten)
+	3  / (!exitcond_flatten)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	65  / true
+65 --> 
+	66  / true
+66 --> 
+	67  / true
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	70  / true
+70 --> 
+	71  / true
+71 --> 
+	72  / true
+72 --> 
+	73  / true
+73 --> 
+	74  / true
+74 --> 
+	75  / true
+75 --> 
+	76  / true
+76 --> 
+	77  / true
+77 --> 
+	78  / true
+78 --> 
+	79  / true
+79 --> 
+	80  / true
+80 --> 
+	81  / true
+81 --> 
+	82  / true
+82 --> 
+	83  / true
+83 --> 
+	84  / true
+84 --> 
+	85  / true
+85 --> 
+	86  / true
+86 --> 
+	87  / true
+87 --> 
+	88  / true
+88 --> 
+	89  / true
+89 --> 
+	90  / true
+90 --> 
+	91  / true
+91 --> 
+	92  / true
+92 --> 
+	93  / true
+93 --> 
+	94  / true
+94 --> 
+	95  / true
+95 --> 
+	96  / true
+96 --> 
+	97  / true
+97 --> 
+	98  / true
+98 --> 
+	99  / true
+99 --> 
+	100  / true
+100 --> 
+	101  / true
+101 --> 
+	102  / true
+102 --> 
+	103  / true
+103 --> 
+	104  / true
+104 --> 
+	105  / true
+105 --> 
+	106  / true
+106 --> 
+	107  / true
+107 --> 
+	108  / true
+108 --> 
+	109  / true
+109 --> 
+	110  / true
+110 --> 
+	111  / true
+111 --> 
+	112  / true
+112 --> 
+	113  / true
+113 --> 
+	114  / true
+114 --> 
+	115  / true
+115 --> 
+	116  / true
+116 --> 
+	117  / true
+117 --> 
+	118  / true
+118 --> 
+	119  / true
+119 --> 
+	120  / true
+120 --> 
+	121  / true
+121 --> 
+	122  / true
+122 --> 
+	123  / true
+123 --> 
+	124  / true
+124 --> 
+	125  / true
+125 --> 
+	126  / true
+126 --> 
+	127  / true
+127 --> 
+	128  / true
+128 --> 
+	129  / true
+129 --> 
+	130  / true
+130 --> 
+	131  / true
+131 --> 
+	132  / true
+132 --> 
+	133  / true
+133 --> 
+	134  / true
+134 --> 
+	135  / true
+135 --> 
+	136  / true
+136 --> 
+	137  / true
+137 --> 
+	138  / true
+138 --> 
+	139  / true
+139 --> 
+	140  / true
+140 --> 
+	141  / true
+141 --> 
+	142  / true
+142 --> 
+	143  / true
+143 --> 
+	144  / true
+144 --> 
+	145  / true
+145 --> 
+	146  / true
+146 --> 
+	147  / true
+147 --> 
+	148  / true
+148 --> 
+	149  / true
+149 --> 
+	150  / true
+150 --> 
+	151  / true
+151 --> 
+	152  / true
+152 --> 
+	153  / true
+153 --> 
+	154  / true
+154 --> 
+	155  / true
+155 --> 
+	156  / true
+156 --> 
+	157  / true
+157 --> 
+	158  / true
+158 --> 
+	159  / true
+159 --> 
+	160  / true
+160 --> 
+	161  / true
+161 --> 
+	162  / true
+162 --> 
+	163  / true
+163 --> 
+	164  / true
+164 --> 
+	165  / true
+165 --> 
+	166  / true
+166 --> 
+	167  / true
+167 --> 
+	168  / true
+168 --> 
+	169  / true
+169 --> 
+	2  / true
+170 --> 
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: a_row_load_018 (3)  [1/1] 0.00ns
+:0  %a_row_load_018 = alloca float
+
+ST_1: a_row_load_61 (4)  [1/1] 0.00ns
+:1  %a_row_load_61 = alloca float
+
+ST_1: a_row_load_60 (5)  [1/1] 0.00ns
+:2  %a_row_load_60 = alloca float
+
+ST_1: a_row_load_59 (6)  [1/1] 0.00ns
+:3  %a_row_load_59 = alloca float
+
+ST_1: a_row_load_58 (7)  [1/1] 0.00ns
+:4  %a_row_load_58 = alloca float
+
+ST_1: a_row_load_57 (8)  [1/1] 0.00ns
+:5  %a_row_load_57 = alloca float
+
+ST_1: a_row_load_56 (9)  [1/1] 0.00ns
+:6  %a_row_load_56 = alloca float
+
+ST_1: a_row_load_55 (10)  [1/1] 0.00ns
+:7  %a_row_load_55 = alloca float
+
+ST_1: a_row_load_54 (11)  [1/1] 0.00ns
+:8  %a_row_load_54 = alloca float
+
+ST_1: a_row_load_53 (12)  [1/1] 0.00ns
+:9  %a_row_load_53 = alloca float
+
+ST_1: a_row_load_52 (13)  [1/1] 0.00ns
+:10  %a_row_load_52 = alloca float
+
+ST_1: a_row_load_51 (14)  [1/1] 0.00ns
+:11  %a_row_load_51 = alloca float
+
+ST_1: a_row_load_50 (15)  [1/1] 0.00ns
+:12  %a_row_load_50 = alloca float
+
+ST_1: a_row_load_49 (16)  [1/1] 0.00ns
+:13  %a_row_load_49 = alloca float
+
+ST_1: a_row_load_48 (17)  [1/1] 0.00ns
+:14  %a_row_load_48 = alloca float
+
+ST_1: a_row_load_47 (18)  [1/1] 0.00ns
+:15  %a_row_load_47 = alloca float
+
+ST_1: a_row_load_46 (19)  [1/1] 0.00ns
+:16  %a_row_load_46 = alloca float
+
+ST_1: a_row_load_45 (20)  [1/1] 0.00ns
+:17  %a_row_load_45 = alloca float
+
+ST_1: a_row_load_44 (21)  [1/1] 0.00ns
+:18  %a_row_load_44 = alloca float
+
+ST_1: a_row_load_43 (22)  [1/1] 0.00ns
+:19  %a_row_load_43 = alloca float
+
+ST_1: a_row_load_42 (23)  [1/1] 0.00ns
+:20  %a_row_load_42 = alloca float
+
+ST_1: a_row_load_41 (24)  [1/1] 0.00ns
+:21  %a_row_load_41 = alloca float
+
+ST_1: a_row_load_40 (25)  [1/1] 0.00ns
+:22  %a_row_load_40 = alloca float
+
+ST_1: a_row_load_39 (26)  [1/1] 0.00ns
+:23  %a_row_load_39 = alloca float
+
+ST_1: a_row_load_38 (27)  [1/1] 0.00ns
+:24  %a_row_load_38 = alloca float
+
+ST_1: a_row_load_37 (28)  [1/1] 0.00ns
+:25  %a_row_load_37 = alloca float
+
+ST_1: a_row_load_36 (29)  [1/1] 0.00ns
+:26  %a_row_load_36 = alloca float
+
+ST_1: a_row_load_35 (30)  [1/1] 0.00ns
+:27  %a_row_load_35 = alloca float
+
+ST_1: a_row_load_34 (31)  [1/1] 0.00ns
+:28  %a_row_load_34 = alloca float
+
+ST_1: a_row_load_33 (32)  [1/1] 0.00ns
+:29  %a_row_load_33 = alloca float
+
+ST_1: a_row_load_32 (33)  [1/1] 0.00ns
+:30  %a_row_load_32 = alloca float
+
+ST_1: a_row_load_s (34)  [1/1] 0.00ns
+:31  %a_row_load_s = alloca float
+
+ST_1: StgValue_203 (35)  [1/1] 0.00ns
+:32  call void (...)* @_ssdm_op_SpecBitsMap([1536 x float]* %a_1), !map !7
+
+ST_1: StgValue_204 (36)  [1/1] 0.00ns
+:33  call void (...)* @_ssdm_op_SpecBitsMap([1536 x float]* %a_0), !map !14
+
+ST_1: StgValue_205 (37)  [1/1] 0.00ns
+:34  call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @matmul_hw_str) nounwind
+
+ST_1: b_copy_0 (38)  [1/1] 0.00ns  loc: matmul.cpp:14
+:35  %b_copy_0 = alloca [32 x float], align 16
+
+ST_1: b_copy_1 (39)  [1/1] 0.00ns  loc: matmul.cpp:14
+:36  %b_copy_1 = alloca [32 x float], align 16
+
+ST_1: b_copy_2 (40)  [1/1] 0.00ns  loc: matmul.cpp:14
+:37  %b_copy_2 = alloca [32 x float], align 16
+
+ST_1: b_copy_3 (41)  [1/1] 0.00ns  loc: matmul.cpp:14
+:38  %b_copy_3 = alloca [32 x float], align 16
+
+ST_1: b_copy_4 (42)  [1/1] 0.00ns  loc: matmul.cpp:14
+:39  %b_copy_4 = alloca [32 x float], align 16
+
+ST_1: b_copy_5 (43)  [1/1] 0.00ns  loc: matmul.cpp:14
+:40  %b_copy_5 = alloca [32 x float], align 16
+
+ST_1: b_copy_6 (44)  [1/1] 0.00ns  loc: matmul.cpp:14
+:41  %b_copy_6 = alloca [32 x float], align 16
+
+ST_1: b_copy_7 (45)  [1/1] 0.00ns  loc: matmul.cpp:14
+:42  %b_copy_7 = alloca [32 x float], align 16
+
+ST_1: b_copy_8 (46)  [1/1] 0.00ns  loc: matmul.cpp:14
+:43  %b_copy_8 = alloca [32 x float], align 16
+
+ST_1: b_copy_9 (47)  [1/1] 0.00ns  loc: matmul.cpp:14
+:44  %b_copy_9 = alloca [32 x float], align 16
+
+ST_1: b_copy_10 (48)  [1/1] 0.00ns  loc: matmul.cpp:14
+:45  %b_copy_10 = alloca [32 x float], align 16
+
+ST_1: b_copy_11 (49)  [1/1] 0.00ns  loc: matmul.cpp:14
+:46  %b_copy_11 = alloca [32 x float], align 16
+
+ST_1: b_copy_12 (50)  [1/1] 0.00ns  loc: matmul.cpp:14
+:47  %b_copy_12 = alloca [32 x float], align 16
+
+ST_1: b_copy_13 (51)  [1/1] 0.00ns  loc: matmul.cpp:14
+:48  %b_copy_13 = alloca [32 x float], align 16
+
+ST_1: b_copy_14 (52)  [1/1] 0.00ns  loc: matmul.cpp:14
+:49  %b_copy_14 = alloca [32 x float], align 16
+
+ST_1: b_copy_15 (53)  [1/1] 0.00ns  loc: matmul.cpp:14
+:50  %b_copy_15 = alloca [32 x float], align 16
+
+ST_1: b_copy_16 (54)  [1/1] 0.00ns  loc: matmul.cpp:14
+:51  %b_copy_16 = alloca [32 x float], align 16
+
+ST_1: b_copy_17 (55)  [1/1] 0.00ns  loc: matmul.cpp:14
+:52  %b_copy_17 = alloca [32 x float], align 16
+
+ST_1: b_copy_18 (56)  [1/1] 0.00ns  loc: matmul.cpp:14
+:53  %b_copy_18 = alloca [32 x float], align 16
+
+ST_1: b_copy_19 (57)  [1/1] 0.00ns  loc: matmul.cpp:14
+:54  %b_copy_19 = alloca [32 x float], align 16
+
+ST_1: b_copy_20 (58)  [1/1] 0.00ns  loc: matmul.cpp:14
+:55  %b_copy_20 = alloca [32 x float], align 16
+
+ST_1: b_copy_21 (59)  [1/1] 0.00ns  loc: matmul.cpp:14
+:56  %b_copy_21 = alloca [32 x float], align 16
+
+ST_1: b_copy_22 (60)  [1/1] 0.00ns  loc: matmul.cpp:14
+:57  %b_copy_22 = alloca [32 x float], align 16
+
+ST_1: b_copy_23 (61)  [1/1] 0.00ns  loc: matmul.cpp:14
+:58  %b_copy_23 = alloca [32 x float], align 16
+
+ST_1: b_copy_24 (62)  [1/1] 0.00ns  loc: matmul.cpp:14
+:59  %b_copy_24 = alloca [32 x float], align 16
+
+ST_1: b_copy_25 (63)  [1/1] 0.00ns  loc: matmul.cpp:14
+:60  %b_copy_25 = alloca [32 x float], align 16
+
+ST_1: b_copy_26 (64)  [1/1] 0.00ns  loc: matmul.cpp:14
+:61  %b_copy_26 = alloca [32 x float], align 16
+
+ST_1: b_copy_27 (65)  [1/1] 0.00ns  loc: matmul.cpp:14
+:62  %b_copy_27 = alloca [32 x float], align 16
+
+ST_1: b_copy_28 (66)  [1/1] 0.00ns  loc: matmul.cpp:14
+:63  %b_copy_28 = alloca [32 x float], align 16
+
+ST_1: b_copy_29 (67)  [1/1] 0.00ns  loc: matmul.cpp:14
+:64  %b_copy_29 = alloca [32 x float], align 16
+
+ST_1: b_copy_30 (68)  [1/1] 0.00ns  loc: matmul.cpp:14
+:65  %b_copy_30 = alloca [32 x float], align 16
+
+ST_1: b_copy_31 (69)  [1/1] 0.00ns  loc: matmul.cpp:14
+:66  %b_copy_31 = alloca [32 x float], align 16
+
+ST_1: StgValue_238 (70)  [1/1] 0.00ns  loc: matmul.cpp:6
+:67  call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_239 (71)  [1/1] 0.00ns
+:68  call void (...)* @_ssdm_op_SpecInterface([1536 x float]* %a_0, [1536 x float]* %a_1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_1: StgValue_240 (72)  [1/1] 0.00ns
+:69  call void (...)* @_ssdm_op_SpecMemCore([1536 x float]* %a_0, [1536 x float]* %a_1, [1 x i8]* @p_str1, [12 x i8]* @p_str4, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_1: StgValue_241 (73)  [1/1] 1.57ns  loc: matmul.cpp:19
+:70  br label %.preheader7
+
+
+ <State 2>: 6.48ns
+ST_2: indvar_flatten (75)  [1/1] 0.00ns
+.preheader7:0  %indvar_flatten = phi i11 [ 0, %0 ], [ %indvar_flatten_next, %.loopexit ]
+
+ST_2: i (76)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7:1  %i = phi i6 [ 0, %0 ], [ %i2_mid2_v, %.loopexit ]
+
+ST_2: j (77)  [1/1] 0.00ns
+.preheader7:2  %j = phi i6 [ 0, %0 ], [ %j_1, %.loopexit ]
+
+ST_2: exitcond_flatten (78)  [1/1] 2.58ns
+.preheader7:3  %exitcond_flatten = icmp eq i11 %indvar_flatten, -1024
+
+ST_2: indvar_flatten_next (79)  [1/1] 1.79ns
+.preheader7:4  %indvar_flatten_next = add i11 %indvar_flatten, 1
+
+ST_2: StgValue_247 (80)  [1/1] 0.00ns
+.preheader7:5  br i1 %exitcond_flatten, label %1, label %.preheader7.preheader
+
+ST_2: i_1 (114)  [1/1] 1.67ns  loc: matmul.cpp:19
+.preheader7.preheader:32  %i_1 = add i6 %i, 1
+
+ST_2: exitcond (117)  [1/1] 2.40ns  loc: matmul.cpp:20
+.preheader7.preheader:35  %exitcond = icmp eq i6 %j, -32
+
+ST_2: j_mid2 (118)  [1/1] 1.37ns  loc: matmul.cpp:20
+.preheader7.preheader:36  %j_mid2 = select i1 %exitcond, i6 0, i6 %j
+
+ST_2: tmp_mid1 (119)  [1/1] 2.40ns  loc: matmul.cpp:31
+.preheader7.preheader:37  %tmp_mid1 = icmp eq i6 %i_1, 0
+
+ST_2: tmp1 (120)  [1/1] 2.40ns  loc: matmul.cpp:31
+.preheader7.preheader:38  %tmp1 = icmp eq i6 %i, 0
+
+ST_2: tmp_mid2 (121)  [1/1] 1.37ns  loc: matmul.cpp:31
+.preheader7.preheader:39  %tmp_mid2 = select i1 %exitcond, i1 %tmp_mid1, i1 %tmp1
+
+ST_2: i2_mid2_v (122)  [1/1] 1.37ns  loc: matmul.cpp:20
+.preheader7.preheader:40  %i2_mid2_v = select i1 %exitcond, i6 %i_1, i6 %i
+
+ST_2: StgValue_255 (322)  [1/1] 0.00ns  loc: matmul.cpp:31
+.preheader7.preheader:240  br i1 %tmp_mid2, label %.preheader.preheader, label %.loopexit
+
+ST_2: tmp_8 (324)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:0  %tmp_8 = zext i6 %j_mid2 to i64
+
+ST_2: tmp_71 (330)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:6  %tmp_71 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 16, i6 %j_mid2)
+
+ST_2: a_0_addr_32 (331)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:7  %a_0_addr_32 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_71
+
+ST_2: a_1_addr (370)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:46  %a_1_addr = getelementptr [1536 x float]* %a_1, i64 0, i64 %tmp_8
+
+ST_2: a_0_load_32 (409)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:85  %a_0_load_32 = load float* %a_0_addr_32, align 4
+
+ST_2: a_1_load (457)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:133  %a_1_load = load float* %a_1_addr, align 4
+
+
+ <State 3>: 5.42ns
+ST_3: tmp_1 (123)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:41  %tmp_1 = call i11 @_ssdm_op_BitConcatenate.i11.i6.i5(i6 %i2_mid2_v, i5 0)
+
+ST_3: tmp_4 (124)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:42  %tmp_4 = zext i11 %tmp_1 to i64
+
+ST_3: a_0_addr (125)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:43  %a_0_addr = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_4
+
+ST_3: a_0_load (226)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:144  %a_0_load = load float* %a_0_addr, align 4
+
+ST_3: tmp_8_cast5 (328)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:4  %tmp_8_cast5 = zext i6 %j_mid2 to i7
+
+ST_3: tmp_87 (371)  [1/1] 1.67ns  loc: matmul.cpp:20
+.preheader.preheader:47  %tmp_87 = add i7 %tmp_8_cast5, 32
+
+ST_3: tmp_88_cast (372)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:48  %tmp_88_cast = zext i7 %tmp_87 to i64
+
+ST_3: a_1_addr_1 (373)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:49  %a_1_addr_1 = getelementptr [1536 x float]* %a_1, i64 0, i64 %tmp_88_cast
+
+ST_3: a_0_load_32 (409)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:85  %a_0_load_32 = load float* %a_0_addr_32, align 4
+
+ST_3: b_copy_0_addr (410)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:86  %b_copy_0_addr = getelementptr [32 x float]* %b_copy_0, i64 0, i64 %tmp_8
+
+ST_3: StgValue_272 (411)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:87  store float %a_0_load_32, float* %b_copy_0_addr, align 4
+
+ST_3: a_1_load (457)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:133  %a_1_load = load float* %a_1_addr, align 4
+
+ST_3: b_copy_16_addr (458)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:134  %b_copy_16_addr = getelementptr [32 x float]* %b_copy_16, i64 0, i64 %tmp_8
+
+ST_3: StgValue_275 (459)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:135  store float %a_1_load, float* %b_copy_16_addr, align 4
+
+ST_3: a_1_load_1 (460)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:136  %a_1_load_1 = load float* %a_1_addr_1, align 4
+
+
+ <State 4>: 5.42ns
+ST_4: tmp_5 (225)  [1/1] 2.40ns  loc: matmul.cpp:25
+.preheader7.preheader:143  %tmp_5 = icmp eq i6 %j_mid2, 0
+
+ST_4: a_0_load (226)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:144  %a_0_load = load float* %a_0_addr, align 4
+
+ST_4: tmp_8_cast (329)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:5  %tmp_8_cast = zext i6 %j_mid2 to i11
+
+ST_4: tmp_72 (332)  [1/1] 1.79ns  loc: matmul.cpp:20
+.preheader.preheader:8  %tmp_72 = add i11 %tmp_8_cast, -992
+
+ST_4: tmp_73_cast (333)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:9  %tmp_73_cast = zext i11 %tmp_72 to i64
+
+ST_4: a_0_addr_33 (334)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:10  %a_0_addr_33 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_73_cast
+
+ST_4: tmp_88 (374)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:50  %tmp_88 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 1, i6 %j_mid2)
+
+ST_4: a_1_addr_2 (375)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:51  %a_1_addr_2 = getelementptr [1536 x float]* %a_1, i64 0, i64 %tmp_88
+
+ST_4: a_0_load_33 (412)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:88  %a_0_load_33 = load float* %a_0_addr_33, align 4
+
+ST_4: a_1_load_1 (460)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:136  %a_1_load_1 = load float* %a_1_addr_1, align 4
+
+ST_4: b_copy_17_addr (461)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:137  %b_copy_17_addr = getelementptr [32 x float]* %b_copy_17, i64 0, i64 %tmp_8
+
+ST_4: StgValue_288 (462)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:138  store float %a_1_load_1, float* %b_copy_17_addr, align 4
+
+ST_4: a_1_load_2 (463)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:139  %a_1_load_2 = load float* %a_1_addr_2, align 4
+
+ST_4: tmp_7 (507)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:0  %tmp_7 = zext i6 %j_mid2 to i64
+
+ST_4: b_copy_0_addr_1 (512)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:5  %b_copy_0_addr_1 = getelementptr [32 x float]* %b_copy_0, i64 0, i64 %tmp_7
+
+ST_4: b_copy_0_load (513)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:6  %b_copy_0_load = load float* %b_copy_0_addr_1, align 4
+
+
+ <State 5>: 8.49ns
+ST_5: a_row_load_62 (82)  [1/1] 0.00ns
+.preheader7.preheader:0  %a_row_load_62 = load float* %a_row_load_018
+
+ST_5: tmp_6 (126)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:44  %tmp_6 = or i11 %tmp_1, 1
+
+ST_5: tmp_9 (127)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:45  %tmp_9 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_6)
+
+ST_5: a_0_addr_1 (128)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:46  %a_0_addr_1 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_9
+
+ST_5: a_0_load_1 (227)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:145  %a_0_load_1 = load float* %a_0_addr_1, align 4
+
+ST_5: a_row_load (289)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:207  %a_row_load = select i1 %tmp_5, float %a_0_load, float %a_row_load_62
+
+ST_5: StgValue_299 (321)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:239  store float %a_row_load, float* %a_row_load_018
+
+ST_5: tmp_8_cast7_cast (327)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:3  %tmp_8_cast7_cast = zext i6 %j_mid2 to i8
+
+ST_5: tmp_89 (376)  [1/1] 1.67ns  loc: matmul.cpp:20
+.preheader.preheader:52  %tmp_89 = add i8 %tmp_8_cast7_cast, 96
+
+ST_5: tmp_90_cast (377)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:53  %tmp_90_cast = zext i8 %tmp_89 to i64
+
+ST_5: a_1_addr_3 (378)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:54  %a_1_addr_3 = getelementptr [1536 x float]* %a_1, i64 0, i64 %tmp_90_cast
+
+ST_5: a_0_load_33 (412)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:88  %a_0_load_33 = load float* %a_0_addr_33, align 4
+
+ST_5: b_copy_1_addr (413)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:89  %b_copy_1_addr = getelementptr [32 x float]* %b_copy_1, i64 0, i64 %tmp_8
+
+ST_5: StgValue_306 (414)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:90  store float %a_0_load_33, float* %b_copy_1_addr, align 4
+
+ST_5: a_1_load_2 (463)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:139  %a_1_load_2 = load float* %a_1_addr_2, align 4
+
+ST_5: b_copy_18_addr (464)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:140  %b_copy_18_addr = getelementptr [32 x float]* %b_copy_18, i64 0, i64 %tmp_8
+
+ST_5: StgValue_309 (465)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:141  store float %a_1_load_2, float* %b_copy_18_addr, align 4
+
+ST_5: a_1_load_3 (466)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:142  %a_1_load_3 = load float* %a_1_addr_3, align 4
+
+ST_5: b_copy_0_load (513)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:6  %b_copy_0_load = load float* %b_copy_0_addr_1, align 4
+
+ST_5: tmp_s (514)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:7  %tmp_s = fmul float %a_row_load, %b_copy_0_load
+
+
+ <State 6>: 5.78ns
+ST_6: a_0_load_1 (227)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:145  %a_0_load_1 = load float* %a_0_addr_1, align 4
+
+ST_6: tmp_73 (335)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:11  %tmp_73 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 17, i6 %j_mid2)
+
+ST_6: a_0_addr_34 (336)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:12  %a_0_addr_34 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_73
+
+ST_6: tmp_90 (379)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:55  %tmp_90 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 2, i6 %j_mid2)
+
+ST_6: a_1_addr_4 (380)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:56  %a_1_addr_4 = getelementptr [1536 x float]* %a_1, i64 0, i64 %tmp_90
+
+ST_6: a_0_load_34 (415)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:91  %a_0_load_34 = load float* %a_0_addr_34, align 4
+
+ST_6: a_1_load_3 (466)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:142  %a_1_load_3 = load float* %a_1_addr_3, align 4
+
+ST_6: b_copy_19_addr (467)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:143  %b_copy_19_addr = getelementptr [32 x float]* %b_copy_19, i64 0, i64 %tmp_8
+
+ST_6: StgValue_321 (468)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:144  store float %a_1_load_3, float* %b_copy_19_addr, align 4
+
+ST_6: a_1_load_4 (469)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:145  %a_1_load_4 = load float* %a_1_addr_4, align 4
+
+ST_6: tmp_s (514)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:7  %tmp_s = fmul float %a_row_load, %b_copy_0_load
+
+ST_6: b_copy_1_addr_1 (516)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:9  %b_copy_1_addr_1 = getelementptr [32 x float]* %b_copy_1, i64 0, i64 %tmp_7
+
+ST_6: b_copy_1_load (517)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:10  %b_copy_1_load = load float* %b_copy_1_addr_1, align 4
+
+
+ <State 7>: 8.49ns
+ST_7: a_row_load_63 (83)  [1/1] 0.00ns
+.preheader7.preheader:1  %a_row_load_63 = load float* %a_row_load_61
+
+ST_7: tmp_10 (129)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:47  %tmp_10 = or i11 %tmp_1, 2
+
+ST_7: tmp_11 (130)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:48  %tmp_11 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_10)
+
+ST_7: a_0_addr_2 (131)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:49  %a_0_addr_2 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_11
+
+ST_7: a_0_load_2 (228)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:146  %a_0_load_2 = load float* %a_0_addr_2, align 4
+
+ST_7: a_row_load_1 (288)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:206  %a_row_load_1 = select i1 %tmp_5, float %a_0_load_1, float %a_row_load_63
+
+ST_7: StgValue_332 (320)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:238  store float %a_row_load_1, float* %a_row_load_61
+
+ST_7: tmp_91 (381)  [1/1] 1.67ns  loc: matmul.cpp:20
+.preheader.preheader:57  %tmp_91 = add i8 %tmp_8_cast7_cast, -96
+
+ST_7: tmp_92_cast (382)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:58  %tmp_92_cast = zext i8 %tmp_91 to i64
+
+ST_7: a_1_addr_5 (383)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:59  %a_1_addr_5 = getelementptr [1536 x float]* %a_1, i64 0, i64 %tmp_92_cast
+
+ST_7: a_0_load_34 (415)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:91  %a_0_load_34 = load float* %a_0_addr_34, align 4
+
+ST_7: b_copy_2_addr (416)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:92  %b_copy_2_addr = getelementptr [32 x float]* %b_copy_2, i64 0, i64 %tmp_8
+
+ST_7: StgValue_338 (417)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:93  store float %a_0_load_34, float* %b_copy_2_addr, align 4
+
+ST_7: a_1_load_4 (469)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:145  %a_1_load_4 = load float* %a_1_addr_4, align 4
+
+ST_7: b_copy_20_addr (470)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:146  %b_copy_20_addr = getelementptr [32 x float]* %b_copy_20, i64 0, i64 %tmp_8
+
+ST_7: StgValue_341 (471)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:147  store float %a_1_load_4, float* %b_copy_20_addr, align 4
+
+ST_7: a_1_load_5 (472)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:148  %a_1_load_5 = load float* %a_1_addr_5, align 4
+
+ST_7: tmp_s (514)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:7  %tmp_s = fmul float %a_row_load, %b_copy_0_load
+
+ST_7: b_copy_1_load (517)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:10  %b_copy_1_load = load float* %b_copy_1_addr_1, align 4
+
+ST_7: tmp_11_1 (518)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:11  %tmp_11_1 = fmul float %a_row_load_1, %b_copy_1_load
+
+
+ <State 8>: 5.78ns
+ST_8: a_0_load_2 (228)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:146  %a_0_load_2 = load float* %a_0_addr_2, align 4
+
+ST_8: tmp_74 (337)  [1/1] 1.79ns  loc: matmul.cpp:20
+.preheader.preheader:13  %tmp_74 = add i11 %tmp_8_cast, -928
+
+ST_8: tmp_75_cast (338)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:14  %tmp_75_cast = zext i11 %tmp_74 to i64
+
+ST_8: a_0_addr_35 (339)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:15  %a_0_addr_35 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_75_cast
+
+ST_8: tmp_92 (384)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:60  %tmp_92 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 3, i6 %j_mid2)
+
+ST_8: a_1_addr_6 (385)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:61  %a_1_addr_6 = getelementptr [1536 x float]* %a_1, i64 0, i64 %tmp_92
+
+ST_8: a_0_load_35 (418)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:94  %a_0_load_35 = load float* %a_0_addr_35, align 4
+
+ST_8: a_1_load_5 (472)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:148  %a_1_load_5 = load float* %a_1_addr_5, align 4
+
+ST_8: b_copy_21_addr (473)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:149  %b_copy_21_addr = getelementptr [32 x float]* %b_copy_21, i64 0, i64 %tmp_8
+
+ST_8: StgValue_355 (474)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:150  store float %a_1_load_5, float* %b_copy_21_addr, align 4
+
+ST_8: a_1_load_6 (475)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:151  %a_1_load_6 = load float* %a_1_addr_6, align 4
+
+ST_8: tmp_s (514)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:7  %tmp_s = fmul float %a_row_load, %b_copy_0_load
+
+ST_8: tmp_11_1 (518)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:11  %tmp_11_1 = fmul float %a_row_load_1, %b_copy_1_load
+
+ST_8: b_copy_2_addr_1 (520)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:13  %b_copy_2_addr_1 = getelementptr [32 x float]* %b_copy_2, i64 0, i64 %tmp_7
+
+ST_8: b_copy_2_load (521)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:14  %b_copy_2_load = load float* %b_copy_2_addr_1, align 4
+
+
+ <State 9>: 8.49ns
+ST_9: a_row_load_64 (84)  [1/1] 0.00ns
+.preheader7.preheader:2  %a_row_load_64 = load float* %a_row_load_60
+
+ST_9: tmp_12 (132)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:50  %tmp_12 = or i11 %tmp_1, 3
+
+ST_9: tmp_13 (133)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:51  %tmp_13 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_12)
+
+ST_9: a_0_addr_3 (134)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:52  %a_0_addr_3 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_13
+
+ST_9: a_0_load_3 (229)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:147  %a_0_load_3 = load float* %a_0_addr_3, align 4
+
+ST_9: a_row_load_2 (287)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:205  %a_row_load_2 = select i1 %tmp_5, float %a_0_load_2, float %a_row_load_64
+
+ST_9: StgValue_367 (319)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:237  store float %a_row_load_2, float* %a_row_load_60
+
+ST_9: tmp_8_cast7 (326)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:2  %tmp_8_cast7 = zext i6 %j_mid2 to i9
+
+ST_9: tmp_93 (386)  [1/1] 1.79ns  loc: matmul.cpp:20
+.preheader.preheader:62  %tmp_93 = add i9 %tmp_8_cast7, 224
+
+ST_9: tmp_94_cast (387)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:63  %tmp_94_cast = zext i9 %tmp_93 to i64
+
+ST_9: a_1_addr_7 (388)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:64  %a_1_addr_7 = getelementptr [1536 x float]* %a_1, i64 0, i64 %tmp_94_cast
+
+ST_9: a_0_load_35 (418)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:94  %a_0_load_35 = load float* %a_0_addr_35, align 4
+
+ST_9: b_copy_3_addr (419)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:95  %b_copy_3_addr = getelementptr [32 x float]* %b_copy_3, i64 0, i64 %tmp_8
+
+ST_9: StgValue_374 (420)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:96  store float %a_0_load_35, float* %b_copy_3_addr, align 4
+
+ST_9: a_1_load_6 (475)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:151  %a_1_load_6 = load float* %a_1_addr_6, align 4
+
+ST_9: b_copy_22_addr (476)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:152  %b_copy_22_addr = getelementptr [32 x float]* %b_copy_22, i64 0, i64 %tmp_8
+
+ST_9: StgValue_377 (477)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:153  store float %a_1_load_6, float* %b_copy_22_addr, align 4
+
+ST_9: a_1_load_7 (478)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:154  %a_1_load_7 = load float* %a_1_addr_7, align 4
+
+ST_9: tmp_3 (515)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:8  %tmp_3 = fadd float %tmp_s, 0.000000e+00
+
+ST_9: tmp_11_1 (518)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:11  %tmp_11_1 = fmul float %a_row_load_1, %b_copy_1_load
+
+ST_9: b_copy_2_load (521)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:14  %b_copy_2_load = load float* %b_copy_2_addr_1, align 4
+
+ST_9: tmp_11_2 (522)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:15  %tmp_11_2 = fmul float %a_row_load_2, %b_copy_2_load
+
+
+ <State 10>: 8.26ns
+ST_10: a_0_load_3 (229)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:147  %a_0_load_3 = load float* %a_0_addr_3, align 4
+
+ST_10: tmp_75 (340)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:16  %tmp_75 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 18, i6 %j_mid2)
+
+ST_10: a_0_addr_36 (341)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:17  %a_0_addr_36 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_75
+
+ST_10: tmp_94 (389)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:65  %tmp_94 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 4, i6 %j_mid2)
+
+ST_10: a_1_addr_8 (390)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:66  %a_1_addr_8 = getelementptr [1536 x float]* %a_1, i64 0, i64 %tmp_94
+
+ST_10: a_0_load_36 (421)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:97  %a_0_load_36 = load float* %a_0_addr_36, align 4
+
+ST_10: a_1_load_7 (478)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:154  %a_1_load_7 = load float* %a_1_addr_7, align 4
+
+ST_10: b_copy_23_addr (479)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:155  %b_copy_23_addr = getelementptr [32 x float]* %b_copy_23, i64 0, i64 %tmp_8
+
+ST_10: StgValue_391 (480)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:156  store float %a_1_load_7, float* %b_copy_23_addr, align 4
+
+ST_10: a_1_load_8 (481)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:157  %a_1_load_8 = load float* %a_1_addr_8, align 4
+
+ST_10: tmp_3 (515)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:8  %tmp_3 = fadd float %tmp_s, 0.000000e+00
+
+ST_10: tmp_11_1 (518)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:11  %tmp_11_1 = fmul float %a_row_load_1, %b_copy_1_load
+
+ST_10: tmp_11_2 (522)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:15  %tmp_11_2 = fmul float %a_row_load_2, %b_copy_2_load
+
+ST_10: b_copy_3_addr_1 (524)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:17  %b_copy_3_addr_1 = getelementptr [32 x float]* %b_copy_3, i64 0, i64 %tmp_7
+
+ST_10: b_copy_3_load (525)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:18  %b_copy_3_load = load float* %b_copy_3_addr_1, align 4
+
+
+ <State 11>: 8.49ns
+ST_11: a_row_load_65 (85)  [1/1] 0.00ns
+.preheader7.preheader:3  %a_row_load_65 = load float* %a_row_load_59
+
+ST_11: tmp_14 (135)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:53  %tmp_14 = or i11 %tmp_1, 4
+
+ST_11: tmp_15 (136)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:54  %tmp_15 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_14)
+
+ST_11: a_0_addr_4 (137)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:55  %a_0_addr_4 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_15
+
+ST_11: a_0_load_4 (230)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:148  %a_0_load_4 = load float* %a_0_addr_4, align 4
+
+ST_11: a_row_load_3 (286)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:204  %a_row_load_3 = select i1 %tmp_5, float %a_0_load_3, float %a_row_load_65
+
+ST_11: StgValue_404 (318)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:236  store float %a_row_load_3, float* %a_row_load_59
+
+ST_11: tmp_95 (391)  [1/1] 1.79ns  loc: matmul.cpp:20
+.preheader.preheader:67  %tmp_95 = add i9 %tmp_8_cast7, -224
+
+ST_11: tmp_96_cast (392)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:68  %tmp_96_cast = zext i9 %tmp_95 to i64
+
+ST_11: a_1_addr_9 (393)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:69  %a_1_addr_9 = getelementptr [1536 x float]* %a_1, i64 0, i64 %tmp_96_cast
+
+ST_11: a_0_load_36 (421)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:97  %a_0_load_36 = load float* %a_0_addr_36, align 4
+
+ST_11: b_copy_4_addr (422)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:98  %b_copy_4_addr = getelementptr [32 x float]* %b_copy_4, i64 0, i64 %tmp_8
+
+ST_11: StgValue_410 (423)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:99  store float %a_0_load_36, float* %b_copy_4_addr, align 4
+
+ST_11: a_1_load_8 (481)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:157  %a_1_load_8 = load float* %a_1_addr_8, align 4
+
+ST_11: b_copy_24_addr (482)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:158  %b_copy_24_addr = getelementptr [32 x float]* %b_copy_24, i64 0, i64 %tmp_8
+
+ST_11: StgValue_413 (483)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:159  store float %a_1_load_8, float* %b_copy_24_addr, align 4
+
+ST_11: a_1_load_9 (484)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:160  %a_1_load_9 = load float* %a_1_addr_9, align 4
+
+ST_11: tmp_3 (515)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:8  %tmp_3 = fadd float %tmp_s, 0.000000e+00
+
+ST_11: tmp_11_2 (522)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:15  %tmp_11_2 = fmul float %a_row_load_2, %b_copy_2_load
+
+ST_11: b_copy_3_load (525)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:18  %b_copy_3_load = load float* %b_copy_3_addr_1, align 4
+
+ST_11: tmp_11_3 (526)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:19  %tmp_11_3 = fmul float %a_row_load_3, %b_copy_3_load
+
+
+ <State 12>: 8.26ns
+ST_12: a_0_load_4 (230)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:148  %a_0_load_4 = load float* %a_0_addr_4, align 4
+
+ST_12: tmp_76 (342)  [1/1] 1.79ns  loc: matmul.cpp:20
+.preheader.preheader:18  %tmp_76 = add i11 %tmp_8_cast, -864
+
+ST_12: tmp_77_cast (343)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:19  %tmp_77_cast = zext i11 %tmp_76 to i64
+
+ST_12: a_0_addr_37 (344)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:20  %a_0_addr_37 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_77_cast
+
+ST_12: tmp_96 (394)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:70  %tmp_96 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 5, i6 %j_mid2)
+
+ST_12: a_1_addr_10 (395)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:71  %a_1_addr_10 = getelementptr [1536 x float]* %a_1, i64 0, i64 %tmp_96
+
+ST_12: a_0_load_37 (424)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:100  %a_0_load_37 = load float* %a_0_addr_37, align 4
+
+ST_12: a_1_load_9 (484)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:160  %a_1_load_9 = load float* %a_1_addr_9, align 4
+
+ST_12: b_copy_25_addr (485)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:161  %b_copy_25_addr = getelementptr [32 x float]* %b_copy_25, i64 0, i64 %tmp_8
+
+ST_12: StgValue_428 (486)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:162  store float %a_1_load_9, float* %b_copy_25_addr, align 4
+
+ST_12: a_1_load_10 (487)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:163  %a_1_load_10 = load float* %a_1_addr_10, align 4
+
+ST_12: tmp_3 (515)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:8  %tmp_3 = fadd float %tmp_s, 0.000000e+00
+
+ST_12: tmp_11_2 (522)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:15  %tmp_11_2 = fmul float %a_row_load_2, %b_copy_2_load
+
+ST_12: tmp_11_3 (526)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:19  %tmp_11_3 = fmul float %a_row_load_3, %b_copy_3_load
+
+ST_12: b_copy_4_addr_1 (528)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:21  %b_copy_4_addr_1 = getelementptr [32 x float]* %b_copy_4, i64 0, i64 %tmp_7
+
+ST_12: b_copy_4_load (529)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:22  %b_copy_4_load = load float* %b_copy_4_addr_1, align 4
+
+
+ <State 13>: 8.49ns
+ST_13: a_row_load_66 (86)  [1/1] 0.00ns
+.preheader7.preheader:4  %a_row_load_66 = load float* %a_row_load_58
+
+ST_13: tmp_16 (138)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:56  %tmp_16 = or i11 %tmp_1, 5
+
+ST_13: tmp_17 (139)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:57  %tmp_17 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_16)
+
+ST_13: a_0_addr_5 (140)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:58  %a_0_addr_5 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_17
+
+ST_13: a_0_load_5 (231)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:149  %a_0_load_5 = load float* %a_0_addr_5, align 4
+
+ST_13: a_row_load_4 (285)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:203  %a_row_load_4 = select i1 %tmp_5, float %a_0_load_4, float %a_row_load_66
+
+ST_13: StgValue_441 (317)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:235  store float %a_row_load_4, float* %a_row_load_58
+
+ST_13: tmp_97 (396)  [1/1] 1.79ns  loc: matmul.cpp:20
+.preheader.preheader:72  %tmp_97 = add i9 %tmp_8_cast7, -160
+
+ST_13: tmp_98_cast (397)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:73  %tmp_98_cast = zext i9 %tmp_97 to i64
+
+ST_13: a_1_addr_11 (398)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:74  %a_1_addr_11 = getelementptr [1536 x float]* %a_1, i64 0, i64 %tmp_98_cast
+
+ST_13: a_0_load_37 (424)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:100  %a_0_load_37 = load float* %a_0_addr_37, align 4
+
+ST_13: b_copy_5_addr (425)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:101  %b_copy_5_addr = getelementptr [32 x float]* %b_copy_5, i64 0, i64 %tmp_8
+
+ST_13: StgValue_447 (426)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:102  store float %a_0_load_37, float* %b_copy_5_addr, align 4
+
+ST_13: a_1_load_10 (487)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:163  %a_1_load_10 = load float* %a_1_addr_10, align 4
+
+ST_13: b_copy_26_addr (488)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:164  %b_copy_26_addr = getelementptr [32 x float]* %b_copy_26, i64 0, i64 %tmp_8
+
+ST_13: StgValue_450 (489)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:165  store float %a_1_load_10, float* %b_copy_26_addr, align 4
+
+ST_13: a_1_load_11 (490)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:166  %a_1_load_11 = load float* %a_1_addr_11, align 4
+
+ST_13: tmp_3 (515)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:8  %tmp_3 = fadd float %tmp_s, 0.000000e+00
+
+ST_13: tmp_11_3 (526)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:19  %tmp_11_3 = fmul float %a_row_load_3, %b_copy_3_load
+
+ST_13: b_copy_4_load (529)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:22  %b_copy_4_load = load float* %b_copy_4_addr_1, align 4
+
+ST_13: tmp_11_4 (530)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:23  %tmp_11_4 = fmul float %a_row_load_4, %b_copy_4_load
+
+
+ <State 14>: 8.26ns
+ST_14: a_0_load_5 (231)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:149  %a_0_load_5 = load float* %a_0_addr_5, align 4
+
+ST_14: tmp_77 (345)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:21  %tmp_77 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 19, i6 %j_mid2)
+
+ST_14: a_0_addr_38 (346)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:22  %a_0_addr_38 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_77
+
+ST_14: tmp_98 (399)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:75  %tmp_98 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 6, i6 %j_mid2)
+
+ST_14: a_1_addr_12 (400)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:76  %a_1_addr_12 = getelementptr [1536 x float]* %a_1, i64 0, i64 %tmp_98
+
+ST_14: a_0_load_38 (427)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:103  %a_0_load_38 = load float* %a_0_addr_38, align 4
+
+ST_14: a_1_load_11 (490)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:166  %a_1_load_11 = load float* %a_1_addr_11, align 4
+
+ST_14: b_copy_27_addr (491)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:167  %b_copy_27_addr = getelementptr [32 x float]* %b_copy_27, i64 0, i64 %tmp_8
+
+ST_14: StgValue_464 (492)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:168  store float %a_1_load_11, float* %b_copy_27_addr, align 4
+
+ST_14: a_1_load_12 (493)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:169  %a_1_load_12 = load float* %a_1_addr_12, align 4
+
+ST_14: tmp_12_1 (519)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:12  %tmp_12_1 = fadd float %tmp_3, %tmp_11_1
+
+ST_14: tmp_11_3 (526)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:19  %tmp_11_3 = fmul float %a_row_load_3, %b_copy_3_load
+
+ST_14: tmp_11_4 (530)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:23  %tmp_11_4 = fmul float %a_row_load_4, %b_copy_4_load
+
+ST_14: b_copy_5_addr_1 (532)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:25  %b_copy_5_addr_1 = getelementptr [32 x float]* %b_copy_5, i64 0, i64 %tmp_7
+
+ST_14: b_copy_5_load (533)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:26  %b_copy_5_load = load float* %b_copy_5_addr_1, align 4
+
+
+ <State 15>: 8.49ns
+ST_15: a_row_load_67 (87)  [1/1] 0.00ns
+.preheader7.preheader:5  %a_row_load_67 = load float* %a_row_load_57
+
+ST_15: tmp_18 (141)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:59  %tmp_18 = or i11 %tmp_1, 6
+
+ST_15: tmp_19 (142)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:60  %tmp_19 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_18)
+
+ST_15: a_0_addr_6 (143)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:61  %a_0_addr_6 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_19
+
+ST_15: a_0_load_6 (232)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:150  %a_0_load_6 = load float* %a_0_addr_6, align 4
+
+ST_15: a_row_load_5 (284)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:202  %a_row_load_5 = select i1 %tmp_5, float %a_0_load_5, float %a_row_load_67
+
+ST_15: StgValue_477 (316)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:234  store float %a_row_load_5, float* %a_row_load_57
+
+ST_15: tmp_100_cast9 (401)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:77  %tmp_100_cast9 = sext i8 %tmp_91 to i9
+
+ST_15: tmp_100_cast (402)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:78  %tmp_100_cast = zext i9 %tmp_100_cast9 to i64
+
+ST_15: a_1_addr_13 (403)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:79  %a_1_addr_13 = getelementptr [1536 x float]* %a_1, i64 0, i64 %tmp_100_cast
+
+ST_15: a_0_load_38 (427)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:103  %a_0_load_38 = load float* %a_0_addr_38, align 4
+
+ST_15: b_copy_6_addr (428)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:104  %b_copy_6_addr = getelementptr [32 x float]* %b_copy_6, i64 0, i64 %tmp_8
+
+ST_15: StgValue_483 (429)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:105  store float %a_0_load_38, float* %b_copy_6_addr, align 4
+
+ST_15: a_1_load_12 (493)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:169  %a_1_load_12 = load float* %a_1_addr_12, align 4
+
+ST_15: b_copy_28_addr (494)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:170  %b_copy_28_addr = getelementptr [32 x float]* %b_copy_28, i64 0, i64 %tmp_8
+
+ST_15: StgValue_486 (495)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:171  store float %a_1_load_12, float* %b_copy_28_addr, align 4
+
+ST_15: a_1_load_13 (496)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:172  %a_1_load_13 = load float* %a_1_addr_13, align 4
+
+ST_15: tmp_12_1 (519)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:12  %tmp_12_1 = fadd float %tmp_3, %tmp_11_1
+
+ST_15: tmp_11_4 (530)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:23  %tmp_11_4 = fmul float %a_row_load_4, %b_copy_4_load
+
+ST_15: b_copy_5_load (533)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:26  %b_copy_5_load = load float* %b_copy_5_addr_1, align 4
+
+ST_15: tmp_11_5 (534)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:27  %tmp_11_5 = fmul float %a_row_load_5, %b_copy_5_load
+
+
+ <State 16>: 8.26ns
+ST_16: a_0_load_6 (232)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:150  %a_0_load_6 = load float* %a_0_addr_6, align 4
+
+ST_16: tmp_78 (347)  [1/1] 1.79ns  loc: matmul.cpp:20
+.preheader.preheader:23  %tmp_78 = add i11 %tmp_8_cast, -800
+
+ST_16: tmp_79_cast (348)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:24  %tmp_79_cast = zext i11 %tmp_78 to i64
+
+ST_16: a_0_addr_39 (349)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:25  %a_0_addr_39 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_79_cast
+
+ST_16: tmp_99 (404)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:80  %tmp_99 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 7, i6 %j_mid2)
+
+ST_16: a_1_addr_14 (405)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:81  %a_1_addr_14 = getelementptr [1536 x float]* %a_1, i64 0, i64 %tmp_99
+
+ST_16: a_0_load_39 (430)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:106  %a_0_load_39 = load float* %a_0_addr_39, align 4
+
+ST_16: a_1_load_13 (496)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:172  %a_1_load_13 = load float* %a_1_addr_13, align 4
+
+ST_16: b_copy_29_addr (497)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:173  %b_copy_29_addr = getelementptr [32 x float]* %b_copy_29, i64 0, i64 %tmp_8
+
+ST_16: StgValue_501 (498)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:174  store float %a_1_load_13, float* %b_copy_29_addr, align 4
+
+ST_16: a_1_load_14 (499)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:175  %a_1_load_14 = load float* %a_1_addr_14, align 4
+
+ST_16: tmp_12_1 (519)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:12  %tmp_12_1 = fadd float %tmp_3, %tmp_11_1
+
+ST_16: tmp_11_4 (530)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:23  %tmp_11_4 = fmul float %a_row_load_4, %b_copy_4_load
+
+ST_16: tmp_11_5 (534)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:27  %tmp_11_5 = fmul float %a_row_load_5, %b_copy_5_load
+
+ST_16: b_copy_6_addr_1 (536)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:29  %b_copy_6_addr_1 = getelementptr [32 x float]* %b_copy_6, i64 0, i64 %tmp_7
+
+ST_16: b_copy_6_load (537)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:30  %b_copy_6_load = load float* %b_copy_6_addr_1, align 4
+
+
+ <State 17>: 8.49ns
+ST_17: a_row_load_68 (88)  [1/1] 0.00ns
+.preheader7.preheader:6  %a_row_load_68 = load float* %a_row_load_56
+
+ST_17: tmp_20 (144)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:62  %tmp_20 = or i11 %tmp_1, 7
+
+ST_17: tmp_21 (145)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:63  %tmp_21 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_20)
+
+ST_17: a_0_addr_7 (146)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:64  %a_0_addr_7 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_21
+
+ST_17: a_0_load_7 (233)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:151  %a_0_load_7 = load float* %a_0_addr_7, align 4
+
+ST_17: a_row_load_6 (283)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:201  %a_row_load_6 = select i1 %tmp_5, float %a_0_load_6, float %a_row_load_68
+
+ST_17: StgValue_514 (315)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:233  store float %a_row_load_6, float* %a_row_load_56
+
+ST_17: tmp_8_cast8 (325)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:1  %tmp_8_cast8 = zext i6 %j_mid2 to i10
+
+ST_17: tmp_100 (406)  [1/1] 1.79ns  loc: matmul.cpp:20
+.preheader.preheader:82  %tmp_100 = add i10 %tmp_8_cast8, 480
+
+ST_17: tmp_102_cast (407)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:83  %tmp_102_cast = zext i10 %tmp_100 to i64
+
+ST_17: a_1_addr_15 (408)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:84  %a_1_addr_15 = getelementptr [1536 x float]* %a_1, i64 0, i64 %tmp_102_cast
+
+ST_17: a_0_load_39 (430)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:106  %a_0_load_39 = load float* %a_0_addr_39, align 4
+
+ST_17: b_copy_7_addr (431)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:107  %b_copy_7_addr = getelementptr [32 x float]* %b_copy_7, i64 0, i64 %tmp_8
+
+ST_17: StgValue_521 (432)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:108  store float %a_0_load_39, float* %b_copy_7_addr, align 4
+
+ST_17: a_1_load_14 (499)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:175  %a_1_load_14 = load float* %a_1_addr_14, align 4
+
+ST_17: b_copy_30_addr (500)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:176  %b_copy_30_addr = getelementptr [32 x float]* %b_copy_30, i64 0, i64 %tmp_8
+
+ST_17: StgValue_524 (501)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:177  store float %a_1_load_14, float* %b_copy_30_addr, align 4
+
+ST_17: a_1_load_15 (502)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:178  %a_1_load_15 = load float* %a_1_addr_15, align 4
+
+ST_17: tmp_12_1 (519)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:12  %tmp_12_1 = fadd float %tmp_3, %tmp_11_1
+
+ST_17: tmp_11_5 (534)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:27  %tmp_11_5 = fmul float %a_row_load_5, %b_copy_5_load
+
+ST_17: b_copy_6_load (537)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:30  %b_copy_6_load = load float* %b_copy_6_addr_1, align 4
+
+ST_17: tmp_11_6 (538)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:31  %tmp_11_6 = fmul float %a_row_load_6, %b_copy_6_load
+
+
+ <State 18>: 8.26ns
+ST_18: a_0_load_7 (233)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:151  %a_0_load_7 = load float* %a_0_addr_7, align 4
+
+ST_18: tmp_79 (350)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:26  %tmp_79 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 20, i6 %j_mid2)
+
+ST_18: a_0_addr_40 (351)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:27  %a_0_addr_40 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_79
+
+ST_18: a_0_load_40 (433)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:109  %a_0_load_40 = load float* %a_0_addr_40, align 4
+
+ST_18: a_1_load_15 (502)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:178  %a_1_load_15 = load float* %a_1_addr_15, align 4
+
+ST_18: b_copy_31_addr (503)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:179  %b_copy_31_addr = getelementptr [32 x float]* %b_copy_31, i64 0, i64 %tmp_8
+
+ST_18: StgValue_536 (504)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:180  store float %a_1_load_15, float* %b_copy_31_addr, align 4
+
+ST_18: tmp_12_1 (519)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:12  %tmp_12_1 = fadd float %tmp_3, %tmp_11_1
+
+ST_18: tmp_11_5 (534)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:27  %tmp_11_5 = fmul float %a_row_load_5, %b_copy_5_load
+
+ST_18: tmp_11_6 (538)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:31  %tmp_11_6 = fmul float %a_row_load_6, %b_copy_6_load
+
+ST_18: b_copy_7_addr_1 (540)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:33  %b_copy_7_addr_1 = getelementptr [32 x float]* %b_copy_7, i64 0, i64 %tmp_7
+
+ST_18: b_copy_7_load (541)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:34  %b_copy_7_load = load float* %b_copy_7_addr_1, align 4
+
+
+ <State 19>: 8.49ns
+ST_19: a_row_load_69 (89)  [1/1] 0.00ns
+.preheader7.preheader:7  %a_row_load_69 = load float* %a_row_load_55
+
+ST_19: tmp_22 (147)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:65  %tmp_22 = or i11 %tmp_1, 8
+
+ST_19: tmp_23 (148)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:66  %tmp_23 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_22)
+
+ST_19: a_0_addr_8 (149)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:67  %a_0_addr_8 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_23
+
+ST_19: a_0_load_8 (234)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:152  %a_0_load_8 = load float* %a_0_addr_8, align 4
+
+ST_19: a_row_load_7 (282)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:200  %a_row_load_7 = select i1 %tmp_5, float %a_0_load_7, float %a_row_load_69
+
+ST_19: StgValue_548 (314)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:232  store float %a_row_load_7, float* %a_row_load_55
+
+ST_19: a_0_load_40 (433)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:109  %a_0_load_40 = load float* %a_0_addr_40, align 4
+
+ST_19: b_copy_8_addr (434)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:110  %b_copy_8_addr = getelementptr [32 x float]* %b_copy_8, i64 0, i64 %tmp_8
+
+ST_19: StgValue_551 (435)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:111  store float %a_0_load_40, float* %b_copy_8_addr, align 4
+
+ST_19: tmp_12_2 (523)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:16  %tmp_12_2 = fadd float %tmp_12_1, %tmp_11_2
+
+ST_19: tmp_11_6 (538)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:31  %tmp_11_6 = fmul float %a_row_load_6, %b_copy_6_load
+
+ST_19: b_copy_7_load (541)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:34  %b_copy_7_load = load float* %b_copy_7_addr_1, align 4
+
+ST_19: tmp_11_7 (542)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:35  %tmp_11_7 = fmul float %a_row_load_7, %b_copy_7_load
+
+
+ <State 20>: 8.26ns
+ST_20: a_0_load_8 (234)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:152  %a_0_load_8 = load float* %a_0_addr_8, align 4
+
+ST_20: tmp_80 (352)  [1/1] 1.79ns  loc: matmul.cpp:20
+.preheader.preheader:28  %tmp_80 = add i11 %tmp_8_cast, -736
+
+ST_20: tmp_81_cast (353)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:29  %tmp_81_cast = zext i11 %tmp_80 to i64
+
+ST_20: a_0_addr_41 (354)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:30  %a_0_addr_41 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_81_cast
+
+ST_20: a_0_load_41 (436)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:112  %a_0_load_41 = load float* %a_0_addr_41, align 4
+
+ST_20: tmp_12_2 (523)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:16  %tmp_12_2 = fadd float %tmp_12_1, %tmp_11_2
+
+ST_20: tmp_11_6 (538)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:31  %tmp_11_6 = fmul float %a_row_load_6, %b_copy_6_load
+
+ST_20: tmp_11_7 (542)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:35  %tmp_11_7 = fmul float %a_row_load_7, %b_copy_7_load
+
+ST_20: b_copy_8_addr_1 (544)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:37  %b_copy_8_addr_1 = getelementptr [32 x float]* %b_copy_8, i64 0, i64 %tmp_7
+
+ST_20: b_copy_8_load (545)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:38  %b_copy_8_load = load float* %b_copy_8_addr_1, align 4
+
+
+ <State 21>: 8.49ns
+ST_21: a_row_load_70 (90)  [1/1] 0.00ns
+.preheader7.preheader:8  %a_row_load_70 = load float* %a_row_load_54
+
+ST_21: tmp_24 (150)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:68  %tmp_24 = or i11 %tmp_1, 9
+
+ST_21: tmp_25 (151)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:69  %tmp_25 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_24)
+
+ST_21: a_0_addr_9 (152)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:70  %a_0_addr_9 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_25
+
+ST_21: a_0_load_9 (235)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:153  %a_0_load_9 = load float* %a_0_addr_9, align 4
+
+ST_21: a_row_load_8 (281)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:199  %a_row_load_8 = select i1 %tmp_5, float %a_0_load_8, float %a_row_load_70
+
+ST_21: StgValue_572 (313)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:231  store float %a_row_load_8, float* %a_row_load_54
+
+ST_21: a_0_load_41 (436)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:112  %a_0_load_41 = load float* %a_0_addr_41, align 4
+
+ST_21: b_copy_9_addr (437)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:113  %b_copy_9_addr = getelementptr [32 x float]* %b_copy_9, i64 0, i64 %tmp_8
+
+ST_21: StgValue_575 (438)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:114  store float %a_0_load_41, float* %b_copy_9_addr, align 4
+
+ST_21: tmp_12_2 (523)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:16  %tmp_12_2 = fadd float %tmp_12_1, %tmp_11_2
+
+ST_21: tmp_11_7 (542)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:35  %tmp_11_7 = fmul float %a_row_load_7, %b_copy_7_load
+
+ST_21: b_copy_8_load (545)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:38  %b_copy_8_load = load float* %b_copy_8_addr_1, align 4
+
+ST_21: tmp_11_8 (546)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:39  %tmp_11_8 = fmul float %a_row_load_8, %b_copy_8_load
+
+
+ <State 22>: 8.26ns
+ST_22: a_0_load_9 (235)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:153  %a_0_load_9 = load float* %a_0_addr_9, align 4
+
+ST_22: tmp_81 (355)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:31  %tmp_81 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 21, i6 %j_mid2)
+
+ST_22: a_0_addr_42 (356)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:32  %a_0_addr_42 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_81
+
+ST_22: a_0_load_42 (439)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:115  %a_0_load_42 = load float* %a_0_addr_42, align 4
+
+ST_22: tmp_12_2 (523)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:16  %tmp_12_2 = fadd float %tmp_12_1, %tmp_11_2
+
+ST_22: tmp_11_7 (542)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:35  %tmp_11_7 = fmul float %a_row_load_7, %b_copy_7_load
+
+ST_22: tmp_11_8 (546)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:39  %tmp_11_8 = fmul float %a_row_load_8, %b_copy_8_load
+
+ST_22: b_copy_9_addr_1 (548)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:41  %b_copy_9_addr_1 = getelementptr [32 x float]* %b_copy_9, i64 0, i64 %tmp_7
+
+ST_22: b_copy_9_load (549)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:42  %b_copy_9_load = load float* %b_copy_9_addr_1, align 4
+
+
+ <State 23>: 8.49ns
+ST_23: a_row_load_71 (91)  [1/1] 0.00ns
+.preheader7.preheader:9  %a_row_load_71 = load float* %a_row_load_53
+
+ST_23: tmp_26 (153)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:71  %tmp_26 = or i11 %tmp_1, 10
+
+ST_23: tmp_27 (154)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:72  %tmp_27 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_26)
+
+ST_23: a_0_addr_10 (155)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:73  %a_0_addr_10 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_27
+
+ST_23: a_0_load_10 (236)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:154  %a_0_load_10 = load float* %a_0_addr_10, align 4
+
+ST_23: a_row_load_9 (280)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:198  %a_row_load_9 = select i1 %tmp_5, float %a_0_load_9, float %a_row_load_71
+
+ST_23: StgValue_595 (312)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:230  store float %a_row_load_9, float* %a_row_load_53
+
+ST_23: a_0_load_42 (439)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:115  %a_0_load_42 = load float* %a_0_addr_42, align 4
+
+ST_23: b_copy_10_addr (440)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:116  %b_copy_10_addr = getelementptr [32 x float]* %b_copy_10, i64 0, i64 %tmp_8
+
+ST_23: StgValue_598 (441)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:117  store float %a_0_load_42, float* %b_copy_10_addr, align 4
+
+ST_23: tmp_12_2 (523)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:16  %tmp_12_2 = fadd float %tmp_12_1, %tmp_11_2
+
+ST_23: tmp_11_8 (546)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:39  %tmp_11_8 = fmul float %a_row_load_8, %b_copy_8_load
+
+ST_23: b_copy_9_load (549)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:42  %b_copy_9_load = load float* %b_copy_9_addr_1, align 4
+
+ST_23: tmp_11_9 (550)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:43  %tmp_11_9 = fmul float %a_row_load_9, %b_copy_9_load
+
+
+ <State 24>: 8.26ns
+ST_24: a_0_load_10 (236)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:154  %a_0_load_10 = load float* %a_0_addr_10, align 4
+
+ST_24: tmp_82 (357)  [1/1] 1.79ns  loc: matmul.cpp:20
+.preheader.preheader:33  %tmp_82 = add i11 %tmp_8_cast, -672
+
+ST_24: tmp_83_cast (358)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:34  %tmp_83_cast = zext i11 %tmp_82 to i64
+
+ST_24: a_0_addr_43 (359)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:35  %a_0_addr_43 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_83_cast
+
+ST_24: a_0_load_43 (442)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:118  %a_0_load_43 = load float* %a_0_addr_43, align 4
+
+ST_24: tmp_12_3 (527)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:20  %tmp_12_3 = fadd float %tmp_12_2, %tmp_11_3
+
+ST_24: tmp_11_8 (546)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:39  %tmp_11_8 = fmul float %a_row_load_8, %b_copy_8_load
+
+ST_24: tmp_11_9 (550)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:43  %tmp_11_9 = fmul float %a_row_load_9, %b_copy_9_load
+
+ST_24: b_copy_10_addr_1 (552)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:45  %b_copy_10_addr_1 = getelementptr [32 x float]* %b_copy_10, i64 0, i64 %tmp_7
+
+ST_24: b_copy_10_load (553)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:46  %b_copy_10_load = load float* %b_copy_10_addr_1, align 4
+
+
+ <State 25>: 8.49ns
+ST_25: a_row_load_72 (92)  [1/1] 0.00ns
+.preheader7.preheader:10  %a_row_load_72 = load float* %a_row_load_52
+
+ST_25: tmp_28 (156)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:74  %tmp_28 = or i11 %tmp_1, 11
+
+ST_25: tmp_29 (157)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:75  %tmp_29 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_28)
+
+ST_25: a_0_addr_11 (158)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:76  %a_0_addr_11 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_29
+
+ST_25: a_0_load_11 (237)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:155  %a_0_load_11 = load float* %a_0_addr_11, align 4
+
+ST_25: a_row_load_10 (279)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:197  %a_row_load_10 = select i1 %tmp_5, float %a_0_load_10, float %a_row_load_72
+
+ST_25: StgValue_619 (311)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:229  store float %a_row_load_10, float* %a_row_load_52
+
+ST_25: a_0_load_43 (442)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:118  %a_0_load_43 = load float* %a_0_addr_43, align 4
+
+ST_25: b_copy_11_addr (443)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:119  %b_copy_11_addr = getelementptr [32 x float]* %b_copy_11, i64 0, i64 %tmp_8
+
+ST_25: StgValue_622 (444)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:120  store float %a_0_load_43, float* %b_copy_11_addr, align 4
+
+ST_25: tmp_12_3 (527)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:20  %tmp_12_3 = fadd float %tmp_12_2, %tmp_11_3
+
+ST_25: tmp_11_9 (550)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:43  %tmp_11_9 = fmul float %a_row_load_9, %b_copy_9_load
+
+ST_25: b_copy_10_load (553)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:46  %b_copy_10_load = load float* %b_copy_10_addr_1, align 4
+
+ST_25: tmp_11_s (554)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:47  %tmp_11_s = fmul float %a_row_load_10, %b_copy_10_load
+
+
+ <State 26>: 8.26ns
+ST_26: a_0_load_11 (237)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:155  %a_0_load_11 = load float* %a_0_addr_11, align 4
+
+ST_26: tmp_83 (360)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:36  %tmp_83 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 22, i6 %j_mid2)
+
+ST_26: a_0_addr_44 (361)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:37  %a_0_addr_44 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_83
+
+ST_26: a_0_load_44 (445)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:121  %a_0_load_44 = load float* %a_0_addr_44, align 4
+
+ST_26: tmp_12_3 (527)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:20  %tmp_12_3 = fadd float %tmp_12_2, %tmp_11_3
+
+ST_26: tmp_11_9 (550)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:43  %tmp_11_9 = fmul float %a_row_load_9, %b_copy_9_load
+
+ST_26: tmp_11_s (554)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:47  %tmp_11_s = fmul float %a_row_load_10, %b_copy_10_load
+
+ST_26: b_copy_11_addr_1 (556)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:49  %b_copy_11_addr_1 = getelementptr [32 x float]* %b_copy_11, i64 0, i64 %tmp_7
+
+ST_26: b_copy_11_load (557)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:50  %b_copy_11_load = load float* %b_copy_11_addr_1, align 4
+
+
+ <State 27>: 8.49ns
+ST_27: a_row_load_73 (93)  [1/1] 0.00ns
+.preheader7.preheader:11  %a_row_load_73 = load float* %a_row_load_51
+
+ST_27: tmp_30 (159)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:77  %tmp_30 = or i11 %tmp_1, 12
+
+ST_27: tmp_31 (160)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:78  %tmp_31 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_30)
+
+ST_27: a_0_addr_12 (161)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:79  %a_0_addr_12 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_31
+
+ST_27: a_0_load_12 (238)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:156  %a_0_load_12 = load float* %a_0_addr_12, align 4
+
+ST_27: a_row_load_11 (278)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:196  %a_row_load_11 = select i1 %tmp_5, float %a_0_load_11, float %a_row_load_73
+
+ST_27: StgValue_642 (310)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:228  store float %a_row_load_11, float* %a_row_load_51
+
+ST_27: a_0_load_44 (445)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:121  %a_0_load_44 = load float* %a_0_addr_44, align 4
+
+ST_27: b_copy_12_addr (446)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:122  %b_copy_12_addr = getelementptr [32 x float]* %b_copy_12, i64 0, i64 %tmp_8
+
+ST_27: StgValue_645 (447)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:123  store float %a_0_load_44, float* %b_copy_12_addr, align 4
+
+ST_27: tmp_12_3 (527)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:20  %tmp_12_3 = fadd float %tmp_12_2, %tmp_11_3
+
+ST_27: tmp_11_s (554)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:47  %tmp_11_s = fmul float %a_row_load_10, %b_copy_10_load
+
+ST_27: b_copy_11_load (557)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:50  %b_copy_11_load = load float* %b_copy_11_addr_1, align 4
+
+ST_27: tmp_11_10 (558)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:51  %tmp_11_10 = fmul float %a_row_load_11, %b_copy_11_load
+
+
+ <State 28>: 8.26ns
+ST_28: a_0_load_12 (238)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:156  %a_0_load_12 = load float* %a_0_addr_12, align 4
+
+ST_28: tmp_84 (362)  [1/1] 1.79ns  loc: matmul.cpp:20
+.preheader.preheader:38  %tmp_84 = add i11 %tmp_8_cast, -608
+
+ST_28: tmp_85_cast (363)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:39  %tmp_85_cast = zext i11 %tmp_84 to i64
+
+ST_28: a_0_addr_45 (364)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:40  %a_0_addr_45 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_85_cast
+
+ST_28: a_0_load_45 (448)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:124  %a_0_load_45 = load float* %a_0_addr_45, align 4
+
+ST_28: tmp_12_3 (527)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:20  %tmp_12_3 = fadd float %tmp_12_2, %tmp_11_3
+
+ST_28: tmp_11_s (554)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:47  %tmp_11_s = fmul float %a_row_load_10, %b_copy_10_load
+
+ST_28: tmp_11_10 (558)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:51  %tmp_11_10 = fmul float %a_row_load_11, %b_copy_11_load
+
+ST_28: b_copy_12_addr_1 (560)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:53  %b_copy_12_addr_1 = getelementptr [32 x float]* %b_copy_12, i64 0, i64 %tmp_7
+
+ST_28: b_copy_12_load (561)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:54  %b_copy_12_load = load float* %b_copy_12_addr_1, align 4
+
+
+ <State 29>: 8.49ns
+ST_29: a_row_load_74 (94)  [1/1] 0.00ns
+.preheader7.preheader:12  %a_row_load_74 = load float* %a_row_load_50
+
+ST_29: tmp_32 (162)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:80  %tmp_32 = or i11 %tmp_1, 13
+
+ST_29: tmp_33 (163)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:81  %tmp_33 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_32)
+
+ST_29: a_0_addr_13 (164)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:82  %a_0_addr_13 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_33
+
+ST_29: a_0_load_13 (239)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:157  %a_0_load_13 = load float* %a_0_addr_13, align 4
+
+ST_29: a_row_load_12 (277)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:195  %a_row_load_12 = select i1 %tmp_5, float %a_0_load_12, float %a_row_load_74
+
+ST_29: StgValue_666 (309)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:227  store float %a_row_load_12, float* %a_row_load_50
+
+ST_29: a_0_load_45 (448)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:124  %a_0_load_45 = load float* %a_0_addr_45, align 4
+
+ST_29: b_copy_13_addr (449)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:125  %b_copy_13_addr = getelementptr [32 x float]* %b_copy_13, i64 0, i64 %tmp_8
+
+ST_29: StgValue_669 (450)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:126  store float %a_0_load_45, float* %b_copy_13_addr, align 4
+
+ST_29: tmp_12_4 (531)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:24  %tmp_12_4 = fadd float %tmp_12_3, %tmp_11_4
+
+ST_29: tmp_11_10 (558)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:51  %tmp_11_10 = fmul float %a_row_load_11, %b_copy_11_load
+
+ST_29: b_copy_12_load (561)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:54  %b_copy_12_load = load float* %b_copy_12_addr_1, align 4
+
+ST_29: tmp_11_11 (562)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:55  %tmp_11_11 = fmul float %a_row_load_12, %b_copy_12_load
+
+
+ <State 30>: 8.26ns
+ST_30: a_0_load_13 (239)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:157  %a_0_load_13 = load float* %a_0_addr_13, align 4
+
+ST_30: tmp_85 (365)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:41  %tmp_85 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 23, i6 %j_mid2)
+
+ST_30: a_0_addr_46 (366)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:42  %a_0_addr_46 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_85
+
+ST_30: a_0_load_46 (451)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:127  %a_0_load_46 = load float* %a_0_addr_46, align 4
+
+ST_30: tmp_12_4 (531)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:24  %tmp_12_4 = fadd float %tmp_12_3, %tmp_11_4
+
+ST_30: tmp_11_10 (558)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:51  %tmp_11_10 = fmul float %a_row_load_11, %b_copy_11_load
+
+ST_30: tmp_11_11 (562)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:55  %tmp_11_11 = fmul float %a_row_load_12, %b_copy_12_load
+
+ST_30: b_copy_13_addr_1 (564)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:57  %b_copy_13_addr_1 = getelementptr [32 x float]* %b_copy_13, i64 0, i64 %tmp_7
+
+ST_30: b_copy_13_load (565)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:58  %b_copy_13_load = load float* %b_copy_13_addr_1, align 4
+
+
+ <State 31>: 8.49ns
+ST_31: a_row_load_75 (95)  [1/1] 0.00ns
+.preheader7.preheader:13  %a_row_load_75 = load float* %a_row_load_49
+
+ST_31: tmp_34 (165)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:83  %tmp_34 = or i11 %tmp_1, 14
+
+ST_31: tmp_35 (166)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:84  %tmp_35 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_34)
+
+ST_31: a_0_addr_14 (167)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:85  %a_0_addr_14 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_35
+
+ST_31: a_0_load_14 (240)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:158  %a_0_load_14 = load float* %a_0_addr_14, align 4
+
+ST_31: a_row_load_13 (276)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:194  %a_row_load_13 = select i1 %tmp_5, float %a_0_load_13, float %a_row_load_75
+
+ST_31: StgValue_689 (308)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:226  store float %a_row_load_13, float* %a_row_load_49
+
+ST_31: a_0_load_46 (451)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:127  %a_0_load_46 = load float* %a_0_addr_46, align 4
+
+ST_31: b_copy_14_addr (452)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:128  %b_copy_14_addr = getelementptr [32 x float]* %b_copy_14, i64 0, i64 %tmp_8
+
+ST_31: StgValue_692 (453)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:129  store float %a_0_load_46, float* %b_copy_14_addr, align 4
+
+ST_31: tmp_12_4 (531)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:24  %tmp_12_4 = fadd float %tmp_12_3, %tmp_11_4
+
+ST_31: tmp_11_11 (562)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:55  %tmp_11_11 = fmul float %a_row_load_12, %b_copy_12_load
+
+ST_31: b_copy_13_load (565)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:58  %b_copy_13_load = load float* %b_copy_13_addr_1, align 4
+
+ST_31: tmp_11_12 (566)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:59  %tmp_11_12 = fmul float %a_row_load_13, %b_copy_13_load
+
+
+ <State 32>: 8.26ns
+ST_32: a_0_load_14 (240)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:158  %a_0_load_14 = load float* %a_0_addr_14, align 4
+
+ST_32: tmp_86 (367)  [1/1] 1.79ns  loc: matmul.cpp:20
+.preheader.preheader:43  %tmp_86 = add i11 %tmp_8_cast, -544
+
+ST_32: tmp_87_cast (368)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:44  %tmp_87_cast = zext i11 %tmp_86 to i64
+
+ST_32: a_0_addr_47 (369)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader.preheader:45  %a_0_addr_47 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_87_cast
+
+ST_32: a_0_load_47 (454)  [2/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:130  %a_0_load_47 = load float* %a_0_addr_47, align 4
+
+ST_32: tmp_12_4 (531)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:24  %tmp_12_4 = fadd float %tmp_12_3, %tmp_11_4
+
+ST_32: tmp_11_11 (562)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:55  %tmp_11_11 = fmul float %a_row_load_12, %b_copy_12_load
+
+ST_32: tmp_11_12 (566)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:59  %tmp_11_12 = fmul float %a_row_load_13, %b_copy_13_load
+
+ST_32: b_copy_14_addr_1 (568)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:61  %b_copy_14_addr_1 = getelementptr [32 x float]* %b_copy_14, i64 0, i64 %tmp_7
+
+ST_32: b_copy_14_load (569)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:62  %b_copy_14_load = load float* %b_copy_14_addr_1, align 4
+
+
+ <State 33>: 8.49ns
+ST_33: a_row_load_76 (96)  [1/1] 0.00ns
+.preheader7.preheader:14  %a_row_load_76 = load float* %a_row_load_48
+
+ST_33: tmp_36 (168)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:86  %tmp_36 = or i11 %tmp_1, 15
+
+ST_33: tmp_37 (169)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:87  %tmp_37 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_36)
+
+ST_33: a_0_addr_15 (170)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:88  %a_0_addr_15 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_37
+
+ST_33: a_0_load_15 (241)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:159  %a_0_load_15 = load float* %a_0_addr_15, align 4
+
+ST_33: a_row_load_14 (275)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:193  %a_row_load_14 = select i1 %tmp_5, float %a_0_load_14, float %a_row_load_76
+
+ST_33: StgValue_713 (307)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:225  store float %a_row_load_14, float* %a_row_load_48
+
+ST_33: a_0_load_47 (454)  [1/2] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:130  %a_0_load_47 = load float* %a_0_addr_47, align 4
+
+ST_33: b_copy_15_addr (455)  [1/1] 0.00ns  loc: matmul.cpp:33
+.preheader.preheader:131  %b_copy_15_addr = getelementptr [32 x float]* %b_copy_15, i64 0, i64 %tmp_8
+
+ST_33: StgValue_716 (456)  [1/1] 2.71ns  loc: matmul.cpp:33
+.preheader.preheader:132  store float %a_0_load_47, float* %b_copy_15_addr, align 4
+
+ST_33: StgValue_717 (505)  [1/1] 0.00ns
+.preheader.preheader:181  br label %.loopexit
+
+ST_33: tmp_12_4 (531)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:24  %tmp_12_4 = fadd float %tmp_12_3, %tmp_11_4
+
+ST_33: tmp_11_12 (566)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:59  %tmp_11_12 = fmul float %a_row_load_13, %b_copy_13_load
+
+ST_33: b_copy_14_load (569)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:62  %b_copy_14_load = load float* %b_copy_14_addr_1, align 4
+
+ST_33: tmp_11_13 (570)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:63  %tmp_11_13 = fmul float %a_row_load_14, %b_copy_14_load
+
+
+ <State 34>: 8.26ns
+ST_34: tmp_38 (171)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:89  %tmp_38 = or i11 %tmp_1, 16
+
+ST_34: tmp_39 (172)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:90  %tmp_39 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_38)
+
+ST_34: a_0_addr_16 (173)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:91  %a_0_addr_16 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_39
+
+ST_34: a_0_load_15 (241)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:159  %a_0_load_15 = load float* %a_0_addr_15, align 4
+
+ST_34: a_0_load_16 (242)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:160  %a_0_load_16 = load float* %a_0_addr_16, align 4
+
+ST_34: tmp_12_5 (535)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:28  %tmp_12_5 = fadd float %tmp_12_4, %tmp_11_5
+
+ST_34: tmp_11_12 (566)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:59  %tmp_11_12 = fmul float %a_row_load_13, %b_copy_13_load
+
+ST_34: tmp_11_13 (570)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:63  %tmp_11_13 = fmul float %a_row_load_14, %b_copy_14_load
+
+ST_34: b_copy_15_addr_1 (572)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:65  %b_copy_15_addr_1 = getelementptr [32 x float]* %b_copy_15, i64 0, i64 %tmp_7
+
+ST_34: b_copy_15_load (573)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:66  %b_copy_15_load = load float* %b_copy_15_addr_1, align 4
+
+
+ <State 35>: 8.49ns
+ST_35: a_row_load_77 (97)  [1/1] 0.00ns
+.preheader7.preheader:15  %a_row_load_77 = load float* %a_row_load_47
+
+ST_35: tmp_40 (174)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:92  %tmp_40 = or i11 %tmp_1, 17
+
+ST_35: tmp_41 (175)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:93  %tmp_41 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_40)
+
+ST_35: a_0_addr_17 (176)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:94  %a_0_addr_17 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_41
+
+ST_35: a_0_load_16 (242)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:160  %a_0_load_16 = load float* %a_0_addr_16, align 4
+
+ST_35: a_0_load_17 (243)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:161  %a_0_load_17 = load float* %a_0_addr_17, align 4
+
+ST_35: a_row_load_15 (274)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:192  %a_row_load_15 = select i1 %tmp_5, float %a_0_load_15, float %a_row_load_77
+
+ST_35: StgValue_739 (306)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:224  store float %a_row_load_15, float* %a_row_load_47
+
+ST_35: tmp_12_5 (535)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:28  %tmp_12_5 = fadd float %tmp_12_4, %tmp_11_5
+
+ST_35: tmp_11_13 (570)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:63  %tmp_11_13 = fmul float %a_row_load_14, %b_copy_14_load
+
+ST_35: b_copy_15_load (573)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:66  %b_copy_15_load = load float* %b_copy_15_addr_1, align 4
+
+ST_35: tmp_11_14 (574)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:67  %tmp_11_14 = fmul float %a_row_load_15, %b_copy_15_load
+
+ST_35: b_copy_16_addr_1 (576)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:69  %b_copy_16_addr_1 = getelementptr [32 x float]* %b_copy_16, i64 0, i64 %tmp_7
+
+ST_35: b_copy_16_load (577)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:70  %b_copy_16_load = load float* %b_copy_16_addr_1, align 4
+
+
+ <State 36>: 8.49ns
+ST_36: a_row_load_78 (98)  [1/1] 0.00ns
+.preheader7.preheader:16  %a_row_load_78 = load float* %a_row_load_46
+
+ST_36: tmp_42 (177)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:95  %tmp_42 = or i11 %tmp_1, 18
+
+ST_36: tmp_43 (178)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:96  %tmp_43 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_42)
+
+ST_36: a_0_addr_18 (179)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:97  %a_0_addr_18 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_43
+
+ST_36: a_0_load_17 (243)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:161  %a_0_load_17 = load float* %a_0_addr_17, align 4
+
+ST_36: a_0_load_18 (244)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:162  %a_0_load_18 = load float* %a_0_addr_18, align 4
+
+ST_36: a_row_load_16 (273)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:191  %a_row_load_16 = select i1 %tmp_5, float %a_0_load_16, float %a_row_load_78
+
+ST_36: StgValue_753 (305)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:223  store float %a_row_load_16, float* %a_row_load_46
+
+ST_36: tmp_12_5 (535)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:28  %tmp_12_5 = fadd float %tmp_12_4, %tmp_11_5
+
+ST_36: tmp_11_13 (570)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:63  %tmp_11_13 = fmul float %a_row_load_14, %b_copy_14_load
+
+ST_36: tmp_11_14 (574)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:67  %tmp_11_14 = fmul float %a_row_load_15, %b_copy_15_load
+
+ST_36: b_copy_16_load (577)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:70  %b_copy_16_load = load float* %b_copy_16_addr_1, align 4
+
+ST_36: tmp_11_15 (578)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:71  %tmp_11_15 = fmul float %a_row_load_16, %b_copy_16_load
+
+ST_36: b_copy_17_addr_1 (580)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:73  %b_copy_17_addr_1 = getelementptr [32 x float]* %b_copy_17, i64 0, i64 %tmp_7
+
+ST_36: b_copy_17_load (581)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:74  %b_copy_17_load = load float* %b_copy_17_addr_1, align 4
+
+
+ <State 37>: 8.49ns
+ST_37: a_row_load_79 (99)  [1/1] 0.00ns
+.preheader7.preheader:17  %a_row_load_79 = load float* %a_row_load_45
+
+ST_37: tmp_44 (180)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:98  %tmp_44 = or i11 %tmp_1, 19
+
+ST_37: tmp_45 (181)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:99  %tmp_45 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_44)
+
+ST_37: a_0_addr_19 (182)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:100  %a_0_addr_19 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_45
+
+ST_37: a_0_load_18 (244)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:162  %a_0_load_18 = load float* %a_0_addr_18, align 4
+
+ST_37: a_0_load_19 (245)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:163  %a_0_load_19 = load float* %a_0_addr_19, align 4
+
+ST_37: a_row_load_17 (272)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:190  %a_row_load_17 = select i1 %tmp_5, float %a_0_load_17, float %a_row_load_79
+
+ST_37: StgValue_768 (304)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:222  store float %a_row_load_17, float* %a_row_load_45
+
+ST_37: tmp_12_5 (535)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:28  %tmp_12_5 = fadd float %tmp_12_4, %tmp_11_5
+
+ST_37: tmp_11_14 (574)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:67  %tmp_11_14 = fmul float %a_row_load_15, %b_copy_15_load
+
+ST_37: tmp_11_15 (578)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:71  %tmp_11_15 = fmul float %a_row_load_16, %b_copy_16_load
+
+ST_37: b_copy_17_load (581)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:74  %b_copy_17_load = load float* %b_copy_17_addr_1, align 4
+
+ST_37: tmp_11_16 (582)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:75  %tmp_11_16 = fmul float %a_row_load_17, %b_copy_17_load
+
+ST_37: b_copy_18_addr_1 (584)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:77  %b_copy_18_addr_1 = getelementptr [32 x float]* %b_copy_18, i64 0, i64 %tmp_7
+
+ST_37: b_copy_18_load (585)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:78  %b_copy_18_load = load float* %b_copy_18_addr_1, align 4
+
+
+ <State 38>: 8.49ns
+ST_38: a_row_load_80 (100)  [1/1] 0.00ns
+.preheader7.preheader:18  %a_row_load_80 = load float* %a_row_load_44
+
+ST_38: tmp_46 (183)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:101  %tmp_46 = or i11 %tmp_1, 20
+
+ST_38: tmp_47 (184)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:102  %tmp_47 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_46)
+
+ST_38: a_0_addr_20 (185)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:103  %a_0_addr_20 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_47
+
+ST_38: a_0_load_19 (245)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:163  %a_0_load_19 = load float* %a_0_addr_19, align 4
+
+ST_38: a_0_load_20 (246)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:164  %a_0_load_20 = load float* %a_0_addr_20, align 4
+
+ST_38: a_row_load_18 (271)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:189  %a_row_load_18 = select i1 %tmp_5, float %a_0_load_18, float %a_row_load_80
+
+ST_38: StgValue_783 (303)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:221  store float %a_row_load_18, float* %a_row_load_44
+
+ST_38: tmp_12_5 (535)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:28  %tmp_12_5 = fadd float %tmp_12_4, %tmp_11_5
+
+ST_38: tmp_11_14 (574)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:67  %tmp_11_14 = fmul float %a_row_load_15, %b_copy_15_load
+
+ST_38: tmp_11_15 (578)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:71  %tmp_11_15 = fmul float %a_row_load_16, %b_copy_16_load
+
+ST_38: tmp_11_16 (582)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:75  %tmp_11_16 = fmul float %a_row_load_17, %b_copy_17_load
+
+ST_38: b_copy_18_load (585)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:78  %b_copy_18_load = load float* %b_copy_18_addr_1, align 4
+
+ST_38: tmp_11_17 (586)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:79  %tmp_11_17 = fmul float %a_row_load_18, %b_copy_18_load
+
+ST_38: b_copy_19_addr_1 (588)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:81  %b_copy_19_addr_1 = getelementptr [32 x float]* %b_copy_19, i64 0, i64 %tmp_7
+
+ST_38: b_copy_19_load (589)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:82  %b_copy_19_load = load float* %b_copy_19_addr_1, align 4
+
+
+ <State 39>: 8.49ns
+ST_39: a_row_load_81 (101)  [1/1] 0.00ns
+.preheader7.preheader:19  %a_row_load_81 = load float* %a_row_load_43
+
+ST_39: tmp_48 (186)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:104  %tmp_48 = or i11 %tmp_1, 21
+
+ST_39: tmp_49 (187)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:105  %tmp_49 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_48)
+
+ST_39: a_0_addr_21 (188)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:106  %a_0_addr_21 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_49
+
+ST_39: a_0_load_20 (246)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:164  %a_0_load_20 = load float* %a_0_addr_20, align 4
+
+ST_39: a_0_load_21 (247)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:165  %a_0_load_21 = load float* %a_0_addr_21, align 4
+
+ST_39: a_row_load_19 (270)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:188  %a_row_load_19 = select i1 %tmp_5, float %a_0_load_19, float %a_row_load_81
+
+ST_39: StgValue_799 (302)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:220  store float %a_row_load_19, float* %a_row_load_43
+
+ST_39: tmp_12_6 (539)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:32  %tmp_12_6 = fadd float %tmp_12_5, %tmp_11_6
+
+ST_39: tmp_11_15 (578)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:71  %tmp_11_15 = fmul float %a_row_load_16, %b_copy_16_load
+
+ST_39: tmp_11_16 (582)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:75  %tmp_11_16 = fmul float %a_row_load_17, %b_copy_17_load
+
+ST_39: tmp_11_17 (586)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:79  %tmp_11_17 = fmul float %a_row_load_18, %b_copy_18_load
+
+ST_39: b_copy_19_load (589)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:82  %b_copy_19_load = load float* %b_copy_19_addr_1, align 4
+
+ST_39: tmp_11_18 (590)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:83  %tmp_11_18 = fmul float %a_row_load_19, %b_copy_19_load
+
+ST_39: b_copy_20_addr_1 (592)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:85  %b_copy_20_addr_1 = getelementptr [32 x float]* %b_copy_20, i64 0, i64 %tmp_7
+
+ST_39: b_copy_20_load (593)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:86  %b_copy_20_load = load float* %b_copy_20_addr_1, align 4
+
+
+ <State 40>: 8.49ns
+ST_40: a_row_load_82 (102)  [1/1] 0.00ns
+.preheader7.preheader:20  %a_row_load_82 = load float* %a_row_load_42
+
+ST_40: tmp_50 (189)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:107  %tmp_50 = or i11 %tmp_1, 22
+
+ST_40: tmp_51 (190)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:108  %tmp_51 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_50)
+
+ST_40: a_0_addr_22 (191)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:109  %a_0_addr_22 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_51
+
+ST_40: newIndex1_mid2_v_v (219)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:137  %newIndex1_mid2_v_v = call i7 @_ssdm_op_BitConcatenate.i7.i1.i6(i1 true, i6 %i2_mid2_v)
+
+ST_40: newIndex1_mid2_v (220)  [11/11] 3.82ns  loc: matmul.cpp:20
+.preheader7.preheader:138  %newIndex1_mid2_v = urem i7 %newIndex1_mid2_v_v, 48
+
+ST_40: a_0_load_21 (247)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:165  %a_0_load_21 = load float* %a_0_addr_21, align 4
+
+ST_40: a_0_load_22 (248)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:166  %a_0_load_22 = load float* %a_0_addr_22, align 4
+
+ST_40: a_row_load_20 (269)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:187  %a_row_load_20 = select i1 %tmp_5, float %a_0_load_20, float %a_row_load_82
+
+ST_40: StgValue_817 (301)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:219  store float %a_row_load_20, float* %a_row_load_42
+
+ST_40: tmp_12_6 (539)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:32  %tmp_12_6 = fadd float %tmp_12_5, %tmp_11_6
+
+ST_40: tmp_11_16 (582)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:75  %tmp_11_16 = fmul float %a_row_load_17, %b_copy_17_load
+
+ST_40: tmp_11_17 (586)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:79  %tmp_11_17 = fmul float %a_row_load_18, %b_copy_18_load
+
+ST_40: tmp_11_18 (590)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:83  %tmp_11_18 = fmul float %a_row_load_19, %b_copy_19_load
+
+ST_40: b_copy_20_load (593)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:86  %b_copy_20_load = load float* %b_copy_20_addr_1, align 4
+
+ST_40: tmp_11_19 (594)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:87  %tmp_11_19 = fmul float %a_row_load_20, %b_copy_20_load
+
+ST_40: b_copy_21_addr_1 (596)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:89  %b_copy_21_addr_1 = getelementptr [32 x float]* %b_copy_21, i64 0, i64 %tmp_7
+
+ST_40: b_copy_21_load (597)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:90  %b_copy_21_load = load float* %b_copy_21_addr_1, align 4
+
+
+ <State 41>: 8.49ns
+ST_41: a_row_load_83 (103)  [1/1] 0.00ns
+.preheader7.preheader:21  %a_row_load_83 = load float* %a_row_load_41
+
+ST_41: tmp_52 (192)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:110  %tmp_52 = or i11 %tmp_1, 23
+
+ST_41: tmp_53 (193)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:111  %tmp_53 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_52)
+
+ST_41: a_0_addr_23 (194)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:112  %a_0_addr_23 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_53
+
+ST_41: newIndex1_mid2_v (220)  [10/11] 3.82ns  loc: matmul.cpp:20
+.preheader7.preheader:138  %newIndex1_mid2_v = urem i7 %newIndex1_mid2_v_v, 48
+
+ST_41: a_0_load_22 (248)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:166  %a_0_load_22 = load float* %a_0_addr_22, align 4
+
+ST_41: a_0_load_23 (249)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:167  %a_0_load_23 = load float* %a_0_addr_23, align 4
+
+ST_41: a_row_load_21 (268)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:186  %a_row_load_21 = select i1 %tmp_5, float %a_0_load_21, float %a_row_load_83
+
+ST_41: StgValue_834 (300)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:218  store float %a_row_load_21, float* %a_row_load_41
+
+ST_41: tmp_12_6 (539)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:32  %tmp_12_6 = fadd float %tmp_12_5, %tmp_11_6
+
+ST_41: tmp_11_17 (586)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:79  %tmp_11_17 = fmul float %a_row_load_18, %b_copy_18_load
+
+ST_41: tmp_11_18 (590)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:83  %tmp_11_18 = fmul float %a_row_load_19, %b_copy_19_load
+
+ST_41: tmp_11_19 (594)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:87  %tmp_11_19 = fmul float %a_row_load_20, %b_copy_20_load
+
+ST_41: b_copy_21_load (597)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:90  %b_copy_21_load = load float* %b_copy_21_addr_1, align 4
+
+ST_41: tmp_11_20 (598)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:91  %tmp_11_20 = fmul float %a_row_load_21, %b_copy_21_load
+
+ST_41: b_copy_22_addr_1 (600)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:93  %b_copy_22_addr_1 = getelementptr [32 x float]* %b_copy_22, i64 0, i64 %tmp_7
+
+ST_41: b_copy_22_load (601)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:94  %b_copy_22_load = load float* %b_copy_22_addr_1, align 4
+
+
+ <State 42>: 8.49ns
+ST_42: a_row_load_84 (104)  [1/1] 0.00ns
+.preheader7.preheader:22  %a_row_load_84 = load float* %a_row_load_40
+
+ST_42: tmp_54 (195)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:113  %tmp_54 = or i11 %tmp_1, 24
+
+ST_42: tmp_55 (196)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:114  %tmp_55 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_54)
+
+ST_42: a_0_addr_24 (197)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:115  %a_0_addr_24 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_55
+
+ST_42: newIndex1_mid2_v (220)  [9/11] 3.82ns  loc: matmul.cpp:20
+.preheader7.preheader:138  %newIndex1_mid2_v = urem i7 %newIndex1_mid2_v_v, 48
+
+ST_42: a_0_load_23 (249)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:167  %a_0_load_23 = load float* %a_0_addr_23, align 4
+
+ST_42: a_0_load_24 (250)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:168  %a_0_load_24 = load float* %a_0_addr_24, align 4
+
+ST_42: a_row_load_22 (267)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:185  %a_row_load_22 = select i1 %tmp_5, float %a_0_load_22, float %a_row_load_84
+
+ST_42: StgValue_851 (299)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:217  store float %a_row_load_22, float* %a_row_load_40
+
+ST_42: tmp_12_6 (539)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:32  %tmp_12_6 = fadd float %tmp_12_5, %tmp_11_6
+
+ST_42: tmp_11_18 (590)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:83  %tmp_11_18 = fmul float %a_row_load_19, %b_copy_19_load
+
+ST_42: tmp_11_19 (594)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:87  %tmp_11_19 = fmul float %a_row_load_20, %b_copy_20_load
+
+ST_42: tmp_11_20 (598)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:91  %tmp_11_20 = fmul float %a_row_load_21, %b_copy_21_load
+
+ST_42: b_copy_22_load (601)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:94  %b_copy_22_load = load float* %b_copy_22_addr_1, align 4
+
+ST_42: tmp_11_21 (602)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:95  %tmp_11_21 = fmul float %a_row_load_22, %b_copy_22_load
+
+ST_42: b_copy_23_addr_1 (604)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:97  %b_copy_23_addr_1 = getelementptr [32 x float]* %b_copy_23, i64 0, i64 %tmp_7
+
+ST_42: b_copy_23_load (605)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:98  %b_copy_23_load = load float* %b_copy_23_addr_1, align 4
+
+
+ <State 43>: 8.49ns
+ST_43: a_row_load_85 (105)  [1/1] 0.00ns
+.preheader7.preheader:23  %a_row_load_85 = load float* %a_row_load_39
+
+ST_43: tmp_56 (198)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:116  %tmp_56 = or i11 %tmp_1, 25
+
+ST_43: tmp_57 (199)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:117  %tmp_57 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_56)
+
+ST_43: a_0_addr_25 (200)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:118  %a_0_addr_25 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_57
+
+ST_43: newIndex1_mid2_v (220)  [8/11] 3.82ns  loc: matmul.cpp:20
+.preheader7.preheader:138  %newIndex1_mid2_v = urem i7 %newIndex1_mid2_v_v, 48
+
+ST_43: a_0_load_24 (250)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:168  %a_0_load_24 = load float* %a_0_addr_24, align 4
+
+ST_43: a_0_load_25 (251)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:169  %a_0_load_25 = load float* %a_0_addr_25, align 4
+
+ST_43: a_row_load_23 (266)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:184  %a_row_load_23 = select i1 %tmp_5, float %a_0_load_23, float %a_row_load_85
+
+ST_43: StgValue_868 (298)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:216  store float %a_row_load_23, float* %a_row_load_39
+
+ST_43: tmp_12_6 (539)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:32  %tmp_12_6 = fadd float %tmp_12_5, %tmp_11_6
+
+ST_43: tmp_11_19 (594)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:87  %tmp_11_19 = fmul float %a_row_load_20, %b_copy_20_load
+
+ST_43: tmp_11_20 (598)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:91  %tmp_11_20 = fmul float %a_row_load_21, %b_copy_21_load
+
+ST_43: tmp_11_21 (602)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:95  %tmp_11_21 = fmul float %a_row_load_22, %b_copy_22_load
+
+ST_43: b_copy_23_load (605)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:98  %b_copy_23_load = load float* %b_copy_23_addr_1, align 4
+
+ST_43: tmp_11_22 (606)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:99  %tmp_11_22 = fmul float %a_row_load_23, %b_copy_23_load
+
+ST_43: b_copy_24_addr_1 (608)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:101  %b_copy_24_addr_1 = getelementptr [32 x float]* %b_copy_24, i64 0, i64 %tmp_7
+
+ST_43: b_copy_24_load (609)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:102  %b_copy_24_load = load float* %b_copy_24_addr_1, align 4
+
+
+ <State 44>: 8.49ns
+ST_44: a_row_load_86 (106)  [1/1] 0.00ns
+.preheader7.preheader:24  %a_row_load_86 = load float* %a_row_load_38
+
+ST_44: tmp_58 (201)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:119  %tmp_58 = or i11 %tmp_1, 26
+
+ST_44: tmp_59 (202)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:120  %tmp_59 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_58)
+
+ST_44: a_0_addr_26 (203)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:121  %a_0_addr_26 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_59
+
+ST_44: newIndex1_mid2_v (220)  [7/11] 3.82ns  loc: matmul.cpp:20
+.preheader7.preheader:138  %newIndex1_mid2_v = urem i7 %newIndex1_mid2_v_v, 48
+
+ST_44: a_0_load_25 (251)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:169  %a_0_load_25 = load float* %a_0_addr_25, align 4
+
+ST_44: a_0_load_26 (252)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:170  %a_0_load_26 = load float* %a_0_addr_26, align 4
+
+ST_44: a_row_load_24 (265)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:183  %a_row_load_24 = select i1 %tmp_5, float %a_0_load_24, float %a_row_load_86
+
+ST_44: StgValue_885 (297)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:215  store float %a_row_load_24, float* %a_row_load_38
+
+ST_44: tmp_12_7 (543)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:36  %tmp_12_7 = fadd float %tmp_12_6, %tmp_11_7
+
+ST_44: tmp_11_20 (598)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:91  %tmp_11_20 = fmul float %a_row_load_21, %b_copy_21_load
+
+ST_44: tmp_11_21 (602)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:95  %tmp_11_21 = fmul float %a_row_load_22, %b_copy_22_load
+
+ST_44: tmp_11_22 (606)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:99  %tmp_11_22 = fmul float %a_row_load_23, %b_copy_23_load
+
+ST_44: b_copy_24_load (609)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:102  %b_copy_24_load = load float* %b_copy_24_addr_1, align 4
+
+ST_44: tmp_11_23 (610)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:103  %tmp_11_23 = fmul float %a_row_load_24, %b_copy_24_load
+
+ST_44: b_copy_25_addr_1 (612)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:105  %b_copy_25_addr_1 = getelementptr [32 x float]* %b_copy_25, i64 0, i64 %tmp_7
+
+ST_44: b_copy_25_load (613)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:106  %b_copy_25_load = load float* %b_copy_25_addr_1, align 4
+
+
+ <State 45>: 8.49ns
+ST_45: a_row_load_87 (107)  [1/1] 0.00ns
+.preheader7.preheader:25  %a_row_load_87 = load float* %a_row_load_37
+
+ST_45: tmp_60 (204)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:122  %tmp_60 = or i11 %tmp_1, 27
+
+ST_45: tmp_61 (205)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:123  %tmp_61 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_60)
+
+ST_45: a_0_addr_27 (206)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:124  %a_0_addr_27 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_61
+
+ST_45: newIndex1_mid2_v (220)  [6/11] 3.82ns  loc: matmul.cpp:20
+.preheader7.preheader:138  %newIndex1_mid2_v = urem i7 %newIndex1_mid2_v_v, 48
+
+ST_45: a_0_load_26 (252)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:170  %a_0_load_26 = load float* %a_0_addr_26, align 4
+
+ST_45: a_0_load_27 (253)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:171  %a_0_load_27 = load float* %a_0_addr_27, align 4
+
+ST_45: a_row_load_25 (264)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:182  %a_row_load_25 = select i1 %tmp_5, float %a_0_load_25, float %a_row_load_87
+
+ST_45: StgValue_902 (296)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:214  store float %a_row_load_25, float* %a_row_load_37
+
+ST_45: tmp_12_7 (543)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:36  %tmp_12_7 = fadd float %tmp_12_6, %tmp_11_7
+
+ST_45: tmp_11_21 (602)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:95  %tmp_11_21 = fmul float %a_row_load_22, %b_copy_22_load
+
+ST_45: tmp_11_22 (606)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:99  %tmp_11_22 = fmul float %a_row_load_23, %b_copy_23_load
+
+ST_45: tmp_11_23 (610)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:103  %tmp_11_23 = fmul float %a_row_load_24, %b_copy_24_load
+
+ST_45: b_copy_25_load (613)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:106  %b_copy_25_load = load float* %b_copy_25_addr_1, align 4
+
+ST_45: tmp_11_24 (614)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:107  %tmp_11_24 = fmul float %a_row_load_25, %b_copy_25_load
+
+ST_45: b_copy_26_addr_1 (616)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:109  %b_copy_26_addr_1 = getelementptr [32 x float]* %b_copy_26, i64 0, i64 %tmp_7
+
+ST_45: b_copy_26_load (617)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:110  %b_copy_26_load = load float* %b_copy_26_addr_1, align 4
+
+
+ <State 46>: 8.49ns
+ST_46: a_row_load_88 (108)  [1/1] 0.00ns
+.preheader7.preheader:26  %a_row_load_88 = load float* %a_row_load_36
+
+ST_46: tmp_62 (207)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:125  %tmp_62 = or i11 %tmp_1, 28
+
+ST_46: tmp_63 (208)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:126  %tmp_63 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_62)
+
+ST_46: a_0_addr_28 (209)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:127  %a_0_addr_28 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_63
+
+ST_46: newIndex1_mid2_v (220)  [5/11] 3.82ns  loc: matmul.cpp:20
+.preheader7.preheader:138  %newIndex1_mid2_v = urem i7 %newIndex1_mid2_v_v, 48
+
+ST_46: a_0_load_27 (253)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:171  %a_0_load_27 = load float* %a_0_addr_27, align 4
+
+ST_46: a_0_load_28 (254)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:172  %a_0_load_28 = load float* %a_0_addr_28, align 4
+
+ST_46: a_row_load_26 (263)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:181  %a_row_load_26 = select i1 %tmp_5, float %a_0_load_26, float %a_row_load_88
+
+ST_46: StgValue_919 (295)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:213  store float %a_row_load_26, float* %a_row_load_36
+
+ST_46: tmp_12_7 (543)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:36  %tmp_12_7 = fadd float %tmp_12_6, %tmp_11_7
+
+ST_46: tmp_11_22 (606)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:99  %tmp_11_22 = fmul float %a_row_load_23, %b_copy_23_load
+
+ST_46: tmp_11_23 (610)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:103  %tmp_11_23 = fmul float %a_row_load_24, %b_copy_24_load
+
+ST_46: tmp_11_24 (614)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:107  %tmp_11_24 = fmul float %a_row_load_25, %b_copy_25_load
+
+ST_46: b_copy_26_load (617)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:110  %b_copy_26_load = load float* %b_copy_26_addr_1, align 4
+
+ST_46: tmp_11_25 (618)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:111  %tmp_11_25 = fmul float %a_row_load_26, %b_copy_26_load
+
+ST_46: b_copy_27_addr_1 (620)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:113  %b_copy_27_addr_1 = getelementptr [32 x float]* %b_copy_27, i64 0, i64 %tmp_7
+
+ST_46: b_copy_27_load (621)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:114  %b_copy_27_load = load float* %b_copy_27_addr_1, align 4
+
+
+ <State 47>: 8.49ns
+ST_47: a_row_load_89 (109)  [1/1] 0.00ns
+.preheader7.preheader:27  %a_row_load_89 = load float* %a_row_load_35
+
+ST_47: tmp_64 (210)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:128  %tmp_64 = or i11 %tmp_1, 29
+
+ST_47: tmp_65 (211)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:129  %tmp_65 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_64)
+
+ST_47: a_0_addr_29 (212)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:130  %a_0_addr_29 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_65
+
+ST_47: newIndex1_mid2_v (220)  [4/11] 3.82ns  loc: matmul.cpp:20
+.preheader7.preheader:138  %newIndex1_mid2_v = urem i7 %newIndex1_mid2_v_v, 48
+
+ST_47: a_0_load_28 (254)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:172  %a_0_load_28 = load float* %a_0_addr_28, align 4
+
+ST_47: a_0_load_29 (255)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:173  %a_0_load_29 = load float* %a_0_addr_29, align 4
+
+ST_47: a_row_load_27 (262)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:180  %a_row_load_27 = select i1 %tmp_5, float %a_0_load_27, float %a_row_load_89
+
+ST_47: StgValue_936 (294)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:212  store float %a_row_load_27, float* %a_row_load_35
+
+ST_47: tmp_12_7 (543)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:36  %tmp_12_7 = fadd float %tmp_12_6, %tmp_11_7
+
+ST_47: tmp_11_23 (610)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:103  %tmp_11_23 = fmul float %a_row_load_24, %b_copy_24_load
+
+ST_47: tmp_11_24 (614)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:107  %tmp_11_24 = fmul float %a_row_load_25, %b_copy_25_load
+
+ST_47: tmp_11_25 (618)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:111  %tmp_11_25 = fmul float %a_row_load_26, %b_copy_26_load
+
+ST_47: b_copy_27_load (621)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:114  %b_copy_27_load = load float* %b_copy_27_addr_1, align 4
+
+ST_47: tmp_11_26 (622)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:115  %tmp_11_26 = fmul float %a_row_load_27, %b_copy_27_load
+
+ST_47: b_copy_28_addr_1 (624)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:117  %b_copy_28_addr_1 = getelementptr [32 x float]* %b_copy_28, i64 0, i64 %tmp_7
+
+ST_47: b_copy_28_load (625)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:118  %b_copy_28_load = load float* %b_copy_28_addr_1, align 4
+
+
+ <State 48>: 8.49ns
+ST_48: a_row_load_90 (110)  [1/1] 0.00ns
+.preheader7.preheader:28  %a_row_load_90 = load float* %a_row_load_34
+
+ST_48: tmp_66 (213)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:131  %tmp_66 = or i11 %tmp_1, 30
+
+ST_48: tmp_67 (214)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:132  %tmp_67 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_66)
+
+ST_48: a_0_addr_30 (215)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:133  %a_0_addr_30 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_67
+
+ST_48: newIndex1_mid2_v (220)  [3/11] 3.82ns  loc: matmul.cpp:20
+.preheader7.preheader:138  %newIndex1_mid2_v = urem i7 %newIndex1_mid2_v_v, 48
+
+ST_48: a_0_load_29 (255)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:173  %a_0_load_29 = load float* %a_0_addr_29, align 4
+
+ST_48: a_0_load_30 (256)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:174  %a_0_load_30 = load float* %a_0_addr_30, align 4
+
+ST_48: a_row_load_28 (261)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:179  %a_row_load_28 = select i1 %tmp_5, float %a_0_load_28, float %a_row_load_90
+
+ST_48: StgValue_953 (293)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:211  store float %a_row_load_28, float* %a_row_load_34
+
+ST_48: tmp_12_7 (543)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:36  %tmp_12_7 = fadd float %tmp_12_6, %tmp_11_7
+
+ST_48: tmp_11_24 (614)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:107  %tmp_11_24 = fmul float %a_row_load_25, %b_copy_25_load
+
+ST_48: tmp_11_25 (618)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:111  %tmp_11_25 = fmul float %a_row_load_26, %b_copy_26_load
+
+ST_48: tmp_11_26 (622)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:115  %tmp_11_26 = fmul float %a_row_load_27, %b_copy_27_load
+
+ST_48: b_copy_28_load (625)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:118  %b_copy_28_load = load float* %b_copy_28_addr_1, align 4
+
+ST_48: tmp_11_27 (626)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:119  %tmp_11_27 = fmul float %a_row_load_28, %b_copy_28_load
+
+ST_48: b_copy_29_addr_1 (628)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:121  %b_copy_29_addr_1 = getelementptr [32 x float]* %b_copy_29, i64 0, i64 %tmp_7
+
+ST_48: b_copy_29_load (629)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:122  %b_copy_29_load = load float* %b_copy_29_addr_1, align 4
+
+
+ <State 49>: 8.49ns
+ST_49: a_row_load_91 (111)  [1/1] 0.00ns
+.preheader7.preheader:29  %a_row_load_91 = load float* %a_row_load_33
+
+ST_49: tmp_68 (216)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:134  %tmp_68 = or i11 %tmp_1, 31
+
+ST_49: tmp_69 (217)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:135  %tmp_69 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_68)
+
+ST_49: a_0_addr_31 (218)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:136  %a_0_addr_31 = getelementptr [1536 x float]* %a_0, i64 0, i64 %tmp_69
+
+ST_49: newIndex1_mid2_v (220)  [2/11] 3.82ns  loc: matmul.cpp:20
+.preheader7.preheader:138  %newIndex1_mid2_v = urem i7 %newIndex1_mid2_v_v, 48
+
+ST_49: a_0_load_30 (256)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:174  %a_0_load_30 = load float* %a_0_addr_30, align 4
+
+ST_49: a_0_load_31 (257)  [2/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:175  %a_0_load_31 = load float* %a_0_addr_31, align 4
+
+ST_49: a_row_load_29 (260)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:178  %a_row_load_29 = select i1 %tmp_5, float %a_0_load_29, float %a_row_load_91
+
+ST_49: StgValue_970 (292)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:210  store float %a_row_load_29, float* %a_row_load_33
+
+ST_49: tmp_12_8 (547)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:40  %tmp_12_8 = fadd float %tmp_12_7, %tmp_11_8
+
+ST_49: tmp_11_25 (618)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:111  %tmp_11_25 = fmul float %a_row_load_26, %b_copy_26_load
+
+ST_49: tmp_11_26 (622)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:115  %tmp_11_26 = fmul float %a_row_load_27, %b_copy_27_load
+
+ST_49: tmp_11_27 (626)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:119  %tmp_11_27 = fmul float %a_row_load_28, %b_copy_28_load
+
+ST_49: b_copy_29_load (629)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:122  %b_copy_29_load = load float* %b_copy_29_addr_1, align 4
+
+ST_49: tmp_11_28 (630)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:123  %tmp_11_28 = fmul float %a_row_load_29, %b_copy_29_load
+
+ST_49: b_copy_30_addr_1 (632)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:125  %b_copy_30_addr_1 = getelementptr [32 x float]* %b_copy_30, i64 0, i64 %tmp_7
+
+ST_49: b_copy_30_load (633)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:126  %b_copy_30_load = load float* %b_copy_30_addr_1, align 4
+
+ST_49: b_copy_31_addr_1 (636)  [1/1] 0.00ns  loc: matmul.cpp:38
+.loopexit:129  %b_copy_31_addr_1 = getelementptr [32 x float]* %b_copy_31, i64 0, i64 %tmp_7
+
+ST_49: b_copy_31_load (637)  [2/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:130  %b_copy_31_load = load float* %b_copy_31_addr_1, align 4
+
+ST_49: j_1 (642)  [1/1] 1.67ns  loc: matmul.cpp:20
+.loopexit:135  %j_1 = add i6 %j_mid2, 1
+
+
+ <State 50>: 8.49ns
+ST_50: a_row_load_92 (112)  [1/1] 0.00ns
+.preheader7.preheader:30  %a_row_load_92 = load float* %a_row_load_32
+
+ST_50: a_row_load_93 (113)  [1/1] 0.00ns
+.preheader7.preheader:31  %a_row_load_93 = load float* %a_row_load_s
+
+ST_50: StgValue_984 (115)  [1/1] 0.00ns
+.preheader7.preheader:33  call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @L_col_str)
+
+ST_50: empty_3 (116)  [1/1] 0.00ns
+.preheader7.preheader:34  %empty_3 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1024, i64 1024, i64 1024)
+
+ST_50: newIndex1_mid2_v (220)  [1/11] 3.82ns  loc: matmul.cpp:20
+.preheader7.preheader:138  %newIndex1_mid2_v = urem i7 %newIndex1_mid2_v_v, 48
+
+ST_50: tmp_70 (221)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:139  %tmp_70 = call i12 @_ssdm_op_BitConcatenate.i12.i7.i5(i7 %newIndex1_mid2_v, i5 0)
+
+ST_50: StgValue_988 (222)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:140  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str5) nounwind
+
+ST_50: tmp_2 (223)  [1/1] 0.00ns  loc: matmul.cpp:20
+.preheader7.preheader:141  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str5) nounwind
+
+ST_50: StgValue_990 (224)  [1/1] 0.00ns  loc: matmul.cpp:21
+.preheader7.preheader:142  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_50: a_0_load_31 (257)  [1/2] 2.71ns  loc: matmul.cpp:27
+.preheader7.preheader:175  %a_0_load_31 = load float* %a_0_addr_31, align 4
+
+ST_50: a_row_load_31 (258)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:176  %a_row_load_31 = select i1 %tmp_5, float %a_0_load_31, float %a_row_load_93
+
+ST_50: a_row_load_30 (259)  [1/1] 1.37ns  loc: matmul.cpp:25
+.preheader7.preheader:177  %a_row_load_30 = select i1 %tmp_5, float %a_0_load_30, float %a_row_load_92
+
+ST_50: StgValue_994 (290)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:208  store float %a_row_load_31, float* %a_row_load_s
+
+ST_50: StgValue_995 (291)  [1/1] 0.00ns  loc: matmul.cpp:25
+.preheader7.preheader:209  store float %a_row_load_30, float* %a_row_load_32
+
+ST_50: tmp_7_cast (508)  [1/1] 0.00ns  loc: matmul.cpp:41
+.loopexit:1  %tmp_7_cast = zext i6 %j_mid2 to i12
+
+ST_50: tmp_101 (509)  [1/1] 1.79ns  loc: matmul.cpp:41
+.loopexit:2  %tmp_101 = add i12 %tmp_70, %tmp_7_cast
+
+ST_50: tmp_12_8 (547)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:40  %tmp_12_8 = fadd float %tmp_12_7, %tmp_11_8
+
+ST_50: tmp_11_26 (622)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:115  %tmp_11_26 = fmul float %a_row_load_27, %b_copy_27_load
+
+ST_50: tmp_11_27 (626)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:119  %tmp_11_27 = fmul float %a_row_load_28, %b_copy_28_load
+
+ST_50: tmp_11_28 (630)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:123  %tmp_11_28 = fmul float %a_row_load_29, %b_copy_29_load
+
+ST_50: b_copy_30_load (633)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:126  %b_copy_30_load = load float* %b_copy_30_addr_1, align 4
+
+ST_50: tmp_11_29 (634)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:127  %tmp_11_29 = fmul float %a_row_load_30, %b_copy_30_load
+
+ST_50: b_copy_31_load (637)  [1/2] 2.71ns  loc: matmul.cpp:38
+.loopexit:130  %b_copy_31_load = load float* %b_copy_31_addr_1, align 4
+
+
+ <State 51>: 8.26ns
+ST_51: tmp_12_8 (547)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:40  %tmp_12_8 = fadd float %tmp_12_7, %tmp_11_8
+
+ST_51: tmp_11_27 (626)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:119  %tmp_11_27 = fmul float %a_row_load_28, %b_copy_28_load
+
+ST_51: tmp_11_28 (630)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:123  %tmp_11_28 = fmul float %a_row_load_29, %b_copy_29_load
+
+ST_51: tmp_11_29 (634)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:127  %tmp_11_29 = fmul float %a_row_load_30, %b_copy_30_load
+
+ST_51: tmp_11_30 (638)  [4/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:131  %tmp_11_30 = fmul float %a_row_load_31, %b_copy_31_load
+
+
+ <State 52>: 8.26ns
+ST_52: tmp_12_8 (547)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:40  %tmp_12_8 = fadd float %tmp_12_7, %tmp_11_8
+
+ST_52: tmp_11_28 (630)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:123  %tmp_11_28 = fmul float %a_row_load_29, %b_copy_29_load
+
+ST_52: tmp_11_29 (634)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:127  %tmp_11_29 = fmul float %a_row_load_30, %b_copy_30_load
+
+ST_52: tmp_11_30 (638)  [3/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:131  %tmp_11_30 = fmul float %a_row_load_31, %b_copy_31_load
+
+
+ <State 53>: 8.26ns
+ST_53: tmp_12_8 (547)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:40  %tmp_12_8 = fadd float %tmp_12_7, %tmp_11_8
+
+ST_53: tmp_11_29 (634)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:127  %tmp_11_29 = fmul float %a_row_load_30, %b_copy_30_load
+
+ST_53: tmp_11_30 (638)  [2/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:131  %tmp_11_30 = fmul float %a_row_load_31, %b_copy_31_load
+
+
+ <State 54>: 8.26ns
+ST_54: tmp_12_9 (551)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:44  %tmp_12_9 = fadd float %tmp_12_8, %tmp_11_9
+
+ST_54: tmp_11_30 (638)  [1/4] 5.78ns  loc: matmul.cpp:38
+.loopexit:131  %tmp_11_30 = fmul float %a_row_load_31, %b_copy_31_load
+
+
+ <State 55>: 8.26ns
+ST_55: tmp_12_9 (551)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:44  %tmp_12_9 = fadd float %tmp_12_8, %tmp_11_9
+
+
+ <State 56>: 8.26ns
+ST_56: tmp_12_9 (551)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:44  %tmp_12_9 = fadd float %tmp_12_8, %tmp_11_9
+
+
+ <State 57>: 8.26ns
+ST_57: tmp_12_9 (551)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:44  %tmp_12_9 = fadd float %tmp_12_8, %tmp_11_9
+
+
+ <State 58>: 8.26ns
+ST_58: tmp_12_9 (551)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:44  %tmp_12_9 = fadd float %tmp_12_8, %tmp_11_9
+
+
+ <State 59>: 8.26ns
+ST_59: tmp_12_s (555)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:48  %tmp_12_s = fadd float %tmp_12_9, %tmp_11_s
+
+
+ <State 60>: 8.26ns
+ST_60: tmp_12_s (555)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:48  %tmp_12_s = fadd float %tmp_12_9, %tmp_11_s
+
+
+ <State 61>: 8.26ns
+ST_61: tmp_12_s (555)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:48  %tmp_12_s = fadd float %tmp_12_9, %tmp_11_s
+
+
+ <State 62>: 8.26ns
+ST_62: tmp_12_s (555)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:48  %tmp_12_s = fadd float %tmp_12_9, %tmp_11_s
+
+
+ <State 63>: 8.26ns
+ST_63: tmp_12_s (555)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:48  %tmp_12_s = fadd float %tmp_12_9, %tmp_11_s
+
+
+ <State 64>: 8.26ns
+ST_64: tmp_12_10 (559)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:52  %tmp_12_10 = fadd float %tmp_12_s, %tmp_11_10
+
+
+ <State 65>: 8.26ns
+ST_65: tmp_12_10 (559)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:52  %tmp_12_10 = fadd float %tmp_12_s, %tmp_11_10
+
+
+ <State 66>: 8.26ns
+ST_66: tmp_12_10 (559)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:52  %tmp_12_10 = fadd float %tmp_12_s, %tmp_11_10
+
+
+ <State 67>: 8.26ns
+ST_67: tmp_12_10 (559)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:52  %tmp_12_10 = fadd float %tmp_12_s, %tmp_11_10
+
+
+ <State 68>: 8.26ns
+ST_68: tmp_12_10 (559)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:52  %tmp_12_10 = fadd float %tmp_12_s, %tmp_11_10
+
+
+ <State 69>: 8.26ns
+ST_69: tmp_12_11 (563)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:56  %tmp_12_11 = fadd float %tmp_12_10, %tmp_11_11
+
+
+ <State 70>: 8.26ns
+ST_70: tmp_12_11 (563)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:56  %tmp_12_11 = fadd float %tmp_12_10, %tmp_11_11
+
+
+ <State 71>: 8.26ns
+ST_71: tmp_12_11 (563)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:56  %tmp_12_11 = fadd float %tmp_12_10, %tmp_11_11
+
+
+ <State 72>: 8.26ns
+ST_72: tmp_12_11 (563)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:56  %tmp_12_11 = fadd float %tmp_12_10, %tmp_11_11
+
+
+ <State 73>: 8.26ns
+ST_73: tmp_12_11 (563)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:56  %tmp_12_11 = fadd float %tmp_12_10, %tmp_11_11
+
+
+ <State 74>: 8.26ns
+ST_74: tmp_12_12 (567)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:60  %tmp_12_12 = fadd float %tmp_12_11, %tmp_11_12
+
+
+ <State 75>: 8.26ns
+ST_75: tmp_12_12 (567)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:60  %tmp_12_12 = fadd float %tmp_12_11, %tmp_11_12
+
+
+ <State 76>: 8.26ns
+ST_76: tmp_12_12 (567)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:60  %tmp_12_12 = fadd float %tmp_12_11, %tmp_11_12
+
+
+ <State 77>: 8.26ns
+ST_77: tmp_12_12 (567)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:60  %tmp_12_12 = fadd float %tmp_12_11, %tmp_11_12
+
+
+ <State 78>: 8.26ns
+ST_78: tmp_12_12 (567)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:60  %tmp_12_12 = fadd float %tmp_12_11, %tmp_11_12
+
+
+ <State 79>: 8.26ns
+ST_79: tmp_12_13 (571)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:64  %tmp_12_13 = fadd float %tmp_12_12, %tmp_11_13
+
+
+ <State 80>: 8.26ns
+ST_80: tmp_12_13 (571)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:64  %tmp_12_13 = fadd float %tmp_12_12, %tmp_11_13
+
+
+ <State 81>: 8.26ns
+ST_81: tmp_12_13 (571)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:64  %tmp_12_13 = fadd float %tmp_12_12, %tmp_11_13
+
+
+ <State 82>: 8.26ns
+ST_82: tmp_12_13 (571)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:64  %tmp_12_13 = fadd float %tmp_12_12, %tmp_11_13
+
+
+ <State 83>: 8.26ns
+ST_83: tmp_12_13 (571)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:64  %tmp_12_13 = fadd float %tmp_12_12, %tmp_11_13
+
+
+ <State 84>: 8.26ns
+ST_84: tmp_12_14 (575)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:68  %tmp_12_14 = fadd float %tmp_12_13, %tmp_11_14
+
+
+ <State 85>: 8.26ns
+ST_85: tmp_12_14 (575)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:68  %tmp_12_14 = fadd float %tmp_12_13, %tmp_11_14
+
+
+ <State 86>: 8.26ns
+ST_86: tmp_12_14 (575)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:68  %tmp_12_14 = fadd float %tmp_12_13, %tmp_11_14
+
+
+ <State 87>: 8.26ns
+ST_87: tmp_12_14 (575)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:68  %tmp_12_14 = fadd float %tmp_12_13, %tmp_11_14
+
+
+ <State 88>: 8.26ns
+ST_88: tmp_12_14 (575)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:68  %tmp_12_14 = fadd float %tmp_12_13, %tmp_11_14
+
+
+ <State 89>: 8.26ns
+ST_89: tmp_12_15 (579)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:72  %tmp_12_15 = fadd float %tmp_12_14, %tmp_11_15
+
+
+ <State 90>: 8.26ns
+ST_90: tmp_12_15 (579)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:72  %tmp_12_15 = fadd float %tmp_12_14, %tmp_11_15
+
+
+ <State 91>: 8.26ns
+ST_91: tmp_12_15 (579)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:72  %tmp_12_15 = fadd float %tmp_12_14, %tmp_11_15
+
+
+ <State 92>: 8.26ns
+ST_92: tmp_12_15 (579)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:72  %tmp_12_15 = fadd float %tmp_12_14, %tmp_11_15
+
+
+ <State 93>: 8.26ns
+ST_93: tmp_12_15 (579)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:72  %tmp_12_15 = fadd float %tmp_12_14, %tmp_11_15
+
+
+ <State 94>: 8.26ns
+ST_94: tmp_12_16 (583)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:76  %tmp_12_16 = fadd float %tmp_12_15, %tmp_11_16
+
+
+ <State 95>: 8.26ns
+ST_95: tmp_12_16 (583)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:76  %tmp_12_16 = fadd float %tmp_12_15, %tmp_11_16
+
+
+ <State 96>: 8.26ns
+ST_96: tmp_12_16 (583)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:76  %tmp_12_16 = fadd float %tmp_12_15, %tmp_11_16
+
+
+ <State 97>: 8.26ns
+ST_97: tmp_12_16 (583)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:76  %tmp_12_16 = fadd float %tmp_12_15, %tmp_11_16
+
+
+ <State 98>: 8.26ns
+ST_98: tmp_12_16 (583)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:76  %tmp_12_16 = fadd float %tmp_12_15, %tmp_11_16
+
+
+ <State 99>: 8.26ns
+ST_99: tmp_12_17 (587)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:80  %tmp_12_17 = fadd float %tmp_12_16, %tmp_11_17
+
+
+ <State 100>: 8.26ns
+ST_100: tmp_12_17 (587)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:80  %tmp_12_17 = fadd float %tmp_12_16, %tmp_11_17
+
+
+ <State 101>: 8.26ns
+ST_101: tmp_12_17 (587)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:80  %tmp_12_17 = fadd float %tmp_12_16, %tmp_11_17
+
+
+ <State 102>: 8.26ns
+ST_102: tmp_12_17 (587)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:80  %tmp_12_17 = fadd float %tmp_12_16, %tmp_11_17
+
+
+ <State 103>: 8.26ns
+ST_103: tmp_12_17 (587)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:80  %tmp_12_17 = fadd float %tmp_12_16, %tmp_11_17
+
+
+ <State 104>: 8.26ns
+ST_104: tmp_12_18 (591)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:84  %tmp_12_18 = fadd float %tmp_12_17, %tmp_11_18
+
+
+ <State 105>: 8.26ns
+ST_105: tmp_12_18 (591)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:84  %tmp_12_18 = fadd float %tmp_12_17, %tmp_11_18
+
+
+ <State 106>: 8.26ns
+ST_106: tmp_12_18 (591)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:84  %tmp_12_18 = fadd float %tmp_12_17, %tmp_11_18
+
+
+ <State 107>: 8.26ns
+ST_107: tmp_12_18 (591)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:84  %tmp_12_18 = fadd float %tmp_12_17, %tmp_11_18
+
+
+ <State 108>: 8.26ns
+ST_108: tmp_12_18 (591)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:84  %tmp_12_18 = fadd float %tmp_12_17, %tmp_11_18
+
+
+ <State 109>: 8.26ns
+ST_109: tmp_12_19 (595)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:88  %tmp_12_19 = fadd float %tmp_12_18, %tmp_11_19
+
+
+ <State 110>: 8.26ns
+ST_110: tmp_12_19 (595)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:88  %tmp_12_19 = fadd float %tmp_12_18, %tmp_11_19
+
+
+ <State 111>: 8.26ns
+ST_111: tmp_12_19 (595)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:88  %tmp_12_19 = fadd float %tmp_12_18, %tmp_11_19
+
+
+ <State 112>: 8.26ns
+ST_112: tmp_12_19 (595)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:88  %tmp_12_19 = fadd float %tmp_12_18, %tmp_11_19
+
+
+ <State 113>: 8.26ns
+ST_113: tmp_12_19 (595)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:88  %tmp_12_19 = fadd float %tmp_12_18, %tmp_11_19
+
+
+ <State 114>: 8.26ns
+ST_114: tmp_12_20 (599)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:92  %tmp_12_20 = fadd float %tmp_12_19, %tmp_11_20
+
+
+ <State 115>: 8.26ns
+ST_115: tmp_12_20 (599)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:92  %tmp_12_20 = fadd float %tmp_12_19, %tmp_11_20
+
+
+ <State 116>: 8.26ns
+ST_116: tmp_12_20 (599)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:92  %tmp_12_20 = fadd float %tmp_12_19, %tmp_11_20
+
+
+ <State 117>: 8.26ns
+ST_117: tmp_12_20 (599)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:92  %tmp_12_20 = fadd float %tmp_12_19, %tmp_11_20
+
+
+ <State 118>: 8.26ns
+ST_118: tmp_12_20 (599)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:92  %tmp_12_20 = fadd float %tmp_12_19, %tmp_11_20
+
+
+ <State 119>: 8.26ns
+ST_119: tmp_12_21 (603)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:96  %tmp_12_21 = fadd float %tmp_12_20, %tmp_11_21
+
+
+ <State 120>: 8.26ns
+ST_120: tmp_12_21 (603)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:96  %tmp_12_21 = fadd float %tmp_12_20, %tmp_11_21
+
+
+ <State 121>: 8.26ns
+ST_121: tmp_12_21 (603)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:96  %tmp_12_21 = fadd float %tmp_12_20, %tmp_11_21
+
+
+ <State 122>: 8.26ns
+ST_122: tmp_12_21 (603)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:96  %tmp_12_21 = fadd float %tmp_12_20, %tmp_11_21
+
+
+ <State 123>: 8.26ns
+ST_123: tmp_12_21 (603)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:96  %tmp_12_21 = fadd float %tmp_12_20, %tmp_11_21
+
+
+ <State 124>: 8.26ns
+ST_124: tmp_12_22 (607)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:100  %tmp_12_22 = fadd float %tmp_12_21, %tmp_11_22
+
+
+ <State 125>: 8.26ns
+ST_125: tmp_12_22 (607)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:100  %tmp_12_22 = fadd float %tmp_12_21, %tmp_11_22
+
+
+ <State 126>: 8.26ns
+ST_126: tmp_12_22 (607)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:100  %tmp_12_22 = fadd float %tmp_12_21, %tmp_11_22
+
+
+ <State 127>: 8.26ns
+ST_127: tmp_12_22 (607)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:100  %tmp_12_22 = fadd float %tmp_12_21, %tmp_11_22
+
+
+ <State 128>: 8.26ns
+ST_128: tmp_12_22 (607)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:100  %tmp_12_22 = fadd float %tmp_12_21, %tmp_11_22
+
+
+ <State 129>: 8.26ns
+ST_129: tmp_12_23 (611)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:104  %tmp_12_23 = fadd float %tmp_12_22, %tmp_11_23
+
+
+ <State 130>: 8.26ns
+ST_130: tmp_12_23 (611)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:104  %tmp_12_23 = fadd float %tmp_12_22, %tmp_11_23
+
+
+ <State 131>: 8.26ns
+ST_131: tmp_12_23 (611)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:104  %tmp_12_23 = fadd float %tmp_12_22, %tmp_11_23
+
+
+ <State 132>: 8.26ns
+ST_132: tmp_12_23 (611)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:104  %tmp_12_23 = fadd float %tmp_12_22, %tmp_11_23
+
+
+ <State 133>: 8.26ns
+ST_133: tmp_12_23 (611)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:104  %tmp_12_23 = fadd float %tmp_12_22, %tmp_11_23
+
+
+ <State 134>: 8.26ns
+ST_134: tmp_12_24 (615)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:108  %tmp_12_24 = fadd float %tmp_12_23, %tmp_11_24
+
+
+ <State 135>: 8.26ns
+ST_135: tmp_12_24 (615)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:108  %tmp_12_24 = fadd float %tmp_12_23, %tmp_11_24
+
+
+ <State 136>: 8.26ns
+ST_136: tmp_12_24 (615)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:108  %tmp_12_24 = fadd float %tmp_12_23, %tmp_11_24
+
+
+ <State 137>: 8.26ns
+ST_137: tmp_12_24 (615)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:108  %tmp_12_24 = fadd float %tmp_12_23, %tmp_11_24
+
+
+ <State 138>: 8.26ns
+ST_138: tmp_12_24 (615)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:108  %tmp_12_24 = fadd float %tmp_12_23, %tmp_11_24
+
+
+ <State 139>: 8.26ns
+ST_139: tmp_12_25 (619)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:112  %tmp_12_25 = fadd float %tmp_12_24, %tmp_11_25
+
+
+ <State 140>: 8.26ns
+ST_140: tmp_12_25 (619)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:112  %tmp_12_25 = fadd float %tmp_12_24, %tmp_11_25
+
+
+ <State 141>: 8.26ns
+ST_141: tmp_12_25 (619)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:112  %tmp_12_25 = fadd float %tmp_12_24, %tmp_11_25
+
+
+ <State 142>: 8.26ns
+ST_142: tmp_12_25 (619)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:112  %tmp_12_25 = fadd float %tmp_12_24, %tmp_11_25
+
+
+ <State 143>: 8.26ns
+ST_143: tmp_12_25 (619)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:112  %tmp_12_25 = fadd float %tmp_12_24, %tmp_11_25
+
+
+ <State 144>: 8.26ns
+ST_144: tmp_12_26 (623)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:116  %tmp_12_26 = fadd float %tmp_12_25, %tmp_11_26
+
+
+ <State 145>: 8.26ns
+ST_145: tmp_12_26 (623)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:116  %tmp_12_26 = fadd float %tmp_12_25, %tmp_11_26
+
+
+ <State 146>: 8.26ns
+ST_146: tmp_12_26 (623)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:116  %tmp_12_26 = fadd float %tmp_12_25, %tmp_11_26
+
+
+ <State 147>: 8.26ns
+ST_147: tmp_12_26 (623)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:116  %tmp_12_26 = fadd float %tmp_12_25, %tmp_11_26
+
+
+ <State 148>: 8.26ns
+ST_148: tmp_12_26 (623)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:116  %tmp_12_26 = fadd float %tmp_12_25, %tmp_11_26
+
+
+ <State 149>: 8.26ns
+ST_149: tmp_12_27 (627)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:120  %tmp_12_27 = fadd float %tmp_12_26, %tmp_11_27
+
+
+ <State 150>: 8.26ns
+ST_150: tmp_12_27 (627)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:120  %tmp_12_27 = fadd float %tmp_12_26, %tmp_11_27
+
+
+ <State 151>: 8.26ns
+ST_151: tmp_12_27 (627)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:120  %tmp_12_27 = fadd float %tmp_12_26, %tmp_11_27
+
+
+ <State 152>: 8.26ns
+ST_152: tmp_12_27 (627)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:120  %tmp_12_27 = fadd float %tmp_12_26, %tmp_11_27
+
+
+ <State 153>: 8.26ns
+ST_153: tmp_12_27 (627)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:120  %tmp_12_27 = fadd float %tmp_12_26, %tmp_11_27
+
+
+ <State 154>: 8.26ns
+ST_154: tmp_12_28 (631)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:124  %tmp_12_28 = fadd float %tmp_12_27, %tmp_11_28
+
+
+ <State 155>: 8.26ns
+ST_155: tmp_12_28 (631)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:124  %tmp_12_28 = fadd float %tmp_12_27, %tmp_11_28
+
+
+ <State 156>: 8.26ns
+ST_156: tmp_12_28 (631)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:124  %tmp_12_28 = fadd float %tmp_12_27, %tmp_11_28
+
+
+ <State 157>: 8.26ns
+ST_157: tmp_12_28 (631)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:124  %tmp_12_28 = fadd float %tmp_12_27, %tmp_11_28
+
+
+ <State 158>: 8.26ns
+ST_158: tmp_12_28 (631)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:124  %tmp_12_28 = fadd float %tmp_12_27, %tmp_11_28
+
+
+ <State 159>: 8.26ns
+ST_159: tmp_12_29 (635)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:128  %tmp_12_29 = fadd float %tmp_12_28, %tmp_11_29
+
+
+ <State 160>: 8.26ns
+ST_160: tmp_12_29 (635)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:128  %tmp_12_29 = fadd float %tmp_12_28, %tmp_11_29
+
+
+ <State 161>: 8.26ns
+ST_161: tmp_12_29 (635)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:128  %tmp_12_29 = fadd float %tmp_12_28, %tmp_11_29
+
+
+ <State 162>: 8.26ns
+ST_162: tmp_12_29 (635)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:128  %tmp_12_29 = fadd float %tmp_12_28, %tmp_11_29
+
+
+ <State 163>: 8.26ns
+ST_163: tmp_12_29 (635)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:128  %tmp_12_29 = fadd float %tmp_12_28, %tmp_11_29
+
+
+ <State 164>: 8.26ns
+ST_164: tmp_12_30 (639)  [5/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:132  %tmp_12_30 = fadd float %tmp_12_29, %tmp_11_30
+
+
+ <State 165>: 8.26ns
+ST_165: tmp_12_30 (639)  [4/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:132  %tmp_12_30 = fadd float %tmp_12_29, %tmp_11_30
+
+
+ <State 166>: 8.26ns
+ST_166: tmp_12_30 (639)  [3/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:132  %tmp_12_30 = fadd float %tmp_12_29, %tmp_11_30
+
+
+ <State 167>: 8.26ns
+ST_167: tmp_12_30 (639)  [2/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:132  %tmp_12_30 = fadd float %tmp_12_29, %tmp_11_30
+
+
+ <State 168>: 8.26ns
+ST_168: tmp_12_30 (639)  [1/5] 8.26ns  loc: matmul.cpp:38
+.loopexit:132  %tmp_12_30 = fadd float %tmp_12_29, %tmp_11_30
+
+
+ <State 169>: 2.71ns
+ST_169: tmp_103_cast (510)  [1/1] 0.00ns  loc: matmul.cpp:41
+.loopexit:3  %tmp_103_cast = zext i12 %tmp_101 to i64
+
+ST_169: a_1_addr_16 (511)  [1/1] 0.00ns  loc: matmul.cpp:41
+.loopexit:4  %a_1_addr_16 = getelementptr [1536 x float]* %a_1, i64 0, i64 %tmp_103_cast
+
+ST_169: StgValue_1135 (640)  [1/1] 2.71ns  loc: matmul.cpp:41
+.loopexit:133  store float %tmp_12_30, float* %a_1_addr_16, align 4
+
+ST_169: empty (641)  [1/1] 0.00ns  loc: matmul.cpp:42
+.loopexit:134  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str5, i32 %tmp_2) nounwind
+
+ST_169: StgValue_1137 (643)  [1/1] 0.00ns  loc: matmul.cpp:20
+.loopexit:136  br label %.preheader7
+
+
+ <State 170>: 0.00ns
+ST_170: StgValue_1138 (645)  [1/1] 0.00ns  loc: matmul.cpp:44
+:0  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.57ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [75]  (1.57 ns)
+
+ <State 2>: 6.48ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', matmul.cpp:20) [77]  (0 ns)
+	'icmp' operation ('exitcond', matmul.cpp:20) [117]  (2.4 ns)
+	'select' operation ('j_mid2', matmul.cpp:20) [118]  (1.37 ns)
+	'getelementptr' operation ('a_0_addr_32', matmul.cpp:20) [331]  (0 ns)
+	'load' operation ('a_0_load_32', matmul.cpp:33) on array 'a_0' [409]  (2.71 ns)
+
+ <State 3>: 5.42ns
+The critical path consists of the following:
+	'load' operation ('a_0_load_32', matmul.cpp:33) on array 'a_0' [409]  (2.71 ns)
+	'store' operation (matmul.cpp:33) of variable 'a_0_load_32', matmul.cpp:33 on array 'b_copy[0]', matmul.cpp:14 [411]  (2.71 ns)
+
+ <State 4>: 5.42ns
+The critical path consists of the following:
+	'load' operation ('a_1_load_1', matmul.cpp:33) on array 'a_1' [460]  (2.71 ns)
+	'store' operation (matmul.cpp:33) of variable 'a_1_load_1', matmul.cpp:33 on array 'b_copy[17]', matmul.cpp:14 [462]  (2.71 ns)
+
+ <State 5>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_0_load', matmul.cpp:38) on array 'b_copy[0]', matmul.cpp:14 [513]  (2.71 ns)
+	'fmul' operation ('tmp_s', matmul.cpp:38) [514]  (5.78 ns)
+
+ <State 6>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', matmul.cpp:38) [514]  (5.78 ns)
+
+ <State 7>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_1_load', matmul.cpp:38) on array 'b_copy[1]', matmul.cpp:14 [517]  (2.71 ns)
+	'fmul' operation ('tmp_11_1', matmul.cpp:38) [518]  (5.78 ns)
+
+ <State 8>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', matmul.cpp:38) [514]  (5.78 ns)
+
+ <State 9>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_2_load', matmul.cpp:38) on array 'b_copy[2]', matmul.cpp:14 [521]  (2.71 ns)
+	'fmul' operation ('tmp_11_2', matmul.cpp:38) [522]  (5.78 ns)
+
+ <State 10>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_3', matmul.cpp:38) [515]  (8.26 ns)
+
+ <State 11>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_3_load', matmul.cpp:38) on array 'b_copy[3]', matmul.cpp:14 [525]  (2.71 ns)
+	'fmul' operation ('tmp_11_3', matmul.cpp:38) [526]  (5.78 ns)
+
+ <State 12>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_3', matmul.cpp:38) [515]  (8.26 ns)
+
+ <State 13>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_4_load', matmul.cpp:38) on array 'b_copy[4]', matmul.cpp:14 [529]  (2.71 ns)
+	'fmul' operation ('tmp_11_4', matmul.cpp:38) [530]  (5.78 ns)
+
+ <State 14>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_1', matmul.cpp:38) [519]  (8.26 ns)
+
+ <State 15>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_5_load', matmul.cpp:38) on array 'b_copy[5]', matmul.cpp:14 [533]  (2.71 ns)
+	'fmul' operation ('tmp_11_5', matmul.cpp:38) [534]  (5.78 ns)
+
+ <State 16>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_1', matmul.cpp:38) [519]  (8.26 ns)
+
+ <State 17>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_6_load', matmul.cpp:38) on array 'b_copy[6]', matmul.cpp:14 [537]  (2.71 ns)
+	'fmul' operation ('tmp_11_6', matmul.cpp:38) [538]  (5.78 ns)
+
+ <State 18>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_1', matmul.cpp:38) [519]  (8.26 ns)
+
+ <State 19>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_7_load', matmul.cpp:38) on array 'b_copy[7]', matmul.cpp:14 [541]  (2.71 ns)
+	'fmul' operation ('tmp_11_7', matmul.cpp:38) [542]  (5.78 ns)
+
+ <State 20>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_2', matmul.cpp:38) [523]  (8.26 ns)
+
+ <State 21>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_8_load', matmul.cpp:38) on array 'b_copy[8]', matmul.cpp:14 [545]  (2.71 ns)
+	'fmul' operation ('tmp_11_8', matmul.cpp:38) [546]  (5.78 ns)
+
+ <State 22>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_2', matmul.cpp:38) [523]  (8.26 ns)
+
+ <State 23>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_9_load', matmul.cpp:38) on array 'b_copy[9]', matmul.cpp:14 [549]  (2.71 ns)
+	'fmul' operation ('tmp_11_9', matmul.cpp:38) [550]  (5.78 ns)
+
+ <State 24>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_3', matmul.cpp:38) [527]  (8.26 ns)
+
+ <State 25>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_10_load', matmul.cpp:38) on array 'b_copy[10]', matmul.cpp:14 [553]  (2.71 ns)
+	'fmul' operation ('tmp_11_s', matmul.cpp:38) [554]  (5.78 ns)
+
+ <State 26>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_3', matmul.cpp:38) [527]  (8.26 ns)
+
+ <State 27>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_11_load', matmul.cpp:38) on array 'b_copy[11]', matmul.cpp:14 [557]  (2.71 ns)
+	'fmul' operation ('tmp_11_10', matmul.cpp:38) [558]  (5.78 ns)
+
+ <State 28>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_3', matmul.cpp:38) [527]  (8.26 ns)
+
+ <State 29>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_12_load', matmul.cpp:38) on array 'b_copy[12]', matmul.cpp:14 [561]  (2.71 ns)
+	'fmul' operation ('tmp_11_11', matmul.cpp:38) [562]  (5.78 ns)
+
+ <State 30>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_4', matmul.cpp:38) [531]  (8.26 ns)
+
+ <State 31>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_13_load', matmul.cpp:38) on array 'b_copy[13]', matmul.cpp:14 [565]  (2.71 ns)
+	'fmul' operation ('tmp_11_12', matmul.cpp:38) [566]  (5.78 ns)
+
+ <State 32>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_4', matmul.cpp:38) [531]  (8.26 ns)
+
+ <State 33>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_14_load', matmul.cpp:38) on array 'b_copy[14]', matmul.cpp:14 [569]  (2.71 ns)
+	'fmul' operation ('tmp_11_13', matmul.cpp:38) [570]  (5.78 ns)
+
+ <State 34>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_5', matmul.cpp:38) [535]  (8.26 ns)
+
+ <State 35>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_15_load', matmul.cpp:38) on array 'b_copy[15]', matmul.cpp:14 [573]  (2.71 ns)
+	'fmul' operation ('tmp_11_14', matmul.cpp:38) [574]  (5.78 ns)
+
+ <State 36>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_16_load', matmul.cpp:38) on array 'b_copy[16]', matmul.cpp:14 [577]  (2.71 ns)
+	'fmul' operation ('tmp_11_15', matmul.cpp:38) [578]  (5.78 ns)
+
+ <State 37>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_17_load', matmul.cpp:38) on array 'b_copy[17]', matmul.cpp:14 [581]  (2.71 ns)
+	'fmul' operation ('tmp_11_16', matmul.cpp:38) [582]  (5.78 ns)
+
+ <State 38>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_18_load', matmul.cpp:38) on array 'b_copy[18]', matmul.cpp:14 [585]  (2.71 ns)
+	'fmul' operation ('tmp_11_17', matmul.cpp:38) [586]  (5.78 ns)
+
+ <State 39>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_19_load', matmul.cpp:38) on array 'b_copy[19]', matmul.cpp:14 [589]  (2.71 ns)
+	'fmul' operation ('tmp_11_18', matmul.cpp:38) [590]  (5.78 ns)
+
+ <State 40>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_20_load', matmul.cpp:38) on array 'b_copy[20]', matmul.cpp:14 [593]  (2.71 ns)
+	'fmul' operation ('tmp_11_19', matmul.cpp:38) [594]  (5.78 ns)
+
+ <State 41>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_21_load', matmul.cpp:38) on array 'b_copy[21]', matmul.cpp:14 [597]  (2.71 ns)
+	'fmul' operation ('tmp_11_20', matmul.cpp:38) [598]  (5.78 ns)
+
+ <State 42>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_22_load', matmul.cpp:38) on array 'b_copy[22]', matmul.cpp:14 [601]  (2.71 ns)
+	'fmul' operation ('tmp_11_21', matmul.cpp:38) [602]  (5.78 ns)
+
+ <State 43>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_23_load', matmul.cpp:38) on array 'b_copy[23]', matmul.cpp:14 [605]  (2.71 ns)
+	'fmul' operation ('tmp_11_22', matmul.cpp:38) [606]  (5.78 ns)
+
+ <State 44>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_24_load', matmul.cpp:38) on array 'b_copy[24]', matmul.cpp:14 [609]  (2.71 ns)
+	'fmul' operation ('tmp_11_23', matmul.cpp:38) [610]  (5.78 ns)
+
+ <State 45>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_25_load', matmul.cpp:38) on array 'b_copy[25]', matmul.cpp:14 [613]  (2.71 ns)
+	'fmul' operation ('tmp_11_24', matmul.cpp:38) [614]  (5.78 ns)
+
+ <State 46>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_26_load', matmul.cpp:38) on array 'b_copy[26]', matmul.cpp:14 [617]  (2.71 ns)
+	'fmul' operation ('tmp_11_25', matmul.cpp:38) [618]  (5.78 ns)
+
+ <State 47>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_27_load', matmul.cpp:38) on array 'b_copy[27]', matmul.cpp:14 [621]  (2.71 ns)
+	'fmul' operation ('tmp_11_26', matmul.cpp:38) [622]  (5.78 ns)
+
+ <State 48>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_28_load', matmul.cpp:38) on array 'b_copy[28]', matmul.cpp:14 [625]  (2.71 ns)
+	'fmul' operation ('tmp_11_27', matmul.cpp:38) [626]  (5.78 ns)
+
+ <State 49>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_29_load', matmul.cpp:38) on array 'b_copy[29]', matmul.cpp:14 [629]  (2.71 ns)
+	'fmul' operation ('tmp_11_28', matmul.cpp:38) [630]  (5.78 ns)
+
+ <State 50>: 8.49ns
+The critical path consists of the following:
+	'load' operation ('b_copy_30_load', matmul.cpp:38) on array 'b_copy[30]', matmul.cpp:14 [633]  (2.71 ns)
+	'fmul' operation ('tmp_11_29', matmul.cpp:38) [634]  (5.78 ns)
+
+ <State 51>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_8', matmul.cpp:38) [547]  (8.26 ns)
+
+ <State 52>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_8', matmul.cpp:38) [547]  (8.26 ns)
+
+ <State 53>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_8', matmul.cpp:38) [547]  (8.26 ns)
+
+ <State 54>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_9', matmul.cpp:38) [551]  (8.26 ns)
+
+ <State 55>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_9', matmul.cpp:38) [551]  (8.26 ns)
+
+ <State 56>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_9', matmul.cpp:38) [551]  (8.26 ns)
+
+ <State 57>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_9', matmul.cpp:38) [551]  (8.26 ns)
+
+ <State 58>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_9', matmul.cpp:38) [551]  (8.26 ns)
+
+ <State 59>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_s', matmul.cpp:38) [555]  (8.26 ns)
+
+ <State 60>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_s', matmul.cpp:38) [555]  (8.26 ns)
+
+ <State 61>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_s', matmul.cpp:38) [555]  (8.26 ns)
+
+ <State 62>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_s', matmul.cpp:38) [555]  (8.26 ns)
+
+ <State 63>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_s', matmul.cpp:38) [555]  (8.26 ns)
+
+ <State 64>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_10', matmul.cpp:38) [559]  (8.26 ns)
+
+ <State 65>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_10', matmul.cpp:38) [559]  (8.26 ns)
+
+ <State 66>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_10', matmul.cpp:38) [559]  (8.26 ns)
+
+ <State 67>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_10', matmul.cpp:38) [559]  (8.26 ns)
+
+ <State 68>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_10', matmul.cpp:38) [559]  (8.26 ns)
+
+ <State 69>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_11', matmul.cpp:38) [563]  (8.26 ns)
+
+ <State 70>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_11', matmul.cpp:38) [563]  (8.26 ns)
+
+ <State 71>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_11', matmul.cpp:38) [563]  (8.26 ns)
+
+ <State 72>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_11', matmul.cpp:38) [563]  (8.26 ns)
+
+ <State 73>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_11', matmul.cpp:38) [563]  (8.26 ns)
+
+ <State 74>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_12', matmul.cpp:38) [567]  (8.26 ns)
+
+ <State 75>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_12', matmul.cpp:38) [567]  (8.26 ns)
+
+ <State 76>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_12', matmul.cpp:38) [567]  (8.26 ns)
+
+ <State 77>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_12', matmul.cpp:38) [567]  (8.26 ns)
+
+ <State 78>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_12', matmul.cpp:38) [567]  (8.26 ns)
+
+ <State 79>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_13', matmul.cpp:38) [571]  (8.26 ns)
+
+ <State 80>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_13', matmul.cpp:38) [571]  (8.26 ns)
+
+ <State 81>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_13', matmul.cpp:38) [571]  (8.26 ns)
+
+ <State 82>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_13', matmul.cpp:38) [571]  (8.26 ns)
+
+ <State 83>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_13', matmul.cpp:38) [571]  (8.26 ns)
+
+ <State 84>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_14', matmul.cpp:38) [575]  (8.26 ns)
+
+ <State 85>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_14', matmul.cpp:38) [575]  (8.26 ns)
+
+ <State 86>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_14', matmul.cpp:38) [575]  (8.26 ns)
+
+ <State 87>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_14', matmul.cpp:38) [575]  (8.26 ns)
+
+ <State 88>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_14', matmul.cpp:38) [575]  (8.26 ns)
+
+ <State 89>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_15', matmul.cpp:38) [579]  (8.26 ns)
+
+ <State 90>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_15', matmul.cpp:38) [579]  (8.26 ns)
+
+ <State 91>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_15', matmul.cpp:38) [579]  (8.26 ns)
+
+ <State 92>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_15', matmul.cpp:38) [579]  (8.26 ns)
+
+ <State 93>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_15', matmul.cpp:38) [579]  (8.26 ns)
+
+ <State 94>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_16', matmul.cpp:38) [583]  (8.26 ns)
+
+ <State 95>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_16', matmul.cpp:38) [583]  (8.26 ns)
+
+ <State 96>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_16', matmul.cpp:38) [583]  (8.26 ns)
+
+ <State 97>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_16', matmul.cpp:38) [583]  (8.26 ns)
+
+ <State 98>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_16', matmul.cpp:38) [583]  (8.26 ns)
+
+ <State 99>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_17', matmul.cpp:38) [587]  (8.26 ns)
+
+ <State 100>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_17', matmul.cpp:38) [587]  (8.26 ns)
+
+ <State 101>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_17', matmul.cpp:38) [587]  (8.26 ns)
+
+ <State 102>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_17', matmul.cpp:38) [587]  (8.26 ns)
+
+ <State 103>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_17', matmul.cpp:38) [587]  (8.26 ns)
+
+ <State 104>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_18', matmul.cpp:38) [591]  (8.26 ns)
+
+ <State 105>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_18', matmul.cpp:38) [591]  (8.26 ns)
+
+ <State 106>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_18', matmul.cpp:38) [591]  (8.26 ns)
+
+ <State 107>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_18', matmul.cpp:38) [591]  (8.26 ns)
+
+ <State 108>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_18', matmul.cpp:38) [591]  (8.26 ns)
+
+ <State 109>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_19', matmul.cpp:38) [595]  (8.26 ns)
+
+ <State 110>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_19', matmul.cpp:38) [595]  (8.26 ns)
+
+ <State 111>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_19', matmul.cpp:38) [595]  (8.26 ns)
+
+ <State 112>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_19', matmul.cpp:38) [595]  (8.26 ns)
+
+ <State 113>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_19', matmul.cpp:38) [595]  (8.26 ns)
+
+ <State 114>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_20', matmul.cpp:38) [599]  (8.26 ns)
+
+ <State 115>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_20', matmul.cpp:38) [599]  (8.26 ns)
+
+ <State 116>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_20', matmul.cpp:38) [599]  (8.26 ns)
+
+ <State 117>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_20', matmul.cpp:38) [599]  (8.26 ns)
+
+ <State 118>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_20', matmul.cpp:38) [599]  (8.26 ns)
+
+ <State 119>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_21', matmul.cpp:38) [603]  (8.26 ns)
+
+ <State 120>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_21', matmul.cpp:38) [603]  (8.26 ns)
+
+ <State 121>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_21', matmul.cpp:38) [603]  (8.26 ns)
+
+ <State 122>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_21', matmul.cpp:38) [603]  (8.26 ns)
+
+ <State 123>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_21', matmul.cpp:38) [603]  (8.26 ns)
+
+ <State 124>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_22', matmul.cpp:38) [607]  (8.26 ns)
+
+ <State 125>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_22', matmul.cpp:38) [607]  (8.26 ns)
+
+ <State 126>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_22', matmul.cpp:38) [607]  (8.26 ns)
+
+ <State 127>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_22', matmul.cpp:38) [607]  (8.26 ns)
+
+ <State 128>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_22', matmul.cpp:38) [607]  (8.26 ns)
+
+ <State 129>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_23', matmul.cpp:38) [611]  (8.26 ns)
+
+ <State 130>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_23', matmul.cpp:38) [611]  (8.26 ns)
+
+ <State 131>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_23', matmul.cpp:38) [611]  (8.26 ns)
+
+ <State 132>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_23', matmul.cpp:38) [611]  (8.26 ns)
+
+ <State 133>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_23', matmul.cpp:38) [611]  (8.26 ns)
+
+ <State 134>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_24', matmul.cpp:38) [615]  (8.26 ns)
+
+ <State 135>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_24', matmul.cpp:38) [615]  (8.26 ns)
+
+ <State 136>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_24', matmul.cpp:38) [615]  (8.26 ns)
+
+ <State 137>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_24', matmul.cpp:38) [615]  (8.26 ns)
+
+ <State 138>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_24', matmul.cpp:38) [615]  (8.26 ns)
+
+ <State 139>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_25', matmul.cpp:38) [619]  (8.26 ns)
+
+ <State 140>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_25', matmul.cpp:38) [619]  (8.26 ns)
+
+ <State 141>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_25', matmul.cpp:38) [619]  (8.26 ns)
+
+ <State 142>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_25', matmul.cpp:38) [619]  (8.26 ns)
+
+ <State 143>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_25', matmul.cpp:38) [619]  (8.26 ns)
+
+ <State 144>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_26', matmul.cpp:38) [623]  (8.26 ns)
+
+ <State 145>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_26', matmul.cpp:38) [623]  (8.26 ns)
+
+ <State 146>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_26', matmul.cpp:38) [623]  (8.26 ns)
+
+ <State 147>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_26', matmul.cpp:38) [623]  (8.26 ns)
+
+ <State 148>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_26', matmul.cpp:38) [623]  (8.26 ns)
+
+ <State 149>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_27', matmul.cpp:38) [627]  (8.26 ns)
+
+ <State 150>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_27', matmul.cpp:38) [627]  (8.26 ns)
+
+ <State 151>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_27', matmul.cpp:38) [627]  (8.26 ns)
+
+ <State 152>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_27', matmul.cpp:38) [627]  (8.26 ns)
+
+ <State 153>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_27', matmul.cpp:38) [627]  (8.26 ns)
+
+ <State 154>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_28', matmul.cpp:38) [631]  (8.26 ns)
+
+ <State 155>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_28', matmul.cpp:38) [631]  (8.26 ns)
+
+ <State 156>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_28', matmul.cpp:38) [631]  (8.26 ns)
+
+ <State 157>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_28', matmul.cpp:38) [631]  (8.26 ns)
+
+ <State 158>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_28', matmul.cpp:38) [631]  (8.26 ns)
+
+ <State 159>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_29', matmul.cpp:38) [635]  (8.26 ns)
+
+ <State 160>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_29', matmul.cpp:38) [635]  (8.26 ns)
+
+ <State 161>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_29', matmul.cpp:38) [635]  (8.26 ns)
+
+ <State 162>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_29', matmul.cpp:38) [635]  (8.26 ns)
+
+ <State 163>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_29', matmul.cpp:38) [635]  (8.26 ns)
+
+ <State 164>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_30', matmul.cpp:38) [639]  (8.26 ns)
+
+ <State 165>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_30', matmul.cpp:38) [639]  (8.26 ns)
+
+ <State 166>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_30', matmul.cpp:38) [639]  (8.26 ns)
+
+ <State 167>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_30', matmul.cpp:38) [639]  (8.26 ns)
+
+ <State 168>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_12_30', matmul.cpp:38) [639]  (8.26 ns)
+
+ <State 169>: 2.71ns
+The critical path consists of the following:
+	'getelementptr' operation ('a_1_addr_16', matmul.cpp:41) [511]  (0 ns)
+	'store' operation (matmul.cpp:41) of variable 'tmp_12_30', matmul.cpp:38 on array 'a_1' [640]  (2.71 ns)
+
+ <State 170>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+	State 115
+	State 116
+	State 117
+	State 118
+	State 119
+	State 120
+	State 121
+	State 122
+	State 123
+	State 124
+	State 125
+	State 126
+	State 127
+	State 128
+	State 129
+	State 130
+	State 131
+	State 132
+	State 133
+	State 134
+	State 135
+	State 136
+	State 137
+	State 138
+	State 139
+	State 140
+	State 141
+	State 142
+	State 143
+	State 144
+	State 145
+	State 146
+	State 147
+	State 148
+	State 149
+	State 150
+	State 151
+	State 152
+	State 153
+	State 154
+	State 155
+	State 156
+	State 157
+	State 158
+	State 159
+	State 160
+	State 161
+	State 162
+	State 163
+	State 164
+	State 165
+	State 166
+	State 167
+	State 168
+	State 169
+	State 170
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

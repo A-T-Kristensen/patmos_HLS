@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Mon Apr 24 19:20:47 2017
+# Process ID: 6216
+# Current directory: /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_float
+# Command line: vivado -mode batch -source ./script.tcl
+# Log file: /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_float/vivado.log
+# Journal file: /home/patmos/github/bachelor_project_HLS/hls/misc/matmul_float/vivado.jou
+#-----------------------------------------------------------
+source ./script.tcl
+# open_project hls_matmul_float
+ERROR: [Coretcl 2-155] Invalid project file name 'hls_matmul_float'. File must have a valid Vivado project extension (.xpr/.ppr).
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 24 19:20:55 2017...
