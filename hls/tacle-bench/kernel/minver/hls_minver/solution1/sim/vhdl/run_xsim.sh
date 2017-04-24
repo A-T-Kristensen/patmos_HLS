@@ -1,4 +1,0 @@
-
-/opt/Xilinx/Vivado/2016.4/bin/xelab xil_defaultlib.apatb_minver_minver_hwa_top -prj minver_minver_hwa.prj --initfile "/opt/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s minver_minver_hwa 
-/opt/Xilinx/Vivado/2016.4/bin/xsim --noieeewarnings minver_minver_hwa -tclbatch minver_minver_hwa.tcl
-

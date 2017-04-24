@@ -1,1 +1,0 @@
-set ::AESL_AUTOSIM::gTopFileName filterbank.c_pre.c.tb.c

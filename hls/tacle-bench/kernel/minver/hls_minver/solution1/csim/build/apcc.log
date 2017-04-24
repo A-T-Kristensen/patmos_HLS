@@ -1,6 +1,0 @@
-INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2016.4/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'andreas' on host 'andreas-W54xEU' (Linux_x86_64 version 4.4.0-71-generic) on Wed Apr 19 15:13:15 CEST 2017
-INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
-INFO: [HLS 200-10] In directory '/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_andreas/7751492607595586671
-INFO: [APCC 202-1] APCC is done.
