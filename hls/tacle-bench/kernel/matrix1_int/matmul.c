@@ -7,11 +7,9 @@ void matmul_hw(mat_type a[X][Y], mat_type b[Y][Z], mat_type c[X][Z])
 
 #pragma HLS INTERFACE bram port=a
 #pragma HLS RESOURCE variable=a core=RAM_1P_BRAM
-#pragma HLS ARRAY_RESHAPE variable=a block factor=1 dim=2
 
 #pragma HLS INTERFACE bram port=b
 #pragma HLS RESOURCE variable=b core=RAM_1P_BRAM
-#pragma HLS ARRAY_RESHAPE variable=b block factor=1 dim=1
 
 #pragma HLS INTERFACE bram port=c
 #pragma HLS RESOURCE variable=c core=RAM_1P_BRAM

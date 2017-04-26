@@ -1,0 +1,3265 @@
+
+
+================================================================
+== Vivado HLS Report for 'matmul_hw'
+================================================================
+* Date:           Wed Apr 26 10:10:33 2017
+
+* Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
+* Project:        hls_matmul_int
+* Solution:       matmul_3b_32x32
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.05|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  32780|  32780|  32781|  32781|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+        |          |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+        |- L_col   |  32778|  32778|        43|         32|          1|  1024|    yes   |
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 32, depth = 43
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 45
+* Pipeline: 1
+  Pipeline-0: II = 32, D = 43, States = { 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	45  / (exitcond_flatten)
+	3  / (!exitcond_flatten)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	2  / true
+45 --> 
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: a_row_0_2 (4)  [1/1] 0.00ns
+:0  %a_row_0_2 = alloca i32
+
+ST_1: a_row_1_2 (5)  [1/1] 0.00ns
+:1  %a_row_1_2 = alloca i32
+
+ST_1: a_row_2_2 (6)  [1/1] 0.00ns
+:2  %a_row_2_2 = alloca i32
+
+ST_1: a_row_3_2 (7)  [1/1] 0.00ns
+:3  %a_row_3_2 = alloca i32
+
+ST_1: a_row_4_2 (8)  [1/1] 0.00ns
+:4  %a_row_4_2 = alloca i32
+
+ST_1: a_row_5_2 (9)  [1/1] 0.00ns
+:5  %a_row_5_2 = alloca i32
+
+ST_1: a_row_6_2 (10)  [1/1] 0.00ns
+:6  %a_row_6_2 = alloca i32
+
+ST_1: a_row_7_2 (11)  [1/1] 0.00ns
+:7  %a_row_7_2 = alloca i32
+
+ST_1: a_row_8_2 (12)  [1/1] 0.00ns
+:8  %a_row_8_2 = alloca i32
+
+ST_1: a_row_9_2 (13)  [1/1] 0.00ns
+:9  %a_row_9_2 = alloca i32
+
+ST_1: a_row_10_2 (14)  [1/1] 0.00ns
+:10  %a_row_10_2 = alloca i32
+
+ST_1: a_row_11_2 (15)  [1/1] 0.00ns
+:11  %a_row_11_2 = alloca i32
+
+ST_1: a_row_12_2 (16)  [1/1] 0.00ns
+:12  %a_row_12_2 = alloca i32
+
+ST_1: a_row_13_2 (17)  [1/1] 0.00ns
+:13  %a_row_13_2 = alloca i32
+
+ST_1: a_row_14_2 (18)  [1/1] 0.00ns
+:14  %a_row_14_2 = alloca i32
+
+ST_1: a_row_15_2 (19)  [1/1] 0.00ns
+:15  %a_row_15_2 = alloca i32
+
+ST_1: a_row_16_2 (20)  [1/1] 0.00ns
+:16  %a_row_16_2 = alloca i32
+
+ST_1: a_row_17_2 (21)  [1/1] 0.00ns
+:17  %a_row_17_2 = alloca i32
+
+ST_1: a_row_18_2 (22)  [1/1] 0.00ns
+:18  %a_row_18_2 = alloca i32
+
+ST_1: a_row_19_2 (23)  [1/1] 0.00ns
+:19  %a_row_19_2 = alloca i32
+
+ST_1: a_row_20_2 (24)  [1/1] 0.00ns
+:20  %a_row_20_2 = alloca i32
+
+ST_1: a_row_21_2 (25)  [1/1] 0.00ns
+:21  %a_row_21_2 = alloca i32
+
+ST_1: a_row_22_2 (26)  [1/1] 0.00ns
+:22  %a_row_22_2 = alloca i32
+
+ST_1: a_row_23_2 (27)  [1/1] 0.00ns
+:23  %a_row_23_2 = alloca i32
+
+ST_1: a_row_24_2 (28)  [1/1] 0.00ns
+:24  %a_row_24_2 = alloca i32
+
+ST_1: a_row_25_2 (29)  [1/1] 0.00ns
+:25  %a_row_25_2 = alloca i32
+
+ST_1: a_row_26_2 (30)  [1/1] 0.00ns
+:26  %a_row_26_2 = alloca i32
+
+ST_1: a_row_27_2 (31)  [1/1] 0.00ns
+:27  %a_row_27_2 = alloca i32
+
+ST_1: a_row_28_2 (32)  [1/1] 0.00ns
+:28  %a_row_28_2 = alloca i32
+
+ST_1: a_row_29_2 (33)  [1/1] 0.00ns
+:29  %a_row_29_2 = alloca i32
+
+ST_1: a_row_30_2 (34)  [1/1] 0.00ns
+:30  %a_row_30_2 = alloca i32
+
+ST_1: a_row_31_2 (35)  [1/1] 0.00ns
+:31  %a_row_31_2 = alloca i32
+
+ST_1: StgValue_78 (36)  [1/1] 0.00ns
+:32  call void (...)* @_ssdm_op_SpecBitsMap([1024 x i32]* %a) nounwind, !map !7
+
+ST_1: StgValue_79 (37)  [1/1] 0.00ns
+:33  call void (...)* @_ssdm_op_SpecBitsMap([1024 x i32]* %b) nounwind, !map !13
+
+ST_1: StgValue_80 (38)  [1/1] 0.00ns
+:34  call void (...)* @_ssdm_op_SpecBitsMap([1024 x i32]* %c) nounwind, !map !17
+
+ST_1: StgValue_81 (39)  [1/1] 0.00ns
+:35  call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @matmul_hw_str) nounwind
+
+ST_1: b_copy_0 (40)  [1/1] 0.00ns  loc: matmul.c:18
+:36  %b_copy_0 = alloca [32 x i32], align 16
+
+ST_1: b_copy_1 (41)  [1/1] 0.00ns  loc: matmul.c:18
+:37  %b_copy_1 = alloca [32 x i32], align 16
+
+ST_1: b_copy_2 (42)  [1/1] 0.00ns  loc: matmul.c:18
+:38  %b_copy_2 = alloca [32 x i32], align 16
+
+ST_1: b_copy_3 (43)  [1/1] 0.00ns  loc: matmul.c:18
+:39  %b_copy_3 = alloca [32 x i32], align 16
+
+ST_1: b_copy_4 (44)  [1/1] 0.00ns  loc: matmul.c:18
+:40  %b_copy_4 = alloca [32 x i32], align 16
+
+ST_1: b_copy_5 (45)  [1/1] 0.00ns  loc: matmul.c:18
+:41  %b_copy_5 = alloca [32 x i32], align 16
+
+ST_1: b_copy_6 (46)  [1/1] 0.00ns  loc: matmul.c:18
+:42  %b_copy_6 = alloca [32 x i32], align 16
+
+ST_1: b_copy_7 (47)  [1/1] 0.00ns  loc: matmul.c:18
+:43  %b_copy_7 = alloca [32 x i32], align 16
+
+ST_1: b_copy_8 (48)  [1/1] 0.00ns  loc: matmul.c:18
+:44  %b_copy_8 = alloca [32 x i32], align 16
+
+ST_1: b_copy_9 (49)  [1/1] 0.00ns  loc: matmul.c:18
+:45  %b_copy_9 = alloca [32 x i32], align 16
+
+ST_1: b_copy_10 (50)  [1/1] 0.00ns  loc: matmul.c:18
+:46  %b_copy_10 = alloca [32 x i32], align 16
+
+ST_1: b_copy_11 (51)  [1/1] 0.00ns  loc: matmul.c:18
+:47  %b_copy_11 = alloca [32 x i32], align 16
+
+ST_1: b_copy_12 (52)  [1/1] 0.00ns  loc: matmul.c:18
+:48  %b_copy_12 = alloca [32 x i32], align 16
+
+ST_1: b_copy_13 (53)  [1/1] 0.00ns  loc: matmul.c:18
+:49  %b_copy_13 = alloca [32 x i32], align 16
+
+ST_1: b_copy_14 (54)  [1/1] 0.00ns  loc: matmul.c:18
+:50  %b_copy_14 = alloca [32 x i32], align 16
+
+ST_1: b_copy_15 (55)  [1/1] 0.00ns  loc: matmul.c:18
+:51  %b_copy_15 = alloca [32 x i32], align 16
+
+ST_1: b_copy_16 (56)  [1/1] 0.00ns  loc: matmul.c:18
+:52  %b_copy_16 = alloca [32 x i32], align 16
+
+ST_1: b_copy_17 (57)  [1/1] 0.00ns  loc: matmul.c:18
+:53  %b_copy_17 = alloca [32 x i32], align 16
+
+ST_1: b_copy_18 (58)  [1/1] 0.00ns  loc: matmul.c:18
+:54  %b_copy_18 = alloca [32 x i32], align 16
+
+ST_1: b_copy_19 (59)  [1/1] 0.00ns  loc: matmul.c:18
+:55  %b_copy_19 = alloca [32 x i32], align 16
+
+ST_1: b_copy_20 (60)  [1/1] 0.00ns  loc: matmul.c:18
+:56  %b_copy_20 = alloca [32 x i32], align 16
+
+ST_1: b_copy_21 (61)  [1/1] 0.00ns  loc: matmul.c:18
+:57  %b_copy_21 = alloca [32 x i32], align 16
+
+ST_1: b_copy_22 (62)  [1/1] 0.00ns  loc: matmul.c:18
+:58  %b_copy_22 = alloca [32 x i32], align 16
+
+ST_1: b_copy_23 (63)  [1/1] 0.00ns  loc: matmul.c:18
+:59  %b_copy_23 = alloca [32 x i32], align 16
+
+ST_1: b_copy_24 (64)  [1/1] 0.00ns  loc: matmul.c:18
+:60  %b_copy_24 = alloca [32 x i32], align 16
+
+ST_1: b_copy_25 (65)  [1/1] 0.00ns  loc: matmul.c:18
+:61  %b_copy_25 = alloca [32 x i32], align 16
+
+ST_1: b_copy_26 (66)  [1/1] 0.00ns  loc: matmul.c:18
+:62  %b_copy_26 = alloca [32 x i32], align 16
+
+ST_1: b_copy_27 (67)  [1/1] 0.00ns  loc: matmul.c:18
+:63  %b_copy_27 = alloca [32 x i32], align 16
+
+ST_1: b_copy_28 (68)  [1/1] 0.00ns  loc: matmul.c:18
+:64  %b_copy_28 = alloca [32 x i32], align 16
+
+ST_1: b_copy_29 (69)  [1/1] 0.00ns  loc: matmul.c:18
+:65  %b_copy_29 = alloca [32 x i32], align 16
+
+ST_1: b_copy_30 (70)  [1/1] 0.00ns  loc: matmul.c:18
+:66  %b_copy_30 = alloca [32 x i32], align 16
+
+ST_1: b_copy_31 (71)  [1/1] 0.00ns  loc: matmul.c:18
+:67  %b_copy_31 = alloca [32 x i32], align 16
+
+ST_1: StgValue_114 (72)  [1/1] 0.00ns  loc: matmul.c:6
+:68  call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_115 (73)  [1/1] 0.00ns
+:69  call void (...)* @_ssdm_op_SpecInterface([1024 x i32]* %a, [5 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_1: StgValue_116 (74)  [1/1] 0.00ns
+:70  call void (...)* @_ssdm_op_SpecMemCore([1024 x i32]* %a, [1 x i8]* @p_str1, [12 x i8]* @p_str3, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_117 (75)  [1/1] 0.00ns
+:71  call void (...)* @_ssdm_op_SpecInterface([1024 x i32]* %b, [5 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_1: StgValue_118 (76)  [1/1] 0.00ns
+:72  call void (...)* @_ssdm_op_SpecMemCore([1024 x i32]* %b, [1 x i8]* @p_str1, [12 x i8]* @p_str3, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_119 (77)  [1/1] 0.00ns
+:73  call void (...)* @_ssdm_op_SpecInterface([1024 x i32]* %c, [5 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_1: StgValue_120 (78)  [1/1] 0.00ns
+:74  call void (...)* @_ssdm_op_SpecMemCore([1024 x i32]* %c, [1 x i8]* @p_str1, [12 x i8]* @p_str3, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_121 (79)  [1/1] 1.57ns  loc: matmul.c:21
+:75  br label %.preheader7
+
+
+ <State 2>: 6.48ns
+ST_2: indvar_flatten (81)  [1/1] 0.00ns
+.preheader7:0  %indvar_flatten = phi i11 [ 0, %0 ], [ %indvar_flatten_next, %.loopexit ]
+
+ST_2: i (82)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7:1  %i = phi i6 [ 0, %0 ], [ %tmp_1_mid2_v, %.loopexit ]
+
+ST_2: j (83)  [1/1] 0.00ns
+.preheader7:2  %j = phi i6 [ 0, %0 ], [ %j_1, %.loopexit ]
+
+ST_2: exitcond_flatten (84)  [1/1] 2.58ns
+.preheader7:3  %exitcond_flatten = icmp eq i11 %indvar_flatten, -1024
+
+ST_2: indvar_flatten_next (85)  [1/1] 1.79ns
+.preheader7:4  %indvar_flatten_next = add i11 %indvar_flatten, 1
+
+ST_2: StgValue_127 (86)  [1/1] 0.00ns
+.preheader7:5  br i1 %exitcond_flatten, label %1, label %.preheader7.preheader
+
+ST_2: i_1 (120)  [1/1] 1.67ns  loc: matmul.c:21
+.preheader7.preheader:32  %i_1 = add i6 %i, 1
+
+ST_2: exitcond (123)  [1/1] 2.40ns  loc: matmul.c:23
+.preheader7.preheader:35  %exitcond = icmp eq i6 %j, -32
+
+ST_2: j_mid2 (124)  [1/1] 1.37ns  loc: matmul.c:23
+.preheader7.preheader:36  %j_mid2 = select i1 %exitcond, i6 0, i6 %j
+
+ST_2: tmp_mid1 (125)  [1/1] 2.40ns  loc: matmul.c:36
+.preheader7.preheader:37  %tmp_mid1 = icmp eq i6 %i_1, 0
+
+ST_2: tmp (126)  [1/1] 2.40ns  loc: matmul.c:36
+.preheader7.preheader:38  %tmp = icmp eq i6 %i, 0
+
+ST_2: tmp_mid2 (127)  [1/1] 1.37ns  loc: matmul.c:36
+.preheader7.preheader:39  %tmp_mid2 = select i1 %exitcond, i1 %tmp_mid1, i1 %tmp
+
+ST_2: tmp_1_mid2_v (128)  [1/1] 1.37ns  loc: matmul.c:46
+.preheader7.preheader:40  %tmp_1_mid2_v = select i1 %exitcond, i6 %i_1, i6 %i
+
+ST_2: tmp_1 (129)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:41  %tmp_1 = call i11 @_ssdm_op_BitConcatenate.i11.i6.i5(i6 %tmp_1_mid2_v, i5 0)
+
+ST_2: tmp_4 (130)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:42  %tmp_4 = zext i11 %tmp_1 to i64
+
+ST_2: a_addr (132)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:44  %a_addr = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_4
+
+ST_2: a_row_0 (230)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:142  %a_row_0 = load i32* %a_addr, align 4
+
+ST_2: StgValue_139 (326)  [1/1] 0.00ns  loc: matmul.c:36
+.preheader7.preheader:238  br i1 %tmp_mid2, label %.preheader.preheader, label %.loopexit
+
+ST_2: tmp_6 (328)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:0  %tmp_6 = zext i6 %j_mid2 to i64
+
+ST_2: b_addr (334)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:6  %b_addr = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_6
+
+ST_2: b_load (413)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:85  %b_load = load i32* %b_addr, align 4
+
+
+ <State 3>: 5.42ns
+ST_3: tmp_5 (133)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:45  %tmp_5 = or i11 %tmp_1, 1
+
+ST_3: tmp_7 (134)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:46  %tmp_7 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_5)
+
+ST_3: a_addr_1 (135)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:47  %a_addr_1 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_7
+
+ST_3: a_row_0 (230)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:142  %a_row_0 = load i32* %a_addr, align 4
+
+ST_3: a_row_1 (231)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:143  %a_row_1 = load i32* %a_addr_1, align 4
+
+ST_3: tmp_6_cast (333)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:5  %tmp_6_cast = zext i6 %j_mid2 to i7
+
+ST_3: tmp_69 (335)  [1/1] 1.67ns  loc: matmul.c:38
+.preheader.preheader:7  %tmp_69 = add i7 %tmp_6_cast, 32
+
+ST_3: tmp_69_cast (336)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:8  %tmp_69_cast = zext i7 %tmp_69 to i64
+
+ST_3: b_addr_1 (337)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:9  %b_addr_1 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_69_cast
+
+ST_3: b_load (413)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:85  %b_load = load i32* %b_addr, align 4
+
+ST_3: b_copy_0_addr (414)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:86  %b_copy_0_addr = getelementptr [32 x i32]* %b_copy_0, i64 0, i64 %tmp_6
+
+ST_3: StgValue_154 (415)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:87  store i32 %b_load, i32* %b_copy_0_addr, align 4
+
+ST_3: b_load_1 (416)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:88  %b_load_1 = load i32* %b_addr_1, align 4
+
+
+ <State 4>: 5.42ns
+ST_4: tmp_8 (136)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:48  %tmp_8 = or i11 %tmp_1, 2
+
+ST_4: tmp_10 (137)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:49  %tmp_10 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_8)
+
+ST_4: a_addr_2 (138)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:50  %a_addr_2 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_10
+
+ST_4: a_row_1 (231)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:143  %a_row_1 = load i32* %a_addr_1, align 4
+
+ST_4: a_row_2 (232)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:144  %a_row_2 = load i32* %a_addr_2, align 4
+
+ST_4: tmp_70 (338)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:10  %tmp_70 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 1, i6 %j_mid2)
+
+ST_4: b_addr_2 (339)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:11  %b_addr_2 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_70
+
+ST_4: b_load_1 (416)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:88  %b_load_1 = load i32* %b_addr_1, align 4
+
+ST_4: b_copy_1_addr (417)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:89  %b_copy_1_addr = getelementptr [32 x i32]* %b_copy_1, i64 0, i64 %tmp_6
+
+ST_4: StgValue_165 (418)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:90  store i32 %b_load_1, i32* %b_copy_1_addr, align 4
+
+ST_4: b_load_2 (419)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:91  %b_load_2 = load i32* %b_addr_2, align 4
+
+ST_4: tmp_9 (511)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:0  %tmp_9 = zext i6 %j_mid2 to i64
+
+ST_4: b_copy_0_addr_1 (516)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:5  %b_copy_0_addr_1 = getelementptr [32 x i32]* %b_copy_0, i64 0, i64 %tmp_9
+
+ST_4: b_copy_0_load (517)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:6  %b_copy_0_load = load i32* %b_copy_0_addr_1, align 4
+
+
+ <State 5>: 5.42ns
+ST_5: tmp_11 (139)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:51  %tmp_11 = or i11 %tmp_1, 3
+
+ST_5: tmp_12 (140)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:52  %tmp_12 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_11)
+
+ST_5: a_addr_3 (141)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:53  %a_addr_3 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_12
+
+ST_5: tmp_3 (229)  [1/1] 2.40ns  loc: matmul.c:30
+.preheader7.preheader:141  %tmp_3 = icmp eq i6 %j_mid2, 0
+
+ST_5: a_row_2 (232)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:144  %a_row_2 = load i32* %a_addr_2, align 4
+
+ST_5: a_row_3 (233)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:145  %a_row_3 = load i32* %a_addr_3, align 4
+
+ST_5: tmp_6_cast37_cast1 (331)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:3  %tmp_6_cast37_cast1 = zext i6 %j_mid2 to i8
+
+ST_5: tmp_71 (340)  [1/1] 1.67ns  loc: matmul.c:38
+.preheader.preheader:12  %tmp_71 = add i8 %tmp_6_cast37_cast1, 96
+
+ST_5: tmp_71_cast (341)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:13  %tmp_71_cast = zext i8 %tmp_71 to i64
+
+ST_5: b_addr_3 (342)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:14  %b_addr_3 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_71_cast
+
+ST_5: b_load_2 (419)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:91  %b_load_2 = load i32* %b_addr_2, align 4
+
+ST_5: b_copy_2_addr (420)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:92  %b_copy_2_addr = getelementptr [32 x i32]* %b_copy_2, i64 0, i64 %tmp_6
+
+ST_5: StgValue_182 (421)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:93  store i32 %b_load_2, i32* %b_copy_2_addr, align 4
+
+ST_5: b_load_3 (422)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:94  %b_load_3 = load i32* %b_addr_3, align 4
+
+ST_5: b_copy_0_load (517)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:6  %b_copy_0_load = load i32* %b_copy_0_addr_1, align 4
+
+ST_5: b_copy_1_addr_1 (519)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:8  %b_copy_1_addr_1 = getelementptr [32 x i32]* %b_copy_1, i64 0, i64 %tmp_9
+
+ST_5: b_copy_1_load (520)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:9  %b_copy_1_load = load i32* %b_copy_1_addr_1, align 4
+
+
+ <State 6>: 8.05ns
+ST_6: a_row_0_2_load (88)  [1/1] 0.00ns
+.preheader7.preheader:0  %a_row_0_2_load = load i32* %a_row_0_2
+
+ST_6: tmp_13 (142)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:54  %tmp_13 = or i11 %tmp_1, 4
+
+ST_6: tmp_14 (143)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:55  %tmp_14 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_13)
+
+ST_6: a_addr_4 (144)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:56  %a_addr_4 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_14
+
+ST_6: a_row_3 (233)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:145  %a_row_3 = load i32* %a_addr_3, align 4
+
+ST_6: a_row_4 (234)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:146  %a_row_4 = load i32* %a_addr_4, align 4
+
+ST_6: a_row_0_1 (293)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:205  %a_row_0_1 = select i1 %tmp_3, i32 %a_row_0, i32 %a_row_0_2_load
+
+ST_6: StgValue_194 (325)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:237  store i32 %a_row_0_1, i32* %a_row_0_2
+
+ST_6: tmp_72 (343)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:15  %tmp_72 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 2, i6 %j_mid2)
+
+ST_6: b_addr_4 (344)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:16  %b_addr_4 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_72
+
+ST_6: b_load_3 (422)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:94  %b_load_3 = load i32* %b_addr_3, align 4
+
+ST_6: b_copy_3_addr (423)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:95  %b_copy_3_addr = getelementptr [32 x i32]* %b_copy_3, i64 0, i64 %tmp_6
+
+ST_6: StgValue_199 (424)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:96  store i32 %b_load_3, i32* %b_copy_3_addr, align 4
+
+ST_6: b_load_4 (425)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:97  %b_load_4 = load i32* %b_addr_4, align 4
+
+ST_6: tmp_s (518)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:7  %tmp_s = mul nsw i32 %a_row_0_1, %b_copy_0_load
+
+ST_6: b_copy_1_load (520)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:9  %b_copy_1_load = load i32* %b_copy_1_addr_1, align 4
+
+ST_6: b_copy_2_addr_1 (522)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:11  %b_copy_2_addr_1 = getelementptr [32 x i32]* %b_copy_2, i64 0, i64 %tmp_9
+
+ST_6: b_copy_2_load (523)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:12  %b_copy_2_load = load i32* %b_copy_2_addr_1, align 4
+
+
+ <State 7>: 8.05ns
+ST_7: a_row_1_2_load (89)  [1/1] 0.00ns
+.preheader7.preheader:1  %a_row_1_2_load = load i32* %a_row_1_2
+
+ST_7: tmp_15 (145)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:57  %tmp_15 = or i11 %tmp_1, 5
+
+ST_7: tmp_16 (146)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:58  %tmp_16 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_15)
+
+ST_7: a_addr_5 (147)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:59  %a_addr_5 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_16
+
+ST_7: a_row_4 (234)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:146  %a_row_4 = load i32* %a_addr_4, align 4
+
+ST_7: a_row_5 (235)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:147  %a_row_5 = load i32* %a_addr_5, align 4
+
+ST_7: a_row_1_1 (292)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:204  %a_row_1_1 = select i1 %tmp_3, i32 %a_row_1, i32 %a_row_1_2_load
+
+ST_7: StgValue_212 (324)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:236  store i32 %a_row_1_1, i32* %a_row_1_2
+
+ST_7: tmp_73 (345)  [1/1] 1.67ns  loc: matmul.c:38
+.preheader.preheader:17  %tmp_73 = add i8 %tmp_6_cast37_cast1, -96
+
+ST_7: tmp_73_cast (346)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:18  %tmp_73_cast = zext i8 %tmp_73 to i64
+
+ST_7: b_addr_5 (347)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:19  %b_addr_5 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_73_cast
+
+ST_7: b_load_4 (425)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:97  %b_load_4 = load i32* %b_addr_4, align 4
+
+ST_7: b_copy_4_addr (426)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:98  %b_copy_4_addr = getelementptr [32 x i32]* %b_copy_4, i64 0, i64 %tmp_6
+
+ST_7: StgValue_218 (427)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:99  store i32 %b_load_4, i32* %b_copy_4_addr, align 4
+
+ST_7: b_load_5 (428)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:100  %b_load_5 = load i32* %b_addr_5, align 4
+
+ST_7: tmp_s (518)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:7  %tmp_s = mul nsw i32 %a_row_0_1, %b_copy_0_load
+
+ST_7: tmp_2_1 (521)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:10  %tmp_2_1 = mul nsw i32 %a_row_1_1, %b_copy_1_load
+
+ST_7: b_copy_2_load (523)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:12  %b_copy_2_load = load i32* %b_copy_2_addr_1, align 4
+
+ST_7: b_copy_3_addr_1 (525)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:14  %b_copy_3_addr_1 = getelementptr [32 x i32]* %b_copy_3, i64 0, i64 %tmp_9
+
+ST_7: b_copy_3_load (526)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:15  %b_copy_3_load = load i32* %b_copy_3_addr_1, align 4
+
+
+ <State 8>: 8.05ns
+ST_8: a_row_2_2_load (90)  [1/1] 0.00ns
+.preheader7.preheader:2  %a_row_2_2_load = load i32* %a_row_2_2
+
+ST_8: tmp_17 (148)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:60  %tmp_17 = or i11 %tmp_1, 6
+
+ST_8: tmp_18 (149)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:61  %tmp_18 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_17)
+
+ST_8: a_addr_6 (150)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:62  %a_addr_6 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_18
+
+ST_8: a_row_5 (235)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:147  %a_row_5 = load i32* %a_addr_5, align 4
+
+ST_8: a_row_6 (236)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:148  %a_row_6 = load i32* %a_addr_6, align 4
+
+ST_8: a_row_2_1 (291)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:203  %a_row_2_1 = select i1 %tmp_3, i32 %a_row_2, i32 %a_row_2_2_load
+
+ST_8: StgValue_232 (323)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:235  store i32 %a_row_2_1, i32* %a_row_2_2
+
+ST_8: tmp_74 (348)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:20  %tmp_74 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 3, i6 %j_mid2)
+
+ST_8: b_addr_6 (349)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:21  %b_addr_6 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_74
+
+ST_8: b_load_5 (428)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:100  %b_load_5 = load i32* %b_addr_5, align 4
+
+ST_8: b_copy_5_addr (429)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:101  %b_copy_5_addr = getelementptr [32 x i32]* %b_copy_5, i64 0, i64 %tmp_6
+
+ST_8: StgValue_237 (430)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:102  store i32 %b_load_5, i32* %b_copy_5_addr, align 4
+
+ST_8: b_load_6 (431)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:103  %b_load_6 = load i32* %b_addr_6, align 4
+
+ST_8: tmp_s (518)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:7  %tmp_s = mul nsw i32 %a_row_0_1, %b_copy_0_load
+
+ST_8: tmp_2_1 (521)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:10  %tmp_2_1 = mul nsw i32 %a_row_1_1, %b_copy_1_load
+
+ST_8: tmp_2_2 (524)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:13  %tmp_2_2 = mul nsw i32 %a_row_2_1, %b_copy_2_load
+
+ST_8: b_copy_3_load (526)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:15  %b_copy_3_load = load i32* %b_copy_3_addr_1, align 4
+
+ST_8: b_copy_4_addr_1 (528)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:17  %b_copy_4_addr_1 = getelementptr [32 x i32]* %b_copy_4, i64 0, i64 %tmp_9
+
+ST_8: b_copy_4_load (529)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:18  %b_copy_4_load = load i32* %b_copy_4_addr_1, align 4
+
+
+ <State 9>: 8.05ns
+ST_9: a_row_3_2_load (91)  [1/1] 0.00ns
+.preheader7.preheader:3  %a_row_3_2_load = load i32* %a_row_3_2
+
+ST_9: tmp_19 (151)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:63  %tmp_19 = or i11 %tmp_1, 7
+
+ST_9: tmp_20 (152)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:64  %tmp_20 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_19)
+
+ST_9: a_addr_7 (153)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:65  %a_addr_7 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_20
+
+ST_9: a_row_6 (236)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:148  %a_row_6 = load i32* %a_addr_6, align 4
+
+ST_9: a_row_7 (237)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:149  %a_row_7 = load i32* %a_addr_7, align 4
+
+ST_9: a_row_3_1 (290)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:202  %a_row_3_1 = select i1 %tmp_3, i32 %a_row_3, i32 %a_row_3_2_load
+
+ST_9: StgValue_252 (322)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:234  store i32 %a_row_3_1, i32* %a_row_3_2
+
+ST_9: tmp_6_cast37_cast (332)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:4  %tmp_6_cast37_cast = zext i6 %j_mid2 to i9
+
+ST_9: tmp_75 (350)  [1/1] 1.79ns  loc: matmul.c:38
+.preheader.preheader:22  %tmp_75 = add i9 %tmp_6_cast37_cast, 224
+
+ST_9: tmp_75_cast (351)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:23  %tmp_75_cast = zext i9 %tmp_75 to i64
+
+ST_9: b_addr_7 (352)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:24  %b_addr_7 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_75_cast
+
+ST_9: b_load_6 (431)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:103  %b_load_6 = load i32* %b_addr_6, align 4
+
+ST_9: b_copy_6_addr (432)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:104  %b_copy_6_addr = getelementptr [32 x i32]* %b_copy_6, i64 0, i64 %tmp_6
+
+ST_9: StgValue_259 (433)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:105  store i32 %b_load_6, i32* %b_copy_6_addr, align 4
+
+ST_9: b_load_7 (434)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:106  %b_load_7 = load i32* %b_addr_7, align 4
+
+ST_9: tmp_s (518)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:7  %tmp_s = mul nsw i32 %a_row_0_1, %b_copy_0_load
+
+ST_9: tmp_2_1 (521)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:10  %tmp_2_1 = mul nsw i32 %a_row_1_1, %b_copy_1_load
+
+ST_9: tmp_2_2 (524)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:13  %tmp_2_2 = mul nsw i32 %a_row_2_1, %b_copy_2_load
+
+ST_9: tmp_2_3 (527)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:16  %tmp_2_3 = mul nsw i32 %a_row_3_1, %b_copy_3_load
+
+ST_9: b_copy_4_load (529)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:18  %b_copy_4_load = load i32* %b_copy_4_addr_1, align 4
+
+ST_9: b_copy_5_addr_1 (531)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:20  %b_copy_5_addr_1 = getelementptr [32 x i32]* %b_copy_5, i64 0, i64 %tmp_9
+
+ST_9: b_copy_5_load (532)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:21  %b_copy_5_load = load i32* %b_copy_5_addr_1, align 4
+
+
+ <State 10>: 8.05ns
+ST_10: a_row_4_2_load (92)  [1/1] 0.00ns
+.preheader7.preheader:4  %a_row_4_2_load = load i32* %a_row_4_2
+
+ST_10: tmp_21 (154)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:66  %tmp_21 = or i11 %tmp_1, 8
+
+ST_10: tmp_22 (155)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:67  %tmp_22 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_21)
+
+ST_10: a_addr_8 (156)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:68  %a_addr_8 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_22
+
+ST_10: a_row_7 (237)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:149  %a_row_7 = load i32* %a_addr_7, align 4
+
+ST_10: a_row_8 (238)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:150  %a_row_8 = load i32* %a_addr_8, align 4
+
+ST_10: a_row_4_1 (289)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:201  %a_row_4_1 = select i1 %tmp_3, i32 %a_row_4, i32 %a_row_4_2_load
+
+ST_10: StgValue_275 (321)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:233  store i32 %a_row_4_1, i32* %a_row_4_2
+
+ST_10: tmp_76 (353)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:25  %tmp_76 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 4, i6 %j_mid2)
+
+ST_10: b_addr_8 (354)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:26  %b_addr_8 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_76
+
+ST_10: b_load_7 (434)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:106  %b_load_7 = load i32* %b_addr_7, align 4
+
+ST_10: b_copy_7_addr (435)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:107  %b_copy_7_addr = getelementptr [32 x i32]* %b_copy_7, i64 0, i64 %tmp_6
+
+ST_10: StgValue_280 (436)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:108  store i32 %b_load_7, i32* %b_copy_7_addr, align 4
+
+ST_10: b_load_8 (437)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:109  %b_load_8 = load i32* %b_addr_8, align 4
+
+ST_10: tmp_s (518)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:7  %tmp_s = mul nsw i32 %a_row_0_1, %b_copy_0_load
+
+ST_10: tmp_2_1 (521)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:10  %tmp_2_1 = mul nsw i32 %a_row_1_1, %b_copy_1_load
+
+ST_10: tmp_2_2 (524)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:13  %tmp_2_2 = mul nsw i32 %a_row_2_1, %b_copy_2_load
+
+ST_10: tmp_2_3 (527)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:16  %tmp_2_3 = mul nsw i32 %a_row_3_1, %b_copy_3_load
+
+ST_10: tmp_2_4 (530)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:19  %tmp_2_4 = mul nsw i32 %a_row_4_1, %b_copy_4_load
+
+ST_10: b_copy_5_load (532)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:21  %b_copy_5_load = load i32* %b_copy_5_addr_1, align 4
+
+ST_10: b_copy_6_addr_1 (534)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:23  %b_copy_6_addr_1 = getelementptr [32 x i32]* %b_copy_6, i64 0, i64 %tmp_9
+
+ST_10: b_copy_6_load (535)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:24  %b_copy_6_load = load i32* %b_copy_6_addr_1, align 4
+
+
+ <State 11>: 8.05ns
+ST_11: a_row_5_2_load (93)  [1/1] 0.00ns
+.preheader7.preheader:5  %a_row_5_2_load = load i32* %a_row_5_2
+
+ST_11: tmp_23 (157)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:69  %tmp_23 = or i11 %tmp_1, 9
+
+ST_11: tmp_24 (158)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:70  %tmp_24 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_23)
+
+ST_11: a_addr_9 (159)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:71  %a_addr_9 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_24
+
+ST_11: a_row_8 (238)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:150  %a_row_8 = load i32* %a_addr_8, align 4
+
+ST_11: a_row_9 (239)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:151  %a_row_9 = load i32* %a_addr_9, align 4
+
+ST_11: a_row_5_1 (288)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:200  %a_row_5_1 = select i1 %tmp_3, i32 %a_row_5, i32 %a_row_5_2_load
+
+ST_11: StgValue_297 (320)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:232  store i32 %a_row_5_1, i32* %a_row_5_2
+
+ST_11: tmp_77 (355)  [1/1] 1.79ns  loc: matmul.c:38
+.preheader.preheader:27  %tmp_77 = add i9 %tmp_6_cast37_cast, -224
+
+ST_11: tmp_77_cast (356)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:28  %tmp_77_cast = zext i9 %tmp_77 to i64
+
+ST_11: b_addr_9 (357)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:29  %b_addr_9 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_77_cast
+
+ST_11: b_load_8 (437)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:109  %b_load_8 = load i32* %b_addr_8, align 4
+
+ST_11: b_copy_8_addr (438)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:110  %b_copy_8_addr = getelementptr [32 x i32]* %b_copy_8, i64 0, i64 %tmp_6
+
+ST_11: StgValue_303 (439)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:111  store i32 %b_load_8, i32* %b_copy_8_addr, align 4
+
+ST_11: b_load_9 (440)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:112  %b_load_9 = load i32* %b_addr_9, align 4
+
+ST_11: tmp_s (518)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:7  %tmp_s = mul nsw i32 %a_row_0_1, %b_copy_0_load
+
+ST_11: tmp_2_1 (521)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:10  %tmp_2_1 = mul nsw i32 %a_row_1_1, %b_copy_1_load
+
+ST_11: tmp_2_2 (524)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:13  %tmp_2_2 = mul nsw i32 %a_row_2_1, %b_copy_2_load
+
+ST_11: tmp_2_3 (527)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:16  %tmp_2_3 = mul nsw i32 %a_row_3_1, %b_copy_3_load
+
+ST_11: tmp_2_4 (530)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:19  %tmp_2_4 = mul nsw i32 %a_row_4_1, %b_copy_4_load
+
+ST_11: tmp_2_5 (533)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:22  %tmp_2_5 = mul nsw i32 %a_row_5_1, %b_copy_5_load
+
+ST_11: b_copy_6_load (535)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:24  %b_copy_6_load = load i32* %b_copy_6_addr_1, align 4
+
+ST_11: b_copy_7_addr_1 (537)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:26  %b_copy_7_addr_1 = getelementptr [32 x i32]* %b_copy_7, i64 0, i64 %tmp_9
+
+ST_11: b_copy_7_load (538)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:27  %b_copy_7_load = load i32* %b_copy_7_addr_1, align 4
+
+
+ <State 12>: 8.05ns
+ST_12: a_row_6_2_load (94)  [1/1] 0.00ns
+.preheader7.preheader:6  %a_row_6_2_load = load i32* %a_row_6_2
+
+ST_12: tmp_25 (160)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:72  %tmp_25 = or i11 %tmp_1, 10
+
+ST_12: tmp_26 (161)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:73  %tmp_26 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_25)
+
+ST_12: a_addr_10 (162)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:74  %a_addr_10 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_26
+
+ST_12: a_row_9 (239)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:151  %a_row_9 = load i32* %a_addr_9, align 4
+
+ST_12: a_row_10 (240)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:152  %a_row_10 = load i32* %a_addr_10, align 4
+
+ST_12: a_row_6_1 (287)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:199  %a_row_6_1 = select i1 %tmp_3, i32 %a_row_6, i32 %a_row_6_2_load
+
+ST_12: StgValue_321 (319)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:231  store i32 %a_row_6_1, i32* %a_row_6_2
+
+ST_12: tmp_78 (358)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:30  %tmp_78 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 5, i6 %j_mid2)
+
+ST_12: b_addr_10 (359)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:31  %b_addr_10 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_78
+
+ST_12: b_load_9 (440)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:112  %b_load_9 = load i32* %b_addr_9, align 4
+
+ST_12: b_copy_9_addr (441)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:113  %b_copy_9_addr = getelementptr [32 x i32]* %b_copy_9, i64 0, i64 %tmp_6
+
+ST_12: StgValue_326 (442)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:114  store i32 %b_load_9, i32* %b_copy_9_addr, align 4
+
+ST_12: b_load_10 (443)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:115  %b_load_10 = load i32* %b_addr_10, align 4
+
+ST_12: tmp_2_1 (521)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:10  %tmp_2_1 = mul nsw i32 %a_row_1_1, %b_copy_1_load
+
+ST_12: tmp_2_2 (524)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:13  %tmp_2_2 = mul nsw i32 %a_row_2_1, %b_copy_2_load
+
+ST_12: tmp_2_3 (527)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:16  %tmp_2_3 = mul nsw i32 %a_row_3_1, %b_copy_3_load
+
+ST_12: tmp_2_4 (530)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:19  %tmp_2_4 = mul nsw i32 %a_row_4_1, %b_copy_4_load
+
+ST_12: tmp_2_5 (533)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:22  %tmp_2_5 = mul nsw i32 %a_row_5_1, %b_copy_5_load
+
+ST_12: tmp_2_6 (536)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:25  %tmp_2_6 = mul nsw i32 %a_row_6_1, %b_copy_6_load
+
+ST_12: b_copy_7_load (538)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:27  %b_copy_7_load = load i32* %b_copy_7_addr_1, align 4
+
+ST_12: b_copy_8_addr_1 (540)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:29  %b_copy_8_addr_1 = getelementptr [32 x i32]* %b_copy_8, i64 0, i64 %tmp_9
+
+ST_12: b_copy_8_load (541)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:30  %b_copy_8_load = load i32* %b_copy_8_addr_1, align 4
+
+
+ <State 13>: 8.05ns
+ST_13: a_row_7_2_load (95)  [1/1] 0.00ns
+.preheader7.preheader:7  %a_row_7_2_load = load i32* %a_row_7_2
+
+ST_13: tmp_27 (163)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:75  %tmp_27 = or i11 %tmp_1, 11
+
+ST_13: tmp_28 (164)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:76  %tmp_28 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_27)
+
+ST_13: a_addr_11 (165)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:77  %a_addr_11 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_28
+
+ST_13: a_row_10 (240)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:152  %a_row_10 = load i32* %a_addr_10, align 4
+
+ST_13: a_row_11 (241)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:153  %a_row_11 = load i32* %a_addr_11, align 4
+
+ST_13: a_row_7_1 (286)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:198  %a_row_7_1 = select i1 %tmp_3, i32 %a_row_7, i32 %a_row_7_2_load
+
+ST_13: StgValue_344 (318)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:230  store i32 %a_row_7_1, i32* %a_row_7_2
+
+ST_13: tmp_79 (360)  [1/1] 1.79ns  loc: matmul.c:38
+.preheader.preheader:32  %tmp_79 = add i9 %tmp_6_cast37_cast, -160
+
+ST_13: tmp_79_cast (361)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:33  %tmp_79_cast = zext i9 %tmp_79 to i64
+
+ST_13: b_addr_11 (362)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:34  %b_addr_11 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_79_cast
+
+ST_13: b_load_10 (443)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:115  %b_load_10 = load i32* %b_addr_10, align 4
+
+ST_13: b_copy_10_addr (444)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:116  %b_copy_10_addr = getelementptr [32 x i32]* %b_copy_10, i64 0, i64 %tmp_6
+
+ST_13: StgValue_350 (445)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:117  store i32 %b_load_10, i32* %b_copy_10_addr, align 4
+
+ST_13: b_load_11 (446)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:118  %b_load_11 = load i32* %b_addr_11, align 4
+
+ST_13: tmp_2_2 (524)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:13  %tmp_2_2 = mul nsw i32 %a_row_2_1, %b_copy_2_load
+
+ST_13: tmp_2_3 (527)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:16  %tmp_2_3 = mul nsw i32 %a_row_3_1, %b_copy_3_load
+
+ST_13: tmp_2_4 (530)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:19  %tmp_2_4 = mul nsw i32 %a_row_4_1, %b_copy_4_load
+
+ST_13: tmp_2_5 (533)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:22  %tmp_2_5 = mul nsw i32 %a_row_5_1, %b_copy_5_load
+
+ST_13: tmp_2_6 (536)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:25  %tmp_2_6 = mul nsw i32 %a_row_6_1, %b_copy_6_load
+
+ST_13: tmp_2_7 (539)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:28  %tmp_2_7 = mul nsw i32 %a_row_7_1, %b_copy_7_load
+
+ST_13: b_copy_8_load (541)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:30  %b_copy_8_load = load i32* %b_copy_8_addr_1, align 4
+
+ST_13: b_copy_9_addr_1 (543)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:32  %b_copy_9_addr_1 = getelementptr [32 x i32]* %b_copy_9, i64 0, i64 %tmp_9
+
+ST_13: b_copy_9_load (544)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:33  %b_copy_9_load = load i32* %b_copy_9_addr_1, align 4
+
+ST_13: tmp4 (612)  [1/1] 2.39ns  loc: matmul.c:43
+.loopexit:101  %tmp4 = add i32 %tmp_2_1, %tmp_s
+
+
+ <State 14>: 8.05ns
+ST_14: a_row_8_2_load (96)  [1/1] 0.00ns
+.preheader7.preheader:8  %a_row_8_2_load = load i32* %a_row_8_2
+
+ST_14: tmp_29 (166)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:78  %tmp_29 = or i11 %tmp_1, 12
+
+ST_14: tmp_30 (167)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:79  %tmp_30 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_29)
+
+ST_14: a_addr_12 (168)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:80  %a_addr_12 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_30
+
+ST_14: a_row_11 (241)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:153  %a_row_11 = load i32* %a_addr_11, align 4
+
+ST_14: a_row_12 (242)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:154  %a_row_12 = load i32* %a_addr_12, align 4
+
+ST_14: a_row_8_1 (285)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:197  %a_row_8_1 = select i1 %tmp_3, i32 %a_row_8, i32 %a_row_8_2_load
+
+ST_14: StgValue_369 (317)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:229  store i32 %a_row_8_1, i32* %a_row_8_2
+
+ST_14: tmp_80 (363)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:35  %tmp_80 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 6, i6 %j_mid2)
+
+ST_14: b_addr_12 (364)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:36  %b_addr_12 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_80
+
+ST_14: b_load_11 (446)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:118  %b_load_11 = load i32* %b_addr_11, align 4
+
+ST_14: b_copy_11_addr (447)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:119  %b_copy_11_addr = getelementptr [32 x i32]* %b_copy_11, i64 0, i64 %tmp_6
+
+ST_14: StgValue_374 (448)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:120  store i32 %b_load_11, i32* %b_copy_11_addr, align 4
+
+ST_14: b_load_12 (449)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:121  %b_load_12 = load i32* %b_addr_12, align 4
+
+ST_14: tmp_2_3 (527)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:16  %tmp_2_3 = mul nsw i32 %a_row_3_1, %b_copy_3_load
+
+ST_14: tmp_2_4 (530)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:19  %tmp_2_4 = mul nsw i32 %a_row_4_1, %b_copy_4_load
+
+ST_14: tmp_2_5 (533)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:22  %tmp_2_5 = mul nsw i32 %a_row_5_1, %b_copy_5_load
+
+ST_14: tmp_2_6 (536)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:25  %tmp_2_6 = mul nsw i32 %a_row_6_1, %b_copy_6_load
+
+ST_14: tmp_2_7 (539)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:28  %tmp_2_7 = mul nsw i32 %a_row_7_1, %b_copy_7_load
+
+ST_14: tmp_2_8 (542)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:31  %tmp_2_8 = mul nsw i32 %a_row_8_1, %b_copy_8_load
+
+ST_14: b_copy_9_load (544)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:33  %b_copy_9_load = load i32* %b_copy_9_addr_1, align 4
+
+ST_14: b_copy_10_addr_1 (546)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:35  %b_copy_10_addr_1 = getelementptr [32 x i32]* %b_copy_10, i64 0, i64 %tmp_9
+
+ST_14: b_copy_10_load (547)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:36  %b_copy_10_load = load i32* %b_copy_10_addr_1, align 4
+
+
+ <State 15>: 8.05ns
+ST_15: a_row_9_2_load (97)  [1/1] 0.00ns
+.preheader7.preheader:9  %a_row_9_2_load = load i32* %a_row_9_2
+
+ST_15: tmp_31 (169)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:81  %tmp_31 = or i11 %tmp_1, 13
+
+ST_15: tmp_32 (170)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:82  %tmp_32 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_31)
+
+ST_15: a_addr_13 (171)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:83  %a_addr_13 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_32
+
+ST_15: a_row_12 (242)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:154  %a_row_12 = load i32* %a_addr_12, align 4
+
+ST_15: a_row_13 (243)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:155  %a_row_13 = load i32* %a_addr_13, align 4
+
+ST_15: a_row_9_1 (284)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:196  %a_row_9_1 = select i1 %tmp_3, i32 %a_row_9, i32 %a_row_9_2_load
+
+ST_15: StgValue_392 (316)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:228  store i32 %a_row_9_1, i32* %a_row_9_2
+
+ST_15: tmp_81_cast1 (365)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:37  %tmp_81_cast1 = sext i8 %tmp_73 to i9
+
+ST_15: tmp_81_cast (366)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:38  %tmp_81_cast = zext i9 %tmp_81_cast1 to i64
+
+ST_15: b_addr_13 (367)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:39  %b_addr_13 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_81_cast
+
+ST_15: b_load_12 (449)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:121  %b_load_12 = load i32* %b_addr_12, align 4
+
+ST_15: b_copy_12_addr (450)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:122  %b_copy_12_addr = getelementptr [32 x i32]* %b_copy_12, i64 0, i64 %tmp_6
+
+ST_15: StgValue_398 (451)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:123  store i32 %b_load_12, i32* %b_copy_12_addr, align 4
+
+ST_15: b_load_13 (452)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:124  %b_load_13 = load i32* %b_addr_13, align 4
+
+ST_15: tmp_2_4 (530)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:19  %tmp_2_4 = mul nsw i32 %a_row_4_1, %b_copy_4_load
+
+ST_15: tmp_2_5 (533)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:22  %tmp_2_5 = mul nsw i32 %a_row_5_1, %b_copy_5_load
+
+ST_15: tmp_2_6 (536)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:25  %tmp_2_6 = mul nsw i32 %a_row_6_1, %b_copy_6_load
+
+ST_15: tmp_2_7 (539)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:28  %tmp_2_7 = mul nsw i32 %a_row_7_1, %b_copy_7_load
+
+ST_15: tmp_2_8 (542)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:31  %tmp_2_8 = mul nsw i32 %a_row_8_1, %b_copy_8_load
+
+ST_15: tmp_2_9 (545)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:34  %tmp_2_9 = mul nsw i32 %a_row_9_1, %b_copy_9_load
+
+ST_15: b_copy_10_load (547)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:36  %b_copy_10_load = load i32* %b_copy_10_addr_1, align 4
+
+ST_15: b_copy_11_addr_1 (549)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:38  %b_copy_11_addr_1 = getelementptr [32 x i32]* %b_copy_11, i64 0, i64 %tmp_9
+
+ST_15: b_copy_11_load (550)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:39  %b_copy_11_load = load i32* %b_copy_11_addr_1, align 4
+
+ST_15: tmp5 (613)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:102  %tmp5 = add i32 %tmp_2_3, %tmp_2_2
+
+ST_15: tmp3 (614)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:103  %tmp3 = add i32 %tmp4, %tmp5
+
+
+ <State 16>: 8.05ns
+ST_16: a_row_10_2_load (98)  [1/1] 0.00ns
+.preheader7.preheader:10  %a_row_10_2_load = load i32* %a_row_10_2
+
+ST_16: tmp_33 (172)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:84  %tmp_33 = or i11 %tmp_1, 14
+
+ST_16: tmp_34 (173)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:85  %tmp_34 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_33)
+
+ST_16: a_addr_14 (174)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:86  %a_addr_14 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_34
+
+ST_16: a_row_13 (243)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:155  %a_row_13 = load i32* %a_addr_13, align 4
+
+ST_16: a_row_14 (244)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:156  %a_row_14 = load i32* %a_addr_14, align 4
+
+ST_16: a_row_10_1 (283)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:195  %a_row_10_1 = select i1 %tmp_3, i32 %a_row_10, i32 %a_row_10_2_load
+
+ST_16: StgValue_418 (315)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:227  store i32 %a_row_10_1, i32* %a_row_10_2
+
+ST_16: tmp_81 (368)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:40  %tmp_81 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 7, i6 %j_mid2)
+
+ST_16: b_addr_14 (369)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:41  %b_addr_14 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_81
+
+ST_16: b_load_13 (452)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:124  %b_load_13 = load i32* %b_addr_13, align 4
+
+ST_16: b_copy_13_addr (453)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:125  %b_copy_13_addr = getelementptr [32 x i32]* %b_copy_13, i64 0, i64 %tmp_6
+
+ST_16: StgValue_423 (454)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:126  store i32 %b_load_13, i32* %b_copy_13_addr, align 4
+
+ST_16: b_load_14 (455)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:127  %b_load_14 = load i32* %b_addr_14, align 4
+
+ST_16: tmp_2_5 (533)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:22  %tmp_2_5 = mul nsw i32 %a_row_5_1, %b_copy_5_load
+
+ST_16: tmp_2_6 (536)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:25  %tmp_2_6 = mul nsw i32 %a_row_6_1, %b_copy_6_load
+
+ST_16: tmp_2_7 (539)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:28  %tmp_2_7 = mul nsw i32 %a_row_7_1, %b_copy_7_load
+
+ST_16: tmp_2_8 (542)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:31  %tmp_2_8 = mul nsw i32 %a_row_8_1, %b_copy_8_load
+
+ST_16: tmp_2_9 (545)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:34  %tmp_2_9 = mul nsw i32 %a_row_9_1, %b_copy_9_load
+
+ST_16: tmp_2_s (548)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:37  %tmp_2_s = mul nsw i32 %a_row_10_1, %b_copy_10_load
+
+ST_16: b_copy_11_load (550)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:39  %b_copy_11_load = load i32* %b_copy_11_addr_1, align 4
+
+ST_16: b_copy_12_addr_1 (552)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:41  %b_copy_12_addr_1 = getelementptr [32 x i32]* %b_copy_12, i64 0, i64 %tmp_9
+
+ST_16: b_copy_12_load (553)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:42  %b_copy_12_load = load i32* %b_copy_12_addr_1, align 4
+
+
+ <State 17>: 8.05ns
+ST_17: a_row_11_2_load (99)  [1/1] 0.00ns
+.preheader7.preheader:11  %a_row_11_2_load = load i32* %a_row_11_2
+
+ST_17: tmp_35 (175)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:87  %tmp_35 = or i11 %tmp_1, 15
+
+ST_17: tmp_36 (176)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:88  %tmp_36 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_35)
+
+ST_17: a_addr_15 (177)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:89  %a_addr_15 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_36
+
+ST_17: a_row_14 (244)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:156  %a_row_14 = load i32* %a_addr_14, align 4
+
+ST_17: a_row_15 (245)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:157  %a_row_15 = load i32* %a_addr_15, align 4
+
+ST_17: a_row_11_1 (282)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:194  %a_row_11_1 = select i1 %tmp_3, i32 %a_row_11, i32 %a_row_11_2_load
+
+ST_17: StgValue_441 (314)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:226  store i32 %a_row_11_1, i32* %a_row_11_2
+
+ST_17: tmp_6_cast2 (330)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:2  %tmp_6_cast2 = zext i6 %j_mid2 to i10
+
+ST_17: tmp_82 (370)  [1/1] 1.79ns  loc: matmul.c:38
+.preheader.preheader:42  %tmp_82 = add i10 %tmp_6_cast2, 480
+
+ST_17: tmp_83_cast (371)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:43  %tmp_83_cast = zext i10 %tmp_82 to i64
+
+ST_17: b_addr_15 (372)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:44  %b_addr_15 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_83_cast
+
+ST_17: b_load_14 (455)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:127  %b_load_14 = load i32* %b_addr_14, align 4
+
+ST_17: b_copy_14_addr (456)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:128  %b_copy_14_addr = getelementptr [32 x i32]* %b_copy_14, i64 0, i64 %tmp_6
+
+ST_17: StgValue_448 (457)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:129  store i32 %b_load_14, i32* %b_copy_14_addr, align 4
+
+ST_17: b_load_15 (458)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:130  %b_load_15 = load i32* %b_addr_15, align 4
+
+ST_17: tmp_2_6 (536)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:25  %tmp_2_6 = mul nsw i32 %a_row_6_1, %b_copy_6_load
+
+ST_17: tmp_2_7 (539)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:28  %tmp_2_7 = mul nsw i32 %a_row_7_1, %b_copy_7_load
+
+ST_17: tmp_2_8 (542)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:31  %tmp_2_8 = mul nsw i32 %a_row_8_1, %b_copy_8_load
+
+ST_17: tmp_2_9 (545)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:34  %tmp_2_9 = mul nsw i32 %a_row_9_1, %b_copy_9_load
+
+ST_17: tmp_2_s (548)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:37  %tmp_2_s = mul nsw i32 %a_row_10_1, %b_copy_10_load
+
+ST_17: tmp_2_10 (551)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:40  %tmp_2_10 = mul nsw i32 %a_row_11_1, %b_copy_11_load
+
+ST_17: b_copy_12_load (553)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:42  %b_copy_12_load = load i32* %b_copy_12_addr_1, align 4
+
+ST_17: b_copy_13_addr_1 (555)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:44  %b_copy_13_addr_1 = getelementptr [32 x i32]* %b_copy_13, i64 0, i64 %tmp_9
+
+ST_17: b_copy_13_load (556)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:45  %b_copy_13_load = load i32* %b_copy_13_addr_1, align 4
+
+ST_17: tmp7 (615)  [1/1] 2.39ns  loc: matmul.c:43
+.loopexit:104  %tmp7 = add i32 %tmp_2_5, %tmp_2_4
+
+
+ <State 18>: 8.05ns
+ST_18: a_row_12_2_load (100)  [1/1] 0.00ns
+.preheader7.preheader:12  %a_row_12_2_load = load i32* %a_row_12_2
+
+ST_18: tmp_37 (178)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:90  %tmp_37 = or i11 %tmp_1, 16
+
+ST_18: tmp_38 (179)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:91  %tmp_38 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_37)
+
+ST_18: a_addr_16 (180)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:92  %a_addr_16 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_38
+
+ST_18: a_row_15 (245)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:157  %a_row_15 = load i32* %a_addr_15, align 4
+
+ST_18: a_row_16 (246)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:158  %a_row_16 = load i32* %a_addr_16, align 4
+
+ST_18: a_row_12_1 (281)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:193  %a_row_12_1 = select i1 %tmp_3, i32 %a_row_12, i32 %a_row_12_2_load
+
+ST_18: StgValue_467 (313)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:225  store i32 %a_row_12_1, i32* %a_row_12_2
+
+ST_18: tmp_83 (373)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:45  %tmp_83 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 8, i6 %j_mid2)
+
+ST_18: b_addr_16 (374)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:46  %b_addr_16 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_83
+
+ST_18: b_load_15 (458)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:130  %b_load_15 = load i32* %b_addr_15, align 4
+
+ST_18: b_copy_15_addr (459)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:131  %b_copy_15_addr = getelementptr [32 x i32]* %b_copy_15, i64 0, i64 %tmp_6
+
+ST_18: StgValue_472 (460)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:132  store i32 %b_load_15, i32* %b_copy_15_addr, align 4
+
+ST_18: b_load_16 (461)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:133  %b_load_16 = load i32* %b_addr_16, align 4
+
+ST_18: tmp_2_7 (539)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:28  %tmp_2_7 = mul nsw i32 %a_row_7_1, %b_copy_7_load
+
+ST_18: tmp_2_8 (542)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:31  %tmp_2_8 = mul nsw i32 %a_row_8_1, %b_copy_8_load
+
+ST_18: tmp_2_9 (545)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:34  %tmp_2_9 = mul nsw i32 %a_row_9_1, %b_copy_9_load
+
+ST_18: tmp_2_s (548)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:37  %tmp_2_s = mul nsw i32 %a_row_10_1, %b_copy_10_load
+
+ST_18: tmp_2_10 (551)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:40  %tmp_2_10 = mul nsw i32 %a_row_11_1, %b_copy_11_load
+
+ST_18: tmp_2_11 (554)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:43  %tmp_2_11 = mul nsw i32 %a_row_12_1, %b_copy_12_load
+
+ST_18: b_copy_13_load (556)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:45  %b_copy_13_load = load i32* %b_copy_13_addr_1, align 4
+
+ST_18: b_copy_14_addr_1 (558)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:47  %b_copy_14_addr_1 = getelementptr [32 x i32]* %b_copy_14, i64 0, i64 %tmp_9
+
+ST_18: b_copy_14_load (559)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:48  %b_copy_14_load = load i32* %b_copy_14_addr_1, align 4
+
+
+ <State 19>: 8.05ns
+ST_19: a_row_13_2_load (101)  [1/1] 0.00ns
+.preheader7.preheader:13  %a_row_13_2_load = load i32* %a_row_13_2
+
+ST_19: tmp_39 (181)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:93  %tmp_39 = or i11 %tmp_1, 17
+
+ST_19: tmp_40 (182)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:94  %tmp_40 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_39)
+
+ST_19: a_addr_17 (183)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:95  %a_addr_17 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_40
+
+ST_19: a_row_16 (246)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:158  %a_row_16 = load i32* %a_addr_16, align 4
+
+ST_19: a_row_17 (247)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:159  %a_row_17 = load i32* %a_addr_17, align 4
+
+ST_19: a_row_13_1 (280)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:192  %a_row_13_1 = select i1 %tmp_3, i32 %a_row_13, i32 %a_row_13_2_load
+
+ST_19: StgValue_490 (312)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:224  store i32 %a_row_13_1, i32* %a_row_13_2
+
+ST_19: tmp_84 (375)  [1/1] 1.79ns  loc: matmul.c:38
+.preheader.preheader:47  %tmp_84 = add i10 %tmp_6_cast2, -480
+
+ST_19: tmp_85_cast (376)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:48  %tmp_85_cast = zext i10 %tmp_84 to i64
+
+ST_19: b_addr_17 (377)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:49  %b_addr_17 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_85_cast
+
+ST_19: b_load_16 (461)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:133  %b_load_16 = load i32* %b_addr_16, align 4
+
+ST_19: b_copy_16_addr (462)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:134  %b_copy_16_addr = getelementptr [32 x i32]* %b_copy_16, i64 0, i64 %tmp_6
+
+ST_19: StgValue_496 (463)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:135  store i32 %b_load_16, i32* %b_copy_16_addr, align 4
+
+ST_19: b_load_17 (464)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:136  %b_load_17 = load i32* %b_addr_17, align 4
+
+ST_19: tmp_2_8 (542)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:31  %tmp_2_8 = mul nsw i32 %a_row_8_1, %b_copy_8_load
+
+ST_19: tmp_2_9 (545)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:34  %tmp_2_9 = mul nsw i32 %a_row_9_1, %b_copy_9_load
+
+ST_19: tmp_2_s (548)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:37  %tmp_2_s = mul nsw i32 %a_row_10_1, %b_copy_10_load
+
+ST_19: tmp_2_10 (551)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:40  %tmp_2_10 = mul nsw i32 %a_row_11_1, %b_copy_11_load
+
+ST_19: tmp_2_11 (554)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:43  %tmp_2_11 = mul nsw i32 %a_row_12_1, %b_copy_12_load
+
+ST_19: tmp_2_12 (557)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:46  %tmp_2_12 = mul nsw i32 %a_row_13_1, %b_copy_13_load
+
+ST_19: b_copy_14_load (559)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:48  %b_copy_14_load = load i32* %b_copy_14_addr_1, align 4
+
+ST_19: b_copy_15_addr_1 (561)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:50  %b_copy_15_addr_1 = getelementptr [32 x i32]* %b_copy_15, i64 0, i64 %tmp_9
+
+ST_19: b_copy_15_load (562)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:51  %b_copy_15_load = load i32* %b_copy_15_addr_1, align 4
+
+ST_19: tmp8 (616)  [1/1] 2.39ns  loc: matmul.c:43
+.loopexit:105  %tmp8 = add i32 %tmp_2_7, %tmp_2_6
+
+ST_19: tmp6 (617)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:106  %tmp6 = add i32 %tmp7, %tmp8
+
+ST_19: tmp2 (618)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:107  %tmp2 = add i32 %tmp3, %tmp6
+
+
+ <State 20>: 8.05ns
+ST_20: a_row_14_2_load (102)  [1/1] 0.00ns
+.preheader7.preheader:14  %a_row_14_2_load = load i32* %a_row_14_2
+
+ST_20: tmp_41 (184)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:96  %tmp_41 = or i11 %tmp_1, 18
+
+ST_20: tmp_42 (185)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:97  %tmp_42 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_41)
+
+ST_20: a_addr_18 (186)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:98  %a_addr_18 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_42
+
+ST_20: a_row_17 (247)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:159  %a_row_17 = load i32* %a_addr_17, align 4
+
+ST_20: a_row_18 (248)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:160  %a_row_18 = load i32* %a_addr_18, align 4
+
+ST_20: a_row_14_1 (279)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:191  %a_row_14_1 = select i1 %tmp_3, i32 %a_row_14, i32 %a_row_14_2_load
+
+ST_20: StgValue_517 (311)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:223  store i32 %a_row_14_1, i32* %a_row_14_2
+
+ST_20: tmp_85 (378)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:50  %tmp_85 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 9, i6 %j_mid2)
+
+ST_20: b_addr_18 (379)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:51  %b_addr_18 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_85
+
+ST_20: b_load_17 (464)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:136  %b_load_17 = load i32* %b_addr_17, align 4
+
+ST_20: b_copy_17_addr (465)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:137  %b_copy_17_addr = getelementptr [32 x i32]* %b_copy_17, i64 0, i64 %tmp_6
+
+ST_20: StgValue_522 (466)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:138  store i32 %b_load_17, i32* %b_copy_17_addr, align 4
+
+ST_20: b_load_18 (467)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:139  %b_load_18 = load i32* %b_addr_18, align 4
+
+ST_20: tmp_2_9 (545)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:34  %tmp_2_9 = mul nsw i32 %a_row_9_1, %b_copy_9_load
+
+ST_20: tmp_2_s (548)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:37  %tmp_2_s = mul nsw i32 %a_row_10_1, %b_copy_10_load
+
+ST_20: tmp_2_10 (551)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:40  %tmp_2_10 = mul nsw i32 %a_row_11_1, %b_copy_11_load
+
+ST_20: tmp_2_11 (554)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:43  %tmp_2_11 = mul nsw i32 %a_row_12_1, %b_copy_12_load
+
+ST_20: tmp_2_12 (557)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:46  %tmp_2_12 = mul nsw i32 %a_row_13_1, %b_copy_13_load
+
+ST_20: tmp_2_13 (560)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:49  %tmp_2_13 = mul nsw i32 %a_row_14_1, %b_copy_14_load
+
+ST_20: b_copy_15_load (562)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:51  %b_copy_15_load = load i32* %b_copy_15_addr_1, align 4
+
+ST_20: b_copy_16_addr_1 (564)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:53  %b_copy_16_addr_1 = getelementptr [32 x i32]* %b_copy_16, i64 0, i64 %tmp_9
+
+ST_20: b_copy_16_load (565)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:54  %b_copy_16_load = load i32* %b_copy_16_addr_1, align 4
+
+
+ <State 21>: 8.05ns
+ST_21: a_row_15_2_load (103)  [1/1] 0.00ns
+.preheader7.preheader:15  %a_row_15_2_load = load i32* %a_row_15_2
+
+ST_21: tmp_43 (187)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:99  %tmp_43 = or i11 %tmp_1, 19
+
+ST_21: tmp_44 (188)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:100  %tmp_44 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_43)
+
+ST_21: a_addr_19 (189)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:101  %a_addr_19 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_44
+
+ST_21: a_row_18 (248)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:160  %a_row_18 = load i32* %a_addr_18, align 4
+
+ST_21: a_row_19 (249)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:161  %a_row_19 = load i32* %a_addr_19, align 4
+
+ST_21: a_row_15_1 (278)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:190  %a_row_15_1 = select i1 %tmp_3, i32 %a_row_15, i32 %a_row_15_2_load
+
+ST_21: StgValue_540 (310)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:222  store i32 %a_row_15_1, i32* %a_row_15_2
+
+ST_21: tmp_86 (380)  [1/1] 1.79ns  loc: matmul.c:38
+.preheader.preheader:52  %tmp_86 = add i10 %tmp_6_cast2, -416
+
+ST_21: tmp_87_cast (381)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:53  %tmp_87_cast = zext i10 %tmp_86 to i64
+
+ST_21: b_addr_19 (382)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:54  %b_addr_19 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_87_cast
+
+ST_21: b_load_18 (467)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:139  %b_load_18 = load i32* %b_addr_18, align 4
+
+ST_21: b_copy_18_addr (468)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:140  %b_copy_18_addr = getelementptr [32 x i32]* %b_copy_18, i64 0, i64 %tmp_6
+
+ST_21: StgValue_546 (469)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:141  store i32 %b_load_18, i32* %b_copy_18_addr, align 4
+
+ST_21: b_load_19 (470)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:142  %b_load_19 = load i32* %b_addr_19, align 4
+
+ST_21: tmp_2_s (548)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:37  %tmp_2_s = mul nsw i32 %a_row_10_1, %b_copy_10_load
+
+ST_21: tmp_2_10 (551)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:40  %tmp_2_10 = mul nsw i32 %a_row_11_1, %b_copy_11_load
+
+ST_21: tmp_2_11 (554)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:43  %tmp_2_11 = mul nsw i32 %a_row_12_1, %b_copy_12_load
+
+ST_21: tmp_2_12 (557)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:46  %tmp_2_12 = mul nsw i32 %a_row_13_1, %b_copy_13_load
+
+ST_21: tmp_2_13 (560)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:49  %tmp_2_13 = mul nsw i32 %a_row_14_1, %b_copy_14_load
+
+ST_21: tmp_2_14 (563)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:52  %tmp_2_14 = mul nsw i32 %a_row_15_1, %b_copy_15_load
+
+ST_21: b_copy_16_load (565)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:54  %b_copy_16_load = load i32* %b_copy_16_addr_1, align 4
+
+ST_21: b_copy_17_addr_1 (567)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:56  %b_copy_17_addr_1 = getelementptr [32 x i32]* %b_copy_17, i64 0, i64 %tmp_9
+
+ST_21: b_copy_17_load (568)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:57  %b_copy_17_load = load i32* %b_copy_17_addr_1, align 4
+
+ST_21: tmp11 (619)  [1/1] 2.39ns  loc: matmul.c:43
+.loopexit:108  %tmp11 = add i32 %tmp_2_9, %tmp_2_8
+
+
+ <State 22>: 8.05ns
+ST_22: a_row_16_2_load (104)  [1/1] 0.00ns
+.preheader7.preheader:16  %a_row_16_2_load = load i32* %a_row_16_2
+
+ST_22: tmp_45 (190)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:102  %tmp_45 = or i11 %tmp_1, 20
+
+ST_22: tmp_46 (191)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:103  %tmp_46 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_45)
+
+ST_22: a_addr_20 (192)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:104  %a_addr_20 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_46
+
+ST_22: a_row_19 (249)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:161  %a_row_19 = load i32* %a_addr_19, align 4
+
+ST_22: a_row_20 (250)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:162  %a_row_20 = load i32* %a_addr_20, align 4
+
+ST_22: a_row_16_1 (277)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:189  %a_row_16_1 = select i1 %tmp_3, i32 %a_row_16, i32 %a_row_16_2_load
+
+ST_22: StgValue_565 (309)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:221  store i32 %a_row_16_1, i32* %a_row_16_2
+
+ST_22: tmp_87 (383)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:55  %tmp_87 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 10, i6 %j_mid2)
+
+ST_22: b_addr_20 (384)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:56  %b_addr_20 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_87
+
+ST_22: b_load_19 (470)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:142  %b_load_19 = load i32* %b_addr_19, align 4
+
+ST_22: b_copy_19_addr (471)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:143  %b_copy_19_addr = getelementptr [32 x i32]* %b_copy_19, i64 0, i64 %tmp_6
+
+ST_22: StgValue_570 (472)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:144  store i32 %b_load_19, i32* %b_copy_19_addr, align 4
+
+ST_22: b_load_20 (473)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:145  %b_load_20 = load i32* %b_addr_20, align 4
+
+ST_22: tmp_2_10 (551)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:40  %tmp_2_10 = mul nsw i32 %a_row_11_1, %b_copy_11_load
+
+ST_22: tmp_2_11 (554)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:43  %tmp_2_11 = mul nsw i32 %a_row_12_1, %b_copy_12_load
+
+ST_22: tmp_2_12 (557)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:46  %tmp_2_12 = mul nsw i32 %a_row_13_1, %b_copy_13_load
+
+ST_22: tmp_2_13 (560)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:49  %tmp_2_13 = mul nsw i32 %a_row_14_1, %b_copy_14_load
+
+ST_22: tmp_2_14 (563)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:52  %tmp_2_14 = mul nsw i32 %a_row_15_1, %b_copy_15_load
+
+ST_22: tmp_2_15 (566)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:55  %tmp_2_15 = mul nsw i32 %a_row_16_1, %b_copy_16_load
+
+ST_22: b_copy_17_load (568)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:57  %b_copy_17_load = load i32* %b_copy_17_addr_1, align 4
+
+ST_22: b_copy_18_addr_1 (570)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:59  %b_copy_18_addr_1 = getelementptr [32 x i32]* %b_copy_18, i64 0, i64 %tmp_9
+
+ST_22: b_copy_18_load (571)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:60  %b_copy_18_load = load i32* %b_copy_18_addr_1, align 4
+
+
+ <State 23>: 8.05ns
+ST_23: a_row_17_2_load (105)  [1/1] 0.00ns
+.preheader7.preheader:17  %a_row_17_2_load = load i32* %a_row_17_2
+
+ST_23: tmp_47 (193)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:105  %tmp_47 = or i11 %tmp_1, 21
+
+ST_23: tmp_48 (194)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:106  %tmp_48 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_47)
+
+ST_23: a_addr_21 (195)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:107  %a_addr_21 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_48
+
+ST_23: a_row_20 (250)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:162  %a_row_20 = load i32* %a_addr_20, align 4
+
+ST_23: a_row_21 (251)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:163  %a_row_21 = load i32* %a_addr_21, align 4
+
+ST_23: a_row_17_1 (276)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:188  %a_row_17_1 = select i1 %tmp_3, i32 %a_row_17, i32 %a_row_17_2_load
+
+ST_23: StgValue_588 (308)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:220  store i32 %a_row_17_1, i32* %a_row_17_2
+
+ST_23: tmp_88 (385)  [1/1] 1.79ns  loc: matmul.c:38
+.preheader.preheader:57  %tmp_88 = add i10 %tmp_6_cast2, -352
+
+ST_23: tmp_89_cast (386)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:58  %tmp_89_cast = zext i10 %tmp_88 to i64
+
+ST_23: b_addr_21 (387)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:59  %b_addr_21 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_89_cast
+
+ST_23: b_load_20 (473)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:145  %b_load_20 = load i32* %b_addr_20, align 4
+
+ST_23: b_copy_20_addr (474)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:146  %b_copy_20_addr = getelementptr [32 x i32]* %b_copy_20, i64 0, i64 %tmp_6
+
+ST_23: StgValue_594 (475)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:147  store i32 %b_load_20, i32* %b_copy_20_addr, align 4
+
+ST_23: b_load_21 (476)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:148  %b_load_21 = load i32* %b_addr_21, align 4
+
+ST_23: tmp_2_11 (554)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:43  %tmp_2_11 = mul nsw i32 %a_row_12_1, %b_copy_12_load
+
+ST_23: tmp_2_12 (557)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:46  %tmp_2_12 = mul nsw i32 %a_row_13_1, %b_copy_13_load
+
+ST_23: tmp_2_13 (560)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:49  %tmp_2_13 = mul nsw i32 %a_row_14_1, %b_copy_14_load
+
+ST_23: tmp_2_14 (563)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:52  %tmp_2_14 = mul nsw i32 %a_row_15_1, %b_copy_15_load
+
+ST_23: tmp_2_15 (566)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:55  %tmp_2_15 = mul nsw i32 %a_row_16_1, %b_copy_16_load
+
+ST_23: tmp_2_16 (569)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:58  %tmp_2_16 = mul nsw i32 %a_row_17_1, %b_copy_17_load
+
+ST_23: b_copy_18_load (571)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:60  %b_copy_18_load = load i32* %b_copy_18_addr_1, align 4
+
+ST_23: b_copy_19_addr_1 (573)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:62  %b_copy_19_addr_1 = getelementptr [32 x i32]* %b_copy_19, i64 0, i64 %tmp_9
+
+ST_23: b_copy_19_load (574)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:63  %b_copy_19_load = load i32* %b_copy_19_addr_1, align 4
+
+ST_23: tmp12 (620)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:109  %tmp12 = add i32 %tmp_2_10, %tmp_2_s
+
+ST_23: tmp10 (621)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:110  %tmp10 = add i32 %tmp11, %tmp12
+
+
+ <State 24>: 8.05ns
+ST_24: a_row_18_2_load (106)  [1/1] 0.00ns
+.preheader7.preheader:18  %a_row_18_2_load = load i32* %a_row_18_2
+
+ST_24: tmp_49 (196)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:108  %tmp_49 = or i11 %tmp_1, 22
+
+ST_24: tmp_50 (197)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:109  %tmp_50 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_49)
+
+ST_24: a_addr_22 (198)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:110  %a_addr_22 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_50
+
+ST_24: a_row_21 (251)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:163  %a_row_21 = load i32* %a_addr_21, align 4
+
+ST_24: a_row_22 (252)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:164  %a_row_22 = load i32* %a_addr_22, align 4
+
+ST_24: a_row_18_1 (275)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:187  %a_row_18_1 = select i1 %tmp_3, i32 %a_row_18, i32 %a_row_18_2_load
+
+ST_24: StgValue_614 (307)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:219  store i32 %a_row_18_1, i32* %a_row_18_2
+
+ST_24: tmp_89 (388)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:60  %tmp_89 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 11, i6 %j_mid2)
+
+ST_24: b_addr_22 (389)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:61  %b_addr_22 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_89
+
+ST_24: b_load_21 (476)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:148  %b_load_21 = load i32* %b_addr_21, align 4
+
+ST_24: b_copy_21_addr (477)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:149  %b_copy_21_addr = getelementptr [32 x i32]* %b_copy_21, i64 0, i64 %tmp_6
+
+ST_24: StgValue_619 (478)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:150  store i32 %b_load_21, i32* %b_copy_21_addr, align 4
+
+ST_24: b_load_22 (479)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:151  %b_load_22 = load i32* %b_addr_22, align 4
+
+ST_24: tmp_2_12 (557)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:46  %tmp_2_12 = mul nsw i32 %a_row_13_1, %b_copy_13_load
+
+ST_24: tmp_2_13 (560)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:49  %tmp_2_13 = mul nsw i32 %a_row_14_1, %b_copy_14_load
+
+ST_24: tmp_2_14 (563)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:52  %tmp_2_14 = mul nsw i32 %a_row_15_1, %b_copy_15_load
+
+ST_24: tmp_2_15 (566)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:55  %tmp_2_15 = mul nsw i32 %a_row_16_1, %b_copy_16_load
+
+ST_24: tmp_2_16 (569)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:58  %tmp_2_16 = mul nsw i32 %a_row_17_1, %b_copy_17_load
+
+ST_24: tmp_2_17 (572)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:61  %tmp_2_17 = mul nsw i32 %a_row_18_1, %b_copy_18_load
+
+ST_24: b_copy_19_load (574)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:63  %b_copy_19_load = load i32* %b_copy_19_addr_1, align 4
+
+ST_24: b_copy_20_addr_1 (576)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:65  %b_copy_20_addr_1 = getelementptr [32 x i32]* %b_copy_20, i64 0, i64 %tmp_9
+
+ST_24: b_copy_20_load (577)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:66  %b_copy_20_load = load i32* %b_copy_20_addr_1, align 4
+
+
+ <State 25>: 8.05ns
+ST_25: a_row_19_2_load (107)  [1/1] 0.00ns
+.preheader7.preheader:19  %a_row_19_2_load = load i32* %a_row_19_2
+
+ST_25: tmp_51 (199)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:111  %tmp_51 = or i11 %tmp_1, 23
+
+ST_25: tmp_52 (200)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:112  %tmp_52 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_51)
+
+ST_25: a_addr_23 (201)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:113  %a_addr_23 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_52
+
+ST_25: a_row_22 (252)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:164  %a_row_22 = load i32* %a_addr_22, align 4
+
+ST_25: a_row_23 (253)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:165  %a_row_23 = load i32* %a_addr_23, align 4
+
+ST_25: a_row_19_1 (274)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:186  %a_row_19_1 = select i1 %tmp_3, i32 %a_row_19, i32 %a_row_19_2_load
+
+ST_25: StgValue_637 (306)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:218  store i32 %a_row_19_1, i32* %a_row_19_2
+
+ST_25: tmp_90 (390)  [1/1] 1.79ns  loc: matmul.c:38
+.preheader.preheader:62  %tmp_90 = add i10 %tmp_6_cast2, -288
+
+ST_25: tmp_91_cast (391)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:63  %tmp_91_cast = zext i10 %tmp_90 to i64
+
+ST_25: b_addr_23 (392)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:64  %b_addr_23 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_91_cast
+
+ST_25: b_load_22 (479)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:151  %b_load_22 = load i32* %b_addr_22, align 4
+
+ST_25: b_copy_22_addr (480)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:152  %b_copy_22_addr = getelementptr [32 x i32]* %b_copy_22, i64 0, i64 %tmp_6
+
+ST_25: StgValue_643 (481)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:153  store i32 %b_load_22, i32* %b_copy_22_addr, align 4
+
+ST_25: b_load_23 (482)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:154  %b_load_23 = load i32* %b_addr_23, align 4
+
+ST_25: tmp_2_13 (560)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:49  %tmp_2_13 = mul nsw i32 %a_row_14_1, %b_copy_14_load
+
+ST_25: tmp_2_14 (563)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:52  %tmp_2_14 = mul nsw i32 %a_row_15_1, %b_copy_15_load
+
+ST_25: tmp_2_15 (566)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:55  %tmp_2_15 = mul nsw i32 %a_row_16_1, %b_copy_16_load
+
+ST_25: tmp_2_16 (569)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:58  %tmp_2_16 = mul nsw i32 %a_row_17_1, %b_copy_17_load
+
+ST_25: tmp_2_17 (572)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:61  %tmp_2_17 = mul nsw i32 %a_row_18_1, %b_copy_18_load
+
+ST_25: tmp_2_18 (575)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:64  %tmp_2_18 = mul nsw i32 %a_row_19_1, %b_copy_19_load
+
+ST_25: b_copy_20_load (577)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:66  %b_copy_20_load = load i32* %b_copy_20_addr_1, align 4
+
+ST_25: b_copy_21_addr_1 (579)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:68  %b_copy_21_addr_1 = getelementptr [32 x i32]* %b_copy_21, i64 0, i64 %tmp_9
+
+ST_25: b_copy_21_load (580)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:69  %b_copy_21_load = load i32* %b_copy_21_addr_1, align 4
+
+ST_25: tmp14 (622)  [1/1] 2.39ns  loc: matmul.c:43
+.loopexit:111  %tmp14 = add i32 %tmp_2_12, %tmp_2_11
+
+
+ <State 26>: 8.05ns
+ST_26: a_row_20_2_load (108)  [1/1] 0.00ns
+.preheader7.preheader:20  %a_row_20_2_load = load i32* %a_row_20_2
+
+ST_26: tmp_53 (202)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:114  %tmp_53 = or i11 %tmp_1, 24
+
+ST_26: tmp_54 (203)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:115  %tmp_54 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_53)
+
+ST_26: a_addr_24 (204)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:116  %a_addr_24 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_54
+
+ST_26: a_row_23 (253)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:165  %a_row_23 = load i32* %a_addr_23, align 4
+
+ST_26: a_row_24 (254)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:166  %a_row_24 = load i32* %a_addr_24, align 4
+
+ST_26: a_row_20_1 (273)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:185  %a_row_20_1 = select i1 %tmp_3, i32 %a_row_20, i32 %a_row_20_2_load
+
+ST_26: StgValue_662 (305)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:217  store i32 %a_row_20_1, i32* %a_row_20_2
+
+ST_26: tmp_91 (393)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:65  %tmp_91 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 12, i6 %j_mid2)
+
+ST_26: b_addr_24 (394)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:66  %b_addr_24 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_91
+
+ST_26: b_load_23 (482)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:154  %b_load_23 = load i32* %b_addr_23, align 4
+
+ST_26: b_copy_23_addr (483)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:155  %b_copy_23_addr = getelementptr [32 x i32]* %b_copy_23, i64 0, i64 %tmp_6
+
+ST_26: StgValue_667 (484)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:156  store i32 %b_load_23, i32* %b_copy_23_addr, align 4
+
+ST_26: b_load_24 (485)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:157  %b_load_24 = load i32* %b_addr_24, align 4
+
+ST_26: tmp_2_14 (563)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:52  %tmp_2_14 = mul nsw i32 %a_row_15_1, %b_copy_15_load
+
+ST_26: tmp_2_15 (566)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:55  %tmp_2_15 = mul nsw i32 %a_row_16_1, %b_copy_16_load
+
+ST_26: tmp_2_16 (569)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:58  %tmp_2_16 = mul nsw i32 %a_row_17_1, %b_copy_17_load
+
+ST_26: tmp_2_17 (572)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:61  %tmp_2_17 = mul nsw i32 %a_row_18_1, %b_copy_18_load
+
+ST_26: tmp_2_18 (575)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:64  %tmp_2_18 = mul nsw i32 %a_row_19_1, %b_copy_19_load
+
+ST_26: tmp_2_19 (578)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:67  %tmp_2_19 = mul nsw i32 %a_row_20_1, %b_copy_20_load
+
+ST_26: b_copy_21_load (580)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:69  %b_copy_21_load = load i32* %b_copy_21_addr_1, align 4
+
+ST_26: b_copy_22_addr_1 (582)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:71  %b_copy_22_addr_1 = getelementptr [32 x i32]* %b_copy_22, i64 0, i64 %tmp_9
+
+ST_26: b_copy_22_load (583)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:72  %b_copy_22_load = load i32* %b_copy_22_addr_1, align 4
+
+
+ <State 27>: 8.05ns
+ST_27: a_row_21_2_load (109)  [1/1] 0.00ns
+.preheader7.preheader:21  %a_row_21_2_load = load i32* %a_row_21_2
+
+ST_27: tmp_55 (205)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:117  %tmp_55 = or i11 %tmp_1, 25
+
+ST_27: tmp_56 (206)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:118  %tmp_56 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_55)
+
+ST_27: a_addr_25 (207)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:119  %a_addr_25 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_56
+
+ST_27: a_row_24 (254)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:166  %a_row_24 = load i32* %a_addr_24, align 4
+
+ST_27: a_row_25 (255)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:167  %a_row_25 = load i32* %a_addr_25, align 4
+
+ST_27: a_row_21_1 (272)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:184  %a_row_21_1 = select i1 %tmp_3, i32 %a_row_21, i32 %a_row_21_2_load
+
+ST_27: StgValue_685 (304)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:216  store i32 %a_row_21_1, i32* %a_row_21_2
+
+ST_27: tmp_93_cast1 (395)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:67  %tmp_93_cast1 = sext i9 %tmp_77 to i10
+
+ST_27: tmp_93_cast (396)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:68  %tmp_93_cast = zext i10 %tmp_93_cast1 to i64
+
+ST_27: b_addr_25 (397)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:69  %b_addr_25 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_93_cast
+
+ST_27: b_load_24 (485)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:157  %b_load_24 = load i32* %b_addr_24, align 4
+
+ST_27: b_copy_24_addr (486)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:158  %b_copy_24_addr = getelementptr [32 x i32]* %b_copy_24, i64 0, i64 %tmp_6
+
+ST_27: StgValue_691 (487)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:159  store i32 %b_load_24, i32* %b_copy_24_addr, align 4
+
+ST_27: b_load_25 (488)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:160  %b_load_25 = load i32* %b_addr_25, align 4
+
+ST_27: tmp_2_15 (566)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:55  %tmp_2_15 = mul nsw i32 %a_row_16_1, %b_copy_16_load
+
+ST_27: tmp_2_16 (569)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:58  %tmp_2_16 = mul nsw i32 %a_row_17_1, %b_copy_17_load
+
+ST_27: tmp_2_17 (572)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:61  %tmp_2_17 = mul nsw i32 %a_row_18_1, %b_copy_18_load
+
+ST_27: tmp_2_18 (575)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:64  %tmp_2_18 = mul nsw i32 %a_row_19_1, %b_copy_19_load
+
+ST_27: tmp_2_19 (578)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:67  %tmp_2_19 = mul nsw i32 %a_row_20_1, %b_copy_20_load
+
+ST_27: tmp_2_20 (581)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:70  %tmp_2_20 = mul nsw i32 %a_row_21_1, %b_copy_21_load
+
+ST_27: b_copy_22_load (583)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:72  %b_copy_22_load = load i32* %b_copy_22_addr_1, align 4
+
+ST_27: b_copy_23_addr_1 (585)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:74  %b_copy_23_addr_1 = getelementptr [32 x i32]* %b_copy_23, i64 0, i64 %tmp_9
+
+ST_27: b_copy_23_load (586)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:75  %b_copy_23_load = load i32* %b_copy_23_addr_1, align 4
+
+ST_27: tmp15 (623)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:112  %tmp15 = add i32 %tmp_2_14, %tmp_2_13
+
+ST_27: tmp13 (624)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:113  %tmp13 = add i32 %tmp14, %tmp15
+
+ST_27: tmp9 (625)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:114  %tmp9 = add i32 %tmp10, %tmp13
+
+ST_27: tmp1 (626)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:115  %tmp1 = add i32 %tmp2, %tmp9
+
+
+ <State 28>: 8.05ns
+ST_28: a_row_22_2_load (110)  [1/1] 0.00ns
+.preheader7.preheader:22  %a_row_22_2_load = load i32* %a_row_22_2
+
+ST_28: tmp_57 (208)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:120  %tmp_57 = or i11 %tmp_1, 26
+
+ST_28: tmp_58 (209)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:121  %tmp_58 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_57)
+
+ST_28: a_addr_26 (210)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:122  %a_addr_26 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_58
+
+ST_28: a_row_25 (255)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:167  %a_row_25 = load i32* %a_addr_25, align 4
+
+ST_28: a_row_26 (256)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:168  %a_row_26 = load i32* %a_addr_26, align 4
+
+ST_28: a_row_22_1 (271)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:183  %a_row_22_1 = select i1 %tmp_3, i32 %a_row_22, i32 %a_row_22_2_load
+
+ST_28: StgValue_713 (303)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:215  store i32 %a_row_22_1, i32* %a_row_22_2
+
+ST_28: tmp_92 (398)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:70  %tmp_92 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 13, i6 %j_mid2)
+
+ST_28: b_addr_26 (399)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:71  %b_addr_26 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_92
+
+ST_28: b_load_25 (488)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:160  %b_load_25 = load i32* %b_addr_25, align 4
+
+ST_28: b_copy_25_addr (489)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:161  %b_copy_25_addr = getelementptr [32 x i32]* %b_copy_25, i64 0, i64 %tmp_6
+
+ST_28: StgValue_718 (490)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:162  store i32 %b_load_25, i32* %b_copy_25_addr, align 4
+
+ST_28: b_load_26 (491)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:163  %b_load_26 = load i32* %b_addr_26, align 4
+
+ST_28: tmp_2_16 (569)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:58  %tmp_2_16 = mul nsw i32 %a_row_17_1, %b_copy_17_load
+
+ST_28: tmp_2_17 (572)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:61  %tmp_2_17 = mul nsw i32 %a_row_18_1, %b_copy_18_load
+
+ST_28: tmp_2_18 (575)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:64  %tmp_2_18 = mul nsw i32 %a_row_19_1, %b_copy_19_load
+
+ST_28: tmp_2_19 (578)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:67  %tmp_2_19 = mul nsw i32 %a_row_20_1, %b_copy_20_load
+
+ST_28: tmp_2_20 (581)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:70  %tmp_2_20 = mul nsw i32 %a_row_21_1, %b_copy_21_load
+
+ST_28: tmp_2_21 (584)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:73  %tmp_2_21 = mul nsw i32 %a_row_22_1, %b_copy_22_load
+
+ST_28: b_copy_23_load (586)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:75  %b_copy_23_load = load i32* %b_copy_23_addr_1, align 4
+
+ST_28: b_copy_24_addr_1 (588)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:77  %b_copy_24_addr_1 = getelementptr [32 x i32]* %b_copy_24, i64 0, i64 %tmp_9
+
+ST_28: b_copy_24_load (589)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:78  %b_copy_24_load = load i32* %b_copy_24_addr_1, align 4
+
+
+ <State 29>: 8.05ns
+ST_29: a_row_23_2_load (111)  [1/1] 0.00ns
+.preheader7.preheader:23  %a_row_23_2_load = load i32* %a_row_23_2
+
+ST_29: tmp_59 (211)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:123  %tmp_59 = or i11 %tmp_1, 27
+
+ST_29: tmp_60 (212)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:124  %tmp_60 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_59)
+
+ST_29: a_addr_27 (213)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:125  %a_addr_27 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_60
+
+ST_29: a_row_26 (256)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:168  %a_row_26 = load i32* %a_addr_26, align 4
+
+ST_29: a_row_27 (257)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:169  %a_row_27 = load i32* %a_addr_27, align 4
+
+ST_29: a_row_23_1 (270)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:182  %a_row_23_1 = select i1 %tmp_3, i32 %a_row_23, i32 %a_row_23_2_load
+
+ST_29: StgValue_736 (302)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:214  store i32 %a_row_23_1, i32* %a_row_23_2
+
+ST_29: tmp_95_cast1 (400)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:72  %tmp_95_cast1 = sext i9 %tmp_79 to i10
+
+ST_29: tmp_95_cast (401)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:73  %tmp_95_cast = zext i10 %tmp_95_cast1 to i64
+
+ST_29: b_addr_27 (402)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:74  %b_addr_27 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_95_cast
+
+ST_29: b_load_26 (491)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:163  %b_load_26 = load i32* %b_addr_26, align 4
+
+ST_29: b_copy_26_addr (492)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:164  %b_copy_26_addr = getelementptr [32 x i32]* %b_copy_26, i64 0, i64 %tmp_6
+
+ST_29: StgValue_742 (493)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:165  store i32 %b_load_26, i32* %b_copy_26_addr, align 4
+
+ST_29: b_load_27 (494)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:166  %b_load_27 = load i32* %b_addr_27, align 4
+
+ST_29: tmp_2_17 (572)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:61  %tmp_2_17 = mul nsw i32 %a_row_18_1, %b_copy_18_load
+
+ST_29: tmp_2_18 (575)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:64  %tmp_2_18 = mul nsw i32 %a_row_19_1, %b_copy_19_load
+
+ST_29: tmp_2_19 (578)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:67  %tmp_2_19 = mul nsw i32 %a_row_20_1, %b_copy_20_load
+
+ST_29: tmp_2_20 (581)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:70  %tmp_2_20 = mul nsw i32 %a_row_21_1, %b_copy_21_load
+
+ST_29: tmp_2_21 (584)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:73  %tmp_2_21 = mul nsw i32 %a_row_22_1, %b_copy_22_load
+
+ST_29: tmp_2_22 (587)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:76  %tmp_2_22 = mul nsw i32 %a_row_23_1, %b_copy_23_load
+
+ST_29: b_copy_24_load (589)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:78  %b_copy_24_load = load i32* %b_copy_24_addr_1, align 4
+
+ST_29: b_copy_25_addr_1 (591)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:80  %b_copy_25_addr_1 = getelementptr [32 x i32]* %b_copy_25, i64 0, i64 %tmp_9
+
+ST_29: b_copy_25_load (592)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:81  %b_copy_25_load = load i32* %b_copy_25_addr_1, align 4
+
+ST_29: tmp19 (627)  [1/1] 2.39ns  loc: matmul.c:43
+.loopexit:116  %tmp19 = add i32 %tmp_2_16, %tmp_2_15
+
+
+ <State 30>: 8.05ns
+ST_30: a_row_24_2_load (112)  [1/1] 0.00ns
+.preheader7.preheader:24  %a_row_24_2_load = load i32* %a_row_24_2
+
+ST_30: tmp_61 (214)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:126  %tmp_61 = or i11 %tmp_1, 28
+
+ST_30: tmp_62 (215)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:127  %tmp_62 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_61)
+
+ST_30: a_addr_28 (216)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:128  %a_addr_28 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_62
+
+ST_30: a_row_27 (257)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:169  %a_row_27 = load i32* %a_addr_27, align 4
+
+ST_30: a_row_28 (258)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:170  %a_row_28 = load i32* %a_addr_28, align 4
+
+ST_30: a_row_24_1 (269)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:181  %a_row_24_1 = select i1 %tmp_3, i32 %a_row_24, i32 %a_row_24_2_load
+
+ST_30: StgValue_761 (301)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:213  store i32 %a_row_24_1, i32* %a_row_24_2
+
+ST_30: tmp_93 (403)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:75  %tmp_93 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 14, i6 %j_mid2)
+
+ST_30: b_addr_28 (404)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:76  %b_addr_28 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_93
+
+ST_30: b_load_27 (494)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:166  %b_load_27 = load i32* %b_addr_27, align 4
+
+ST_30: b_copy_27_addr (495)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:167  %b_copy_27_addr = getelementptr [32 x i32]* %b_copy_27, i64 0, i64 %tmp_6
+
+ST_30: StgValue_766 (496)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:168  store i32 %b_load_27, i32* %b_copy_27_addr, align 4
+
+ST_30: b_load_28 (497)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:169  %b_load_28 = load i32* %b_addr_28, align 4
+
+ST_30: tmp_2_18 (575)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:64  %tmp_2_18 = mul nsw i32 %a_row_19_1, %b_copy_19_load
+
+ST_30: tmp_2_19 (578)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:67  %tmp_2_19 = mul nsw i32 %a_row_20_1, %b_copy_20_load
+
+ST_30: tmp_2_20 (581)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:70  %tmp_2_20 = mul nsw i32 %a_row_21_1, %b_copy_21_load
+
+ST_30: tmp_2_21 (584)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:73  %tmp_2_21 = mul nsw i32 %a_row_22_1, %b_copy_22_load
+
+ST_30: tmp_2_22 (587)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:76  %tmp_2_22 = mul nsw i32 %a_row_23_1, %b_copy_23_load
+
+ST_30: tmp_2_23 (590)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:79  %tmp_2_23 = mul nsw i32 %a_row_24_1, %b_copy_24_load
+
+ST_30: b_copy_25_load (592)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:81  %b_copy_25_load = load i32* %b_copy_25_addr_1, align 4
+
+ST_30: b_copy_26_addr_1 (594)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:83  %b_copy_26_addr_1 = getelementptr [32 x i32]* %b_copy_26, i64 0, i64 %tmp_9
+
+ST_30: b_copy_26_load (595)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:84  %b_copy_26_load = load i32* %b_copy_26_addr_1, align 4
+
+
+ <State 31>: 8.05ns
+ST_31: a_row_25_2_load (113)  [1/1] 0.00ns
+.preheader7.preheader:25  %a_row_25_2_load = load i32* %a_row_25_2
+
+ST_31: tmp_63 (217)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:129  %tmp_63 = or i11 %tmp_1, 29
+
+ST_31: tmp_64 (218)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:130  %tmp_64 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_63)
+
+ST_31: a_addr_29 (219)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:131  %a_addr_29 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_64
+
+ST_31: a_row_28 (258)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:170  %a_row_28 = load i32* %a_addr_28, align 4
+
+ST_31: a_row_29 (259)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:171  %a_row_29 = load i32* %a_addr_29, align 4
+
+ST_31: a_row_25_1 (268)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:180  %a_row_25_1 = select i1 %tmp_3, i32 %a_row_25, i32 %a_row_25_2_load
+
+ST_31: StgValue_784 (300)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:212  store i32 %a_row_25_1, i32* %a_row_25_2
+
+ST_31: tmp_97_cast1 (405)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:77  %tmp_97_cast1 = sext i8 %tmp_73 to i10
+
+ST_31: tmp_97_cast (406)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:78  %tmp_97_cast = zext i10 %tmp_97_cast1 to i64
+
+ST_31: b_addr_29 (407)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:79  %b_addr_29 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_97_cast
+
+ST_31: b_load_28 (497)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:169  %b_load_28 = load i32* %b_addr_28, align 4
+
+ST_31: b_copy_28_addr (498)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:170  %b_copy_28_addr = getelementptr [32 x i32]* %b_copy_28, i64 0, i64 %tmp_6
+
+ST_31: StgValue_790 (499)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:171  store i32 %b_load_28, i32* %b_copy_28_addr, align 4
+
+ST_31: b_load_29 (500)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:172  %b_load_29 = load i32* %b_addr_29, align 4
+
+ST_31: tmp_2_19 (578)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:67  %tmp_2_19 = mul nsw i32 %a_row_20_1, %b_copy_20_load
+
+ST_31: tmp_2_20 (581)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:70  %tmp_2_20 = mul nsw i32 %a_row_21_1, %b_copy_21_load
+
+ST_31: tmp_2_21 (584)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:73  %tmp_2_21 = mul nsw i32 %a_row_22_1, %b_copy_22_load
+
+ST_31: tmp_2_22 (587)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:76  %tmp_2_22 = mul nsw i32 %a_row_23_1, %b_copy_23_load
+
+ST_31: tmp_2_23 (590)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:79  %tmp_2_23 = mul nsw i32 %a_row_24_1, %b_copy_24_load
+
+ST_31: tmp_2_24 (593)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:82  %tmp_2_24 = mul nsw i32 %a_row_25_1, %b_copy_25_load
+
+ST_31: b_copy_26_load (595)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:84  %b_copy_26_load = load i32* %b_copy_26_addr_1, align 4
+
+ST_31: b_copy_27_addr_1 (597)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:86  %b_copy_27_addr_1 = getelementptr [32 x i32]* %b_copy_27, i64 0, i64 %tmp_9
+
+ST_31: b_copy_27_load (598)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:87  %b_copy_27_load = load i32* %b_copy_27_addr_1, align 4
+
+ST_31: tmp20 (628)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:117  %tmp20 = add i32 %tmp_2_18, %tmp_2_17
+
+ST_31: tmp18 (629)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:118  %tmp18 = add i32 %tmp19, %tmp20
+
+
+ <State 32>: 8.05ns
+ST_32: a_row_26_2_load (114)  [1/1] 0.00ns
+.preheader7.preheader:26  %a_row_26_2_load = load i32* %a_row_26_2
+
+ST_32: tmp_65 (220)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:132  %tmp_65 = or i11 %tmp_1, 30
+
+ST_32: tmp_66 (221)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:133  %tmp_66 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_65)
+
+ST_32: a_addr_30 (222)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:134  %a_addr_30 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_66
+
+ST_32: a_row_29 (259)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:171  %a_row_29 = load i32* %a_addr_29, align 4
+
+ST_32: a_row_30 (260)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:172  %a_row_30 = load i32* %a_addr_30, align 4
+
+ST_32: a_row_26_1 (267)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:179  %a_row_26_1 = select i1 %tmp_3, i32 %a_row_26, i32 %a_row_26_2_load
+
+ST_32: StgValue_810 (299)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:211  store i32 %a_row_26_1, i32* %a_row_26_2
+
+ST_32: tmp_94 (408)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:80  %tmp_94 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 15, i6 %j_mid2)
+
+ST_32: b_addr_30 (409)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:81  %b_addr_30 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_94
+
+ST_32: b_load_29 (500)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:172  %b_load_29 = load i32* %b_addr_29, align 4
+
+ST_32: b_copy_29_addr (501)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:173  %b_copy_29_addr = getelementptr [32 x i32]* %b_copy_29, i64 0, i64 %tmp_6
+
+ST_32: StgValue_815 (502)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:174  store i32 %b_load_29, i32* %b_copy_29_addr, align 4
+
+ST_32: b_load_30 (503)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:175  %b_load_30 = load i32* %b_addr_30, align 4
+
+ST_32: tmp_2_20 (581)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:70  %tmp_2_20 = mul nsw i32 %a_row_21_1, %b_copy_21_load
+
+ST_32: tmp_2_21 (584)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:73  %tmp_2_21 = mul nsw i32 %a_row_22_1, %b_copy_22_load
+
+ST_32: tmp_2_22 (587)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:76  %tmp_2_22 = mul nsw i32 %a_row_23_1, %b_copy_23_load
+
+ST_32: tmp_2_23 (590)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:79  %tmp_2_23 = mul nsw i32 %a_row_24_1, %b_copy_24_load
+
+ST_32: tmp_2_24 (593)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:82  %tmp_2_24 = mul nsw i32 %a_row_25_1, %b_copy_25_load
+
+ST_32: tmp_2_25 (596)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:85  %tmp_2_25 = mul nsw i32 %a_row_26_1, %b_copy_26_load
+
+ST_32: b_copy_27_load (598)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:87  %b_copy_27_load = load i32* %b_copy_27_addr_1, align 4
+
+ST_32: b_copy_28_addr_1 (600)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:89  %b_copy_28_addr_1 = getelementptr [32 x i32]* %b_copy_28, i64 0, i64 %tmp_9
+
+ST_32: b_copy_28_load (601)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:90  %b_copy_28_load = load i32* %b_copy_28_addr_1, align 4
+
+
+ <State 33>: 8.05ns
+ST_33: a_row_27_2_load (115)  [1/1] 0.00ns
+.preheader7.preheader:27  %a_row_27_2_load = load i32* %a_row_27_2
+
+ST_33: tmp_4_cast (131)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:43  %tmp_4_cast = zext i11 %tmp_1 to i12
+
+ST_33: tmp_67 (223)  [1/1] 0.00ns  loc: matmul.c:46
+.preheader7.preheader:135  %tmp_67 = or i11 %tmp_1, 31
+
+ST_33: tmp_68 (224)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:136  %tmp_68 = call i64 @_ssdm_op_BitConcatenate.i64.i53.i11(i53 0, i11 %tmp_67)
+
+ST_33: a_addr_31 (225)  [1/1] 0.00ns  loc: matmul.c:32
+.preheader7.preheader:137  %a_addr_31 = getelementptr [1024 x i32]* %a, i64 0, i64 %tmp_68
+
+ST_33: a_row_30 (260)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:172  %a_row_30 = load i32* %a_addr_30, align 4
+
+ST_33: a_row_31 (261)  [2/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:173  %a_row_31 = load i32* %a_addr_31, align 4
+
+ST_33: a_row_27_1 (266)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:178  %a_row_27_1 = select i1 %tmp_3, i32 %a_row_27, i32 %a_row_27_2_load
+
+ST_33: StgValue_834 (298)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:210  store i32 %a_row_27_1, i32* %a_row_27_2
+
+ST_33: tmp_6_cast1 (329)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:1  %tmp_6_cast1 = zext i6 %j_mid2 to i11
+
+ST_33: tmp_95 (410)  [1/1] 1.79ns  loc: matmul.c:38
+.preheader.preheader:82  %tmp_95 = add i11 %tmp_6_cast1, 992
+
+ST_33: tmp_99_cast (411)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:83  %tmp_99_cast = zext i11 %tmp_95 to i64
+
+ST_33: b_addr_31 (412)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:84  %b_addr_31 = getelementptr [1024 x i32]* %b, i64 0, i64 %tmp_99_cast
+
+ST_33: b_load_30 (503)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:175  %b_load_30 = load i32* %b_addr_30, align 4
+
+ST_33: b_copy_30_addr (504)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:176  %b_copy_30_addr = getelementptr [32 x i32]* %b_copy_30, i64 0, i64 %tmp_6
+
+ST_33: StgValue_841 (505)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:177  store i32 %b_load_30, i32* %b_copy_30_addr, align 4
+
+ST_33: b_load_31 (506)  [2/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:178  %b_load_31 = load i32* %b_addr_31, align 4
+
+ST_33: tmp_9_cast (512)  [1/1] 0.00ns  loc: matmul.c:46
+.loopexit:1  %tmp_9_cast = zext i6 %j_mid2 to i12
+
+ST_33: tmp_96 (513)  [1/1] 1.79ns  loc: matmul.c:46
+.loopexit:2  %tmp_96 = add i12 %tmp_4_cast, %tmp_9_cast
+
+ST_33: tmp_2_21 (584)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:73  %tmp_2_21 = mul nsw i32 %a_row_22_1, %b_copy_22_load
+
+ST_33: tmp_2_22 (587)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:76  %tmp_2_22 = mul nsw i32 %a_row_23_1, %b_copy_23_load
+
+ST_33: tmp_2_23 (590)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:79  %tmp_2_23 = mul nsw i32 %a_row_24_1, %b_copy_24_load
+
+ST_33: tmp_2_24 (593)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:82  %tmp_2_24 = mul nsw i32 %a_row_25_1, %b_copy_25_load
+
+ST_33: tmp_2_25 (596)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:85  %tmp_2_25 = mul nsw i32 %a_row_26_1, %b_copy_26_load
+
+ST_33: tmp_2_26 (599)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:88  %tmp_2_26 = mul nsw i32 %a_row_27_1, %b_copy_27_load
+
+ST_33: b_copy_28_load (601)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:90  %b_copy_28_load = load i32* %b_copy_28_addr_1, align 4
+
+ST_33: b_copy_29_addr_1 (603)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:92  %b_copy_29_addr_1 = getelementptr [32 x i32]* %b_copy_29, i64 0, i64 %tmp_9
+
+ST_33: b_copy_29_load (604)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:93  %b_copy_29_load = load i32* %b_copy_29_addr_1, align 4
+
+ST_33: tmp22 (630)  [1/1] 2.39ns  loc: matmul.c:43
+.loopexit:119  %tmp22 = add i32 %tmp_2_20, %tmp_2_19
+
+ST_33: j_1 (645)  [1/1] 1.67ns  loc: matmul.c:23
+.loopexit:134  %j_1 = add i6 %j_mid2, 1
+
+
+ <State 34>: 8.05ns
+ST_34: a_row_28_2_load (116)  [1/1] 0.00ns
+.preheader7.preheader:28  %a_row_28_2_load = load i32* %a_row_28_2
+
+ST_34: a_row_29_2_load (117)  [1/1] 0.00ns
+.preheader7.preheader:29  %a_row_29_2_load = load i32* %a_row_29_2
+
+ST_34: a_row_30_2_load (118)  [1/1] 0.00ns
+.preheader7.preheader:30  %a_row_30_2_load = load i32* %a_row_30_2
+
+ST_34: a_row_31_2_load (119)  [1/1] 0.00ns
+.preheader7.preheader:31  %a_row_31_2_load = load i32* %a_row_31_2
+
+ST_34: StgValue_860 (121)  [1/1] 0.00ns
+.preheader7.preheader:33  call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @L_col_str)
+
+ST_34: empty_3 (122)  [1/1] 0.00ns
+.preheader7.preheader:34  %empty_3 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1024, i64 1024, i64 1024) nounwind
+
+ST_34: StgValue_862 (226)  [1/1] 0.00ns  loc: matmul.c:23
+.preheader7.preheader:138  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str4) nounwind
+
+ST_34: tmp_2 (227)  [1/1] 0.00ns  loc: matmul.c:23
+.preheader7.preheader:139  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str4) nounwind
+
+ST_34: StgValue_864 (228)  [1/1] 0.00ns  loc: matmul.c:25
+.preheader7.preheader:140  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_34: a_row_31 (261)  [1/2] 2.71ns  loc: matmul.c:32
+.preheader7.preheader:173  %a_row_31 = load i32* %a_addr_31, align 4
+
+ST_34: a_row_31_1 (262)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:174  %a_row_31_1 = select i1 %tmp_3, i32 %a_row_31, i32 %a_row_31_2_load
+
+ST_34: a_row_30_1 (263)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:175  %a_row_30_1 = select i1 %tmp_3, i32 %a_row_30, i32 %a_row_30_2_load
+
+ST_34: a_row_29_1 (264)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:176  %a_row_29_1 = select i1 %tmp_3, i32 %a_row_29, i32 %a_row_29_2_load
+
+ST_34: a_row_28_1 (265)  [1/1] 1.37ns  loc: matmul.c:30
+.preheader7.preheader:177  %a_row_28_1 = select i1 %tmp_3, i32 %a_row_28, i32 %a_row_28_2_load
+
+ST_34: StgValue_870 (294)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:206  store i32 %a_row_31_1, i32* %a_row_31_2
+
+ST_34: StgValue_871 (295)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:207  store i32 %a_row_30_1, i32* %a_row_30_2
+
+ST_34: StgValue_872 (296)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:208  store i32 %a_row_29_1, i32* %a_row_29_2
+
+ST_34: StgValue_873 (297)  [1/1] 0.00ns  loc: matmul.c:30
+.preheader7.preheader:209  store i32 %a_row_28_1, i32* %a_row_28_2
+
+ST_34: b_load_31 (506)  [1/2] 2.71ns  loc: matmul.c:38
+.preheader.preheader:178  %b_load_31 = load i32* %b_addr_31, align 4
+
+ST_34: b_copy_31_addr (507)  [1/1] 0.00ns  loc: matmul.c:38
+.preheader.preheader:179  %b_copy_31_addr = getelementptr [32 x i32]* %b_copy_31, i64 0, i64 %tmp_6
+
+ST_34: StgValue_876 (508)  [1/1] 2.71ns  loc: matmul.c:38
+.preheader.preheader:180  store i32 %b_load_31, i32* %b_copy_31_addr, align 4
+
+ST_34: StgValue_877 (509)  [1/1] 0.00ns
+.preheader.preheader:181  br label %.loopexit
+
+ST_34: tmp_2_22 (587)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:76  %tmp_2_22 = mul nsw i32 %a_row_23_1, %b_copy_23_load
+
+ST_34: tmp_2_23 (590)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:79  %tmp_2_23 = mul nsw i32 %a_row_24_1, %b_copy_24_load
+
+ST_34: tmp_2_24 (593)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:82  %tmp_2_24 = mul nsw i32 %a_row_25_1, %b_copy_25_load
+
+ST_34: tmp_2_25 (596)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:85  %tmp_2_25 = mul nsw i32 %a_row_26_1, %b_copy_26_load
+
+ST_34: tmp_2_26 (599)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:88  %tmp_2_26 = mul nsw i32 %a_row_27_1, %b_copy_27_load
+
+ST_34: tmp_2_27 (602)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:91  %tmp_2_27 = mul nsw i32 %a_row_28_1, %b_copy_28_load
+
+ST_34: b_copy_29_load (604)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:93  %b_copy_29_load = load i32* %b_copy_29_addr_1, align 4
+
+ST_34: b_copy_30_addr_1 (606)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:95  %b_copy_30_addr_1 = getelementptr [32 x i32]* %b_copy_30, i64 0, i64 %tmp_9
+
+ST_34: b_copy_30_load (607)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:96  %b_copy_30_load = load i32* %b_copy_30_addr_1, align 4
+
+
+ <State 35>: 6.68ns
+ST_35: tmp_2_23 (590)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:79  %tmp_2_23 = mul nsw i32 %a_row_24_1, %b_copy_24_load
+
+ST_35: tmp_2_24 (593)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:82  %tmp_2_24 = mul nsw i32 %a_row_25_1, %b_copy_25_load
+
+ST_35: tmp_2_25 (596)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:85  %tmp_2_25 = mul nsw i32 %a_row_26_1, %b_copy_26_load
+
+ST_35: tmp_2_26 (599)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:88  %tmp_2_26 = mul nsw i32 %a_row_27_1, %b_copy_27_load
+
+ST_35: tmp_2_27 (602)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:91  %tmp_2_27 = mul nsw i32 %a_row_28_1, %b_copy_28_load
+
+ST_35: tmp_2_28 (605)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:94  %tmp_2_28 = mul nsw i32 %a_row_29_1, %b_copy_29_load
+
+ST_35: b_copy_30_load (607)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:96  %b_copy_30_load = load i32* %b_copy_30_addr_1, align 4
+
+ST_35: b_copy_31_addr_1 (609)  [1/1] 0.00ns  loc: matmul.c:43
+.loopexit:98  %b_copy_31_addr_1 = getelementptr [32 x i32]* %b_copy_31, i64 0, i64 %tmp_9
+
+ST_35: b_copy_31_load (610)  [2/2] 2.71ns  loc: matmul.c:43
+.loopexit:99  %b_copy_31_load = load i32* %b_copy_31_addr_1, align 4
+
+ST_35: tmp23 (631)  [1/1] 2.39ns  loc: matmul.c:43
+.loopexit:120  %tmp23 = add i32 %tmp_2_22, %tmp_2_21
+
+ST_35: tmp21 (632)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:121  %tmp21 = add i32 %tmp22, %tmp23
+
+ST_35: tmp17 (633)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:122  %tmp17 = add i32 %tmp18, %tmp21
+
+
+ <State 36>: 6.68ns
+ST_36: tmp_2_24 (593)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:82  %tmp_2_24 = mul nsw i32 %a_row_25_1, %b_copy_25_load
+
+ST_36: tmp_2_25 (596)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:85  %tmp_2_25 = mul nsw i32 %a_row_26_1, %b_copy_26_load
+
+ST_36: tmp_2_26 (599)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:88  %tmp_2_26 = mul nsw i32 %a_row_27_1, %b_copy_27_load
+
+ST_36: tmp_2_27 (602)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:91  %tmp_2_27 = mul nsw i32 %a_row_28_1, %b_copy_28_load
+
+ST_36: tmp_2_28 (605)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:94  %tmp_2_28 = mul nsw i32 %a_row_29_1, %b_copy_29_load
+
+ST_36: tmp_2_29 (608)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:97  %tmp_2_29 = mul nsw i32 %a_row_30_1, %b_copy_30_load
+
+ST_36: b_copy_31_load (610)  [1/2] 2.71ns  loc: matmul.c:43
+.loopexit:99  %b_copy_31_load = load i32* %b_copy_31_addr_1, align 4
+
+
+ <State 37>: 6.68ns
+ST_37: tmp_2_25 (596)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:85  %tmp_2_25 = mul nsw i32 %a_row_26_1, %b_copy_26_load
+
+ST_37: tmp_2_26 (599)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:88  %tmp_2_26 = mul nsw i32 %a_row_27_1, %b_copy_27_load
+
+ST_37: tmp_2_27 (602)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:91  %tmp_2_27 = mul nsw i32 %a_row_28_1, %b_copy_28_load
+
+ST_37: tmp_2_28 (605)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:94  %tmp_2_28 = mul nsw i32 %a_row_29_1, %b_copy_29_load
+
+ST_37: tmp_2_29 (608)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:97  %tmp_2_29 = mul nsw i32 %a_row_30_1, %b_copy_30_load
+
+ST_37: tmp_2_30 (611)  [6/6] 6.68ns  loc: matmul.c:43
+.loopexit:100  %tmp_2_30 = mul nsw i32 %a_row_31_1, %b_copy_31_load
+
+ST_37: tmp26 (634)  [1/1] 2.39ns  loc: matmul.c:43
+.loopexit:123  %tmp26 = add i32 %tmp_2_24, %tmp_2_23
+
+
+ <State 38>: 6.68ns
+ST_38: tmp_2_26 (599)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:88  %tmp_2_26 = mul nsw i32 %a_row_27_1, %b_copy_27_load
+
+ST_38: tmp_2_27 (602)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:91  %tmp_2_27 = mul nsw i32 %a_row_28_1, %b_copy_28_load
+
+ST_38: tmp_2_28 (605)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:94  %tmp_2_28 = mul nsw i32 %a_row_29_1, %b_copy_29_load
+
+ST_38: tmp_2_29 (608)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:97  %tmp_2_29 = mul nsw i32 %a_row_30_1, %b_copy_30_load
+
+ST_38: tmp_2_30 (611)  [5/6] 6.68ns  loc: matmul.c:43
+.loopexit:100  %tmp_2_30 = mul nsw i32 %a_row_31_1, %b_copy_31_load
+
+
+ <State 39>: 6.68ns
+ST_39: tmp_2_27 (602)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:91  %tmp_2_27 = mul nsw i32 %a_row_28_1, %b_copy_28_load
+
+ST_39: tmp_2_28 (605)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:94  %tmp_2_28 = mul nsw i32 %a_row_29_1, %b_copy_29_load
+
+ST_39: tmp_2_29 (608)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:97  %tmp_2_29 = mul nsw i32 %a_row_30_1, %b_copy_30_load
+
+ST_39: tmp_2_30 (611)  [4/6] 6.68ns  loc: matmul.c:43
+.loopexit:100  %tmp_2_30 = mul nsw i32 %a_row_31_1, %b_copy_31_load
+
+ST_39: tmp27 (635)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:124  %tmp27 = add i32 %tmp_2_26, %tmp_2_25
+
+ST_39: tmp25 (636)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:125  %tmp25 = add i32 %tmp26, %tmp27
+
+
+ <State 40>: 6.68ns
+ST_40: tmp_2_28 (605)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:94  %tmp_2_28 = mul nsw i32 %a_row_29_1, %b_copy_29_load
+
+ST_40: tmp_2_29 (608)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:97  %tmp_2_29 = mul nsw i32 %a_row_30_1, %b_copy_30_load
+
+ST_40: tmp_2_30 (611)  [3/6] 6.68ns  loc: matmul.c:43
+.loopexit:100  %tmp_2_30 = mul nsw i32 %a_row_31_1, %b_copy_31_load
+
+
+ <State 41>: 6.68ns
+ST_41: tmp_2_29 (608)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:97  %tmp_2_29 = mul nsw i32 %a_row_30_1, %b_copy_30_load
+
+ST_41: tmp_2_30 (611)  [2/6] 6.68ns  loc: matmul.c:43
+.loopexit:100  %tmp_2_30 = mul nsw i32 %a_row_31_1, %b_copy_31_load
+
+ST_41: tmp29 (637)  [1/1] 2.39ns  loc: matmul.c:43
+.loopexit:126  %tmp29 = add i32 %tmp_2_28, %tmp_2_27
+
+
+ <State 42>: 6.68ns
+ST_42: tmp_2_30 (611)  [1/6] 6.68ns  loc: matmul.c:43
+.loopexit:100  %tmp_2_30 = mul nsw i32 %a_row_31_1, %b_copy_31_load
+
+
+ <State 43>: 6.23ns
+ST_43: tmp30 (638)  [1/1] 2.39ns  loc: matmul.c:43
+.loopexit:127  %tmp30 = add i32 %tmp_2_30, %tmp_2_29
+
+ST_43: tmp28 (639)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:128  %tmp28 = add i32 %tmp29, %tmp30
+
+ST_43: tmp24 (640)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:129  %tmp24 = add i32 %tmp25, %tmp28
+
+
+ <State 44>: 6.55ns
+ST_44: tmp_100_cast (514)  [1/1] 0.00ns  loc: matmul.c:46
+.loopexit:3  %tmp_100_cast = zext i12 %tmp_96 to i64
+
+ST_44: c_addr (515)  [1/1] 0.00ns  loc: matmul.c:46
+.loopexit:4  %c_addr = getelementptr [1024 x i32]* %c, i64 0, i64 %tmp_100_cast
+
+ST_44: tmp16 (641)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:130  %tmp16 = add i32 %tmp17, %tmp24
+
+ST_44: tmp_5_s (642)  [1/1] 1.92ns  loc: matmul.c:43
+.loopexit:131  %tmp_5_s = add nsw i32 %tmp1, %tmp16
+
+ST_44: StgValue_938 (643)  [1/1] 2.71ns  loc: matmul.c:46
+.loopexit:132  store i32 %tmp_5_s, i32* %c_addr, align 4
+
+ST_44: empty (644)  [1/1] 0.00ns  loc: matmul.c:47
+.loopexit:133  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str4, i32 %tmp_2) nounwind
+
+ST_44: StgValue_940 (646)  [1/1] 0.00ns  loc: matmul.c:23
+.loopexit:135  br label %.preheader7
+
+
+ <State 45>: 0.00ns
+ST_45: StgValue_941 (648)  [1/1] 0.00ns  loc: matmul.c:49
+:0  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.57ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [81]  (1.57 ns)
+
+ <State 2>: 6.48ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', matmul.c:23) [83]  (0 ns)
+	'icmp' operation ('exitcond', matmul.c:23) [123]  (2.4 ns)
+	'select' operation ('tmp_1_mid2_v', matmul.c:46) [128]  (1.37 ns)
+	'getelementptr' operation ('a_addr', matmul.c:32) [132]  (0 ns)
+	'load' operation ('a_row[0]', matmul.c:32) on array 'a' [230]  (2.71 ns)
+
+ <State 3>: 5.42ns
+The critical path consists of the following:
+	'load' operation ('b_load', matmul.c:38) on array 'b' [413]  (2.71 ns)
+	'store' operation (matmul.c:38) of variable 'b_load', matmul.c:38 on array 'b_copy[0]', matmul.c:18 [415]  (2.71 ns)
+
+ <State 4>: 5.42ns
+The critical path consists of the following:
+	'load' operation ('b_load_1', matmul.c:38) on array 'b' [416]  (2.71 ns)
+	'store' operation (matmul.c:38) of variable 'b_load_1', matmul.c:38 on array 'b_copy[1]', matmul.c:18 [418]  (2.71 ns)
+
+ <State 5>: 5.42ns
+The critical path consists of the following:
+	'load' operation ('b_load_2', matmul.c:38) on array 'b' [419]  (2.71 ns)
+	'store' operation (matmul.c:38) of variable 'b_load_2', matmul.c:38 on array 'b_copy[2]', matmul.c:18 [421]  (2.71 ns)
+
+ <State 6>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_0_2_load') on local variable 'a_row[0]' [88]  (0 ns)
+	'select' operation ('a_row[0]', matmul.c:30) [293]  (1.37 ns)
+	'mul' operation ('tmp_s', matmul.c:43) [518]  (6.68 ns)
+
+ <State 7>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_1_2_load') on local variable 'a_row[1]' [89]  (0 ns)
+	'select' operation ('a_row[1]', matmul.c:30) [292]  (1.37 ns)
+	'mul' operation ('tmp_2_1', matmul.c:43) [521]  (6.68 ns)
+
+ <State 8>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_2_2_load') on local variable 'a_row[2]' [90]  (0 ns)
+	'select' operation ('a_row[2]', matmul.c:30) [291]  (1.37 ns)
+	'mul' operation ('tmp_2_2', matmul.c:43) [524]  (6.68 ns)
+
+ <State 9>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_3_2_load') on local variable 'a_row[3]' [91]  (0 ns)
+	'select' operation ('a_row[3]', matmul.c:30) [290]  (1.37 ns)
+	'mul' operation ('tmp_2_3', matmul.c:43) [527]  (6.68 ns)
+
+ <State 10>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_4_2_load') on local variable 'a_row[4]' [92]  (0 ns)
+	'select' operation ('a_row[4]', matmul.c:30) [289]  (1.37 ns)
+	'mul' operation ('tmp_2_4', matmul.c:43) [530]  (6.68 ns)
+
+ <State 11>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_5_2_load') on local variable 'a_row[5]' [93]  (0 ns)
+	'select' operation ('a_row[5]', matmul.c:30) [288]  (1.37 ns)
+	'mul' operation ('tmp_2_5', matmul.c:43) [533]  (6.68 ns)
+
+ <State 12>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_6_2_load') on local variable 'a_row[6]' [94]  (0 ns)
+	'select' operation ('a_row[6]', matmul.c:30) [287]  (1.37 ns)
+	'mul' operation ('tmp_2_6', matmul.c:43) [536]  (6.68 ns)
+
+ <State 13>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_7_2_load') on local variable 'a_row[7]' [95]  (0 ns)
+	'select' operation ('a_row[7]', matmul.c:30) [286]  (1.37 ns)
+	'mul' operation ('tmp_2_7', matmul.c:43) [539]  (6.68 ns)
+
+ <State 14>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_8_2_load') on local variable 'a_row[8]' [96]  (0 ns)
+	'select' operation ('a_row[8]', matmul.c:30) [285]  (1.37 ns)
+	'mul' operation ('tmp_2_8', matmul.c:43) [542]  (6.68 ns)
+
+ <State 15>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_9_2_load') on local variable 'a_row[9]' [97]  (0 ns)
+	'select' operation ('a_row[9]', matmul.c:30) [284]  (1.37 ns)
+	'mul' operation ('tmp_2_9', matmul.c:43) [545]  (6.68 ns)
+
+ <State 16>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_10_2_load') on local variable 'a_row[10]' [98]  (0 ns)
+	'select' operation ('a_row[10]', matmul.c:30) [283]  (1.37 ns)
+	'mul' operation ('tmp_2_s', matmul.c:43) [548]  (6.68 ns)
+
+ <State 17>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_11_2_load') on local variable 'a_row[11]' [99]  (0 ns)
+	'select' operation ('a_row[11]', matmul.c:30) [282]  (1.37 ns)
+	'mul' operation ('tmp_2_10', matmul.c:43) [551]  (6.68 ns)
+
+ <State 18>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_12_2_load') on local variable 'a_row[12]' [100]  (0 ns)
+	'select' operation ('a_row[12]', matmul.c:30) [281]  (1.37 ns)
+	'mul' operation ('tmp_2_11', matmul.c:43) [554]  (6.68 ns)
+
+ <State 19>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_13_2_load') on local variable 'a_row[13]' [101]  (0 ns)
+	'select' operation ('a_row[13]', matmul.c:30) [280]  (1.37 ns)
+	'mul' operation ('tmp_2_12', matmul.c:43) [557]  (6.68 ns)
+
+ <State 20>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_14_2_load') on local variable 'a_row[14]' [102]  (0 ns)
+	'select' operation ('a_row[14]', matmul.c:30) [279]  (1.37 ns)
+	'mul' operation ('tmp_2_13', matmul.c:43) [560]  (6.68 ns)
+
+ <State 21>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_15_2_load') on local variable 'a_row[15]' [103]  (0 ns)
+	'select' operation ('a_row[15]', matmul.c:30) [278]  (1.37 ns)
+	'mul' operation ('tmp_2_14', matmul.c:43) [563]  (6.68 ns)
+
+ <State 22>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_16_2_load') on local variable 'a_row[16]' [104]  (0 ns)
+	'select' operation ('a_row[16]', matmul.c:30) [277]  (1.37 ns)
+	'mul' operation ('tmp_2_15', matmul.c:43) [566]  (6.68 ns)
+
+ <State 23>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_17_2_load') on local variable 'a_row[17]' [105]  (0 ns)
+	'select' operation ('a_row[17]', matmul.c:30) [276]  (1.37 ns)
+	'mul' operation ('tmp_2_16', matmul.c:43) [569]  (6.68 ns)
+
+ <State 24>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_18_2_load') on local variable 'a_row[18]' [106]  (0 ns)
+	'select' operation ('a_row[18]', matmul.c:30) [275]  (1.37 ns)
+	'mul' operation ('tmp_2_17', matmul.c:43) [572]  (6.68 ns)
+
+ <State 25>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_19_2_load') on local variable 'a_row[19]' [107]  (0 ns)
+	'select' operation ('a_row[19]', matmul.c:30) [274]  (1.37 ns)
+	'mul' operation ('tmp_2_18', matmul.c:43) [575]  (6.68 ns)
+
+ <State 26>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_20_2_load') on local variable 'a_row[20]' [108]  (0 ns)
+	'select' operation ('a_row[20]', matmul.c:30) [273]  (1.37 ns)
+	'mul' operation ('tmp_2_19', matmul.c:43) [578]  (6.68 ns)
+
+ <State 27>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_21_2_load') on local variable 'a_row[21]' [109]  (0 ns)
+	'select' operation ('a_row[21]', matmul.c:30) [272]  (1.37 ns)
+	'mul' operation ('tmp_2_20', matmul.c:43) [581]  (6.68 ns)
+
+ <State 28>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_22_2_load') on local variable 'a_row[22]' [110]  (0 ns)
+	'select' operation ('a_row[22]', matmul.c:30) [271]  (1.37 ns)
+	'mul' operation ('tmp_2_21', matmul.c:43) [584]  (6.68 ns)
+
+ <State 29>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_23_2_load') on local variable 'a_row[23]' [111]  (0 ns)
+	'select' operation ('a_row[23]', matmul.c:30) [270]  (1.37 ns)
+	'mul' operation ('tmp_2_22', matmul.c:43) [587]  (6.68 ns)
+
+ <State 30>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_24_2_load') on local variable 'a_row[24]' [112]  (0 ns)
+	'select' operation ('a_row[24]', matmul.c:30) [269]  (1.37 ns)
+	'mul' operation ('tmp_2_23', matmul.c:43) [590]  (6.68 ns)
+
+ <State 31>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_25_2_load') on local variable 'a_row[25]' [113]  (0 ns)
+	'select' operation ('a_row[25]', matmul.c:30) [268]  (1.37 ns)
+	'mul' operation ('tmp_2_24', matmul.c:43) [593]  (6.68 ns)
+
+ <State 32>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_26_2_load') on local variable 'a_row[26]' [114]  (0 ns)
+	'select' operation ('a_row[26]', matmul.c:30) [267]  (1.37 ns)
+	'mul' operation ('tmp_2_25', matmul.c:43) [596]  (6.68 ns)
+
+ <State 33>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_27_2_load') on local variable 'a_row[27]' [115]  (0 ns)
+	'select' operation ('a_row[27]', matmul.c:30) [266]  (1.37 ns)
+	'mul' operation ('tmp_2_26', matmul.c:43) [599]  (6.68 ns)
+
+ <State 34>: 8.05ns
+The critical path consists of the following:
+	'load' operation ('a_row_28_2_load') on local variable 'a_row[28]' [116]  (0 ns)
+	'select' operation ('a_row[28]', matmul.c:30) [265]  (1.37 ns)
+	'mul' operation ('tmp_2_27', matmul.c:43) [602]  (6.68 ns)
+
+ <State 35>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('tmp_2_23', matmul.c:43) [590]  (6.68 ns)
+
+ <State 36>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('tmp_2_24', matmul.c:43) [593]  (6.68 ns)
+
+ <State 37>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('tmp_2_25', matmul.c:43) [596]  (6.68 ns)
+
+ <State 38>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('tmp_2_26', matmul.c:43) [599]  (6.68 ns)
+
+ <State 39>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('tmp_2_27', matmul.c:43) [602]  (6.68 ns)
+
+ <State 40>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('tmp_2_28', matmul.c:43) [605]  (6.68 ns)
+
+ <State 41>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('tmp_2_29', matmul.c:43) [608]  (6.68 ns)
+
+ <State 42>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('tmp_2_30', matmul.c:43) [611]  (6.68 ns)
+
+ <State 43>: 6.23ns
+The critical path consists of the following:
+	'add' operation ('tmp30', matmul.c:43) [638]  (2.39 ns)
+	'add' operation ('tmp28', matmul.c:43) [639]  (1.92 ns)
+	'add' operation ('tmp24', matmul.c:43) [640]  (1.92 ns)
+
+ <State 44>: 6.55ns
+The critical path consists of the following:
+	'add' operation ('tmp16', matmul.c:43) [641]  (1.92 ns)
+	'add' operation ('tmp_5_s', matmul.c:43) [642]  (1.92 ns)
+	'store' operation (matmul.c:46) of variable 'tmp_5_s', matmul.c:43 on array 'c' [643]  (2.71 ns)
+
+ <State 45>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -6,9 +6,11 @@
 
 // A[X x Y] * B[Y x Z] = C[X x Z]
 
-#define X 2 /* first dimension of array A */
-#define Y 2 /* second dimension of array A, first dimension of array B */
-#define Z 2 /* second dimension of array B */
+#define DIM 32
+
+#define X DIM /* first dimension of array A */
+#define Y DIM /* second dimension of array A, first dimension of array B */
+#define Z DIM /* second dimension of array B */
 
 typedef float mat_type;
 

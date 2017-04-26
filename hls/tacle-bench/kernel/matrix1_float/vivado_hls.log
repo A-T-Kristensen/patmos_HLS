@@ -1,9 +1,10 @@
 INFO: [HLS 200-10] Running '/home/patmos/Xilinx/Vivado_HLS/2016.4/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'patmos' on host 'ubuntu' (Linux_x86_64 version 4.4.0-72-generic) on Thu Apr 20 16:53:15 CEST 2017
+INFO: [HLS 200-10] For user 'patmos' on host 'ubuntu' (Linux_x86_64 version 4.4.0-72-generic) on Wed Apr 26 09:33:11 CEST 2017
 INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
 INFO: [HLS 200-10] In directory '/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float'
 INFO: [HLS 200-10] Opening project '/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float'.
-INFO: [HLS 200-10] Opening solution '/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b'.
+WARNING: [HLS 200-40] No /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_1b_4x4/matmul_1b_4x4.aps file found.
+INFO: [HLS 200-10] Opening solution '/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_32x32'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7a100tcsg324-1'
 INFO: [IMPL 213-8] Exporting RTL as an IP in IP-XACT.
@@ -26,4 +27,4 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'matmul_hw_ap_fadd
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/patmos/Xilinx/Vivado/2016.4/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 20 16:53:26 2017...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 26 09:33:24 2017...

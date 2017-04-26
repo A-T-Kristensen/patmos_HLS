@@ -1,0 +1,2 @@
+lappend pragmaStatus0 {pragma "ARRAY_PARTITION" source "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/matmul.c" location "matmul_hw" found 1 funcFound 1 applied 1 ambiguous 0 reason "null" variable "a"}
+lappend pragmaStatus1 {pragma "ARRAY_PARTITION" source "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/matmul.c" location "matmul_hw" found 1 funcFound 1 applied 1 ambiguous 0 reason "null" variable "b"}

@@ -53,6 +53,7 @@ int main()
 
    matrix_init(matrix_A, matrix_B);
 
+
    // Run the HLS matrix multiply block
    printf("Run HwA\n\n");
 
