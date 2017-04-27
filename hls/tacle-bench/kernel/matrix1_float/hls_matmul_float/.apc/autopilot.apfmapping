@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="matmul.c" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/matmul.c"/>
     <originFiles name="matmul.h" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/matmul.h"/>
+    <originFiles name="matmul.c" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/matmul.c"/>
   </source>
   <testbench>
     <originFiles name="matmul_test.c" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/matmul_test.c"/>

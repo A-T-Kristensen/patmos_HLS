@@ -67,19 +67,19 @@
 			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_5b_4x4/.tcls</location>
 		</link>
 		<link>
-			<name>matmul_7b_16x16/constraints</name>
+			<name>matmul_9b_16x16/constraints</name>
 			<type>2</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_7b_16x16/.tcls</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_9b_16x16/.tcls</location>
 		</link>
 		<link>
-			<name>matmul_7b_32x32/constraints</name>
+			<name>matmul_9b_32x32/constraints</name>
 			<type>2</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_7b_32x32/.tcls</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_9b_32x32/.tcls</location>
 		</link>
 		<link>
-			<name>matmul_7b_4x4/constraints</name>
+			<name>matmul_9b_4x4/constraints</name>
 			<type>2</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_7b_4x4/.tcls</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_9b_4x4/.tcls</location>
 		</link>
 		<link>
 			<name>source/matmul.c</name>
@@ -187,49 +187,49 @@
 			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_5b_4x4/script.tcl</location>
 		</link>
 		<link>
-			<name>matmul_7b_16x16/constraints/.xml.directive</name>
+			<name>matmul_9b_16x16/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_7b_16x16/matmul_7b_16x16.directive</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_9b_16x16/matmul_9b_16x16.directive</location>
 		</link>
 		<link>
-			<name>matmul_7b_16x16/constraints/directives.tcl</name>
+			<name>matmul_9b_16x16/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_7b_16x16/directives.tcl</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_9b_16x16/directives.tcl</location>
 		</link>
 		<link>
-			<name>matmul_7b_16x16/constraints/script.tcl</name>
+			<name>matmul_9b_16x16/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_7b_16x16/script.tcl</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_9b_16x16/script.tcl</location>
 		</link>
 		<link>
-			<name>matmul_7b_32x32/constraints/.xml.directive</name>
+			<name>matmul_9b_32x32/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_7b_32x32/matmul_7b_32x32.directive</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_9b_32x32/matmul_9b_32x32.directive</location>
 		</link>
 		<link>
-			<name>matmul_7b_32x32/constraints/directives.tcl</name>
+			<name>matmul_9b_32x32/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_7b_32x32/directives.tcl</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_9b_32x32/directives.tcl</location>
 		</link>
 		<link>
-			<name>matmul_7b_32x32/constraints/script.tcl</name>
+			<name>matmul_9b_32x32/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_7b_32x32/script.tcl</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_9b_32x32/script.tcl</location>
 		</link>
 		<link>
-			<name>matmul_7b_4x4/constraints/.xml.directive</name>
+			<name>matmul_9b_4x4/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_7b_4x4/matmul_7b_4x4.directive</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_9b_4x4/matmul_9b_4x4.directive</location>
 		</link>
 		<link>
-			<name>matmul_7b_4x4/constraints/directives.tcl</name>
+			<name>matmul_9b_4x4/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_7b_4x4/directives.tcl</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_9b_4x4/directives.tcl</location>
 		</link>
 		<link>
-			<name>matmul_7b_4x4/constraints/script.tcl</name>
+			<name>matmul_9b_4x4/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_7b_4x4/script.tcl</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_9b_4x4/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

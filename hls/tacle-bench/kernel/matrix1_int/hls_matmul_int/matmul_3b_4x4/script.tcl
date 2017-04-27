@@ -5,14 +5,14 @@
 ############################################################
 open_project hls_matmul_int
 set_top matmul_hw
-add_files matmul.h
 add_files matmul.c
+add_files matmul.h
 add_files -tb matmul_test.c
 open_solution "matmul_3b_4x4"
 set_part {xc7a100tcsg324-1} -tool vivado
 create_clock -period 10 -name default
-#source "./hls_matmul_int/matmul_3b_4x4/directives.tcl"
-csim_design
+source "./hls_matmul_int/matmul_3b_4x4/directives.tcl"
+csim_design -clean
 csynth_design
 cosim_design
 export_design -format ip_catalog

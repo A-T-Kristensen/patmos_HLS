@@ -283,7 +283,7 @@ architecture behav of matmul_hw is
     attribute fsm_encoding of ap_CS_fsm_state12 : signal is "none";
     signal ap_NS_fsm : STD_LOGIC_VECTOR (3 downto 0);
 
-    component matmul_hw_mux_42_dEe IS
+    component matmul_hw_mux_42_bkb IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -303,7 +303,7 @@ architecture behav of matmul_hw is
     end component;
 
 
-    component matmul_hw_mul_32seOg IS
+    component matmul_hw_mul_32scud IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -322,7 +322,7 @@ architecture behav of matmul_hw is
 
 
 begin
-    matmul_hw_mux_42_dEe_U1 : component matmul_hw_mux_42_dEe
+    matmul_hw_mux_42_bkb_U1 : component matmul_hw_mux_42_bkb
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -340,7 +340,7 @@ begin
         din5 => tmp_reg_1296,
         dout => tmp_4_fu_649_p6);
 
-    matmul_hw_mux_42_dEe_U2 : component matmul_hw_mux_42_dEe
+    matmul_hw_mux_42_bkb_U2 : component matmul_hw_mux_42_bkb
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -358,7 +358,7 @@ begin
         din5 => tmp_reg_1296,
         dout => tmp_7_fu_662_p6);
 
-    matmul_hw_mul_32seOg_U3 : component matmul_hw_mul_32seOg
+    matmul_hw_mul_32scud_U3 : component matmul_hw_mul_32scud
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -373,7 +373,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_964_p2);
 
-    matmul_hw_mux_42_dEe_U4 : component matmul_hw_mux_42_dEe
+    matmul_hw_mux_42_bkb_U4 : component matmul_hw_mux_42_bkb
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -391,7 +391,7 @@ begin
         din5 => tmp_reg_1296,
         dout => tmp_5_fu_969_p6);
 
-    matmul_hw_mul_32seOg_U5 : component matmul_hw_mul_32seOg
+    matmul_hw_mul_32scud_U5 : component matmul_hw_mul_32scud
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -406,7 +406,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_982_p2);
 
-    matmul_hw_mux_42_dEe_U6 : component matmul_hw_mux_42_dEe
+    matmul_hw_mux_42_bkb_U6 : component matmul_hw_mux_42_bkb
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -424,7 +424,7 @@ begin
         din5 => tmp_reg_1296,
         dout => tmp_8_fu_987_p6);
 
-    matmul_hw_mul_32seOg_U7 : component matmul_hw_mul_32seOg
+    matmul_hw_mul_32scud_U7 : component matmul_hw_mul_32scud
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -439,7 +439,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_1060_p2);
 
-    matmul_hw_mul_32seOg_U8 : component matmul_hw_mul_32seOg
+    matmul_hw_mul_32scud_U8 : component matmul_hw_mul_32scud
     generic map (
         ID => 1,
         NUM_STAGE => 6,

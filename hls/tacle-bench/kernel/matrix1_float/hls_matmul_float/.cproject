@@ -79,7 +79,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="matmul_3b_16x16|matmul_3b_32x32|matmul_3b_4x4|matmul_5b_16x16|matmul_5b_32x32|matmul_5b_4x4|matmul_7b_16x16|matmul_7b_32x32|matmul_7b_4x4|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="matmul_3b_16x16|matmul_3b_32x32|matmul_3b_4x4|matmul_5b_16x16|matmul_5b_32x32|matmul_5b_4x4|matmul_9b_16x16|matmul_9b_32x32|matmul_9b_4x4|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -153,7 +153,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="matmul_3b_16x16|matmul_3b_32x32|matmul_3b_4x4|matmul_5b_16x16|matmul_5b_32x32|matmul_5b_4x4|matmul_7b_16x16|matmul_7b_32x32|matmul_7b_4x4|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="matmul_3b_16x16|matmul_3b_32x32|matmul_3b_4x4|matmul_5b_16x16|matmul_5b_32x32|matmul_5b_4x4|matmul_9b_16x16|matmul_9b_32x32|matmul_9b_4x4|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

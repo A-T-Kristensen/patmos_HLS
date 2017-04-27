@@ -5,8 +5,8 @@
 ############################################################
 open_project hls_matmul_float
 set_top matmul_hw
-add_files matmul.c
 add_files matmul.h
+add_files matmul.c
 add_files -tb matmul_test.c
 open_solution "matmul_5b_32x32"
 set_part {xc7a100tcsg324-1} -tool vivado
