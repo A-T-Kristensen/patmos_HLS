@@ -1,0 +1,151 @@
+
+
+================================================================
+== Vivado HLS Report for 'aesl_mux_load_4_4_x_s'
+================================================================
+* Date:           Fri Apr 28 10:47:35 2017
+
+* Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
+* Project:        hls_minver
+* Solution:       minver_float_4b_16x16
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      5.45|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    1|    1|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|    190|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       5|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       5|    190|
++-----------------+---------+-------+--------+-------+
+|Available        |      270|    240|  126800|  63400|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name   | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------+----------+-------+---+----+------------+------------+
+    |tmp_75_fu_128_p2    |     +    |      0|  0|  64|          64|          64|
+    |sel_tmp2_fu_144_p2  |   icmp   |      0|  0|  10|          30|           1|
+    |sel_tmp4_fu_150_p2  |   icmp   |      0|  0|  10|          30|           2|
+    |sel_tmp_fu_138_p2   |   icmp   |      0|  0|  10|          30|           1|
+    |ap_return           |  select  |      0|  0|  32|           1|          32|
+    |sel_tmp1_fu_156_p3  |  select  |      0|  0|  32|           1|          32|
+    |sel_tmp3_fu_163_p3  |  select  |      0|  0|  32|           1|          32|
+    +--------------------+----------+-------+---+----+------------+------------+
+    |Total               |          |      0|  0| 190|         157|         164|
+    +--------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +-------------------------+---+----+-----+-----------+
+    |           Name          | FF| LUT| Bits| Const Bits|
+    +-------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |  1|   0|    1|          0|
+    |sel_tmp2_reg_202         |  1|   0|    1|          0|
+    |sel_tmp4_reg_207         |  1|   0|    1|          0|
+    |sel_tmp_reg_197          |  1|   0|    1|          0|
+    +-------------------------+---+----+-----+-----------+
+    |Total                    |  5|   0|    5|          0|
+    +-------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+-----------------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++-----------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk           |  in |    1| ap_ctrl_hs | aesl_mux_load_4_4_x_s | return value |
+|ap_rst           |  in |    1| ap_ctrl_hs | aesl_mux_load_4_4_x_s | return value |
+|ap_start         |  in |    1| ap_ctrl_hs | aesl_mux_load_4_4_x_s | return value |
+|ap_done          | out |    1| ap_ctrl_hs | aesl_mux_load_4_4_x_s | return value |
+|ap_idle          | out |    1| ap_ctrl_hs | aesl_mux_load_4_4_x_s | return value |
+|ap_ready         | out |    1| ap_ctrl_hs | aesl_mux_load_4_4_x_s | return value |
+|ap_ce            |  in |    1| ap_ctrl_hs | aesl_mux_load_4_4_x_s | return value |
+|ap_return        | out |   32| ap_ctrl_hs | aesl_mux_load_4_4_x_s | return value |
+|empty_9_Addr_A   | out |   32|    bram    |        empty_9        |     array    |
+|empty_9_EN_A     | out |    1|    bram    |        empty_9        |     array    |
+|empty_9_WEN_A    | out |    4|    bram    |        empty_9        |     array    |
+|empty_9_Din_A    | out |   32|    bram    |        empty_9        |     array    |
+|empty_9_Dout_A   |  in |   32|    bram    |        empty_9        |     array    |
+|empty_10_Addr_A  | out |   32|    bram    |        empty_10       |     array    |
+|empty_10_EN_A    | out |    1|    bram    |        empty_10       |     array    |
+|empty_10_WEN_A   | out |    4|    bram    |        empty_10       |     array    |
+|empty_10_Din_A   | out |   32|    bram    |        empty_10       |     array    |
+|empty_10_Dout_A  |  in |   32|    bram    |        empty_10       |     array    |
+|empty_11_Addr_A  | out |   32|    bram    |        empty_11       |     array    |
+|empty_11_EN_A    | out |    1|    bram    |        empty_11       |     array    |
+|empty_11_WEN_A   | out |    4|    bram    |        empty_11       |     array    |
+|empty_11_Din_A   | out |   32|    bram    |        empty_11       |     array    |
+|empty_11_Dout_A  |  in |   32|    bram    |        empty_11       |     array    |
+|empty_12_Addr_A  | out |   32|    bram    |        empty_12       |     array    |
+|empty_12_EN_A    | out |    1|    bram    |        empty_12       |     array    |
+|empty_12_WEN_A   | out |    4|    bram    |        empty_12       |     array    |
+|empty_12_Din_A   | out |   32|    bram    |        empty_12       |     array    |
+|empty_12_Dout_A  |  in |   32|    bram    |        empty_12       |     array    |
+|empty_13         |  in |   30|   ap_none  |        empty_13       |    scalar    |
+|empty_14         |  in |    2|   ap_none  |        empty_14       |    scalar    |
+|empty            |  in |    7|   ap_none  |         empty         |    scalar    |
++-----------------+-----+-----+------------+-----------------------+--------------+
+
