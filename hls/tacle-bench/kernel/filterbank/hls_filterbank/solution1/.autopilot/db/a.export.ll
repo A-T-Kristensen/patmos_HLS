@@ -1,17 +1,17 @@
-; ModuleID = '/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/.autopilot/db/a.o.2.bc'
+; ModuleID = '/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank/hls_filterbank/solution1/.autopilot/db/a.o.2.bc'
 target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
 target triple = "x86_64-unknown-linux-gnu"
 
 @filterbank_core_hwa_s = internal unnamed_addr constant [20 x i8] c"filterbank_core_hwa\00"
 @p_str9 = private unnamed_addr constant [12 x i8] c"hls_label_4\00", align 1
-@p_str8 = private unnamed_addr constant [12 x i8] c"hls_label_0\00", align 1
-@p_str7 = private unnamed_addr constant [12 x i8] c"hls_label_6\00", align 1
-@p_str6 = private unnamed_addr constant [12 x i8] c"hls_label_5\00", align 1
+@p_str8 = private unnamed_addr constant [12 x i8] c"hls_label_2\00", align 1
+@p_str7 = private unnamed_addr constant [12 x i8] c"hls_label_5\00", align 1
+@p_str6 = private unnamed_addr constant [12 x i8] c"hls_label_6\00", align 1
 @p_str5 = private unnamed_addr constant [12 x i8] c"hls_label_3\00", align 1
-@p_str4 = private unnamed_addr constant [12 x i8] c"hls_label_1\00", align 1
+@p_str4 = private unnamed_addr constant [12 x i8] c"hls_label_0\00", align 1
 @p_str3 = private unnamed_addr constant [5 x i8] c"bram\00", align 1
 @p_str2 = private unnamed_addr constant [12 x i8] c"RAM_1P_BRAM\00", align 1
-@p_str10 = private unnamed_addr constant [12 x i8] c"hls_label_2\00", align 1
+@p_str10 = private unnamed_addr constant [12 x i8] c"hls_label_1\00", align 1
 @p_str1 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
 @p_str = private unnamed_addr constant [11 x i8] c"ap_ctrl_hs\00", align 1
 

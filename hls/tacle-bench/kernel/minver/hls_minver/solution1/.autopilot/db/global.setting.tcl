@@ -1,5 +1,5 @@
 
-set TopModule "minver_minver_hwa"
+set TopModule "minver_hwa"
 set ClockPeriod "10.000000"
 set ClockList {ap_clk}
 set multiClockList {}
@@ -41,9 +41,9 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7a100t:csg324:-1"
-set SourceFiles {sc {} c {../../minver_lib.c ../../minver.c}}
+set SourceFiles {sc {} c {../../minver.c ../../minver_lib.c}}
 set SourceFlags {sc {} c {{} {}}}
-set DirectiveFile {/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/solution1.directive}
+set DirectiveFile {/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/solution1.directive}
 set TBFiles {verilog ../../minver_test.c bc ../../minver_test.c vhdl ../../minver_test.c sc ../../minver_test.c cas ../../minver_test.c c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

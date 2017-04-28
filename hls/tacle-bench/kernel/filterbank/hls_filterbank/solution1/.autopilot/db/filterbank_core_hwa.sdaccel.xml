@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'filterbank_core_hwa'" level="0">
-<item name = "Date">Wed Apr 19 16:58:14 2017
+<item name = "Date">Fri Apr 28 07:43:18 2017
 </item>
 <item name = "Version">2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)</item>
 <item name = "Project">hls_filterbank</item>
@@ -686,8 +686,8 @@
 <item name = "Max Delay">9.66</item>
 <item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
 <keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
-<column name="'r_load', filterbank.c:84">load, 2.71, 2.71, -, -, -, -, -, -, &apos;r&apos;, -, -, -, -</column>
-<column name="'tmp_11', filterbank.c:84">fmul, 6.95, 9.66, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'r_load', filterbank.c:83">load, 2.71, 2.71, -, -, -, -, -, -, &apos;r&apos;, -, -, -, -</column>
+<column name="'tmp_11', filterbank.c:83">fmul, 6.95, 9.66, -, -, -, -, -, -, -, -, -, -, -</column>
 </table>
 </item>
 </section>

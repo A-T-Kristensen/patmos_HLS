@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="17" Path="/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/ip_tmp/prj.xpr">
+<Project Version="7" Minor="17" Path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/ip_tmp/prj.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="82801ecbb44d47a9940f3fe092b5bfa9"/>
+    <Option Name="Id" Val="2d951a9c2bd84f21af3bc074c6e7995e"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -52,28 +52,28 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/ip/minver_minver_hwa_ap_dcmp_0_no_dsp_64/minver_minver_hwa_ap_dcmp_0_no_dsp_64.xci">
+      <File Path="$PSRCDIR/sources_1/ip/minver_hwa_ap_dsub_4_full_dsp_64/minver_hwa_ap_dsub_4_full_dsp_64.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/minver_minver_hwa_ap_ddiv_29_no_dsp_64/minver_minver_hwa_ap_ddiv_29_no_dsp_64.xci">
+      <File Path="$PSRCDIR/sources_1/ip/minver_hwa_ap_ddiv_29_no_dsp_64/minver_hwa_ap_ddiv_29_no_dsp_64.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/minver_minver_hwa_ap_dmul_4_max_dsp_64/minver_minver_hwa_ap_dmul_4_max_dsp_64.xci">
+      <File Path="$PSRCDIR/sources_1/ip/minver_hwa_ap_dmul_4_max_dsp_64/minver_hwa_ap_dmul_4_max_dsp_64.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/minver_minver_hwa_ap_dsub_4_full_dsp_64/minver_minver_hwa_ap_dsub_4_full_dsp_64.xci">
+      <File Path="$PSRCDIR/sources_1/ip/minver_hwa_ap_dcmp_0_no_dsp_64/minver_hwa_ap_dcmp_0_no_dsp_64.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

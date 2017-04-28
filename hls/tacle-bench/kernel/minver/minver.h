@@ -35,8 +35,9 @@
 typedef double mat_type;
 
 #define DIM 3
+#define EPS 1.0e-6
 
-int minver_minver_hwa(mat_type minver_a[DIM][DIM], int side, mat_type eps );
+int minver_hwa(mat_type a[DIM][DIM]);
 int minver_minver(mat_type minver_a[DIM][DIM], int side, mat_type eps);
 
 int  minver_mmul(mat_type minver_a[DIM][DIM], mat_type minver_b[DIM][DIM],

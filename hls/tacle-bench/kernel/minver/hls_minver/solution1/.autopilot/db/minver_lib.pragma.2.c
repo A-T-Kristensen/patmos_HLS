@@ -1,5 +1,5 @@
-# 1 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/minver_lib.pragma.1.c"
-# 1 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/minver_lib.pragma.1.c" 1
+# 1 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/minver_lib.pragma.1.c"
+# 1 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/minver_lib.pragma.1.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 149 "<built-in>" 3
@@ -8,7 +8,7 @@
 
 
 
-# 1 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
+# 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
 /* autopilot_ssdm_op.h*/
 /*
 #-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
@@ -61,7 +61,7 @@
  *
  * $Id$
  */
-# 283 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+# 283 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
 /*#define AP_SPEC_ATTR __attribute__ ((pure))*/
 
 
@@ -188,11 +188,11 @@
 
 /*#define _ssdm_op_WaitUntil(X) while (!(X)) _ssdm_op_Wait(1);
 #define _ssdm_op_Delayed(X) X */
-# 421 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+# 421 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 # 6 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/minver_lib.pragma.1.c" 2
+# 1 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/minver_lib.pragma.1.c" 2
 # 1 "minver_lib.c"
 # 1 "minver_lib.c" 1
 # 1 "<built-in>" 1
@@ -203,7 +203,7 @@
 
 
 
-# 1 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
+# 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
 /* autopilot_ssdm_op.h*/
 /*
 #-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
@@ -256,7 +256,7 @@
  *
  * $Id$
  */
-# 283 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+# 283 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
 /*#define AP_SPEC_ATTR __attribute__ ((pure))*/
 
 
@@ -383,7 +383,7 @@
 
 /*#define _ssdm_op_WaitUntil(X) while (!(X)) _ssdm_op_Wait(1);
 #define _ssdm_op_Delayed(X) X */
-# 421 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+# 421 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 # 6 "<command line>" 2
 # 1 "<built-in>" 2
@@ -970,7 +970,7 @@
 
 
 
-# 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+# 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
 /*===---- stddef.h - Basic type definitions --------------------------------===
  *
  * Copyright (c) 2008 Eli Friedman
@@ -1011,7 +1011,7 @@ typedef __typeof__(sizeof(int)) size_t;
 
 
 typedef int wchar_t;
-# 56 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+# 56 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
 /* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
 __WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
 # 34 "/usr/include/stdio.h" 2 3 4
@@ -1281,7 +1281,7 @@ typedef struct _IO_FILE __FILE;
 
 /* Define types for libio in terms of the standard internal type names.  */
 # 16 "/usr/include/_G_config.h" 3 4
-# 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+# 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
 /*===---- stddef.h - Basic type definitions --------------------------------===
  *
  * Copyright (c) 2008 Eli Friedman
@@ -1306,7 +1306,7 @@ typedef struct _IO_FILE __FILE;
  *
  *===-----------------------------------------------------------------------===
  */
-# 56 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+# 56 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
 /* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
 __WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
 # 16 "/usr/include/_G_config.h" 2 3 4
@@ -1388,7 +1388,7 @@ typedef struct
 
 
 
-# 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdarg.h" 1 3 4
+# 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdarg.h" 1 3 4
 /*===---- stdarg.h - Variable argument handling ----------------------------===
  *
  * Copyright (c) 2008 Eli Friedman
@@ -2281,7 +2281,8 @@ typedef double mat_type;
 
 
 
-int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps );
+
+int minver_hwa(mat_type a[3][3]);
 int minver_minver(mat_type minver_a[3][3], int side, mat_type eps);
 
 int minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3],

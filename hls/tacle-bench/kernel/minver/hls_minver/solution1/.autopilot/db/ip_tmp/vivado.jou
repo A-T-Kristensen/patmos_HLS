@@ -2,11 +2,11 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
 # IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-# Start of session at: Wed Apr 19 15:31:46 2017
-# Process ID: 5209
-# Current directory: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/ip_tmp
+# Start of session at: Fri Apr 28 09:04:06 2017
+# Process ID: 4544
+# Current directory: /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/ip_tmp
 # Command line: vivado  -notrace -mode batch -source run_vivado.tcl
-# Log file: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/ip_tmp/vivado.log
-# Journal file: /home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/ip_tmp/vivado.jou
+# Log file: /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/ip_tmp/vivado.log
+# Journal file: /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/ip_tmp/vivado.jou
 #-----------------------------------------------------------
 source run_vivado.tcl -notrace

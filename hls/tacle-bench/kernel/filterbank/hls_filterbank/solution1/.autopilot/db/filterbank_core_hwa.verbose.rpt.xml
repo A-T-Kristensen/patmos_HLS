@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'filterbank_core_hwa'" level="0">
-<item name = "Date">Wed Apr 19 16:58:15 2017
+<item name = "Date">Fri Apr 28 07:43:19 2017
 </item>
 <item name = "Version">2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)</item>
 <item name = "Project">hls_filterbank</item>

@@ -1,6 +1,6 @@
-minver_minver_hwacud
-minver_minver_hwadEe
-minver_minver_hwaeOg
-minver_minver_hwafYi
-minver_minver_hwabkb
-minver_minver_hwa
+minver_hwa_dsub_6bkb
+minver_hwa_dmul_6cud
+minver_hwa_ddiv_6dEe
+minver_hwa_dcmp_6eOg
+minver_hwa_work
+minver_hwa

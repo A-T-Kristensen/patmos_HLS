@@ -1,5 +1,5 @@
-# 1 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/minver.pragma.1.c"
-# 1 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/minver.pragma.1.c" 1
+# 1 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/minver.pragma.1.c"
+# 1 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/minver.pragma.1.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 149 "<built-in>" 3
@@ -8,7 +8,7 @@
 
 
 
-# 1 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
+# 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
 /* autopilot_ssdm_op.h*/
 /*
 #-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
@@ -61,7 +61,7 @@
  *
  * $Id$
  */
-# 283 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+# 283 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
 /*#define AP_SPEC_ATTR __attribute__ ((pure))*/
 
 
@@ -188,11 +188,11 @@
 
 /*#define _ssdm_op_WaitUntil(X) while (!(X)) _ssdm_op_Wait(1);
 #define _ssdm_op_Delayed(X) X */
-# 421 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+# 421 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 # 6 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/minver.pragma.1.c" 2
+# 1 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver/hls_minver/solution1/.autopilot/db/minver.pragma.1.c" 2
 # 1 "minver.c"
 # 1 "minver.c" 1
 # 1 "<built-in>" 1
@@ -203,7 +203,7 @@
 
 
 
-# 1 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
+# 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
 /* autopilot_ssdm_op.h*/
 /*
 #-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
@@ -256,7 +256,7 @@
  *
  * $Id$
  */
-# 283 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+# 283 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
 /*#define AP_SPEC_ATTR __attribute__ ((pure))*/
 
 
@@ -383,7 +383,7 @@
 
 /*#define _ssdm_op_WaitUntil(X) while (!(X)) _ssdm_op_Wait(1);
 #define _ssdm_op_Delayed(X) X */
-# 421 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+# 421 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 # 6 "<command line>" 2
 # 1 "<built-in>" 2
@@ -1003,7 +1003,7 @@
 
 
 
-# 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+# 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
 /*===---- stddef.h - Basic type definitions --------------------------------===
  *
  * Copyright (c) 2008 Eli Friedman
@@ -1044,7 +1044,7 @@ typedef __typeof__(sizeof(int)) size_t;
 
 
 typedef int wchar_t;
-# 56 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+# 56 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
 /* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
 __WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
 # 34 "/usr/include/stdio.h" 2 3 4
@@ -1314,7 +1314,7 @@ typedef struct _IO_FILE __FILE;
 
 /* Define types for libio in terms of the standard internal type names.  */
 # 16 "/usr/include/_G_config.h" 3 4
-# 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+# 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
 /*===---- stddef.h - Basic type definitions --------------------------------===
  *
  * Copyright (c) 2008 Eli Friedman
@@ -1339,7 +1339,7 @@ typedef struct _IO_FILE __FILE;
  *
  *===-----------------------------------------------------------------------===
  */
-# 56 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+# 56 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
 /* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
 __WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
 # 16 "/usr/include/_G_config.h" 2 3 4
@@ -1421,7 +1421,7 @@ typedef struct
 
 
 
-# 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdarg.h" 1 3 4
+# 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdarg.h" 1 3 4
 /*===---- stdarg.h - Variable argument handling ----------------------------===
  *
  * Copyright (c) 2008 Eli Friedman
@@ -2314,7 +2314,8 @@ typedef double mat_type;
 
 
 
-int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps );
+
+int minver_hwa(mat_type a[3][3]);
 int minver_minver(mat_type minver_a[3][3], int side, mat_type eps);
 
 int minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3],
@@ -2329,11 +2330,11 @@ int minver_main();
 int main( void );
 # 34 "minver.c" 2
 
-int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps)
-{_ssdm_SpecArrayDimSize(minver_a,3);
+int minver_hwa(mat_type a[3][3])
+{_ssdm_SpecArrayDimSize(a,3);
 
-//#pragma HLS ARRAY_RESHAPE variable=minver_a block factor=2 dim=2
-_ssdm_op_SpecInterface(minver_a, "bram", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
+//#pragma HLS ARRAY_RESHAPE variable=a block factor=2 dim=2
+_ssdm_op_SpecInterface(a, "bram", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(0, "ap_ctrl_hs", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 
  int work[ 500 ], i, j, k, iw;
@@ -2341,28 +2342,28 @@ _ssdm_op_SpecInterface(0, "ap_ctrl_hs", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, 
   mat_type w, wmax, pivot, api, w1;
   mat_type minver_det;
 
-  if ( side < 2 || side > 500 || eps <= 0.0 )
+  if ( 3 < 2 || 3 > 500 || 1.0e-6 <= 0.0 )
     return ( 999 );
 
   w1 = 1.0;
-  for ( i = 0; i < side; i++ )
+  for ( i = 0; i < 3; i++ )
     work[ i ] = i;
 
   // This has unknown bound
-  for ( k = 0; k < side; k++ ) {
+  for ( k = 0; k < 3; k++ ) {
     wmax = 0.0;
-    for ( i = k; i < side; i++ ) {
+    for ( i = k; i < 3; i++ ) {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
- w = minver_fabs( minver_a[ i ][ k ] );
+ w = minver_fabs( a[ i ][ k ] );
       if ( w > wmax ) {
         wmax = w;
         r = i;
       }
     }
 
-    pivot = minver_a[ r ][ k ];
+    pivot = a[ r ][ k ];
     api = minver_fabs( pivot );
-    if ( api <= eps ) {
+    if ( api <= 1.0e-6 ) {
       minver_det = w1;
       return ( 1 );
     }
@@ -2372,36 +2373,35 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
       iw = work[ k ];
       work[ k ] = work[ r ];
       work[ r ] = iw;
-      for ( j = 0; j < side; j++ ) {
+      for ( j = 0; j < 3; j++ ) {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
- w = minver_a[ k ][ j ];
-        minver_a[ k ][ j ] = minver_a[ r ][ j ];
-        minver_a[ r ][ j ] = w;
+ w = a[ k ][ j ];
+        a[ k ][ j ] = a[ r ][ j ];
+        a[ r ][ j ] = w;
       }
     }
 
-    for ( i = 0; i < side; i++ ) {
+    for ( i = 0; i < 3; i++ ) {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
- minver_a[ k ][ i ] /= pivot;
+ a[ k ][ i ] /= pivot;
     }
-
-    for ( i = 0; i < side; i++ ) {
-_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
- if ( i != k ) {
-        w = minver_a[ i ][ k ];
+    // Can this block be optimised
+    for ( i = 0; i < 3; i++ ) {
+      if ( i != k ) {
+        w = a[ i ][ k ];
         if ( w != 0.0 ) {
-          for ( j = 0; j < side; j++ ) {
-            if ( j != k ) minver_a[ i ][ j ] -= w * minver_a[ k ][ j ];
+          for ( j = 0; j < 3; j++ ) {
+            if ( j != k ) a[ i ][ j ] -= w * a[ k ][ j ];
           }
-          minver_a[ i ][ k ] = -w / pivot;
+          a[ i ][ k ] = -w / pivot;
         }
       }
     }
-    minver_a[ k ][ k ] = 1.0 / pivot;
+    a[ k ][ k ] = 1.0 / pivot;
 
   }
 
-  for ( i = 0; i < side; ) {
+  for ( i = 0; i < 3; ) {
 
     while ( 1 ) {
 
@@ -2413,11 +2413,11 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
       work[ k ] = work[ i ];
       work[ i ] = iw;
 
-      for ( j = 0; j < side; j++ ) {
+      for ( j = 0; j < 3; j++ ) {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
- w = minver_a [k ][ i ];
-        minver_a[ k ][ i ] = minver_a[ k ][ k ];
-        minver_a[ k ][ k ] = w;
+ w = a [k ][ i ];
+        a[ k ][ i ] = a[ k ][ k ];
+        a[ k ][ k ] = w;
       }
     }
 

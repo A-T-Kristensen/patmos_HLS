@@ -147,61 +147,47 @@ int minver_return(mat_type minver_a_i[DIM][DIM])
 int minver_main()
 {
   int i, j;
-  mat_type eps;
-  eps = 1.0e-6;
+  int err_cnt = 0;
+  mat_type eps = 1.0e-6;
 
-  mat_type  minver_a[DIM][DIM] = {
+  mat_type  minver_hw[DIM][DIM] = {
     {3.0, -6.0,  7.0},
     {9.0,  0.0, -5.0},
     {5.0, -8.0,  6.0},
   };
-  mat_type minver_b[DIM][DIM];
-  mat_type minver_c[DIM][DIM];
-  mat_type minver_aa[DIM][DIM];
-  mat_type minver_a_i[DIM][DIM];
 
-  minver_init(minver_a);  
+  mat_type minver_sw[DIM][DIM];
+
+  mat_type minver_hw_i[DIM][DIM];
+  mat_type minver_sw_i[DIM][DIM];
+
+  //minver_init(minver_a);
 
   for ( i = 0; i < DIM; i++ ) {
     for ( j = 0; j < DIM; j++ ) {
-      printf("%lf ", minver_c[i][j]);
-    }
-    printf("\n");
-  }
+    	minver_sw[i][j] = minver_hw[i][j];
+    	minver_sw_i[i][j] = minver_hw[i][j];
+    	minver_hw_i[i][j] = minver_hw[i][j];
 
-  for ( i = 0; i < DIM; i++ ) {
-    for ( j = 0; j < DIM; j++ )
-      minver_aa[i][j] = minver_a[i][j]; // Store original matrix
+    }
   }
 
   // Perform matrix inversion
   // for this benchmark, it is enough to just check with the checksum
   //minver_minver(minver_a, 3, eps ); 
-  minver_minver_hwa(minver_a, DIM, eps );
+  minver_hwa(minver_hw_i);
 
-  for ( i = 0; i < 3; i++ ) {
-    for ( j = 0; j < 3; j++ )
-      minver_a_i[ i ][ j ] = minver_a[ i ][ j ];
-  }
-
-  // This only gives out
-  minver_mmul(minver_a_i, minver_b, minver_c);
+  minver_hwa(minver_sw_i);
 
   for ( i = 0; i < DIM; i++ ) {
     for ( j = 0; j < DIM; j++ ) {
-      printf("%lf ", minver_a_i[i][j]);
+    	if(minver_hw_i[i][j] != minver_sw_i[i][j]) {
+    		err_cnt++;
+    	}
     }
-    printf("\n");
   }
 
-  for ( i = 0; i < DIM; i++ ) {
-    for ( j = 0; j < DIM; j++ ) {
-      printf("%lf ", minver_c[i][j]);
-    }
-    printf("\n");
-  }
-
-  return minver_return(minver_a_i);
+  return err_cnt;
 }
 
 int main( void )

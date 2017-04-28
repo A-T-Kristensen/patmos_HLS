@@ -4,9 +4,9 @@
 #pragma line 1 "<built-in>" 3 ::: -7
 #pragma line 149 "<built-in>" 3 ::: -6
 #pragma line 1 "<command line>" 1 ::: -5
-#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1 ::: 0
-#pragma line 283 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" ::: 53
-#pragma line 421 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" ::: 180
+#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1 ::: 0
+#pragma line 283 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" ::: 53
+#pragma line 421 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" ::: 180
 #pragma line 6 "<command line>" 2 ::: 182
 #pragma line 1 "<built-in>" 2 ::: 183
 #pragma line 1 "minver.c" 2 ::: 184
@@ -43,8 +43,8 @@
 #pragma line 11 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 2 3 4 ::: 785
 #pragma line 392 "/usr/include/features.h" 2 3 4 ::: 786
 #pragma line 28 "/usr/include/stdio.h" 2 3 4 ::: 787
-#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4 ::: 793
-#pragma line 56 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4 ::: 834
+#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4 ::: 793
+#pragma line 56 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4 ::: 834
 #pragma line 34 "/usr/include/stdio.h" 2 3 4 ::: 837
 #pragma line 1 "/usr/include/x86_64-linux-gnu/bits/types.h" 1 3 4 ::: 839
 #pragma line 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4 ::: 867
@@ -60,8 +60,8 @@
 #pragma line 74 "/usr/include/stdio.h" 3 4 ::: 1059
 #pragma line 1 "/usr/include/libio.h" 1 3 4 ::: 1060
 #pragma line 1 "/usr/include/_G_config.h" 1 3 4 ::: 1092
-#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4 ::: 1108
-#pragma line 56 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4 ::: 1133
+#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4 ::: 1108
+#pragma line 56 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4 ::: 1133
 #pragma line 16 "/usr/include/_G_config.h" 2 3 4 ::: 1136
 #pragma line 1 "/usr/include/wchar.h" 1 3 4 ::: 1141
 #pragma line 81 "/usr/include/wchar.h" 3 4 ::: 1163
@@ -70,7 +70,7 @@
 #pragma line 45 "/usr/include/_G_config.h" 3 4 ::: 1198
 #pragma line 32 "/usr/include/libio.h" 2 3 4 ::: 1208
 #pragma line 47 "/usr/include/libio.h" 3 4 ::: 1210
-#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdarg.h" 1 3 4 ::: 1214
+#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdarg.h" 1 3 4 ::: 1214
 #pragma line 50 "/usr/include/libio.h" 2 3 4 ::: 1263
 #pragma line 86 "/usr/include/libio.h" 3 4 ::: 1264
 #pragma line 124 "/usr/include/libio.h" 3 4 ::: 1270
@@ -105,4 +105,4 @@
 #pragma line 909 "/usr/include/stdio.h" 3 4 ::: 2081
 #pragma line 930 "/usr/include/stdio.h" 3 4 ::: 2093
 #pragma line 31 "./minver.h" 2 ::: 2096
-#pragma line 34 "minver.c" 2 ::: 2118
+#pragma line 34 "minver.c" 2 ::: 2119

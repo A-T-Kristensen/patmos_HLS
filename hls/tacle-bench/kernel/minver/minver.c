@@ -32,11 +32,11 @@
 
 #include "minver.h"
 
-int minver_minver_hwa(mat_type minver_a[DIM][DIM], int side, mat_type eps)
+int minver_hwa(mat_type a[DIM][DIM])
 {
 
-//#pragma HLS ARRAY_RESHAPE variable=minver_a block factor=2 dim=2
-#pragma HLS INTERFACE bram port=minver_a
+//#pragma HLS ARRAY_RESHAPE variable=a block factor=2 dim=2
+#pragma HLS INTERFACE bram port=a
 #pragma HLS INTERFACE ap_ctrl_hs port=return
 
   int work[ 500 ], i, j, k, iw;
@@ -44,28 +44,28 @@ int minver_minver_hwa(mat_type minver_a[DIM][DIM], int side, mat_type eps)
   mat_type w, wmax, pivot, api, w1;
   mat_type minver_det;
 
-  if ( side < 2 || side > 500 || eps <= 0.0 )
+  if ( DIM < 2 || DIM > 500 || EPS <= 0.0 )
     return ( 999 );
 
   w1 = 1.0;
-  for ( i = 0; i < side; i++ )
+  for ( i = 0; i < DIM; i++ )
     work[ i ] = i;
 
   // This has unknown bound
-  for ( k = 0; k < side; k++ ) {
+  for ( k = 0; k < DIM; k++ ) {
     wmax = 0.0;
-    for ( i = k; i < side; i++ ) {
+    for ( i = k; i < DIM; i++ ) {
 	#pragma HLS PIPELINE
-      w = minver_fabs( minver_a[ i ][ k ] );
+      w = minver_fabs( a[ i ][ k ] );
       if ( w > wmax ) {
         wmax = w;
         r = i;
       }
     }
 
-    pivot = minver_a[ r ][ k ];
+    pivot = a[ r ][ k ];
     api = minver_fabs( pivot );
-    if ( api <= eps ) {
+    if ( api <= EPS ) {
       minver_det = w1;
       return ( 1 );
     }
@@ -75,35 +75,35 @@ int minver_minver_hwa(mat_type minver_a[DIM][DIM], int side, mat_type eps)
       iw = work[ k ];
       work[ k ] = work[ r ];
       work[ r ] = iw;
-      for ( j = 0; j < side; j++ ) {
+      for ( j = 0; j < DIM; j++ ) {
 	  #pragma HLS PIPELINE
-        w = minver_a[ k ][ j ];
-        minver_a[ k ][ j ] = minver_a[ r ][ j ];
-        minver_a[ r ][ j ] = w;
+        w = a[ k ][ j ];
+        a[ k ][ j ] = a[ r ][ j ];
+        a[ r ][ j ] = w;
       }
     }
 
-    for ( i = 0; i < side; i++ ) {
+    for ( i = 0; i < DIM; i++ ) {
 	#pragma HLS PIPELINE
-        minver_a[ k ][ i ] /= pivot;
+        a[ k ][ i ] /= pivot;
     }
     // Can this block be optimised
-    for ( i = 0; i < side; i++ ) {
+    for ( i = 0; i < DIM; i++ ) {
       if ( i != k ) {
-        w = minver_a[ i ][ k ];
+        w = a[ i ][ k ];
         if ( w != 0.0 ) {
-          for ( j = 0; j < side; j++ ) {
-            if ( j != k ) minver_a[ i ][ j ] -= w * minver_a[ k ][ j ];
+          for ( j = 0; j < DIM; j++ ) {
+            if ( j != k ) a[ i ][ j ] -= w * a[ k ][ j ];
           }
-          minver_a[ i ][ k ] = -w / pivot;
+          a[ i ][ k ] = -w / pivot;
         }
       }
     }
-    minver_a[ k ][ k ] = 1.0 / pivot;
+    a[ k ][ k ] = 1.0 / pivot;
 
   }
 
-  for ( i = 0; i < side; ) {
+  for ( i = 0; i < DIM; ) {
 
     while ( 1 ) {
 
@@ -115,11 +115,11 @@ int minver_minver_hwa(mat_type minver_a[DIM][DIM], int side, mat_type eps)
       work[ k ] = work[ i ];
       work[ i ] = iw;
 
-      for ( j = 0; j < side; j++ ) {
+      for ( j = 0; j < DIM; j++ ) {
 	  #pragma HLS PIPELINE
-        w = minver_a [k ][ i ];
-        minver_a[ k ][ i ] = minver_a[ k ][ k ];
-        minver_a[ k ][ k ] = w;
+        w = a [k ][ i ];
+        a[ k ][ i ] = a[ k ][ k ];
+        a[ k ][ k ] = w;
       }
     }
 

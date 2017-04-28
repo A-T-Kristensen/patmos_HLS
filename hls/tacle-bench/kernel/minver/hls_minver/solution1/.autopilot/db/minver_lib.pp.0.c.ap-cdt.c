@@ -8,7 +8,7 @@
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
+#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
 /* autopilot_ssdm_op.h*/
 /*
 #-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
@@ -61,7 +61,7 @@
  *
  * $Id$
  */
-#pragma line 283 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+#pragma line 283 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
 /*#define AP_SPEC_ATTR __attribute__ ((pure))*/
 #pragma empty_line
 #pragma empty_line
@@ -188,7 +188,7 @@
 #pragma empty_line
 /*#define _ssdm_op_WaitUntil(X) while (!(X)) _ssdm_op_Wait(1);
 #define _ssdm_op_Delayed(X) X */
-#pragma line 421 "/opt/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+#pragma line 421 "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/etc/autopilot_ssdm_op.h"
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 #pragma line 6 "<command line>" 2
 #pragma line 1 "<built-in>" 2
@@ -769,7 +769,7 @@
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
 /*===---- stddef.h - Basic type definitions --------------------------------===
  *
  * Copyright (c) 2008 Eli Friedman
@@ -810,7 +810,7 @@ typedef __typeof__(sizeof(int)) size_t;
 #pragma empty_line
 #pragma empty_line
 typedef int wchar_t;
-#pragma line 56 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+#pragma line 56 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
 /* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
 __WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
 #pragma line 34 "/usr/include/stdio.h" 2 3 4
@@ -1084,7 +1084,7 @@ typedef struct _IO_FILE __FILE;
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
 /*===---- stddef.h - Basic type definitions --------------------------------===
  *
  * Copyright (c) 2008 Eli Friedman
@@ -1109,7 +1109,7 @@ typedef struct _IO_FILE __FILE;
  *
  *===-----------------------------------------------------------------------===
  */
-#pragma line 56 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+#pragma line 56 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
 /* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
 __WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
 #pragma line 16 "/usr/include/_G_config.h" 2 3 4
@@ -1190,7 +1190,7 @@ typedef struct
 /* This define avoids name pollution if we're using GNU stdarg.h */
 #pragma empty_line
 #pragma empty_line
-#pragma line 1 "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdarg.h" 1 3 4
+#pragma line 1 "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdarg.h" 1 3 4
 /*===---- stdarg.h - Variable argument handling ----------------------------===
  *
  * Copyright (c) 2008 Eli Friedman
@@ -2081,7 +2081,8 @@ typedef double mat_type;
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-int minver_minver_hwa(mat_type minver_a[3][3], int side, mat_type eps );
+#pragma empty_line
+int minver_hwa(mat_type a[3][3]);
 int minver_minver(mat_type minver_a[3][3], int side, mat_type eps);
 #pragma empty_line
 int minver_mmul(mat_type minver_a[3][3], mat_type minver_b[3][3],
