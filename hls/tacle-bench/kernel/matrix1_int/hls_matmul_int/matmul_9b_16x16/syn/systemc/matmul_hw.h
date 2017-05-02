@@ -11,7 +11,7 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "matmul_hw_mul_32sbkb.h"
+#include "matmul_hw_mul_32sdEe.h"
 #include "matmul_hw_b_copy_0.h"
 
 namespace ap_rtl {
@@ -116,22 +116,22 @@ struct matmul_hw : public sc_module {
     matmul_hw_b_copy_0* b_copy_13_U;
     matmul_hw_b_copy_0* b_copy_14_U;
     matmul_hw_b_copy_0* b_copy_15_U;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U1;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U2;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U3;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U4;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U5;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U6;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U7;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U8;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U9;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U10;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U11;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U12;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U13;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U14;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U15;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U16;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U1;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U2;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U3;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U4;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U5;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U6;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U7;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U8;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U9;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U10;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U11;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U12;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U13;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U14;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U15;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U16;
     sc_signal< sc_lv<6> > ap_CS_fsm;
     sc_signal< sc_lv<1> > ap_CS_fsm_state1;
     sc_signal< sc_lv<9> > indvar_flatten_reg_832;

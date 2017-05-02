@@ -11,7 +11,7 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "matmul_hw_mul_32sbkb.h"
+#include "matmul_hw_mul_32sdEe.h"
 #include "matmul_hw_b_copy_0.h"
 
 namespace ap_rtl {
@@ -132,38 +132,38 @@ struct matmul_hw : public sc_module {
     matmul_hw_b_copy_0* b_copy_29_U;
     matmul_hw_b_copy_0* b_copy_30_U;
     matmul_hw_b_copy_0* b_copy_31_U;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U1;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U2;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U3;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U4;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U5;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U6;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U7;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U8;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U9;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U10;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U11;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U12;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U13;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U14;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U15;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U16;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U17;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U18;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U19;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U20;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U21;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U22;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U23;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U24;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U25;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U26;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U27;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U28;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U29;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U30;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U31;
-    matmul_hw_mul_32sbkb<1,6,32,32,32>* matmul_hw_mul_32sbkb_U32;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U1;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U2;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U3;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U4;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U5;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U6;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U7;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U8;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U9;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U10;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U11;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U12;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U13;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U14;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U15;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U16;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U17;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U18;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U19;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U20;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U21;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U22;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U23;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U24;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U25;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U26;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U27;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U28;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U29;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U30;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U31;
+    matmul_hw_mul_32sdEe<1,6,32,32,32>* matmul_hw_mul_32sdEe_U32;
     sc_signal< sc_lv<10> > ap_CS_fsm;
     sc_signal< sc_lv<1> > ap_CS_fsm_state1;
     sc_signal< sc_lv<11> > indvar_flatten_reg_1536;

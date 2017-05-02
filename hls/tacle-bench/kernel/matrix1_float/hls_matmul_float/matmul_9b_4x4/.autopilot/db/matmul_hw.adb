@@ -5663,7 +5663,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>matmul_hw_mux_42_dEe_U9</rtlName>
+              <rtlName>matmul_hw_mux_42_jbC_U9</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -5710,7 +5710,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>matmul_hw_fmul_32cud_U5</rtlName>
+              <rtlName>matmul_hw_fmul_32ibs_U5</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -5753,7 +5753,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>matmul_hw_fadd_32bkb_U1</rtlName>
+              <rtlName>matmul_hw_fadd_32hbi_U1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -5796,7 +5796,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>matmul_hw_mux_42_dEe_U10</rtlName>
+              <rtlName>matmul_hw_mux_42_jbC_U10</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -5843,7 +5843,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>matmul_hw_fmul_32cud_U6</rtlName>
+              <rtlName>matmul_hw_fmul_32ibs_U6</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -5886,7 +5886,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>matmul_hw_fadd_32bkb_U2</rtlName>
+              <rtlName>matmul_hw_fadd_32hbi_U2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -5929,7 +5929,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>matmul_hw_mux_42_dEe_U11</rtlName>
+              <rtlName>matmul_hw_mux_42_jbC_U11</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -5976,7 +5976,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>matmul_hw_fmul_32cud_U7</rtlName>
+              <rtlName>matmul_hw_fmul_32ibs_U7</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -6019,7 +6019,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>matmul_hw_fadd_32bkb_U3</rtlName>
+              <rtlName>matmul_hw_fadd_32hbi_U3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -6062,7 +6062,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>matmul_hw_mux_42_dEe_U12</rtlName>
+              <rtlName>matmul_hw_mux_42_jbC_U12</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -6109,7 +6109,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>matmul_hw_fmul_32cud_U8</rtlName>
+              <rtlName>matmul_hw_fmul_32ibs_U8</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -6152,7 +6152,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>matmul_hw_fadd_32bkb_U4</rtlName>
+              <rtlName>matmul_hw_fadd_32hbi_U4</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -12118,7 +12118,7 @@
         <count>12</count>
         <item_version>0</item_version>
         <item class_id="38" tracking_level="0" version="0">
-          <first>matmul_hw_fadd_32bkb_U1 (matmul_hw_fadd_32bkb)</first>
+          <first>matmul_hw_fadd_32hbi_U1 (matmul_hw_fadd_32hbi)</first>
           <second class_id="39" tracking_level="0" version="0">
             <count>3</count>
             <item_version>0</item_version>
@@ -12137,7 +12137,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_fadd_32bkb_U2 (matmul_hw_fadd_32bkb)</first>
+          <first>matmul_hw_fadd_32hbi_U2 (matmul_hw_fadd_32hbi)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -12156,7 +12156,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_fadd_32bkb_U3 (matmul_hw_fadd_32bkb)</first>
+          <first>matmul_hw_fadd_32hbi_U3 (matmul_hw_fadd_32hbi)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -12175,7 +12175,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_fadd_32bkb_U4 (matmul_hw_fadd_32bkb)</first>
+          <first>matmul_hw_fadd_32hbi_U4 (matmul_hw_fadd_32hbi)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -12194,7 +12194,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_fmul_32cud_U5 (matmul_hw_fmul_32cud)</first>
+          <first>matmul_hw_fmul_32ibs_U5 (matmul_hw_fmul_32ibs)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -12213,7 +12213,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_fmul_32cud_U6 (matmul_hw_fmul_32cud)</first>
+          <first>matmul_hw_fmul_32ibs_U6 (matmul_hw_fmul_32ibs)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -12232,7 +12232,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_fmul_32cud_U7 (matmul_hw_fmul_32cud)</first>
+          <first>matmul_hw_fmul_32ibs_U7 (matmul_hw_fmul_32ibs)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -12251,7 +12251,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_fmul_32cud_U8 (matmul_hw_fmul_32cud)</first>
+          <first>matmul_hw_fmul_32ibs_U8 (matmul_hw_fmul_32ibs)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -12270,7 +12270,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_mux_42_dEe_U10 (matmul_hw_mux_42_dEe)</first>
+          <first>matmul_hw_mux_42_jbC_U10 (matmul_hw_mux_42_jbC)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -12285,7 +12285,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_mux_42_dEe_U11 (matmul_hw_mux_42_dEe)</first>
+          <first>matmul_hw_mux_42_jbC_U11 (matmul_hw_mux_42_jbC)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -12300,7 +12300,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_mux_42_dEe_U12 (matmul_hw_mux_42_dEe)</first>
+          <first>matmul_hw_mux_42_jbC_U12 (matmul_hw_mux_42_jbC)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -12315,7 +12315,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_mux_42_dEe_U9 (matmul_hw_mux_42_dEe)</first>
+          <first>matmul_hw_mux_42_jbC_U9 (matmul_hw_mux_42_jbC)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -15752,7 +15752,7 @@
         <count>12</count>
         <item_version>0</item_version>
         <item class_id="42" tracking_level="0" version="0">
-          <first>matmul_hw_fadd_32bkb_U1 (matmul_hw_fadd_32bkb)</first>
+          <first>matmul_hw_fadd_32hbi_U1 (matmul_hw_fadd_32hbi)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -15760,7 +15760,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_fadd_32bkb_U2 (matmul_hw_fadd_32bkb)</first>
+          <first>matmul_hw_fadd_32hbi_U2 (matmul_hw_fadd_32hbi)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -15768,7 +15768,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_fadd_32bkb_U3 (matmul_hw_fadd_32bkb)</first>
+          <first>matmul_hw_fadd_32hbi_U3 (matmul_hw_fadd_32hbi)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -15776,7 +15776,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_fadd_32bkb_U4 (matmul_hw_fadd_32bkb)</first>
+          <first>matmul_hw_fadd_32hbi_U4 (matmul_hw_fadd_32hbi)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -15784,7 +15784,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_fmul_32cud_U5 (matmul_hw_fmul_32cud)</first>
+          <first>matmul_hw_fmul_32ibs_U5 (matmul_hw_fmul_32ibs)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -15792,7 +15792,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_fmul_32cud_U6 (matmul_hw_fmul_32cud)</first>
+          <first>matmul_hw_fmul_32ibs_U6 (matmul_hw_fmul_32ibs)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -15800,7 +15800,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_fmul_32cud_U7 (matmul_hw_fmul_32cud)</first>
+          <first>matmul_hw_fmul_32ibs_U7 (matmul_hw_fmul_32ibs)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -15808,7 +15808,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_fmul_32cud_U8 (matmul_hw_fmul_32cud)</first>
+          <first>matmul_hw_fmul_32ibs_U8 (matmul_hw_fmul_32ibs)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -15816,7 +15816,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_mux_42_dEe_U10 (matmul_hw_mux_42_dEe)</first>
+          <first>matmul_hw_mux_42_jbC_U10 (matmul_hw_mux_42_jbC)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -15824,7 +15824,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_mux_42_dEe_U11 (matmul_hw_mux_42_dEe)</first>
+          <first>matmul_hw_mux_42_jbC_U11 (matmul_hw_mux_42_jbC)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -15832,7 +15832,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_mux_42_dEe_U12 (matmul_hw_mux_42_dEe)</first>
+          <first>matmul_hw_mux_42_jbC_U12 (matmul_hw_mux_42_jbC)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -15840,7 +15840,7 @@
           </second>
         </item>
         <item>
-          <first>matmul_hw_mux_42_dEe_U9 (matmul_hw_mux_42_dEe)</first>
+          <first>matmul_hw_mux_42_jbC_U9 (matmul_hw_mux_42_jbC)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>

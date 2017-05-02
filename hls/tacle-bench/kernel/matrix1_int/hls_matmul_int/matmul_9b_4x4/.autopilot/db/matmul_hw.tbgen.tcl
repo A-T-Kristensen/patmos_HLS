@@ -197,14 +197,14 @@ set RtlHierarchyInfo {[
 		{"Name" : "b_2", "Type" : "Bram", "Direction" : "I"},
 		{"Name" : "b_3", "Type" : "Bram", "Direction" : "I"},
 		{"Name" : "c", "Type" : "Bram", "Direction" : "O"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matmul_hw_mux_42_bkb_U1", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matmul_hw_mux_42_bkb_U2", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matmul_hw_mux_42_bkb_U3", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matmul_hw_mux_42_bkb_U4", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matmul_hw_mul_32scud_U5", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matmul_hw_mul_32scud_U6", "Parent" : "0"},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matmul_hw_mul_32scud_U7", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matmul_hw_mul_32scud_U8", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matmul_hw_mux_42_fYi_U1", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matmul_hw_mux_42_fYi_U2", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matmul_hw_mux_42_fYi_U3", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matmul_hw_mux_42_fYi_U4", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matmul_hw_mul_32sg8j_U5", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matmul_hw_mul_32sg8j_U6", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matmul_hw_mul_32sg8j_U7", "Parent" : "0"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matmul_hw_mul_32sg8j_U8", "Parent" : "0"}]}
 
 set hasDtUnsupportedChannel 0
 

@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 1
-set name matmul_hw_mul_32sbkb
+set name matmul_hw_mul_32sdEe
 set corename simcore_mul
 set op mul
 set stage_num 6

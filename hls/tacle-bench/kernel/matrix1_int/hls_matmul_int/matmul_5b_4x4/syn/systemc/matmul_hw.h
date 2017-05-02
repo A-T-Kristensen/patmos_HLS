@@ -11,8 +11,8 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "matmul_hw_mux_42_bkb.h"
-#include "matmul_hw_mul_32scud.h"
+#include "matmul_hw_mux_42_dEe.h"
+#include "matmul_hw_mul_32seOg.h"
 
 namespace ap_rtl {
 
@@ -72,14 +72,14 @@ struct matmul_hw : public sc_module {
 
     ofstream mHdltvinHandle;
     ofstream mHdltvoutHandle;
-    matmul_hw_mux_42_bkb<1,1,32,32,32,32,2,32>* matmul_hw_mux_42_bkb_U1;
-    matmul_hw_mux_42_bkb<1,1,32,32,32,32,2,32>* matmul_hw_mux_42_bkb_U2;
-    matmul_hw_mul_32scud<1,6,32,32,32>* matmul_hw_mul_32scud_U3;
-    matmul_hw_mux_42_bkb<1,1,32,32,32,32,2,32>* matmul_hw_mux_42_bkb_U4;
-    matmul_hw_mul_32scud<1,6,32,32,32>* matmul_hw_mul_32scud_U5;
-    matmul_hw_mux_42_bkb<1,1,32,32,32,32,2,32>* matmul_hw_mux_42_bkb_U6;
-    matmul_hw_mul_32scud<1,6,32,32,32>* matmul_hw_mul_32scud_U7;
-    matmul_hw_mul_32scud<1,6,32,32,32>* matmul_hw_mul_32scud_U8;
+    matmul_hw_mux_42_dEe<1,1,32,32,32,32,2,32>* matmul_hw_mux_42_dEe_U1;
+    matmul_hw_mux_42_dEe<1,1,32,32,32,32,2,32>* matmul_hw_mux_42_dEe_U2;
+    matmul_hw_mul_32seOg<1,6,32,32,32>* matmul_hw_mul_32seOg_U3;
+    matmul_hw_mux_42_dEe<1,1,32,32,32,32,2,32>* matmul_hw_mux_42_dEe_U4;
+    matmul_hw_mul_32seOg<1,6,32,32,32>* matmul_hw_mul_32seOg_U5;
+    matmul_hw_mux_42_dEe<1,1,32,32,32,32,2,32>* matmul_hw_mux_42_dEe_U6;
+    matmul_hw_mul_32seOg<1,6,32,32,32>* matmul_hw_mul_32seOg_U7;
+    matmul_hw_mul_32seOg<1,6,32,32,32>* matmul_hw_mul_32seOg_U8;
     sc_signal< sc_lv<4> > ap_CS_fsm;
     sc_signal< sc_lv<1> > ap_CS_fsm_state1;
     sc_signal< sc_lv<5> > indvar_flatten_reg_258;

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'matmul_hw'
 ================================================================
-* Date:           Thu Apr 27 18:28:54 2017
+* Date:           Tue May  2 08:06:35 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_matmul_int
@@ -73,38 +73,38 @@
     +--------------------------+----------------------+---------+-------+---+----+
     |         Instance         |        Module        | BRAM_18K| DSP48E| FF| LUT|
     +--------------------------+----------------------+---------+-------+---+----+
-    |matmul_hw_mul_32sbkb_U1   |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U2   |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U3   |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U4   |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U5   |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U6   |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U7   |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U8   |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U9   |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U10  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U11  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U12  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U13  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U14  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U15  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U16  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U17  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U18  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U19  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U20  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U21  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U22  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U23  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U24  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U25  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U26  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U27  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U28  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U29  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U30  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U31  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
-    |matmul_hw_mul_32sbkb_U32  |matmul_hw_mul_32sbkb  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U1   |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U2   |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U3   |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U4   |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U5   |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U6   |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U7   |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U8   |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U9   |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U10  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U11  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U12  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U13  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U14  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U15  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U16  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U17  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U18  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U19  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U20  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U21  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U22  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U23  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U24  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U25  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U26  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U27  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U28  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U29  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U30  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U31  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
+    |matmul_hw_mul_32sdEe_U32  |matmul_hw_mul_32sdEe  |        0|      4|  0|   0|
     +--------------------------+----------------------+---------+-------+---+----+
     |Total                     |                      |        0|    128|  0|   0|
     +--------------------------+----------------------+---------+-------+---+----+

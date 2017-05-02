@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'matmul_hw'" level="0">
-<item name = "Date">Thu Apr 27 17:41:24 2017
+<item name = "Date">Tue May  2 08:02:00 2017
 </item>
 <item name = "Version">2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)</item>
 <item name = "Project">hls_matmul_int</item>
@@ -62,14 +62,14 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="matmul_hw_mul_32scud_U3">matmul_hw_mul_32scud, 0, 4, 0, 0</column>
-<column name="matmul_hw_mul_32scud_U5">matmul_hw_mul_32scud, 0, 4, 0, 0</column>
-<column name="matmul_hw_mul_32scud_U7">matmul_hw_mul_32scud, 0, 4, 0, 0</column>
-<column name="matmul_hw_mul_32scud_U8">matmul_hw_mul_32scud, 0, 4, 0, 0</column>
-<column name="matmul_hw_mux_42_bkb_U1">matmul_hw_mux_42_bkb, 0, 0, 0, 32</column>
-<column name="matmul_hw_mux_42_bkb_U2">matmul_hw_mux_42_bkb, 0, 0, 0, 32</column>
-<column name="matmul_hw_mux_42_bkb_U4">matmul_hw_mux_42_bkb, 0, 0, 0, 32</column>
-<column name="matmul_hw_mux_42_bkb_U6">matmul_hw_mux_42_bkb, 0, 0, 0, 32</column>
+<column name="matmul_hw_mul_32seOg_U3">matmul_hw_mul_32seOg, 0, 4, 0, 0</column>
+<column name="matmul_hw_mul_32seOg_U5">matmul_hw_mul_32seOg, 0, 4, 0, 0</column>
+<column name="matmul_hw_mul_32seOg_U7">matmul_hw_mul_32seOg, 0, 4, 0, 0</column>
+<column name="matmul_hw_mul_32seOg_U8">matmul_hw_mul_32seOg, 0, 4, 0, 0</column>
+<column name="matmul_hw_mux_42_dEe_U1">matmul_hw_mux_42_dEe, 0, 0, 0, 32</column>
+<column name="matmul_hw_mux_42_dEe_U2">matmul_hw_mux_42_dEe, 0, 0, 0, 32</column>
+<column name="matmul_hw_mux_42_dEe_U4">matmul_hw_mux_42_dEe, 0, 0, 0, 32</column>
+<column name="matmul_hw_mux_42_dEe_U6">matmul_hw_mux_42_dEe, 0, 0, 0, 32</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">

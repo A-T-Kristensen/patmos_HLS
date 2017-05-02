@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'matmul_hw'" level="0">
-<item name = "Date">Thu Apr 27 18:28:52 2017
+<item name = "Date">Tue May  2 08:06:33 2017
 </item>
 <item name = "Version">2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)</item>
 <item name = "Project">hls_matmul_int</item>

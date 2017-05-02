@@ -11,8 +11,8 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "matmul_hw_fadd_32bkb.h"
-#include "matmul_hw_fmul_32cud.h"
+#include "matmul_hw_fadd_32fYi.h"
+#include "matmul_hw_fmul_32g8j.h"
 #include "matmul_hw_b_copy_0.h"
 
 namespace ap_rtl {
@@ -117,14 +117,14 @@ struct matmul_hw : public sc_module {
     matmul_hw_b_copy_0* b_copy_13_U;
     matmul_hw_b_copy_0* b_copy_14_U;
     matmul_hw_b_copy_0* b_copy_15_U;
-    matmul_hw_fadd_32bkb<1,5,32,32,32>* matmul_hw_fadd_32bkb_U1;
-    matmul_hw_fadd_32bkb<1,5,32,32,32>* matmul_hw_fadd_32bkb_U2;
-    matmul_hw_fadd_32bkb<1,5,32,32,32>* matmul_hw_fadd_32bkb_U3;
-    matmul_hw_fadd_32bkb<1,5,32,32,32>* matmul_hw_fadd_32bkb_U4;
-    matmul_hw_fmul_32cud<1,4,32,32,32>* matmul_hw_fmul_32cud_U5;
-    matmul_hw_fmul_32cud<1,4,32,32,32>* matmul_hw_fmul_32cud_U6;
-    matmul_hw_fmul_32cud<1,4,32,32,32>* matmul_hw_fmul_32cud_U7;
-    matmul_hw_fmul_32cud<1,4,32,32,32>* matmul_hw_fmul_32cud_U8;
+    matmul_hw_fadd_32fYi<1,5,32,32,32>* matmul_hw_fadd_32fYi_U1;
+    matmul_hw_fadd_32fYi<1,5,32,32,32>* matmul_hw_fadd_32fYi_U2;
+    matmul_hw_fadd_32fYi<1,5,32,32,32>* matmul_hw_fadd_32fYi_U3;
+    matmul_hw_fadd_32fYi<1,5,32,32,32>* matmul_hw_fadd_32fYi_U4;
+    matmul_hw_fmul_32g8j<1,4,32,32,32>* matmul_hw_fmul_32g8j_U5;
+    matmul_hw_fmul_32g8j<1,4,32,32,32>* matmul_hw_fmul_32g8j_U6;
+    matmul_hw_fmul_32g8j<1,4,32,32,32>* matmul_hw_fmul_32g8j_U7;
+    matmul_hw_fmul_32g8j<1,4,32,32,32>* matmul_hw_fmul_32g8j_U8;
     sc_signal< sc_lv<6> > ap_CS_fsm;
     sc_signal< sc_lv<1> > ap_CS_fsm_state1;
     sc_signal< sc_lv<9> > indvar_flatten_reg_834;

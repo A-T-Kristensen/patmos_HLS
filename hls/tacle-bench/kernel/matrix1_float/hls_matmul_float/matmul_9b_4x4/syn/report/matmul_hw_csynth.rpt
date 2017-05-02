@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'matmul_hw'
 ================================================================
-* Date:           Thu Apr 27 18:23:56 2017
+* Date:           Tue May  2 07:56:22 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_matmul_float
@@ -73,18 +73,18 @@
     +--------------------------+----------------------+---------+-------+-----+-----+
     |         Instance         |        Module        | BRAM_18K| DSP48E|  FF | LUT |
     +--------------------------+----------------------+---------+-------+-----+-----+
-    |matmul_hw_fadd_32bkb_U1   |matmul_hw_fadd_32bkb  |        0|      2|  205|  205|
-    |matmul_hw_fadd_32bkb_U2   |matmul_hw_fadd_32bkb  |        0|      2|  205|  205|
-    |matmul_hw_fadd_32bkb_U3   |matmul_hw_fadd_32bkb  |        0|      2|  205|  205|
-    |matmul_hw_fadd_32bkb_U4   |matmul_hw_fadd_32bkb  |        0|      2|  205|  205|
-    |matmul_hw_fmul_32cud_U5   |matmul_hw_fmul_32cud  |        0|      3|  143|  140|
-    |matmul_hw_fmul_32cud_U6   |matmul_hw_fmul_32cud  |        0|      3|  143|  140|
-    |matmul_hw_fmul_32cud_U7   |matmul_hw_fmul_32cud  |        0|      3|  143|  140|
-    |matmul_hw_fmul_32cud_U8   |matmul_hw_fmul_32cud  |        0|      3|  143|  140|
-    |matmul_hw_mux_42_dEe_U9   |matmul_hw_mux_42_dEe  |        0|      0|    0|   32|
-    |matmul_hw_mux_42_dEe_U10  |matmul_hw_mux_42_dEe  |        0|      0|    0|   32|
-    |matmul_hw_mux_42_dEe_U11  |matmul_hw_mux_42_dEe  |        0|      0|    0|   32|
-    |matmul_hw_mux_42_dEe_U12  |matmul_hw_mux_42_dEe  |        0|      0|    0|   32|
+    |matmul_hw_fadd_32hbi_U1   |matmul_hw_fadd_32hbi  |        0|      2|  205|  205|
+    |matmul_hw_fadd_32hbi_U2   |matmul_hw_fadd_32hbi  |        0|      2|  205|  205|
+    |matmul_hw_fadd_32hbi_U3   |matmul_hw_fadd_32hbi  |        0|      2|  205|  205|
+    |matmul_hw_fadd_32hbi_U4   |matmul_hw_fadd_32hbi  |        0|      2|  205|  205|
+    |matmul_hw_fmul_32ibs_U5   |matmul_hw_fmul_32ibs  |        0|      3|  143|  140|
+    |matmul_hw_fmul_32ibs_U6   |matmul_hw_fmul_32ibs  |        0|      3|  143|  140|
+    |matmul_hw_fmul_32ibs_U7   |matmul_hw_fmul_32ibs  |        0|      3|  143|  140|
+    |matmul_hw_fmul_32ibs_U8   |matmul_hw_fmul_32ibs  |        0|      3|  143|  140|
+    |matmul_hw_mux_42_jbC_U9   |matmul_hw_mux_42_jbC  |        0|      0|    0|   32|
+    |matmul_hw_mux_42_jbC_U10  |matmul_hw_mux_42_jbC  |        0|      0|    0|   32|
+    |matmul_hw_mux_42_jbC_U11  |matmul_hw_mux_42_jbC  |        0|      0|    0|   32|
+    |matmul_hw_mux_42_jbC_U12  |matmul_hw_mux_42_jbC  |        0|      0|    0|   32|
     +--------------------------+----------------------+---------+-------+-----+-----+
     |Total                     |                      |        0|     20| 1392| 1508|
     +--------------------------+----------------------+---------+-------+-----+-----+

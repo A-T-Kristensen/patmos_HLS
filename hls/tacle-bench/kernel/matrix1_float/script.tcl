@@ -13,19 +13,19 @@ set run_4x4      0
 
 set run_3b_4x4   1
 set run_5b_4x4   1
-set run_7b_4x4   1
+set run_9b_4x4   1
 
 set run_16x16    0
 
 set run_3b_16x16 1
 set run_5b_16x16 1
-set run_7b_16x16 1
+set run_9b_16x16 1
 
 set run_32x32    1
 
 set run_3b_32x32 1
 set run_5b_32x32 1
-set run_7b_32x32 1
+set run_9b_32x32 1
 
 set part  {xc7a100tcsg324-1}
 
@@ -86,12 +86,12 @@ if { $run_4x4 } {
 	   	} 		
 	}   	
 
-	if {$run_7b_4x4} {
+	if {$run_9b_4x4} {
 
-	   	open_solution "matmul_7b_4x4"
+	   	open_solution "matmul_9b_4x4"
 		set_part $part -tool vivado
 		create_clock -period 10 -name default
-		source "./hls_matmul_float/matmul_7b_4x4/directives.tcl"
+		source "./hls_matmul_float/matmul_9b_4x4/directives.tcl"
 
 		if { $run_csim } {
 			csim_design -clean
@@ -171,11 +171,11 @@ if { $run_16x16 } {
 	   	} 		
 	}   	
 
-	if {$run_7b_16x16} {
-	   	open_solution "matmul_7b_16x16"
+	if {$run_9b_16x16} {
+	   	open_solution "matmul_9b_16x16"
 		set_part $part -tool vivado
 		create_clock -period 10 -name default
-		source "./hls_matmul_float/matmul_7b_16x16/directives.tcl"
+		source "./hls_matmul_float/matmul_9b_16x16/directives.tcl"
 
 		if { $run_csim } {
 			csim_design -clean
@@ -254,11 +254,11 @@ if { $run_32x32 } {
 	   	}  		
 	}   	
 
-	if {$run_7b_32x32} {
-	   	open_solution "matmul_7b_32x32"
+	if {$run_9b_32x32} {
+	   	open_solution "matmul_9b_32x32"
 		set_part $part -tool vivado
 		create_clock -period 10 -name default
-		source "./hls_matmul_float/matmul_7b_32x32/directives.tcl"
+		source "./hls_matmul_float/matmul_9b_32x32/directives.tcl"
 
 		if { $run_csim } {
 			csim_design -clean

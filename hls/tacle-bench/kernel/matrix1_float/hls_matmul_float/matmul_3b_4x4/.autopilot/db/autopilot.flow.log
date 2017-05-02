@@ -1,4 +1,4 @@
-@I [HLS-0] Workspace /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4 opened at Wed Apr 26 09:19:52 CEST 2017
+@I [HLS-0] Workspace /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4 opened at Tue May 02 07:55:01 CEST 2017
 @I [HLS-100] Execute       config_clock -quiet -name default -period 10 -default=false 
 @I [SYN-201] Setting up clock 'default' with a period of 10ns.
 @I [HLS-100] Command       config_clock returned 0; 0 sec.
@@ -26,7 +26,7 @@
 @I [HLS-100] Command           ap_source returned 0; 0 sec.
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.lib 
 @I [HLS-100] Command           ap_source returned 0; 0 sec.
-@I [HLS-100] Command         ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_old.lib 
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_vivado.lib 
@@ -56,7 +56,7 @@
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
@@ -68,22 +68,22 @@
 @I [HLS-100] Command               ap_source returned 0; 0.01 sec.
 @I [HLS-100] Command             ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.07 sec.
+@I [HLS-100] Command             ap_source returned 0; 0.08 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Command           ap_source returned 0; 0.11 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.1 sec.
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
 @I [HLS-100] Command           ap_source returned 0; 0 sec.
-@I [HLS-100] Command         ap_source returned 0; 0.12 sec.
-@I [HLS-100] Command       ap_source returned 0; 0.12 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.1 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.1 sec.
 @I [HLS-100] Execute       open_platform DefaultPlatform 
 @I [HLS-100] Command       open_platform returned 0; 0 sec.
 @I [HLS-100] Execute       import_lib /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6 
@@ -107,11 +107,11 @@
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_hp.hlp 
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
-@I [HLS-100] Command       import_lib returned 0; 0.01 sec.
+@I [HLS-100] Command       import_lib returned 0; 0.02 sec.
 @I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6.gen 
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-@I [HLS-100] Command         ap_source returned 0; 0.01 sec.
-@I [HLS-100] Command       ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
 @I [HLS-100] Execute       set_part xc7a100tcsg324-1 
 @I [HLS-100] Execute         add_library xilinx/artix7/artix7:xc7a100t:csg324:-1 
 @I [HLS-100] Execute           get_default_platform 
@@ -137,7 +137,7 @@
 @I [HLS-100] Command       config_chip_info returned 0; 0 sec.
 @I [HLS-100] Execute       config_chip_info -quiet -speed slow 
 @I [HLS-100] Command       config_chip_info returned 0; 0 sec.
-@I [HLS-100] Command     open_solution returned 0; 0.18 sec.
+@I [HLS-100] Command     open_solution returned 0; 0.17 sec.
 @I [HLS-100] Execute     set_part xc7a100tcsg324-1 -tool vivado 
 @I [HLS-100] Execute       add_library xilinx/artix7/artix7:xc7a100t:csg324:-1 
 @I [HLS-100] Execute         get_default_platform 
@@ -183,7 +183,7 @@
 @I [HLS-100] Command       ap_source returned 0; 0.01 sec.
 @I [SIM-1] CSim done with 0 errors.
 @I [SIM-3] *************** CSIM finish ***************
-@I [HLS-100] Command     csim_design returned 0; 2.09 sec.
+@I [HLS-100] Command     csim_design returned 0; 2.14 sec.
 @I [HLS-100] Execute     csynth_design 
 @I [HLS-100] Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 
 @I [HLS-10] Analyzing design file 'matmul.c' ... 
@@ -196,7 +196,7 @@
 @I [HLS-100] Command         is_encrypted returned 0; 0 sec.
 @I [HLS-0] Source preprocessing
 @I [HLS-100] Execute         clang  -fno-limit-debug-info -gcc-toolchain "/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "matmul.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot" -I "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul.pp.0.c" 
-@I [HLS-100] Command         clang returned 0; 0.09 sec.
+@I [HLS-100] Command         clang returned 0; 0.08 sec.
 @I [HLS-0] GCC PP time: 0 seconds per iteration
 @I [HLS-100] Execute         list_core -type functional_unit 
 @I [HLS-100] Command         list_core returned 0; 0 sec.
@@ -204,7 +204,7 @@
 @I [HLS-0] Marker-Pragma convertor: /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul.pp.0.c /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul.pp.0.c.ap-line.c /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul.pp.0.c.ap-line.c.CXX 1
 @I [HLS-0] Converting Markers to Pragmas...
 @I [HLS-100] Execute         cdt  "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul.pp.0.c.ap-line.c"  -m "matmul_hw" -o "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul.pp.0.c.ap-cdt.c" -c --pp --directive /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/matmul_3b_4x4.directive --source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/matmul.c --error /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ca --gf --pd --p2d /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db --sd --scff /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/.systemc_flag --ad 
-@I [HLS-100] Command         cdt returned 0; 0.93 sec.
+@I [HLS-100] Command         cdt returned 0; 0.63 sec.
 @I [HLS-0] Marker-Pragma convertor: /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul.pp.0.c.ap-cdt.c /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul.pragma.0.c /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul.pragma.0.c.ap-line.CXX 0
 @I [HLS-0] Converting Pragmas to Markers...
 @I [HLS-100] Execute         source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/pragma.status.tcl 
@@ -215,28 +215,28 @@
 @I [HLS-100] Command         clang returned 0; 0.09 sec.
 @I [HLS-0] Processing labels
 @I [HLS-100] Execute         clang  -fno-limit-debug-info -gcc-toolchain /home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot" -I "/home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul.g.bc" 
-@I [HLS-100] Command         clang returned 0; 0.1 sec.
+@I [HLS-100] Command         clang returned 0; 0.09 sec.
 @I [HLS-10] Validating synthesis directives ...
 @I [HLS-100] Execute         source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/pragma.status.tcl 
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
-@I [HLS-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 328.277 ; gain = 12.586 ; free physical = 5524 ; free virtual = 15031
+@I [HLS-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 328.277 ; gain = 12.586 ; free physical = 8716 ; free virtual = 16394
 @I [HLS-0] Linking Release ...
 @I [HLS-100] Execute         llvm-ld /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul.bc -disable-opt -L/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/lib -lm_basic -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.o 
-@I [HLS-100] Command         llvm-ld returned 0; 0.05 sec.
+@I [HLS-100] Command         llvm-ld returned 0; 0.04 sec.
 @I [HLS-100] Execute         disassemble /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.o 
 @I [HLS-100] Execute           is_encrypted /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.o.bc 
 @I [HLS-100] Command           is_encrypted returned 0; 0 sec.
-@I [HLS-100] Command         disassemble returned 0; 0.05 sec.
+@I [HLS-100] Command         disassemble returned 0; 0.04 sec.
 @I [HLS-0] Disassemble time: 0 seconds per iteration
 @I [HLS-0] Linking Debug ...
 @I [HLS-100] Execute         llvm-ld /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul.g.bc -disable-opt -L/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/lib -lm_basic -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.g 
-@I [HLS-100] Command         llvm-ld returned 0; 0.05 sec.
+@I [HLS-100] Command         llvm-ld returned 0; 0.04 sec.
 @I [HLS-100] Execute         disassemble /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.g /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.g 
 @I [HLS-100] Execute           is_encrypted /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.g.bc 
 @I [HLS-100] Command           is_encrypted returned 0; 0 sec.
 @I [HLS-100] Command         disassemble returned 0; 0.05 sec.
 @I [HLS-0] Disassemble time: 0 seconds per iteration
-@I [HLS-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 328.277 ; gain = 12.586 ; free physical = 5522 ; free virtual = 15029
+@I [HLS-111] Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 328.277 ; gain = 12.586 ; free physical = 8715 ; free virtual = 16394
 @I [HLS-100] Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 @I [HLS-100] Execute           cleanup_all_models 
 @I [HLS-100] Command           cleanup_all_models returned 0; 0 sec.
@@ -252,15 +252,15 @@
 @I [HLS-100] Execute             is_encrypted /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.g.1.bc 
 @I [HLS-100] Command             is_encrypted returned 0; 0 sec.
 @I [HLS-100] Command           disassemble returned 0; 0.04 sec.
-@I [HLS-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 328.277 ; gain = 12.586 ; free physical = 5520 ; free virtual = 15028
+@I [HLS-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 328.277 ; gain = 12.586 ; free physical = 8713 ; free virtual = 16392
 @I [HLS-10] Checking synthesizability ...
 @I [HLS-0] Checking Synthesizability 1/2..
 @I [HLS-100] Execute           transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.g.1.bc -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.g.2.prechk.bc -f 
-@I [HLS-100] Command           transform returned 0; 0.08 sec.
+@I [HLS-100] Command           transform returned 0; 0.06 sec.
 @I [HLS-0] Checking Synthesizability 2/2..
 @I [HLS-100] Execute           transform -syn-check /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.g.2.prechk.bc -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.g.2.bc -f -phase syn-check 
-@I [HLS-100] Command           transform returned 0; 0 sec.
-@I [HLS-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 328.277 ; gain = 12.586 ; free physical = 5522 ; free virtual = 15030
+@I [HLS-100] Command           transform returned 0; 0.01 sec.
+@I [HLS-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 328.277 ; gain = 12.586 ; free physical = 8713 ; free virtual = 16392
 @I [HLS-0] Compiler optimizing ...
 @I [HLS-0] Share syncheck's 1.bc for syn flow: copy /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.g.1.bc to /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.o.1.bc
 @I [HLS-0] Presyn 1...
@@ -283,24 +283,24 @@
 @I [HLS-0] Presyn 2...
 @I [HLS-100] Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.o.1.tmp.bc -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.o.2.bc -f -phase presyn 
 @I [XFORM-401] Performing if-conversion on hyperblock from (matmul.c:23:69) to (matmul.c:23:63) in function 'matmul_hw'... converting 25 basic blocks.
-@I [HLS-100] Command           transform returned 0; 0.12 sec.
+@I [HLS-100] Command           transform returned 0; 0.11 sec.
 @I [HLS-100] Execute           disassemble /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.o.2 /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.o.2 
 @I [HLS-100] Execute             is_encrypted /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.o.2.bc 
 @I [HLS-100] Command             is_encrypted returned 0; 0 sec.
 @I [HLS-100] Command           disassemble returned 0; 0.04 sec.
-@I [HLS-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 456.273 ; gain = 140.582 ; free physical = 5502 ; free virtual = 15010
+@I [HLS-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 456.273 ; gain = 140.582 ; free physical = 8694 ; free virtual = 16373
 @I [HLS-0] Building ssdm...
 @I [HLS-100] Execute           transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -interface-preproc -interface-gen -deadargelim -directive-preproc -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -read-loop-dep -dce -bitwidth -loop-dep -norm-name -legalize -cdfg-build /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.o.2.bc -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 @I [XFORM-541] Flattening a loop nest 'Loop-1' (matmul.c:21:15) in function 'matmul_hw'.
-@I [HLS-100] Command           transform returned 0; 0.24 sec.
+@I [HLS-100] Command           transform returned 0; 0.22 sec.
 @I [HLS-100] Execute           disassemble /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.o.3 /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.o.3 
 @I [HLS-100] Execute             is_encrypted /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/a.o.3.bc 
 @I [HLS-100] Command             is_encrypted returned 0; 0 sec.
-@I [HLS-100] Command           disassemble returned 0; 0.05 sec.
-@I [HLS-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 456.273 ; gain = 140.582 ; free physical = 5510 ; free virtual = 15017
+@I [HLS-100] Command           disassemble returned 0; 0.04 sec.
+@I [HLS-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 456.273 ; gain = 140.582 ; free physical = 8702 ; free virtual = 16380
 @I [HLS-0] Finish building internal data model.
-@I [HLS-100] Command         opt_and_import_c returned 0; 0.87 sec.
-@I [HLS-100] Command       elaborate returned 0; 2.4 sec.
+@I [HLS-100] Command         opt_and_import_c returned 0; 0.81 sec.
+@I [HLS-100] Command       elaborate returned 0; 2 sec.
 @I [HLS-100] Execute       autosyn 
 @I [HLS-10] Starting hardware synthesis ...
 @I [HLS-0] Synthesizing C/C++ design ...
@@ -326,7 +326,7 @@
 @I [HLS-100] Execute         cdfg_preprocess -model matmul_hw 
 @I [HLS-100] Command         cdfg_preprocess returned 0; 0 sec.
 @I [HLS-100] Execute         rtl_gen_preprocess matmul_hw 
-@I [HLS-100] Command         rtl_gen_preprocess returned 0; 0 sec.
+@I [HLS-100] Command         rtl_gen_preprocess returned 0; 0.01 sec.
 @I [HLS-0] Model list for synthesis: matmul_hw
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Implementing module 'matmul_hw' 
@@ -339,12 +339,12 @@
 @W [SCHED-69] Unable to schedule 'load' operation ('a_load_1', matmul.c:32) on array 'a' due to limited memory ports.
 @I [SCHED-61] Pipelining result: Target II: 1, Final II: 4, Depth: 27.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-100] Command         schedule returned 0; 0.15 sec.
-@I [HLS-111]  Elapsed time: 5.08 seconds; current allocated memory: 59.099 MB.
+@I [HLS-100] Command         schedule returned 0; 0.13 sec.
+@I [HLS-111]  Elapsed time: 4.69 seconds; current allocated memory: 59.135 MB.
 @I [HLS-100] Execute         report -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.verbose.sched.rpt -verbose -f 
 @I [HLS-100] Command         report returned 0; 0.02 sec.
 @I [HLS-100] Execute         db_write -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.sched.adb -f 
-@I [HLS-100] Command         db_write returned 0; 0.01 sec.
+@I [HLS-100] Command         db_write returned 0; 0.02 sec.
 @I [HLS-0] Finish scheduling matmul_hw.
 @I [HLS-100] Execute         set_default_model matmul_hw 
 @I [HLS-100] Command         set_default_model returned 0; 0 sec.
@@ -382,12 +382,12 @@
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-100] Command         bind returned 0; 0.04 sec.
-@I [HLS-111]  Elapsed time: 0.07 seconds; current allocated memory: 60.060 MB.
+@I [HLS-100] Command         bind returned 0; 0.03 sec.
+@I [HLS-111]  Elapsed time: 0.07 seconds; current allocated memory: 60.096 MB.
 @I [HLS-100] Execute         report -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.verbose.bind.rpt -verbose -f 
-@I [HLS-100] Command         report returned 0; 0.08 sec.
+@I [HLS-100] Command         report returned 0; 0.07 sec.
 @I [HLS-100] Execute         db_write -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.bind.adb -f 
-@I [HLS-100] Command         db_write returned 0; 0.01 sec.
+@I [HLS-100] Command         db_write returned 0; 0.02 sec.
 @I [HLS-0] Finish binding matmul_hw.
 @I [HLS-100] Execute         get_model_list matmul_hw -filter all-wo-channel 
 @I [HLS-100] Command         get_model_list returned 0; 0 sec.
@@ -414,28 +414,28 @@
 @I [RTGEN-100] Generating core module 'matmul_hw_fmul_32cud': 1 instance(s).
 @I [RTGEN-100] Generating core module 'matmul_hw_mux_42_dEe': 4 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'matmul_hw'.
-@I [HLS-100] Command         create_rtl_model returned 0; 0.06 sec.
-@I [HLS-111]  Elapsed time: 0.15 seconds; current allocated memory: 61.340 MB.
+@I [HLS-100] Command         create_rtl_model returned 0; 0.05 sec.
+@I [HLS-111]  Elapsed time: 0.14 seconds; current allocated memory: 61.376 MB.
 @I [HLS-100] Execute         source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.rtl_wrap.cfg.tcl 
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
 @I [HLS-100] Execute         gen_rtl matmul_hw -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/syn/systemc/matmul_hw -synmodules matmul_hw 
 @I [HLS-100] Command         gen_rtl returned 0; 0 sec.
 @I [HLS-100] Execute         gen_rtl matmul_hw -istop -style xilinx -f -lang vhdl -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/syn/vhdl/matmul_hw 
-@I [HLS-100] Command         gen_rtl returned 0; 0.06 sec.
+@I [HLS-100] Command         gen_rtl returned 0; 0.05 sec.
 @I [HLS-100] Execute         gen_rtl matmul_hw -istop -style xilinx -f -lang vlog -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/syn/verilog/matmul_hw 
 @I [HLS-100] Command         gen_rtl returned 0; 0.03 sec.
 @I [HLS-100] Execute         export_constraint_db -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.constraint.tcl -f -tool general 
 @I [HLS-100] Command         export_constraint_db returned 0; 0 sec.
 @I [HLS-100] Execute         report -model matmul_hw -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.design.xml -verbose -f -dv 
-@I [HLS-100] Command         report returned 0; 0.05 sec.
+@I [HLS-100] Command         report returned 0; 0.06 sec.
 @I [HLS-100] Execute         report -model matmul_hw -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.sdaccel.xml -verbose -f -sdaccel 
-@I [HLS-100] Command         report returned 0; 0.09 sec.
+@I [HLS-100] Command         report returned 0; 0.07 sec.
 @I [HLS-100] Execute         gen_tb_info matmul_hw -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw -p /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db 
-@I [HLS-100] Command         gen_tb_info returned 0; 0 sec.
+@I [HLS-100] Command         gen_tb_info returned 0; 0.01 sec.
 @I [HLS-100] Execute         report -model matmul_hw -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/syn/report/matmul_hw_csynth.rpt -f 
 @I [HLS-100] Command         report returned 0; 0.03 sec.
 @I [HLS-100] Execute         report -model matmul_hw -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/syn/report/matmul_hw_csynth.xml -f -x 
-@I [HLS-100] Command         report returned 0; 0.03 sec.
+@I [HLS-100] Command         report returned 0; 0.02 sec.
 @I [HLS-100] Execute         report -model matmul_hw -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.verbose.rpt -verbose -f 
 @I [HLS-100] Command         report returned 0; 0.11 sec.
 @I [HLS-100] Execute         db_write -model matmul_hw -o /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.adb -f 
@@ -476,7 +476,7 @@
 @I [HLS-100] Command           ap_source returned 0; 0 sec.
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
-@I [HLS-100] Command         ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
@@ -499,18 +499,18 @@
 @I [HLS-100] Command                 ap_source returned 0; 0.01 sec.
 @I [HLS-100] Command               ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-@I [HLS-100] Command               ap_source returned 0; 0.01 sec.
-@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 @I [HLS-100] Command               ap_source returned 0; 0 sec.
+@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+@I [HLS-100] Command               ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
 @I [HLS-100] Command               ap_source returned 0; 0 sec.
 @I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
 @I [HLS-100] Command               ap_source returned 0; 0 sec.
 @I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
-@I [HLS-100] Command               ap_source returned 0; 0.08 sec.
+@I [HLS-100] Command               ap_source returned 0; 0.06 sec.
 @I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
 @I [HLS-100] Command               ap_source returned 0; 0 sec.
-@I [HLS-100] Command             ap_source returned 0; 0.1 sec.
+@I [HLS-100] Command             ap_source returned 0; 0.09 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Command           ap_source returned 0; 0.1 sec.
@@ -529,12 +529,12 @@
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
 @I [HLS-100] Execute         source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.compgen.tcl 
 @I [HLS-100] Command         ap_source returned 0; 0.03 sec.
-@I [HLS-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 456.273 ; gain = 140.582 ; free physical = 5516 ; free virtual = 15008
+@I [HLS-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 456.273 ; gain = 140.582 ; free physical = 8708 ; free virtual = 16371
 @I [SYSC-301] Generating SystemC RTL for matmul_hw.
 @I [VHDL-304] Generating VHDL RTL for matmul_hw.
 @I [VLOG-307] Generating Verilog RTL for matmul_hw.
-@I [HLS-100] Command       autosyn returned 0; 1 sec.
-@I [HLS-100] Command     csynth_design returned 0; 3.4 sec.
+@I [HLS-100] Command       autosyn returned 0; 0.94 sec.
+@I [HLS-100] Command     csynth_design returned 0; 2.94 sec.
 @I [HLS-100] Execute     export_design -rtl vhdl -format ip_catalog 
 @I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
 @I [HLS-100] Command       ap_source returned 0; 0 sec.
@@ -574,14 +574,14 @@
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
 @I [HLS-100] Command             ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.07 sec.
+@I [HLS-100] Command             ap_source returned 0; 0.06 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Command           ap_source returned 0; 0.1 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.09 sec.
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
 @I [HLS-100] Command           ap_source returned 0; 0 sec.
-@I [HLS-100] Command         ap_source returned 0; 0.1 sec.
-@I [HLS-100] Command       ap_source returned 0; 0.1 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.09 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.09 sec.
 @I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6.gen 
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
@@ -595,8 +595,8 @@
 @I [HLS-100] Command       ap_source returned 0; 0 sec.
 @I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
-@I [HLS-100] Command         ap_source returned 0; 0 sec.
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
 @I [HLS-100] Command       ap_source returned 0; 0 sec.
 @I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
@@ -609,7 +609,7 @@
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
@@ -618,12 +618,12 @@
 @I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
 @I [HLS-100] Command               ap_source returned 0; 0 sec.
 @I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
-@I [HLS-100] Command               ap_source returned 0; 0 sec.
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Command               ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
 @I [HLS-100] Command             ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
@@ -632,11 +632,11 @@
 @I [HLS-100] Command             ap_source returned 0; 0.07 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Command           ap_source returned 0; 0.1 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.09 sec.
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
 @I [HLS-100] Command           ap_source returned 0; 0 sec.
-@I [HLS-100] Command         ap_source returned 0; 0.1 sec.
-@I [HLS-100] Command       ap_source returned 0; 0.1 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.09 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.09 sec.
 @I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6.gen 
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
@@ -659,7 +659,7 @@
 @I [HLS-100] Execute         source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.rtl_wrap.cfg.tcl 
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
 @I [HLS-100] Execute         source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.tbgen.tcl 
-@I [HLS-100] Command         ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
 @I [HLS-100] Execute         source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.tbgen.tcl 
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
 @I [HLS-100] Command       ap_source returned 0; 0.03 sec.
@@ -686,7 +686,7 @@
 @I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.tbgen.tcl 
 @I [HLS-100] Command       ap_source returned 0; 0 sec.
 @I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.tbgen.tcl 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.tbgen.tcl 
 @I [HLS-100] Command       ap_source returned 0; 0 sec.
 @I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.tbgen.tcl 
@@ -752,12 +752,12 @@
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
 @I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
-@I [HLS-100] Command               ap_source returned 0; 0 sec.
-@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
 @I [HLS-100] Command               ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
+@I [HLS-100] Command               ap_source returned 0; 0 sec.
 @I [HLS-100] Command             ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 @I [HLS-100] Command             ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
@@ -766,16 +766,70 @@
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
 @I [HLS-100] Command             ap_source returned 0; 0.07 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.1 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.1 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.1 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6.gen 
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7.gen 
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
+@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
+@I [HLS-100] Command               ap_source returned 0; 0 sec.
+@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
+@I [HLS-100] Command               ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.06 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Command           ap_source returned 0; 0.09 sec.
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
 @I [HLS-100] Command           ap_source returned 0; 0 sec.
-@I [HLS-100] Command         ap_source returned 0; 0.1 sec.
-@I [HLS-100] Command       ap_source returned 0; 0.1 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.09 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.09 sec.
 @I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6.gen 
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
 @I [HLS-100] Command       ap_source returned 0; 0 sec.
 @I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
 @I [HLS-100] Command       ap_source returned 0; 0 sec.
@@ -795,16 +849,128 @@
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
 @I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
+@I [HLS-100] Command               ap_source returned 0; 0 sec.
+@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
 @I [HLS-100] Command               ap_source returned 0; 0.01 sec.
-@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.06 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.09 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.1 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.1 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6.gen 
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.compgen.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.constraint.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7.gen 
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
+@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
 @I [HLS-100] Command               ap_source returned 0; 0 sec.
+@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
+@I [HLS-100] Command               ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.06 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.08 sec.
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.09 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.09 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6.gen 
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7.gen 
+@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
+@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
+@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
+@I [HLS-100] Command               ap_source returned 0; 0 sec.
+@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
+@I [HLS-100] Command               ap_source returned 0; 0.01 sec.
 @I [HLS-100] Command             ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
 @I [HLS-100] Command             ap_source returned 0; 0.01 sec.
@@ -849,19 +1015,19 @@
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
 @I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
 @I [HLS-100] Command               ap_source returned 0; 0 sec.
 @I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
-@I [HLS-100] Command               ap_source returned 0; 0 sec.
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+@I [HLS-100] Command               ap_source returned 0; 0.01 sec.
 @I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 @I [HLS-100] Command             ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
@@ -875,8 +1041,8 @@
 @I [HLS-100] Command           ap_source returned 0; 0.1 sec.
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
 @I [HLS-100] Command           ap_source returned 0; 0 sec.
-@I [HLS-100] Command         ap_source returned 0; 0.1 sec.
-@I [HLS-100] Command       ap_source returned 0; 0.1 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.11 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.11 sec.
 @I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6.gen 
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
@@ -909,7 +1075,7 @@
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
@@ -923,65 +1089,13 @@
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.07 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Command           ap_source returned 0; 0.09 sec.
-@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
-@I [HLS-100] Command           ap_source returned 0; 0 sec.
-@I [HLS-100] Command         ap_source returned 0; 0.09 sec.
-@I [HLS-100] Command       ap_source returned 0; 0.09 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6.gen 
-@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-@I [HLS-100] Command         ap_source returned 0; 0 sec.
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
-@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
-@I [HLS-100] Command         ap_source returned 0; 0 sec.
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7.gen 
-@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
-@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
-@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
-@I [HLS-100] Command               ap_source returned 0; 0 sec.
-@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
-@I [HLS-100] Command               ap_source returned 0; 0.01 sec.
-@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.07 sec.
+@I [HLS-100] Command             ap_source returned 0; 0.06 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Command           ap_source returned 0; 0.1 sec.
@@ -995,121 +1109,7 @@
 @I [HLS-100] Command       ap_source returned 0; 0 sec.
 @I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
 @I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
-@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
-@I [HLS-100] Command         ap_source returned 0; 0 sec.
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
-@I [HLS-100] Command       ap_source returned 0; 0.01 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7.gen 
-@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
-@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
-@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
-@I [HLS-100] Command               ap_source returned 0; 0 sec.
-@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
-@I [HLS-100] Command               ap_source returned 0; 0.01 sec.
-@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.07 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Command           ap_source returned 0; 0.09 sec.
-@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
-@I [HLS-100] Command           ap_source returned 0; 0 sec.
-@I [HLS-100] Command         ap_source returned 0; 0.09 sec.
-@I [HLS-100] Command       ap_source returned 0; 0.09 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6.gen 
-@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-@I [HLS-100] Command         ap_source returned 0; 0 sec.
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.compgen.tcl 
-@I [HLS-100] Command       ap_source returned 0; 0.01 sec.
-@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/matmul_hw.constraint.tcl 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
-@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
-@I [HLS-100] Command         ap_source returned 0; 0 sec.
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7.gen 
-@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
-@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
-@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
-@I [HLS-100] Command               ap_source returned 0; 0 sec.
-@I [HLS-100] Execute               source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
-@I [HLS-100] Command               ap_source returned 0; 0.01 sec.
-@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.07 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Command           ap_source returned 0; 0.09 sec.
-@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
-@I [HLS-100] Command           ap_source returned 0; 0 sec.
-@I [HLS-100] Command         ap_source returned 0; 0.09 sec.
-@I [HLS-100] Command       ap_source returned 0; 0.09 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6.gen 
-@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-@I [HLS-100] Command         ap_source returned 0; 0 sec.
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float/hls_matmul_float/matmul_3b_4x4/.autopilot/db/global.setting.tcl 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Command     export_design returned 0; 32.47 sec.
+@I [HLS-100] Command     export_design returned 0; 32.56 sec.
 @I [HLS-100] Execute     open_solution matmul_5b_4x4 
 @I [HLS-100] Execute       cleanup_all 
 @I [HLS-100] Command       cleanup_all returned 0; 0 sec.

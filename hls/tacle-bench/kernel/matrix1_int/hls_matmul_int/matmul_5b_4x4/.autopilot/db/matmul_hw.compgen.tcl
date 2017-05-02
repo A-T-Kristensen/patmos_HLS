@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 1
-set name matmul_hw_mux_42_bkb
+set name matmul_hw_mux_42_dEe
 set corename simcore_mux
 set op mux
 set stage_num 1
@@ -86,7 +86,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your
 
 
 set id 3
-set name matmul_hw_mul_32scud
+set name matmul_hw_mul_32seOg
 set corename simcore_mul
 set op mul
 set stage_num 6

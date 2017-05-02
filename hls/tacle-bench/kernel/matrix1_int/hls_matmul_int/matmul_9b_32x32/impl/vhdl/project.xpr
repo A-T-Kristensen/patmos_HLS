@@ -6,7 +6,7 @@
 <Project Version="7" Minor="17" Path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_int/hls_matmul_int/matmul_9b_32x32/impl/vhdl/project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="8d0bb4e9c7394ae0b6c035f3c9ef064d"/>
+    <Option Name="Id" Val="d930fb9551b74cb1aa286f047d15575d"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -57,7 +57,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/matmul_hw_mul_32sbkb.vhd">
+      <File Path="$PPRDIR/matmul_hw_mul_32sdEe.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>

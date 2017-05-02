@@ -513,13 +513,13 @@ initial begin
 #0 ap_enable_reg_pp0_iter26 = 1'b0;
 end
 
-matmul_hw_fadd_32bkb #(
+matmul_hw_fadd_32hbi #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_fadd_32bkb_U1(
+matmul_hw_fadd_32hbi_U1(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(tmp_s_reg_1370),
@@ -528,13 +528,13 @@ matmul_hw_fadd_32bkb_U1(
     .dout(grp_fu_305_p2)
 );
 
-matmul_hw_fadd_32bkb #(
+matmul_hw_fadd_32hbi #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_fadd_32bkb_U2(
+matmul_hw_fadd_32hbi_U2(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(tmp_5_reg_1390),
@@ -543,13 +543,13 @@ matmul_hw_fadd_32bkb_U2(
     .dout(grp_fu_310_p2)
 );
 
-matmul_hw_fadd_32bkb #(
+matmul_hw_fadd_32hbi #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_fadd_32bkb_U3(
+matmul_hw_fadd_32hbi_U3(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(tmp_5_1_reg_1395),
@@ -558,13 +558,13 @@ matmul_hw_fadd_32bkb_U3(
     .dout(grp_fu_314_p2)
 );
 
-matmul_hw_fadd_32bkb #(
+matmul_hw_fadd_32hbi #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_fadd_32bkb_U4(
+matmul_hw_fadd_32hbi_U4(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(tmp_5_2_reg_1400),
@@ -573,13 +573,13 @@ matmul_hw_fadd_32bkb_U4(
     .dout(grp_fu_318_p2)
 );
 
-matmul_hw_fmul_32cud #(
+matmul_hw_fmul_32ibs #(
     .ID( 1 ),
     .NUM_STAGE( 4 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_fmul_32cud_U5(
+matmul_hw_fmul_32ibs_U5(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_row_load_reg_1345),
@@ -588,13 +588,13 @@ matmul_hw_fmul_32cud_U5(
     .dout(grp_fu_322_p2)
 );
 
-matmul_hw_fmul_32cud #(
+matmul_hw_fmul_32ibs #(
     .ID( 1 ),
     .NUM_STAGE( 4 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_fmul_32cud_U6(
+matmul_hw_fmul_32ibs_U6(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_row_load_1_reg_1340),
@@ -603,13 +603,13 @@ matmul_hw_fmul_32cud_U6(
     .dout(grp_fu_326_p2)
 );
 
-matmul_hw_fmul_32cud #(
+matmul_hw_fmul_32ibs #(
     .ID( 1 ),
     .NUM_STAGE( 4 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_fmul_32cud_U7(
+matmul_hw_fmul_32ibs_U7(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_row_load_2_reg_1335),
@@ -618,13 +618,13 @@ matmul_hw_fmul_32cud_U7(
     .dout(grp_fu_330_p2)
 );
 
-matmul_hw_fmul_32cud #(
+matmul_hw_fmul_32ibs #(
     .ID( 1 ),
     .NUM_STAGE( 4 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_fmul_32cud_U8(
+matmul_hw_fmul_32ibs_U8(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_row_load_3_reg_1330),
@@ -633,7 +633,7 @@ matmul_hw_fmul_32cud_U8(
     .dout(grp_fu_334_p2)
 );
 
-matmul_hw_mux_42_dEe #(
+matmul_hw_mux_42_jbC #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din1_WIDTH( 32 ),
@@ -642,7 +642,7 @@ matmul_hw_mux_42_dEe #(
     .din4_WIDTH( 32 ),
     .din5_WIDTH( 2 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mux_42_dEe_U9(
+matmul_hw_mux_42_jbC_U9(
     .din1(tmp_4_fu_936_p1),
     .din2(tmp_4_fu_936_p2),
     .din3(tmp_4_fu_936_p3),
@@ -651,7 +651,7 @@ matmul_hw_mux_42_dEe_U9(
     .dout(tmp_4_fu_936_p6)
 );
 
-matmul_hw_mux_42_dEe #(
+matmul_hw_mux_42_jbC #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din1_WIDTH( 32 ),
@@ -660,7 +660,7 @@ matmul_hw_mux_42_dEe #(
     .din4_WIDTH( 32 ),
     .din5_WIDTH( 2 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mux_42_dEe_U10(
+matmul_hw_mux_42_jbC_U10(
     .din1(tmp_7_fu_949_p1),
     .din2(tmp_7_fu_949_p2),
     .din3(tmp_7_fu_949_p3),
@@ -669,7 +669,7 @@ matmul_hw_mux_42_dEe_U10(
     .dout(tmp_7_fu_949_p6)
 );
 
-matmul_hw_mux_42_dEe #(
+matmul_hw_mux_42_jbC #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din1_WIDTH( 32 ),
@@ -678,7 +678,7 @@ matmul_hw_mux_42_dEe #(
     .din4_WIDTH( 32 ),
     .din5_WIDTH( 2 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mux_42_dEe_U11(
+matmul_hw_mux_42_jbC_U11(
     .din1(tmp_8_fu_962_p1),
     .din2(tmp_8_fu_962_p2),
     .din3(tmp_8_fu_962_p3),
@@ -687,7 +687,7 @@ matmul_hw_mux_42_dEe_U11(
     .dout(tmp_8_fu_962_p6)
 );
 
-matmul_hw_mux_42_dEe #(
+matmul_hw_mux_42_jbC #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din1_WIDTH( 32 ),
@@ -696,7 +696,7 @@ matmul_hw_mux_42_dEe #(
     .din4_WIDTH( 32 ),
     .din5_WIDTH( 2 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mux_42_dEe_U12(
+matmul_hw_mux_42_jbC_U12(
     .din1(tmp_9_fu_975_p1),
     .din2(tmp_9_fu_975_p2),
     .din3(tmp_9_fu_975_p3),

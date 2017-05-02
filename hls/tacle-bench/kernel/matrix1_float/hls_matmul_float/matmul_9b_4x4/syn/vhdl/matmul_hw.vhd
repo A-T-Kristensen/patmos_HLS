@@ -413,7 +413,7 @@ architecture behav of matmul_hw is
     attribute fsm_encoding of ap_CS_fsm_state29 : signal is "none";
     signal ap_NS_fsm : STD_LOGIC_VECTOR (2 downto 0);
 
-    component matmul_hw_fadd_32bkb IS
+    component matmul_hw_fadd_32hbi IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -430,7 +430,7 @@ architecture behav of matmul_hw is
     end component;
 
 
-    component matmul_hw_fmul_32cud IS
+    component matmul_hw_fmul_32ibs IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -447,7 +447,7 @@ architecture behav of matmul_hw is
     end component;
 
 
-    component matmul_hw_mux_42_dEe IS
+    component matmul_hw_mux_42_jbC IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -469,7 +469,7 @@ architecture behav of matmul_hw is
 
 
 begin
-    matmul_hw_fadd_32bkb_U1 : component matmul_hw_fadd_32bkb
+    matmul_hw_fadd_32hbi_U1 : component matmul_hw_fadd_32hbi
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -484,7 +484,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_305_p2);
 
-    matmul_hw_fadd_32bkb_U2 : component matmul_hw_fadd_32bkb
+    matmul_hw_fadd_32hbi_U2 : component matmul_hw_fadd_32hbi
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -499,7 +499,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_310_p2);
 
-    matmul_hw_fadd_32bkb_U3 : component matmul_hw_fadd_32bkb
+    matmul_hw_fadd_32hbi_U3 : component matmul_hw_fadd_32hbi
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -514,7 +514,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_314_p2);
 
-    matmul_hw_fadd_32bkb_U4 : component matmul_hw_fadd_32bkb
+    matmul_hw_fadd_32hbi_U4 : component matmul_hw_fadd_32hbi
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -529,7 +529,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_318_p2);
 
-    matmul_hw_fmul_32cud_U5 : component matmul_hw_fmul_32cud
+    matmul_hw_fmul_32ibs_U5 : component matmul_hw_fmul_32ibs
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -544,7 +544,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_322_p2);
 
-    matmul_hw_fmul_32cud_U6 : component matmul_hw_fmul_32cud
+    matmul_hw_fmul_32ibs_U6 : component matmul_hw_fmul_32ibs
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -559,7 +559,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_326_p2);
 
-    matmul_hw_fmul_32cud_U7 : component matmul_hw_fmul_32cud
+    matmul_hw_fmul_32ibs_U7 : component matmul_hw_fmul_32ibs
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -574,7 +574,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_330_p2);
 
-    matmul_hw_fmul_32cud_U8 : component matmul_hw_fmul_32cud
+    matmul_hw_fmul_32ibs_U8 : component matmul_hw_fmul_32ibs
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -589,7 +589,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_334_p2);
 
-    matmul_hw_mux_42_dEe_U9 : component matmul_hw_mux_42_dEe
+    matmul_hw_mux_42_jbC_U9 : component matmul_hw_mux_42_jbC
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -607,7 +607,7 @@ begin
         din5 => tmp_reg_1299,
         dout => tmp_4_fu_936_p6);
 
-    matmul_hw_mux_42_dEe_U10 : component matmul_hw_mux_42_dEe
+    matmul_hw_mux_42_jbC_U10 : component matmul_hw_mux_42_jbC
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -625,7 +625,7 @@ begin
         din5 => tmp_reg_1299,
         dout => tmp_7_fu_949_p6);
 
-    matmul_hw_mux_42_dEe_U11 : component matmul_hw_mux_42_dEe
+    matmul_hw_mux_42_jbC_U11 : component matmul_hw_mux_42_jbC
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -643,7 +643,7 @@ begin
         din5 => tmp_reg_1299,
         dout => tmp_8_fu_962_p6);
 
-    matmul_hw_mux_42_dEe_U12 : component matmul_hw_mux_42_dEe
+    matmul_hw_mux_42_jbC_U12 : component matmul_hw_mux_42_jbC
     generic map (
         ID => 1,
         NUM_STAGE => 1,

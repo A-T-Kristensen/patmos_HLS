@@ -1138,13 +1138,13 @@ b_copy_31_U(
     .q0(b_copy_31_q0)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U1(
+matmul_hw_mul_32sdEe_U1(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_1897_p0),
@@ -1153,13 +1153,13 @@ matmul_hw_mul_32sbkb_U1(
     .dout(grp_fu_1897_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U2(
+matmul_hw_mul_32sdEe_U2(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_1902_p0),
@@ -1168,13 +1168,13 @@ matmul_hw_mul_32sbkb_U2(
     .dout(grp_fu_1902_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U3(
+matmul_hw_mul_32sdEe_U3(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_1907_p0),
@@ -1183,13 +1183,13 @@ matmul_hw_mul_32sbkb_U3(
     .dout(grp_fu_1907_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U4(
+matmul_hw_mul_32sdEe_U4(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_1912_p0),
@@ -1198,13 +1198,13 @@ matmul_hw_mul_32sbkb_U4(
     .dout(grp_fu_1912_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U5(
+matmul_hw_mul_32sdEe_U5(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_2007_p0),
@@ -1213,13 +1213,13 @@ matmul_hw_mul_32sbkb_U5(
     .dout(grp_fu_2007_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U6(
+matmul_hw_mul_32sdEe_U6(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_2012_p0),
@@ -1228,13 +1228,13 @@ matmul_hw_mul_32sbkb_U6(
     .dout(grp_fu_2012_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U7(
+matmul_hw_mul_32sdEe_U7(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_2017_p0),
@@ -1243,13 +1243,13 @@ matmul_hw_mul_32sbkb_U7(
     .dout(grp_fu_2017_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U8(
+matmul_hw_mul_32sdEe_U8(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_2022_p0),
@@ -1258,13 +1258,13 @@ matmul_hw_mul_32sbkb_U8(
     .dout(grp_fu_2022_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U9(
+matmul_hw_mul_32sdEe_U9(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_2115_p0),
@@ -1273,13 +1273,13 @@ matmul_hw_mul_32sbkb_U9(
     .dout(grp_fu_2115_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U10(
+matmul_hw_mul_32sdEe_U10(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_2120_p0),
@@ -1288,13 +1288,13 @@ matmul_hw_mul_32sbkb_U10(
     .dout(grp_fu_2120_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U11(
+matmul_hw_mul_32sdEe_U11(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_2125_p0),
@@ -1303,13 +1303,13 @@ matmul_hw_mul_32sbkb_U11(
     .dout(grp_fu_2125_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U12(
+matmul_hw_mul_32sdEe_U12(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_2130_p0),
@@ -1318,13 +1318,13 @@ matmul_hw_mul_32sbkb_U12(
     .dout(grp_fu_2130_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U13(
+matmul_hw_mul_32sdEe_U13(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_2229_p0),
@@ -1333,13 +1333,13 @@ matmul_hw_mul_32sbkb_U13(
     .dout(grp_fu_2229_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U14(
+matmul_hw_mul_32sdEe_U14(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_2234_p0),
@@ -1348,13 +1348,13 @@ matmul_hw_mul_32sbkb_U14(
     .dout(grp_fu_2234_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U15(
+matmul_hw_mul_32sdEe_U15(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_2239_p0),
@@ -1363,13 +1363,13 @@ matmul_hw_mul_32sbkb_U15(
     .dout(grp_fu_2239_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U16(
+matmul_hw_mul_32sdEe_U16(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_2244_p0),
@@ -1378,13 +1378,13 @@ matmul_hw_mul_32sbkb_U16(
     .dout(grp_fu_2244_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U17(
+matmul_hw_mul_32sdEe_U17(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_2514_p0),
@@ -1393,13 +1393,13 @@ matmul_hw_mul_32sbkb_U17(
     .dout(grp_fu_2514_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U18(
+matmul_hw_mul_32sdEe_U18(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_2519_p0),
@@ -1408,13 +1408,13 @@ matmul_hw_mul_32sbkb_U18(
     .dout(grp_fu_2519_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U19(
+matmul_hw_mul_32sdEe_U19(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_2524_p0),
@@ -1423,13 +1423,13 @@ matmul_hw_mul_32sbkb_U19(
     .dout(grp_fu_2524_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U20(
+matmul_hw_mul_32sdEe_U20(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_2529_p0),
@@ -1438,13 +1438,13 @@ matmul_hw_mul_32sbkb_U20(
     .dout(grp_fu_2529_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U21(
+matmul_hw_mul_32sdEe_U21(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_row_5_1_reg_3766),
@@ -1453,13 +1453,13 @@ matmul_hw_mul_32sbkb_U21(
     .dout(grp_fu_2534_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U22(
+matmul_hw_mul_32sdEe_U22(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_row_13_1_reg_3746),
@@ -1468,13 +1468,13 @@ matmul_hw_mul_32sbkb_U22(
     .dout(grp_fu_2538_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U23(
+matmul_hw_mul_32sdEe_U23(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_row_21_1_reg_3726),
@@ -1483,13 +1483,13 @@ matmul_hw_mul_32sbkb_U23(
     .dout(grp_fu_2542_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U24(
+matmul_hw_mul_32sdEe_U24(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_row_29_1_reg_3706),
@@ -1498,13 +1498,13 @@ matmul_hw_mul_32sbkb_U24(
     .dout(grp_fu_2546_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U25(
+matmul_hw_mul_32sdEe_U25(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_row_6_1_reg_3761),
@@ -1513,13 +1513,13 @@ matmul_hw_mul_32sbkb_U25(
     .dout(grp_fu_2550_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U26(
+matmul_hw_mul_32sdEe_U26(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_row_14_1_reg_3741),
@@ -1528,13 +1528,13 @@ matmul_hw_mul_32sbkb_U26(
     .dout(grp_fu_2554_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U27(
+matmul_hw_mul_32sdEe_U27(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_row_22_1_reg_3721),
@@ -1543,13 +1543,13 @@ matmul_hw_mul_32sbkb_U27(
     .dout(grp_fu_2558_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U28(
+matmul_hw_mul_32sdEe_U28(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_row_30_1_reg_3701),
@@ -1558,13 +1558,13 @@ matmul_hw_mul_32sbkb_U28(
     .dout(grp_fu_2562_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U29(
+matmul_hw_mul_32sdEe_U29(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_row_7_1_reg_3756),
@@ -1573,13 +1573,13 @@ matmul_hw_mul_32sbkb_U29(
     .dout(grp_fu_2566_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U30(
+matmul_hw_mul_32sdEe_U30(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_row_15_1_reg_3736),
@@ -1588,13 +1588,13 @@ matmul_hw_mul_32sbkb_U30(
     .dout(grp_fu_2570_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U31(
+matmul_hw_mul_32sdEe_U31(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_row_23_1_reg_3716),
@@ -1603,13 +1603,13 @@ matmul_hw_mul_32sbkb_U31(
     .dout(grp_fu_2574_p2)
 );
 
-matmul_hw_mul_32sbkb #(
+matmul_hw_mul_32sdEe #(
     .ID( 1 ),
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_mul_32sbkb_U32(
+matmul_hw_mul_32sdEe_U32(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_row_31_1_reg_3696),

@@ -11,9 +11,9 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "matmul_hw_fadd_32bkb.h"
-#include "matmul_hw_fmul_32cud.h"
-#include "matmul_hw_mux_42_dEe.h"
+#include "matmul_hw_fadd_32hbi.h"
+#include "matmul_hw_fmul_32ibs.h"
+#include "matmul_hw_mux_42_jbC.h"
 
 namespace ap_rtl {
 
@@ -102,18 +102,18 @@ struct matmul_hw : public sc_module {
 
     ofstream mHdltvinHandle;
     ofstream mHdltvoutHandle;
-    matmul_hw_fadd_32bkb<1,5,32,32,32>* matmul_hw_fadd_32bkb_U1;
-    matmul_hw_fadd_32bkb<1,5,32,32,32>* matmul_hw_fadd_32bkb_U2;
-    matmul_hw_fadd_32bkb<1,5,32,32,32>* matmul_hw_fadd_32bkb_U3;
-    matmul_hw_fadd_32bkb<1,5,32,32,32>* matmul_hw_fadd_32bkb_U4;
-    matmul_hw_fmul_32cud<1,4,32,32,32>* matmul_hw_fmul_32cud_U5;
-    matmul_hw_fmul_32cud<1,4,32,32,32>* matmul_hw_fmul_32cud_U6;
-    matmul_hw_fmul_32cud<1,4,32,32,32>* matmul_hw_fmul_32cud_U7;
-    matmul_hw_fmul_32cud<1,4,32,32,32>* matmul_hw_fmul_32cud_U8;
-    matmul_hw_mux_42_dEe<1,1,32,32,32,32,2,32>* matmul_hw_mux_42_dEe_U9;
-    matmul_hw_mux_42_dEe<1,1,32,32,32,32,2,32>* matmul_hw_mux_42_dEe_U10;
-    matmul_hw_mux_42_dEe<1,1,32,32,32,32,2,32>* matmul_hw_mux_42_dEe_U11;
-    matmul_hw_mux_42_dEe<1,1,32,32,32,32,2,32>* matmul_hw_mux_42_dEe_U12;
+    matmul_hw_fadd_32hbi<1,5,32,32,32>* matmul_hw_fadd_32hbi_U1;
+    matmul_hw_fadd_32hbi<1,5,32,32,32>* matmul_hw_fadd_32hbi_U2;
+    matmul_hw_fadd_32hbi<1,5,32,32,32>* matmul_hw_fadd_32hbi_U3;
+    matmul_hw_fadd_32hbi<1,5,32,32,32>* matmul_hw_fadd_32hbi_U4;
+    matmul_hw_fmul_32ibs<1,4,32,32,32>* matmul_hw_fmul_32ibs_U5;
+    matmul_hw_fmul_32ibs<1,4,32,32,32>* matmul_hw_fmul_32ibs_U6;
+    matmul_hw_fmul_32ibs<1,4,32,32,32>* matmul_hw_fmul_32ibs_U7;
+    matmul_hw_fmul_32ibs<1,4,32,32,32>* matmul_hw_fmul_32ibs_U8;
+    matmul_hw_mux_42_jbC<1,1,32,32,32,32,2,32>* matmul_hw_mux_42_jbC_U9;
+    matmul_hw_mux_42_jbC<1,1,32,32,32,32,2,32>* matmul_hw_mux_42_jbC_U10;
+    matmul_hw_mux_42_jbC<1,1,32,32,32,32,2,32>* matmul_hw_mux_42_jbC_U11;
+    matmul_hw_mux_42_jbC<1,1,32,32,32,32,2,32>* matmul_hw_mux_42_jbC_U12;
     sc_signal< sc_lv<3> > ap_CS_fsm;
     sc_signal< sc_lv<1> > ap_CS_fsm_state1;
     sc_signal< sc_lv<5> > indvar_flatten_reg_272;

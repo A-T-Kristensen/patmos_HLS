@@ -2486,8 +2486,8 @@
 <MemPortIdVec></MemPortIdVec>
 <condition id="226">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
-<literal name="sel_tmp4" val="0"/>
 <literal name="sel_tmp2" val="0"/>
+<literal name="sel_tmp4" val="0"/>
 <literal name="tmp_mid2" val="1"/>
 </and_exp></or_exp>
 </condition>
@@ -2540,8 +2540,8 @@
 <MemPortIdVec></MemPortIdVec>
 <condition id="229">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
-<literal name="sel_tmp4" val="0"/>
 <literal name="sel_tmp2" val="0"/>
+<literal name="sel_tmp4" val="0"/>
 <literal name="tmp_mid2" val="1"/>
 </and_exp></or_exp>
 </condition>
@@ -2662,8 +2662,8 @@
 <MemPortIdVec></MemPortIdVec>
 <condition id="217">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
-<literal name="sel_tmp4" val="0"/>
 <literal name="sel_tmp2" val="0"/>
+<literal name="sel_tmp4" val="0"/>
 <literal name="tmp_mid2" val="1"/>
 </and_exp></or_exp>
 </condition>
@@ -2716,8 +2716,8 @@
 <MemPortIdVec></MemPortIdVec>
 <condition id="220">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
-<literal name="sel_tmp4" val="0"/>
 <literal name="sel_tmp2" val="0"/>
+<literal name="sel_tmp4" val="0"/>
 <literal name="tmp_mid2" val="1"/>
 </and_exp></or_exp>
 </condition>
@@ -5308,9 +5308,9 @@
 </dataflow>
 <dataflow id="965" from="tmp_3" to="StgValue_4" fromId="101" toId="4">
 </dataflow>
-<dataflow id="966" from="sel_tmp4" to="StgValue_4" fromId="116" toId="4">
+<dataflow id="966" from="sel_tmp2" to="StgValue_4" fromId="114" toId="4">
 </dataflow>
-<dataflow id="967" from="sel_tmp2" to="StgValue_4" fromId="114" toId="4">
+<dataflow id="967" from="sel_tmp4" to="StgValue_4" fromId="116" toId="4">
 </dataflow>
 <dataflow id="968" from="tmp_mid2" to="StgValue_4" fromId="75" toId="4">
 </dataflow>

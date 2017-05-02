@@ -620,7 +620,7 @@ architecture behav of matmul_hw is
     attribute fsm_encoding of ap_CS_fsm_state21 : signal is "none";
     signal ap_NS_fsm : STD_LOGIC_VECTOR (9 downto 0);
 
-    component matmul_hw_mul_32sbkb IS
+    component matmul_hw_mul_32sdEe IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -1103,7 +1103,7 @@ begin
         d0 => b_3_Dout_A,
         q0 => b_copy_31_q0);
 
-    matmul_hw_mul_32sbkb_U1 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U1 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1118,7 +1118,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_1897_p2);
 
-    matmul_hw_mul_32sbkb_U2 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U2 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1133,7 +1133,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_1902_p2);
 
-    matmul_hw_mul_32sbkb_U3 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U3 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1148,7 +1148,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_1907_p2);
 
-    matmul_hw_mul_32sbkb_U4 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U4 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1163,7 +1163,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_1912_p2);
 
-    matmul_hw_mul_32sbkb_U5 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U5 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1178,7 +1178,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2007_p2);
 
-    matmul_hw_mul_32sbkb_U6 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U6 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1193,7 +1193,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2012_p2);
 
-    matmul_hw_mul_32sbkb_U7 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U7 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1208,7 +1208,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2017_p2);
 
-    matmul_hw_mul_32sbkb_U8 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U8 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1223,7 +1223,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2022_p2);
 
-    matmul_hw_mul_32sbkb_U9 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U9 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1238,7 +1238,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2115_p2);
 
-    matmul_hw_mul_32sbkb_U10 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U10 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1253,7 +1253,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2120_p2);
 
-    matmul_hw_mul_32sbkb_U11 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U11 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1268,7 +1268,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2125_p2);
 
-    matmul_hw_mul_32sbkb_U12 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U12 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1283,7 +1283,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2130_p2);
 
-    matmul_hw_mul_32sbkb_U13 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U13 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1298,7 +1298,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2229_p2);
 
-    matmul_hw_mul_32sbkb_U14 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U14 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1313,7 +1313,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2234_p2);
 
-    matmul_hw_mul_32sbkb_U15 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U15 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1328,7 +1328,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2239_p2);
 
-    matmul_hw_mul_32sbkb_U16 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U16 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1343,7 +1343,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2244_p2);
 
-    matmul_hw_mul_32sbkb_U17 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U17 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1358,7 +1358,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2514_p2);
 
-    matmul_hw_mul_32sbkb_U18 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U18 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1373,7 +1373,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2519_p2);
 
-    matmul_hw_mul_32sbkb_U19 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U19 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1388,7 +1388,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2524_p2);
 
-    matmul_hw_mul_32sbkb_U20 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U20 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1403,7 +1403,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2529_p2);
 
-    matmul_hw_mul_32sbkb_U21 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U21 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1418,7 +1418,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2534_p2);
 
-    matmul_hw_mul_32sbkb_U22 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U22 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1433,7 +1433,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2538_p2);
 
-    matmul_hw_mul_32sbkb_U23 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U23 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1448,7 +1448,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2542_p2);
 
-    matmul_hw_mul_32sbkb_U24 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U24 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1463,7 +1463,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2546_p2);
 
-    matmul_hw_mul_32sbkb_U25 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U25 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1478,7 +1478,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2550_p2);
 
-    matmul_hw_mul_32sbkb_U26 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U26 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1493,7 +1493,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2554_p2);
 
-    matmul_hw_mul_32sbkb_U27 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U27 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1508,7 +1508,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2558_p2);
 
-    matmul_hw_mul_32sbkb_U28 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U28 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1523,7 +1523,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2562_p2);
 
-    matmul_hw_mul_32sbkb_U29 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U29 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1538,7 +1538,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2566_p2);
 
-    matmul_hw_mul_32sbkb_U30 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U30 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1553,7 +1553,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2570_p2);
 
-    matmul_hw_mul_32sbkb_U31 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U31 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1568,7 +1568,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_2574_p2);
 
-    matmul_hw_mul_32sbkb_U32 : component matmul_hw_mul_32sbkb
+    matmul_hw_mul_32sdEe_U32 : component matmul_hw_mul_32sdEe
     generic map (
         ID => 1,
         NUM_STAGE => 6,
