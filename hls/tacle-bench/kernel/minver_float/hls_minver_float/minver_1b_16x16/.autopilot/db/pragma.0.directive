@@ -1,0 +1,37 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="minver_hwa" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="a"/>
+<option name="core" value="RAM_1P_BRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="minver_hwa" label="">
+<pragma name="INTERFACE">
+<option name="bram" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="a"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="minver_hwa" label="">
+<pragma name="INTERFACE">
+<option name="ap_ctrl_hs" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="minver_hwa" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="minver_hwa" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="minver_hwa" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="minver_hwa" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="minver_hwa" label="">
+<pragma name="PIPELINE"/>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

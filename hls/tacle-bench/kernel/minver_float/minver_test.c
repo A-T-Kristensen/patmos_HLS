@@ -150,14 +150,8 @@ int minver_main()
   int err_cnt = 0;
   mat_type eps = 1.0e-6;
 
-  mat_type  minver_hw[DIM][DIM] = {
-    {3.0, -6.0,  7.0},
-    {9.0,  0.0, -5.0},
-    {5.0, -8.0,  6.0},
-  };
-
+  set_minver();
   mat_type minver_sw[DIM][DIM];
-
   mat_type minver_hw_i[DIM][DIM];
   mat_type minver_sw_i[DIM][DIM];
 

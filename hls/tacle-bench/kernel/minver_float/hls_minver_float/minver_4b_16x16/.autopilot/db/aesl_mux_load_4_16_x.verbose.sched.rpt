@@ -1,0 +1,217 @@
+
+
+================================================================
+== Vivado HLS Report for 'aesl_mux_load_4_16_x'
+================================================================
+* Date:           Thu May  4 21:44:24 2017
+
+* Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
+* Project:        hls_minver_float
+* Solution:       minver_4b_16x16
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      5.45|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    1|    1|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 2
+* Pipeline: 1
+  Pipeline-0: II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+* FSM state operations: 
+
+ <State 1>: 2.71ns
+ST_1: tmp_106 (8)  [1/1] 0.00ns
+entry_ifconv:0  %tmp_106 = call i2 @_ssdm_op_Read.ap_auto.i2(i2 %empty)
+
+ST_1: tmp_107 (9)  [1/1] 0.00ns
+entry_ifconv:1  %tmp_107 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %empty_14)
+
+ST_1: tmp_108 (10)  [1/1] 0.00ns
+entry_ifconv:2  %tmp_108 = call i5 @_ssdm_op_Read.ap_auto.i5(i5 %empty_13)
+
+ST_1: tmp (11)  [1/1] 0.00ns
+entry_ifconv:3  %tmp = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %tmp_107, i2 %tmp_106)
+
+ST_1: tmp_88 (12)  [1/1] 0.00ns
+entry_ifconv:4  %tmp_88 = sext i34 %tmp to i64
+
+ST_1: p_addr_1 (13)  [1/1] 0.00ns
+entry_ifconv:5  %p_addr_1 = getelementptr [64 x float]* %empty_9, i64 0, i64 %tmp_88
+
+ST_1: p_addr_2 (14)  [1/1] 0.00ns
+entry_ifconv:6  %p_addr_2 = getelementptr [64 x float]* %empty_10, i64 0, i64 %tmp_88
+
+ST_1: p_addr_3 (15)  [1/1] 0.00ns
+entry_ifconv:7  %p_addr_3 = getelementptr [64 x float]* %empty_11, i64 0, i64 %tmp_88
+
+ST_1: p_addr (16)  [1/1] 0.00ns
+entry_ifconv:8  %p_addr = getelementptr [64 x float]* %empty_12, i64 0, i64 %tmp_88
+
+ST_1: empty_27 (25)  [2/2] 2.71ns
+entry_ifconv:17  %empty_27 = load float* %p_addr, align 4
+
+ST_1: empty_28 (26)  [2/2] 2.71ns
+entry_ifconv:18  %empty_28 = load float* %p_addr_1, align 4
+
+ST_1: empty_29 (27)  [2/2] 2.71ns
+entry_ifconv:19  %empty_29 = load float* %p_addr_2, align 4
+
+ST_1: empty_30 (28)  [2/2] 2.71ns
+entry_ifconv:20  %empty_30 = load float* %p_addr_3, align 4
+
+ST_1: sel_tmp (29)  [1/1] 2.37ns
+entry_ifconv:21  %sel_tmp = icmp eq i5 %tmp_108, 0
+
+ST_1: sel_tmp2 (31)  [1/1] 2.37ns
+entry_ifconv:23  %sel_tmp2 = icmp eq i5 %tmp_108, 1
+
+ST_1: sel_tmp4 (33)  [1/1] 2.37ns
+entry_ifconv:25  %sel_tmp4 = icmp eq i5 %tmp_108, 2
+
+
+ <State 2>: 5.45ns
+ST_2: StgValue_19 (17)  [1/1] 0.00ns
+entry_ifconv:9  call void (...)* @_ssdm_op_SpecMemCore([64 x float]* %empty_12, [1 x i8]* @p_str1, [12 x i8]* @p_str2, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_2: StgValue_20 (18)  [1/1] 0.00ns
+entry_ifconv:10  call void (...)* @_ssdm_op_SpecMemCore([64 x float]* %empty_11, [1 x i8]* @p_str1, [12 x i8]* @p_str2, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_2: StgValue_21 (19)  [1/1] 0.00ns
+entry_ifconv:11  call void (...)* @_ssdm_op_SpecMemCore([64 x float]* %empty_10, [1 x i8]* @p_str1, [12 x i8]* @p_str2, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_2: StgValue_22 (20)  [1/1] 0.00ns
+entry_ifconv:12  call void (...)* @_ssdm_op_SpecMemCore([64 x float]* %empty_9, [1 x i8]* @p_str1, [12 x i8]* @p_str2, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_2: StgValue_23 (21)  [1/1] 0.00ns
+entry_ifconv:13  call void (...)* @_ssdm_op_SpecInterface([64 x float]* %empty_12, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_2: StgValue_24 (22)  [1/1] 0.00ns
+entry_ifconv:14  call void (...)* @_ssdm_op_SpecInterface([64 x float]* %empty_11, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_2: StgValue_25 (23)  [1/1] 0.00ns
+entry_ifconv:15  call void (...)* @_ssdm_op_SpecInterface([64 x float]* %empty_10, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_2: StgValue_26 (24)  [1/1] 0.00ns
+entry_ifconv:16  call void (...)* @_ssdm_op_SpecInterface([64 x float]* %empty_9, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_2: empty_27 (25)  [1/2] 2.71ns
+entry_ifconv:17  %empty_27 = load float* %p_addr, align 4
+
+ST_2: empty_28 (26)  [1/2] 2.71ns
+entry_ifconv:18  %empty_28 = load float* %p_addr_1, align 4
+
+ST_2: empty_29 (27)  [1/2] 2.71ns
+entry_ifconv:19  %empty_29 = load float* %p_addr_2, align 4
+
+ST_2: empty_30 (28)  [1/2] 2.71ns
+entry_ifconv:20  %empty_30 = load float* %p_addr_3, align 4
+
+ST_2: sel_tmp1 (30)  [1/1] 0.00ns (grouped into LUT with out node sel_tmp3)
+entry_ifconv:22  %sel_tmp1 = select i1 %sel_tmp, float %empty_28, float %empty_27
+
+ST_2: sel_tmp3 (32)  [1/1] 1.37ns (out node of the LUT)
+entry_ifconv:24  %sel_tmp3 = select i1 %sel_tmp2, float %empty_29, float %sel_tmp1
+
+ST_2: UnifiedRetVal (34)  [1/1] 1.37ns (out node of the LUT)
+entry_ifconv:26  %UnifiedRetVal = select i1 %sel_tmp4, float %empty_30, float %sel_tmp3
+
+ST_2: StgValue_34 (35)  [1/1] 0.00ns
+entry_ifconv:27  ret float %UnifiedRetVal
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.71ns
+The critical path consists of the following:
+	wire read on port 'empty' [8]  (0 ns)
+	'getelementptr' operation ('p_addr_1') [13]  (0 ns)
+	'load' operation ('empty_28') on array 'empty_9' [26]  (2.71 ns)
+
+ <State 2>: 5.45ns
+The critical path consists of the following:
+	'load' operation ('empty_27') on array 'empty_12' [25]  (2.71 ns)
+	'select' operation ('sel_tmp1') [30]  (0 ns)
+	'select' operation ('sel_tmp3') [32]  (1.37 ns)
+	'select' operation ('UnifiedRetVal') [34]  (1.37 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

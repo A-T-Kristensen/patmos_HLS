@@ -47,11 +47,14 @@ int minver_hwa(mat_type a[DIM][DIM])
     return ( 999 );
 
   w1 = 1.0;
-  for ( i = 0; i < DIM; i++ )
-    work[ i ] = i;
+  for ( i = 0; i < DIM; i++ ) {
+	#pragma HLS PIPELINE
+	    work[ i ] = i;
+  }
 
   // This has unknown bound
   for ( k = 0; k < DIM; k++ ) {
+
     wmax = 0.0;
     for ( i = k; i < DIM; i++ ) {
 	#pragma HLS PIPELINE
@@ -88,6 +91,7 @@ int minver_hwa(mat_type a[DIM][DIM])
     }
     // Can this block be optimised
     for ( i = 0; i < DIM; i++ ) {
+	#pragma HLS PIPELINE
       if ( i != k ) {
         w = a[ i ][ k ];
         if ( w != 0.0 ) {
@@ -105,6 +109,7 @@ int minver_hwa(mat_type a[DIM][DIM])
   for ( i = 0; i < DIM; ) {
 
     while ( 1 ) {
+	#pragma HLS PIPELINE
 
       k = work[ i ];
 
@@ -115,8 +120,7 @@ int minver_hwa(mat_type a[DIM][DIM])
       work[ i ] = iw;
 
       for ( j = 0; j < DIM; j++ ) {
-	  #pragma HLS PIPELINE
-        w = a [k ][ i ];
+        w = a [ k ][ i ];
         a[ k ][ i ] = a[ k ][ k ];
         a[ k ][ k ] = w;
       }

@@ -34,9 +34,10 @@
 
 typedef float mat_type;
 
-#define DIM 16
+#define DIM 32
 #define EPS 1.0e-6
 
+void set_minver();
 int minver_hwa(mat_type a[DIM][DIM]);
 int minver_minver(mat_type minver_a[DIM][DIM], int side, mat_type eps);
 
@@ -50,3 +51,5 @@ int minver_return(mat_type minver_a_i[DIM][DIM]);
 
 int minver_main();
 int main( void );
+
+mat_type minver_hw[DIM][DIM];

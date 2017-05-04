@@ -1,0 +1,151 @@
+FUNC: local_memset
+	4 : ?? : phi
+	5 : 60 : add
+	7 : ?? : phi
+	12: ARG : 0
+	1: ARG : 1
+	2: ARG : 2
+	3: ARG : 3
+	6 : 60 : icmp
+	14 : 57 : sdiv
+	11 : ?? : getelementptr
+	10 : ?? : phi
+	13 : 64 : add
+	9 : 64 : icmp
+	8 : 66 : getelementptr
+
+FUNC: local_memcpy
+	13: ARG : 1
+	10: ARG : 0
+	1: ARG : 2
+	15 : 77 : sdiv
+	9 : ?? : phi
+	12 : ?? : phi
+	8 : ?? : phi
+	16 : 81 : add
+	7 : 81 : icmp
+	2 : 84 : load
+	3 : 85 : load
+	4 : 86 : load
+	14 : 87 : getelementptr
+	5 : 87 : load
+	6 : 87 : or
+	11 : 89 : getelementptr
+
+FUNC: sha_init
+
+FUNC: sha_update
+	17 : 158 : icmp
+	15: ARG : 0
+	1: ARG : 1
+	2 : 158 : load
+	3 : 158 : load
+	4 : 160 : load
+	5 : 160 : add
+	6 : 162 : load
+	7 : 162 : add
+	8 : 163 : load
+	9 : 163 : add
+	11 : ?? : phi
+	14 : ?? : phi
+	13 : 164 : icmp
+	16 : 168 : getelementptr
+	12 : 169 : sub
+	10 : 164 : sub
+
+FUNC: sha_final
+	1 : 183 : load
+	2 : 184 : load
+	4 : 186 : add
+	6 : 187 : icmp
+	3 : 189 : sub
+	5 : 195 : sub
+
+FUNC: sha_stream
+	2 : ?? : phi
+	3 : 210 : icmp
+	1 : 212 : load
+
+FUNC: main
+	4 : ?? : phi
+	3 : ?? : phi
+	6 : 48 : icmp
+	1 : 51 : load
+	2 : 51 : load
+	5 : 51 : add
+
+FUNC: sha_transform
+	2 : 107 : load
+	5 : 107 : sub
+	4 : 107 : load
+	7 : 107 : sub
+	6 : 107 : load
+	9 : 107 : sub
+	71 : 129 : or
+	69 : 127 : add
+	25 : 132 : load
+	40 : ?? : phi
+	73 : 101 : icmp
+	1 : 103 : load
+	12 : ?? : phi
+	11 : 105 : icmp
+	3 : 107 : sub
+	26 : 132 : add
+	28 : 133 : load
+	29 : 133 : add
+	31 : 134 : load
+	32 : 134 : add
+	34 : 135 : load
+	35 : 135 : add
+	37 : 136 : load
+	38 : 136 : add
+	8 : 107 : load
+	10 : 107 : xor
+	41 : 105 : add
+	13 : 109 : load
+	14 : 110 : load
+	15 : 111 : load
+	16 : 112 : load
+	17 : 113 : load
+	42 : ?? : phi
+	43 : ?? : phi
+	44 : ?? : phi
+	46 : ?? : phi
+	48 : ?? : phi
+	49 : ?? : phi
+	45 : 115 : icmp
+	21 : 125 : load
+	18 : 117 : load
+	50 : 117 : trunc
+	47 : 117 : or
+	20 : ?? : phi
+	53 : ?? : phi
+	54 : ?? : phi
+	55 : ?? : phi
+	57 : ?? : phi
+	58 : ?? : phi
+	52 : 119 : icmp
+	19 : 121 : load
+	59 : 121 : trunc
+	56 : 121 : or
+	51 : 119 : add
+	22 : ?? : phi
+	62 : ?? : phi
+	63 : ?? : phi
+	64 : ?? : phi
+	66 : ?? : phi
+	67 : ?? : phi
+	61 : 123 : icmp
+	68 : 125 : trunc
+	65 : 125 : or
+	60 : 123 : add
+	24 : ?? : phi
+	39 : ?? : phi
+	36 : ?? : phi
+	33 : ?? : phi
+	30 : ?? : phi
+	27 : ?? : phi
+	70 : 127 : icmp
+	23 : 129 : load
+	72 : 129 : trunc
+

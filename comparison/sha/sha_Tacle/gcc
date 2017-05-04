@@ -1,0 +1,1 @@
+gcc sha.c memcpy.c input_small.c memset.c memhelper.c -o sha

@@ -1,0 +1,324 @@
+INFO: Loop bodies will be given their own region id
+DEBUG: new region: FuncRegion(id: 6447748058371933479, name: encrypt, fileName: aes_enc.c, startLine: 64, endLine: 64
+DEBUG: adding encrypt (in module: aes.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 6447748058371933479)
+DEBUG: assigning function encrypt id 6447748058371933479
+DEBUG: new region: FuncRegion(id: 16313252386303622995, name: KeySchedule, fileName: aes_key.c, startLine: 77, endLine: 77
+DEBUG: adding KeySchedule (in module: aes.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 16313252386303622995)
+DEBUG: assigning function KeySchedule id 16313252386303622995
+DEBUG: new region: FuncRegion(id: 3762285781339261256, name: AddRoundKey, fileName: aes_func.c, startLine: 512, endLine: 512
+DEBUG: adding AddRoundKey (in module: aes.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3762285781339261256)
+DEBUG: assigning function AddRoundKey id 3762285781339261256
+DEBUG: new region: FuncRegion(id: 7470349464818051927, name: ByteSub_ShiftRow, fileName: aes_func.c, startLine: 133, endLine: 133
+DEBUG: adding ByteSub_ShiftRow (in module: aes.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 7470349464818051927)
+DEBUG: assigning function ByteSub_ShiftRow id 7470349464818051927
+DEBUG: new region: FuncRegion(id: 8717711472165542657, name: MixColumn_AddRoundKey, fileName: aes_func.c, startLine: 367, endLine: 367
+DEBUG: adding MixColumn_AddRoundKey (in module: aes.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 8717711472165542657)
+DEBUG: assigning function MixColumn_AddRoundKey id 8717711472165542657
+DEBUG: new region: FuncRegion(id: 13374524739248738305, name: decrypt, fileName: aes_dec.c, startLine: 63, endLine: 63
+DEBUG: adding decrypt (in module: aes.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 13374524739248738305)
+DEBUG: assigning function decrypt id 13374524739248738305
+DEBUG: new region: FuncRegion(id: 3217123079893861696, name: InversShiftRow_ByteSub, fileName: aes_func.c, startLine: 253, endLine: 253
+DEBUG: adding InversShiftRow_ByteSub (in module: aes.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 3217123079893861696)
+DEBUG: assigning function InversShiftRow_ByteSub id 3217123079893861696
+DEBUG: new region: FuncRegion(id: 15894495358545041358, name: AddRoundKey_InversMixColumn, fileName: aes_func.c, startLine: 434, endLine: 434
+DEBUG: adding AddRoundKey_InversMixColumn (in module: aes.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 15894495358545041358)
+DEBUG: assigning function AddRoundKey_InversMixColumn id 15894495358545041358
+DEBUG: new region: FuncRegion(id: 12640114186257794934, name: SubByte, fileName: aes_func.c, startLine: 246, endLine: 246
+DEBUG: adding SubByte (in module: aes.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 12640114186257794934)
+DEBUG: assigning function SubByte id 12640114186257794934
+DEBUG: new region: FuncRegion(id: 9509241341054684971, name: aes_main, fileName: aes.c, startLine: 75, endLine: 75
+DEBUG: adding aes_main (in module: aes.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 9509241341054684971)
+DEBUG: assigning function aes_main id 9509241341054684971
+DEBUG: new region: FuncRegion(id: 14768796648239662093, name: main, fileName: aes.c, startLine: 123, endLine: 123
+DEBUG: adding main (in module: aes.simplifycfg.mem2reg.indvars.elimsinglephis.criticalpath.bc) to list of defined functions (region_id: 14768796648239662093)
+DEBUG: assigning function main id 14768796648239662093
+DEBUG: found 11 func regions
+INFO: Inserting the following instrumentation calls:
+INFO: _KDeinit
+INFO: _KEnterRegion
+INFO: _KExitRegion
+INFO!{!"0x11\0012\00clang version 3.6.1 (tags/RELEASE_361/final)\000\00\000\00\001", <0x31e7cc0>, <0x31e9830>, <0x31e9830>, <0x31f3c08>, <0x31f15d0>, <0x31e9830>} ; [ DW_TAG_compile_unit ] [/home/patmos/github/bachelor_project_HLS/candidates/CHStone/aes/aes.c] [DW_LANG_C99]
+
+!{!"0x2e\00encrypt\00encrypt\00\0064\000\001\000\000\00256\000\0065", <0x31e51b0>, <0x31e9960>, <0x31e9b20>, null, i32 (i32*, i32*, i32)* @encrypt, null, null, <0x31e9830>} ; [ DW_TAG_subprogram ] [line 64] [def] [scope 65] [encrypt]
+
+!{!"0x2e\00decrypt\00decrypt\00\0063\000\001\000\000\00256\000\0064", <0x31ee920>, <0x31ee960>, <0x31e9b20>, null, i32 (i32*, i32*, i32)* @decrypt, null, null, <0x31e9830>} ; [ DW_TAG_subprogram ] [line 63] [def] [scope 64] [decrypt]
+
+!{!"0x2e\00KeySchedule\00KeySchedule\00\0077\000\001\000\000\00256\000\0078", <0x31eea30>, <0x31e5050>, <0x31eed60>, null, i32 (i32, i32*)* @KeySchedule, null, null, <0x31e9830>} ; [ DW_TAG_subprogram ] [line 77] [def] [scope 78] [KeySchedule]
+
+!{!"0x2e\00ByteSub_ShiftRow\00ByteSub_ShiftRow\00\00133\000\001\000\000\00256\000\00134", <0x31e9b60>, <0x31e9ba0>, <0x31e9c50>, null, void (i32*, i32)* @ByteSub_ShiftRow, null, null, <0x31e9830>} ; [ DW_TAG_subprogram ] [line 133] [def] [scope 134] [ByteSub_ShiftRow]
+
+!{!"0x2e\00SubByte\00SubByte\00\00246\000\001\000\000\00256\000\00247", <0x31e9b60>, <0x31e9ba0>, <0x31f0530>, null, i32 (i32)* @SubByte, null, null, <0x31e9830>} ; [ DW_TAG_subprogram ] [line 246] [def] [scope 247] [SubByte]
+
+!{!"0x2e\00InversShiftRow_ByteSub\00InversShiftRow_ByteSub\00\00253\000\001\000\000\00256\000\00254", <0x31e9b60>, <0x31e9ba0>, <0x31e9c50>, null, void (i32*, i32)* @InversShiftRow_ByteSub, null, null, <0x31e9830>} ; [ DW_TAG_subprogram ] [line 253] [def] [scope 254] [InversShiftRow_ByteSub]
+
+!{!"0x2e\00MixColumn_AddRoundKey\00MixColumn_AddRoundKey\00\00367\000\001\000\000\00256\000\00368", <0x31e9b60>, <0x31e9ba0>, <0x31f0d40>, null, i32 (i32*, i32, i32)* @MixColumn_AddRoundKey, null, null, <0x31e9830>} ; [ DW_TAG_subprogram ] [line 367] [def] [scope 368] [MixColumn_AddRoundKey]
+
+!{!"0x2e\00AddRoundKey_InversMixColumn\00AddRoundKey_InversMixColumn\00\00434\000\001\000\000\00256\000\00435", <0x31e9b60>, <0x31e9ba0>, <0x31f0d40>, null, i32 (i32*, i32, i32)* @AddRoundKey_InversMixColumn, null, null, <0x31e9830>} ; [ DW_TAG_subprogram ] [line 434] [def] [scope 435] [AddRoundKey_InversMixColumn]
+
+!{!"0x2e\00AddRoundKey\00AddRoundKey\00\00512\000\001\000\000\00256\000\00513", <0x31e9b60>, <0x31e9ba0>, <0x31f0d40>, null, i32 (i32*, i32, i32)* @AddRoundKey, null, null, <0x31e9830>} ; [ DW_TAG_subprogram ] [line 512] [def] [scope 513] [AddRoundKey]
+
+!{!"0x2e\00aes_main\00aes_main\00\0075\000\001\000\000\00256\000\0076", <0x31e7cc0>, <0x31f0fa0>, <0x31f1160>, null, i32 ()* @aes_main, null, null, <0x31e9830>} ; [ DW_TAG_subprogram ] [line 75] [def] [scope 76] [aes_main]
+
+!{!"0x2e\00main\00main\00\00123\000\001\000\000\000\000\00124", <0x31e7cc0>, <0x31f0fa0>, <0x31f1160>, null, i32 ()* @main, null, null, <0x31e9830>} ; [ DW_TAG_subprogram ] [line 123] [def] [scope 124] [main]
+
+!{!"0x34\00out_enc_statemt\00out_enc_statemt\00\0073\001\001", <0x31ee8e8>, <0x31e9960>, <0x31eec70>, [16 x i32]* @encrypt.out_enc_statemt, null} ; [ DW_TAG_variable ] [out_enc_statemt] [line 73] [local] [def]
+
+!{!"0x34\00out_dec_statemt\00out_dec_statemt\00\0072\001\001", <0x31eeaf8>, <0x31ee960>, <0x31eec70>, [16 x i32]* @decrypt.out_dec_statemt, null} ; [ DW_TAG_variable ] [out_dec_statemt] [line 72] [local] [def]
+
+!{!"0x34\00Rcon0\00Rcon0\00\0064\000\001", null, <0x31e5050>, <0x31f4230>, [30 x i32]* @Rcon0, null} ; [ DW_TAG_variable ] [Rcon0] [line 64] [def]
+
+!{!"0x34\00Sbox\00Sbox\00\0062\000\001", null, <0x31e9ba0>, <0x31e9660>, [16 x [16 x i32]]* @Sbox, null} ; [ DW_TAG_variable ] [Sbox] [line 62] [def]
+
+!{!"0x34\00invSbox\00invSbox\00\0096\000\001", null, <0x31e9ba0>, <0x31e9660>, [16 x [16 x i32]]* @invSbox, null} ; [ DW_TAG_variable ] [invSbox] [line 96] [def]
+
+!{!"0x34\00main_result\00main_result\00\0065\000\001", null, <0x31f0fa0>, <0x31e9a28>, i32* @main_result, null} ; [ DW_TAG_variable ] [main_result] [line 65] [def]
+
+!{!"0x34\00type\00type\00\0064\000\001", null, <0x31f4aa0>, <0x31e9a28>, i32* @type, null} ; [ DW_TAG_variable ] [type] [line 64] [def]
+
+!{!"0x34\00nb\00nb\00\0065\000\001", null, <0x31f4aa0>, <0x31e9a28>, i32* @nb, null} ; [ DW_TAG_variable ] [nb] [line 65] [def]
+
+!{!"0x34\00round_val\00round_val\00\0066\000\001", null, <0x31f4aa0>, <0x31e9a28>, i32* @round_val, null} ; [ DW_TAG_variable ] [round_val] [line 66] [def]
+
+!{!"0x34\00key\00key\00\0067\000\001", null, <0x31f4aa0>, <0x31f4f80>, [32 x i32]* @key, null} ; [ DW_TAG_variable ] [key] [line 67] [def]
+
+!{!"0x34\00statemt\00statemt\00\0068\000\001", null, <0x31f4aa0>, <0x31f4f80>, [32 x i32]* @statemt, null} ; [ DW_TAG_variable ] [statemt] [line 68] [def]
+
+!{!"0x34\00word\00word\00\0069\000\001", null, <0x31f4aa0>, <0x31f13c0>, [4 x [120 x i32]]* @word, null} ; [ DW_TAG_variable ] [word] [line 69] [def]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x31e9ab0>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x24\00int\000\0032\0032\000\000\005", null, null} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+
+!{!"0xf\00\000\0064\0064\000\000", null, null, <0x31e9a28>} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from int]
+
+!{!"0x1\00\000\00512\0032\000\000\000", null, null, <0x31eeba0>, <0x31eec08>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 512, align 32, offset 0] [from ]
+
+!{!"0x26\00\000\000\000\000\000", null, null, <0x31e9a28>} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from int]
+
+!{!"0x1\00\000\00960\0032\000\000\000", null, null, <0x31eeba0>, <0x31f41c8>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 960, align 32, offset 0] [from ]
+
+!{!"0x1\00\000\008192\0032\000\000\000", null, null, <0x31eeba0>, <0x31f43e0>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 8192, align 32, offset 0] [from ]
+
+!{!"0x1\00\000\001024\0032\000\000\000", null, null, <0x31e9a28>, <0x31f4f18>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 1024, align 32, offset 0] [from int]
+
+!{!"0x1\00\000\0015360\0032\000\000\000", null, null, <0x31e9a28>, <0x31f1350>, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 15360, align 32, offset 0] [from int]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x31e5098>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x31e9be8>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x31f0400>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x31f0450>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+!{!"0x15\00\000\000\000\000\000\000", null, null, null, <0x31eee88>, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+
+Meta data for 13949722818795447395
+Meta data for 3112260781685944459
+Meta data for 4014699700937871146
+Meta data for 8076627727102394110
+Meta data for 7960142421142100091
+Meta data for 6742705229326796154
+Meta data for 1363054208236220461
+Meta data for 3270310036644661482
+Meta data for 5397436058292924180
+: _KInit
+INFO: _KLandingPad
+DEBUG: Debug information:
+DEBUG: region name to id: encrypt is 6447748058371933479
+DEBUG: found 3 loops in function encrypt
+DEBUG: assigning id = 13949722818795447395 to loop with the following BBs:
+	for.cond21 for.body23 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 5986754170692373498
+DEBUG: assigning id = 5986754170692373498 to body of loop
+DEBUG: assigning id = 3112260781685944459 to loop with the following BBs:
+	for.cond10 for.body12 if.then if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12520135433338041404
+DEBUG: assigning id = 12520135433338041404 to body of loop
+DEBUG: assigning id = 4014699700937871146 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 12814907333841680474
+DEBUG: assigning id = 12814907333841680474 to body of loop
+DEBUG: for.cond21 has 1 possible loop exit points
+DEBUG: 	target #0: for.end32
+DEBUG: for.cond10 has 1 possible loop exit points
+DEBUG: 	target #0: for.end20
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: KeySchedule is 16313252386303622995
+DEBUG: found 5 loops in function KeySchedule
+DEBUG: assigning id = 8076627727102394110 to loop with the following BBs:
+	for.cond19 for.body23 if.then if.end if.then48 if.end65 land.lhs.true if.then69 for.cond70 if.end81.loopexit if.end81 for.cond82 for.inc100 for.body84 for.body72 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3384405204024554085
+DEBUG: assigning id = 3384405204024554085 to body of loop
+DEBUG: assigning id = 7960142421142100091 to loop with the following BBs:
+	for.cond70 for.body72 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14213989044552385084
+DEBUG: assigning id = 14213989044552385084 to body of loop
+DEBUG: assigning id = 6742705229326796154 to loop with the following BBs:
+	for.cond82 for.body84 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 4924031284815811378
+DEBUG: assigning id = 4924031284815811378 to body of loop
+DEBUG: assigning id = 1363054208236220461 to loop with the following BBs:
+	for.cond for.body for.cond9 for.inc16 for.body11 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 2081920423379822243
+DEBUG: assigning id = 2081920423379822243 to body of loop
+DEBUG: assigning id = 3270310036644661482 to loop with the following BBs:
+	for.cond9 for.body11 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 3050310730448488396
+DEBUG: assigning id = 3050310730448488396 to body of loop
+DEBUG: for.cond19 has 1 possible loop exit points
+DEBUG: 	target #0: for.end102
+DEBUG: for.cond70 has 1 possible loop exit points
+DEBUG: 	target #0: if.end81.loopexit
+DEBUG: for.cond82 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc100
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end18
+DEBUG: for.cond9 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc16
+DEBUG: region name to id: AddRoundKey is 3762285781339261256
+DEBUG: found 1 loops in function AddRoundKey
+DEBUG: assigning id = 5397436058292924180 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 2096693100938936231
+DEBUG: assigning id = 2096693100938936231 to body of loop
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region nMeta data for 12930469471724296184
+Meta data for 387080499623112508
+Meta data for 3250405817564726453
+Meta data for 7304596260719285384
+Meta data for 10493676172090124656
+Meta data for 3144024822792033107
+Meta data for 14927431149384219034
+Meta data for 7785539253447435219
+ame to id: ByteSub_ShiftRow is 7470349464818051927
+DEBUG: found 0 loops in function ByteSub_ShiftRow
+DEBUG: region name to id: MixColumn_AddRoundKey is 8717711472165542657
+DEBUG: found 2 loops in function MixColumn_AddRoundKey
+DEBUG: assigning id = 12930469471724296184 to loop with the following BBs:
+	for.cond233 for.body235 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 15425408802198492695
+DEBUG: assigning id = 15425408802198492695 to body of loop
+DEBUG: assigning id = 387080499623112508 to loop with the following BBs:
+	for.cond for.body if.then if.end if.else if.then18 if.end28 if.then62 if.end68 if.else84 if.then77 if.end90 if.then124 if.end130 if.else146 if.then139 if.end152 if.then186 if.end192 if.else207 if.then200 if.end213 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 8878944149694171327
+DEBUG: assigning id = 8878944149694171327 to body of loop
+DEBUG: for.cond233 has 1 possible loop exit points
+DEBUG: 	target #0: for.end268
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: decrypt is 13374524739248738305
+DEBUG: found 3 loops in function decrypt
+DEBUG: assigning id = 3250405817564726453 to loop with the following BBs:
+	for.cond21 for.body23 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 6705166667081751699
+DEBUG: assigning id = 6705166667081751699 to body of loop
+DEBUG: assigning id = 7304596260719285384 to loop with the following BBs:
+	for.cond11 for.body13 if.then if.end 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 11069531661235325223
+DEBUG: assigning id = 11069531661235325223 to body of loop
+DEBUG: assigning id = 10493676172090124656 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 10638560104260169114
+DEBUG: assigning id = 10638560104260169114 to body of loop
+DEBUG: for.cond21 has 1 possible loop exit points
+DEBUG: 	target #0: for.end31
+DEBUG: for.cond11 has 1 possible loop exit points
+DEBUG: 	target #0: for.end20
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: InversShiftRow_ByteSub is 3217123079893861696
+DEBUG: found 0 loops in function InversShiftRow_ByteSub
+DEBUG: region name to id: AddRoundKey_InversMixColumn is 15894495358545041358
+DEBUG: found 4 loops in function AddRoundKey_InversMixColumn
+DEBUG: assigning id = 3144024822792033107 to loop with the following BBs:
+	for.cond196 for.body198 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 14972293906757481509
+DEBUG: assigning id = 14972293906757481509 to body of loop
+DEBUG: assigning id = 14927431149384219034 to loop with the following BBs:
+	for.cond31 for.cond34.preheader for.cond34 for.inc193 for.body36 if.then if.end if.then51 if.end53 if.then62 if.end64 if.then77 if.end79 if.then83 if.end85 if.then96 if.end98 if.then120 if.end122 if.then133 if.end135 if.then139 if.end141 if.then163 if.end165 if.then169 if.end171 if.then175 if.end177 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 9240746538930492769
+DEBUG: assigning id = 9240746538930492769 to body of loop
+DEBUG: assigning id = 7785539253447435219 to loop with the following BBs:
+	for.cond34 for.body36 if.then if.end if.then51 if.end53 if.then62 if.end64 if.then77 if.end79 if.then83 if.end85 if.then96 if.end98 if.then120 if.end122 if.then133 if.end135 if.then139 if.end141 if.then163 if.end165 if.then169 if.end171 if.then175 if.end177 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KrMeta data for 14506269463463447143
+emlinInstrument/LoopBodyRegion.cpp:82 Meta data for 729649047340286554
+DEBUG: assigning id = 729649047340286554 to body of loop
+DEBUG: assigning id = 14506269463463447143 to loop with the following BBs:
+	for.cond for.body 
+DEBUG: /home/patmos/Developer/kremlin/instrument/llvm/llvm-3.6.1.src/lib/Transforms/KremlinInstrument/LoopBodyRegion.cpp:82 Meta data for 1692413465762819776
+DEBUG: assigning id = 1692413465762819776 to body of loop
+DEBUG: for.cond196 has 1 possible loop exit points
+DEBUG: 	target #0: for.end231
+DEBUG: for.cond31 has 1 possible loop exit points
+DEBUG: 	target #0: for.cond196.preheader
+DEBUG: for.cond34 has 1 possible loop exit points
+DEBUG: 	target #0: for.inc193
+DEBUG: for.cond has 1 possible loop exit points
+DEBUG: 	target #0: for.end
+DEBUG: region name to id: SubByte is 12640114186257794934
+DEBUG: found 0 loops in function SubByte
+DEBUG: region name to id: aes_main is 9509241341054684971
+DEBUG: found 0 loops in function aes_main
+DEBUG: region name to id: main is 14768796648239662093
+DEBUG: found 0 loops in function main
+DEBUG: Writing kremlib calls to aes.kdump
+INFO: dumping function: encrypt
+INFO: dumping function: llvm.dbg.declare
+INFO: dumping function: KeySchedule
+INFO: dumping function: AddRoundKey
+INFO: dumping function: ByteSub_ShiftRow
+INFO: dumping function: MixColumn_AddRoundKey
+INFO: dumping function: printf
+INFO: dumping function: decrypt
+INFO: dumping function: InversShiftRow_ByteSub
+INFO: dumping function: AddRoundKey_InversMixColumn
+INFO: dumping function: SubByte
+INFO: dumping function: aes_main
+INFO: dumping function: main
+INFO: dumping function: llvm.dbg.value
+INFO: dumping function: _KLoad
+INFO: dumping function: _KLoad0
+INFO: dumping function: _KLoad1
+INFO: dumping function: _KLoad2
+INFO: dumping function: _KLoad3
+INFO: dumping function: _KLoad4
+INFO: dumping function: _KStore
+INFO: dumping function: _KStoreConst
+INFO: dumping function: _KEnqArgConst
+INFO: dumping function: _KEnqArg
+INFO: dumping function: _KPrepCall
+INFO: dumping function: _KLinkReturn
+INFO: dumping function: _KMalloc
+INFO: dumping function: _KRealloc
+INFO: dumping function: _KFree
+INFO: dumping function: _KDeqArg
+INFO: dumping function: _KReturnConst
+INFO: dumping function: _KReturn
+INFO: dumping function: _KWork
+INFO: dumping function: _KTimestamp
+INFO: dumping function: _KTimestamp0
+INFO: dumping function: _KTimestamp1
+INFO: dumping function: _KTimestamp2
+INFO: dumping function: _KTimestamp3
+INFO: dumping function: _KTimestamp4
+INFO: dumping function: _KTimestamp5
+INFO: dumping function: _KTimestamp6
+INFO: dumping function: _KTimestamp7
+INFO: dumping function: _KPhi
+INFO: dumping function: _KPhi1To1
+INFO: dumping function: _KPhi2To1
+INFO: dumping function: _KPhi3To1
+INFO: dumping function: _KPhi4To1
+INFO: dumping function: _KPhiAddCond
+INFO: dumping function: _KInduction
+INFO: dumping function: _KPushCDep
+INFO: dumping function: _KPopCDep
+INFO: dumping function: _KPrepRTable
+INFO: dumping function: _KInit
+INFO: dumping function: _KDeinit
+INFO: dumping function: _KEnterRegion
+INFO: dumping function: _KExitRegion
+INFO: dumping function: _KLandingPad

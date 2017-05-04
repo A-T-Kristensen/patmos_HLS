@@ -1,0 +1,8 @@
+minver_hwa_fsub_3bkb
+minver_hwa_fmul_3cud
+minver_hwa_fdiv_3dEe
+minver_hwa_fpext_eOg
+minver_hwa_fcmp_3fYi
+minver_hwa_dcmp_6g8j
+minver_hwa_work
+minver_hwa

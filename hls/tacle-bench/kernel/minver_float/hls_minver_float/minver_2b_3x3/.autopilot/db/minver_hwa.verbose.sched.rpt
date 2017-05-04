@@ -1,0 +1,2390 @@
+
+
+================================================================
+== Vivado HLS Report for 'minver_hwa'
+================================================================
+* Date:           Thu May  4 21:35:20 2017
+
+* Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
+* Project:        hls_minver_float
+* Solution:       minver_2b_3x3
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.69|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+-----------+-----------+-----------+-------+----------+
+        |             |  Latency  | Iteration |  Initiation Interval  |  Trip |          |
+        |  Loop Name  | min | max |  Latency  |  achieved |   target  | Count | Pipelined|
+        +-------------+-----+-----+-----------+-----------+-----------+-------+----------+
+        |- Loop 1     |    3|    3|          1|          1|          1|      3|    yes   |
+        |- Loop 2     |  109|  384| 109 ~ 126 |          -|          -| 1 ~ 3 |    no    |
+        | + Loop 2.1  |    4|    6|          5|          1|          1| 1 ~ 3 |    yes   |
+        | + Loop 2.2  |   12|   12|          4|          4|          1|      3|    yes   |
+        | + Loop 2.3  |   35|   35|         18|          9|          1|      3|    yes   |
+        | + Loop 2.4  |   43|   43|         20|         12|          1|      3|    yes   |
+        |- Loop 3     |    ?|    ?|          ?|          -|          -|      3|    no    |
+        | + Loop 3.1  |    ?|    ?|         11|         10|          1|      ?|    yes   |
+        +-------------+-----+-----+-----------+-----------+-----------+-------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+  * Pipeline-1: initiation interval (II) = 1, depth = 5
+  * Pipeline-2: initiation interval (II) = 4, depth = 4
+  * Pipeline-3: initiation interval (II) = 9, depth = 18
+  * Pipeline-4: initiation interval (II) = 12, depth = 20
+  * Pipeline-5: initiation interval (II) = 10, depth = 11
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 89
+* Pipeline: 6
+  Pipeline-0: II = 1, D = 1, States = { 2 }
+  Pipeline-1: II = 1, D = 5, States = { 5 6 7 8 9 }
+  Pipeline-2: II = 4, D = 4, States = { 17 18 19 20 }
+  Pipeline-3: II = 9, D = 18, States = { 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 }
+  Pipeline-4: II = 12, D = 20, States = { 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 89 59 }
+  Pipeline-5: II = 10, D = 11, States = { 77 78 79 80 81 82 83 84 85 86 87 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (exitcond7)
+	2  / (!exitcond7)
+3 --> 
+	4  / true
+4 --> 
+	5  / (!tmp_2)
+	76  / (tmp_2)
+5 --> 
+	10  / (exitcond6)
+	6  / (!exitcond6)
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	5  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / (!tmp_2 & !tmp_33 & !tmp_1)
+	21  / (!tmp_2 & !tmp_33 & tmp_1)
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	21  / (exitcond5)
+	18  / (!exitcond5)
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	17  / true
+21 --> 
+	22  / true
+22 --> 
+	40  / (exitcond4)
+	23  / (!exitcond4)
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	22  / true
+40 --> 
+	41  / true
+41 --> 
+	60  / (exitcond3)
+	42  / (!exitcond3)
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	89  / true
+59 --> 
+	41  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	65  / true
+65 --> 
+	66  / true
+66 --> 
+	67  / true
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	70  / true
+70 --> 
+	71  / true
+71 --> 
+	72  / true
+72 --> 
+	73  / true
+73 --> 
+	74  / true
+74 --> 
+	75  / true
+75 --> 
+	4  / true
+76 --> 
+	77  / (!exitcond1)
+	14  / (exitcond1)
+77 --> 
+	78  / true
+78 --> 
+	88  / (tmp_8)
+	79  / (!tmp_8)
+79 --> 
+	80  / true
+80 --> 
+	81  / true
+81 --> 
+	82  / true
+82 --> 
+	83  / true
+83 --> 
+	84  / true
+84 --> 
+	85  / true
+85 --> 
+	86  / true
+86 --> 
+	87  / true
+87 --> 
+	77  / true
+88 --> 
+	76  / true
+89 --> 
+	59  / true
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: StgValue_89 (3)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap([3 x float]* %a_1), !map !31
+
+ST_1: StgValue_90 (4)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap([6 x float]* %a_0), !map !37
+
+ST_1: StgValue_91 (5)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !43
+
+ST_1: StgValue_92 (6)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @minver_hwa_str) nounwind
+
+ST_1: work (7)  [1/1] 0.00ns  loc: minver.c:41
+:4  %work = alloca [500 x i2], align 1
+
+ST_1: StgValue_94 (8)  [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecMemCore([6 x float]* %a_0, [3 x float]* %a_1, [1 x i8]* @p_str1, [12 x i8]* @p_str2, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_1: StgValue_95 (9)  [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecInterface([6 x float]* %a_0, [3 x float]* %a_1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_1: StgValue_96 (10)  [1/1] 0.00ns  loc: minver.c:39
+:7  call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_97 (11)  [1/1] 1.57ns  loc: minver.c:50
+:8  br label %1
+
+
+ <State 2>: 2.39ns
+ST_2: i (13)  [1/1] 0.00ns
+:0  %i = phi i2 [ 0, %0 ], [ %i_1, %2 ]
+
+ST_2: exitcond7 (14)  [1/1] 1.54ns  loc: minver.c:50
+:1  %exitcond7 = icmp eq i2 %i, -1
+
+ST_2: i_1 (15)  [1/1] 0.75ns  loc: minver.c:50
+:2  %i_1 = add i2 %i, 1
+
+ST_2: StgValue_101 (16)  [1/1] 0.00ns  loc: minver.c:50
+:3  br i1 %exitcond7, label %.preheader13.preheader, label %2
+
+ST_2: empty (18)  [1/1] 0.00ns
+:0  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3) nounwind
+
+ST_2: tmp_6 (19)  [1/1] 0.00ns  loc: minver.c:50
+:1  %tmp_6 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str5) nounwind
+
+ST_2: StgValue_104 (20)  [1/1] 0.00ns  loc: minver.c:51
+:2  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_2: tmp (21)  [1/1] 0.00ns  loc: minver.c:52
+:3  %tmp = zext i2 %i to i64
+
+ST_2: work_addr (22)  [1/1] 0.00ns  loc: minver.c:52
+:4  %work_addr = getelementptr [500 x i2]* %work, i64 0, i64 %tmp
+
+ST_2: StgValue_107 (23)  [1/1] 2.39ns  loc: minver.c:52
+:5  store i2 %i, i2* %work_addr, align 1
+
+ST_2: empty_7 (24)  [1/1] 0.00ns  loc: minver.c:53
+:6  %empty_7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str5, i32 %tmp_6) nounwind
+
+ST_2: StgValue_109 (25)  [1/1] 0.00ns  loc: minver.c:50
+:7  br label %1
+
+
+ <State 3>: 1.57ns
+ST_3: r (27)  [1/1] 0.00ns
+.preheader13.preheader:0  %r = alloca i32
+
+ST_3: StgValue_111 (28)  [1/1] 1.57ns
+.preheader13.preheader:1  store i32 0, i32* %r
+
+ST_3: StgValue_112 (29)  [1/1] 1.57ns  loc: minver.c:56
+.preheader13.preheader:2  br label %.preheader13
+
+
+ <State 4>: 1.57ns
+ST_4: i_5 (31)  [1/1] 0.00ns
+.preheader13:0  %i_5 = phi i2 [ %k, %14 ], [ 0, %.preheader13.preheader ]
+
+ST_4: tmp_2 (32)  [1/1] 1.54ns  loc: minver.c:56
+.preheader13:1  %tmp_2 = icmp eq i2 %i_5, -1
+
+ST_4: k (33)  [1/1] 0.75ns  loc: minver.c:56
+.preheader13:2  %k = add i2 %i_5, 1
+
+ST_4: StgValue_116 (34)  [1/1] 0.00ns  loc: minver.c:56
+.preheader13:3  br i1 %tmp_2, label %.preheader8.preheader, label %.preheader12.preheader
+
+ST_4: i_5_cast (36)  [1/1] 0.00ns  loc: minver.c:59
+.preheader12.preheader:0  %i_5_cast = zext i2 %i_5 to i32
+
+ST_4: empty_8 (37)  [1/1] 0.00ns
+.preheader12.preheader:1  %empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 3, i64 2) nounwind
+
+ST_4: tmp_3 (38)  [1/1] 0.00ns  loc: minver.c:61
+.preheader12.preheader:2  %tmp_3 = zext i2 %i_5 to i64
+
+ST_4: tmp_3_cast (39)  [1/1] 0.00ns  loc: minver.c:56
+.preheader12.preheader:3  %tmp_3_cast = zext i2 %i_5 to i3
+
+ST_4: tmp_7 (40)  [1/1] 0.00ns  loc: minver.c:56
+.preheader12.preheader:4  %tmp_7 = call i3 @_ssdm_op_BitConcatenate.i3.i2.i1(i2 %i_5, i1 false)
+
+ST_4: tmp_11 (41)  [1/1] 0.00ns  loc: minver.c:82
+.preheader12.preheader:5  %tmp_11 = zext i3 %tmp_7 to i64
+
+ST_4: tmp_30 (42)  [1/1] 0.00ns  loc: minver.c:56
+.preheader12.preheader:6  %tmp_30 = or i3 %tmp_7, 1
+
+ST_4: tmp_35 (43)  [1/1] 0.00ns  loc: minver.c:56
+.preheader12.preheader:7  %tmp_35 = call i64 @_ssdm_op_BitConcatenate.i64.i61.i3(i61 0, i3 %tmp_30)
+
+ST_4: a_0_addr_11 (44)  [1/1] 0.00ns  loc: minver.c:56
+.preheader12.preheader:8  %a_0_addr_11 = getelementptr [6 x float]* %a_0, i64 0, i64 %tmp_35
+
+ST_4: a_0_addr_9 (45)  [1/1] 0.00ns  loc: minver.c:82
+.preheader12.preheader:9  %a_0_addr_9 = getelementptr [6 x float]* %a_0, i64 0, i64 %tmp_11
+
+ST_4: a_1_addr_9 (46)  [1/1] 0.00ns  loc: minver.c:61
+.preheader12.preheader:10  %a_1_addr_9 = getelementptr [3 x float]* %a_1, i64 0, i64 %tmp_3
+
+ST_4: tmp_40 (47)  [1/1] 0.00ns  loc: minver.c:56
+.preheader12.preheader:11  %tmp_40 = trunc i2 %i_5 to i1
+
+ST_4: newIndex4_cast (48)  [1/1] 0.00ns  loc: minver.c:56
+.preheader12.preheader:12  %newIndex4_cast = zext i1 %tmp_40 to i3
+
+ST_4: tmp_42 (49)  [1/1] 0.00ns  loc: minver.c:56
+.preheader12.preheader:13  %tmp_42 = call i3 @_ssdm_op_BitConcatenate.i3.i2.i1(i2 %i_5, i1 %tmp_40)
+
+ST_4: tmp_49 (50)  [1/1] 0.00ns  loc: minver.c:105
+.preheader12.preheader:14  %tmp_49 = zext i3 %tmp_42 to i64
+
+ST_4: a_0_addr_7 (51)  [1/1] 0.00ns  loc: minver.c:105
+.preheader12.preheader:15  %a_0_addr_7 = getelementptr [6 x float]* %a_0, i64 0, i64 %tmp_49
+
+ST_4: tmp_53 (52)  [1/1] 0.75ns  loc: minver.c:105
+.preheader12.preheader:16  %tmp_53 = add i3 %tmp_3_cast, %newIndex4_cast
+
+ST_4: tmp_59_cast (53)  [1/1] 0.00ns  loc: minver.c:105
+.preheader12.preheader:17  %tmp_59_cast = zext i3 %tmp_53 to i64
+
+ST_4: a_1_addr_7 (54)  [1/1] 0.00ns  loc: minver.c:105
+.preheader12.preheader:18  %a_1_addr_7 = getelementptr [3 x float]* %a_1, i64 0, i64 %tmp_59_cast
+
+ST_4: tmp_54 (55)  [1/1] 0.00ns  loc: minver.c:61
+.preheader12.preheader:19  %tmp_54 = call i1 @_ssdm_op_BitSelect.i1.i2.i32(i2 %i_5, i32 1)
+
+ST_4: StgValue_137 (56)  [1/1] 1.57ns  loc: minver.c:59
+.preheader12.preheader:20  br label %.preheader12
+
+ST_4: StgValue_138 (336)  [1/1] 1.57ns  loc: minver.c:109
+.preheader8.preheader:0  br label %.preheader8
+
+
+ <State 5>: 3.14ns
+ST_5: wmax (58)  [1/1] 0.00ns
+.preheader12:0  %wmax = phi float [ %wmax_1, %_ifconv ], [ 0.000000e+00, %.preheader12.preheader ]
+
+ST_5: r_1 (59)  [1/1] 0.00ns
+.preheader12:1  %r_1 = phi i32 [ %i_6, %_ifconv ], [ %i_5_cast, %.preheader12.preheader ]
+
+ST_5: exitcond6 (60)  [1/1] 2.93ns  loc: minver.c:59
+.preheader12:2  %exitcond6 = icmp eq i32 %r_1, 3
+
+ST_5: StgValue_142 (61)  [1/1] 0.00ns  loc: minver.c:59
+.preheader12:3  br i1 %exitcond6, label %_ifconv4, label %_ifconv
+
+ST_5: tmp_66 (67)  [1/1] 0.00ns  loc: minver.c:59
+_ifconv:4  %tmp_66 = trunc i32 %r_1 to i3
+
+ST_5: tmp_63 (68)  [1/1] 0.00ns  loc: minver.c:59
+_ifconv:5  %tmp_63 = call i33 @_ssdm_op_BitConcatenate.i33.i32.i1(i32 %r_1, i1 %tmp_40)
+
+ST_5: tmp_64 (69)  [1/1] 0.00ns  loc: minver.c:61
+_ifconv:6  %tmp_64 = sext i33 %tmp_63 to i64
+
+ST_5: a_0_addr_1 (70)  [1/1] 0.00ns  loc: minver.c:61
+_ifconv:7  %a_0_addr_1 = getelementptr [6 x float]* %a_0, i64 0, i64 %tmp_64
+
+ST_5: tmp_65 (71)  [1/1] 0.75ns  loc: minver.c:61
+_ifconv:8  %tmp_65 = add i3 %newIndex4_cast, %tmp_66
+
+ST_5: tmp_65_cast (72)  [1/1] 0.00ns  loc: minver.c:61
+_ifconv:9  %tmp_65_cast = sext i3 %tmp_65 to i64
+
+ST_5: a_1_addr_1 (73)  [1/1] 0.00ns  loc: minver.c:61
+_ifconv:10  %a_1_addr_1 = getelementptr [3 x float]* %a_1, i64 0, i64 %tmp_65_cast
+
+ST_5: a_0_load_1 (74)  [2/2] 2.39ns  loc: minver.c:61
+_ifconv:11  %a_0_load_1 = load float* %a_0_addr_1, align 4
+
+ST_5: a_1_load_1 (75)  [2/2] 2.39ns  loc: minver.c:61
+_ifconv:12  %a_1_load_1 = load float* %a_1_addr_1, align 4
+
+ST_5: i_6 (106)  [1/1] 2.39ns  loc: minver.c:59
+_ifconv:43  %i_6 = add nsw i32 1, %r_1
+
+
+ <State 6>: 3.76ns
+ST_6: a_0_load_1 (74)  [1/2] 2.39ns  loc: minver.c:61
+_ifconv:11  %a_0_load_1 = load float* %a_0_addr_1, align 4
+
+ST_6: a_1_load_1 (75)  [1/2] 2.39ns  loc: minver.c:61
+_ifconv:12  %a_1_load_1 = load float* %a_1_addr_1, align 4
+
+ST_6: n_assign_1 (76)  [1/1] 1.37ns  loc: minver.c:61
+_ifconv:13  %n_assign_1 = select i1 %tmp_54, float %a_1_load_1, float %a_0_load_1
+
+
+ <State 7>: 7.74ns
+ST_7: n_assign_1_to_int (77)  [1/1] 0.00ns  loc: minver.c:61
+_ifconv:14  %n_assign_1_to_int = bitcast float %n_assign_1 to i32
+
+ST_7: tmp_34 (78)  [1/1] 0.00ns  loc: minver.c:61
+_ifconv:15  %tmp_34 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %n_assign_1_to_int, i32 23, i32 30)
+
+ST_7: tmp_69 (79)  [1/1] 0.00ns  loc: minver.c:61
+_ifconv:16  %tmp_69 = trunc i32 %n_assign_1_to_int to i23
+
+ST_7: notlhs (80)  [1/1] 2.47ns  loc: minver.c:61
+_ifconv:17  %notlhs = icmp ne i8 %tmp_34, -1
+
+ST_7: notrhs (81)  [1/1] 2.84ns  loc: minver.c:61
+_ifconv:18  %notrhs = icmp eq i23 %tmp_69, 0
+
+ST_7: tmp_36 (82)  [1/1] 0.00ns  loc: minver.c:61 (grouped into LUT with out node w_3)
+_ifconv:19  %tmp_36 = or i1 %notrhs, %notlhs
+
+ST_7: tmp_37 (83)  [1/1] 6.37ns  loc: minver_lib.c:11->minver.c:61
+_ifconv:20  %tmp_37 = fcmp oge float %n_assign_1, 0.000000e+00
+
+ST_7: tmp_38 (84)  [1/1] 0.00ns  loc: minver_lib.c:11->minver.c:61 (grouped into LUT with out node w_3)
+_ifconv:21  %tmp_38 = and i1 %tmp_36, %tmp_37
+
+ST_7: f_neg_i (85)  [1/1] 0.00ns  loc: minver_lib.c:14->minver.c:61 (grouped into LUT with out node w_3)
+_ifconv:22  %f_neg_i = xor i32 %n_assign_1_to_int, -2147483648
+
+ST_7: f_1 (86)  [1/1] 0.00ns  loc: minver_lib.c:14->minver.c:61 (grouped into LUT with out node w_3)
+_ifconv:23  %f_1 = bitcast i32 %f_neg_i to float
+
+ST_7: w_3 (87)  [1/1] 1.37ns  loc: minver.c:63 (out node of the LUT)
+_ifconv:24  %w_3 = select i1 %tmp_38, float %n_assign_1, float %f_1
+
+
+ <State 8>: 7.74ns
+ST_8: w_3_to_int (88)  [1/1] 0.00ns  loc: minver.c:63
+_ifconv:25  %w_3_to_int = bitcast float %w_3 to i32
+
+ST_8: tmp_39 (89)  [1/1] 0.00ns  loc: minver.c:63
+_ifconv:26  %tmp_39 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %w_3_to_int, i32 23, i32 30)
+
+ST_8: tmp_88 (90)  [1/1] 0.00ns  loc: minver.c:63
+_ifconv:27  %tmp_88 = trunc i32 %w_3_to_int to i23
+
+ST_8: wmax_to_int (91)  [1/1] 0.00ns  loc: minver.c:62
+_ifconv:28  %wmax_to_int = bitcast float %wmax to i32
+
+ST_8: tmp_41 (92)  [1/1] 0.00ns  loc: minver.c:62
+_ifconv:29  %tmp_41 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %wmax_to_int, i32 23, i32 30)
+
+ST_8: tmp_89 (93)  [1/1] 0.00ns  loc: minver.c:62
+_ifconv:30  %tmp_89 = trunc i32 %wmax_to_int to i23
+
+ST_8: notlhs3 (94)  [1/1] 2.47ns  loc: minver.c:63
+_ifconv:31  %notlhs3 = icmp ne i8 %tmp_39, -1
+
+ST_8: notrhs3 (95)  [1/1] 2.84ns  loc: minver.c:63
+_ifconv:32  %notrhs3 = icmp eq i23 %tmp_88, 0
+
+ST_8: tmp_43 (96)  [1/1] 0.00ns  loc: minver.c:63 (grouped into LUT with out node tmp_47)
+_ifconv:33  %tmp_43 = or i1 %notrhs3, %notlhs3
+
+ST_8: notlhs4 (97)  [1/1] 2.47ns  loc: minver.c:62
+_ifconv:34  %notlhs4 = icmp ne i8 %tmp_41, -1
+
+ST_8: notrhs4 (98)  [1/1] 2.84ns  loc: minver.c:62
+_ifconv:35  %notrhs4 = icmp eq i23 %tmp_89, 0
+
+ST_8: tmp_44 (99)  [1/1] 0.00ns  loc: minver.c:62 (grouped into LUT with out node tmp_47)
+_ifconv:36  %tmp_44 = or i1 %notrhs4, %notlhs4
+
+ST_8: tmp_45 (100)  [1/1] 0.00ns  loc: minver.c:63 (grouped into LUT with out node tmp_47)
+_ifconv:37  %tmp_45 = and i1 %tmp_43, %tmp_44
+
+ST_8: tmp_46 (101)  [1/1] 6.37ns  loc: minver.c:62
+_ifconv:38  %tmp_46 = fcmp ogt float %w_3, %wmax
+
+ST_8: tmp_47 (102)  [1/1] 1.37ns  loc: minver.c:62 (out node of the LUT)
+_ifconv:39  %tmp_47 = and i1 %tmp_45, %tmp_46
+
+
+ <State 9>: 2.94ns
+ST_9: r_load_1 (63)  [1/1] 0.00ns  loc: minver.c:62
+_ifconv:0  %r_load_1 = load i32* %r
+
+ST_9: empty_9 (64)  [1/1] 0.00ns
+_ifconv:1  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 3, i64 0) nounwind
+
+ST_9: tmp_12 (65)  [1/1] 0.00ns  loc: minver.c:59
+_ifconv:2  %tmp_12 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str6) nounwind
+
+ST_9: StgValue_185 (66)  [1/1] 0.00ns  loc: minver.c:60
+_ifconv:3  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_9: wmax_1 (103)  [1/1] 1.37ns  loc: minver.c:62
+_ifconv:40  %wmax_1 = select i1 %tmp_47, float %w_3, float %wmax
+
+ST_9: r_2 (104)  [1/1] 1.37ns  loc: minver.c:62
+_ifconv:41  %r_2 = select i1 %tmp_47, i32 %r_1, i32 %r_load_1
+
+ST_9: empty_10 (105)  [1/1] 0.00ns  loc: minver.c:66
+_ifconv:42  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str6, i32 %tmp_12) nounwind
+
+ST_9: StgValue_189 (107)  [1/1] 1.57ns  loc: minver.c:62
+_ifconv:44  store i32 %r_2, i32* %r
+
+ST_9: StgValue_190 (108)  [1/1] 0.00ns  loc: minver.c:59
+_ifconv:45  br label %.preheader12
+
+
+ <State 10>: 3.14ns
+ST_10: r_load (110)  [1/1] 0.00ns
+_ifconv4:0  %r_load = load i32* %r
+
+ST_10: tmp_57 (112)  [1/1] 0.00ns
+_ifconv4:2  %tmp_57 = trunc i32 %r_load to i3
+
+ST_10: tmp_58 (113)  [1/1] 0.00ns  loc: minver.c:56
+_ifconv4:3  %tmp_58 = call i33 @_ssdm_op_BitConcatenate.i33.i32.i1(i32 %r_load, i1 %tmp_40)
+
+ST_10: tmp_59 (114)  [1/1] 0.00ns  loc: minver.c:68
+_ifconv4:4  %tmp_59 = sext i33 %tmp_58 to i64
+
+ST_10: a_0_addr (115)  [1/1] 0.00ns  loc: minver.c:68
+_ifconv4:5  %a_0_addr = getelementptr [6 x float]* %a_0, i64 0, i64 %tmp_59
+
+ST_10: tmp_60 (116)  [1/1] 0.75ns  loc: minver.c:68
+_ifconv4:6  %tmp_60 = add i3 %newIndex4_cast, %tmp_57
+
+ST_10: tmp_62_cast (117)  [1/1] 0.00ns  loc: minver.c:68
+_ifconv4:7  %tmp_62_cast = sext i3 %tmp_60 to i64
+
+ST_10: a_1_addr (118)  [1/1] 0.00ns  loc: minver.c:68
+_ifconv4:8  %a_1_addr = getelementptr [3 x float]* %a_1, i64 0, i64 %tmp_62_cast
+
+ST_10: a_0_load (119)  [2/2] 2.39ns  loc: minver.c:105
+_ifconv4:9  %a_0_load = load float* %a_0_addr, align 4
+
+ST_10: a_1_load (120)  [2/2] 2.39ns  loc: minver.c:105
+_ifconv4:10  %a_1_load = load float* %a_1_addr, align 4
+
+
+ <State 11>: 3.76ns
+ST_11: a_0_load (119)  [1/2] 2.39ns  loc: minver.c:105
+_ifconv4:9  %a_0_load = load float* %a_0_addr, align 4
+
+ST_11: a_1_load (120)  [1/2] 2.39ns  loc: minver.c:105
+_ifconv4:10  %a_1_load = load float* %a_1_addr, align 4
+
+ST_11: pivot (121)  [1/1] 1.37ns  loc: minver.c:105
+_ifconv4:11  %pivot = select i1 %tmp_54, float %a_1_load, float %a_0_load
+
+
+ <State 12>: 7.74ns
+ST_12: pivot_to_int (122)  [1/1] 0.00ns  loc: minver.c:105
+_ifconv4:12  %pivot_to_int = bitcast float %pivot to i32
+
+ST_12: tmp_9 (123)  [1/1] 0.00ns  loc: minver.c:105
+_ifconv4:13  %tmp_9 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %pivot_to_int, i32 23, i32 30)
+
+ST_12: tmp_61 (124)  [1/1] 0.00ns  loc: minver.c:105
+_ifconv4:14  %tmp_61 = trunc i32 %pivot_to_int to i23
+
+ST_12: notlhs1 (125)  [1/1] 2.47ns  loc: minver.c:105
+_ifconv4:15  %notlhs1 = icmp ne i8 %tmp_9, -1
+
+ST_12: notrhs1 (126)  [1/1] 2.84ns  loc: minver.c:105
+_ifconv4:16  %notrhs1 = icmp eq i23 %tmp_61, 0
+
+ST_12: tmp_17 (127)  [1/1] 0.00ns  loc: minver.c:105 (grouped into LUT with out node api)
+_ifconv4:17  %tmp_17 = or i1 %notrhs1, %notlhs1
+
+ST_12: tmp_27 (128)  [1/1] 6.37ns  loc: minver_lib.c:11->minver.c:69
+_ifconv4:18  %tmp_27 = fcmp oge float %pivot, 0.000000e+00
+
+ST_12: tmp_28 (129)  [1/1] 0.00ns  loc: minver_lib.c:11->minver.c:69 (grouped into LUT with out node api)
+_ifconv4:19  %tmp_28 = and i1 %tmp_17, %tmp_27
+
+ST_12: f_neg_i1 (130)  [1/1] 0.00ns  loc: minver_lib.c:14->minver.c:69 (grouped into LUT with out node api)
+_ifconv4:20  %f_neg_i1 = xor i32 %pivot_to_int, -2147483648
+
+ST_12: f (131)  [1/1] 0.00ns  loc: minver_lib.c:14->minver.c:69 (grouped into LUT with out node api)
+_ifconv4:21  %f = bitcast i32 %f_neg_i1 to float
+
+ST_12: api (132)  [1/1] 1.37ns  loc: minver.c:69 (out node of the LUT)
+_ifconv4:22  %api = select i1 %tmp_28, float %pivot, float %f
+
+
+ <State 13>: 5.12ns
+ST_13: tmp_5 (133)  [1/1] 5.12ns  loc: minver.c:70
+_ifconv4:23  %tmp_5 = fpext float %api to double
+
+
+ <State 14>: 8.27ns
+ST_14: tmp_4 (111)  [1/1] 0.00ns  loc: minver.c:68
+_ifconv4:1  %tmp_4 = sext i32 %r_load to i64
+
+ST_14: tmp_5_to_int (134)  [1/1] 0.00ns  loc: minver.c:70
+_ifconv4:24  %tmp_5_to_int = bitcast double %tmp_5 to i64
+
+ST_14: tmp_29 (135)  [1/1] 0.00ns  loc: minver.c:70
+_ifconv4:25  %tmp_29 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %tmp_5_to_int, i32 52, i32 62)
+
+ST_14: tmp_62 (136)  [1/1] 0.00ns  loc: minver.c:70
+_ifconv4:26  %tmp_62 = trunc i64 %tmp_5_to_int to i52
+
+ST_14: notlhs2 (137)  [1/1] 2.58ns  loc: minver.c:70
+_ifconv4:27  %notlhs2 = icmp ne i11 %tmp_29, -1
+
+ST_14: notrhs2 (138)  [1/1] 3.19ns  loc: minver.c:70
+_ifconv4:28  %notrhs2 = icmp eq i52 %tmp_62, 0
+
+ST_14: tmp_31 (139)  [1/1] 0.00ns  loc: minver.c:70 (grouped into LUT with out node tmp_33)
+_ifconv4:29  %tmp_31 = or i1 %notrhs2, %notlhs2
+
+ST_14: tmp_32 (140)  [1/1] 6.90ns  loc: minver.c:70
+_ifconv4:30  %tmp_32 = fcmp ole double %tmp_5, 1.000000e-06
+
+ST_14: tmp_33 (141)  [1/1] 1.37ns  loc: minver.c:70 (out node of the LUT)
+_ifconv4:31  %tmp_33 = and i1 %tmp_31, %tmp_32
+
+ST_14: StgValue_225 (142)  [1/1] 0.00ns  loc: minver.c:70
+_ifconv4:32  br i1 %tmp_33, label %.loopexit.loopexit33, label %3
+
+ST_14: tmp_1 (144)  [1/1] 2.93ns  loc: minver.c:75
+:0  %tmp_1 = icmp eq i32 %r_load, %i_5_cast
+
+ST_14: StgValue_227 (145)  [1/1] 0.00ns  loc: minver.c:75
+:1  br i1 %tmp_1, label %.loopexit11, label %4
+
+ST_14: work_addr_3 (147)  [1/1] 0.00ns  loc: minver.c:77
+:0  %work_addr_3 = getelementptr [500 x i2]* %work, i64 0, i64 %tmp_3
+
+ST_14: work_load_2 (148)  [2/2] 2.39ns  loc: minver.c:77
+:1  %work_load_2 = load i2* %work_addr_3, align 1
+
+ST_14: work_addr_4 (149)  [1/1] 0.00ns  loc: minver.c:78
+:2  %work_addr_4 = getelementptr [500 x i2]* %work, i64 0, i64 %tmp_4
+
+ST_14: work_load_3 (150)  [2/2] 2.39ns  loc: minver.c:78
+:3  %work_load_3 = load i2* %work_addr_4, align 1
+
+ST_14: StgValue_232 (334)  [1/1] 0.00ns
+.loopexit.loopexit33:0  br label %.loopexit
+
+ST_14: StgValue_233 (445)  [1/1] 0.00ns  loc: minver.c:133
+.loopexit:0  ret i32 1
+
+
+ <State 15>: 4.78ns
+ST_15: work_load_2 (148)  [1/2] 2.39ns  loc: minver.c:77
+:1  %work_load_2 = load i2* %work_addr_3, align 1
+
+ST_15: work_load_3 (150)  [1/2] 2.39ns  loc: minver.c:78
+:3  %work_load_3 = load i2* %work_addr_4, align 1
+
+ST_15: StgValue_236 (151)  [1/1] 2.39ns  loc: minver.c:78
+:4  store i2 %work_load_3, i2* %work_addr_3, align 1
+
+
+ <State 16>: 2.39ns
+ST_16: StgValue_237 (152)  [1/1] 2.39ns  loc: minver.c:79
+:5  store i2 %work_load_2, i2* %work_addr_4, align 1
+
+ST_16: StgValue_238 (153)  [1/1] 1.57ns  loc: minver.c:80
+:6  br label %5
+
+
+ <State 17>: 3.14ns
+ST_17: j (155)  [1/1] 0.00ns
+:0  %j = phi i2 [ 0, %4 ], [ %j_1, %6 ]
+
+ST_17: exitcond5 (156)  [1/1] 1.54ns  loc: minver.c:80
+:1  %exitcond5 = icmp eq i2 %j, -1
+
+ST_17: j_1 (157)  [1/1] 0.75ns  loc: minver.c:80
+:2  %j_1 = add i2 %j, 1
+
+ST_17: StgValue_242 (158)  [1/1] 0.00ns  loc: minver.c:80
+:3  br i1 %exitcond5, label %.loopexit11.loopexit, label %_ifconv1
+
+ST_17: tmp_94 (164)  [1/1] 0.00ns  loc: minver.c:80
+_ifconv1:4  %tmp_94 = trunc i2 %j to i1
+
+ST_17: newIndex9_cast (165)  [1/1] 0.00ns  loc: minver.c:80
+_ifconv1:5  %newIndex9_cast = zext i1 %tmp_94 to i3
+
+ST_17: tmp_72 (166)  [1/1] 0.00ns  loc: minver.c:56
+_ifconv1:6  %tmp_72 = call i3 @_ssdm_op_BitConcatenate.i3.i2.i1(i2 %i_5, i1 %tmp_94)
+
+ST_17: tmp_73 (167)  [1/1] 0.00ns  loc: minver.c:82
+_ifconv1:7  %tmp_73 = zext i3 %tmp_72 to i64
+
+ST_17: a_0_addr_4 (168)  [1/1] 0.00ns  loc: minver.c:82
+_ifconv1:8  %a_0_addr_4 = getelementptr [6 x float]* %a_0, i64 0, i64 %tmp_73
+
+ST_17: tmp_76 (172)  [1/1] 0.75ns  loc: minver.c:82
+_ifconv1:12  %tmp_76 = add i3 %tmp_3_cast, %newIndex9_cast
+
+ST_17: tmp_76_cast (173)  [1/1] 0.00ns  loc: minver.c:82
+_ifconv1:13  %tmp_76_cast = zext i3 %tmp_76 to i64
+
+ST_17: a_1_addr_4 (174)  [1/1] 0.00ns  loc: minver.c:82
+_ifconv1:14  %a_1_addr_4 = getelementptr [3 x float]* %a_1, i64 0, i64 %tmp_76_cast
+
+ST_17: tmp_77 (175)  [1/1] 0.75ns  loc: minver.c:83
+_ifconv1:15  %tmp_77 = add i3 %tmp_57, %newIndex9_cast
+
+ST_17: tmp_77_cast (176)  [1/1] 0.00ns  loc: minver.c:83
+_ifconv1:16  %tmp_77_cast = sext i3 %tmp_77 to i64
+
+ST_17: a_1_addr_6 (177)  [1/1] 0.00ns  loc: minver.c:83
+_ifconv1:17  %a_1_addr_6 = getelementptr [3 x float]* %a_1, i64 0, i64 %tmp_77_cast
+
+ST_17: tmp_95 (178)  [1/1] 0.00ns  loc: minver.c:82
+_ifconv1:18  %tmp_95 = call i1 @_ssdm_op_BitSelect.i1.i2.i32(i2 %j, i32 1)
+
+ST_17: a_0_load_4 (179)  [2/2] 2.39ns  loc: minver.c:82
+_ifconv1:19  %a_0_load_4 = load float* %a_0_addr_4, align 4
+
+ST_17: a_1_load_4 (180)  [2/2] 2.39ns  loc: minver.c:82
+_ifconv1:20  %a_1_load_4 = load float* %a_1_addr_4, align 4
+
+
+ <State 18>: 2.39ns
+ST_18: r_load_2 (160)  [1/1] 0.00ns
+_ifconv1:0  %r_load_2 = load i32* %r
+
+ST_18: tmp_74 (169)  [1/1] 0.00ns  loc: minver.c:80
+_ifconv1:9  %tmp_74 = call i33 @_ssdm_op_BitConcatenate.i33.i32.i1(i32 %r_load_2, i1 %tmp_94)
+
+ST_18: tmp_75 (170)  [1/1] 0.00ns  loc: minver.c:83
+_ifconv1:10  %tmp_75 = sext i33 %tmp_74 to i64
+
+ST_18: a_0_addr_6 (171)  [1/1] 0.00ns  loc: minver.c:83
+_ifconv1:11  %a_0_addr_6 = getelementptr [6 x float]* %a_0, i64 0, i64 %tmp_75
+
+ST_18: a_0_load_4 (179)  [1/2] 2.39ns  loc: minver.c:82
+_ifconv1:19  %a_0_load_4 = load float* %a_0_addr_4, align 4
+
+ST_18: a_1_load_4 (180)  [1/2] 2.39ns  loc: minver.c:82
+_ifconv1:20  %a_1_load_4 = load float* %a_1_addr_4, align 4
+
+ST_18: a_0_load_6 (182)  [2/2] 2.39ns  loc: minver.c:83
+_ifconv1:22  %a_0_load_6 = load float* %a_0_addr_6, align 4
+
+ST_18: a_1_load_6 (183)  [2/2] 2.39ns  loc: minver.c:83
+_ifconv1:23  %a_1_load_6 = load float* %a_1_addr_6, align 4
+
+
+ <State 19>: 6.15ns
+ST_19: empty_11 (161)  [1/1] 0.00ns
+_ifconv1:1  %empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3) nounwind
+
+ST_19: tmp_21 (162)  [1/1] 0.00ns  loc: minver.c:80
+_ifconv1:2  %tmp_21 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str7) nounwind
+
+ST_19: StgValue_267 (163)  [1/1] 0.00ns  loc: minver.c:81
+_ifconv1:3  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_19: w (181)  [1/1] 1.37ns  loc: minver.c:82
+_ifconv1:21  %w = select i1 %tmp_95, float %a_1_load_4, float %a_0_load_4
+
+ST_19: a_0_load_6 (182)  [1/2] 2.39ns  loc: minver.c:83
+_ifconv1:22  %a_0_load_6 = load float* %a_0_addr_6, align 4
+
+ST_19: a_1_load_6 (183)  [1/2] 2.39ns  loc: minver.c:83
+_ifconv1:23  %a_1_load_6 = load float* %a_1_addr_6, align 4
+
+ST_19: a_load_2_phi (184)  [1/1] 1.37ns  loc: minver.c:83
+_ifconv1:24  %a_load_2_phi = select i1 %tmp_95, float %a_1_load_6, float %a_0_load_6
+
+ST_19: StgValue_272 (185)  [1/1] 0.00ns  loc: minver.c:83
+_ifconv1:25  br i1 %tmp_95, label %branch37, label %branch36
+
+ST_19: StgValue_273 (187)  [1/1] 2.39ns  loc: minver.c:83
+branch36:0  store float %a_load_2_phi, float* %a_0_addr_4, align 4
+
+ST_19: StgValue_274 (191)  [1/1] 2.39ns  loc: minver.c:83
+branch37:0  store float %a_load_2_phi, float* %a_1_addr_4, align 4
+
+
+ <State 20>: 2.39ns
+ST_20: StgValue_275 (188)  [1/1] 2.39ns  loc: minver.c:84
+branch36:1  store float %w, float* %a_0_addr_6, align 4
+
+ST_20: StgValue_276 (189)  [1/1] 0.00ns  loc: minver.c:84
+branch36:2  br label %6
+
+ST_20: StgValue_277 (192)  [1/1] 2.39ns  loc: minver.c:84
+branch37:1  store float %w, float* %a_1_addr_6, align 4
+
+ST_20: StgValue_278 (193)  [1/1] 0.00ns  loc: minver.c:84
+branch37:2  br label %6
+
+ST_20: empty_12 (195)  [1/1] 0.00ns  loc: minver.c:85
+:0  %empty_12 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str7, i32 %tmp_21) nounwind
+
+ST_20: StgValue_280 (196)  [1/1] 0.00ns  loc: minver.c:80
+:1  br label %5
+
+
+ <State 21>: 1.57ns
+ST_21: StgValue_281 (198)  [1/1] 0.00ns
+.loopexit11.loopexit:0  br label %.loopexit11
+
+ST_21: StgValue_282 (200)  [1/1] 1.57ns  loc: minver.c:88
+.loopexit11:0  br label %7
+
+
+ <State 22>: 3.14ns
+ST_22: i_2 (202)  [1/1] 0.00ns
+:0  %i_2 = phi i2 [ 0, %.loopexit11 ], [ %i_8, %8 ]
+
+ST_22: exitcond4 (203)  [1/1] 1.54ns  loc: minver.c:88
+:1  %exitcond4 = icmp eq i2 %i_2, -1
+
+ST_22: i_8 (204)  [1/1] 0.75ns  loc: minver.c:88
+:2  %i_8 = add i2 %i_2, 1
+
+ST_22: StgValue_286 (205)  [1/1] 0.00ns  loc: minver.c:88
+:3  br i1 %exitcond4, label %.preheader10.preheader, label %_ifconv2
+
+ST_22: tmp_22 (208)  [1/1] 0.00ns  loc: minver.c:88
+_ifconv2:1  %tmp_22 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str8) nounwind
+
+ST_22: tmp_96 (210)  [1/1] 0.00ns  loc: minver.c:88
+_ifconv2:3  %tmp_96 = trunc i2 %i_2 to i1
+
+ST_22: newIndex2_cast (211)  [1/1] 0.00ns  loc: minver.c:88
+_ifconv2:4  %newIndex2_cast = zext i1 %tmp_96 to i3
+
+ST_22: tmp_78 (212)  [1/1] 0.00ns  loc: minver.c:56
+_ifconv2:5  %tmp_78 = call i3 @_ssdm_op_BitConcatenate.i3.i2.i1(i2 %i_5, i1 %tmp_96)
+
+ST_22: tmp_79 (213)  [1/1] 0.00ns  loc: minver.c:90
+_ifconv2:6  %tmp_79 = zext i3 %tmp_78 to i64
+
+ST_22: a_0_addr_5 (214)  [1/1] 0.00ns  loc: minver.c:90
+_ifconv2:7  %a_0_addr_5 = getelementptr [6 x float]* %a_0, i64 0, i64 %tmp_79
+
+ST_22: tmp_80 (215)  [1/1] 0.75ns  loc: minver.c:90
+_ifconv2:8  %tmp_80 = add i3 %newIndex2_cast, %tmp_3_cast
+
+ST_22: tmp_80_cast (216)  [1/1] 0.00ns  loc: minver.c:90
+_ifconv2:9  %tmp_80_cast = zext i3 %tmp_80 to i64
+
+ST_22: a_1_addr_5 (217)  [1/1] 0.00ns  loc: minver.c:90
+_ifconv2:10  %a_1_addr_5 = getelementptr [3 x float]* %a_1, i64 0, i64 %tmp_80_cast
+
+ST_22: tmp_97 (218)  [1/1] 0.00ns  loc: minver.c:90
+_ifconv2:11  %tmp_97 = call i1 @_ssdm_op_BitSelect.i1.i2.i32(i2 %i_2, i32 1)
+
+ST_22: a_0_load_5 (219)  [2/2] 2.39ns  loc: minver.c:90
+_ifconv2:12  %a_0_load_5 = load float* %a_0_addr_5, align 4
+
+ST_22: a_1_load_5 (220)  [2/2] 2.39ns  loc: minver.c:90
+_ifconv2:13  %a_1_load_5 = load float* %a_1_addr_5, align 4
+
+ST_22: empty_14 (231)  [1/1] 0.00ns  loc: minver.c:91
+:0  %empty_14 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str8, i32 %tmp_22) nounwind
+
+ST_22: StgValue_300 (232)  [1/1] 0.00ns  loc: minver.c:88
+:1  br label %7
+
+
+ <State 23>: 3.76ns
+ST_23: a_0_load_5 (219)  [1/2] 2.39ns  loc: minver.c:90
+_ifconv2:12  %a_0_load_5 = load float* %a_0_addr_5, align 4
+
+ST_23: a_1_load_5 (220)  [1/2] 2.39ns  loc: minver.c:90
+_ifconv2:13  %a_1_load_5 = load float* %a_1_addr_5, align 4
+
+ST_23: a_load_5_phi (221)  [1/1] 1.37ns  loc: minver.c:90
+_ifconv2:14  %a_load_5_phi = select i1 %tmp_97, float %a_1_load_5, float %a_0_load_5
+
+ST_23: StgValue_304 (223)  [1/1] 0.00ns  loc: minver.c:90
+_ifconv2:16  br i1 %tmp_97, label %branch29, label %branch28
+
+
+ <State 24>: 6.30ns
+ST_24: tmp_13 (222)  [16/16] 6.30ns  loc: minver.c:90
+_ifconv2:15  %tmp_13 = fdiv float %a_load_5_phi, %pivot
+
+
+ <State 25>: 6.30ns
+ST_25: tmp_13 (222)  [15/16] 6.30ns  loc: minver.c:90
+_ifconv2:15  %tmp_13 = fdiv float %a_load_5_phi, %pivot
+
+
+ <State 26>: 6.30ns
+ST_26: tmp_13 (222)  [14/16] 6.30ns  loc: minver.c:90
+_ifconv2:15  %tmp_13 = fdiv float %a_load_5_phi, %pivot
+
+
+ <State 27>: 6.30ns
+ST_27: tmp_13 (222)  [13/16] 6.30ns  loc: minver.c:90
+_ifconv2:15  %tmp_13 = fdiv float %a_load_5_phi, %pivot
+
+
+ <State 28>: 6.30ns
+ST_28: tmp_13 (222)  [12/16] 6.30ns  loc: minver.c:90
+_ifconv2:15  %tmp_13 = fdiv float %a_load_5_phi, %pivot
+
+
+ <State 29>: 6.30ns
+ST_29: tmp_13 (222)  [11/16] 6.30ns  loc: minver.c:90
+_ifconv2:15  %tmp_13 = fdiv float %a_load_5_phi, %pivot
+
+
+ <State 30>: 6.30ns
+ST_30: tmp_13 (222)  [10/16] 6.30ns  loc: minver.c:90
+_ifconv2:15  %tmp_13 = fdiv float %a_load_5_phi, %pivot
+
+
+ <State 31>: 6.30ns
+ST_31: tmp_13 (222)  [9/16] 6.30ns  loc: minver.c:90
+_ifconv2:15  %tmp_13 = fdiv float %a_load_5_phi, %pivot
+
+
+ <State 32>: 6.30ns
+ST_32: tmp_13 (222)  [8/16] 6.30ns  loc: minver.c:90
+_ifconv2:15  %tmp_13 = fdiv float %a_load_5_phi, %pivot
+
+
+ <State 33>: 6.30ns
+ST_33: tmp_13 (222)  [7/16] 6.30ns  loc: minver.c:90
+_ifconv2:15  %tmp_13 = fdiv float %a_load_5_phi, %pivot
+
+
+ <State 34>: 6.30ns
+ST_34: tmp_13 (222)  [6/16] 6.30ns  loc: minver.c:90
+_ifconv2:15  %tmp_13 = fdiv float %a_load_5_phi, %pivot
+
+
+ <State 35>: 6.30ns
+ST_35: tmp_13 (222)  [5/16] 6.30ns  loc: minver.c:90
+_ifconv2:15  %tmp_13 = fdiv float %a_load_5_phi, %pivot
+
+
+ <State 36>: 6.30ns
+ST_36: tmp_13 (222)  [4/16] 6.30ns  loc: minver.c:90
+_ifconv2:15  %tmp_13 = fdiv float %a_load_5_phi, %pivot
+
+
+ <State 37>: 6.30ns
+ST_37: tmp_13 (222)  [3/16] 6.30ns  loc: minver.c:90
+_ifconv2:15  %tmp_13 = fdiv float %a_load_5_phi, %pivot
+
+
+ <State 38>: 6.30ns
+ST_38: tmp_13 (222)  [2/16] 6.30ns  loc: minver.c:90
+_ifconv2:15  %tmp_13 = fdiv float %a_load_5_phi, %pivot
+
+
+ <State 39>: 8.69ns
+ST_39: empty_13 (207)  [1/1] 0.00ns
+_ifconv2:0  %empty_13 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3) nounwind
+
+ST_39: StgValue_321 (209)  [1/1] 0.00ns  loc: minver.c:89
+_ifconv2:2  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_39: tmp_13 (222)  [1/16] 6.30ns  loc: minver.c:90
+_ifconv2:15  %tmp_13 = fdiv float %a_load_5_phi, %pivot
+
+ST_39: StgValue_323 (225)  [1/1] 2.39ns  loc: minver.c:90
+branch28:0  store float %tmp_13, float* %a_0_addr_5, align 4
+
+ST_39: StgValue_324 (226)  [1/1] 0.00ns  loc: minver.c:90
+branch28:1  br label %8
+
+ST_39: StgValue_325 (228)  [1/1] 2.39ns  loc: minver.c:90
+branch29:0  store float %tmp_13, float* %a_1_addr_5, align 4
+
+ST_39: StgValue_326 (229)  [1/1] 0.00ns  loc: minver.c:90
+branch29:1  br label %8
+
+
+ <State 40>: 1.57ns
+ST_40: tmp_24 (234)  [1/1] 1.54ns  loc: minver.c:99
+.preheader10.preheader:0  %tmp_24 = icmp eq i2 %i_5, 0
+
+ST_40: tmp_20_1 (235)  [1/1] 1.54ns  loc: minver.c:99
+.preheader10.preheader:1  %tmp_20_1 = icmp eq i2 %i_5, 1
+
+ST_40: tmp_20_2 (236)  [1/1] 1.54ns  loc: minver.c:99
+.preheader10.preheader:2  %tmp_20_2 = icmp eq i2 %i_5, -2
+
+ST_40: StgValue_330 (237)  [1/1] 1.57ns  loc: minver.c:93
+.preheader10.preheader:3  br label %.preheader10
+
+
+ <State 41>: 3.14ns
+ST_41: i_3 (239)  [1/1] 0.00ns
+.preheader10:0  %i_3 = phi i2 [ %i_9, %._crit_edge ], [ 0, %.preheader10.preheader ]
+
+ST_41: exitcond3 (240)  [1/1] 1.54ns  loc: minver.c:93
+.preheader10:1  %exitcond3 = icmp eq i2 %i_3, -1
+
+ST_41: i_9 (241)  [1/1] 0.75ns  loc: minver.c:93
+.preheader10:2  %i_9 = add i2 %i_3, 1
+
+ST_41: StgValue_334 (242)  [1/1] 0.00ns  loc: minver.c:93
+.preheader10:3  br i1 %exitcond3, label %13, label %9
+
+ST_41: empty_15 (244)  [1/1] 0.00ns
+:0  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3) nounwind
+
+ST_41: tmp_23 (245)  [1/1] 0.00ns  loc: minver.c:93
+:1  %tmp_23 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str9) nounwind
+
+ST_41: StgValue_337 (246)  [1/1] 0.00ns  loc: minver.c:94
+:2  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_41: tmp_15 (247)  [1/1] 1.54ns  loc: minver.c:95
+:3  %tmp_15 = icmp eq i2 %i_3, %i_5
+
+ST_41: StgValue_339 (248)  [1/1] 0.00ns  loc: minver.c:95
+:4  br i1 %tmp_15, label %._crit_edge, label %_ifconv3
+
+ST_41: tmp_16_cast (251)  [1/1] 0.00ns  loc: minver.c:93
+_ifconv3:1  %tmp_16_cast = zext i2 %i_3 to i3
+
+ST_41: tmp_83 (254)  [1/1] 0.00ns  loc: minver.c:93
+_ifconv3:4  %tmp_83 = call i3 @_ssdm_op_BitConcatenate.i3.i2.i1(i2 %i_3, i1 %tmp_40)
+
+ST_41: tmp_84 (255)  [1/1] 0.00ns  loc: minver.c:96
+_ifconv3:5  %tmp_84 = zext i3 %tmp_83 to i64
+
+ST_41: a_0_addr_8 (256)  [1/1] 0.00ns  loc: minver.c:96
+_ifconv3:6  %a_0_addr_8 = getelementptr [6 x float]* %a_0, i64 0, i64 %tmp_84
+
+ST_41: tmp_87 (261)  [1/1] 0.75ns  loc: minver.c:96
+_ifconv3:11  %tmp_87 = add i3 %tmp_16_cast, %newIndex4_cast
+
+ST_41: tmp_87_cast (262)  [1/1] 0.00ns  loc: minver.c:96
+_ifconv3:12  %tmp_87_cast = zext i3 %tmp_87 to i64
+
+ST_41: a_1_addr_8 (263)  [1/1] 0.00ns  loc: minver.c:96
+_ifconv3:13  %a_1_addr_8 = getelementptr [3 x float]* %a_1, i64 0, i64 %tmp_87_cast
+
+ST_41: a_0_load_8 (265)  [2/2] 2.39ns  loc: minver.c:96
+_ifconv3:15  %a_0_load_8 = load float* %a_0_addr_8, align 4
+
+ST_41: a_1_load_8 (266)  [2/2] 2.39ns  loc: minver.c:96
+_ifconv3:16  %a_1_load_8 = load float* %a_1_addr_8, align 4
+
+ST_41: StgValue_349 (318)  [1/1] 0.00ns  loc: minver.c:103
+._crit_edge18:0  br label %._crit_edge
+
+ST_41: empty_16 (320)  [1/1] 0.00ns  loc: minver.c:104
+._crit_edge:0  %empty_16 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str9, i32 %tmp_23) nounwind
+
+ST_41: StgValue_351 (321)  [1/1] 0.00ns  loc: minver.c:93
+._crit_edge:1  br label %.preheader10
+
+
+ <State 42>: 3.76ns
+ST_42: a_0_load_8 (265)  [1/2] 2.39ns  loc: minver.c:96
+_ifconv3:15  %a_0_load_8 = load float* %a_0_addr_8, align 4
+
+ST_42: a_1_load_8 (266)  [1/2] 2.39ns  loc: minver.c:96
+_ifconv3:16  %a_1_load_8 = load float* %a_1_addr_8, align 4
+
+ST_42: w_1 (267)  [1/1] 1.37ns  loc: minver.c:96
+_ifconv3:17  %w_1 = select i1 %tmp_54, float %a_1_load_8, float %a_0_load_8
+
+
+ <State 43>: 7.74ns
+ST_43: w_1_to_int (268)  [1/1] 0.00ns  loc: minver.c:96
+_ifconv3:18  %w_1_to_int = bitcast float %w_1 to i32
+
+ST_43: tmp_48 (269)  [1/1] 0.00ns  loc: minver.c:96
+_ifconv3:19  %tmp_48 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %w_1_to_int, i32 23, i32 30)
+
+ST_43: tmp_98 (270)  [1/1] 0.00ns  loc: minver.c:96
+_ifconv3:20  %tmp_98 = trunc i32 %w_1_to_int to i23
+
+ST_43: notlhs5 (271)  [1/1] 2.47ns  loc: minver.c:96
+_ifconv3:21  %notlhs5 = icmp ne i8 %tmp_48, -1
+
+ST_43: notrhs5 (272)  [1/1] 2.84ns  loc: minver.c:96
+_ifconv3:22  %notrhs5 = icmp eq i23 %tmp_98, 0
+
+ST_43: tmp_50 (273)  [1/1] 0.00ns  loc: minver.c:96 (grouped into LUT with out node tmp_52)
+_ifconv3:23  %tmp_50 = or i1 %notrhs5, %notlhs5
+
+ST_43: tmp_51 (274)  [1/1] 6.37ns  loc: minver.c:97
+_ifconv3:24  %tmp_51 = fcmp oeq float %w_1, 0.000000e+00
+
+ST_43: tmp_52 (275)  [1/1] 1.37ns  loc: minver.c:97 (out node of the LUT)
+_ifconv3:25  %tmp_52 = and i1 %tmp_50, %tmp_51
+
+ST_43: StgValue_363 (276)  [1/1] 0.00ns  loc: minver.c:97
+_ifconv3:26  br i1 %tmp_52, label %._crit_edge18, label %.preheader9.0
+
+ST_43: StgValue_364 (278)  [1/1] 0.00ns  loc: minver.c:99
+.preheader9.0:0  br i1 %tmp_24, label %.preheader9.1, label %10
+
+ST_43: StgValue_365 (287)  [1/1] 0.00ns  loc: minver.c:99
+.preheader9.1:0  br i1 %tmp_20_1, label %.preheader9.2, label %11
+
+ST_43: StgValue_366 (296)  [1/1] 0.00ns  loc: minver.c:99
+.preheader9.2:0  br i1 %tmp_20_2, label %.preheader9.3, label %12
+
+ST_43: a_1_load_10 (298)  [2/2] 2.39ns  loc: minver.c:99
+:0  %a_1_load_10 = load float* %a_1_addr_9, align 4
+
+ST_43: tmp_18_neg (305)  [1/1] 1.37ns  loc: minver.c:101
+.preheader9.3:0  %tmp_18_neg = xor i32 %w_1_to_int, -2147483648
+
+ST_43: tmp_18 (306)  [1/1] 0.00ns  loc: minver.c:101
+.preheader9.3:1  %tmp_18 = bitcast i32 %tmp_18_neg to float
+
+ST_43: tmp_19 (307)  [16/16] 6.30ns  loc: minver.c:101
+.preheader9.3:2  %tmp_19 = fdiv float %tmp_18, %pivot
+
+ST_43: StgValue_371 (316)  [1/1] 0.00ns  loc: minver.c:102
+.preheader9.348:0  br label %._crit_edge18
+
+
+ <State 44>: 8.17ns
+ST_44: tmp_16 (250)  [1/1] 0.00ns  loc: minver.c:96
+_ifconv3:0  %tmp_16 = zext i2 %i_3 to i64
+
+ST_44: tmp_81 (252)  [1/1] 0.00ns  loc: minver.c:93
+_ifconv3:2  %tmp_81 = call i3 @_ssdm_op_BitConcatenate.i3.i2.i1(i2 %i_3, i1 false)
+
+ST_44: a_1_addr_10 (264)  [1/1] 0.00ns  loc: minver.c:96
+_ifconv3:14  %a_1_addr_10 = getelementptr [3 x float]* %a_1, i64 0, i64 %tmp_16
+
+ST_44: a_0_load_9 (280)  [2/2] 2.39ns  loc: minver.c:99
+:0  %a_0_load_9 = load float* %a_0_addr_9, align 4
+
+ST_44: a_1_load_10 (298)  [1/2] 2.39ns  loc: minver.c:99
+:0  %a_1_load_10 = load float* %a_1_addr_9, align 4
+
+ST_44: tmp_22_2 (299)  [4/4] 5.78ns  loc: minver.c:99
+:1  %tmp_22_2 = fmul float %w_1, %a_1_load_10
+
+ST_44: a_1_load_11 (300)  [2/2] 2.39ns  loc: minver.c:99
+:2  %a_1_load_11 = load float* %a_1_addr_10, align 4
+
+ST_44: tmp_19 (307)  [15/16] 6.30ns  loc: minver.c:101
+.preheader9.3:2  %tmp_19 = fdiv float %tmp_18, %pivot
+
+
+ <State 45>: 8.17ns
+ST_45: a_0_load_9 (280)  [1/2] 2.39ns  loc: minver.c:99
+:0  %a_0_load_9 = load float* %a_0_addr_9, align 4
+
+ST_45: tmp_25 (281)  [4/4] 5.78ns  loc: minver.c:99
+:1  %tmp_25 = fmul float %w_1, %a_0_load_9
+
+ST_45: a_0_load_11 (289)  [2/2] 2.39ns  loc: minver.c:99
+:0  %a_0_load_11 = load float* %a_0_addr_11, align 4
+
+ST_45: tmp_22_2 (299)  [3/4] 5.78ns  loc: minver.c:99
+:1  %tmp_22_2 = fmul float %w_1, %a_1_load_10
+
+ST_45: a_1_load_11 (300)  [1/2] 2.39ns  loc: minver.c:99
+:2  %a_1_load_11 = load float* %a_1_addr_10, align 4
+
+ST_45: tmp_19 (307)  [14/16] 6.30ns  loc: minver.c:101
+.preheader9.3:2  %tmp_19 = fdiv float %tmp_18, %pivot
+
+
+ <State 46>: 8.17ns
+ST_46: tmp_82 (253)  [1/1] 0.00ns  loc: minver.c:96
+_ifconv3:3  %tmp_82 = zext i3 %tmp_81 to i64
+
+ST_46: a_0_addr_10 (257)  [1/1] 0.00ns  loc: minver.c:96
+_ifconv3:7  %a_0_addr_10 = getelementptr [6 x float]* %a_0, i64 0, i64 %tmp_82
+
+ST_46: tmp_85 (258)  [1/1] 0.00ns  loc: minver.c:93
+_ifconv3:8  %tmp_85 = or i3 %tmp_81, 1
+
+ST_46: tmp_86 (259)  [1/1] 0.00ns  loc: minver.c:93
+_ifconv3:9  %tmp_86 = call i64 @_ssdm_op_BitConcatenate.i64.i61.i3(i61 0, i3 %tmp_85)
+
+ST_46: a_0_addr_12 (260)  [1/1] 0.00ns  loc: minver.c:93
+_ifconv3:10  %a_0_addr_12 = getelementptr [6 x float]* %a_0, i64 0, i64 %tmp_86
+
+ST_46: tmp_25 (281)  [3/4] 5.78ns  loc: minver.c:99
+:1  %tmp_25 = fmul float %w_1, %a_0_load_9
+
+ST_46: a_0_load_10 (282)  [2/2] 2.39ns  loc: minver.c:99
+:2  %a_0_load_10 = load float* %a_0_addr_10, align 4
+
+ST_46: a_0_load_11 (289)  [1/2] 2.39ns  loc: minver.c:99
+:0  %a_0_load_11 = load float* %a_0_addr_11, align 4
+
+ST_46: tmp_22_1 (290)  [4/4] 5.78ns  loc: minver.c:99
+:1  %tmp_22_1 = fmul float %w_1, %a_0_load_11
+
+ST_46: tmp_22_2 (299)  [2/4] 5.78ns  loc: minver.c:99
+:1  %tmp_22_2 = fmul float %w_1, %a_1_load_10
+
+ST_46: tmp_19 (307)  [13/16] 6.30ns  loc: minver.c:101
+.preheader9.3:2  %tmp_19 = fdiv float %tmp_18, %pivot
+
+
+ <State 47>: 6.30ns
+ST_47: tmp_25 (281)  [2/4] 5.78ns  loc: minver.c:99
+:1  %tmp_25 = fmul float %w_1, %a_0_load_9
+
+ST_47: a_0_load_10 (282)  [1/2] 2.39ns  loc: minver.c:99
+:2  %a_0_load_10 = load float* %a_0_addr_10, align 4
+
+ST_47: tmp_22_1 (290)  [3/4] 5.78ns  loc: minver.c:99
+:1  %tmp_22_1 = fmul float %w_1, %a_0_load_11
+
+ST_47: a_0_load_12 (291)  [2/2] 2.39ns  loc: minver.c:99
+:2  %a_0_load_12 = load float* %a_0_addr_12, align 4
+
+ST_47: tmp_22_2 (299)  [1/4] 5.78ns  loc: minver.c:99
+:1  %tmp_22_2 = fmul float %w_1, %a_1_load_10
+
+ST_47: tmp_19 (307)  [12/16] 6.30ns  loc: minver.c:101
+.preheader9.3:2  %tmp_19 = fdiv float %tmp_18, %pivot
+
+
+ <State 48>: 8.26ns
+ST_48: tmp_25 (281)  [1/4] 5.78ns  loc: minver.c:99
+:1  %tmp_25 = fmul float %w_1, %a_0_load_9
+
+ST_48: tmp_22_1 (290)  [2/4] 5.78ns  loc: minver.c:99
+:1  %tmp_22_1 = fmul float %w_1, %a_0_load_11
+
+ST_48: a_0_load_12 (291)  [1/2] 2.39ns  loc: minver.c:99
+:2  %a_0_load_12 = load float* %a_0_addr_12, align 4
+
+ST_48: tmp_23_2 (301)  [5/5] 8.26ns  loc: minver.c:99
+:3  %tmp_23_2 = fsub float %a_1_load_11, %tmp_22_2
+
+ST_48: tmp_19 (307)  [11/16] 6.30ns  loc: minver.c:101
+.preheader9.3:2  %tmp_19 = fdiv float %tmp_18, %pivot
+
+
+ <State 49>: 8.26ns
+ST_49: tmp_26 (283)  [5/5] 8.26ns  loc: minver.c:99
+:3  %tmp_26 = fsub float %a_0_load_10, %tmp_25
+
+ST_49: tmp_22_1 (290)  [1/4] 5.78ns  loc: minver.c:99
+:1  %tmp_22_1 = fmul float %w_1, %a_0_load_11
+
+ST_49: tmp_23_2 (301)  [4/5] 8.26ns  loc: minver.c:99
+:3  %tmp_23_2 = fsub float %a_1_load_11, %tmp_22_2
+
+ST_49: tmp_19 (307)  [10/16] 6.30ns  loc: minver.c:101
+.preheader9.3:2  %tmp_19 = fdiv float %tmp_18, %pivot
+
+
+ <State 50>: 8.26ns
+ST_50: tmp_26 (283)  [4/5] 8.26ns  loc: minver.c:99
+:3  %tmp_26 = fsub float %a_0_load_10, %tmp_25
+
+ST_50: tmp_23_1 (292)  [5/5] 8.26ns  loc: minver.c:99
+:3  %tmp_23_1 = fsub float %a_0_load_12, %tmp_22_1
+
+ST_50: tmp_23_2 (301)  [3/5] 8.26ns  loc: minver.c:99
+:3  %tmp_23_2 = fsub float %a_1_load_11, %tmp_22_2
+
+ST_50: tmp_19 (307)  [9/16] 6.30ns  loc: minver.c:101
+.preheader9.3:2  %tmp_19 = fdiv float %tmp_18, %pivot
+
+
+ <State 51>: 8.26ns
+ST_51: tmp_26 (283)  [3/5] 8.26ns  loc: minver.c:99
+:3  %tmp_26 = fsub float %a_0_load_10, %tmp_25
+
+ST_51: tmp_23_1 (292)  [4/5] 8.26ns  loc: minver.c:99
+:3  %tmp_23_1 = fsub float %a_0_load_12, %tmp_22_1
+
+ST_51: tmp_23_2 (301)  [2/5] 8.26ns  loc: minver.c:99
+:3  %tmp_23_2 = fsub float %a_1_load_11, %tmp_22_2
+
+ST_51: tmp_19 (307)  [8/16] 6.30ns  loc: minver.c:101
+.preheader9.3:2  %tmp_19 = fdiv float %tmp_18, %pivot
+
+
+ <State 52>: 8.26ns
+ST_52: tmp_26 (283)  [2/5] 8.26ns  loc: minver.c:99
+:3  %tmp_26 = fsub float %a_0_load_10, %tmp_25
+
+ST_52: tmp_23_1 (292)  [3/5] 8.26ns  loc: minver.c:99
+:3  %tmp_23_1 = fsub float %a_0_load_12, %tmp_22_1
+
+ST_52: tmp_23_2 (301)  [1/5] 8.26ns  loc: minver.c:99
+:3  %tmp_23_2 = fsub float %a_1_load_11, %tmp_22_2
+
+ST_52: tmp_19 (307)  [7/16] 6.30ns  loc: minver.c:101
+.preheader9.3:2  %tmp_19 = fdiv float %tmp_18, %pivot
+
+
+ <State 53>: 8.26ns
+ST_53: tmp_26 (283)  [1/5] 8.26ns  loc: minver.c:99
+:3  %tmp_26 = fsub float %a_0_load_10, %tmp_25
+
+ST_53: tmp_23_1 (292)  [2/5] 8.26ns  loc: minver.c:99
+:3  %tmp_23_1 = fsub float %a_0_load_12, %tmp_22_1
+
+ST_53: tmp_19 (307)  [6/16] 6.30ns  loc: minver.c:101
+.preheader9.3:2  %tmp_19 = fdiv float %tmp_18, %pivot
+
+
+ <State 54>: 8.26ns
+ST_54: StgValue_427 (284)  [1/1] 2.39ns  loc: minver.c:99
+:4  store float %tmp_26, float* %a_0_addr_10, align 4
+
+ST_54: StgValue_428 (285)  [1/1] 0.00ns  loc: minver.c:99
+:5  br label %.preheader9.1
+
+ST_54: tmp_23_1 (292)  [1/5] 8.26ns  loc: minver.c:99
+:3  %tmp_23_1 = fsub float %a_0_load_12, %tmp_22_1
+
+ST_54: StgValue_430 (302)  [1/1] 2.39ns  loc: minver.c:99
+:4  store float %tmp_23_2, float* %a_1_addr_10, align 4
+
+ST_54: StgValue_431 (303)  [1/1] 0.00ns  loc: minver.c:99
+:5  br label %.preheader9.3
+
+ST_54: tmp_19 (307)  [5/16] 6.30ns  loc: minver.c:101
+.preheader9.3:2  %tmp_19 = fdiv float %tmp_18, %pivot
+
+
+ <State 55>: 6.30ns
+ST_55: StgValue_433 (293)  [1/1] 2.39ns  loc: minver.c:99
+:4  store float %tmp_23_1, float* %a_0_addr_12, align 4
+
+ST_55: StgValue_434 (294)  [1/1] 0.00ns  loc: minver.c:99
+:5  br label %.preheader9.2
+
+ST_55: tmp_19 (307)  [4/16] 6.30ns  loc: minver.c:101
+.preheader9.3:2  %tmp_19 = fdiv float %tmp_18, %pivot
+
+
+ <State 56>: 6.30ns
+ST_56: tmp_19 (307)  [3/16] 6.30ns  loc: minver.c:101
+.preheader9.3:2  %tmp_19 = fdiv float %tmp_18, %pivot
+
+
+ <State 57>: 6.30ns
+ST_57: tmp_19 (307)  [2/16] 6.30ns  loc: minver.c:101
+.preheader9.3:2  %tmp_19 = fdiv float %tmp_18, %pivot
+
+ST_57: StgValue_438 (308)  [1/1] 0.00ns  loc: minver.c:101
+.preheader9.3:3  br i1 %tmp_54, label %branch25, label %branch24
+
+
+ <State 58>: 8.69ns
+ST_58: tmp_19 (307)  [1/16] 6.30ns  loc: minver.c:101
+.preheader9.3:2  %tmp_19 = fdiv float %tmp_18, %pivot
+
+ST_58: StgValue_440 (313)  [1/1] 2.39ns  loc: minver.c:101
+branch25:0  store float %tmp_19, float* %a_1_addr_8, align 4
+
+ST_58: StgValue_441 (314)  [1/1] 0.00ns  loc: minver.c:101
+branch25:1  br label %.preheader9.348
+
+
+ <State 59>: 2.39ns
+ST_59: StgValue_442 (310)  [1/1] 2.39ns  loc: minver.c:101
+branch24:0  store float %tmp_19, float* %a_0_addr_8, align 4
+
+ST_59: StgValue_443 (311)  [1/1] 0.00ns  loc: minver.c:101
+branch24:1  br label %.preheader9.348
+
+
+ <State 60>: 6.30ns
+ST_60: tmp_14 (323)  [16/16] 6.30ns  loc: minver.c:105
+:0  %tmp_14 = fdiv float 1.000000e+00, %pivot
+
+
+ <State 61>: 6.30ns
+ST_61: tmp_14 (323)  [15/16] 6.30ns  loc: minver.c:105
+:0  %tmp_14 = fdiv float 1.000000e+00, %pivot
+
+
+ <State 62>: 6.30ns
+ST_62: tmp_14 (323)  [14/16] 6.30ns  loc: minver.c:105
+:0  %tmp_14 = fdiv float 1.000000e+00, %pivot
+
+
+ <State 63>: 6.30ns
+ST_63: tmp_14 (323)  [13/16] 6.30ns  loc: minver.c:105
+:0  %tmp_14 = fdiv float 1.000000e+00, %pivot
+
+
+ <State 64>: 6.30ns
+ST_64: tmp_14 (323)  [12/16] 6.30ns  loc: minver.c:105
+:0  %tmp_14 = fdiv float 1.000000e+00, %pivot
+
+
+ <State 65>: 6.30ns
+ST_65: tmp_14 (323)  [11/16] 6.30ns  loc: minver.c:105
+:0  %tmp_14 = fdiv float 1.000000e+00, %pivot
+
+
+ <State 66>: 6.30ns
+ST_66: tmp_14 (323)  [10/16] 6.30ns  loc: minver.c:105
+:0  %tmp_14 = fdiv float 1.000000e+00, %pivot
+
+
+ <State 67>: 6.30ns
+ST_67: tmp_14 (323)  [9/16] 6.30ns  loc: minver.c:105
+:0  %tmp_14 = fdiv float 1.000000e+00, %pivot
+
+
+ <State 68>: 6.30ns
+ST_68: tmp_14 (323)  [8/16] 6.30ns  loc: minver.c:105
+:0  %tmp_14 = fdiv float 1.000000e+00, %pivot
+
+
+ <State 69>: 6.30ns
+ST_69: tmp_14 (323)  [7/16] 6.30ns  loc: minver.c:105
+:0  %tmp_14 = fdiv float 1.000000e+00, %pivot
+
+
+ <State 70>: 6.30ns
+ST_70: tmp_14 (323)  [6/16] 6.30ns  loc: minver.c:105
+:0  %tmp_14 = fdiv float 1.000000e+00, %pivot
+
+
+ <State 71>: 6.30ns
+ST_71: tmp_14 (323)  [5/16] 6.30ns  loc: minver.c:105
+:0  %tmp_14 = fdiv float 1.000000e+00, %pivot
+
+
+ <State 72>: 6.30ns
+ST_72: tmp_14 (323)  [4/16] 6.30ns  loc: minver.c:105
+:0  %tmp_14 = fdiv float 1.000000e+00, %pivot
+
+
+ <State 73>: 6.30ns
+ST_73: tmp_14 (323)  [3/16] 6.30ns  loc: minver.c:105
+:0  %tmp_14 = fdiv float 1.000000e+00, %pivot
+
+
+ <State 74>: 6.30ns
+ST_74: tmp_14 (323)  [2/16] 6.30ns  loc: minver.c:105
+:0  %tmp_14 = fdiv float 1.000000e+00, %pivot
+
+
+ <State 75>: 8.69ns
+ST_75: tmp_14 (323)  [1/16] 6.30ns  loc: minver.c:105
+:0  %tmp_14 = fdiv float 1.000000e+00, %pivot
+
+ST_75: StgValue_460 (324)  [1/1] 0.00ns  loc: minver.c:105
+:1  br i1 %tmp_54, label %branch21, label %branch20
+
+ST_75: StgValue_461 (326)  [1/1] 2.39ns  loc: minver.c:105
+branch20:0  store float %tmp_14, float* %a_0_addr_7, align 4
+
+ST_75: StgValue_462 (327)  [1/1] 0.00ns  loc: minver.c:105
+branch20:1  br label %14
+
+ST_75: StgValue_463 (329)  [1/1] 2.39ns  loc: minver.c:105
+branch21:0  store float %tmp_14, float* %a_1_addr_7, align 4
+
+ST_75: StgValue_464 (330)  [1/1] 0.00ns  loc: minver.c:105
+branch21:1  br label %14
+
+ST_75: StgValue_465 (332)  [1/1] 0.00ns  loc: minver.c:56
+:0  br label %.preheader13
+
+
+ <State 76>: 1.54ns
+ST_76: i_4 (338)  [1/1] 0.00ns
+.preheader8:0  %i_4 = phi i2 [ %i_7, %.preheader8.loopexit ], [ 0, %.preheader8.preheader ]
+
+ST_76: exitcond1 (339)  [1/1] 1.54ns  loc: minver.c:109
+.preheader8:1  %exitcond1 = icmp eq i2 %i_4, -1
+
+ST_76: i_7 (340)  [1/1] 0.75ns  loc: minver.c:129
+.preheader8:2  %i_7 = add i2 %i_4, 1
+
+ST_76: StgValue_469 (341)  [1/1] 0.00ns  loc: minver.c:109
+.preheader8:3  br i1 %exitcond1, label %.loopexit.loopexit, label %.preheader.preheader
+
+ST_76: empty_17 (343)  [1/1] 0.00ns
+.preheader.preheader:0  %empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3) nounwind
+
+ST_76: tmp_s (344)  [1/1] 0.00ns  loc: minver.c:114
+.preheader.preheader:1  %tmp_s = zext i2 %i_4 to i64
+
+ST_76: work_addr_1 (345)  [1/1] 0.00ns  loc: minver.c:114
+.preheader.preheader:2  %work_addr_1 = getelementptr [500 x i2]* %work, i64 0, i64 %tmp_s
+
+ST_76: tmp_55 (346)  [1/1] 0.00ns  loc: minver.c:129
+.preheader.preheader:3  %tmp_55 = trunc i2 %i_4 to i1
+
+ST_76: newIndex6_cast (347)  [1/1] 0.00ns  loc: minver.c:123
+.preheader.preheader:4  %newIndex6_cast = zext i1 %tmp_55 to i3
+
+ST_76: tmp_56 (348)  [1/1] 0.00ns  loc: minver.c:123
+.preheader.preheader:5  %tmp_56 = call i1 @_ssdm_op_BitSelect.i1.i2.i32(i2 %i_4, i32 1)
+
+ST_76: StgValue_476 (349)  [1/1] 0.00ns  loc: minver.c:111
+.preheader.preheader:6  br label %.preheader
+
+ST_76: StgValue_477 (443)  [1/1] 0.00ns
+.loopexit.loopexit:0  br label %.loopexit
+
+
+ <State 77>: 2.39ns
+ST_77: work_load (351)  [2/2] 2.39ns  loc: minver.c:114
+.preheader:0  %work_load = load i2* %work_addr_1, align 1
+
+
+ <State 78>: 5.53ns
+ST_78: work_load (351)  [1/2] 2.39ns  loc: minver.c:114
+.preheader:0  %work_load = load i2* %work_addr_1, align 1
+
+ST_78: extLd8 (352)  [1/1] 0.00ns  loc: minver.c:114
+.preheader:1  %extLd8 = zext i2 %work_load to i3
+
+ST_78: tmp_8 (353)  [1/1] 1.54ns  loc: minver.c:116
+.preheader:2  %tmp_8 = icmp eq i2 %work_load, %i_4
+
+ST_78: StgValue_482 (354)  [1/1] 0.00ns  loc: minver.c:116
+.preheader:3  br i1 %tmp_8, label %.preheader8.loopexit, label %_ifconv5
+
+ST_78: tmp_20 (356)  [1/1] 0.00ns  loc: minver.c:111
+_ifconv5:0  %tmp_20 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str10) nounwind
+
+ST_78: tmp_10 (358)  [1/1] 0.00ns  loc: minver.c:118
+_ifconv5:2  %tmp_10 = zext i2 %work_load to i64
+
+ST_78: tmp_90 (359)  [1/1] 0.00ns  loc: minver.c:114
+_ifconv5:3  %tmp_90 = call i3 @_ssdm_op_BitConcatenate.i3.i2.i1(i2 %work_load, i1 %tmp_55)
+
+ST_78: tmp_67 (360)  [1/1] 0.00ns  loc: minver.c:123
+_ifconv5:4  %tmp_67 = zext i3 %tmp_90 to i64
+
+ST_78: a_0_addr_2 (361)  [1/1] 0.00ns  loc: minver.c:123
+_ifconv5:5  %a_0_addr_2 = getelementptr [6 x float]* %a_0, i64 0, i64 %tmp_67
+
+ST_78: tmp_68 (362)  [1/1] 0.75ns  loc: minver.c:123
+_ifconv5:6  %tmp_68 = add i3 %extLd8, %newIndex6_cast
+
+ST_78: tmp_68_cast (363)  [1/1] 0.00ns  loc: minver.c:123
+_ifconv5:7  %tmp_68_cast = sext i3 %tmp_68 to i64
+
+ST_78: a_1_addr_2 (364)  [1/1] 0.00ns  loc: minver.c:123
+_ifconv5:8  %a_1_addr_2 = getelementptr [3 x float]* %a_1, i64 0, i64 %tmp_68_cast
+
+ST_78: work_addr_2 (365)  [1/1] 0.00ns  loc: minver.c:118
+_ifconv5:9  %work_addr_2 = getelementptr [500 x i2]* %work, i64 0, i64 %tmp_10
+
+ST_78: work_load_1 (366)  [2/2] 2.39ns  loc: minver.c:118
+_ifconv5:10  %work_load_1 = load i2* %work_addr_2, align 1
+
+ST_78: a_0_load_2 (377)  [2/2] 2.39ns  loc: minver.c:123
+_ifconv5:21  %a_0_load_2 = load float* %a_0_addr_2, align 4
+
+ST_78: a_1_load_2 (378)  [2/2] 2.39ns  loc: minver.c:123
+_ifconv5:22  %a_1_load_2 = load float* %a_1_addr_2, align 4
+
+ST_78: empty_18 (438)  [1/1] 0.00ns  loc: minver.c:127
+:0  %empty_18 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str10, i32 %tmp_20) nounwind
+
+ST_78: StgValue_496 (439)  [1/1] 0.00ns  loc: minver.c:127
+:1  br label %.preheader
+
+
+ <State 79>: 3.76ns
+ST_79: work_load_1 (366)  [1/2] 2.39ns  loc: minver.c:118
+_ifconv5:10  %work_load_1 = load i2* %work_addr_2, align 1
+
+ST_79: StgValue_498 (367)  [1/1] 2.39ns  loc: minver.c:119
+_ifconv5:11  store i2 %work_load, i2* %work_addr_2, align 1
+
+ST_79: tmp_91 (369)  [1/1] 0.00ns  loc: minver.c:114
+_ifconv5:13  %tmp_91 = trunc i2 %work_load to i1
+
+ST_79: newIndex7_cast (370)  [1/1] 0.00ns  loc: minver.c:114
+_ifconv5:14  %newIndex7_cast = zext i1 %tmp_91 to i3
+
+ST_79: tmp_92 (371)  [1/1] 0.00ns  loc: minver.c:114
+_ifconv5:15  %tmp_92 = call i3 @_ssdm_op_BitConcatenate.i3.i2.i1(i2 %work_load, i1 %tmp_91)
+
+ST_79: tmp_70 (372)  [1/1] 0.00ns  loc: minver.c:124
+_ifconv5:16  %tmp_70 = zext i3 %tmp_92 to i64
+
+ST_79: a_0_addr_3 (373)  [1/1] 0.00ns  loc: minver.c:124
+_ifconv5:17  %a_0_addr_3 = getelementptr [6 x float]* %a_0, i64 0, i64 %tmp_70
+
+ST_79: tmp_71 (374)  [1/1] 0.75ns  loc: minver.c:124
+_ifconv5:18  %tmp_71 = add i3 %extLd8, %newIndex7_cast
+
+ST_79: tmp_71_cast (375)  [1/1] 0.00ns  loc: minver.c:124
+_ifconv5:19  %tmp_71_cast = sext i3 %tmp_71 to i64
+
+ST_79: a_1_addr_3 (376)  [1/1] 0.00ns  loc: minver.c:124
+_ifconv5:20  %a_1_addr_3 = getelementptr [3 x float]* %a_1, i64 0, i64 %tmp_71_cast
+
+ST_79: a_0_load_2 (377)  [1/2] 2.39ns  loc: minver.c:123
+_ifconv5:21  %a_0_load_2 = load float* %a_0_addr_2, align 4
+
+ST_79: a_1_load_2 (378)  [1/2] 2.39ns  loc: minver.c:123
+_ifconv5:22  %a_1_load_2 = load float* %a_1_addr_2, align 4
+
+ST_79: w_4_0_phi (379)  [1/1] 1.37ns  loc: minver.c:123
+_ifconv5:23  %w_4_0_phi = select i1 %tmp_56, float %a_1_load_2, float %a_0_load_2
+
+ST_79: a_0_load_3 (381)  [2/2] 2.39ns  loc: minver.c:124
+_ifconv5:25  %a_0_load_3 = load float* %a_0_addr_3, align 4
+
+ST_79: a_1_load_3 (382)  [2/2] 2.39ns  loc: minver.c:124
+_ifconv5:26  %a_1_load_3 = load float* %a_1_addr_3, align 4
+
+
+ <State 80>: 6.15ns
+ST_80: StgValue_512 (357)  [1/1] 0.00ns  loc: minver.c:112
+_ifconv5:1  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_80: StgValue_513 (368)  [1/1] 2.39ns  loc: minver.c:120
+_ifconv5:12  store i2 %work_load_1, i2* %work_addr_1, align 1
+
+ST_80: tmp_93 (380)  [1/1] 0.00ns  loc: minver.c:124
+_ifconv5:24  %tmp_93 = call i1 @_ssdm_op_BitSelect.i1.i2.i32(i2 %work_load, i32 1)
+
+ST_80: a_0_load_3 (381)  [1/2] 2.39ns  loc: minver.c:124
+_ifconv5:25  %a_0_load_3 = load float* %a_0_addr_3, align 4
+
+ST_80: a_1_load_3 (382)  [1/2] 2.39ns  loc: minver.c:124
+_ifconv5:26  %a_1_load_3 = load float* %a_1_addr_3, align 4
+
+ST_80: a_load_4_0_phi (383)  [1/1] 1.37ns  loc: minver.c:124
+_ifconv5:27  %a_load_4_0_phi = select i1 %tmp_93, float %a_1_load_3, float %a_0_load_3
+
+ST_80: StgValue_518 (384)  [1/1] 0.00ns  loc: minver.c:124
+_ifconv5:28  br i1 %tmp_56, label %branch17, label %branch16
+
+ST_80: StgValue_519 (386)  [1/1] 2.39ns  loc: minver.c:124
+branch16:0  store float %a_load_4_0_phi, float* %a_0_addr_2, align 4
+
+ST_80: StgValue_520 (387)  [1/1] 0.00ns  loc: minver.c:124
+branch16:1  br label %15
+
+ST_80: StgValue_521 (389)  [1/1] 2.39ns  loc: minver.c:124
+branch17:0  store float %a_load_4_0_phi, float* %a_1_addr_2, align 4
+
+ST_80: StgValue_522 (390)  [1/1] 0.00ns  loc: minver.c:124
+branch17:1  br label %15
+
+ST_80: StgValue_523 (392)  [1/1] 0.00ns  loc: minver.c:125
+:0  br i1 %tmp_93, label %branch5, label %branch4
+
+ST_80: StgValue_524 (411)  [1/1] 0.00ns  loc: minver.c:125
+:0  br i1 %tmp_93, label %branch3, label %branch2
+
+ST_80: StgValue_525 (430)  [1/1] 0.00ns  loc: minver.c:125
+:0  br i1 %tmp_93, label %branch1, label %branch0
+
+
+ <State 81>: 2.39ns
+ST_81: StgValue_526 (394)  [1/1] 2.39ns  loc: minver.c:125
+branch4:0  store float %w_4_0_phi, float* %a_0_addr_3, align 4
+
+ST_81: StgValue_527 (395)  [1/1] 0.00ns  loc: minver.c:125
+branch4:1  br label %_ifconv6
+
+ST_81: StgValue_528 (397)  [1/1] 2.39ns  loc: minver.c:125
+branch5:0  store float %w_4_0_phi, float* %a_1_addr_3, align 4
+
+ST_81: StgValue_529 (398)  [1/1] 0.00ns  loc: minver.c:125
+branch5:1  br label %_ifconv6
+
+
+ <State 82>: 2.39ns
+ST_82: a_0_load_7 (400)  [2/2] 2.39ns  loc: minver.c:123
+_ifconv6:0  %a_0_load_7 = load float* %a_0_addr_2, align 4
+
+ST_82: a_1_load_7 (401)  [2/2] 2.39ns  loc: minver.c:123
+_ifconv6:1  %a_1_load_7 = load float* %a_1_addr_2, align 4
+
+
+ <State 83>: 3.76ns
+ST_83: a_0_load_7 (400)  [1/2] 2.39ns  loc: minver.c:123
+_ifconv6:0  %a_0_load_7 = load float* %a_0_addr_2, align 4
+
+ST_83: a_1_load_7 (401)  [1/2] 2.39ns  loc: minver.c:123
+_ifconv6:1  %a_1_load_7 = load float* %a_1_addr_2, align 4
+
+ST_83: w_4_1_phi (402)  [1/1] 1.37ns  loc: minver.c:123
+_ifconv6:2  %w_4_1_phi = select i1 %tmp_56, float %a_1_load_7, float %a_0_load_7
+
+ST_83: StgValue_535 (403)  [1/1] 0.00ns  loc: minver.c:124
+_ifconv6:3  br i1 %tmp_56, label %branch13, label %branch12
+
+ST_83: StgValue_536 (405)  [1/1] 2.39ns  loc: minver.c:124
+branch12:0  store float %w_4_0_phi, float* %a_0_addr_2, align 4
+
+ST_83: StgValue_537 (406)  [1/1] 0.00ns  loc: minver.c:124
+branch12:1  br label %16
+
+ST_83: StgValue_538 (408)  [1/1] 2.39ns  loc: minver.c:124
+branch13:0  store float %w_4_0_phi, float* %a_1_addr_2, align 4
+
+ST_83: StgValue_539 (409)  [1/1] 0.00ns  loc: minver.c:124
+branch13:1  br label %16
+
+
+ <State 84>: 2.39ns
+ST_84: StgValue_540 (413)  [1/1] 2.39ns  loc: minver.c:125
+branch2:0  store float %w_4_1_phi, float* %a_0_addr_3, align 4
+
+ST_84: StgValue_541 (414)  [1/1] 0.00ns  loc: minver.c:125
+branch2:1  br label %_ifconv7
+
+ST_84: StgValue_542 (416)  [1/1] 2.39ns  loc: minver.c:125
+branch3:0  store float %w_4_1_phi, float* %a_1_addr_3, align 4
+
+ST_84: StgValue_543 (417)  [1/1] 0.00ns  loc: minver.c:125
+branch3:1  br label %_ifconv7
+
+
+ <State 85>: 2.39ns
+ST_85: a_0_load_13 (419)  [2/2] 2.39ns  loc: minver.c:123
+_ifconv7:0  %a_0_load_13 = load float* %a_0_addr_2, align 4
+
+ST_85: a_1_load_9 (420)  [2/2] 2.39ns  loc: minver.c:123
+_ifconv7:1  %a_1_load_9 = load float* %a_1_addr_2, align 4
+
+
+ <State 86>: 3.76ns
+ST_86: a_0_load_13 (419)  [1/2] 2.39ns  loc: minver.c:123
+_ifconv7:0  %a_0_load_13 = load float* %a_0_addr_2, align 4
+
+ST_86: a_1_load_9 (420)  [1/2] 2.39ns  loc: minver.c:123
+_ifconv7:1  %a_1_load_9 = load float* %a_1_addr_2, align 4
+
+ST_86: w_4_2_phi (421)  [1/1] 1.37ns  loc: minver.c:123
+_ifconv7:2  %w_4_2_phi = select i1 %tmp_56, float %a_1_load_9, float %a_0_load_13
+
+ST_86: StgValue_549 (422)  [1/1] 0.00ns  loc: minver.c:124
+_ifconv7:3  br i1 %tmp_56, label %branch9, label %branch8
+
+ST_86: StgValue_550 (424)  [1/1] 2.39ns  loc: minver.c:124
+branch8:0  store float %w_4_1_phi, float* %a_0_addr_2, align 4
+
+ST_86: StgValue_551 (425)  [1/1] 0.00ns  loc: minver.c:124
+branch8:1  br label %17
+
+ST_86: StgValue_552 (427)  [1/1] 2.39ns  loc: minver.c:124
+branch9:0  store float %w_4_1_phi, float* %a_1_addr_2, align 4
+
+ST_86: StgValue_553 (428)  [1/1] 0.00ns  loc: minver.c:124
+branch9:1  br label %17
+
+
+ <State 87>: 2.39ns
+ST_87: StgValue_554 (432)  [1/1] 2.39ns  loc: minver.c:125
+branch0:0  store float %w_4_2_phi, float* %a_0_addr_3, align 4
+
+ST_87: StgValue_555 (433)  [1/1] 0.00ns  loc: minver.c:125
+branch0:1  br label %18
+
+ST_87: StgValue_556 (435)  [1/1] 2.39ns  loc: minver.c:125
+branch1:0  store float %w_4_2_phi, float* %a_1_addr_3, align 4
+
+ST_87: StgValue_557 (436)  [1/1] 0.00ns  loc: minver.c:125
+branch1:1  br label %18
+
+
+ <State 88>: 0.00ns
+ST_88: StgValue_558 (441)  [1/1] 0.00ns
+.preheader8.loopexit:0  br label %.preheader8
+
+
+ <State 89>: 0.00ns
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.57ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', minver.c:50) [13]  (1.57 ns)
+
+ <State 2>: 2.39ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', minver.c:50) [13]  (0 ns)
+	'store' operation (minver.c:52) of variable 'i' on array 'work', minver.c:41 [23]  (2.39 ns)
+
+ <State 3>: 1.57ns
+The critical path consists of the following:
+	'alloca' operation ('r') [27]  (0 ns)
+	'store' operation of constant 0 on local variable 'r' [28]  (1.57 ns)
+
+ <State 4>: 1.57ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', minver.c:56) [31]  (0 ns)
+	multiplexor before 'phi' operation ('wmax') with incoming values : ('wmax', minver.c:62) [58]  (1.57 ns)
+
+ <State 5>: 3.14ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i_5_cast', minver.c:59) ('i', minver.c:59) [59]  (0 ns)
+	'add' operation ('tmp_65', minver.c:61) [71]  (0.75 ns)
+	'getelementptr' operation ('a_1_addr_1', minver.c:61) [73]  (0 ns)
+	'load' operation ('a_1_load_1', minver.c:61) on array 'a_1' [75]  (2.39 ns)
+
+ <State 6>: 3.76ns
+The critical path consists of the following:
+	'load' operation ('a_0_load_1', minver.c:61) on array 'a_0' [74]  (2.39 ns)
+	'select' operation ('n', minver.c:61) [76]  (1.37 ns)
+
+ <State 7>: 7.74ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_37', minver_lib.c:11->minver.c:61) [83]  (6.37 ns)
+	'and' operation ('tmp_38', minver_lib.c:11->minver.c:61) [84]  (0 ns)
+	'select' operation ('w', minver.c:63) [87]  (1.37 ns)
+
+ <State 8>: 7.74ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_46', minver.c:62) [101]  (6.37 ns)
+	'and' operation ('tmp_47', minver.c:62) [102]  (1.37 ns)
+
+ <State 9>: 2.94ns
+The critical path consists of the following:
+	'load' operation ('r_load_1', minver.c:62) on local variable 'r' [63]  (0 ns)
+	'select' operation ('r', minver.c:62) [104]  (1.37 ns)
+	'store' operation (minver.c:62) of variable 'r', minver.c:62 on local variable 'r' [107]  (1.57 ns)
+
+ <State 10>: 3.14ns
+The critical path consists of the following:
+	'load' operation ('r_load') on local variable 'r' [110]  (0 ns)
+	'add' operation ('tmp_60', minver.c:68) [116]  (0.75 ns)
+	'getelementptr' operation ('a_1_addr', minver.c:68) [118]  (0 ns)
+	'load' operation ('a_1_load', minver.c:105) on array 'a_1' [120]  (2.39 ns)
+
+ <State 11>: 3.76ns
+The critical path consists of the following:
+	'load' operation ('a_0_load', minver.c:105) on array 'a_0' [119]  (2.39 ns)
+	'select' operation ('pivot', minver.c:105) [121]  (1.37 ns)
+
+ <State 12>: 7.74ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_27', minver_lib.c:11->minver.c:69) [128]  (6.37 ns)
+	'and' operation ('tmp_28', minver_lib.c:11->minver.c:69) [129]  (0 ns)
+	'select' operation ('api', minver.c:69) [132]  (1.37 ns)
+
+ <State 13>: 5.12ns
+The critical path consists of the following:
+	'fpext' operation ('tmp_5', minver.c:70) [133]  (5.12 ns)
+
+ <State 14>: 8.27ns
+The critical path consists of the following:
+	'dcmp' operation ('tmp_32', minver.c:70) [140]  (6.9 ns)
+	'and' operation ('tmp_33', minver.c:70) [141]  (1.37 ns)
+
+ <State 15>: 4.78ns
+The critical path consists of the following:
+	'load' operation ('work_load_3', minver.c:78) on array 'work', minver.c:41 [150]  (2.39 ns)
+	'store' operation (minver.c:78) of variable 'work_load_3', minver.c:78 on array 'work', minver.c:41 [151]  (2.39 ns)
+
+ <State 16>: 2.39ns
+The critical path consists of the following:
+	'store' operation (minver.c:79) of variable 'work_load_2', minver.c:77 on array 'work', minver.c:41 [152]  (2.39 ns)
+
+ <State 17>: 3.14ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', minver.c:80) [155]  (0 ns)
+	'add' operation ('tmp_76', minver.c:82) [172]  (0.75 ns)
+	'getelementptr' operation ('a_1_addr_4', minver.c:82) [174]  (0 ns)
+	'load' operation ('a_1_load_4', minver.c:82) on array 'a_1' [180]  (2.39 ns)
+
+ <State 18>: 2.39ns
+The critical path consists of the following:
+	'load' operation ('r_load_2') on local variable 'r' [160]  (0 ns)
+	'getelementptr' operation ('a_0_addr_6', minver.c:83) [171]  (0 ns)
+	'load' operation ('a_0_load_6', minver.c:83) on array 'a_0' [182]  (2.39 ns)
+
+ <State 19>: 6.15ns
+The critical path consists of the following:
+	'load' operation ('a_0_load_6', minver.c:83) on array 'a_0' [182]  (2.39 ns)
+	'select' operation ('a_load_2_phi', minver.c:83) [184]  (1.37 ns)
+	'store' operation (minver.c:83) of variable 'a_load_2_phi', minver.c:83 on array 'a_0' [187]  (2.39 ns)
+
+ <State 20>: 2.39ns
+The critical path consists of the following:
+	'store' operation (minver.c:84) of variable 'w', minver.c:82 on array 'a_0' [188]  (2.39 ns)
+
+ <State 21>: 1.57ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', minver.c:88) [202]  (1.57 ns)
+
+ <State 22>: 3.14ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', minver.c:88) [202]  (0 ns)
+	'add' operation ('tmp_80', minver.c:90) [215]  (0.75 ns)
+	'getelementptr' operation ('a_1_addr_5', minver.c:90) [217]  (0 ns)
+	'load' operation ('a_1_load_5', minver.c:90) on array 'a_1' [220]  (2.39 ns)
+
+ <State 23>: 3.76ns
+The critical path consists of the following:
+	'load' operation ('a_0_load_5', minver.c:90) on array 'a_0' [219]  (2.39 ns)
+	'select' operation ('a_load_5_phi', minver.c:90) [221]  (1.37 ns)
+
+ <State 24>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_13', minver.c:90) [222]  (6.3 ns)
+
+ <State 25>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_13', minver.c:90) [222]  (6.3 ns)
+
+ <State 26>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_13', minver.c:90) [222]  (6.3 ns)
+
+ <State 27>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_13', minver.c:90) [222]  (6.3 ns)
+
+ <State 28>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_13', minver.c:90) [222]  (6.3 ns)
+
+ <State 29>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_13', minver.c:90) [222]  (6.3 ns)
+
+ <State 30>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_13', minver.c:90) [222]  (6.3 ns)
+
+ <State 31>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_13', minver.c:90) [222]  (6.3 ns)
+
+ <State 32>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_13', minver.c:90) [222]  (6.3 ns)
+
+ <State 33>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_13', minver.c:90) [222]  (6.3 ns)
+
+ <State 34>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_13', minver.c:90) [222]  (6.3 ns)
+
+ <State 35>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_13', minver.c:90) [222]  (6.3 ns)
+
+ <State 36>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_13', minver.c:90) [222]  (6.3 ns)
+
+ <State 37>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_13', minver.c:90) [222]  (6.3 ns)
+
+ <State 38>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_13', minver.c:90) [222]  (6.3 ns)
+
+ <State 39>: 8.69ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_13', minver.c:90) [222]  (6.3 ns)
+	'store' operation (minver.c:90) of variable 'tmp_13', minver.c:90 on array 'a_0' [225]  (2.39 ns)
+
+ <State 40>: 1.57ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', minver.c:93) [239]  (1.57 ns)
+
+ <State 41>: 3.14ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', minver.c:93) [239]  (0 ns)
+	'add' operation ('tmp_87', minver.c:96) [261]  (0.75 ns)
+	'getelementptr' operation ('a_1_addr_8', minver.c:96) [263]  (0 ns)
+	'load' operation ('a_1_load_8', minver.c:96) on array 'a_1' [266]  (2.39 ns)
+
+ <State 42>: 3.76ns
+The critical path consists of the following:
+	'load' operation ('a_0_load_8', minver.c:96) on array 'a_0' [265]  (2.39 ns)
+	'select' operation ('w', minver.c:96) [267]  (1.37 ns)
+
+ <State 43>: 7.74ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_51', minver.c:97) [274]  (6.37 ns)
+	'and' operation ('tmp_52', minver.c:97) [275]  (1.37 ns)
+
+ <State 44>: 8.17ns
+The critical path consists of the following:
+	'load' operation ('a_1_load_10', minver.c:99) on array 'a_1' [298]  (2.39 ns)
+	'fmul' operation ('tmp_22_2', minver.c:99) [299]  (5.78 ns)
+
+ <State 45>: 8.17ns
+The critical path consists of the following:
+	'load' operation ('a_0_load_9', minver.c:99) on array 'a_0' [280]  (2.39 ns)
+	'fmul' operation ('tmp_25', minver.c:99) [281]  (5.78 ns)
+
+ <State 46>: 8.17ns
+The critical path consists of the following:
+	'load' operation ('a_0_load_11', minver.c:99) on array 'a_0' [289]  (2.39 ns)
+	'fmul' operation ('tmp_22_1', minver.c:99) [290]  (5.78 ns)
+
+ <State 47>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_19', minver.c:101) [307]  (6.3 ns)
+
+ <State 48>: 8.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_23_2', minver.c:99) [301]  (8.26 ns)
+
+ <State 49>: 8.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_26', minver.c:99) [283]  (8.26 ns)
+
+ <State 50>: 8.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_26', minver.c:99) [283]  (8.26 ns)
+
+ <State 51>: 8.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_26', minver.c:99) [283]  (8.26 ns)
+
+ <State 52>: 8.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_26', minver.c:99) [283]  (8.26 ns)
+
+ <State 53>: 8.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_26', minver.c:99) [283]  (8.26 ns)
+
+ <State 54>: 8.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_23_1', minver.c:99) [292]  (8.26 ns)
+
+ <State 55>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_19', minver.c:101) [307]  (6.3 ns)
+
+ <State 56>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_19', minver.c:101) [307]  (6.3 ns)
+
+ <State 57>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_19', minver.c:101) [307]  (6.3 ns)
+
+ <State 58>: 8.69ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_19', minver.c:101) [307]  (6.3 ns)
+	'store' operation (minver.c:101) of variable 'tmp_19', minver.c:101 on array 'a_1' [313]  (2.39 ns)
+
+ <State 59>: 2.39ns
+The critical path consists of the following:
+	'store' operation (minver.c:101) of variable 'tmp_19', minver.c:101 on array 'a_0' [310]  (2.39 ns)
+
+ <State 60>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_14', minver.c:105) [323]  (6.3 ns)
+
+ <State 61>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_14', minver.c:105) [323]  (6.3 ns)
+
+ <State 62>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_14', minver.c:105) [323]  (6.3 ns)
+
+ <State 63>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_14', minver.c:105) [323]  (6.3 ns)
+
+ <State 64>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_14', minver.c:105) [323]  (6.3 ns)
+
+ <State 65>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_14', minver.c:105) [323]  (6.3 ns)
+
+ <State 66>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_14', minver.c:105) [323]  (6.3 ns)
+
+ <State 67>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_14', minver.c:105) [323]  (6.3 ns)
+
+ <State 68>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_14', minver.c:105) [323]  (6.3 ns)
+
+ <State 69>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_14', minver.c:105) [323]  (6.3 ns)
+
+ <State 70>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_14', minver.c:105) [323]  (6.3 ns)
+
+ <State 71>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_14', minver.c:105) [323]  (6.3 ns)
+
+ <State 72>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_14', minver.c:105) [323]  (6.3 ns)
+
+ <State 73>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_14', minver.c:105) [323]  (6.3 ns)
+
+ <State 74>: 6.3ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_14', minver.c:105) [323]  (6.3 ns)
+
+ <State 75>: 8.69ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_14', minver.c:105) [323]  (6.3 ns)
+	'store' operation (minver.c:105) of variable 'tmp_14', minver.c:105 on array 'a_0' [326]  (2.39 ns)
+
+ <State 76>: 1.54ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', minver.c:129) [338]  (0 ns)
+	'icmp' operation ('exitcond1', minver.c:109) [339]  (1.54 ns)
+
+ <State 77>: 2.39ns
+The critical path consists of the following:
+	'load' operation ('work_load', minver.c:114) on array 'work', minver.c:41 [351]  (2.39 ns)
+
+ <State 78>: 5.53ns
+The critical path consists of the following:
+	'load' operation ('work_load', minver.c:114) on array 'work', minver.c:41 [351]  (2.39 ns)
+	'add' operation ('tmp_68', minver.c:123) [362]  (0.75 ns)
+	'getelementptr' operation ('a_1_addr_2', minver.c:123) [364]  (0 ns)
+	'load' operation ('a_1_load_2', minver.c:123) on array 'a_1' [378]  (2.39 ns)
+
+ <State 79>: 3.76ns
+The critical path consists of the following:
+	'load' operation ('a_0_load_2', minver.c:123) on array 'a_0' [377]  (2.39 ns)
+	'select' operation ('w_4_0_phi', minver.c:123) [379]  (1.37 ns)
+
+ <State 80>: 6.15ns
+The critical path consists of the following:
+	'load' operation ('a_0_load_3', minver.c:124) on array 'a_0' [381]  (2.39 ns)
+	'select' operation ('a_load_4_0_phi', minver.c:124) [383]  (1.37 ns)
+	'store' operation (minver.c:124) of variable 'a_load_4_0_phi', minver.c:124 on array 'a_0' [386]  (2.39 ns)
+
+ <State 81>: 2.39ns
+The critical path consists of the following:
+	'store' operation (minver.c:125) of variable 'w_4_0_phi', minver.c:123 on array 'a_0' [394]  (2.39 ns)
+
+ <State 82>: 2.39ns
+The critical path consists of the following:
+	'load' operation ('a_0_load_7', minver.c:123) on array 'a_0' [400]  (2.39 ns)
+
+ <State 83>: 3.76ns
+The critical path consists of the following:
+	'load' operation ('a_0_load_7', minver.c:123) on array 'a_0' [400]  (2.39 ns)
+	'select' operation ('w_4_1_phi', minver.c:123) [402]  (1.37 ns)
+
+ <State 84>: 2.39ns
+The critical path consists of the following:
+	'store' operation (minver.c:125) of variable 'w_4_1_phi', minver.c:123 on array 'a_0' [413]  (2.39 ns)
+
+ <State 85>: 2.39ns
+The critical path consists of the following:
+	'load' operation ('a_0_load_13', minver.c:123) on array 'a_0' [419]  (2.39 ns)
+
+ <State 86>: 3.76ns
+The critical path consists of the following:
+	'load' operation ('a_0_load_13', minver.c:123) on array 'a_0' [419]  (2.39 ns)
+	'select' operation ('w_4_2_phi', minver.c:123) [421]  (1.37 ns)
+
+ <State 87>: 2.39ns
+The critical path consists of the following:
+	'store' operation (minver.c:125) of variable 'w_4_2_phi', minver.c:123 on array 'a_0' [432]  (2.39 ns)
+
+ <State 88>: 0ns
+The critical path consists of the following:
+
+ <State 89>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
