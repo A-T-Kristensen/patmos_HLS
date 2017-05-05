@@ -62,9 +62,56 @@ int main( void );
   Declaration of global variables
 */
 
-float iir_wi[ 2 * 4 ];
-float iir_coefficients[ 5 * 4 ];
+volatile float iir_wi[ 2 * 4 ];
+volatile float iir_coefficients[ 5 * 4 ];
 float iir_x;
+
+
+/*
+  Initialization- and return-value-related functions
+*/
+
+void iir_init( void )
+{
+  int f;
+  unsigned int i;
+  unsigned char *p;
+  volatile char bitmask = 0;
+
+
+  for ( f = 0 ; f < 5 * 4; f++ )
+    iir_coefficients[ f ] = 7;
+
+  for ( f = 0 ; f < 2 * 4; f++ )
+    iir_wi[ f ] = 0;
+
+  iir_x = ( float ) 1;
+
+  /*
+    Apply volatile XOR-bitmask to entire input array.
+  */
+  p = (unsigned char *) &iir_coefficients[ 0 ];
+  for ( i = 0; i < sizeof( iir_coefficients ); ++i, ++p )
+    *p ^= bitmask;
+
+  p = (unsigned char *) &iir_wi[ 0 ];
+  for ( i = 0; i < sizeof( iir_wi ); ++i, ++p )
+    *p ^= bitmask;
+}
+
+
+int iir_return( void )
+{
+  float checksum = 0.0;
+  int f;
+
+
+  for ( f = 0 ; f < 2 * 4; f++ )
+    checksum += iir_wi[ f ];
+
+  return( (int) checksum );
+}
+
 
 /*
   Main functions
@@ -72,10 +119,10 @@ float iir_x;
 
 void iir_main( void )
 {
-  float w;
+  register float w;
   int f;
-  float *ptr_coeff, *ptr_wi1, *ptr_wi2;
-  float y;
+  register volatile float *ptr_coeff, *ptr_wi1, *ptr_wi2;
+  register float y;
 
 
   ptr_coeff = &iir_coefficients[ 0 ];
