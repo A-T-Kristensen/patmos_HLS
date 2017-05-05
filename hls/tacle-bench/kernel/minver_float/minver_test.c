@@ -171,7 +171,7 @@ int minver_main()
   //minver_minver(minver_a, 3, eps ); 
   minver_hwa(minver_hw_i);
 
-  minver_hwa(minver_sw_i);
+  minver_minver(minver_sw_i, DIM, eps);
 
   for ( i = 0; i < DIM; i++ ) {
     for ( j = 0; j < DIM; j++ ) {

@@ -4,12 +4,12 @@ target triple = "x86_64-unknown-linux-gnu"
 
 @minver_hwa_str = internal unnamed_addr constant [11 x i8] c"minver_hwa\00" ; [#uses=1 type=[11 x i8]*]
 @minver_hw = common global [256 x float] zeroinitializer ; [#uses=0 type=[256 x float]*]
-@p_str9 = private unnamed_addr constant [12 x i8] c"hls_label_4\00", align 1 ; [#uses=2 type=[12 x i8]*]
-@p_str8 = private unnamed_addr constant [12 x i8] c"hls_label_2\00", align 1 ; [#uses=2 type=[12 x i8]*]
-@p_str7 = private unnamed_addr constant [12 x i8] c"hls_label_5\00", align 1 ; [#uses=2 type=[12 x i8]*]
-@p_str6 = private unnamed_addr constant [12 x i8] c"hls_label_1\00", align 1 ; [#uses=2 type=[12 x i8]*]
+@p_str9 = private unnamed_addr constant [12 x i8] c"hls_label_2\00", align 1 ; [#uses=2 type=[12 x i8]*]
+@p_str8 = private unnamed_addr constant [12 x i8] c"hls_label_1\00", align 1 ; [#uses=2 type=[12 x i8]*]
+@p_str7 = private unnamed_addr constant [12 x i8] c"hls_label_4\00", align 1 ; [#uses=2 type=[12 x i8]*]
+@p_str6 = private unnamed_addr constant [12 x i8] c"hls_label_0\00", align 1 ; [#uses=2 type=[12 x i8]*]
 @p_str5 = private unnamed_addr constant [12 x i8] c"hls_label_3\00", align 1 ; [#uses=2 type=[12 x i8]*]
-@p_str4 = private unnamed_addr constant [12 x i8] c"hls_label_0\00", align 1 ; [#uses=2 type=[12 x i8]*]
+@p_str4 = private unnamed_addr constant [12 x i8] c"hls_label_5\00", align 1 ; [#uses=2 type=[12 x i8]*]
 @p_str3 = private unnamed_addr constant [11 x i8] c"ap_ctrl_hs\00", align 1 ; [#uses=1 type=[11 x i8]*]
 @p_str2 = private unnamed_addr constant [5 x i8] c"bram\00", align 1 ; [#uses=1 type=[5 x i8]*]
 @p_str1 = private unnamed_addr constant [12 x i8] c"RAM_1P_BRAM\00", align 1 ; [#uses=1 type=[12 x i8]*]
@@ -799,33 +799,33 @@ entry:
   ret i10 %empty_32
 }
 
-!opencl.kernels = !{!0, !7, !13, !19}
+!opencl.kernels = !{!0, !7, !11, !17}
 !hls.encrypted.func = !{}
 !llvm.map.gv = !{!23, !30}
 
 !0 = metadata !{null, metadata !1, metadata !2, metadata !3, metadata !4, metadata !5, metadata !6}
-!1 = metadata !{metadata !"kernel_arg_addr_space", i32 0}
+!1 = metadata !{metadata !"kernel_arg_addr_space", i32 1}
 !2 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none"}
-!3 = metadata !{metadata !"kernel_arg_type", metadata !"mat_type"}
+!3 = metadata !{metadata !"kernel_arg_type", metadata !"mat_type [16]*"}
 !4 = metadata !{metadata !"kernel_arg_type_qual", metadata !""}
-!5 = metadata !{metadata !"kernel_arg_name", metadata !"n"}
+!5 = metadata !{metadata !"kernel_arg_name", metadata !"a"}
 !6 = metadata !{metadata !"reqd_work_group_size", i32 1, i32 1, i32 1}
-!7 = metadata !{null, metadata !8, metadata !9, metadata !10, metadata !11, metadata !12, metadata !6}
-!8 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 1, i32 1}
-!9 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none"}
-!10 = metadata !{metadata !"kernel_arg_type", metadata !"mat_type [16]*", metadata !"mat_type [16]*", metadata !"mat_type [16]*"}
-!11 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !""}
-!12 = metadata !{metadata !"kernel_arg_name", metadata !"minver_a", metadata !"minver_b", metadata !"minver_c"}
-!13 = metadata !{null, metadata !14, metadata !15, metadata !16, metadata !17, metadata !18, metadata !6}
-!14 = metadata !{metadata !"kernel_arg_addr_space"}
-!15 = metadata !{metadata !"kernel_arg_access_qual"}
-!16 = metadata !{metadata !"kernel_arg_type"}
-!17 = metadata !{metadata !"kernel_arg_type_qual"}
-!18 = metadata !{metadata !"kernel_arg_name"}
-!19 = metadata !{null, metadata !20, metadata !2, metadata !21, metadata !4, metadata !22, metadata !6}
-!20 = metadata !{metadata !"kernel_arg_addr_space", i32 1}
-!21 = metadata !{metadata !"kernel_arg_type", metadata !"mat_type [16]*"}
-!22 = metadata !{metadata !"kernel_arg_name", metadata !"a"}
+!7 = metadata !{null, metadata !8, metadata !2, metadata !9, metadata !4, metadata !10, metadata !6}
+!8 = metadata !{metadata !"kernel_arg_addr_space", i32 0}
+!9 = metadata !{metadata !"kernel_arg_type", metadata !"mat_type"}
+!10 = metadata !{metadata !"kernel_arg_name", metadata !"n"}
+!11 = metadata !{null, metadata !12, metadata !13, metadata !14, metadata !15, metadata !16, metadata !6}
+!12 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 1, i32 1}
+!13 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none"}
+!14 = metadata !{metadata !"kernel_arg_type", metadata !"mat_type [16]*", metadata !"mat_type [16]*", metadata !"mat_type [16]*"}
+!15 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !""}
+!16 = metadata !{metadata !"kernel_arg_name", metadata !"minver_a", metadata !"minver_b", metadata !"minver_c"}
+!17 = metadata !{null, metadata !18, metadata !19, metadata !20, metadata !21, metadata !22, metadata !6}
+!18 = metadata !{metadata !"kernel_arg_addr_space"}
+!19 = metadata !{metadata !"kernel_arg_access_qual"}
+!20 = metadata !{metadata !"kernel_arg_type"}
+!21 = metadata !{metadata !"kernel_arg_type_qual"}
+!22 = metadata !{metadata !"kernel_arg_name"}
 !23 = metadata !{metadata !24, null}
 !24 = metadata !{metadata !25}
 !25 = metadata !{i32 0, i32 31, metadata !26}

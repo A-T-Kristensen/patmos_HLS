@@ -7,114 +7,12 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 
 @I [SYN-201] Setting up clock 'default' with a period of 10ns.
 @I [HLS-10] Setting target device to 'xc7a100tcsg324-1'
-@I [SYN-201] Setting up clock 'default' with a period of 10ns.
-@I [SIM-2] *************** CSIM start ***************
-@I [SIM-4] CSIM will launch GCC as the compiler.
-@I [SIM-1] CSim done with 0 errors.
-@I [SIM-3] *************** CSIM finish ***************
-@I [HLS-10] Analyzing design file 'minver_lib.c' ... 
-@I [HLS-10] Analyzing design file 'minver.c' ... 
-@W [HLS-40] minver.c:133:1: warning: control may reach end of non-void function [-Wreturn-type]
-}
-^
-1 warning generated.
-
-@I [HLS-10] Validating synthesis directives ...
-@W [HLS-40] Directive 'RESOURCE' for core 'RAM_1P_BRAM' cannot be applied: Variable 'minver_a' is not declared in 'minver_hwa'.
-@I [HLS-111] Finished Checking Pragmas Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 328.273 ; gain = 12.586 ; free physical = 1729 ; free virtual = 15862
-@I [HLS-111] Finished Linking Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 328.273 ; gain = 12.586 ; free physical = 1727 ; free virtual = 15860
-@I [HLS-10] Starting code transformations ...
-@I [HLS-111] Finished Standard Transforms Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 328.273 ; gain = 12.586 ; free physical = 1724 ; free virtual = 15857
-@I [HLS-10] Checking synthesizability ...
-@I [XFORM-602] Inlining function 'minver_fabs' into 'minver_hwa' (minver.c:61) automatically.
-@I [HLS-111] Finished Checking Synthesizability Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 328.273 ; gain = 12.586 ; free physical = 1724 ; free virtual = 15857
-@I [XFORM-502] Unrolling all sub-loops inside loop 'Loop-2.4' (minver.c:93) in function 'minver_hwa' for pipelining.
-@I [XFORM-502] Unrolling all sub-loops inside loop 'Loop-3.1' (minver.c:116) in function 'minver_hwa' for pipelining.
-@I [XFORM-501] Unrolling loop 'Loop-2.4.1' (minver.c:98) in function 'minver_hwa' completely.
-@I [XFORM-501] Unrolling loop 'Loop-3.1.1' (minver.c:122) in function 'minver_hwa' completely.
-@I [XFORM-602] Inlining function 'minver_fabs' into 'minver_hwa' (minver.c:61) automatically.
-@I [XFORM-401] Performing if-conversion on hyperblock from (minver.c:59:33) to (minver.c:59:26) in function 'minver_hwa'... converting 3 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock from (minver.c:68:5) to (minver.c:70:5) in function 'minver_hwa'... converting 3 basic blocks.
-@I [HLS-111] Finished Pre-synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 1702 ; free virtual = 15835
-@W [XFORM-542] Cannot flatten a loop nest 'Loop-2' (minver.c:56:9) in function 'minver_hwa' : 
-               more than one sub loop.
-@W [XFORM-542] Cannot flatten a loop nest 'Loop-3' (minver.c:109:9) in function 'minver_hwa' : 
-               the outer loop is not a perfect loop because either the parent loop or the sub loop has no computeable trip count.
-@I [HLS-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 1709 ; free virtual = 15842
-@I [HLS-10] Starting hardware synthesis ...
-@I [HLS-10] Synthesizing 'minver_hwa' ...
-@I [HLS-10] ----------------------------------------------------------------
-@I [HLS-10] -- Implementing module 'minver_hwa' 
-@I [HLS-10] ----------------------------------------------------------------
-@I [SCHED-11] Starting scheduling ...
-@I [SCHED-61] Pipelining loop 'Loop 1'.
-@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 1.
-@I [SCHED-61] Pipelining loop 'Loop 2.1'.
-@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 5.
-@I [SCHED-61] Pipelining loop 'Loop 2.2'.
-@W [SCHED-69] Unable to schedule 'load' operation ('a_load_2', minver.c:83) on array 'a' due to limited memory ports.
-@I [SCHED-61] Pipelining result: Target II: 1, Final II: 4, Depth: 4.
-@I [SCHED-61] Pipelining loop 'Loop 2.3'.
-@W [SCHED-69] Unable to schedule 'store' operation (minver.c:90) of variable 'tmp_13', minver.c:90 on array 'a' due to limited memory ports.
-@I [SCHED-61] Pipelining result: Target II: 1, Final II: 2, Depth: 20.
-@I [SCHED-61] Pipelining loop 'Loop 2.4'.
-@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
-   between 'store' operation (minver.c:99) of variable 'tmp_23_14', minver.c:99 on array 'a' and 'load' operation ('a_load_52', minver.c:99) on array 'a'.
-@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
-   between 'store' operation (minver.c:99) of variable 'tmp_23_14', minver.c:99 on array 'a' and 'load' operation ('a_load_52', minver.c:99) on array 'a'.
-@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
-   between 'store' operation (minver.c:99) of variable 'tmp_23_14', minver.c:99 on array 'a' and 'load' operation ('a_load_52', minver.c:99) on array 'a'.
-@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
-   between 'store' operation (minver.c:99) of variable 'tmp_23_14', minver.c:99 on array 'a' and 'load' operation ('a_load_52', minver.c:99) on array 'a'.
-@W [SCHED-69] Unable to schedule 'load' operation ('a_load_26', minver.c:99) on array 'a' due to limited memory ports.
-@I [SCHED-61] Pipelining result: Target II: 1, Final II: 50, Depth: 52.
-@I [SCHED-61] Pipelining loop 'Loop 3.1'.
-@W [SCHED-64] Unable to schedule the loop exit test ('icmp' operation ('tmp_8')) in the first II cycles (II = 1).
-@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
-   between 'store' operation (minver.c:124) of variable 'a_load', minver.c:123 on array 'a' and 'load' operation ('a_load', minver.c:123) on array 'a'.
-@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
-   between 'store' operation (minver.c:124) of variable 'a_load', minver.c:123 on array 'a' and 'load' operation ('a_load', minver.c:123) on array 'a'.
-@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
-   between 'store' operation (minver.c:124) of variable 'a_load', minver.c:123 on array 'a' and 'load' operation ('a_load', minver.c:123) on array 'a'.
-@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1)
-   between 'store' operation (minver.c:124) of variable 'a_load_15', minver.c:123 on array 'a' and 'load' operation ('a_load', minver.c:123) on array 'a'.
-@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 43, distance = 1, offset = 1)
-   between 'store' operation (minver.c:124) of variable 'a_load_17', minver.c:123 on array 'a' and 'load' operation ('a_load', minver.c:123) on array 'a'.
-@W [SCHED-68] Unable to enforce a carried dependence constraint (II = 47, distance = 1, offset = 1)
-   between 'store' operation (minver.c:125) of variable 'a_load_19', minver.c:123 on array 'a' and 'load' operation ('a_load_3', minver.c:124) on array 'a'.
-@W [SCHED-69] Unable to schedule 'load' operation ('a_load_3', minver.c:124) on array 'a' due to limited memory ports.
-@I [SCHED-61] Pipelining result: Target II: 1, Final II: 49, Depth: 50.
-@I [SCHED-11] Finished scheduling.
-@I [HLS-111]  Elapsed time: 9.2 seconds; current allocated memory: 67.056 MB.
-@I [BIND-100] Starting micro-architecture generation ...
-@I [BIND-101] Performing variable lifetime analysis.
-@I [BIND-101] Exploring resource sharing.
-@I [BIND-101] Binding ...
-@I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111]  Elapsed time: 0.26 seconds; current allocated memory: 69.242 MB.
-@I [HLS-10] ----------------------------------------------------------------
-@I [HLS-10] -- Generating RTL for module 'minver_hwa' 
-@I [HLS-10] ----------------------------------------------------------------
-@I [RTGEN-500] Setting interface mode on port 'minver_hwa/a' to 'bram'.
-@I [RTGEN-500] Setting interface mode on function 'minver_hwa' to 'ap_ctrl_hs'.
-@I [SYN-210] Renamed object name 'minver_hwa_fsub_32ns_32ns_32_5_full_dsp' to 'minver_hwa_fsub_3bkb' due to the length limit 20
-@I [SYN-210] Renamed object name 'minver_hwa_fmul_32ns_32ns_32_4_max_dsp' to 'minver_hwa_fmul_3cud' due to the length limit 20
-@I [SYN-210] Renamed object name 'minver_hwa_fdiv_32ns_32ns_32_16' to 'minver_hwa_fdiv_3dEe' due to the length limit 20
-@I [SYN-210] Renamed object name 'minver_hwa_fpext_32ns_64_1' to 'minver_hwa_fpext_eOg' due to the length limit 20
-@I [SYN-210] Renamed object name 'minver_hwa_fcmp_32ns_32ns_1_1' to 'minver_hwa_fcmp_3fYi' due to the length limit 20
-@I [SYN-210] Renamed object name 'minver_hwa_dcmp_64ns_64ns_1_1' to 'minver_hwa_dcmp_6g8j' due to the length limit 20
-@I [RTGEN-100] Generating core module 'minver_hwa_dcmp_6g8j': 1 instance(s).
-@I [RTGEN-100] Generating core module 'minver_hwa_fcmp_3fYi': 2 instance(s).
-@I [RTGEN-100] Generating core module 'minver_hwa_fdiv_3dEe': 1 instance(s).
-@I [RTGEN-100] Generating core module 'minver_hwa_fmul_3cud': 1 instance(s).
-@I [RTGEN-100] Generating core module 'minver_hwa_fpext_eOg': 1 instance(s).
-@I [RTGEN-100] Generating core module 'minver_hwa_fsub_3bkb': 1 instance(s).
-@I [RTGEN-100] Finished creating RTL model for 'minver_hwa'.
-@I [HLS-111]  Elapsed time: 0.4 seconds; current allocated memory: 73.054 MB.
-@I [RTMG-278] Implementing memory 'minver_hwa_work_ram' using block RAMs.
-@I [HLS-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 1688 ; free virtual = 15822
-@I [SYSC-301] Generating SystemC RTL for minver_hwa.
-@I [VHDL-304] Generating VHDL RTL for minver_hwa.
-@I [VLOG-307] Generating Verilog RTL for minver_hwa.
-@I [IMPL-8] Exporting RTL as an IP in IP-XACT.
-@I [HLS-10] Opening solution '/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver_float/hls_minver_float/minver_2b_16x16'.
+@I [COSIM-47] Using XSIM for RTL simulation.
+@I [COSIM-14] Instrumenting C test bench ...
+@I [COSIM-302] Starting C TB testing ... 
+@I [COSIM-333] Generating C post check test bench ...
+@I [COSIM-12] Generating RTL test bench ...
+@I [COSIM-322] Starting VHDL simulation. 
+@I [COSIM-15] Starting XSIM ...
+@I [COSIM-316] Starting C post checking ...
+@I [COSIM-1000] *** C/RTL co-simulation finished: PASS ***

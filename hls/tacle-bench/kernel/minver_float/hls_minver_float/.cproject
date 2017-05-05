@@ -79,7 +79,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="minver_1b_16x16|minver_1b_32x32|minver_1b_3x3|minver_2b_16x16|minver_2b_32x32|minver_2b_3x3|minver_4b_16x16|minver_4b_32x32|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="minver_1b_16x16|minver_1b_32x32|minver_1b_3x3|minver_1b_4x4|minver_2b_16x16|minver_2b_32x32|minver_2b_3x3|minver_2b_4x4|minver_4b_16x16|minver_4b_32x32|minver_4b_4x4|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -153,7 +153,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="minver_1b_16x16|minver_1b_32x32|minver_1b_3x3|minver_2b_16x16|minver_2b_32x32|minver_2b_3x3|minver_4b_16x16|minver_4b_32x32|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="minver_1b_16x16|minver_1b_32x32|minver_1b_3x3|minver_1b_4x4|minver_2b_16x16|minver_2b_32x32|minver_2b_3x3|minver_2b_4x4|minver_4b_16x16|minver_4b_32x32|minver_4b_4x4|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

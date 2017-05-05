@@ -10,7 +10,7 @@ add_files minver.c
 add_files minver.h
 add_files -tb minver_test.c
 open_solution "minver_2b_32x32"
-set_part {xc7a100tcsg324-1}
+set_part {xc7a100tcsg324-1} -tool vivado
 create_clock -period 10 -name default
 source "./hls_minver_float/minver_2b_32x32/directives.tcl"
 csim_design -clean -compiler gcc

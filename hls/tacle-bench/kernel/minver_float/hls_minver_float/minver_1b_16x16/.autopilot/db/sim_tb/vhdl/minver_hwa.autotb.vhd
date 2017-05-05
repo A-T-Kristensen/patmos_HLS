@@ -27,7 +27,7 @@ entity apatb_minver_hwa_top is
       AUTOTB_PER_RESULT_TRANS_FILE    : STRING  := "minver_hwa.performance.result.transaction.xml";
       LENGTH_a     : INTEGER := 256;
       LENGTH_ap_return     : INTEGER := 1;
-	    AUTOTB_TRANSACTION_NUM    : INTEGER := 2
+	    AUTOTB_TRANSACTION_NUM    : INTEGER := 1
 );
 
 end apatb_minver_hwa_top;

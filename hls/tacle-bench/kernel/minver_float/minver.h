@@ -34,7 +34,7 @@
 
 typedef float mat_type;
 
-#define DIM 32
+#define DIM 16
 #define EPS 1.0e-6
 
 void set_minver();
