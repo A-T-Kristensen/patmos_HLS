@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'minver_hwa'
 ================================================================
-* Date:           Thu May  4 21:41:16 2017
+* Date:           Sat May  6 15:26:33 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_minver_float
@@ -2127,7 +2127,7 @@ The critical path consists of the following:
  <State 43>: 8.69ns
 The critical path consists of the following:
 	'fdiv' operation ('tmp_12', minver.c:90) [184]  (6.3 ns)
-	'store' operation (minver.c:90) of variable 'tmp_12', minver.c:90 on array 'a_2' [187]  (2.39 ns)
+	'store' operation (minver.c:90) of variable 'tmp_12', minver.c:90 on array 'a_1' [190]  (2.39 ns)
 
  <State 44>: 1.94ns
 The critical path consists of the following:
@@ -2136,7 +2136,7 @@ The critical path consists of the following:
  <State 45>: 1.94ns
 The critical path consists of the following:
 	'phi' operation ('i') with incoming values : ('i', minver.c:93) [208]  (0 ns)
-	'icmp' operation ('tmp_14', minver.c:95) [216]  (1.94 ns)
+	'icmp' operation ('exitcond3', minver.c:93) [209]  (1.94 ns)
 
  <State 46>: 2.23ns
 The critical path consists of the following:
@@ -2273,7 +2273,7 @@ The critical path consists of the following:
  <State 78>: 8.69ns
 The critical path consists of the following:
 	'fdiv' operation ('tmp_13', minver.c:105) [296]  (6.3 ns)
-	'store' operation (minver.c:105) of variable 'tmp_13', minver.c:105 on array 'a_1' [302]  (2.39 ns)
+	'store' operation (minver.c:105) of variable 'tmp_13', minver.c:105 on array 'a_2' [299]  (2.39 ns)
 
  <State 79>: 1.94ns
 The critical path consists of the following:

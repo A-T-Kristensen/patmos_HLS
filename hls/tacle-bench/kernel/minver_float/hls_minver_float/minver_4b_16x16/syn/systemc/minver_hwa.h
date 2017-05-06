@@ -242,7 +242,7 @@ struct minver_hwa : public sc_module {
     sc_signal< sc_lv<1> > tmp_55_reg_2037;
     sc_signal< sc_lv<32> > wmax_1_fu_1284_p3;
     sc_signal< sc_logic > ap_enable_reg_pp1_iter5;
-    sc_signal< sc_lv<32> > r_load_1_reg_2048;
+    sc_signal< sc_lv<32> > r_load_reg_2048;
     sc_signal< sc_lv<1> > ap_CS_fsm_state11;
     sc_signal< sc_lv<5> > arrayNo2_cast_cast2_1_fu_1302_p1;
     sc_signal< sc_lv<5> > arrayNo2_cast_cast2_1_reg_2055;

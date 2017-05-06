@@ -105,6 +105,6 @@
 #pragma line 909 "/usr/include/stdio.h" 3 4 ::: 2059
 #pragma line 930 "/usr/include/stdio.h" 3 4 ::: 2071
 #pragma line 31 "./minver.h" 2 ::: 2074
-#pragma line 3 "minver_lib.c" 2 ::: 2100
-#pragma line 83 "minver_lib.c" ::: 2144
-#pragma line 1370 "minver_lib.c" ::: 2401
+#pragma line 3 "minver_lib.c" 2 ::: 2098
+#pragma line 83 "minver_lib.c" ::: 2142
+#pragma line 1370 "minver_lib.c" ::: 2399

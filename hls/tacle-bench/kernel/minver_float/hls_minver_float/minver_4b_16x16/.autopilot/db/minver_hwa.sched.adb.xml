@@ -2614,10 +2614,10 @@ _ifconv:31  %tmp_55 = and i1 %tmp_53, %tmp_54
 
 <Node id="82" bw="32" op_0_bw="32">
 <![CDATA[
-_ifconv:0  %r_load_2 = load i32* %r
+_ifconv:0  %r_load_1 = load i32* %r
 
 ]]></Node>
-<StgValue><ssdm name="r_load_2"/></StgValue>
+<StgValue><ssdm name="r_load_1"/></StgValue>
 </operation>
 
 <operation id="253" st_id="10" stage="1" lat="1">
@@ -2694,7 +2694,7 @@ _ifconv:32  %wmax_1 = select i1 %tmp_55, float %w_3, float %wmax
 
 <Node id="115" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-_ifconv:33  %r_2 = select i1 %tmp_55, i32 %r_1, i32 %r_load_2
+_ifconv:33  %r_2 = select i1 %tmp_55, i32 %r_1, i32 %r_load_1
 
 ]]></Node>
 <StgValue><ssdm name="r_2"/></StgValue>
@@ -2760,10 +2760,10 @@ _ifconv:37  br label %.preheader12
 
 <Node id="121" bw="32" op_0_bw="32">
 <![CDATA[
-_ifconv1:0  %r_load_1 = load i32* %r
+_ifconv1:0  %r_load = load i32* %r
 
 ]]></Node>
-<StgValue><ssdm name="r_load_1"/></StgValue>
+<StgValue><ssdm name="r_load"/></StgValue>
 </operation>
 
 <operation id="262" st_id="11" stage="1" lat="1">
@@ -2790,7 +2790,7 @@ _ifconv1:2  %arrayNo2_cast_cast2_1 = zext i3 %arrayNo2 to i5
 
 <Node id="124" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="5" op_6_bw="32" op_7_bw="2">
 <![CDATA[
-_ifconv1:3  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo2_cast_cast2_1, i32 %r_load_1, i2 %tmp_34)
+_ifconv1:3  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo2_cast_cast2_1, i32 %r_load, i2 %tmp_34)
 
 ]]></Node>
 <StgValue><ssdm name="pivot"/></StgValue>
@@ -2808,7 +2808,7 @@ _ifconv1:3  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0,
 
 <Node id="124" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="5" op_6_bw="32" op_7_bw="2">
 <![CDATA[
-_ifconv1:3  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo2_cast_cast2_1, i32 %r_load_1, i2 %tmp_34)
+_ifconv1:3  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo2_cast_cast2_1, i32 %r_load, i2 %tmp_34)
 
 ]]></Node>
 <StgValue><ssdm name="pivot"/></StgValue>
@@ -3013,7 +3013,7 @@ _ifconv1:15  %tmp_5 = fpext float %api to double
 
 <Node id="122" bw="64" op_0_bw="32">
 <![CDATA[
-_ifconv1:1  %tmp_4 = sext i32 %r_load_1 to i64
+_ifconv1:1  %tmp_4 = sext i32 %r_load to i64
 
 ]]></Node>
 <StgValue><ssdm name="tmp_4"/></StgValue>
@@ -3174,7 +3174,7 @@ _ifconv1:24  br i1 %tmp_41, label %.loopexit.loopexit63, label %3
 
 <Node id="147" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:0  %tmp_1 = icmp eq i32 %r_load_1, %i_5_cast
+:0  %tmp_1 = icmp eq i32 %r_load, %i_5_cast
 
 ]]></Node>
 <StgValue><ssdm name="tmp_1"/></StgValue>
@@ -3614,10 +3614,10 @@ _ifconv1:24  br i1 %tmp_41, label %.loopexit.loopexit63, label %3
 
 <Node id="163" bw="32" op_0_bw="32">
 <![CDATA[
-:0  %r_load = load i32* %r
+:0  %r_load_2 = load i32* %r
 
 ]]></Node>
-<StgValue><ssdm name="r_load"/></StgValue>
+<StgValue><ssdm name="r_load_2"/></StgValue>
 </operation>
 
 <operation id="314" st_id="21" stage="1" lat="1">
@@ -3630,7 +3630,7 @@ _ifconv1:24  br i1 %tmp_41, label %.loopexit.loopexit63, label %3
 
 <Node id="172" bw="34" op_0_bw="34" op_1_bw="32" op_2_bw="2">
 <![CDATA[
-:9  %tmp_66 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %r_load, i2 %tmp_103)
+:9  %tmp_66 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %r_load_2, i2 %tmp_103)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_66"/></StgValue>
@@ -3726,7 +3726,7 @@ _ifconv1:24  br i1 %tmp_41, label %.loopexit.loopexit63, label %3
 
 <Node id="183" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="5" op_6_bw="32" op_7_bw="2">
 <![CDATA[
-:20  %tmp_68 = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %r_load, i2 %tmp_103)
+:20  %tmp_68 = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %r_load_2, i2 %tmp_103)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_68"/></StgValue>
@@ -3745,7 +3745,7 @@ _ifconv1:24  br i1 %tmp_41, label %.loopexit.loopexit63, label %3
 
 <Node id="183" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="5" op_6_bw="32" op_7_bw="2">
 <![CDATA[
-:20  %tmp_68 = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %r_load, i2 %tmp_103)
+:20  %tmp_68 = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %r_load_2, i2 %tmp_103)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_68"/></StgValue>

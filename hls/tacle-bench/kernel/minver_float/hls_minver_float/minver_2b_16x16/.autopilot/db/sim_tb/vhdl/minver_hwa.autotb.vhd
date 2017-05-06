@@ -32,7 +32,7 @@ entity apatb_minver_hwa_top is
       LENGTH_a_0     : INTEGER := 128;
       LENGTH_a_1     : INTEGER := 128;
       LENGTH_ap_return     : INTEGER := 1;
-	    AUTOTB_TRANSACTION_NUM    : INTEGER := 2
+	    AUTOTB_TRANSACTION_NUM    : INTEGER := 1
 );
 
 end apatb_minver_hwa_top;

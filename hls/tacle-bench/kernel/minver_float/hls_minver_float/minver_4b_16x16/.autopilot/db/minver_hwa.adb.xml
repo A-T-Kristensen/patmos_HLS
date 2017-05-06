@@ -2615,10 +2615,10 @@ _ifconv:31  %tmp_55 = and i1 %tmp_53, %tmp_54
 
 <Node id="82" bw="32" op_0_bw="32">
 <![CDATA[
-_ifconv:0  %r_load_2 = load i32* %r
+_ifconv:0  %r_load_1 = load i32* %r
 
 ]]></Node>
-<StgValue><ssdm name="r_load_2"/></StgValue>
+<StgValue><ssdm name="r_load_1"/></StgValue>
 </operation>
 
 <operation id="253" st_id="10" stage="1" lat="1">
@@ -2695,7 +2695,7 @@ _ifconv:32  %wmax_1 = select i1 %tmp_55, float %w_3, float %wmax
 
 <Node id="115" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-_ifconv:33  %r_2 = select i1 %tmp_55, i32 %r_1, i32 %r_load_2
+_ifconv:33  %r_2 = select i1 %tmp_55, i32 %r_1, i32 %r_load_1
 
 ]]></Node>
 <StgValue><ssdm name="r_2"/></StgValue>
@@ -2761,10 +2761,10 @@ _ifconv:37  br label %.preheader12
 
 <Node id="121" bw="32" op_0_bw="32">
 <![CDATA[
-_ifconv1:0  %r_load_1 = load i32* %r
+_ifconv1:0  %r_load = load i32* %r
 
 ]]></Node>
-<StgValue><ssdm name="r_load_1"/></StgValue>
+<StgValue><ssdm name="r_load"/></StgValue>
 </operation>
 
 <operation id="262" st_id="11" stage="1" lat="1">
@@ -2791,7 +2791,7 @@ _ifconv1:2  %arrayNo2_cast_cast2_1 = zext i3 %arrayNo2 to i5
 
 <Node id="124" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="5" op_6_bw="32" op_7_bw="2">
 <![CDATA[
-_ifconv1:3  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo2_cast_cast2_1, i32 %r_load_1, i2 %tmp_34)
+_ifconv1:3  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo2_cast_cast2_1, i32 %r_load, i2 %tmp_34)
 
 ]]></Node>
 <StgValue><ssdm name="pivot"/></StgValue>
@@ -2809,7 +2809,7 @@ _ifconv1:3  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0,
 
 <Node id="124" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="5" op_6_bw="32" op_7_bw="2">
 <![CDATA[
-_ifconv1:3  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo2_cast_cast2_1, i32 %r_load_1, i2 %tmp_34)
+_ifconv1:3  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo2_cast_cast2_1, i32 %r_load, i2 %tmp_34)
 
 ]]></Node>
 <StgValue><ssdm name="pivot"/></StgValue>
@@ -3014,7 +3014,7 @@ _ifconv1:15  %tmp_5 = fpext float %api to double
 
 <Node id="122" bw="64" op_0_bw="32">
 <![CDATA[
-_ifconv1:1  %tmp_4 = sext i32 %r_load_1 to i64
+_ifconv1:1  %tmp_4 = sext i32 %r_load to i64
 
 ]]></Node>
 <StgValue><ssdm name="tmp_4"/></StgValue>
@@ -3175,7 +3175,7 @@ _ifconv1:24  br i1 %tmp_41, label %.loopexit.loopexit63, label %3
 
 <Node id="147" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:0  %tmp_1 = icmp eq i32 %r_load_1, %i_5_cast
+:0  %tmp_1 = icmp eq i32 %r_load, %i_5_cast
 
 ]]></Node>
 <StgValue><ssdm name="tmp_1"/></StgValue>
@@ -3615,10 +3615,10 @@ _ifconv1:24  br i1 %tmp_41, label %.loopexit.loopexit63, label %3
 
 <Node id="163" bw="32" op_0_bw="32">
 <![CDATA[
-:0  %r_load = load i32* %r
+:0  %r_load_2 = load i32* %r
 
 ]]></Node>
-<StgValue><ssdm name="r_load"/></StgValue>
+<StgValue><ssdm name="r_load_2"/></StgValue>
 </operation>
 
 <operation id="314" st_id="21" stage="1" lat="1">
@@ -3631,7 +3631,7 @@ _ifconv1:24  br i1 %tmp_41, label %.loopexit.loopexit63, label %3
 
 <Node id="172" bw="34" op_0_bw="34" op_1_bw="32" op_2_bw="2">
 <![CDATA[
-:9  %tmp_66 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %r_load, i2 %tmp_103)
+:9  %tmp_66 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %r_load_2, i2 %tmp_103)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_66"/></StgValue>
@@ -3727,7 +3727,7 @@ _ifconv1:24  br i1 %tmp_41, label %.loopexit.loopexit63, label %3
 
 <Node id="183" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="5" op_6_bw="32" op_7_bw="2">
 <![CDATA[
-:20  %tmp_68 = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %r_load, i2 %tmp_103)
+:20  %tmp_68 = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %r_load_2, i2 %tmp_103)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_68"/></StgValue>
@@ -3746,7 +3746,7 @@ _ifconv1:24  br i1 %tmp_41, label %.loopexit.loopexit63, label %3
 
 <Node id="183" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="5" op_6_bw="32" op_7_bw="2">
 <![CDATA[
-:20  %tmp_68 = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %r_load, i2 %tmp_103)
+:20  %tmp_68 = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %r_load_2, i2 %tmp_103)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_68"/></StgValue>
@@ -19084,7 +19084,7 @@ branch3:1  br label %63
 </dataflow>
 <dataflow id="2023" from="tmp_54" to="tmp_55" fromId="250" toId="251">
 </dataflow>
-<dataflow id="2024" from="r" to="r_load_2" fromId="174" toId="252">
+<dataflow id="2024" from="r" to="r_load_1" fromId="174" toId="252">
 </dataflow>
 <dataflow id="2025" from="_ssdm_op_SpecLoopTripCount" to="empty_17" fromId="1785" toId="253">
 </dataflow>
@@ -19120,7 +19120,7 @@ branch3:1  br label %63
 </dataflow>
 <dataflow id="2042" from="r_1" to="r_2" fromId="219" toId="257">
 </dataflow>
-<dataflow id="2043" from="r_load_2" to="r_2" fromId="252" toId="257">
+<dataflow id="2043" from="r_load_1" to="r_2" fromId="252" toId="257">
 </dataflow>
 <dataflow id="2044" from="_ssdm_op_SpecRegionEnd" to="empty_18" fromId="1810" toId="258">
 </dataflow>
@@ -19132,7 +19132,7 @@ branch3:1  br label %63
 </dataflow>
 <dataflow id="2048" from="r" to="StgValue_259" fromId="174" toId="259">
 </dataflow>
-<dataflow id="2049" from="r" to="r_load_1" fromId="174" toId="261">
+<dataflow id="2049" from="r" to="r_load" fromId="174" toId="261">
 </dataflow>
 <dataflow id="2050" from="arrayNo2" to="arrayNo2_cast_cast2_1" fromId="208" toId="262">
 </dataflow>
@@ -19148,7 +19148,7 @@ branch3:1  br label %63
 </dataflow>
 <dataflow id="2056" from="arrayNo2_cast_cast2_1" to="pivot" fromId="262" toId="263">
 </dataflow>
-<dataflow id="2057" from="r_load_1" to="pivot" fromId="261" toId="263">
+<dataflow id="2057" from="r_load" to="pivot" fromId="261" toId="263">
 </dataflow>
 <dataflow id="2058" from="tmp_34" to="pivot" fromId="209" toId="263">
 </dataflow>
@@ -19164,7 +19164,7 @@ branch3:1  br label %63
 </dataflow>
 <dataflow id="2064" from="arrayNo2_cast_cast2_1" to="pivot" fromId="262" toId="264">
 </dataflow>
-<dataflow id="2065" from="r_load_1" to="pivot" fromId="261" toId="264">
+<dataflow id="2065" from="r_load" to="pivot" fromId="261" toId="264">
 </dataflow>
 <dataflow id="2066" from="tmp_34" to="pivot" fromId="209" toId="264">
 </dataflow>
@@ -19214,7 +19214,7 @@ branch3:1  br label %63
 </dataflow>
 <dataflow id="2089" from="api" to="tmp_5" fromId="275" toId="276">
 </dataflow>
-<dataflow id="2090" from="r_load_1" to="tmp_4" fromId="261" toId="277">
+<dataflow id="2090" from="r_load" to="tmp_4" fromId="261" toId="277">
 </dataflow>
 <dataflow id="2091" from="tmp_5" to="tmp_5_to_int" fromId="276" toId="278">
 </dataflow>
@@ -19250,7 +19250,7 @@ branch3:1  br label %63
 </dataflow>
 <dataflow id="2113" from="tmp_41" to="StgValue_286" fromId="285" toId="286">
 </dataflow>
-<dataflow id="2114" from="r_load_1" to="tmp_1" fromId="261" toId="287">
+<dataflow id="2114" from="r_load" to="tmp_1" fromId="261" toId="287">
 </dataflow>
 <dataflow id="2115" from="i_5_cast" to="tmp_1" fromId="181" toId="287">
 </dataflow>
@@ -19375,11 +19375,11 @@ branch3:1  br label %63
 </dataflow>
 <dataflow id="2175" from="tmp_103" to="w" fromId="306" toId="312">
 </dataflow>
-<dataflow id="2176" from="r" to="r_load" fromId="174" toId="313">
+<dataflow id="2176" from="r" to="r_load_2" fromId="174" toId="313">
 </dataflow>
 <dataflow id="2178" from="_ssdm_op_BitConcatenate.i34.i32.i2" to="tmp_66" fromId="2177" toId="314">
 </dataflow>
-<dataflow id="2179" from="r_load" to="tmp_66" fromId="313" toId="314">
+<dataflow id="2179" from="r_load_2" to="tmp_66" fromId="313" toId="314">
 </dataflow>
 <dataflow id="2180" from="tmp_103" to="tmp_66" fromId="306" toId="314">
 </dataflow>
@@ -19421,7 +19421,7 @@ branch3:1  br label %63
 </dataflow>
 <dataflow id="2199" from="arrayNo4_cast_cast1_s" to="tmp_68" fromId="309" toId="320">
 </dataflow>
-<dataflow id="2200" from="r_load" to="tmp_68" fromId="313" toId="320">
+<dataflow id="2200" from="r_load_2" to="tmp_68" fromId="313" toId="320">
 </dataflow>
 <dataflow id="2201" from="tmp_103" to="tmp_68" fromId="306" toId="320">
 </dataflow>
@@ -19437,7 +19437,7 @@ branch3:1  br label %63
 </dataflow>
 <dataflow id="2207" from="arrayNo4_cast_cast1_s" to="tmp_68" fromId="309" toId="321">
 </dataflow>
-<dataflow id="2208" from="r_load" to="tmp_68" fromId="313" toId="321">
+<dataflow id="2208" from="r_load_2" to="tmp_68" fromId="313" toId="321">
 </dataflow>
 <dataflow id="2209" from="tmp_103" to="tmp_68" fromId="306" toId="321">
 </dataflow>

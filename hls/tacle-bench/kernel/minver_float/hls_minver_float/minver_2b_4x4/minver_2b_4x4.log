@@ -6,7 +6,6 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 ==============================================================
 
 @I [SYN-201] Setting up clock 'default' with a period of 10ns.
-@I [SYN-201] Setting up clock 'default' with a period of 10ns.
 @I [SIM-2] *************** CSIM start ***************
 @I [SIM-4] CSIM will launch GCC as the compiler.
 @I [SIM-1] CSim done with 0 errors.
@@ -19,13 +18,13 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 1 warning generated.
 
 @I [HLS-10] Validating synthesis directives ...
-@I [HLS-111] Finished Checking Pragmas Time (s): cpu = 00:01:01 ; elapsed = 00:01:01 . Memory (MB): peak = 456.273 ; gain = 140.582 ; free physical = 2005 ; free virtual = 15838
-@I [HLS-111] Finished Linking Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 456.273 ; gain = 140.582 ; free physical = 2005 ; free virtual = 15838
+@I [HLS-111] Finished Checking Pragmas Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 1020 ; free virtual = 15685
+@I [HLS-111] Finished Linking Time (s): cpu = 00:00:57 ; elapsed = 00:01:03 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 1021 ; free virtual = 15685
 @I [HLS-10] Starting code transformations ...
-@I [HLS-111] Finished Standard Transforms Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 456.273 ; gain = 140.582 ; free physical = 2004 ; free virtual = 15838
+@I [HLS-111] Finished Standard Transforms Time (s): cpu = 00:00:57 ; elapsed = 00:01:03 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 1021 ; free virtual = 15685
 @I [HLS-10] Checking synthesizability ...
 @I [XFORM-602] Inlining function 'minver_fabs' into 'minver_hwa' (minver.c:61) automatically.
-@I [HLS-111] Finished Checking Synthesizability Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 456.273 ; gain = 140.582 ; free physical = 2004 ; free virtual = 15838
+@I [HLS-111] Finished Checking Synthesizability Time (s): cpu = 00:00:58 ; elapsed = 00:01:03 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 1021 ; free virtual = 15685
 @I [XFORM-502] Unrolling all sub-loops inside loop 'Loop-2.4' (minver.c:93) in function 'minver_hwa' for pipelining.
 @I [XFORM-502] Unrolling all sub-loops inside loop 'Loop-3.1' (minver.c:116) in function 'minver_hwa' for pipelining.
 @I [XFORM-501] Unrolling loop 'Loop-2.4.1' (minver.c:98) in function 'minver_hwa' completely.
@@ -41,12 +40,12 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [XFORM-401] Performing if-conversion on hyperblock from (minver.c:123:9) to (minver.c:124:9) in function 'minver_hwa'... converting 4 basic blocks.
 @I [XFORM-401] Performing if-conversion on hyperblock from (minver.c:123:9) to (minver.c:124:9) in function 'minver_hwa'... converting 4 basic blocks.
 @I [XFORM-401] Performing if-conversion on hyperblock from (minver.c:123:9) to (minver.c:124:9) in function 'minver_hwa'... converting 4 basic blocks.
-@I [HLS-111] Finished Pre-synthesis Time (s): cpu = 00:01:02 ; elapsed = 00:01:02 . Memory (MB): peak = 456.273 ; gain = 140.582 ; free physical = 1998 ; free virtual = 15832
+@I [HLS-111] Finished Pre-synthesis Time (s): cpu = 00:00:58 ; elapsed = 00:01:03 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 1016 ; free virtual = 15680
 @W [XFORM-542] Cannot flatten a loop nest 'Loop-2' (minver.c:56:9) in function 'minver_hwa' : 
                more than one sub loop.
 @W [XFORM-542] Cannot flatten a loop nest 'Loop-3' (minver.c:109:9) in function 'minver_hwa' : 
                the outer loop is not a perfect loop because either the parent loop or the sub loop has no computeable trip count.
-@I [HLS-111] Finished Architecture Synthesis Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 456.273 ; gain = 140.582 ; free physical = 1998 ; free virtual = 15832
+@I [HLS-111] Finished Architecture Synthesis Time (s): cpu = 00:00:58 ; elapsed = 00:01:04 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 1016 ; free virtual = 15681
 @I [HLS-10] Starting hardware synthesis ...
 @I [HLS-10] Synthesizing 'minver_hwa' ...
 @I [HLS-10] ----------------------------------------------------------------
@@ -100,13 +99,13 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @W [SCHED-69] Unable to schedule 'load' operation ('a_0_load_2', minver.c:123) on array 'a_0' due to limited memory ports.
 @I [SCHED-61] Pipelining result: Target II: 1, Final II: 13, Depth: 14.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111]  Elapsed time: 55.38 seconds; current allocated memory: 78.700 MB.
+@I [HLS-111]  Elapsed time: 55.47 seconds; current allocated memory: 78.805 MB.
 @I [BIND-100] Starting micro-architecture generation ...
 @I [BIND-101] Performing variable lifetime analysis.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111]  Elapsed time: 0.16 seconds; current allocated memory: 80.012 MB.
+@I [HLS-111]  Elapsed time: 0.15 seconds; current allocated memory: 80.116 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'minver_hwa' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -126,9 +125,9 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [RTGEN-100] Generating core module 'minver_hwa_fpext_kbM': 1 instance(s).
 @I [RTGEN-100] Generating core module 'minver_hwa_fsub_3hbi': 2 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'minver_hwa'.
-@I [HLS-111]  Elapsed time: 0.25 seconds; current allocated memory: 81.999 MB.
+@I [HLS-111]  Elapsed time: 0.24 seconds; current allocated memory: 82.103 MB.
 @I [RTMG-278] Implementing memory 'minver_hwa_work_ram' using block RAMs.
-@I [HLS-111] Finished generating all RTL models Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 456.273 ; gain = 140.582 ; free physical = 1991 ; free virtual = 15831
+@I [HLS-111] Finished generating all RTL models Time (s): cpu = 00:01:00 ; elapsed = 00:01:05 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 1061 ; free virtual = 15680
 @I [SYSC-301] Generating SystemC RTL for minver_hwa.
 @I [VHDL-304] Generating VHDL RTL for minver_hwa.
 @I [VLOG-307] Generating Verilog RTL for minver_hwa.

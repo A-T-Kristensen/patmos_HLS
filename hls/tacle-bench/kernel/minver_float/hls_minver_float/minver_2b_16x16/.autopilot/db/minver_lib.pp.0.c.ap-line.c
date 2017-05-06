@@ -2082,7 +2082,7 @@ typedef float mat_type;
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-void set_minver();
+void set_minver(mat_type minver_hw[16][16]);
 int minver_hwa(mat_type a[16][16]);
 int minver_minver(mat_type minver_a[16][16], int side, mat_type eps);
 #pragma empty_line
@@ -2096,8 +2096,6 @@ int minver_return(mat_type minver_a_i[16][16]);
 #pragma empty_line
 int minver_main();
 int main( void );
-#pragma empty_line
-mat_type minver_hw[16][16];
 #pragma line 3 "minver_lib.c" 2
 #pragma empty_line
 /*
@@ -2139,7 +2137,7 @@ int minver_mmul(mat_type minver_a[16][16], mat_type minver_b[16][16],
 }
 #pragma empty_line
 #pragma empty_line
-void set_minver() {
+void set_minver(mat_type minver_hw[16][16]) {
 #pragma empty_line
  // Matrices
 #pragma line 83 "minver_lib.c"

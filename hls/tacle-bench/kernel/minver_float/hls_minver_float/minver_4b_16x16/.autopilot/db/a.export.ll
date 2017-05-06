@@ -4,15 +4,15 @@ target triple = "x86_64-unknown-linux-gnu"
 
 @minver_hwa_str = internal unnamed_addr constant [11 x i8] c"minver_hwa\00"
 @minver_hw = common global [256 x float] zeroinitializer
-@p_str9 = private unnamed_addr constant [12 x i8] c"hls_label_2\00", align 1
-@p_str8 = private unnamed_addr constant [12 x i8] c"hls_label_4\00", align 1
-@p_str7 = private unnamed_addr constant [12 x i8] c"hls_label_0\00", align 1
-@p_str6 = private unnamed_addr constant [12 x i8] c"hls_label_3\00", align 1
-@p_str5 = private unnamed_addr constant [12 x i8] c"hls_label_1\00", align 1
+@p_str9 = private unnamed_addr constant [12 x i8] c"hls_label_0\00", align 1
+@p_str8 = private unnamed_addr constant [12 x i8] c"hls_label_3\00", align 1
+@p_str7 = private unnamed_addr constant [12 x i8] c"hls_label_1\00", align 1
+@p_str6 = private unnamed_addr constant [12 x i8] c"hls_label_5\00", align 1
+@p_str5 = private unnamed_addr constant [12 x i8] c"hls_label_2\00", align 1
 @p_str4 = private unnamed_addr constant [11 x i8] c"ap_ctrl_hs\00", align 1
 @p_str3 = private unnamed_addr constant [5 x i8] c"bram\00", align 1
 @p_str2 = private unnamed_addr constant [12 x i8] c"RAM_1P_BRAM\00", align 1
-@p_str10 = private unnamed_addr constant [12 x i8] c"hls_label_5\00", align 1
+@p_str10 = private unnamed_addr constant [12 x i8] c"hls_label_4\00", align 1
 @p_str1 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
 
 define i32 @minver_hwa([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3) {
@@ -103,7 +103,7 @@ define i32 @minver_hwa([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_
   br i1 %exitcond6, label %_ifconv1, label %_ifconv
 
 _ifconv:                                          ; preds = %.preheader12
-  %r_load_2 = load i32* %r
+  %r_load_1 = load i32* %r
   %empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 16, i64 0) nounwind
   %tmp_19 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str6) nounwind
   call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
@@ -136,17 +136,17 @@ _ifconv:                                          ; preds = %.preheader12
   %tmp_54 = fcmp ogt float %w_3, %wmax
   %tmp_55 = and i1 %tmp_53, %tmp_54
   %wmax_1 = select i1 %tmp_55, float %w_3, float %wmax
-  %r_2 = select i1 %tmp_55, i32 %r_1, i32 %r_load_2
+  %r_2 = select i1 %tmp_55, i32 %r_1, i32 %r_load_1
   %empty_18 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str6, i32 %tmp_19) nounwind
   %i_6 = add nsw i32 1, %r_1
   store i32 %r_2, i32* %r
   br label %.preheader12
 
 _ifconv1:                                         ; preds = %.preheader12
-  %r_load_1 = load i32* %r
-  %tmp_4 = sext i32 %r_load_1 to i64
+  %r_load = load i32* %r
+  %tmp_4 = sext i32 %r_load to i64
   %arrayNo2_cast_cast2_1 = zext i3 %arrayNo2 to i5
-  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo2_cast_cast2_1, i32 %r_load_1, i2 %tmp_34)
+  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo2_cast_cast2_1, i32 %r_load, i2 %tmp_34)
   %pivot_to_int = bitcast float %pivot to i32
   %tmp_7 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %pivot_to_int, i32 23, i32 30)
   %tmp_43 = trunc i32 %pivot_to_int to i23
@@ -170,7 +170,7 @@ _ifconv1:                                         ; preds = %.preheader12
   br i1 %tmp_41, label %.loopexit.loopexit63, label %3
 
 ; <label>:3                                       ; preds = %_ifconv1
-  %tmp_1 = icmp eq i32 %r_load_1, %i_5_cast
+  %tmp_1 = icmp eq i32 %r_load, %i_5_cast
   br i1 %tmp_1, label %.loopexit11, label %4
 
 ; <label>:4                                       ; preds = %3
@@ -189,7 +189,7 @@ _ifconv1:                                         ; preds = %.preheader12
   br i1 %exitcond5, label %.loopexit11.loopexit, label %6
 
 ; <label>:6                                       ; preds = %5
-  %r_load = load i32* %r
+  %r_load_2 = load i32* %r
   %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
   %tmp_24 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str7) nounwind
   call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
@@ -198,7 +198,7 @@ _ifconv1:                                         ; preds = %.preheader12
   %tmp_64 = call i7 @_ssdm_op_BitConcatenate.i7.i5.i2(i5 %i_5, i2 %tmp_103)
   %tmp_65 = zext i7 %tmp_64 to i64
   %a_0_addr_2 = getelementptr [64 x float]* %a_0, i64 0, i64 %tmp_65
-  %tmp_66 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %r_load, i2 %tmp_103)
+  %tmp_66 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %r_load_2, i2 %tmp_103)
   %tmp_67 = sext i34 %tmp_66 to i64
   %a_0_addr_3 = getelementptr [64 x float]* %a_0, i64 0, i64 %tmp_67
   %a_1_addr_2 = getelementptr [64 x float]* %a_1, i64 0, i64 %tmp_65
@@ -209,7 +209,7 @@ _ifconv1:                                         ; preds = %.preheader12
   %a_3_addr_3 = getelementptr [64 x float]* %a_3, i64 0, i64 %tmp_67
   %arrayNo4_cast_cast1_s = zext i3 %arrayNo4 to i5
   %w = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %i_5_cast, i2 %tmp_103)
-  %tmp_68 = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %r_load, i2 %tmp_103)
+  %tmp_68 = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %r_load_2, i2 %tmp_103)
   switch i3 %arrayNo4, label %branch147 [
     i3 0, label %branch144
     i3 1, label %branch145

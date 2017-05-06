@@ -1649,7 +1649,7 @@
 
 <Node id="2" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecBitsMap([1024 x float]* %a) nounwind, !map !31
+:0  call void (...)* @_ssdm_op_SpecBitsMap([1024 x float]* %a) nounwind, !map !19
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1664,7 +1664,7 @@
 
 <Node id="3" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-:1  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !35
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !25
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>

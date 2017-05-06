@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'minver_hwa'" level="0">
-<item name = "Date">Thu May  4 21:45:39 2017
+<item name = "Date">Sat May  6 17:49:38 2017
 </item>
 <item name = "Version">2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)</item>
 <item name = "Project">hls_minver_float</item>

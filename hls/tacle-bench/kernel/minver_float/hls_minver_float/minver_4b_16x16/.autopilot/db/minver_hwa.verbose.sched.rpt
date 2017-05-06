@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'minver_hwa'
 ================================================================
-* Date:           Thu May  4 21:44:26 2017
+* Date:           Sat May  6 15:29:57 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_minver_float
@@ -729,8 +729,8 @@ _ifconv:31  %tmp_55 = and i1 %tmp_53, %tmp_54
 
 
  <State 10>: 2.94ns
-ST_10: r_load_2 (82)  [1/1] 0.00ns  loc: minver.c:62
-_ifconv:0  %r_load_2 = load i32* %r
+ST_10: r_load_1 (82)  [1/1] 0.00ns  loc: minver.c:62
+_ifconv:0  %r_load_1 = load i32* %r
 
 ST_10: empty_17 (83)  [1/1] 0.00ns
 _ifconv:1  %empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 16, i64 0) nounwind
@@ -745,7 +745,7 @@ ST_10: wmax_1 (114)  [1/1] 1.37ns  loc: minver.c:62
 _ifconv:32  %wmax_1 = select i1 %tmp_55, float %w_3, float %wmax
 
 ST_10: r_2 (115)  [1/1] 1.37ns  loc: minver.c:62
-_ifconv:33  %r_2 = select i1 %tmp_55, i32 %r_1, i32 %r_load_2
+_ifconv:33  %r_2 = select i1 %tmp_55, i32 %r_1, i32 %r_load_1
 
 ST_10: empty_18 (116)  [1/1] 0.00ns  loc: minver.c:66
 _ifconv:34  %empty_18 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str6, i32 %tmp_19) nounwind
@@ -758,19 +758,19 @@ _ifconv:37  br label %.preheader12
 
 
  <State 11>: 5.20ns
-ST_11: r_load_1 (121)  [1/1] 0.00ns
-_ifconv1:0  %r_load_1 = load i32* %r
+ST_11: r_load (121)  [1/1] 0.00ns
+_ifconv1:0  %r_load = load i32* %r
 
 ST_11: arrayNo2_cast_cast2_1 (123)  [1/1] 0.00ns  loc: minver.c:56
 _ifconv1:2  %arrayNo2_cast_cast2_1 = zext i3 %arrayNo2 to i5
 
 ST_11: pivot (124)  [2/2] 5.20ns  loc: minver.c:56
-_ifconv1:3  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo2_cast_cast2_1, i32 %r_load_1, i2 %tmp_34)
+_ifconv1:3  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo2_cast_cast2_1, i32 %r_load, i2 %tmp_34)
 
 
  <State 12>: 5.45ns
 ST_12: pivot (124)  [1/2] 5.45ns  loc: minver.c:56
-_ifconv1:3  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo2_cast_cast2_1, i32 %r_load_1, i2 %tmp_34)
+_ifconv1:3  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo2_cast_cast2_1, i32 %r_load, i2 %tmp_34)
 
 
  <State 13>: 7.74ns
@@ -815,7 +815,7 @@ _ifconv1:15  %tmp_5 = fpext float %api to double
 
  <State 15>: 8.27ns
 ST_15: tmp_4 (122)  [1/1] 0.00ns  loc: minver.c:68
-_ifconv1:1  %tmp_4 = sext i32 %r_load_1 to i64
+_ifconv1:1  %tmp_4 = sext i32 %r_load to i64
 
 ST_15: tmp_5_to_int (137)  [1/1] 0.00ns  loc: minver.c:70
 _ifconv1:16  %tmp_5_to_int = bitcast double %tmp_5 to i64
@@ -845,7 +845,7 @@ ST_15: StgValue_286 (145)  [1/1] 0.00ns  loc: minver.c:70
 _ifconv1:24  br i1 %tmp_41, label %.loopexit.loopexit63, label %3
 
 ST_15: tmp_1 (147)  [1/1] 2.93ns  loc: minver.c:75
-:0  %tmp_1 = icmp eq i32 %r_load_1, %i_5_cast
+:0  %tmp_1 = icmp eq i32 %r_load, %i_5_cast
 
 ST_15: StgValue_288 (148)  [1/1] 0.00ns  loc: minver.c:75
 :1  br i1 %tmp_1, label %.loopexit11, label %4
@@ -938,11 +938,11 @@ ST_20: w (182)  [1/2] 5.45ns  loc: minver.c:80
 
 
  <State 21>: 5.20ns
-ST_21: r_load (163)  [1/1] 0.00ns
-:0  %r_load = load i32* %r
+ST_21: r_load_2 (163)  [1/1] 0.00ns
+:0  %r_load_2 = load i32* %r
 
 ST_21: tmp_66 (172)  [1/1] 0.00ns  loc: minver.c:80
-:9  %tmp_66 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %r_load, i2 %tmp_103)
+:9  %tmp_66 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %r_load_2, i2 %tmp_103)
 
 ST_21: tmp_67 (173)  [1/1] 0.00ns  loc: minver.c:83
 :10  %tmp_67 = sext i34 %tmp_66 to i64
@@ -960,12 +960,12 @@ ST_21: a_3_addr_3 (180)  [1/1] 0.00ns  loc: minver.c:83
 :17  %a_3_addr_3 = getelementptr [64 x float]* %a_3, i64 0, i64 %tmp_67
 
 ST_21: tmp_68 (183)  [2/2] 5.20ns  loc: minver.c:80
-:20  %tmp_68 = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %r_load, i2 %tmp_103)
+:20  %tmp_68 = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %r_load_2, i2 %tmp_103)
 
 
  <State 22>: 5.45ns
 ST_22: tmp_68 (183)  [1/2] 5.45ns  loc: minver.c:80
-:20  %tmp_68 = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %r_load, i2 %tmp_103)
+:20  %tmp_68 = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %r_load_2, i2 %tmp_103)
 
 
  <State 23>: 2.71ns
@@ -3854,13 +3854,13 @@ The critical path consists of the following:
 
  <State 10>: 2.94ns
 The critical path consists of the following:
-	'load' operation ('r_load_2', minver.c:62) on local variable 'r' [82]  (0 ns)
+	'load' operation ('r_load_1', minver.c:62) on local variable 'r' [82]  (0 ns)
 	'select' operation ('r', minver.c:62) [115]  (1.37 ns)
 	'store' operation (minver.c:62) of variable 'r', minver.c:62 on local variable 'r' [118]  (1.57 ns)
 
  <State 11>: 5.2ns
 The critical path consists of the following:
-	'load' operation ('r_load_1') on local variable 'r' [121]  (0 ns)
+	'load' operation ('r_load') on local variable 'r' [121]  (0 ns)
 	'call' operation ('pivot', minver.c:56) to 'aesl_mux_load_4_16_x' [124]  (5.2 ns)
 
  <State 12>: 5.45ns
@@ -3906,7 +3906,7 @@ The critical path consists of the following:
 
  <State 21>: 5.2ns
 The critical path consists of the following:
-	'load' operation ('r_load') on local variable 'r' [163]  (0 ns)
+	'load' operation ('r_load_2') on local variable 'r' [163]  (0 ns)
 	'call' operation ('tmp_68', minver.c:80) to 'aesl_mux_load_4_16_x' [183]  (5.2 ns)
 
  <State 22>: 5.45ns
@@ -3999,7 +3999,7 @@ The critical path consists of the following:
  <State 43>: 9.01ns
 The critical path consists of the following:
 	'fdiv' operation ('tmp_12', minver.c:90) [227]  (6.3 ns)
-	'store' operation (minver.c:90) of variable 'tmp_12', minver.c:90 on array 'a_2' [230]  (2.71 ns)
+	'store' operation (minver.c:90) of variable 'tmp_12', minver.c:90 on array 'a_1' [233]  (2.71 ns)
 
  <State 44>: 2.37ns
 The critical path consists of the following:
@@ -4086,7 +4086,7 @@ The critical path consists of the following:
  <State 63>: 9.01ns
 The critical path consists of the following:
 	'fdiv' operation ('tmp_18', minver.c:101) [462]  (6.3 ns)
-	'store' operation (minver.c:101) of variable 'tmp_18', minver.c:101 on array 'a_1' [468]  (2.71 ns)
+	'store' operation (minver.c:101) of variable 'tmp_18', minver.c:101 on array 'a_0' [471]  (2.71 ns)
 
  <State 64>: 6.3ns
 The critical path consists of the following:

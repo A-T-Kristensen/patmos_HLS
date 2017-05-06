@@ -11,12 +11,12 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "minver_hwa_fsub_3hbi.h"
-#include "minver_hwa_fmul_3ibs.h"
-#include "minver_hwa_fdiv_3jbC.h"
-#include "minver_hwa_fpext_kbM.h"
-#include "minver_hwa_fcmp_3lbW.h"
-#include "minver_hwa_dcmp_6mb6.h"
+#include "minver_hwa_fsub_3bkb.h"
+#include "minver_hwa_fmul_3cud.h"
+#include "minver_hwa_fdiv_3dEe.h"
+#include "minver_hwa_fpext_eOg.h"
+#include "minver_hwa_fcmp_3fYi.h"
+#include "minver_hwa_dcmp_6g8j.h"
 #include "minver_hwa_work.h"
 
 namespace ap_rtl {
@@ -62,15 +62,15 @@ struct minver_hwa : public sc_module {
     ofstream mHdltvinHandle;
     ofstream mHdltvoutHandle;
     minver_hwa_work* work_U;
-    minver_hwa_fsub_3hbi<1,5,32,32,32>* minver_hwa_fsub_3hbi_U1;
-    minver_hwa_fsub_3hbi<1,5,32,32,32>* minver_hwa_fsub_3hbi_U2;
-    minver_hwa_fmul_3ibs<1,4,32,32,32>* minver_hwa_fmul_3ibs_U3;
-    minver_hwa_fmul_3ibs<1,4,32,32,32>* minver_hwa_fmul_3ibs_U4;
-    minver_hwa_fdiv_3jbC<1,16,32,32,32>* minver_hwa_fdiv_3jbC_U5;
-    minver_hwa_fpext_kbM<1,1,32,64>* minver_hwa_fpext_kbM_U6;
-    minver_hwa_fcmp_3lbW<1,1,32,32,1>* minver_hwa_fcmp_3lbW_U7;
-    minver_hwa_fcmp_3lbW<1,1,32,32,1>* minver_hwa_fcmp_3lbW_U8;
-    minver_hwa_dcmp_6mb6<1,1,64,64,1>* minver_hwa_dcmp_6mb6_U9;
+    minver_hwa_fsub_3bkb<1,5,32,32,32>* minver_hwa_fsub_3bkb_U1;
+    minver_hwa_fsub_3bkb<1,5,32,32,32>* minver_hwa_fsub_3bkb_U2;
+    minver_hwa_fmul_3cud<1,4,32,32,32>* minver_hwa_fmul_3cud_U3;
+    minver_hwa_fmul_3cud<1,4,32,32,32>* minver_hwa_fmul_3cud_U4;
+    minver_hwa_fdiv_3dEe<1,16,32,32,32>* minver_hwa_fdiv_3dEe_U5;
+    minver_hwa_fpext_eOg<1,1,32,64>* minver_hwa_fpext_eOg_U6;
+    minver_hwa_fcmp_3fYi<1,1,32,32,1>* minver_hwa_fcmp_3fYi_U7;
+    minver_hwa_fcmp_3fYi<1,1,32,32,1>* minver_hwa_fcmp_3fYi_U8;
+    minver_hwa_dcmp_6g8j<1,1,64,64,1>* minver_hwa_dcmp_6g8j_U9;
     sc_signal< sc_lv<115> > ap_CS_fsm;
     sc_signal< sc_lv<1> > ap_CS_fsm_state1;
     sc_signal< sc_lv<32> > wmax_reg_618;

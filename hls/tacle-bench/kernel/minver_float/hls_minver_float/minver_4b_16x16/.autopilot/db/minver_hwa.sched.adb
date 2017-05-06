@@ -2483,7 +2483,7 @@
 					<Obj>
 						<type>0</type>
 						<id>82</id>
-						<name>r_load_2</name>
+						<name>r_load_1</name>
 						<fileName>minver.c</fileName>
 						<fileDirectory>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver_float</fileDirectory>
 						<lineNumber>62</lineNumber>
@@ -3981,7 +3981,7 @@
 					<Obj>
 						<type>0</type>
 						<id>121</id>
-						<name>r_load_1</name>
+						<name>r_load</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -5625,7 +5625,7 @@
 					<Obj>
 						<type>0</type>
 						<id>163</id>
-						<name>r_load</name>
+						<name>r_load_2</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>

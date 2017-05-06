@@ -3,22 +3,21 @@ target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f3
 target triple = "x86_64-unknown-linux-gnu"
 
 @minver_hwa_str = internal unnamed_addr constant [11 x i8] c"minver_hwa\00"
-@minver_hw = common global [256 x float] zeroinitializer
-@p_str9 = private unnamed_addr constant [12 x i8] c"hls_label_5\00", align 1
-@p_str8 = private unnamed_addr constant [12 x i8] c"hls_label_1\00", align 1
-@p_str7 = private unnamed_addr constant [12 x i8] c"hls_label_3\00", align 1
-@p_str6 = private unnamed_addr constant [12 x i8] c"hls_label_0\00", align 1
-@p_str5 = private unnamed_addr constant [12 x i8] c"hls_label_4\00", align 1
+@p_str9 = private unnamed_addr constant [12 x i8] c"hls_label_2\00", align 1
+@p_str8 = private unnamed_addr constant [12 x i8] c"hls_label_5\00", align 1
+@p_str7 = private unnamed_addr constant [12 x i8] c"hls_label_1\00", align 1
+@p_str6 = private unnamed_addr constant [12 x i8] c"hls_label_4\00", align 1
+@p_str5 = private unnamed_addr constant [12 x i8] c"hls_label_0\00", align 1
 @p_str4 = private unnamed_addr constant [11 x i8] c"ap_ctrl_hs\00", align 1
 @p_str3 = private unnamed_addr constant [5 x i8] c"bram\00", align 1
 @p_str2 = private unnamed_addr constant [12 x i8] c"RAM_1P_BRAM\00", align 1
-@p_str10 = private unnamed_addr constant [12 x i8] c"hls_label_2\00", align 1
+@p_str10 = private unnamed_addr constant [12 x i8] c"hls_label_3\00", align 1
 @p_str1 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
 
 define i32 @minver_hwa([128 x float]* %a_0, [128 x float]* %a_1) {
-  call void (...)* @_ssdm_op_SpecBitsMap([128 x float]* %a_1), !map !31
-  call void (...)* @_ssdm_op_SpecBitsMap([128 x float]* %a_0), !map !37
-  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !43
+  call void (...)* @_ssdm_op_SpecBitsMap([128 x float]* %a_1), !map !19
+  call void (...)* @_ssdm_op_SpecBitsMap([128 x float]* %a_0), !map !26
+  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !32
   call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @minver_hwa_str) nounwind
   %work = alloca [500 x i5], align 1
   call void (...)* @_ssdm_op_SpecMemCore([128 x float]* %a_0, [128 x float]* %a_1, [1 x i8]* @p_str1, [12 x i8]* @p_str2, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
@@ -1150,9 +1149,9 @@ entry:
   ret i35 %empty_35
 }
 
-!opencl.kernels = !{!0, !7, !13, !19}
+!opencl.kernels = !{!0, !7, !13, !17}
 !hls.encrypted.func = !{}
-!llvm.map.gv = !{!23, !30}
+!llvm.map.gv = !{}
 
 !0 = metadata !{null, metadata !1, metadata !2, metadata !3, metadata !4, metadata !5, metadata !6}
 !1 = metadata !{metadata !"kernel_arg_addr_space", i32 0}
@@ -1167,39 +1166,28 @@ entry:
 !10 = metadata !{metadata !"kernel_arg_type", metadata !"mat_type [16]*", metadata !"mat_type [16]*", metadata !"mat_type [16]*"}
 !11 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !""}
 !12 = metadata !{metadata !"kernel_arg_name", metadata !"minver_a", metadata !"minver_b", metadata !"minver_c"}
-!13 = metadata !{null, metadata !14, metadata !15, metadata !16, metadata !17, metadata !18, metadata !6}
-!14 = metadata !{metadata !"kernel_arg_addr_space"}
-!15 = metadata !{metadata !"kernel_arg_access_qual"}
-!16 = metadata !{metadata !"kernel_arg_type"}
-!17 = metadata !{metadata !"kernel_arg_type_qual"}
-!18 = metadata !{metadata !"kernel_arg_name"}
-!19 = metadata !{null, metadata !20, metadata !2, metadata !21, metadata !4, metadata !22, metadata !6}
-!20 = metadata !{metadata !"kernel_arg_addr_space", i32 1}
-!21 = metadata !{metadata !"kernel_arg_type", metadata !"mat_type [16]*"}
-!22 = metadata !{metadata !"kernel_arg_name", metadata !"a"}
-!23 = metadata !{metadata !24, null}
-!24 = metadata !{metadata !25}
-!25 = metadata !{i32 0, i32 31, metadata !26}
+!13 = metadata !{null, metadata !14, metadata !2, metadata !15, metadata !4, metadata !16, metadata !6}
+!14 = metadata !{metadata !"kernel_arg_addr_space", i32 1}
+!15 = metadata !{metadata !"kernel_arg_type", metadata !"mat_type [16]*"}
+!16 = metadata !{metadata !"kernel_arg_name", metadata !"minver_hw"}
+!17 = metadata !{null, metadata !14, metadata !2, metadata !15, metadata !4, metadata !18, metadata !6}
+!18 = metadata !{metadata !"kernel_arg_name", metadata !"a"}
+!19 = metadata !{metadata !20}
+!20 = metadata !{i32 0, i32 31, metadata !21}
+!21 = metadata !{metadata !22}
+!22 = metadata !{metadata !"a", metadata !23, metadata !"float", i32 0, i32 31}
+!23 = metadata !{metadata !24, metadata !25}
+!24 = metadata !{i32 0, i32 15, i32 1}
+!25 = metadata !{i32 8, i32 15, i32 1}
 !26 = metadata !{metadata !27}
-!27 = metadata !{metadata !"minver_hw", metadata !28, metadata !"float", i32 0, i32 31}
-!28 = metadata !{metadata !29, metadata !29}
-!29 = metadata !{i32 0, i32 15, i32 1}
-!30 = metadata !{metadata !24, [256 x float]* @minver_hw}
-!31 = metadata !{metadata !32}
-!32 = metadata !{i32 0, i32 31, metadata !33}
-!33 = metadata !{metadata !34}
-!34 = metadata !{metadata !"a", metadata !35, metadata !"float", i32 0, i32 31}
-!35 = metadata !{metadata !29, metadata !36}
-!36 = metadata !{i32 8, i32 15, i32 1}
-!37 = metadata !{metadata !38}
-!38 = metadata !{i32 0, i32 31, metadata !39}
-!39 = metadata !{metadata !40}
-!40 = metadata !{metadata !"a", metadata !41, metadata !"float", i32 0, i32 31}
-!41 = metadata !{metadata !29, metadata !42}
-!42 = metadata !{i32 0, i32 7, i32 1}
-!43 = metadata !{metadata !44}
-!44 = metadata !{i32 0, i32 31, metadata !45}
-!45 = metadata !{metadata !46}
-!46 = metadata !{metadata !"return", metadata !47, metadata !"int", i32 0, i32 31}
-!47 = metadata !{metadata !48}
-!48 = metadata !{i32 0, i32 1, i32 0}
+!27 = metadata !{i32 0, i32 31, metadata !28}
+!28 = metadata !{metadata !29}
+!29 = metadata !{metadata !"a", metadata !30, metadata !"float", i32 0, i32 31}
+!30 = metadata !{metadata !24, metadata !31}
+!31 = metadata !{i32 0, i32 7, i32 1}
+!32 = metadata !{metadata !33}
+!33 = metadata !{i32 0, i32 31, metadata !34}
+!34 = metadata !{metadata !35}
+!35 = metadata !{metadata !"return", metadata !36, metadata !"int", i32 0, i32 31}
+!36 = metadata !{metadata !37}
+!37 = metadata !{i32 0, i32 1, i32 0}

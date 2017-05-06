@@ -4,15 +4,15 @@ target triple = "x86_64-unknown-linux-gnu"
 
 @minver_hwa_str = internal unnamed_addr constant [11 x i8] c"minver_hwa\00" ; [#uses=1 type=[11 x i8]*]
 @minver_hw = common global [256 x float] zeroinitializer ; [#uses=0 type=[256 x float]*]
-@p_str9 = private unnamed_addr constant [12 x i8] c"hls_label_2\00", align 1 ; [#uses=2 type=[12 x i8]*]
-@p_str8 = private unnamed_addr constant [12 x i8] c"hls_label_4\00", align 1 ; [#uses=2 type=[12 x i8]*]
-@p_str7 = private unnamed_addr constant [12 x i8] c"hls_label_0\00", align 1 ; [#uses=2 type=[12 x i8]*]
-@p_str6 = private unnamed_addr constant [12 x i8] c"hls_label_3\00", align 1 ; [#uses=2 type=[12 x i8]*]
-@p_str5 = private unnamed_addr constant [12 x i8] c"hls_label_1\00", align 1 ; [#uses=2 type=[12 x i8]*]
+@p_str9 = private unnamed_addr constant [12 x i8] c"hls_label_0\00", align 1 ; [#uses=2 type=[12 x i8]*]
+@p_str8 = private unnamed_addr constant [12 x i8] c"hls_label_3\00", align 1 ; [#uses=2 type=[12 x i8]*]
+@p_str7 = private unnamed_addr constant [12 x i8] c"hls_label_1\00", align 1 ; [#uses=2 type=[12 x i8]*]
+@p_str6 = private unnamed_addr constant [12 x i8] c"hls_label_5\00", align 1 ; [#uses=2 type=[12 x i8]*]
+@p_str5 = private unnamed_addr constant [12 x i8] c"hls_label_2\00", align 1 ; [#uses=2 type=[12 x i8]*]
 @p_str4 = private unnamed_addr constant [11 x i8] c"ap_ctrl_hs\00", align 1 ; [#uses=1 type=[11 x i8]*]
 @p_str3 = private unnamed_addr constant [5 x i8] c"bram\00", align 1 ; [#uses=5 type=[5 x i8]*]
 @p_str2 = private unnamed_addr constant [12 x i8] c"RAM_1P_BRAM\00", align 1 ; [#uses=5 type=[12 x i8]*]
-@p_str10 = private unnamed_addr constant [12 x i8] c"hls_label_5\00", align 1 ; [#uses=2 type=[12 x i8]*]
+@p_str10 = private unnamed_addr constant [12 x i8] c"hls_label_4\00", align 1 ; [#uses=2 type=[12 x i8]*]
 @p_str1 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1 ; [#uses=77 type=[1 x i8]*]
 
 ; [#uses=0]
@@ -112,7 +112,7 @@ define i32 @minver_hwa([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_
   br i1 %exitcond6, label %_ifconv1, label %_ifconv, !dbg !105 ; [debug line = 59:11]
 
 _ifconv:                                          ; preds = %.preheader12
-  %r_load_2 = load i32* %r, !dbg !115             ; [#uses=1 type=i32] [debug line = 62:7]
+  %r_load_1 = load i32* %r, !dbg !115             ; [#uses=1 type=i32] [debug line = 62:7]
   %empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 16, i64 0) nounwind ; [#uses=0 type=i32]
   %tmp_19 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str6) nounwind, !dbg !116 ; [#uses=1 type=i32] [debug line = 59:33]
   call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind, !dbg !117 ; [debug line = 60:1]
@@ -151,7 +151,7 @@ _ifconv:                                          ; preds = %.preheader12
   call void @llvm.dbg.value(metadata !{i32 %r_1}, i64 0, metadata !93), !dbg !133 ; [debug line = 64:9] [debug variable = r]
   %wmax_1 = select i1 %tmp_55, float %w_3, float %wmax, !dbg !115 ; [#uses=1 type=float] [debug line = 62:7]
   call void @llvm.dbg.value(metadata !{float %wmax_1}, i64 0, metadata !132), !dbg !115 ; [debug line = 62:7] [debug variable = wmax]
-  %r_2 = select i1 %tmp_55, i32 %r_1, i32 %r_load_2, !dbg !115 ; [#uses=1 type=i32] [debug line = 62:7]
+  %r_2 = select i1 %tmp_55, i32 %r_1, i32 %r_load_1, !dbg !115 ; [#uses=1 type=i32] [debug line = 62:7]
   call void @llvm.dbg.value(metadata !{i32 %r_2}, i64 0, metadata !93), !dbg !115 ; [debug line = 62:7] [debug variable = r]
   %empty_18 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str6, i32 %tmp_19) nounwind, !dbg !134 ; [#uses=0 type=i32] [debug line = 66:5]
   %i_6 = add nsw i32 1, %r_1, !dbg !135           ; [#uses=1 type=i32] [debug line = 59:26]
@@ -160,10 +160,10 @@ _ifconv:                                          ; preds = %.preheader12
   br label %.preheader12, !dbg !135               ; [debug line = 59:26]
 
 _ifconv1:                                         ; preds = %.preheader12
-  %r_load_1 = load i32* %r                        ; [#uses=3 type=i32]
-  %tmp_4 = sext i32 %r_load_1 to i64, !dbg !136   ; [#uses=1 type=i64] [debug line = 68:5]
+  %r_load = load i32* %r                          ; [#uses=3 type=i32]
+  %tmp_4 = sext i32 %r_load to i64, !dbg !136     ; [#uses=1 type=i64] [debug line = 68:5]
   %arrayNo2_cast_cast2_1 = zext i3 %arrayNo2 to i5 ; [#uses=2 type=i5]
-  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo2_cast_cast2_1, i32 %r_load_1, i2 %tmp_34) ; [#uses=6 type=float]
+  %pivot = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo2_cast_cast2_1, i32 %r_load, i2 %tmp_34) ; [#uses=6 type=float]
   call void @llvm.dbg.value(metadata !{float %pivot}, i64 0, metadata !137), !dbg !136 ; [debug line = 68:5] [debug variable = pivot]
   call void @llvm.dbg.value(metadata !{float %pivot}, i64 0, metadata !138), !dbg !140 ; [debug line = 8:31@69:11] [debug variable = n]
   %pivot_to_int = bitcast float %pivot to i32     ; [#uses=3 type=i32]
@@ -191,7 +191,7 @@ _ifconv1:                                         ; preds = %.preheader12
   br i1 %tmp_41, label %.loopexit.loopexit63, label %3, !dbg !145 ; [debug line = 70:5]
 
 ; <label>:3                                       ; preds = %_ifconv1
-  %tmp_1 = icmp eq i32 %r_load_1, %i_5_cast, !dbg !146 ; [#uses=1 type=i1] [debug line = 75:5]
+  %tmp_1 = icmp eq i32 %r_load, %i_5_cast, !dbg !146 ; [#uses=1 type=i1] [debug line = 75:5]
   br i1 %tmp_1, label %.loopexit11, label %4, !dbg !146 ; [debug line = 75:5]
 
 ; <label>:4                                       ; preds = %3
@@ -210,7 +210,7 @@ _ifconv1:                                         ; preds = %.preheader12
   br i1 %exitcond5, label %.loopexit11.loopexit, label %6, !dbg !150 ; [debug line = 80:13]
 
 ; <label>:6                                       ; preds = %5
-  %r_load = load i32* %r                          ; [#uses=2 type=i32]
+  %r_load_2 = load i32* %r                        ; [#uses=2 type=i32]
   %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind ; [#uses=0 type=i32]
   %tmp_24 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str7) nounwind, !dbg !152 ; [#uses=1 type=i32] [debug line = 80:35]
   call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind, !dbg !153 ; [debug line = 81:1]
@@ -219,7 +219,7 @@ _ifconv1:                                         ; preds = %.preheader12
   %tmp_64 = call i7 @_ssdm_op_BitConcatenate.i7.i5.i2(i5 %i_5, i2 %tmp_103) ; [#uses=1 type=i7]
   %tmp_65 = zext i7 %tmp_64 to i64, !dbg !110     ; [#uses=4 type=i64] [debug line = 82:2]
   %a_0_addr_2 = getelementptr [64 x float]* %a_0, i64 0, i64 %tmp_65, !dbg !110 ; [#uses=1 type=float*] [debug line = 82:2]
-  %tmp_66 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %r_load, i2 %tmp_103) ; [#uses=1 type=i34]
+  %tmp_66 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %r_load_2, i2 %tmp_103) ; [#uses=1 type=i34]
   %tmp_67 = sext i34 %tmp_66 to i64, !dbg !154    ; [#uses=4 type=i64] [debug line = 83:9]
   %a_0_addr_3 = getelementptr [64 x float]* %a_0, i64 0, i64 %tmp_67, !dbg !154 ; [#uses=1 type=float*] [debug line = 83:9]
   %a_1_addr_2 = getelementptr [64 x float]* %a_1, i64 0, i64 %tmp_65, !dbg !110 ; [#uses=1 type=float*] [debug line = 82:2]
@@ -231,7 +231,7 @@ _ifconv1:                                         ; preds = %.preheader12
   %arrayNo4_cast_cast1_s = zext i3 %arrayNo4 to i5 ; [#uses=2 type=i5]
   %w = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %i_5_cast, i2 %tmp_103) ; [#uses=4 type=float]
   call void @llvm.dbg.value(metadata !{float %w}, i64 0, metadata !131), !dbg !110 ; [debug line = 82:2] [debug variable = w]
-  %tmp_68 = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %r_load, i2 %tmp_103) ; [#uses=4 type=float]
+  %tmp_68 = call fastcc float @aesl_mux_load_4_16_x([64 x float]* %a_0, [64 x float]* %a_1, [64 x float]* %a_2, [64 x float]* %a_3, i5 %arrayNo4_cast_cast1_s, i32 %r_load_2, i2 %tmp_103) ; [#uses=4 type=float]
   switch i3 %arrayNo4, label %branch147 [
     i3 0, label %branch144
     i3 1, label %branch145

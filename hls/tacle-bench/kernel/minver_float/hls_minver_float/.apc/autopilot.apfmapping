@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="minver_lib.c" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver_float/minver_lib.c"/>
-    <originFiles name="minver.c" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver_float/minver.c"/>
     <originFiles name="minver.h" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver_float/minver.h"/>
+    <originFiles name="minver.c" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver_float/minver.c"/>
+    <originFiles name="minver_lib.c" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver_float/minver_lib.c"/>
   </source>
   <testbench>
     <originFiles name="minver_test.c" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver_float/minver_test.c"/>

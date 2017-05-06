@@ -18,13 +18,13 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 1 warning generated.
 
 @I [HLS-10] Validating synthesis directives ...
-@I [HLS-111] Finished Checking Pragmas Time (s): cpu = 00:02:00 ; elapsed = 00:02:02 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 1358 ; free virtual = 15779
-@I [HLS-111] Finished Linking Time (s): cpu = 00:02:00 ; elapsed = 00:02:02 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 1356 ; free virtual = 15777
+@I [HLS-111] Finished Checking Pragmas Time (s): cpu = 00:02:02 ; elapsed = 00:02:09 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 936 ; free virtual = 15643
+@I [HLS-111] Finished Linking Time (s): cpu = 00:02:02 ; elapsed = 00:02:09 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 934 ; free virtual = 15642
 @I [HLS-10] Starting code transformations ...
-@I [HLS-111] Finished Standard Transforms Time (s): cpu = 00:02:00 ; elapsed = 00:02:02 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 1358 ; free virtual = 15778
+@I [HLS-111] Finished Standard Transforms Time (s): cpu = 00:02:02 ; elapsed = 00:02:10 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 934 ; free virtual = 15641
 @I [HLS-10] Checking synthesizability ...
 @I [XFORM-602] Inlining function 'minver_fabs' into 'minver_hwa' (minver.c:61) automatically.
-@I [HLS-111] Finished Checking Synthesizability Time (s): cpu = 00:02:00 ; elapsed = 00:02:02 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 1358 ; free virtual = 15778
+@I [HLS-111] Finished Checking Synthesizability Time (s): cpu = 00:02:02 ; elapsed = 00:02:10 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 934 ; free virtual = 15641
 @I [XFORM-502] Unrolling all sub-loops inside loop 'Loop-2.4' (minver.c:93) in function 'minver_hwa' for pipelining.
 @I [XFORM-502] Unrolling all sub-loops inside loop 'Loop-3.1' (minver.c:116) in function 'minver_hwa' for pipelining.
 @I [XFORM-501] Unrolling loop 'Loop-2.4.1' (minver.c:98) in function 'minver_hwa' completely.
@@ -33,13 +33,13 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [XFORM-602] Inlining function 'minver_fabs' into 'minver_hwa' (minver.c:61) automatically.
 @I [XFORM-401] Performing if-conversion on hyperblock from (minver.c:59:33) to (minver.c:59:26) in function 'minver_hwa'... converting 3 basic blocks.
 @I [XFORM-401] Performing if-conversion on hyperblock from (minver.c:68:5) to (minver.c:70:5) in function 'minver_hwa'... converting 3 basic blocks.
-@I [HLS-111] Finished Pre-synthesis Time (s): cpu = 00:02:01 ; elapsed = 00:02:03 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 1350 ; free virtual = 15771
+@I [HLS-111] Finished Pre-synthesis Time (s): cpu = 00:02:03 ; elapsed = 00:02:11 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 926 ; free virtual = 15633
 @W [XFORM-542] Cannot flatten a loop nest 'Loop-2' (minver.c:56:9) in function 'minver_hwa' : 
                more than one sub loop.
 @W [XFORM-542] Cannot flatten a loop nest 'Loop-3' (minver.c:109:9) in function 'minver_hwa' : 
                the outer loop is not a perfect loop because either the parent loop or the sub loop has no computeable trip count.
 @W [XFORM-631] Renaming function 'aesl_mux_load.4[16 x [4 x float]]P.i32.i64.i64' into aesl_mux_load.4[16 x.
-@I [HLS-111] Finished Architecture Synthesis Time (s): cpu = 00:02:02 ; elapsed = 00:02:04 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 1352 ; free virtual = 15773
+@I [HLS-111] Finished Architecture Synthesis Time (s): cpu = 00:02:05 ; elapsed = 00:02:12 . Memory (MB): peak = 456.270 ; gain = 140.582 ; free physical = 926 ; free virtual = 15633
 @I [HLS-10] Starting hardware synthesis ...
 @I [HLS-10] Synthesizing 'minver_hwa' ...
 @I [HLS-10] ----------------------------------------------------------------
@@ -49,13 +49,13 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [SCHED-61] Pipelining function 'aesl_mux_load_4_16_x'.
 @I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 2.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111]  Elapsed time: 56.83 seconds; current allocated memory: 122.750 MB.
+@I [HLS-111]  Elapsed time: 60.29 seconds; current allocated memory: 122.837 MB.
 @I [BIND-100] Starting micro-architecture generation ...
 @I [BIND-101] Performing variable lifetime analysis.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111]  Elapsed time: 0.02 seconds; current allocated memory: 122.897 MB.
+@I [HLS-111]  Elapsed time: 0.02 seconds; current allocated memory: 122.985 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Implementing module 'minver_hwa' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -131,13 +131,13 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 	'call' operation ('tmp_77', minver.c:88) to 'aesl_mux_load_4_16_x' (5.45 ns)
 	'fdiv' operation ('tmp_12', minver.c:90) (6.3 ns)
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111]  Elapsed time: 1.53 seconds; current allocated memory: 126.554 MB.
+@I [HLS-111]  Elapsed time: 1.49 seconds; current allocated memory: 126.642 MB.
 @I [BIND-100] Starting micro-architecture generation ...
 @I [BIND-101] Performing variable lifetime analysis.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111]  Elapsed time: 0.54 seconds; current allocated memory: 129.167 MB.
+@I [HLS-111]  Elapsed time: 0.52 seconds; current allocated memory: 129.254 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'aesl_mux_load_4_16_x' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -150,7 +150,7 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @W [RTGEN-101] Setting dangling out port 'aesl_mux_load_4_16_x/empty_12_WEN_A' to 0.
 @W [RTGEN-101] Setting dangling out port 'aesl_mux_load_4_16_x/empty_12_Din_A' to 0.
 @I [RTGEN-100] Finished creating RTL model for 'aesl_mux_load_4_16_x'.
-@I [HLS-111]  Elapsed time: 0.32 seconds; current allocated memory: 129.387 MB.
+@I [HLS-111]  Elapsed time: 0.31 seconds; current allocated memory: 129.473 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'minver_hwa' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -172,11 +172,11 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [RTGEN-100] Generating core module 'minver_hwa_fpext_qcK': 1 instance(s).
 @I [RTGEN-100] Generating core module 'minver_hwa_fsub_3ncg': 4 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'minver_hwa'.
-@I [HLS-111]  Elapsed time: 0.43 seconds; current allocated memory: 133.558 MB.
+@I [HLS-111]  Elapsed time: 0.41 seconds; current allocated memory: 133.645 MB.
 @I [RTMG-278] Implementing memory 'minver_hwa_work_ram' using block RAMs.
-@I [HLS-111] Finished generating all RTL models Time (s): cpu = 00:02:06 ; elapsed = 00:02:09 . Memory (MB): peak = 520.270 ; gain = 204.582 ; free physical = 1318 ; free virtual = 15741
+@I [HLS-111] Finished generating all RTL models Time (s): cpu = 00:02:08 ; elapsed = 00:02:16 . Memory (MB): peak = 520.270 ; gain = 204.582 ; free physical = 940 ; free virtual = 15602
 @I [SYSC-301] Generating SystemC RTL for minver_hwa.
 @I [VHDL-304] Generating VHDL RTL for minver_hwa.
 @I [VLOG-307] Generating Verilog RTL for minver_hwa.
 @I [IMPL-8] Exporting RTL as an IP in IP-XACT.
-@I [HLS-112] Total elapsed time: 175.78 seconds; peak allocated memory: 133.558 MB.
+@I [HLS-112] Total elapsed time: 182.37 seconds; peak allocated memory: 133.645 MB.

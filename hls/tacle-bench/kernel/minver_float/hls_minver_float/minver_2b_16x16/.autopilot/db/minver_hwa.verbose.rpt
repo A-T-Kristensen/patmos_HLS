@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'minver_hwa'
 ================================================================
-* Date:           Thu May  4 21:43:28 2017
+* Date:           Sat May  6 18:03:05 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_minver_float
@@ -80,15 +80,15 @@
     +-------------------------+----------------------+---------+-------+-----+-----+
     |         Instance        |        Module        | BRAM_18K| DSP48E|  FF | LUT |
     +-------------------------+----------------------+---------+-------+-----+-----+
-    |minver_hwa_dcmp_6mb6_U9  |minver_hwa_dcmp_6mb6  |        0|      0|  130|  133|
-    |minver_hwa_fcmp_3lbW_U7  |minver_hwa_fcmp_3lbW  |        0|      0|   66|   70|
-    |minver_hwa_fcmp_3lbW_U8  |minver_hwa_fcmp_3lbW  |        0|      0|   66|   70|
-    |minver_hwa_fdiv_3jbC_U5  |minver_hwa_fdiv_3jbC  |        0|      0|  762|  809|
-    |minver_hwa_fmul_3ibs_U3  |minver_hwa_fmul_3ibs  |        0|      3|  143|  140|
-    |minver_hwa_fmul_3ibs_U4  |minver_hwa_fmul_3ibs  |        0|      3|  143|  140|
-    |minver_hwa_fpext_kbM_U6  |minver_hwa_fpext_kbM  |        0|      0|  100|   54|
-    |minver_hwa_fsub_3hbi_U1  |minver_hwa_fsub_3hbi  |        0|      2|  205|  205|
-    |minver_hwa_fsub_3hbi_U2  |minver_hwa_fsub_3hbi  |        0|      2|  205|  205|
+    |minver_hwa_dcmp_6g8j_U9  |minver_hwa_dcmp_6g8j  |        0|      0|  130|  133|
+    |minver_hwa_fcmp_3fYi_U7  |minver_hwa_fcmp_3fYi  |        0|      0|   66|   70|
+    |minver_hwa_fcmp_3fYi_U8  |minver_hwa_fcmp_3fYi  |        0|      0|   66|   70|
+    |minver_hwa_fdiv_3dEe_U5  |minver_hwa_fdiv_3dEe  |        0|      0|  762|  809|
+    |minver_hwa_fmul_3cud_U3  |minver_hwa_fmul_3cud  |        0|      3|  143|  140|
+    |minver_hwa_fmul_3cud_U4  |minver_hwa_fmul_3cud  |        0|      3|  143|  140|
+    |minver_hwa_fpext_eOg_U6  |minver_hwa_fpext_eOg  |        0|      0|  100|   54|
+    |minver_hwa_fsub_3bkb_U1  |minver_hwa_fsub_3bkb  |        0|      2|  205|  205|
+    |minver_hwa_fsub_3bkb_U2  |minver_hwa_fsub_3bkb  |        0|      2|  205|  205|
     +-------------------------+----------------------+---------+-------+-----+-----+
     |Total                    |                      |        0|     10| 1820| 1826|
     +-------------------------+----------------------+---------+-------+-----+-----+
@@ -790,13 +790,13 @@ IsGatedGlobalClock: 0
 
  <State 1>: 2.71ns
 ST_1: StgValue_138 (3)  [1/1] 0.00ns
-:0  call void (...)* @_ssdm_op_SpecBitsMap([128 x float]* %a_1), !map !31
+:0  call void (...)* @_ssdm_op_SpecBitsMap([128 x float]* %a_1), !map !19
 
 ST_1: StgValue_139 (4)  [1/1] 0.00ns
-:1  call void (...)* @_ssdm_op_SpecBitsMap([128 x float]* %a_0), !map !37
+:1  call void (...)* @_ssdm_op_SpecBitsMap([128 x float]* %a_0), !map !26
 
 ST_1: StgValue_140 (5)  [1/1] 0.00ns
-:2  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !43
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !32
 
 ST_1: StgValue_141 (6)  [1/1] 0.00ns
 :3  call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @minver_hwa_str) nounwind

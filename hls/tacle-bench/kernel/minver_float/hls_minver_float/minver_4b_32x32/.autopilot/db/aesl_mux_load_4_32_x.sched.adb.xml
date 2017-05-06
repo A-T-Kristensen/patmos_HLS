@@ -443,8 +443,8 @@ entry_ifconv:20  %empty_30 = load float* %p_addr_3, align 4
 <core>Sel</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="22">
-<or_exp><and_exp><literal name="sel_tmp2" val="0"/>
-<literal name="sel_tmp4" val="0"/>
+<or_exp><and_exp><literal name="sel_tmp4" val="0"/>
+<literal name="sel_tmp2" val="0"/>
 </and_exp></or_exp>
 </condition>
 

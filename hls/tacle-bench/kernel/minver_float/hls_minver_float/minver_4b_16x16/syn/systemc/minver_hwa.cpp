@@ -2796,7 +2796,7 @@ minver_hwa::minver_hwa(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_tmp_1_fu_1411_p2);
     sensitive << ( tmp_2_reg_1888 );
     sensitive << ( i_5_cast_reg_1897 );
-    sensitive << ( r_load_1_reg_2048 );
+    sensitive << ( r_load_reg_2048 );
     sensitive << ( ap_CS_fsm_state15 );
     sensitive << ( tmp_41_fu_1405_p2 );
 
@@ -2940,7 +2940,7 @@ minver_hwa::minver_hwa(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( wmax_to_int_fu_1218_p1 );
 
     SC_METHOD(thread_tmp_4_fu_1366_p1);
-    sensitive << ( r_load_1_reg_2048 );
+    sensitive << ( r_load_reg_2048 );
 
     SC_METHOD(thread_tmp_50_fu_1155_p1);
     sensitive << ( n_assign_1_to_int_fu_1141_p1 );
@@ -3409,7 +3409,7 @@ minver_hwa::minver_hwa(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, tmp_55_reg_2037, "tmp_55_reg_2037");
     sc_trace(mVcdFile, wmax_1_fu_1284_p3, "wmax_1_fu_1284_p3");
     sc_trace(mVcdFile, ap_enable_reg_pp1_iter5, "ap_enable_reg_pp1_iter5");
-    sc_trace(mVcdFile, r_load_1_reg_2048, "r_load_1_reg_2048");
+    sc_trace(mVcdFile, r_load_reg_2048, "r_load_reg_2048");
     sc_trace(mVcdFile, ap_CS_fsm_state11, "ap_CS_fsm_state11");
     sc_trace(mVcdFile, arrayNo2_cast_cast2_1_fu_1302_p1, "arrayNo2_cast_cast2_1_fu_1302_p1");
     sc_trace(mVcdFile, arrayNo2_cast_cast2_1_reg_2055, "arrayNo2_cast_cast2_1_reg_2055");
@@ -4204,7 +4204,7 @@ void minver_hwa::thread_ap_clk_no_reset_() {
     }
     if ((esl_seteq<1,1,1>(ap_const_lv1_1, ap_CS_fsm_state11.read()))) {
         arrayNo2_cast_cast2_1_reg_2055 = arrayNo2_cast_cast2_1_fu_1302_p1.read();
-        r_load_1_reg_2048 = r_fu_160.read();
+        r_load_reg_2048 = r_fu_160.read();
     }
     if ((esl_seteq<1,1,1>(ap_const_lv1_0, tmp_8_reg_2467.read()) && esl_seteq<1,1,1>(ap_const_lv1_1, ap_CS_fsm_pp5_stage2.read()))) {
         arrayNo3_cast_cast1_s_reg_2492 = arrayNo3_cast_cast1_s_fu_1830_p1.read();
@@ -9037,7 +9037,7 @@ void minver_hwa::thread_tmp_18_neg_fu_1681_p2() {
 }
 
 void minver_hwa::thread_tmp_1_fu_1411_p2() {
-    tmp_1_fu_1411_p2 = (!r_load_1_reg_2048.read().is_01() || !i_5_cast_reg_1897.read().is_01())? sc_lv<1>(): sc_lv<1>(r_load_1_reg_2048.read() == i_5_cast_reg_1897.read());
+    tmp_1_fu_1411_p2 = (!r_load_reg_2048.read().is_01() || !i_5_cast_reg_1897.read().is_01())? sc_lv<1>(): sc_lv<1>(r_load_reg_2048.read() == i_5_cast_reg_1897.read());
 }
 
 void minver_hwa::thread_tmp_20_10_fu_1586_p2() {
@@ -9197,7 +9197,7 @@ void minver_hwa::thread_tmp_49_fu_1222_p4() {
 }
 
 void minver_hwa::thread_tmp_4_fu_1366_p1() {
-    tmp_4_fu_1366_p1 = esl_sext<64,32>(r_load_1_reg_2048.read());
+    tmp_4_fu_1366_p1 = esl_sext<64,32>(r_load_reg_2048.read());
 }
 
 void minver_hwa::thread_tmp_50_fu_1155_p1() {

@@ -885,7 +885,7 @@ architecture behav of minver_hwa is
     signal grp_fu_711_opcode : STD_LOGIC_VECTOR (4 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (114 downto 0);
 
-    component minver_hwa_fsub_3hbi IS
+    component minver_hwa_fsub_3bkb IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -902,7 +902,7 @@ architecture behav of minver_hwa is
     end component;
 
 
-    component minver_hwa_fmul_3ibs IS
+    component minver_hwa_fmul_3cud IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -919,7 +919,7 @@ architecture behav of minver_hwa is
     end component;
 
 
-    component minver_hwa_fdiv_3jbC IS
+    component minver_hwa_fdiv_3dEe IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -936,7 +936,7 @@ architecture behav of minver_hwa is
     end component;
 
 
-    component minver_hwa_fpext_kbM IS
+    component minver_hwa_fpext_eOg IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -948,7 +948,7 @@ architecture behav of minver_hwa is
     end component;
 
 
-    component minver_hwa_fcmp_3lbW IS
+    component minver_hwa_fcmp_3fYi IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -963,7 +963,7 @@ architecture behav of minver_hwa is
     end component;
 
 
-    component minver_hwa_dcmp_6mb6 IS
+    component minver_hwa_dcmp_6g8j IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -1020,7 +1020,7 @@ begin
         d1 => work_d1,
         q1 => work_q1);
 
-    minver_hwa_fsub_3hbi_U1 : component minver_hwa_fsub_3hbi
+    minver_hwa_fsub_3bkb_U1 : component minver_hwa_fsub_3bkb
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -1035,7 +1035,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_685_p2);
 
-    minver_hwa_fsub_3hbi_U2 : component minver_hwa_fsub_3hbi
+    minver_hwa_fsub_3bkb_U2 : component minver_hwa_fsub_3bkb
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -1050,7 +1050,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_689_p2);
 
-    minver_hwa_fmul_3ibs_U3 : component minver_hwa_fmul_3ibs
+    minver_hwa_fmul_3cud_U3 : component minver_hwa_fmul_3cud
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -1065,7 +1065,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_693_p2);
 
-    minver_hwa_fmul_3ibs_U4 : component minver_hwa_fmul_3ibs
+    minver_hwa_fmul_3cud_U4 : component minver_hwa_fmul_3cud
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -1080,7 +1080,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_698_p2);
 
-    minver_hwa_fdiv_3jbC_U5 : component minver_hwa_fdiv_3jbC
+    minver_hwa_fdiv_3dEe_U5 : component minver_hwa_fdiv_3dEe
     generic map (
         ID => 1,
         NUM_STAGE => 16,
@@ -1095,7 +1095,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_703_p2);
 
-    minver_hwa_fpext_kbM_U6 : component minver_hwa_fpext_kbM
+    minver_hwa_fpext_eOg_U6 : component minver_hwa_fpext_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1105,7 +1105,7 @@ begin
         din0 => api_reg_2055,
         dout => tmp_5_fu_708_p1);
 
-    minver_hwa_fcmp_3lbW_U7 : component minver_hwa_fcmp_3lbW
+    minver_hwa_fcmp_3fYi_U7 : component minver_hwa_fcmp_3fYi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1118,7 +1118,7 @@ begin
         opcode => grp_fu_711_opcode,
         dout => grp_fu_711_p2);
 
-    minver_hwa_fcmp_3lbW_U8 : component minver_hwa_fcmp_3lbW
+    minver_hwa_fcmp_3fYi_U8 : component minver_hwa_fcmp_3fYi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1131,7 +1131,7 @@ begin
         opcode => ap_const_lv5_2,
         dout => tmp_46_fu_716_p2);
 
-    minver_hwa_dcmp_6mb6_U9 : component minver_hwa_dcmp_6mb6
+    minver_hwa_dcmp_6g8j_U9 : component minver_hwa_dcmp_6g8j
     generic map (
         ID => 1,
         NUM_STAGE => 1,

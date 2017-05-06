@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'aesl_mux_load_4_4_x_s'
 ================================================================
-* Date:           Thu May  4 21:41:16 2017
+* Date:           Sat May  6 15:26:32 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_minver_float
@@ -182,8 +182,8 @@ Target clock period: 10ns, clock uncertainty: 1.25ns.
  <State 1>: 2.39ns
 The critical path consists of the following:
 	wire read on port 'empty' [7]  (0 ns)
-	'getelementptr' operation ('p_addr') [18]  (0 ns)
-	'load' operation ('empty_24') on array 'empty_10' [19]  (2.39 ns)
+	'getelementptr' operation ('p_addr_2') [22]  (0 ns)
+	'load' operation ('empty_26') on array 'empty_8' [23]  (2.39 ns)
 
  <State 2>: 5.13ns
 The critical path consists of the following:

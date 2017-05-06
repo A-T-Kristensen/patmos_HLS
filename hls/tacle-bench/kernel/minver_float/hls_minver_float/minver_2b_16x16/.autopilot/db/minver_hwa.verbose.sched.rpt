@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'minver_hwa'
 ================================================================
-* Date:           Thu May  4 21:43:27 2017
+* Date:           Sat May  6 18:03:03 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_minver_float
@@ -387,13 +387,13 @@ IsGatedGlobalClock: 0
 
  <State 1>: 1.57ns
 ST_1: StgValue_138 (3)  [1/1] 0.00ns
-:0  call void (...)* @_ssdm_op_SpecBitsMap([128 x float]* %a_1), !map !31
+:0  call void (...)* @_ssdm_op_SpecBitsMap([128 x float]* %a_1), !map !19
 
 ST_1: StgValue_139 (4)  [1/1] 0.00ns
-:1  call void (...)* @_ssdm_op_SpecBitsMap([128 x float]* %a_0), !map !37
+:1  call void (...)* @_ssdm_op_SpecBitsMap([128 x float]* %a_0), !map !26
 
 ST_1: StgValue_140 (5)  [1/1] 0.00ns
-:2  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !43
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !32
 
 ST_1: StgValue_141 (6)  [1/1] 0.00ns
 :3  call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @minver_hwa_str) nounwind
@@ -3489,20 +3489,20 @@ The critical path consists of the following:
  <State 17>: 2.71ns
 The critical path consists of the following:
 	'phi' operation ('j') with incoming values : ('j', minver.c:80) [171]  (0 ns)
-	'getelementptr' operation ('a_0_addr_4', minver.c:82) [183]  (0 ns)
-	'load' operation ('a_0_load_4', minver.c:82) on array 'a_0' [191]  (2.71 ns)
+	'getelementptr' operation ('a_1_addr_4', minver.c:82) [187]  (0 ns)
+	'load' operation ('a_1_load_4', minver.c:82) on array 'a_1' [192]  (2.71 ns)
 
  <State 18>: 2.71ns
 The critical path consists of the following:
 	'load' operation ('r_load') on local variable 'r' [176]  (0 ns)
-	'getelementptr' operation ('a_0_addr_6', minver.c:83) [186]  (0 ns)
-	'load' operation ('a_0_load_6', minver.c:83) on array 'a_0' [194]  (2.71 ns)
+	'getelementptr' operation ('a_1_addr_6', minver.c:83) [188]  (0 ns)
+	'load' operation ('a_1_load_6', minver.c:83) on array 'a_1' [195]  (2.71 ns)
 
  <State 19>: 6.79ns
 The critical path consists of the following:
 	'load' operation ('a_0_load_6', minver.c:83) on array 'a_0' [194]  (2.71 ns)
 	'select' operation ('a_load_2_phi', minver.c:83) [196]  (1.37 ns)
-	'store' operation (minver.c:83) of variable 'a_load_2_phi', minver.c:83 on array 'a_0' [203]  (2.71 ns)
+	'store' operation (minver.c:83) of variable 'a_load_2_phi', minver.c:83 on array 'a_1' [199]  (2.71 ns)
 
  <State 20>: 2.71ns
 The critical path consists of the following:

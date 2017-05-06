@@ -2,8 +2,8 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
 # IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-# Start of session at: Thu May  4 21:39:27 2017
-# Process ID: 68800
+# Start of session at: Sat May  6 15:24:40 2017
+# Process ID: 103991
 # Current directory: /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver_float/hls_minver_float/minver_1b_4x4/impl/ip
 # Command line: vivado -notrace -mode batch -source run_ippack.tcl
 # Log file: /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver_float/hls_minver_float/minver_1b_4x4/impl/ip/vivado.log
@@ -34,4 +34,4 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'minver_hwa_ap_fcm
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/patmos/Xilinx/Vivado/2016.4/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Thu May  4 21:39:41 2017...
+INFO: [Common 17-206] Exiting Vivado at Sat May  6 15:24:55 2017...

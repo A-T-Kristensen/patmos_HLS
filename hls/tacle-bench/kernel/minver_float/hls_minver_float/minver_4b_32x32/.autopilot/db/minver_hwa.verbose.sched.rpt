@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'minver_hwa'
 ================================================================
-* Date:           Thu May  4 21:47:57 2017
+* Date:           Sat May  6 15:34:06 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_minver_float
@@ -6574,8 +6574,8 @@ The critical path consists of the following:
 
  <State 98>: 2.71ns
 The critical path consists of the following:
-	'getelementptr' operation ('a_2_addr_1', minver.c:124) [748]  (0 ns)
-	'store' operation (minver.c:125) of variable 'tmp_70', minver.c:129 on array 'a_2' [771]  (2.71 ns)
+	'getelementptr' operation ('a_0_addr_1', minver.c:124) [746]  (0 ns)
+	'store' operation (minver.c:125) of variable 'tmp_70', minver.c:129 on array 'a_0' [777]  (2.71 ns)
 
  <State 99>: 5.74ns
 The critical path consists of the following:

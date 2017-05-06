@@ -22,6 +22,11 @@ file mkdir $outputDir
 create_project project . -part $targetPart -force
 set_property target_language $language [current_project]
 
+# setup testbenchs
+set simtbs [glob -nocomplain ./sim_tbs/*.v ./sim_tbs/*.vhd ./sim_tbs/cdatafile/*.dat ./sim_tbs/rtldatafile/*.dat]
+if {$simtbs != "" } {
+    add_files -fileset sim_1  -norecurse $simtbs
+}
 
 # setup design sources and constraints
 set hdlfs [glob -nocomplain ./*.vhd ./*.v]

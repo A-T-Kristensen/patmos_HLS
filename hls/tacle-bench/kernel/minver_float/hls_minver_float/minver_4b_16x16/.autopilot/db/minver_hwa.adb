@@ -2483,7 +2483,7 @@
             <Obj>
               <type>0</type>
               <id>82</id>
-              <name>r_load_2</name>
+              <name>r_load_1</name>
               <fileName>minver.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>62</lineNumber>
@@ -3981,7 +3981,7 @@
             <Obj>
               <type>0</type>
               <id>121</id>
-              <name>r_load_1</name>
+              <name>r_load</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -5625,7 +5625,7 @@
             <Obj>
               <type>0</type>
               <id>163</id>
-              <name>r_load</name>
+              <name>r_load_2</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -97612,7 +97612,7 @@
           </second>
         </item>
         <item>
-          <first>r_load_1_reg_2048</first>
+          <first>r_load_reg_2048</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -113869,7 +113869,7 @@
         </second>
       </item>
       <item>
-        <first>r_load_1_reg_2048</first>
+        <first>r_load_reg_2048</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

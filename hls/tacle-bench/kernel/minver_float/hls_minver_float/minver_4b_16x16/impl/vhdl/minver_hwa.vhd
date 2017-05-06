@@ -541,7 +541,7 @@ architecture behav of minver_hwa is
     signal tmp_55_reg_2037 : STD_LOGIC_VECTOR (0 downto 0);
     signal wmax_1_fu_1284_p3 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_enable_reg_pp1_iter5 : STD_LOGIC := '0';
-    signal r_load_1_reg_2048 : STD_LOGIC_VECTOR (31 downto 0);
+    signal r_load_reg_2048 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_CS_fsm_state11 : STD_LOGIC_VECTOR (0 downto 0);
     attribute fsm_encoding of ap_CS_fsm_state11 : signal is "none";
     signal arrayNo2_cast_cast2_1_fu_1302_p1 : STD_LOGIC_VECTOR (4 downto 0);
@@ -1879,7 +1879,7 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_lv1_1 = ap_CS_fsm_state11))) then
                     arrayNo2_cast_cast2_1_reg_2055(2 downto 0) <= arrayNo2_cast_cast2_1_fu_1302_p1(2 downto 0);
-                r_load_1_reg_2048 <= r_fu_160;
+                r_load_reg_2048 <= r_fu_160;
             end if;
         end if;
     end process;
@@ -3679,7 +3679,7 @@ begin
     tmp_15_fu_1033_p1 <= std_logic_vector(resize(unsigned(tmp_9_fu_1025_p3),64));
     tmp_17_fu_1687_p1 <= tmp_18_neg_fu_1681_p2;
     tmp_18_neg_fu_1681_p2 <= (w_1_to_int_fu_1639_p1 xor ap_const_lv32_80000000);
-    tmp_1_fu_1411_p2 <= "1" when (r_load_1_reg_2048 = i_5_cast_reg_1897) else "0";
+    tmp_1_fu_1411_p2 <= "1" when (r_load_reg_2048 = i_5_cast_reg_1897) else "0";
     tmp_20_10_fu_1586_p2 <= "1" when (i_5_reg_690 = ap_const_lv5_B) else "0";
     tmp_20_11_fu_1592_p2 <= "1" when (i_5_reg_690 = ap_const_lv5_C) else "0";
     tmp_20_12_fu_1598_p2 <= "1" when (i_5_reg_690 = ap_const_lv5_D) else "0";
@@ -3719,7 +3719,7 @@ begin
     tmp_47_fu_1204_p4 <= w_3_to_int_fu_1201_p1(30 downto 23);
     tmp_48_fu_1383_p1 <= tmp_5_to_int_fu_1370_p1(52 - 1 downto 0);
     tmp_49_fu_1222_p4 <= wmax_to_int_fu_1218_p1(30 downto 23);
-        tmp_4_fu_1366_p1 <= std_logic_vector(resize(signed(r_load_1_reg_2048),64));
+        tmp_4_fu_1366_p1 <= std_logic_vector(resize(signed(r_load_reg_2048),64));
 
     tmp_50_fu_1155_p1 <= n_assign_1_to_int_fu_1141_p1(23 - 1 downto 0);
     tmp_51_fu_1248_p2 <= (notrhs3_fu_1242_p2 or notlhs3_fu_1236_p2);

@@ -2114,7 +2114,7 @@ typedef float mat_type;
 
 
 
-void set_minver();
+void set_minver(mat_type minver_hw[16][16]);
 int minver_hwa(mat_type a[16][16]);
 int minver_minver(mat_type minver_a[16][16], int side, mat_type eps);
 
@@ -2128,8 +2128,6 @@ int minver_return(mat_type minver_a_i[16][16]);
 
 int minver_main();
 int main( void );
-
-mat_type minver_hw[16][16];
 # 34 "minver.c" 2
 
 int minver_hwa(mat_type a[16][16])

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'aesl_mux_load_4_4_x_s'" level="0">
-<item name = "Date">Thu May  4 21:41:17 2017
+<item name = "Date">Sat May  6 15:26:33 2017
 </item>
 <item name = "Version">2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)</item>
 <item name = "Project">hls_minver_float</item>

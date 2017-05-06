@@ -41,15 +41,15 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7a100t:csg324:-1"
-set SourceFiles {sc {} c {../../minver_lib.c ../../minver.c ../../minver.h}}
-set SourceFlags {sc {} c {{ } { } { }}}
+set SourceFiles {sc {} c {../../minver_lib.c ../../minver.c}}
+set SourceFlags {sc {} c {{} {}}}
 set DirectiveFile {/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/minver_float/hls_minver_float/minver_1b_32x32/minver_1b_32x32.directive}
-set TBFiles {verilog ../../minver_test.c bc ../../minver_test.c sc ../../minver_test.c vhdl ../../minver_test.c c {} cas ../../minver_test.c}
+set TBFiles {verilog ../../minver_test.c bc ../../minver_test.c vhdl ../../minver_test.c sc ../../minver_test.c cas ../../minver_test.c c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {verilog {} bc {} sc {} vhdl {} c {} cas {}}
-set TBInstNames {verilog {} bc {} sc {} vhdl {} c {} cas {}}
+set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
 set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set PlatformFiles {{DefaultPlatform {xilinx/artix7/artix7 xilinx/artix7/artix7_fpv6}}}

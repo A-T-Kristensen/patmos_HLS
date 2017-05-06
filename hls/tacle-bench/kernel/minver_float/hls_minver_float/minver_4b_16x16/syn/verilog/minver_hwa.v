@@ -545,7 +545,7 @@ wire   [0:0] tmp_55_fu_1278_p2;
 reg   [0:0] tmp_55_reg_2037;
 wire   [31:0] wmax_1_fu_1284_p3;
 reg    ap_enable_reg_pp1_iter5;
-reg   [31:0] r_load_1_reg_2048;
+reg   [31:0] r_load_reg_2048;
 wire   [0:0] ap_CS_fsm_state11;
 wire   [4:0] arrayNo2_cast_cast2_1_fu_1302_p1;
 reg   [4:0] arrayNo2_cast_cast2_1_reg_2055;
@@ -1548,7 +1548,7 @@ end
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state11)) begin
         arrayNo2_cast_cast2_1_reg_2055[2 : 0] <= arrayNo2_cast_cast2_1_fu_1302_p1[2 : 0];
-        r_load_1_reg_2048 <= r_fu_160;
+        r_load_reg_2048 <= r_fu_160;
     end
 end
 
@@ -3505,7 +3505,7 @@ assign tmp_17_fu_1687_p1 = tmp_18_neg_fu_1681_p2;
 
 assign tmp_18_neg_fu_1681_p2 = (w_1_to_int_fu_1639_p1 ^ ap_const_lv32_80000000);
 
-assign tmp_1_fu_1411_p2 = ((r_load_1_reg_2048 == i_5_cast_reg_1897) ? 1'b1 : 1'b0);
+assign tmp_1_fu_1411_p2 = ((r_load_reg_2048 == i_5_cast_reg_1897) ? 1'b1 : 1'b0);
 
 assign tmp_20_10_fu_1586_p2 = ((i_5_reg_690 == ap_const_lv5_B) ? 1'b1 : 1'b0);
 
@@ -3585,7 +3585,7 @@ assign tmp_48_fu_1383_p1 = tmp_5_to_int_fu_1370_p1[51:0];
 
 assign tmp_49_fu_1222_p4 = {{wmax_to_int_fu_1218_p1[ap_const_lv32_1E : ap_const_lv32_17]}};
 
-assign tmp_4_fu_1366_p1 = $signed(r_load_1_reg_2048);
+assign tmp_4_fu_1366_p1 = $signed(r_load_reg_2048);
 
 assign tmp_50_fu_1155_p1 = n_assign_1_to_int_fu_1141_p1[22:0];
 

@@ -443,8 +443,8 @@ entry_ifconv:20  %empty_30 = load float* %p_addr_3, align 4
 <core>Sel</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="22">
-<or_exp><and_exp><literal name="sel_tmp2" val="0"/>
-<literal name="sel_tmp4" val="0"/>
+<or_exp><and_exp><literal name="sel_tmp4" val="0"/>
+<literal name="sel_tmp2" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -851,9 +851,9 @@ entry_ifconv:27  ret float %UnifiedRetVal
 </dataflow>
 <dataflow id="217" from="UnifiedRetVal" to="StgValue_34" fromId="33" toId="34">
 </dataflow>
-<dataflow id="218" from="sel_tmp2" to="StgValue_2" fromId="17" toId="2">
+<dataflow id="218" from="sel_tmp4" to="StgValue_2" fromId="18" toId="2">
 </dataflow>
-<dataflow id="219" from="sel_tmp4" to="StgValue_2" fromId="18" toId="2">
+<dataflow id="219" from="sel_tmp2" to="StgValue_2" fromId="17" toId="2">
 </dataflow>
 </dataflows>
 

@@ -5,14 +5,14 @@ target triple = "x86_64-unknown-linux-gnu"
 @minver_hwa.str = internal unnamed_addr constant [11 x i8] c"minver_hwa\00" ; [#uses=1 type=[11 x i8]*]
 @minver_hw = common global [32 x [32 x float]] zeroinitializer, align 16 ; [#uses=0 type=[32 x [32 x float]]*]
 @.str9 = private unnamed_addr constant [12 x i8] c"hls_label_2\00", align 1 ; [#uses=1 type=[12 x i8]*]
-@.str8 = private unnamed_addr constant [12 x i8] c"hls_label_4\00", align 1 ; [#uses=1 type=[12 x i8]*]
-@.str7 = private unnamed_addr constant [12 x i8] c"hls_label_0\00", align 1 ; [#uses=1 type=[12 x i8]*]
-@.str6 = private unnamed_addr constant [12 x i8] c"hls_label_3\00", align 1 ; [#uses=1 type=[12 x i8]*]
+@.str8 = private unnamed_addr constant [12 x i8] c"hls_label_0\00", align 1 ; [#uses=1 type=[12 x i8]*]
+@.str7 = private unnamed_addr constant [12 x i8] c"hls_label_4\00", align 1 ; [#uses=1 type=[12 x i8]*]
+@.str6 = private unnamed_addr constant [12 x i8] c"hls_label_5\00", align 1 ; [#uses=1 type=[12 x i8]*]
 @.str5 = private unnamed_addr constant [12 x i8] c"hls_label_1\00", align 1 ; [#uses=1 type=[12 x i8]*]
 @.str4 = private unnamed_addr constant [11 x i8] c"ap_ctrl_hs\00", align 1 ; [#uses=1 type=[11 x i8]*]
 @.str3 = private unnamed_addr constant [5 x i8] c"bram\00", align 1 ; [#uses=1 type=[5 x i8]*]
 @.str2 = private unnamed_addr constant [12 x i8] c"RAM_1P_BRAM\00", align 1 ; [#uses=1 type=[12 x i8]*]
-@.str10 = private unnamed_addr constant [12 x i8] c"hls_label_5\00", align 1 ; [#uses=1 type=[12 x i8]*]
+@.str10 = private unnamed_addr constant [12 x i8] c"hls_label_3\00", align 1 ; [#uses=1 type=[12 x i8]*]
 @.str1 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1 ; [#uses=1 type=[1 x i8]*]
 @.str = private unnamed_addr constant [6 x i8] c"BLOCK\00", align 1 ; [#uses=1 type=[6 x i8]*]
 
@@ -86,7 +86,7 @@ define i32 @minver_hwa([32 x float]* %a) nounwind uwtable {
   call void @llvm.dbg.value(metadata !{float %wmax.1}, i64 0, metadata !114), !dbg !113 ; [debug line = 62:7] [debug variable = wmax]
   %r.2 = select i1 %tmp.9, i32 %r.3, i32 %r.1, !dbg !113 ; [#uses=1 type=i32] [debug line = 62:7]
   call void @llvm.dbg.value(metadata !{i32 %r.2}, i64 0, metadata !117), !dbg !113 ; [debug line = 62:7] [debug variable = r]
-  %rend26 = call i32 (...)* @_ssdm_op_SpecRegionEnd(i8* getelementptr inbounds ([12 x i8]* @.str6, i64 0, i64 0), i32 %rbegin2) nounwind, !dbg !119 ; [#uses=0 type=i32] [debug line = 66:5]
+  %rend30 = call i32 (...)* @_ssdm_op_SpecRegionEnd(i8* getelementptr inbounds ([12 x i8]* @.str6, i64 0, i64 0), i32 %rbegin2) nounwind, !dbg !119 ; [#uses=0 type=i32] [debug line = 66:5]
   %i.7 = add nsw i32 %r.3, 1, !dbg !120           ; [#uses=1 type=i32] [debug line = 59:26]
   call void @llvm.dbg.value(metadata !{i32 %i.7}, i64 0, metadata !104), !dbg !120 ; [debug line = 59:26] [debug variable = i]
   br label %.preheader12, !dbg !120               ; [debug line = 59:26]
@@ -126,7 +126,7 @@ define i32 @minver_hwa([32 x float]* %a) nounwind uwtable {
   br i1 %exitcond5, label %.loopexit11.loopexit, label %8, !dbg !133 ; [debug line = 80:13]
 
 ; <label>:8                                       ; preds = %7
-  %rbegin = call i32 (...)* @_ssdm_op_SpecRegionBegin(i8* getelementptr inbounds ([12 x i8]* @.str7, i64 0, i64 0)) nounwind, !dbg !135 ; [#uses=1 type=i32] [debug line = 80:35]
+  %rbegin4 = call i32 (...)* @_ssdm_op_SpecRegionBegin(i8* getelementptr inbounds ([12 x i8]* @.str7, i64 0, i64 0)) nounwind, !dbg !135 ; [#uses=1 type=i32] [debug line = 80:35]
   call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i64 0, i64 0)) nounwind, !dbg !137 ; [debug line = 81:1]
   %tmp.16 = sext i32 %j to i64, !dbg !138         ; [#uses=2 type=i64] [debug line = 82:2]
   %a.addr.4 = getelementptr inbounds [32 x float]* %a, i64 %tmp.3, i64 %tmp.16, !dbg !138 ; [#uses=2 type=float*] [debug line = 82:2]
@@ -138,7 +138,7 @@ define i32 @minver_hwa([32 x float]* %a) nounwind uwtable {
   call void (...)* @_ssdm_SpecKeepArrayLoad(float %a.load.2) nounwind
   store float %a.load.2, float* %a.addr.4, align 4, !dbg !139 ; [debug line = 83:9]
   store float %w, float* %a.addr.5, align 4, !dbg !140 ; [debug line = 84:9]
-  %rend = call i32 (...)* @_ssdm_op_SpecRegionEnd(i8* getelementptr inbounds ([12 x i8]* @.str7, i64 0, i64 0), i32 %rbegin) nounwind, !dbg !141 ; [#uses=0 type=i32] [debug line = 85:7]
+  %rend28 = call i32 (...)* @_ssdm_op_SpecRegionEnd(i8* getelementptr inbounds ([12 x i8]* @.str7, i64 0, i64 0), i32 %rbegin4) nounwind, !dbg !141 ; [#uses=0 type=i32] [debug line = 85:7]
   %j.3 = add nsw i32 %j, 1, !dbg !142             ; [#uses=1 type=i32] [debug line = 80:28]
   call void @llvm.dbg.value(metadata !{i32 %j.3}, i64 0, metadata !143), !dbg !142 ; [debug line = 80:28] [debug variable = j]
   br label %7, !dbg !142                          ; [debug line = 80:28]
@@ -158,7 +158,7 @@ define i32 @minver_hwa([32 x float]* %a) nounwind uwtable {
   br label %.preheader10, !dbg !146               ; [debug line = 93:11]
 
 ; <label>:10                                      ; preds = %9
-  %rbegin4 = call i32 (...)* @_ssdm_op_SpecRegionBegin(i8* getelementptr inbounds ([12 x i8]* @.str8, i64 0, i64 0)) nounwind, !dbg !148 ; [#uses=1 type=i32] [debug line = 88:33]
+  %rbegin = call i32 (...)* @_ssdm_op_SpecRegionBegin(i8* getelementptr inbounds ([12 x i8]* @.str8, i64 0, i64 0)) nounwind, !dbg !148 ; [#uses=1 type=i32] [debug line = 88:33]
   call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str1, i64 0, i64 0)) nounwind, !dbg !150 ; [debug line = 89:1]
   %tmp.19 = sext i32 %i.2 to i64, !dbg !151       ; [#uses=1 type=i64] [debug line = 90:2]
   %a.addr.6 = getelementptr inbounds [32 x float]* %a, i64 %tmp.3, i64 %tmp.19, !dbg !151 ; [#uses=2 type=float*] [debug line = 90:2]
@@ -166,7 +166,7 @@ define i32 @minver_hwa([32 x float]* %a) nounwind uwtable {
   call void (...)* @_ssdm_SpecKeepArrayLoad(float %a.load.5) nounwind
   %tmp.20 = fdiv float %a.load.5, %pivot, !dbg !151 ; [#uses=1 type=float] [debug line = 90:2]
   store float %tmp.20, float* %a.addr.6, align 4, !dbg !151 ; [debug line = 90:2]
-  %rend28 = call i32 (...)* @_ssdm_op_SpecRegionEnd(i8* getelementptr inbounds ([12 x i8]* @.str8, i64 0, i64 0), i32 %rbegin4) nounwind, !dbg !152 ; [#uses=0 type=i32] [debug line = 91:5]
+  %rend = call i32 (...)* @_ssdm_op_SpecRegionEnd(i8* getelementptr inbounds ([12 x i8]* @.str8, i64 0, i64 0), i32 %rbegin) nounwind, !dbg !152 ; [#uses=0 type=i32] [debug line = 91:5]
   %i.9 = add nsw i32 %i.2, 1, !dbg !153           ; [#uses=1 type=i32] [debug line = 88:26]
   call void @llvm.dbg.value(metadata !{i32 %i.9}, i64 0, metadata !104), !dbg !153 ; [debug line = 88:26] [debug variable = i]
   br label %9, !dbg !153                          ; [debug line = 88:26]
@@ -294,7 +294,7 @@ define i32 @minver_hwa([32 x float]* %a) nounwind uwtable {
   br label %18, !dbg !190                         ; [debug line = 122:28]
 
 ; <label>:20                                      ; preds = %18
-  %rend30 = call i32 (...)* @_ssdm_op_SpecRegionEnd(i8* getelementptr inbounds ([12 x i8]* @.str10, i64 0, i64 0), i32 %rbegin3) nounwind, !dbg !191 ; [#uses=0 type=i32] [debug line = 127:5]
+  %rend26 = call i32 (...)* @_ssdm_op_SpecRegionEnd(i8* getelementptr inbounds ([12 x i8]* @.str10, i64 0, i64 0), i32 %rbegin3) nounwind, !dbg !191 ; [#uses=0 type=i32] [debug line = 127:5]
   br label %.preheader, !dbg !191                 ; [debug line = 127:5]
 
 ; <label>:21                                      ; preds = %.preheader

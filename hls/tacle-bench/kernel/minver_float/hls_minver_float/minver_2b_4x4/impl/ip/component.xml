@@ -1074,8 +1074,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Minver_hwa</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1705042140</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2017-05-04T19:40:37Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1705061525</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2017-05-06T13:25:51Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2016.4</xilinx:xilinxVersion>

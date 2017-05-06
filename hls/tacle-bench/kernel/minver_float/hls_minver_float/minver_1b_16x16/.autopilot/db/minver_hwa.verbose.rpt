@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'minver_hwa'
 ================================================================
-* Date:           Fri May  5 09:01:30 2017
+* Date:           Sat May  6 17:04:52 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_minver_float
@@ -824,10 +824,10 @@ IsGatedGlobalClock: 0
 
  <State 1>: 2.71ns
 ST_1: StgValue_164 (2)  [1/1] 0.00ns
-:0  call void (...)* @_ssdm_op_SpecBitsMap([256 x float]* %a) nounwind, !map !31
+:0  call void (...)* @_ssdm_op_SpecBitsMap([256 x float]* %a) nounwind, !map !19
 
 ST_1: StgValue_165 (3)  [1/1] 0.00ns
-:1  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !35
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !25
 
 ST_1: StgValue_166 (4)  [1/1] 0.00ns
 :2  call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @minver_hwa_str) nounwind

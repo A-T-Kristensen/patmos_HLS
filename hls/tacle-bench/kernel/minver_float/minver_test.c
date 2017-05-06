@@ -149,8 +149,8 @@ int minver_main()
   int i, j;
   int err_cnt = 0;
   mat_type eps = 1.0e-6;
-
-  set_minver();
+  mat_type minver_hw[DIM][DIM];
+  set_minver(minver_hw);
   mat_type minver_sw[DIM][DIM];
   mat_type minver_hw_i[DIM][DIM];
   mat_type minver_sw_i[DIM][DIM];
@@ -166,12 +166,35 @@ int minver_main()
     }
   }
 
+  for ( i = 0; i < DIM; i++ ) {
+    for ( j = 0; j < DIM; j++ ) {
+      printf("%f ", minver_hw[i][j]);
+    }
+    printf("\n");
+  }
+
   // Perform matrix inversion
   // for this benchmark, it is enough to just check with the checksum
   //minver_minver(minver_a, 3, eps ); 
   minver_hwa(minver_hw_i);
 
   minver_minver(minver_sw_i, DIM, eps);
+
+  for ( i = 0; i < DIM; i++ ) {
+    for ( j = 0; j < DIM; j++ ) {
+      printf("%f ", minver_hw_i[i][j]);
+    }
+    printf("\n");
+  }
+
+    printf("\n");
+
+  for ( i = 0; i < DIM; i++ ) {
+    for ( j = 0; j < DIM; j++ ) {
+        printf("%f ", minver_sw_i[i][j]);
+    }
+    printf("\n");
+  }
 
   for ( i = 0; i < DIM; i++ ) {
     for ( j = 0; j < DIM; j++ ) {
