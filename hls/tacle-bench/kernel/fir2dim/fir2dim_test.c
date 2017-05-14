@@ -72,8 +72,9 @@ void fir2dim_pin_down(float *pimage, float *parray,
   float i, f;
 
   for ( i = 0 ; i < IMAGEDIM ; i++ ) {
-	for ( f = 0 ; f < IMAGEDIM ; f++ )
+	for ( f = 0 ; f < IMAGEDIM ; f++ ){
 	  *pimage++ = 1 ;
+	}
   }
 
   pimage = pimage - IMAGEDIM * IMAGEDIM;
@@ -123,42 +124,38 @@ int fir2dim_main(float fir2dim_coefficients[COEFFICIENTS * COEFFICIENTS],
 
   int k, f, i;
 
-  //fir2dim_pin_down(&fir2dim_image[0], &fir2dim_array[0],
-//				   &fir2dim_coefficients[0], &fir2dim_output[0]);
-
   poutput = &fir2dim_output[0];
 
-  for ( k = 0 ; k < IMAGEDIM ; k++ ) {
+	for ( k = 0 ; k < IMAGEDIM ; k++ ) {
 
-	for ( f = 0 ; f < IMAGEDIM ; f++ ) {
-	  pcoeff = &fir2dim_coefficients[0] ;
-	  parray = &fir2dim_array[k * ARRAYDIM + f] ;
-	  parray2 = parray + ARRAYDIM;
-	  parray3 = parray + ARRAYDIM + ARRAYDIM;
+		for ( f = 0 ; f < IMAGEDIM ; f++ ) {
+		  pcoeff = &fir2dim_coefficients[0] ;
+		  parray = &fir2dim_array[k * ARRAYDIM + f] ;
+		  parray2 = parray + ARRAYDIM;
+		  parray3 = parray + ARRAYDIM + ARRAYDIM;
 
-	  *poutput = 0 ;
+		  *poutput = 0 ;
 
-	  for ( i = 0 ; i < COEFFICIENTS ; i++ ){
-		*poutput += *pcoeff++ * *parray++ ;
-	  }
+		  for ( i = 0 ; i < COEFFICIENTS ; i++ ){
+			*poutput += *pcoeff++ * *parray++ ;
+		  }
 
-	  for ( i = 0 ; i < COEFFICIENTS ; i++ ){
-		*poutput += *pcoeff++ * *parray2++ ;
-	  }
+		  for ( i = 0 ; i < COEFFICIENTS ; i++ ){
+			*poutput += *pcoeff++ * *parray2++ ;
+		  }
 
-	  for ( i = 0 ; i < COEFFICIENTS ; i++ ){
-		*poutput += *pcoeff++ * *parray3++ ;
-	  }
+		  for ( i = 0 ; i < COEFFICIENTS ; i++ ){
+			*poutput += *pcoeff++ * *parray3++ ;
+		  }
 
-	  poutput++ ;
+		  poutput++ ;
+		}
 	}
-  }
 
   fir2dim_result = fir2dim_output[0] + fir2dim_output[5] + fir2dim_array[9];
 
   return fir2dim_result;
 }
-
 
 int main(void) {
 
@@ -173,6 +170,8 @@ int main(void) {
 	float fir2dim_output_sw[IMAGEDIM * IMAGEDIM] = {0};
 	float fir2dim_output_hw[IMAGEDIM * IMAGEDIM] = {0};
 
+	// Initialize
+
   	fir2dim_init(fir2dim_coefficients, fir2dim_image, 
 				 fir2dim_array, fir2dim_output_hw);
 
@@ -184,6 +183,8 @@ int main(void) {
 
     fir2dim_pin_down(&fir2dim_image[0], &fir2dim_array[0],
   				   &fir2dim_coefficients[0], &fir2dim_output_hw[0]);
+
+    // Assign values to input array
 
     // Assign the values
     for(i = 0; i < COEFFICIENTS*COEFFICIENTS; i++){
@@ -197,25 +198,24 @@ int main(void) {
     for(i = 0; i < ARRAYDIM*ARRAYDIM; i++){
     	fir2dim_input[ARRAY_OFFSET + i] = fir2dim_array[i];
     }
-/*
-    for(i = 0; i < IMAGEDIM*IMAGEDIM; i++){
-    	fir2dim_input[OUTPUT_OFFSET + i] = fir2dim_output_hw[i];
-    }
-*/
-  	fir2dim_hwa(fir2dim_input, fir2dim_output_hw);
-/*
-    for(i = 0; i < IMAGEDIM*IMAGEDIM; i++){
-    	fir2dim_output_hw[i] = fir2dim_input[OUTPUT_OFFSET + i];
-    }
-*/
-  fir2dim_result_hw = fir2dim_output_hw[0] + fir2dim_output_hw[5] + fir2dim_array[9];
 
-  printf("%d\n", fir2dim_return(fir2dim_result_hw));
+    // Run hardware
+
+  	fir2dim_hwa(fir2dim_input, fir2dim_output_hw);
+
+  	// Run software
+
 
 	fir2dim_result_sw = fir2dim_main(fir2dim_coefficients, fir2dim_image,
 		       						 fir2dim_array, fir2dim_output_sw);
 
-  printf("%d\n", fir2dim_return(fir2dim_result_sw));
+	// Check results
+
+	fir2dim_result_hw = fir2dim_output_hw[0] + fir2dim_output_hw[5] + fir2dim_array[9];
+
+	printf("%d\n", fir2dim_return(fir2dim_result_hw));
+
+	printf("%d\n", fir2dim_return(fir2dim_result_sw));
 
   return 0;
 }

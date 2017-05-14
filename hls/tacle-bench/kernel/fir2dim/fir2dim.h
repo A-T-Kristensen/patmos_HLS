@@ -31,23 +31,18 @@
 #define COEFF_OFFSET 0
 #define IMAGE_OFFSET (COEFFICIENTS*COEFFICIENTS)
 #define ARRAY_OFFSET (IMAGE_OFFSET+IMAGEDIM*IMAGEDIM)
-#define OUTPUT_OFFSET (ARRAY_OFFSET+ARRAYDIM*ARRAYDIM)
 #define SIZE (COEFFICIENTS * COEFFICIENTS + 1*IMAGEDIM * IMAGEDIM + ARRAYDIM * ARRAYDIM)
-
 
 /*
   Forward declaration of functions
 */
 
-
 void fir2dim_initSeed( void );
 
 long fir2dim_randomInteger();
 
-void fir2dim_pin_down(float *pimage, 
-					  float *parray, 
-					  float *pcoeff,
-					  float *poutput );
+void fir2dim_pin_down(float *pimage, float *parray,
+					  float *pcoeff, float *poutput);
 
 void fir2dim_init(float fir2dim_coefficients[COEFFICIENTS * COEFFICIENTS], 
 				  float fir2dim_image[IMAGEDIM * IMAGEDIM], 
@@ -63,9 +58,7 @@ int fir2dim_main(float fir2dim_coefficients[COEFFICIENTS * COEFFICIENTS],
 
 int main( void );
 
-void fir2dim_pin_down_hwa(float *pimage, 
-						  float *parray, 
-						  float *pcoeff, 
-						  float *poutput );
+void fir2dim_pin_down_hwa(float *pimage, float *parray,
+						  float *pcoeff, float *poutput);
 
 void fir2dim_hwa(float fir2dim_input[SIZE], float fir2dim_output[IMAGEDIM * IMAGEDIM]);

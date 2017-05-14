@@ -37,9 +37,9 @@
 			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/.apc/.tb</location>
 		</link>
 		<link>
-			<name>solution1/constraints</name>
+			<name>fir2dim/constraints</name>
 			<type>2</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.tcls</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/fir2dim/.tcls</location>
 		</link>
 		<link>
 			<name>source/fir2dim.c</name>
@@ -57,19 +57,19 @@
 			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/fir2dim_test.c</location>
 		</link>
 		<link>
-			<name>solution1/constraints/.xml.directive</name>
+			<name>fir2dim/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/solution1.directive</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/fir2dim/fir2dim.directive</location>
 		</link>
 		<link>
-			<name>solution1/constraints/directives.tcl</name>
+			<name>fir2dim/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/directives.tcl</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/fir2dim/directives.tcl</location>
 		</link>
 		<link>
-			<name>solution1/constraints/script.tcl</name>
+			<name>fir2dim/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/script.tcl</location>
+			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/fir2dim/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

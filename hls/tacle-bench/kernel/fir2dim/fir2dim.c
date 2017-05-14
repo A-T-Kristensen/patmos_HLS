@@ -107,13 +107,8 @@ void fir2dim_hwa(float  fir2dim_input[SIZE], float fir2dim_output[IMAGEDIM * IMA
 
   float *pcoeff  = &fir2dim_input[COEFF_OFFSET];
   float *poutput = &fir2dim_output[0];
-  poutput = &fir2dim_output[0];
 
   int k, f, i;
-
-  //fir2dim_pin_down_hwa(&fir2dim_image[0], &fir2dim_array[0],
-//					   &fir2dim_coefficients[0], &fir2dim_output[0]);
-
 
   for ( k = 0 ; k < IMAGEDIM ; k++ ) {
 	#pragma HLS PIPELINE
@@ -126,7 +121,6 @@ void fir2dim_hwa(float  fir2dim_input[SIZE], float fir2dim_output[IMAGEDIM * IMA
 	  parray3 = parray + ARRAYDIM + ARRAYDIM ;
 
 	  *poutput = 0 ;
-
 
 	  for ( i = 0 ; i < COEFFICIENTS ; i++ ){
 		*poutput += *pcoeff++ * *parray++ ;
@@ -144,6 +138,4 @@ void fir2dim_hwa(float  fir2dim_input[SIZE], float fir2dim_output[IMAGEDIM * IMA
 	}
   }
 
- // fir2dim_pin_down(&fir2dim_image[0], &fir2dim_array[0],
-				   //&fir2dim_coefficients[0], &fir2dim_output[0] );
 }

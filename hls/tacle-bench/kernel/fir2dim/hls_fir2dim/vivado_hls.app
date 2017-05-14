@@ -1,8 +1,8 @@
-<project xmlns="com.autoesl.autopilot.project" top="fir2dim_hwa" name="hls_fir2dim">
+<project xmlns="com.autoesl.autopilot.project" name="hls_fir2dim" top="fir2dim_hwa">
     <files>
-        <file name="fir2dim.c" sc="0" tb="false" cflags=""/>
+        <file name="../../fir2dim_test.c" sc="0" tb="1" cflags=" "/>
         <file name="fir2dim.h" sc="0" tb="false" cflags=""/>
-        <file name="../../fir2dim_test.c" sc="0" tb="1" cflags=""/>
+        <file name="fir2dim.c" sc="0" tb="false" cflags=""/>
     </files>
     <includePaths/>
     <libraryPaths/>
@@ -10,7 +10,7 @@
         <SimFlow name="csim" csimMode="0" lastCsimMode="0" compiler="true"/>
     </Simulation>
     <solutions xmlns="">
-        <solution name="solution1" status="active"/>
+        <solution name="fir2dim" status="active"/>
     </solutions>
 </project>
 
