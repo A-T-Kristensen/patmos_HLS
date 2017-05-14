@@ -34,7 +34,7 @@ The image is an array IMAGEDIM * IMAGEDIM pixels. To provide
  *
  * The output image is of dimension IMAGEDIM * IMAGEDIM.
   Source: DSP-Stone
-          http://www.ice.rwth-aachen.de/research/tools-projects/entry/detail/dspstone/
+		  http://www.ice.rwth-aachen.de/research/tools-projects/entry/detail/dspstone/
 
   Original name: fir2dim_float
 
@@ -44,100 +44,98 @@ The image is an array IMAGEDIM * IMAGEDIM pixels. To provide
 
 */
 
-#define STORAGE_CLASS register
-#define TYPE          int
-#define IMAGEDIM      4
-#define ARRAYDIM      (IMAGEDIM + 2)
-#define COEFFICIENTS  3
+#include "fir2dim.h"
 
 /*
   Helper functions
 */
-
-void fir2dim_pin_down( float *pimage, float *parray, float *pcoeff, float *poutput )
-{
-  register float    i, f;
+/*
+void fir2dim_pin_down_hwa(float *pimage, float *parray, 
+						  float *pcoeff, float *poutput) {
+  float i, f;
 
   for ( i = 0 ; i < IMAGEDIM ; i++ ) {
-    for ( f = 0 ; f < IMAGEDIM ; f++ )
-      *pimage++ = 1 ;
-  }
+	for ( f = 0 ; f < IMAGEDIM ; f++ ) {
+	  *pimage++ = 1 ;		
+	  }
+	}
 
   pimage = pimage - IMAGEDIM * IMAGEDIM  ;
 
-  for ( i = 0; i < COEFFICIENTS * COEFFICIENTS; i++ )
-    *pcoeff++ = 1;
-
-  for ( i = 0 ; i < ARRAYDIM ; i++ )
-    *parray++ = 0 ;
-
-  for ( f = 0 ; f < IMAGEDIM; f++ ) {
-    *parray++ = 0 ;
-
-    for ( i = 0 ; i < IMAGEDIM ; i++ )
-      *parray++ = *pimage++ ;
-    *parray++ = 0 ;
+  for ( i = 0; i < COEFFICIENTS * COEFFICIENTS; i++ ){
+	*pcoeff++ = 1;  	
   }
 
-  for ( i = 0 ; i < ARRAYDIM ; i++ )
-    *parray++ = 0 ;
+  for ( i = 0 ; i < ARRAYDIM ; i++ ){
+	*parray++ = 0 ;  	
+  }
 
-  for ( i = 0 ; i < IMAGEDIM * IMAGEDIM; i++ )
-    *poutput++ = 0 ;
+  for ( f = 0 ; f < IMAGEDIM; f++ ) {
+	*parray++ = 0 ;
+
+	for ( i = 0 ; i < IMAGEDIM ; i++ ) {
+	  *parray++ = *pimage++ ;		
+	}
+	*parray++ = 0 ;
+  }
+
+  for ( i = 0 ; i < ARRAYDIM ; i++ ){
+	*parray++ = 0 ;  	
+  }
+  for ( i = 0 ; i < IMAGEDIM * IMAGEDIM; i++ ){
+	*poutput++ = 0 ;
+  }
 }
 
-
+*/
 /*
   Main functions
 */
 
-void fir2dim_main()
-{
-  register float *parray  = &fir2dim_array[0], *parray2, *parray3 ;
-  register float *pcoeff  = &fir2dim_coefficients[0] ;
-  register float *poutput = &fir2dim_output[0]       ;
+void fir2dim_hwa(float  fir2dim_coefficients[COEFFICIENTS * COEFFICIENTS], 
+				 float  fir2dim_image[IMAGEDIM * IMAGEDIM],
+				 float  fir2dim_array[ARRAYDIM * ARRAYDIM],
+				 float  fir2dim_output[IMAGEDIM * IMAGEDIM]) {
+
+  float *parray  = &fir2dim_array[0], *parray2, *parray3 ;
+
+  float *pcoeff  = &fir2dim_coefficients[0] ;
+  float *poutput = &fir2dim_output[0]       ;
   int k, f, i;
 
-  fir2dim_pin_down( &fir2dim_image[0], &fir2dim_array[0],
-            &fir2dim_coefficients[0], &fir2dim_output[0] );
+  //fir2dim_pin_down_hwa(&fir2dim_image[0], &fir2dim_array[0],
+//					   &fir2dim_coefficients[0], &fir2dim_output[0]);
 
-  poutput = &fir2dim_output[0]       ;
+  poutput = &fir2dim_output[0];
 
   for ( k = 0 ; k < IMAGEDIM ; k++ ) {
+	#pragma HLS PIPELINE
 
-    for ( f = 0 ; f < IMAGEDIM ; f++ ) {
-      pcoeff = &fir2dim_coefficients[0] ;
-      parray = &fir2dim_array[k * ARRAYDIM + f] ;
-      parray2 = parray + ARRAYDIM ;
-      parray3 = parray + ARRAYDIM + ARRAYDIM ;
+	for ( f = 0 ; f < IMAGEDIM ; f++ ) {
 
-      *poutput = 0 ;
+	  pcoeff = &fir2dim_coefficients[0] ;
+	  parray = &fir2dim_array[k * ARRAYDIM + f] ;
+	  parray2 = parray + ARRAYDIM ;
+	  parray3 = parray + ARRAYDIM + ARRAYDIM ;
 
-      for ( i = 0 ; i < COEFFICIENTS ; i++ )
-        *poutput += *pcoeff++ **parray++ ;
+	  *poutput = 0 ;
 
-      for ( i = 0 ; i < COEFFICIENTS ; i++ )
-        *poutput += *pcoeff++ **parray2++ ;
+	  for ( i = 0 ; i < COEFFICIENTS ; i++ ){
+		*poutput += *pcoeff++ **parray++ ;	  	
+	  }
 
-      for ( i = 0 ; i < COEFFICIENTS ; i++ )
-        *poutput += *pcoeff++ **parray3++ ;
+	  for ( i = 0 ; i < COEFFICIENTS ; i++ ){
+		*poutput += *pcoeff++ **parray2++ ;	  	
+	  }
 
-      poutput++ ;
-    }
+	  for ( i = 0 ; i < COEFFICIENTS ; i++ ){
+		*poutput += *pcoeff++ **parray3++ ;	  	
+	  }
+
+	  poutput++ ;
+	}
   }
 
-  fir2dim_result = fir2dim_output[0] + fir2dim_output[5] + fir2dim_array[9];
-
-  fir2dim_pin_down( &fir2dim_image[0], &fir2dim_array[0],
-            &fir2dim_coefficients[0], &fir2dim_output[0] );
+ // fir2dim_pin_down(&fir2dim_image[0], &fir2dim_array[0],
+				   //&fir2dim_coefficients[0], &fir2dim_output[0] );
 }
-
-
-int main( void )
-{
-  fir2dim_init();
-  fir2dim_main();
-
-  return ( fir2dim_return() );
-}
-

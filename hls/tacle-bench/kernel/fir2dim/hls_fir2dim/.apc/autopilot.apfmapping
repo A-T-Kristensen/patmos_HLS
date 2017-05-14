@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fir2dim.c" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/fir2dim.c"/>
+    <originFiles name="fir2dim.h" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/fir2dim.h"/>
+  </source>
+  <testbench>
+    <originFiles name="fir2dim_test.c" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/fir2dim_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
