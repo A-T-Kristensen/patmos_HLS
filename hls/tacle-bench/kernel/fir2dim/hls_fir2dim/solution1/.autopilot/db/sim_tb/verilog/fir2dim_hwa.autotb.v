@@ -17,19 +17,13 @@
 `define AUTOTB_MAX_ALLOW_LATENCY  15000000
 `define AUTOTB_CLOCK_PERIOD_DIV2 5.00
 
-`define AESL_MEM_fir2dim_coefficients AESL_automem_fir2dim_coefficients
-`define AESL_MEM_INST_fir2dim_coefficients mem_inst_fir2dim_coefficients
-`define AESL_MEM_fir2dim_image AESL_automem_fir2dim_image
-`define AESL_MEM_INST_fir2dim_image mem_inst_fir2dim_image
-`define AESL_MEM_fir2dim_array AESL_automem_fir2dim_array
-`define AESL_MEM_INST_fir2dim_array mem_inst_fir2dim_array
-`define AESL_MEM_fir2dim_output AESL_automem_fir2dim_output
-`define AESL_MEM_INST_fir2dim_output mem_inst_fir2dim_output
-`define AUTOTB_TVIN_fir2dim_coefficients  "./c.fir2dim_hwa.autotvin_fir2dim_coefficients.dat"
-`define AUTOTB_TVIN_fir2dim_array  "./c.fir2dim_hwa.autotvin_fir2dim_array.dat"
+`define AESL_BRAM_fir2dim_input AESL_autobram_fir2dim_input
+`define AESL_BRAM_INST_fir2dim_input bram_inst_fir2dim_input
+`define AESL_BRAM_fir2dim_output AESL_autobram_fir2dim_output
+`define AESL_BRAM_INST_fir2dim_output bram_inst_fir2dim_output
+`define AUTOTB_TVIN_fir2dim_input  "./c.fir2dim_hwa.autotvin_fir2dim_input.dat"
 `define AUTOTB_TVIN_fir2dim_output  "./c.fir2dim_hwa.autotvin_fir2dim_output.dat"
-`define AUTOTB_TVIN_fir2dim_coefficients_out_wrapc  "./rtl.fir2dim_hwa.autotvin_fir2dim_coefficients.dat"
-`define AUTOTB_TVIN_fir2dim_array_out_wrapc  "./rtl.fir2dim_hwa.autotvin_fir2dim_array.dat"
+`define AUTOTB_TVIN_fir2dim_input_out_wrapc  "./rtl.fir2dim_hwa.autotvin_fir2dim_input.dat"
 `define AUTOTB_TVIN_fir2dim_output_out_wrapc  "./rtl.fir2dim_hwa.autotvin_fir2dim_output.dat"
 `define AUTOTB_TVOUT_fir2dim_output  "./c.fir2dim_hwa.autotvout_fir2dim_output.dat"
 `define AUTOTB_TVOUT_fir2dim_output_out_wrapc  "./impl_rtl.fir2dim_hwa.autotvout_fir2dim_output.dat"
@@ -37,14 +31,13 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 1;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 131;
-parameter LENGTH_fir2dim_coefficients = 9;
-parameter LENGTH_fir2dim_array = 36;
+parameter LATENCY_ESTIMATION = 137;
+parameter LENGTH_fir2dim_input = 61;
 parameter LENGTH_fir2dim_output = 16;
 
 task read_token;
     input integer fp;
-    output reg [255 : 0] token;
+    output reg [191 : 0] token;
     integer ret;
     begin
         token = "";
@@ -56,10 +49,10 @@ endtask
 task post_check;
     input integer fp1;
     input integer fp2;
-    reg [255 : 0] token1;
-    reg [255 : 0] token2;
-    reg [255 : 0] golden;
-    reg [255 : 0] result;
+    reg [191 : 0] token1;
+    reg [191 : 0] token2;
+    reg [191 : 0] golden;
+    reg [191 : 0] result;
     integer ret;
     begin
         read_token(fp1, token1);
@@ -127,32 +120,20 @@ wire ap_start;
 wire ap_done;
 wire ap_idle;
 wire ap_ready;
-wire [3 : 0] fir2dim_coefficients_address0;
-wire  fir2dim_coefficients_ce0;
-wire [31 : 0] fir2dim_coefficients_q0;
-wire [3 : 0] fir2dim_coefficients_address1;
-wire  fir2dim_coefficients_ce1;
-wire [31 : 0] fir2dim_coefficients_q1;
-wire [3 : 0] fir2dim_image_address0;
-wire  fir2dim_image_ce0;
-wire  fir2dim_image_we0;
-wire [31 : 0] fir2dim_image_d0;
-wire [31 : 0] fir2dim_image_q0;
-wire [3 : 0] fir2dim_image_address1;
-wire  fir2dim_image_ce1;
-wire  fir2dim_image_we1;
-wire [31 : 0] fir2dim_image_d1;
-wire [31 : 0] fir2dim_image_q1;
-wire [5 : 0] fir2dim_array_address0;
-wire  fir2dim_array_ce0;
-wire [31 : 0] fir2dim_array_q0;
-wire [5 : 0] fir2dim_array_address1;
-wire  fir2dim_array_ce1;
-wire [31 : 0] fir2dim_array_q1;
-wire [3 : 0] fir2dim_output_address0;
-wire  fir2dim_output_ce0;
-wire  fir2dim_output_we0;
-wire [31 : 0] fir2dim_output_d0;
+wire [31 : 0] fir2dim_input_ADDR_A;
+wire  fir2dim_input_EN_A;
+wire [3 : 0] fir2dim_input_WEN_A;
+wire [31 : 0] fir2dim_input_DIN_A;
+wire [31 : 0] fir2dim_input_DOUT_A;
+wire  fir2dim_input_CLK_A;
+wire  fir2dim_input_RST_A;
+wire [31 : 0] fir2dim_output_ADDR_A;
+wire  fir2dim_output_EN_A;
+wire [3 : 0] fir2dim_output_WEN_A;
+wire [31 : 0] fir2dim_output_DIN_A;
+wire [31 : 0] fir2dim_output_DOUT_A;
+wire  fir2dim_output_CLK_A;
+wire  fir2dim_output_RST_A;
 integer done_cnt = 0;
 integer AESL_ready_cnt = 0;
 integer ready_cnt = 0;
@@ -174,32 +155,20 @@ wire ap_rst_n;
     .ap_done(ap_done),
     .ap_idle(ap_idle),
     .ap_ready(ap_ready),
-    .fir2dim_coefficients_address0(fir2dim_coefficients_address0),
-    .fir2dim_coefficients_ce0(fir2dim_coefficients_ce0),
-    .fir2dim_coefficients_q0(fir2dim_coefficients_q0),
-    .fir2dim_coefficients_address1(fir2dim_coefficients_address1),
-    .fir2dim_coefficients_ce1(fir2dim_coefficients_ce1),
-    .fir2dim_coefficients_q1(fir2dim_coefficients_q1),
-    .fir2dim_image_address0(fir2dim_image_address0),
-    .fir2dim_image_ce0(fir2dim_image_ce0),
-    .fir2dim_image_we0(fir2dim_image_we0),
-    .fir2dim_image_d0(fir2dim_image_d0),
-    .fir2dim_image_q0(fir2dim_image_q0),
-    .fir2dim_image_address1(fir2dim_image_address1),
-    .fir2dim_image_ce1(fir2dim_image_ce1),
-    .fir2dim_image_we1(fir2dim_image_we1),
-    .fir2dim_image_d1(fir2dim_image_d1),
-    .fir2dim_image_q1(fir2dim_image_q1),
-    .fir2dim_array_address0(fir2dim_array_address0),
-    .fir2dim_array_ce0(fir2dim_array_ce0),
-    .fir2dim_array_q0(fir2dim_array_q0),
-    .fir2dim_array_address1(fir2dim_array_address1),
-    .fir2dim_array_ce1(fir2dim_array_ce1),
-    .fir2dim_array_q1(fir2dim_array_q1),
-    .fir2dim_output_address0(fir2dim_output_address0),
-    .fir2dim_output_ce0(fir2dim_output_ce0),
-    .fir2dim_output_we0(fir2dim_output_we0),
-    .fir2dim_output_d0(fir2dim_output_d0));
+    .fir2dim_input_Addr_A(fir2dim_input_ADDR_A),
+    .fir2dim_input_EN_A(fir2dim_input_EN_A),
+    .fir2dim_input_WEN_A(fir2dim_input_WEN_A),
+    .fir2dim_input_Din_A(fir2dim_input_DIN_A),
+    .fir2dim_input_Dout_A(fir2dim_input_DOUT_A),
+    .fir2dim_input_Clk_A(fir2dim_input_CLK_A),
+    .fir2dim_input_Rst_A(fir2dim_input_RST_A),
+    .fir2dim_output_Addr_A(fir2dim_output_ADDR_A),
+    .fir2dim_output_EN_A(fir2dim_output_EN_A),
+    .fir2dim_output_WEN_A(fir2dim_output_WEN_A),
+    .fir2dim_output_Din_A(fir2dim_output_DIN_A),
+    .fir2dim_output_Dout_A(fir2dim_output_DOUT_A),
+    .fir2dim_output_Clk_A(fir2dim_output_CLK_A),
+    .fir2dim_output_Rst_A(fir2dim_output_RST_A));
 
 // Assignment for control signal
 assign ap_clk = AESL_clock;
@@ -231,144 +200,89 @@ assign AESL_continue = tb_continue;
             end
         end
     end
-//------------------------arrayfir2dim_coefficients Instantiation--------------
+//------------------------bramfir2dim_input Instantiation--------------
 
-// The input and output of arrayfir2dim_coefficients
-wire    arrayfir2dim_coefficients_ce0, arrayfir2dim_coefficients_ce1;
-wire    arrayfir2dim_coefficients_we0, arrayfir2dim_coefficients_we1;
-wire    [3 : 0]    arrayfir2dim_coefficients_address0, arrayfir2dim_coefficients_address1;
-wire    [31 : 0]    arrayfir2dim_coefficients_din0, arrayfir2dim_coefficients_din1;
-wire    [31 : 0]    arrayfir2dim_coefficients_dout0, arrayfir2dim_coefficients_dout1;
-wire    arrayfir2dim_coefficients_ready;
-wire    arrayfir2dim_coefficients_done;
+// The input and output of bramfir2dim_input
+wire  bramfir2dim_input_Clk_A, bramfir2dim_input_Clk_B;
+wire  bramfir2dim_input_EN_A, bramfir2dim_input_EN_B;
+wire  [4 - 1 : 0] bramfir2dim_input_WEN_A, bramfir2dim_input_WEN_B;
+wire    [31 : 0]    bramfir2dim_input_Addr_A, bramfir2dim_input_Addr_B;
+wire    [31 : 0]    bramfir2dim_input_Din_A, bramfir2dim_input_Din_B;
+wire    [31 : 0]    bramfir2dim_input_Dout_A, bramfir2dim_input_Dout_B;
+wire    bramfir2dim_input_ready;
+wire    bramfir2dim_input_done;
 
-`AESL_MEM_fir2dim_coefficients `AESL_MEM_INST_fir2dim_coefficients(
-    .clk        (AESL_clock),
-    .rst        (AESL_reset),
-    .ce0        (arrayfir2dim_coefficients_ce0),
-    .we0        (arrayfir2dim_coefficients_we0),
-    .address0   (arrayfir2dim_coefficients_address0),
-    .din0       (arrayfir2dim_coefficients_din0),
-    .dout0      (arrayfir2dim_coefficients_dout0),
-    .ce1        (arrayfir2dim_coefficients_ce1),
-    .we1        (arrayfir2dim_coefficients_we1),
-    .address1   (arrayfir2dim_coefficients_address1),
-    .din1       (arrayfir2dim_coefficients_din1),
-    .dout1      (arrayfir2dim_coefficients_dout1),
-    .ready      (arrayfir2dim_coefficients_ready),
-    .done    (arrayfir2dim_coefficients_done)
+`AESL_BRAM_fir2dim_input `AESL_BRAM_INST_fir2dim_input(
+    .Clk_A    (bramfir2dim_input_Clk_A),
+    .Rst_A    (bramfir2dim_input_Rst_A),
+    .EN_A     (bramfir2dim_input_EN_A),
+    .WEN_A    (bramfir2dim_input_WEN_A),
+    .Addr_A   (bramfir2dim_input_Addr_A),
+    .Din_A    (bramfir2dim_input_Din_A),
+    .Dout_A   (bramfir2dim_input_Dout_A),
+    .Clk_B    (bramfir2dim_input_Clk_B),
+    .Rst_B    (bramfir2dim_input_Rst_B),
+    .EN_B     (bramfir2dim_input_EN_B),
+    .WEN_B    (bramfir2dim_input_WEN_B),
+    .Addr_B   (bramfir2dim_input_Addr_B),
+    .Din_B    (bramfir2dim_input_Din_B),
+    .Dout_B   (bramfir2dim_input_Dout_B),
+    .ready    (bramfir2dim_input_ready),
+    .done        (bramfir2dim_input_done)
 );
 
-// Assignment between dut and arrayfir2dim_coefficients
-assign arrayfir2dim_coefficients_address0 = fir2dim_coefficients_address0;
-assign arrayfir2dim_coefficients_ce0 = fir2dim_coefficients_ce0;
-assign fir2dim_coefficients_q0 = arrayfir2dim_coefficients_dout0;
-assign arrayfir2dim_coefficients_we0 = 0;
-assign arrayfir2dim_coefficients_din0 = 0;
-assign arrayfir2dim_coefficients_address1 = fir2dim_coefficients_address1;
-assign arrayfir2dim_coefficients_ce1 = fir2dim_coefficients_ce1;
-assign fir2dim_coefficients_q1 = arrayfir2dim_coefficients_dout1;
-assign arrayfir2dim_coefficients_we1 = 0;
-assign arrayfir2dim_coefficients_din1 = 0;
-assign arrayfir2dim_coefficients_ready=    ready;
-assign arrayfir2dim_coefficients_done = 0;
+// Assignment between dut and bramfir2dim_input
+assign bramfir2dim_input_Clk_A = fir2dim_input_CLK_A;
+assign bramfir2dim_input_Rst_A = fir2dim_input_RST_A;
+assign bramfir2dim_input_Addr_A = fir2dim_input_ADDR_A;
+assign bramfir2dim_input_EN_A = fir2dim_input_EN_A;
+assign fir2dim_input_DOUT_A = bramfir2dim_input_Dout_A;
+assign bramfir2dim_input_WEN_A = 0;
+assign bramfir2dim_input_Din_A = 0;
+assign bramfir2dim_input_ready=    ready;
+assign bramfir2dim_input_done = 0;
 
 
-//------------------------arrayfir2dim_image Instantiation--------------
+//------------------------bramfir2dim_output Instantiation--------------
 
-// The input and output of arrayfir2dim_image
-wire    arrayfir2dim_image_ce0, arrayfir2dim_image_ce1;
-wire    arrayfir2dim_image_we0, arrayfir2dim_image_we1;
-wire    [3 : 0]    arrayfir2dim_image_address0, arrayfir2dim_image_address1;
-wire    [31 : 0]    arrayfir2dim_image_din0, arrayfir2dim_image_din1;
-wire    [31 : 0]    arrayfir2dim_image_dout0, arrayfir2dim_image_dout1;
-wire    arrayfir2dim_image_ready;
-wire    arrayfir2dim_image_done;
+// The input and output of bramfir2dim_output
+wire  bramfir2dim_output_Clk_A, bramfir2dim_output_Clk_B;
+wire  bramfir2dim_output_EN_A, bramfir2dim_output_EN_B;
+wire  [4 - 1 : 0] bramfir2dim_output_WEN_A, bramfir2dim_output_WEN_B;
+wire    [31 : 0]    bramfir2dim_output_Addr_A, bramfir2dim_output_Addr_B;
+wire    [31 : 0]    bramfir2dim_output_Din_A, bramfir2dim_output_Din_B;
+wire    [31 : 0]    bramfir2dim_output_Dout_A, bramfir2dim_output_Dout_B;
+wire    bramfir2dim_output_ready;
+wire    bramfir2dim_output_done;
 
-// Assignment between dut and arrayfir2dim_image
-assign arrayfir2dim_image_done = 0;
-
-
-//------------------------arrayfir2dim_array Instantiation--------------
-
-// The input and output of arrayfir2dim_array
-wire    arrayfir2dim_array_ce0, arrayfir2dim_array_ce1;
-wire    arrayfir2dim_array_we0, arrayfir2dim_array_we1;
-wire    [5 : 0]    arrayfir2dim_array_address0, arrayfir2dim_array_address1;
-wire    [31 : 0]    arrayfir2dim_array_din0, arrayfir2dim_array_din1;
-wire    [31 : 0]    arrayfir2dim_array_dout0, arrayfir2dim_array_dout1;
-wire    arrayfir2dim_array_ready;
-wire    arrayfir2dim_array_done;
-
-`AESL_MEM_fir2dim_array `AESL_MEM_INST_fir2dim_array(
-    .clk        (AESL_clock),
-    .rst        (AESL_reset),
-    .ce0        (arrayfir2dim_array_ce0),
-    .we0        (arrayfir2dim_array_we0),
-    .address0   (arrayfir2dim_array_address0),
-    .din0       (arrayfir2dim_array_din0),
-    .dout0      (arrayfir2dim_array_dout0),
-    .ce1        (arrayfir2dim_array_ce1),
-    .we1        (arrayfir2dim_array_we1),
-    .address1   (arrayfir2dim_array_address1),
-    .din1       (arrayfir2dim_array_din1),
-    .dout1      (arrayfir2dim_array_dout1),
-    .ready      (arrayfir2dim_array_ready),
-    .done    (arrayfir2dim_array_done)
+`AESL_BRAM_fir2dim_output `AESL_BRAM_INST_fir2dim_output(
+    .Clk_A    (bramfir2dim_output_Clk_A),
+    .Rst_A    (bramfir2dim_output_Rst_A),
+    .EN_A     (bramfir2dim_output_EN_A),
+    .WEN_A    (bramfir2dim_output_WEN_A),
+    .Addr_A   (bramfir2dim_output_Addr_A),
+    .Din_A    (bramfir2dim_output_Din_A),
+    .Dout_A   (bramfir2dim_output_Dout_A),
+    .Clk_B    (bramfir2dim_output_Clk_B),
+    .Rst_B    (bramfir2dim_output_Rst_B),
+    .EN_B     (bramfir2dim_output_EN_B),
+    .WEN_B    (bramfir2dim_output_WEN_B),
+    .Addr_B   (bramfir2dim_output_Addr_B),
+    .Din_B    (bramfir2dim_output_Din_B),
+    .Dout_B   (bramfir2dim_output_Dout_B),
+    .ready    (bramfir2dim_output_ready),
+    .done        (bramfir2dim_output_done)
 );
 
-// Assignment between dut and arrayfir2dim_array
-assign arrayfir2dim_array_address0 = fir2dim_array_address0;
-assign arrayfir2dim_array_ce0 = fir2dim_array_ce0;
-assign fir2dim_array_q0 = arrayfir2dim_array_dout0;
-assign arrayfir2dim_array_we0 = 0;
-assign arrayfir2dim_array_din0 = 0;
-assign arrayfir2dim_array_address1 = fir2dim_array_address1;
-assign arrayfir2dim_array_ce1 = fir2dim_array_ce1;
-assign fir2dim_array_q1 = arrayfir2dim_array_dout1;
-assign arrayfir2dim_array_we1 = 0;
-assign arrayfir2dim_array_din1 = 0;
-assign arrayfir2dim_array_ready=    ready;
-assign arrayfir2dim_array_done = 0;
-
-
-//------------------------arrayfir2dim_output Instantiation--------------
-
-// The input and output of arrayfir2dim_output
-wire    arrayfir2dim_output_ce0, arrayfir2dim_output_ce1;
-wire    arrayfir2dim_output_we0, arrayfir2dim_output_we1;
-wire    [3 : 0]    arrayfir2dim_output_address0, arrayfir2dim_output_address1;
-wire    [31 : 0]    arrayfir2dim_output_din0, arrayfir2dim_output_din1;
-wire    [31 : 0]    arrayfir2dim_output_dout0, arrayfir2dim_output_dout1;
-wire    arrayfir2dim_output_ready;
-wire    arrayfir2dim_output_done;
-
-`AESL_MEM_fir2dim_output `AESL_MEM_INST_fir2dim_output(
-    .clk        (AESL_clock),
-    .rst        (AESL_reset),
-    .ce0        (arrayfir2dim_output_ce0),
-    .we0        (arrayfir2dim_output_we0),
-    .address0   (arrayfir2dim_output_address0),
-    .din0       (arrayfir2dim_output_din0),
-    .dout0      (arrayfir2dim_output_dout0),
-    .ce1        (arrayfir2dim_output_ce1),
-    .we1        (arrayfir2dim_output_we1),
-    .address1   (arrayfir2dim_output_address1),
-    .din1       (arrayfir2dim_output_din1),
-    .dout1      (arrayfir2dim_output_dout1),
-    .ready      (arrayfir2dim_output_ready),
-    .done    (arrayfir2dim_output_done)
-);
-
-// Assignment between dut and arrayfir2dim_output
-assign arrayfir2dim_output_address0 = fir2dim_output_address0;
-assign arrayfir2dim_output_ce0 = fir2dim_output_ce0;
-assign arrayfir2dim_output_we0 = fir2dim_output_we0;
-assign arrayfir2dim_output_din0 = fir2dim_output_d0;
-assign arrayfir2dim_output_we1 = 0;
-assign arrayfir2dim_output_din1 = 0;
-assign arrayfir2dim_output_ready= ready_initial | arrayfir2dim_output_done;
-assign arrayfir2dim_output_done =    AESL_done_delay;
+// Assignment between dut and bramfir2dim_output
+assign bramfir2dim_output_Clk_A = fir2dim_output_CLK_A;
+assign bramfir2dim_output_Rst_A = fir2dim_output_RST_A;
+assign bramfir2dim_output_Addr_A = fir2dim_output_ADDR_A;
+assign bramfir2dim_output_EN_A = fir2dim_output_EN_A;
+assign bramfir2dim_output_WEN_A = fir2dim_output_WEN_A;
+assign bramfir2dim_output_Din_A = fir2dim_output_DIN_A;
+assign bramfir2dim_output_ready= ready_initial | bramfir2dim_output_done;
+assign bramfir2dim_output_done =    AESL_done_delay;
 
 
 initial begin : generate_AESL_ready_cnt_proc
@@ -426,18 +340,6 @@ end
         @ (posedge AESL_clock);
         @ (posedge AESL_clock);
         @ (posedge AESL_clock);
-    fp1 = $fopen("./rtl.fir2dim_hwa.autotvout_fir2dim_output.dat", "r");
-    fp2 = $fopen("./impl_rtl.fir2dim_hwa.autotvout_fir2dim_output.dat", "r");
-    if(fp1 == 0)        // Failed to open file
-        $display("Failed to open file \"./rtl.fir2dim_hwa.autotvout_fir2dim_output.dat\"!");
-    else if(fp2 == 0)
-        $display("Failed to open file \"./impl_rtl.fir2dim_hwa.autotvout_fir2dim_output.dat\"!");
-    else begin
-        $display("Comparing rtl.fir2dim_hwa.autotvout_fir2dim_output.dat with impl_rtl.fir2dim_hwa.autotvout_fir2dim_output.dat");
-        post_check(fp1, fp2);
-    end
-    $fclose(fp1);
-    $fclose(fp2);
         $display("Simulation Passed.");
         $finish;
     end
@@ -448,12 +350,9 @@ initial begin
 end
 
 
-reg end_fir2dim_coefficients;
-reg [31:0] size_fir2dim_coefficients;
-reg [31:0] size_fir2dim_coefficients_backup;
-reg end_fir2dim_array;
-reg [31:0] size_fir2dim_array;
-reg [31:0] size_fir2dim_array_backup;
+reg end_fir2dim_input;
+reg [31:0] size_fir2dim_input;
+reg [31:0] size_fir2dim_input_backup;
 reg end_fir2dim_output;
 reg [31:0] size_fir2dim_output;
 reg [31:0] size_fir2dim_output_backup;

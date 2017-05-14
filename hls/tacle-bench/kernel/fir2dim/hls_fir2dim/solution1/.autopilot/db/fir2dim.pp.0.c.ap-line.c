@@ -2112,14 +2112,7 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ ));
 /* If we are compiling with optimizing read this file.  It contains
    several optimizing inline functions and macros.  */
 #pragma line 24 "./fir2dim.h" 2
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
+#pragma line 38 "./fir2dim.h"
 /*
   Forward declaration of functions
 */
@@ -2153,10 +2146,7 @@ void fir2dim_pin_down_hwa(float *pimage,
         float *pcoeff,
         float *poutput );
 #pragma empty_line
-void fir2dim_hwa(float fir2dim_coefficients[3 * 3],
-     float fir2dim_image[4 * 4],
-     float fir2dim_array[(4 + 2) * (4 + 2)],
-     float fir2dim_output[4 * 4]);
+void fir2dim_hwa(float fir2dim_input[(3 * 3 + 1*4 * 4 + (4 + 2) * (4 + 2))], float fir2dim_output[4 * 4]);
 #pragma line 48 "fir2dim.c" 2
 #pragma empty_line
 /*
@@ -2201,49 +2191,56 @@ void fir2dim_pin_down_hwa(float *pimage, float *parray,
 }
 #pragma empty_line
 */
+#pragma empty_line
 /*
   Main functions
 */
 #pragma empty_line
-void fir2dim_hwa(float fir2dim_coefficients[3 * 3],
-     float fir2dim_image[4 * 4],
-     float fir2dim_array[(4 + 2) * (4 + 2)],
-     float fir2dim_output[4 * 4]) {
+void fir2dim_hwa(float fir2dim_input[(3 * 3 + 1*4 * 4 + (4 + 2) * (4 + 2))], float fir2dim_output[4 * 4]) {
 #pragma empty_line
-  float *parray = &fir2dim_array[0], *parray2, *parray3 ;
+#pragma HLS RESOURCE variable=fir2dim_input core=RAM_1P_BRAM
+#pragma HLS INTERFACE bram port=fir2dim_input
 #pragma empty_line
-  float *pcoeff = &fir2dim_coefficients[0] ;
-  float *poutput = &fir2dim_output[0] ;
+#pragma HLS RESOURCE variable=fir2dim_output core=RAM_1P_BRAM
+#pragma HLS INTERFACE bram port=fir2dim_output
+#pragma empty_line
+#pragma HLS INTERFACE ap_ctrl_hs port=return
+#pragma empty_line
+ float *parray = &fir2dim_input[((3*3)+4*4)], *parray2, *parray3 ;
+#pragma empty_line
+  float *pcoeff = &fir2dim_input[0];
+  float *poutput = &fir2dim_output[0];
+  poutput = &fir2dim_output[0];
+#pragma empty_line
+#pragma empty_line
   int k, f, i;
 #pragma empty_line
   //fir2dim_pin_down_hwa(&fir2dim_image[0], &fir2dim_array[0],
 //					   &fir2dim_coefficients[0], &fir2dim_output[0]);
 #pragma empty_line
-  poutput = &fir2dim_output[0];
 #pragma empty_line
   for ( k = 0 ; k < 4 ; k++ ) {
-#pragma empty_line
- for ( f = 0 ; f < 4 ; f++ ) {
 #pragma HLS PIPELINE
 #pragma empty_line
+ for ( f = 0 ; f < 4 ; f++ ) {
 #pragma empty_line
- pcoeff = &fir2dim_coefficients[0] ;
-   parray = &fir2dim_array[k * (4 + 2) + f] ;
+   pcoeff = &fir2dim_input[0] ;
+   parray = &fir2dim_input[k * (4 + 2) + f + ((3*3)+4*4)] ;
    parray2 = parray + (4 + 2) ;
    parray3 = parray + (4 + 2) + (4 + 2) ;
 #pragma empty_line
    *poutput = 0 ;
 #pragma empty_line
    for ( i = 0 ; i < 3 ; i++ ){
-  *poutput += *pcoeff++ **parray++ ;
+  *poutput += *pcoeff++ * *parray++ ;
    }
 #pragma empty_line
    for ( i = 0 ; i < 3 ; i++ ){
-  *poutput += *pcoeff++ **parray2++ ;
+  *poutput += *pcoeff++ * *parray2++ ;
    }
 #pragma empty_line
    for ( i = 0 ; i < 3 ; i++ ){
-  *poutput += *pcoeff++ **parray3++ ;
+  *poutput += *pcoeff++ * *parray3++ ;
    }
 #pragma empty_line
    poutput++ ;

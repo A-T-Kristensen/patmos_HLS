@@ -2112,14 +2112,7 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ ));
 /* If we are compiling with optimizing read this file.  It contains
    several optimizing inline functions and macros.  */
 # 24 "./fir2dim.h" 2
-
-
-
-
-
-
-
-
+# 38 "./fir2dim.h"
 /*
   Forward declaration of functions
 */
@@ -2153,10 +2146,7 @@ void fir2dim_pin_down_hwa(float *pimage,
         float *pcoeff,
         float *poutput );
 
-void fir2dim_hwa(float fir2dim_coefficients[3 * 3],
-     float fir2dim_image[4 * 4],
-     float fir2dim_array[(4 + 2) * (4 + 2)],
-     float fir2dim_output[4 * 4]);
+void fir2dim_hwa(float fir2dim_input[(3 * 3 + 1*4 * 4 + (4 + 2) * (4 + 2))], float fir2dim_output[4 * 4]);
 # 48 "fir2dim.c" 2
 
 /*
@@ -2201,49 +2191,56 @@ void fir2dim_pin_down_hwa(float *pimage, float *parray,
 }
 
 */
+
 /*
   Main functions
 */
 
-void fir2dim_hwa(float fir2dim_coefficients[3 * 3],
-     float fir2dim_image[4 * 4],
-     float fir2dim_array[(4 + 2) * (4 + 2)],
-     float fir2dim_output[4 * 4]) {
+void fir2dim_hwa(float fir2dim_input[(3 * 3 + 1*4 * 4 + (4 + 2) * (4 + 2))], float fir2dim_output[4 * 4]) {
 
-  float *parray = &fir2dim_array[0], *parray2, *parray3 ;
+#pragma HLS RESOURCE variable=fir2dim_input core=RAM_1P_BRAM
+#pragma HLS INTERFACE bram port=fir2dim_input
 
-  float *pcoeff = &fir2dim_coefficients[0] ;
-  float *poutput = &fir2dim_output[0] ;
+#pragma HLS RESOURCE variable=fir2dim_output core=RAM_1P_BRAM
+#pragma HLS INTERFACE bram port=fir2dim_output
+
+#pragma HLS INTERFACE ap_ctrl_hs port=return
+
+ float *parray = &fir2dim_input[((3*3)+4*4)], *parray2, *parray3 ;
+
+  float *pcoeff = &fir2dim_input[0];
+  float *poutput = &fir2dim_output[0];
+  poutput = &fir2dim_output[0];
+
+
   int k, f, i;
 
   //fir2dim_pin_down_hwa(&fir2dim_image[0], &fir2dim_array[0],
 //					   &fir2dim_coefficients[0], &fir2dim_output[0]);
 
-  poutput = &fir2dim_output[0];
 
   for ( k = 0 ; k < 4 ; k++ ) {
-
- for ( f = 0 ; f < 4 ; f++ ) {
 #pragma HLS PIPELINE
 
+ for ( f = 0 ; f < 4 ; f++ ) {
 
- pcoeff = &fir2dim_coefficients[0] ;
-   parray = &fir2dim_array[k * (4 + 2) + f] ;
+   pcoeff = &fir2dim_input[0] ;
+   parray = &fir2dim_input[k * (4 + 2) + f + ((3*3)+4*4)] ;
    parray2 = parray + (4 + 2) ;
    parray3 = parray + (4 + 2) + (4 + 2) ;
 
    *poutput = 0 ;
 
    for ( i = 0 ; i < 3 ; i++ ){
-  *poutput += *pcoeff++ **parray++ ;
+  *poutput += *pcoeff++ * *parray++ ;
    }
 
    for ( i = 0 ; i < 3 ; i++ ){
-  *poutput += *pcoeff++ **parray2++ ;
+  *poutput += *pcoeff++ * *parray2++ ;
    }
 
    for ( i = 0 ; i < 3 ; i++ ){
-  *poutput += *pcoeff++ **parray3++ ;
+  *poutput += *pcoeff++ * *parray3++ ;
    }
 
    poutput++ ;

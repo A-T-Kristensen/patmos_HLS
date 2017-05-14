@@ -1,4 +1,4 @@
-@I [HLS-0] Workspace /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1 opened at Sun May 14 08:41:16 CEST 2017
+@I [HLS-0] Workspace /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1 opened at Sun May 14 10:23:20 CEST 2017
 @I [HLS-100] Execute     config_clock -quiet -name default -period 10 -default=false 
 @I [SYN-201] Setting up clock 'default' with a period of 10ns.
 @I [HLS-100] Command     config_clock returned 0; 0 sec.
@@ -33,7 +33,7 @@
 @I [HLS-100] Command       ap_source returned 0; 0 sec.
 @I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.hlp 
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/target_info.tcl 
-@I [HLS-100] Command         ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/xilinx_interface.hlp 
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.hlp 
 @I [HLS-100] Command           ap_source returned 0; 0 sec.
@@ -42,7 +42,7 @@
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.hlp 
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
-@I [HLS-100] Command       ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
 @I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/dsp48e1.hlp 
 @I [HLS-100] Command       ap_source returned 0; 0 sec.
 @I [HLS-100] Execute       get_default_platform 
@@ -51,7 +51,7 @@
 @I [HLS-100] Command       config_chip_info returned 0; 0 sec.
 @I [HLS-100] Execute       config_chip_info -quiet -speed medium 
 @I [HLS-100] Command       config_chip_info returned 0; 0 sec.
-@I [HLS-100] Command     import_lib returned 0; 0.01 sec.
+@I [HLS-100] Command     import_lib returned 0; 0.02 sec.
 @I [HLS-100] Execute     source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7.gen 
 @I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
@@ -63,10 +63,10 @@
 @I [HLS-100] Command           ap_source returned 0; 0 sec.
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
-@I [HLS-100] Command             ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Command           ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
 @I [HLS-100] Command           ap_source returned 0; 0.01 sec.
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
@@ -76,21 +76,21 @@
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
 @I [HLS-100] Command           ap_source returned 0; 0 sec.
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
-@I [HLS-100] Command           ap_source returned 0; 0.08 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.07 sec.
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
-@I [HLS-100] Command           ap_source returned 0; 0 sec.
-@I [HLS-100] Command         ap_source returned 0; 0.11 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.1 sec.
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
-@I [HLS-100] Command       ap_source returned 0; 0.11 sec.
-@I [HLS-100] Command     ap_source returned 0; 0.11 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.1 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.1 sec.
 @I [HLS-100] Execute     open_platform DefaultPlatform 
 @I [HLS-100] Command     open_platform returned 0; 0 sec.
 @I [HLS-100] Execute     import_lib /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6 
 @I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv7.lib 
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_hp.lib 
 @I [HLS-100] Command         ap_source returned 0; 0 sec.
-@I [HLS-100] Command       ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
 @I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv.hlp 
 @I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.hlp 
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/target_info.tcl 
@@ -102,12 +102,12 @@
 @I [HLS-100] Command             ap_source returned 0; 0 sec.
 @I [HLS-100] Command           ap_source returned 0; 0 sec.
 @I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.hlp 
-@I [HLS-100] Command           ap_source returned 0; 0 sec.
-@I [HLS-100] Command         ap_source returned 0; 0 sec.
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_hp.hlp 
+@I [HLS-100] Command           ap_source returned 0; 0.01 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.01 sec.
 @I [HLS-100] Command       ap_source returned 0; 0.01 sec.
-@I [HLS-100] Command     import_lib returned 0; 0.02 sec.
+@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_hp.hlp 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Command     import_lib returned 0; 0.01 sec.
 @I [HLS-100] Execute     source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6.gen 
 @I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
 @I [HLS-100] Command       ap_source returned 0; 0 sec.
@@ -117,7 +117,7 @@
 @I [HLS-100] Execute         get_default_platform 
 @I [HLS-100] Command         get_default_platform returned 0; 0 sec.
 @I [HLS-100] Execute         license_isbetapart xc7a100t 
-@I [HLS-100] Command         license_isbetapart returned 1; 0.01 sec.
+@I [HLS-100] Command         license_isbetapart returned 1; 0 sec.
 @I [HLS-100] Execute         get_default_platform 
 @I [HLS-100] Command         get_default_platform returned 0; 0 sec.
 @I [HLS-100] Execute         config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
@@ -130,7 +130,7 @@
 @I [HLS-100] Command         get_default_platform returned 0; 0 sec.
 @I [HLS-100] Command       add_library returned 0; 0 sec.
 @I [HLS-10] Setting target device to 'xc7a100tcsg324-1'
-@I [HLS-100] Command     set_part returned 0; 0.01 sec.
+@I [HLS-100] Command     set_part returned 0; 0.02 sec.
 @I [HLS-100] Execute     get_default_platform 
 @I [HLS-100] Command     get_default_platform returned 0; 0 sec.
 @I [HLS-100] Execute     config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
@@ -138,187 +138,30 @@
 @I [HLS-100] Execute     config_chip_info -quiet -speed slow 
 @I [HLS-100] Command     config_chip_info returned 0; 0 sec.
 @I [HLS-100] Command   open_solution returned 0; 0.16 sec.
-@I [HLS-100] Execute   cosim_design 
+@I [HLS-100] Execute   csim_design -compiler gcc -quiet 
 @I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/global.setting.tcl 
 @I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/global.setting.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/global.setting.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/global.setting.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7.gen 
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
-@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
-@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
-@I [HLS-100] Command           ap_source returned 0; 0 sec.
-@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
-@I [HLS-100] Command           ap_source returned 0; 0 sec.
-@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
-@I [HLS-100] Command           ap_source returned 0; 0.01 sec.
-@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Execute             source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
-@I [HLS-100] Command             ap_source returned 0; 0 sec.
-@I [HLS-100] Command           ap_source returned 0; 0 sec.
-@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-@I [HLS-100] Command           ap_source returned 0; 0.01 sec.
-@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-@I [HLS-100] Command           ap_source returned 0; 0.01 sec.
-@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
-@I [HLS-100] Command           ap_source returned 0; 0 sec.
-@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
-@I [HLS-100] Command           ap_source returned 0; 0 sec.
-@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
-@I [HLS-100] Command           ap_source returned 0; 0.08 sec.
-@I [HLS-100] Execute           source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
-@I [HLS-100] Command           ap_source returned 0; 0 sec.
-@I [HLS-100] Command         ap_source returned 0; 0.11 sec.
-@I [HLS-100] Execute         source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
-@I [HLS-100] Command         ap_source returned 0; 0 sec.
-@I [HLS-100] Command       ap_source returned 0; 0.11 sec.
-@I [HLS-100] Command     ap_source returned 0; 0.11 sec.
-@I [HLS-100] Execute     source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/artix7/artix7_fpv6.gen 
-@I [HLS-100] Execute       source /home/patmos/Xilinx/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/global.setting.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.rtl_wrap.cfg.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
+@I [SIM-2] *************** CSIM start ***************
+@I [SIM-4] CSIM will launch GCC as the compiler.
+@I [HLS-100] Execute     source csim/.lst_opt.tcl 
 @I [HLS-100] Command     ap_source returned 0; 0 sec.
 @I [HLS-100] Execute     is_encrypted /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/fir2dim_test.c 
 @I [HLS-100] Command     is_encrypted returned 0; 0 sec.
-@I [HLS-100] Execute     is_encrypted /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/fir2dim.h 
-@I [HLS-100] Command     is_encrypted returned 0; 0 sec.
+@I [HLS-100] Execute     is_xip /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/fir2dim_test.c 
+@I [HLS-100] Command     is_xip returned 0; 0 sec.
 @I [HLS-100] Execute     is_encrypted /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/fir2dim.c 
 @I [HLS-100] Command     is_encrypted returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [COSIM-47] Using XSIM for RTL simulation.
-@I [COSIM-14] Instrumenting C test bench ...
-@I [HLS-0] Marker-Pragma convertor: /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/./sim/autowrap/testbench/fir2dim_test.c_pre.c /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/./sim/autowrap/testbench/fir2dim_test.c_pre.c.line.c ./sim/autowrap/testbench/line.tmp 1
-@I [HLS-0] Converting Markers to Pragmas...
-@I [HLS-0] Marker-Pragma convertor: ./sim/autowrap/testbench/fir2dim_test.c_pre.c.tb.c.line ./sim/autowrap/testbench/fir2dim_test.c_pre.c.tb.c ./sim/autowrap/testbench/line.tmp 0
-@I [HLS-0] Converting Pragmas to Markers...
-@I [HLS-0] Marker-Pragma convertor: /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/./sim/autowrap/testbench/fir2dim.c_pre.c /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/./sim/autowrap/testbench/fir2dim.c_pre.c.line.c ./sim/autowrap/testbench/line.tmp 1
-@I [HLS-0] Converting Markers to Pragmas...
-@I [HLS-0] Marker-Pragma convertor: ./sim/autowrap/testbench/fir2dim.c_pre.c.tb.c.line ./sim/autowrap/testbench/fir2dim.c_pre.c.tb.c ./sim/autowrap/testbench/line.tmp 0
-@I [HLS-0] Converting Pragmas to Markers...
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/./sim/autowrap/testbench/tb.status.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/global.setting.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.rtl_wrap.cfg.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.rtl_wrap.cfg.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.rtl_wrap.cfg.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.rtl_wrap.cfg.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source .run_sim.tcl 
-@I [COSIM-302] Starting C TB testing ... 
+@I [HLS-100] Execute     is_xip /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/fir2dim.c 
+@I [HLS-100] Command     is_xip returned 0; 0 sec.
+@I [HLS-100] Execute     is_encrypted /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/fir2dim.h 
+@I [HLS-100] Command     is_encrypted returned 0; 0 sec.
+@I [HLS-100] Execute     is_xip /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/fir2dim.h 
+@I [HLS-100] Command     is_xip returned 0; 0 sec.
+@I [HLS-100] Execute     source run_sim.tcl 
 @I [HLS-100] Command     ap_source returned 0; 0.01 sec.
-@I [COSIM-333] Generating C post check test bench ...
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.rtl_wrap.cfg.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [COSIM-12] Generating RTL test bench ...
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source ../tv/cdatafile/ref.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source ../tv/cdatafile/ref.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/fir2dim/hls_fir2dim/solution1/.autopilot/db/fir2dim_hwa.tbgen.tcl 
-@I [HLS-100] Command     ap_source returned 0; 0 sec.
-@I [HLS-100] Execute     source .run_sim.tcl 
-@I [HLS-100] Execute       source check_sim.tcl 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [HLS-100] Execute       source .sim.status.tcl 
-@I [HLS-100] Command       ap_source returned 0; 0 sec.
-@I [COSIM-323] Starting verilog simulation. 
-@I [COSIM-15] Starting XSIM ...
-@I [COSIM-316] Starting C post checking ...
-@I [HLS-100] Command     ap_source returned 0; 19.35 sec.
-@I [COSIM-1000] *** C/RTL co-simulation finished: PASS ***
-@I [HLS-100] Command   cosim_design returned 0; 34.42 sec.
-@I [HLS-100] Command ap_source returned 0; 34.59 sec.
+@I [SIM-1] CSim done with 0 errors.
+@I [SIM-3] *************** CSIM finish ***************
+@I [HLS-100] Command   csim_design returned 0; 2.21 sec.
+@I [HLS-100] Command ap_source returned 0; 2.38 sec.
 @I [HLS-100] Execute cleanup_all 
 @I [HLS-100] Command cleanup_all returned 0; 0 sec.

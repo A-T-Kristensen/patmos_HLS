@@ -88,48 +88,56 @@ void fir2dim_pin_down_hwa(float *pimage, float *parray,
 }
 
 */
+
 /*
   Main functions
 */
 
-void fir2dim_hwa(float  fir2dim_coefficients[COEFFICIENTS * COEFFICIENTS], 
-				 float  fir2dim_image[IMAGEDIM * IMAGEDIM],
-				 float  fir2dim_array[ARRAYDIM * ARRAYDIM],
-				 float  fir2dim_output[IMAGEDIM * IMAGEDIM]) {
+void fir2dim_hwa(float  fir2dim_input[SIZE], float fir2dim_output[IMAGEDIM * IMAGEDIM]) {
 
-  float *parray  = &fir2dim_array[0], *parray2, *parray3 ;
+#pragma HLS RESOURCE variable=fir2dim_input core=RAM_1P_BRAM
+#pragma HLS INTERFACE bram port=fir2dim_input
 
-  float *pcoeff  = &fir2dim_coefficients[0] ;
-  float *poutput = &fir2dim_output[0]       ;
+#pragma HLS RESOURCE variable=fir2dim_output core=RAM_1P_BRAM
+#pragma HLS INTERFACE bram port=fir2dim_output
+
+#pragma HLS INTERFACE ap_ctrl_hs port=return
+
+  float *parray  = &fir2dim_input[ARRAY_OFFSET], *parray2, *parray3 ;
+
+  float *pcoeff  = &fir2dim_input[COEFF_OFFSET];
+  float *poutput = &fir2dim_output[0];
+  poutput = &fir2dim_output[0];
+
   int k, f, i;
 
   //fir2dim_pin_down_hwa(&fir2dim_image[0], &fir2dim_array[0],
 //					   &fir2dim_coefficients[0], &fir2dim_output[0]);
 
-  poutput = &fir2dim_output[0];
 
   for ( k = 0 ; k < IMAGEDIM ; k++ ) {
 	#pragma HLS PIPELINE
 
 	for ( f = 0 ; f < IMAGEDIM ; f++ ) {
 
-	  pcoeff = &fir2dim_coefficients[0] ;
-	  parray = &fir2dim_array[k * ARRAYDIM + f] ;
+	  pcoeff = &fir2dim_input[COEFF_OFFSET] ;
+	  parray = &fir2dim_input[k * ARRAYDIM + f + ARRAY_OFFSET] ;
 	  parray2 = parray + ARRAYDIM ;
 	  parray3 = parray + ARRAYDIM + ARRAYDIM ;
 
 	  *poutput = 0 ;
 
+
 	  for ( i = 0 ; i < COEFFICIENTS ; i++ ){
-		*poutput += *pcoeff++ **parray++ ;	  	
+		*poutput += *pcoeff++ * *parray++ ;
 	  }
 
 	  for ( i = 0 ; i < COEFFICIENTS ; i++ ){
-		*poutput += *pcoeff++ **parray2++ ;	  	
+		*poutput += *pcoeff++ * *parray2++ ;
 	  }
 
 	  for ( i = 0 ; i < COEFFICIENTS ; i++ ){
-		*poutput += *pcoeff++ **parray3++ ;	  	
+		*poutput += *pcoeff++ * *parray3++ ;
 	  }
 
 	  poutput++ ;

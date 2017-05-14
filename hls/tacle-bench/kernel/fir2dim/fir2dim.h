@@ -28,6 +28,12 @@
 #define ARRAYDIM      (IMAGEDIM + 2)
 #define COEFFICIENTS  3
 
+#define COEFF_OFFSET 0
+#define IMAGE_OFFSET (COEFFICIENTS*COEFFICIENTS)
+#define ARRAY_OFFSET (IMAGE_OFFSET+IMAGEDIM*IMAGEDIM)
+#define OUTPUT_OFFSET (ARRAY_OFFSET+ARRAYDIM*ARRAYDIM)
+#define SIZE (COEFFICIENTS * COEFFICIENTS + 1*IMAGEDIM * IMAGEDIM + ARRAYDIM * ARRAYDIM)
+
 
 /*
   Forward declaration of functions
@@ -62,7 +68,4 @@ void fir2dim_pin_down_hwa(float *pimage,
 						  float *pcoeff, 
 						  float *poutput );
 
-void fir2dim_hwa(float  fir2dim_coefficients[COEFFICIENTS * COEFFICIENTS], 
-				 float  fir2dim_image[IMAGEDIM * IMAGEDIM],
-				 float  fir2dim_array[ARRAYDIM * ARRAYDIM],
-				 float  fir2dim_output[IMAGEDIM * IMAGEDIM]);
+void fir2dim_hwa(float fir2dim_input[SIZE], float fir2dim_output[IMAGEDIM * IMAGEDIM]);
