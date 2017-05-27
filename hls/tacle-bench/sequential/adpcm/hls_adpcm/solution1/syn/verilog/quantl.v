@@ -19,28 +19,26 @@ module quantl (
         ap_return
 );
 
-parameter    ap_ST_fsm_state1 = 9'b1;
-parameter    ap_ST_fsm_state2 = 9'b10;
-parameter    ap_ST_fsm_state3 = 9'b100;
-parameter    ap_ST_fsm_state4 = 9'b1000;
-parameter    ap_ST_fsm_state5 = 9'b10000;
-parameter    ap_ST_fsm_state6 = 9'b100000;
-parameter    ap_ST_fsm_state7 = 9'b1000000;
-parameter    ap_ST_fsm_state8 = 9'b10000000;
-parameter    ap_ST_fsm_state9 = 9'b100000000;
+parameter    ap_ST_fsm_state1 = 8'b1;
+parameter    ap_ST_fsm_state2 = 8'b10;
+parameter    ap_ST_fsm_state3 = 8'b100;
+parameter    ap_ST_fsm_state4 = 8'b1000;
+parameter    ap_ST_fsm_state5 = 8'b10000;
+parameter    ap_ST_fsm_state6 = 8'b100000;
+parameter    ap_ST_fsm_state7 = 8'b1000000;
+parameter    ap_ST_fsm_state8 = 8'b10000000;
 parameter    ap_const_lv32_0 = 32'b00000000000000000000000000000000;
 parameter    ap_const_lv32_1 = 32'b1;
 parameter    ap_const_lv32_2 = 32'b10;
-parameter    ap_const_lv32_3 = 32'b11;
 parameter    ap_const_lv32_6 = 32'b110;
-parameter    ap_const_lv32_7 = 32'b111;
 parameter    ap_const_lv5_0 = 5'b00000;
+parameter    ap_const_lv32_5 = 32'b101;
 parameter    ap_const_lv32_1F = 32'b11111;
 parameter    ap_const_lv5_1E = 5'b11110;
 parameter    ap_const_lv5_1 = 5'b1;
 parameter    ap_const_lv32_F = 32'b1111;
 parameter    ap_const_lv32_2E = 32'b101110;
-parameter    ap_const_lv32_8 = 32'b1000;
+parameter    ap_const_lv32_7 = 32'b111;
 parameter    ap_const_lv6_0 = 6'b000000;
 
 input   ap_clk;
@@ -58,7 +56,7 @@ reg ap_idle;
 reg ap_ready;
 reg[5:0] ap_return;
 
-(* fsm_encoding = "none" *) reg   [8:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [7:0] ap_CS_fsm;
 wire   [0:0] ap_CS_fsm_state1;
 wire   [4:0] decis_levl_address0;
 reg    decis_levl_ce0;
@@ -69,40 +67,38 @@ wire   [5:0] quant26bt_pos_q0;
 wire   [4:0] quant26bt_neg_address0;
 reg    quant26bt_neg_ce0;
 wire   [5:0] quant26bt_neg_q0;
-wire   [0:0] tmp_fu_100_p3;
-reg   [0:0] tmp_reg_178;
-wire   [31:0] n_assign_fu_114_p3;
-reg   [31:0] n_assign_reg_183;
-wire  signed [46:0] tmp_cast_fu_122_p1;
-reg  signed [46:0] tmp_cast_reg_188;
-wire   [0:0] tmp_s_fu_126_p2;
-reg   [0:0] tmp_s_reg_193;
+wire   [0:0] tmp_fu_114_p3;
+reg   [0:0] tmp_reg_194;
+wire   [31:0] n_assign_fu_128_p3;
+reg   [31:0] n_assign_reg_199;
+wire  signed [46:0] tmp_cast_fu_136_p1;
+reg  signed [46:0] tmp_cast_reg_204;
+wire   [0:0] tmp_s_fu_140_p2;
+reg   [0:0] tmp_s_reg_209;
 wire   [0:0] ap_CS_fsm_state2;
-wire   [4:0] mil_1_fu_132_p2;
-reg   [4:0] mil_1_reg_197;
-reg   [14:0] decis_levl_load_reg_207;
+wire   [4:0] mil_1_fu_146_p2;
+reg   [4:0] mil_1_reg_213;
 wire   [0:0] ap_CS_fsm_state3;
-wire   [0:0] ap_CS_fsm_state4;
-reg   [31:0] tmp_6_reg_217;
 wire   [0:0] ap_CS_fsm_state7;
+reg   [4:0] mil_reg_102;
+wire   [0:0] ap_CS_fsm_state6;
+wire   [0:0] tmp_32_fu_176_p2;
+wire   [63:0] tmp_30_fu_152_p1;
+wire   [63:0] tmp_33_fu_181_p1;
+wire   [31:0] m_fu_122_p2;
+wire  signed [31:0] grp_fu_161_p0;
+wire   [14:0] grp_fu_161_p1;
+wire   [46:0] grp_fu_161_p2;
+wire   [31:0] tmp_3_fu_166_p4;
 wire   [0:0] ap_CS_fsm_state8;
-wire   [0:0] tmp_27_fu_161_p2;
-reg   [4:0] mil_reg_88;
-wire   [63:0] tmp_25_fu_138_p1;
-wire   [63:0] tmp_28_fu_165_p1;
-wire   [31:0] m_fu_108_p2;
-wire  signed [31:0] grp_fu_146_p0;
-wire   [14:0] grp_fu_146_p1;
-wire   [46:0] grp_fu_146_p2;
-wire   [0:0] ap_CS_fsm_state9;
-wire   [5:0] ril_2_fu_171_p3;
+wire   [5:0] ril_2_fu_187_p3;
 reg   [5:0] ap_return_preg;
-reg   [8:0] ap_NS_fsm;
-wire   [46:0] grp_fu_146_p10;
+reg   [7:0] ap_NS_fsm;
+wire   [46:0] grp_fu_161_p10;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 9'b1;
+#0 ap_CS_fsm = 8'b1;
 #0 ap_return_preg = 6'b000000;
 end
 
@@ -151,10 +147,10 @@ adpcm_main_mul_32hbi #(
 adpcm_main_mul_32hbi_U36(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(grp_fu_146_p0),
-    .din1(grp_fu_146_p1),
+    .din0(grp_fu_161_p0),
+    .din1(grp_fu_161_p1),
     .ce(1'b1),
-    .dout(grp_fu_146_p2)
+    .dout(grp_fu_161_p2)
 );
 
 always @ (posedge ap_clk) begin
@@ -169,49 +165,37 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         ap_return_preg <= ap_const_lv6_0;
     end else begin
-        if ((1'b1 == ap_CS_fsm_state9)) begin
-            ap_return_preg <= ril_2_fu_171_p3;
+        if ((1'b1 == ap_CS_fsm_state8)) begin
+            ap_return_preg <= ril_2_fu_187_p3;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state8) & ~(1'b0 == tmp_27_fu_161_p2) & ~(tmp_s_reg_193 == 1'b0))) begin
-        mil_reg_88 <= mil_1_reg_197;
+    if ((~(tmp_s_reg_209 == 1'b0) & (1'b1 == ap_CS_fsm_state6) & ~(1'b0 == tmp_32_fu_176_p2))) begin
+        mil_reg_102 <= mil_1_reg_213;
     end else if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0))) begin
-        mil_reg_88 <= ap_const_lv5_0;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
-        decis_levl_load_reg_207 <= decis_levl_q0;
+        mil_reg_102 <= ap_const_lv5_0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        mil_1_reg_197 <= mil_1_fu_132_p2;
-        tmp_s_reg_193 <= tmp_s_fu_126_p2;
+        mil_1_reg_213 <= mil_1_fu_146_p2;
+        tmp_s_reg_209 <= tmp_s_fu_140_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0))) begin
-        n_assign_reg_183 <= n_assign_fu_114_p3;
-        tmp_cast_reg_188 <= tmp_cast_fu_122_p1;
-        tmp_reg_178 <= el[ap_const_lv32_1F];
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state7)) begin
-        tmp_6_reg_217 <= {{grp_fu_146_p2[ap_const_lv32_2E : ap_const_lv32_F]}};
+        n_assign_reg_199 <= n_assign_fu_128_p3;
+        tmp_cast_reg_204 <= tmp_cast_fu_136_p1;
+        tmp_reg_194 <= el[ap_const_lv32_1F];
     end
 end
 
 always @ (*) begin
-    if ((((1'b0 == ap_start) & (ap_CS_fsm_state1 == 1'b1)) | (1'b1 == ap_CS_fsm_state9))) begin
+    if ((((1'b0 == ap_start) & (ap_CS_fsm_state1 == 1'b1)) | (1'b1 == ap_CS_fsm_state8))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -227,7 +211,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state9)) begin
+    if ((1'b1 == ap_CS_fsm_state8)) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -235,8 +219,8 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state9)) begin
-        ap_return = ril_2_fu_171_p3;
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        ap_return = ril_2_fu_187_p3;
     end else begin
         ap_return = ap_return_preg;
     end
@@ -251,7 +235,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state8)) begin
+    if ((1'b1 == ap_CS_fsm_state7)) begin
         quant26bt_neg_ce0 = 1'b1;
     end else begin
         quant26bt_neg_ce0 = 1'b0;
@@ -259,7 +243,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state8)) begin
+    if ((1'b1 == ap_CS_fsm_state7)) begin
         quant26bt_pos_ce0 = 1'b1;
     end else begin
         quant26bt_pos_ce0 = 1'b0;
@@ -276,11 +260,7 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if ((tmp_s_fu_126_p2 == 1'b0)) begin
-                ap_NS_fsm = ap_ST_fsm_state8;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state3;
-            end
+            ap_NS_fsm = ap_ST_fsm_state3;
         end
         ap_ST_fsm_state3 : begin
             ap_NS_fsm = ap_ST_fsm_state4;
@@ -292,19 +272,16 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state6;
         end
         ap_ST_fsm_state6 : begin
-            ap_NS_fsm = ap_ST_fsm_state7;
+            if ((~(tmp_s_reg_209 == 1'b0) & ~(1'b0 == tmp_32_fu_176_p2))) begin
+                ap_NS_fsm = ap_ST_fsm_state2;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state7;
+            end
         end
         ap_ST_fsm_state7 : begin
             ap_NS_fsm = ap_ST_fsm_state8;
         end
         ap_ST_fsm_state8 : begin
-            if (((tmp_s_reg_193 == 1'b0) | (1'b0 == tmp_27_fu_161_p2))) begin
-                ap_NS_fsm = ap_ST_fsm_state9;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state2;
-            end
-        end
-        ap_ST_fsm_state9 : begin
             ap_NS_fsm = ap_ST_fsm_state1;
         end
         default : begin
@@ -319,44 +296,44 @@ assign ap_CS_fsm_state2 = ap_CS_fsm[ap_const_lv32_1];
 
 assign ap_CS_fsm_state3 = ap_CS_fsm[ap_const_lv32_2];
 
-assign ap_CS_fsm_state4 = ap_CS_fsm[ap_const_lv32_3];
+assign ap_CS_fsm_state6 = ap_CS_fsm[ap_const_lv32_5];
 
 assign ap_CS_fsm_state7 = ap_CS_fsm[ap_const_lv32_6];
 
 assign ap_CS_fsm_state8 = ap_CS_fsm[ap_const_lv32_7];
 
-assign ap_CS_fsm_state9 = ap_CS_fsm[ap_const_lv32_8];
+assign decis_levl_address0 = tmp_30_fu_152_p1;
 
-assign decis_levl_address0 = tmp_25_fu_138_p1;
+assign grp_fu_161_p0 = tmp_cast_reg_204;
 
-assign grp_fu_146_p0 = tmp_cast_reg_188;
+assign grp_fu_161_p1 = grp_fu_161_p10;
 
-assign grp_fu_146_p1 = grp_fu_146_p10;
+assign grp_fu_161_p10 = decis_levl_q0;
 
-assign grp_fu_146_p10 = decis_levl_load_reg_207;
+assign m_fu_122_p2 = (ap_const_lv32_0 - el);
 
-assign m_fu_108_p2 = (ap_const_lv32_0 - el);
+assign mil_1_fu_146_p2 = (mil_reg_102 + ap_const_lv5_1);
 
-assign mil_1_fu_132_p2 = (mil_reg_88 + ap_const_lv5_1);
+assign n_assign_fu_128_p3 = ((tmp_fu_114_p3[0:0] === 1'b1) ? m_fu_122_p2 : el);
 
-assign n_assign_fu_114_p3 = ((tmp_fu_100_p3[0:0] === 1'b1) ? m_fu_108_p2 : el);
+assign quant26bt_neg_address0 = tmp_33_fu_181_p1;
 
-assign quant26bt_neg_address0 = tmp_28_fu_165_p1;
+assign quant26bt_pos_address0 = tmp_33_fu_181_p1;
 
-assign quant26bt_pos_address0 = tmp_28_fu_165_p1;
+assign ril_2_fu_187_p3 = ((tmp_reg_194[0:0] === 1'b1) ? quant26bt_neg_q0 : quant26bt_pos_q0);
 
-assign ril_2_fu_171_p3 = ((tmp_reg_178[0:0] === 1'b1) ? quant26bt_neg_q0 : quant26bt_pos_q0);
+assign tmp_30_fu_152_p1 = mil_reg_102;
 
-assign tmp_25_fu_138_p1 = mil_reg_88;
+assign tmp_32_fu_176_p2 = (($signed(n_assign_reg_199) > $signed(tmp_3_fu_166_p4)) ? 1'b1 : 1'b0);
 
-assign tmp_27_fu_161_p2 = (($signed(n_assign_reg_183) > $signed(tmp_6_reg_217)) ? 1'b1 : 1'b0);
+assign tmp_33_fu_181_p1 = mil_reg_102;
 
-assign tmp_28_fu_165_p1 = mil_reg_88;
+assign tmp_3_fu_166_p4 = {{grp_fu_161_p2[ap_const_lv32_2E : ap_const_lv32_F]}};
 
-assign tmp_cast_fu_122_p1 = $signed(detl);
+assign tmp_cast_fu_136_p1 = $signed(detl);
 
-assign tmp_fu_100_p3 = el[ap_const_lv32_1F];
+assign tmp_fu_114_p3 = el[ap_const_lv32_1F];
 
-assign tmp_s_fu_126_p2 = ((mil_reg_88 < ap_const_lv5_1E) ? 1'b1 : 1'b0);
+assign tmp_s_fu_140_p2 = ((mil_reg_102 < ap_const_lv5_1E) ? 1'b1 : 1'b0);
 
 endmodule //quantl

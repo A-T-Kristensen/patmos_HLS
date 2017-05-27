@@ -55,7 +55,7 @@ architecture behav of filtep is
     signal grp_fu_76_p2 : STD_LOGIC_VECTOR (46 downto 0);
     signal tmp_s_reg_121 : STD_LOGIC_VECTOR (46 downto 0);
     signal tmp_fu_42_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal tmp_26_fu_62_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal tmp_17_fu_62_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_CS_fsm_state7 : STD_LOGIC_VECTOR (0 downto 0);
     attribute fsm_encoding of ap_CS_fsm_state7 : signal is "none";
     signal pl_1_fu_82_p2 : STD_LOGIC_VECTOR (46 downto 0);
@@ -105,7 +105,7 @@ begin
     port map (
         clk => ap_clk,
         reset => ap_rst,
-        din0 => tmp_26_fu_62_p2,
+        din0 => tmp_17_fu_62_p2,
         din1 => al2,
         ce => ap_const_logic_1,
         dout => grp_fu_76_p2);
@@ -195,6 +195,6 @@ begin
 
     ap_return <= pl_1_fu_82_p2(46 downto 15);
     pl_1_fu_82_p2 <= std_logic_vector(unsigned(pl_reg_116) + unsigned(tmp_s_reg_121));
-    tmp_26_fu_62_p2 <= std_logic_vector(shift_left(unsigned(rlt2),to_integer(unsigned('0' & ap_const_lv32_1(31-1 downto 0)))));
+    tmp_17_fu_62_p2 <= std_logic_vector(shift_left(unsigned(rlt2),to_integer(unsigned('0' & ap_const_lv32_1(31-1 downto 0)))));
     tmp_fu_42_p2 <= std_logic_vector(shift_left(unsigned(rlt1),to_integer(unsigned('0' & ap_const_lv32_1(31-1 downto 0)))));
 end behav;

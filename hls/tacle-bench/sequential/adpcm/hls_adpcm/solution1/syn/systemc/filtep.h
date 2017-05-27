@@ -49,7 +49,7 @@ struct filtep : public sc_module {
     sc_signal< sc_lv<47> > grp_fu_76_p2;
     sc_signal< sc_lv<47> > tmp_s_reg_121;
     sc_signal< sc_lv<32> > tmp_fu_42_p2;
-    sc_signal< sc_lv<32> > tmp_26_fu_62_p2;
+    sc_signal< sc_lv<32> > tmp_17_fu_62_p2;
     sc_signal< sc_lv<1> > ap_CS_fsm_state7;
     sc_signal< sc_lv<47> > pl_1_fu_82_p2;
     sc_signal< sc_lv<7> > ap_NS_fsm;
@@ -80,7 +80,7 @@ struct filtep : public sc_module {
     void thread_ap_ready();
     void thread_ap_return();
     void thread_pl_1_fu_82_p2();
-    void thread_tmp_26_fu_62_p2();
+    void thread_tmp_17_fu_62_p2();
     void thread_tmp_fu_42_p2();
     void thread_ap_NS_fsm();
 };

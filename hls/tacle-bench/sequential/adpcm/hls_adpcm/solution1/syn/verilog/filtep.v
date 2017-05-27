@@ -59,7 +59,7 @@ wire   [0:0] ap_CS_fsm_state6;
 wire   [46:0] grp_fu_76_p2;
 reg   [46:0] tmp_s_reg_121;
 wire  signed [31:0] tmp_fu_42_p2;
-wire  signed [31:0] tmp_26_fu_62_p2;
+wire  signed [31:0] tmp_17_fu_62_p2;
 wire   [0:0] ap_CS_fsm_state7;
 wire   [46:0] pl_1_fu_82_p2;
 reg   [6:0] ap_NS_fsm;
@@ -93,7 +93,7 @@ adpcm_main_mul_32cud #(
 adpcm_main_mul_32cud_U6(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(tmp_26_fu_62_p2),
+    .din0(tmp_17_fu_62_p2),
     .din1(al2),
     .ce(1'b1),
     .dout(grp_fu_76_p2)
@@ -181,7 +181,7 @@ assign ap_return = {{pl_1_fu_82_p2[ap_const_lv32_2E : ap_const_lv32_F]}};
 
 assign pl_1_fu_82_p2 = (pl_reg_116 + tmp_s_reg_121);
 
-assign tmp_26_fu_62_p2 = rlt2 << ap_const_lv32_1;
+assign tmp_17_fu_62_p2 = rlt2 << ap_const_lv32_1;
 
 assign tmp_fu_42_p2 = rlt1 << ap_const_lv32_1;
 

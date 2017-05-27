@@ -59,7 +59,7 @@ scalel::scalel(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_ap_return);
     sensitive << ( ap_CS_fsm_state2 );
-    sensitive << ( tmp_24_fu_112_p3 );
+    sensitive << ( tmp_28_fu_112_p3 );
     sensitive << ( ap_return_preg );
 
     SC_METHOD(thread_ilb_table_address0);
@@ -70,24 +70,24 @@ scalel::scalel(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm_state1 );
 
-    SC_METHOD(thread_tmp_21_fu_82_p1);
+    SC_METHOD(thread_tmp_12_fu_82_p1);
     sensitive << ( shift_constant );
 
-    SC_METHOD(thread_tmp_22_fu_86_p2);
-    sensitive << ( tmp_21_fu_82_p1 );
+    SC_METHOD(thread_tmp_26_fu_86_p2);
+    sensitive << ( tmp_12_fu_82_p1 );
 
-    SC_METHOD(thread_tmp_23_fu_96_p2);
-    sensitive << ( tmp_32_cast_cast_fu_92_p1 );
+    SC_METHOD(thread_tmp_27_fu_96_p2);
+    sensitive << ( tmp_37_cast_cast_fu_92_p1 );
     sensitive << ( wd2_cast_cast_fu_79_p1 );
 
-    SC_METHOD(thread_tmp_24_fu_112_p3);
+    SC_METHOD(thread_tmp_28_fu_112_p3);
     sensitive << ( wd3_fu_106_p2 );
 
-    SC_METHOD(thread_tmp_30_cast_fu_102_p1);
-    sensitive << ( tmp_23_fu_96_p2 );
+    SC_METHOD(thread_tmp_37_cast_cast_fu_92_p1);
+    sensitive << ( tmp_26_fu_86_p2 );
 
-    SC_METHOD(thread_tmp_32_cast_cast_fu_92_p1);
-    sensitive << ( tmp_22_fu_86_p2 );
+    SC_METHOD(thread_tmp_38_cast_fu_102_p1);
+    sensitive << ( tmp_27_fu_96_p2 );
 
     SC_METHOD(thread_tmp_s_fu_74_p1);
     sensitive << ( wd1_fu_54_p4 );
@@ -100,7 +100,7 @@ scalel::scalel(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_wd3_fu_106_p2);
     sensitive << ( ilb_table_q0 );
-    sensitive << ( tmp_30_cast_fu_102_p1 );
+    sensitive << ( tmp_38_cast_fu_102_p1 );
 
     SC_METHOD(thread_ap_NS_fsm);
     sensitive << ( ap_start );
@@ -136,14 +136,14 @@ scalel::scalel(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, tmp_s_fu_74_p1, "tmp_s_fu_74_p1");
     sc_trace(mVcdFile, ap_CS_fsm_state2, "ap_CS_fsm_state2");
     sc_trace(mVcdFile, wd1_fu_54_p4, "wd1_fu_54_p4");
-    sc_trace(mVcdFile, tmp_21_fu_82_p1, "tmp_21_fu_82_p1");
-    sc_trace(mVcdFile, tmp_22_fu_86_p2, "tmp_22_fu_86_p2");
-    sc_trace(mVcdFile, tmp_32_cast_cast_fu_92_p1, "tmp_32_cast_cast_fu_92_p1");
+    sc_trace(mVcdFile, tmp_12_fu_82_p1, "tmp_12_fu_82_p1");
+    sc_trace(mVcdFile, tmp_26_fu_86_p2, "tmp_26_fu_86_p2");
+    sc_trace(mVcdFile, tmp_37_cast_cast_fu_92_p1, "tmp_37_cast_cast_fu_92_p1");
     sc_trace(mVcdFile, wd2_cast_cast_fu_79_p1, "wd2_cast_cast_fu_79_p1");
-    sc_trace(mVcdFile, tmp_23_fu_96_p2, "tmp_23_fu_96_p2");
-    sc_trace(mVcdFile, tmp_30_cast_fu_102_p1, "tmp_30_cast_fu_102_p1");
+    sc_trace(mVcdFile, tmp_27_fu_96_p2, "tmp_27_fu_96_p2");
+    sc_trace(mVcdFile, tmp_38_cast_fu_102_p1, "tmp_38_cast_fu_102_p1");
     sc_trace(mVcdFile, wd3_fu_106_p2, "wd3_fu_106_p2");
-    sc_trace(mVcdFile, tmp_24_fu_112_p3, "tmp_24_fu_112_p3");
+    sc_trace(mVcdFile, tmp_28_fu_112_p3, "tmp_28_fu_112_p3");
     sc_trace(mVcdFile, ap_return_preg, "ap_return_preg");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
 #endif
@@ -168,7 +168,7 @@ void scalel::thread_ap_clk_no_reset_() {
         ap_return_preg = ap_const_lv15_0;
     } else {
         if ((esl_seteq<1,1,1>(ap_const_lv1_1, ap_CS_fsm_state2.read()))) {
-            ap_return_preg = tmp_24_fu_112_p3.read();
+            ap_return_preg = tmp_28_fu_112_p3.read();
         }
     }
     if ((esl_seteq<1,1,1>(ap_CS_fsm_state1.read(), ap_const_lv1_1) && !esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0))) {
@@ -213,7 +213,7 @@ void scalel::thread_ap_ready() {
 
 void scalel::thread_ap_return() {
     if ((esl_seteq<1,1,1>(ap_const_lv1_1, ap_CS_fsm_state2.read()))) {
-        ap_return = tmp_24_fu_112_p3.read();
+        ap_return = tmp_28_fu_112_p3.read();
     } else {
         ap_return = ap_return_preg.read();
     }
@@ -232,28 +232,28 @@ void scalel::thread_ilb_table_ce0() {
     }
 }
 
-void scalel::thread_tmp_21_fu_82_p1() {
-    tmp_21_fu_82_p1 = shift_constant.read().range(4-1, 0);
+void scalel::thread_tmp_12_fu_82_p1() {
+    tmp_12_fu_82_p1 = shift_constant.read().range(4-1, 0);
 }
 
-void scalel::thread_tmp_22_fu_86_p2() {
-    tmp_22_fu_86_p2 = (!ap_const_lv4_1.is_01() || !tmp_21_fu_82_p1.read().is_01())? sc_lv<4>(): (sc_biguint<4>(ap_const_lv4_1) + sc_biguint<4>(tmp_21_fu_82_p1.read()));
+void scalel::thread_tmp_26_fu_86_p2() {
+    tmp_26_fu_86_p2 = (!ap_const_lv4_1.is_01() || !tmp_12_fu_82_p1.read().is_01())? sc_lv<4>(): (sc_biguint<4>(ap_const_lv4_1) + sc_biguint<4>(tmp_12_fu_82_p1.read()));
 }
 
-void scalel::thread_tmp_23_fu_96_p2() {
-    tmp_23_fu_96_p2 = (!tmp_32_cast_cast_fu_92_p1.read().is_01() || !wd2_cast_cast_fu_79_p1.read().is_01())? sc_lv<5>(): (sc_biguint<5>(tmp_32_cast_cast_fu_92_p1.read()) - sc_biguint<5>(wd2_cast_cast_fu_79_p1.read()));
+void scalel::thread_tmp_27_fu_96_p2() {
+    tmp_27_fu_96_p2 = (!tmp_37_cast_cast_fu_92_p1.read().is_01() || !wd2_cast_cast_fu_79_p1.read().is_01())? sc_lv<5>(): (sc_biguint<5>(tmp_37_cast_cast_fu_92_p1.read()) - sc_biguint<5>(wd2_cast_cast_fu_79_p1.read()));
 }
 
-void scalel::thread_tmp_24_fu_112_p3() {
-    tmp_24_fu_112_p3 = esl_concat<12,3>(wd3_fu_106_p2.read(), ap_const_lv3_0);
+void scalel::thread_tmp_28_fu_112_p3() {
+    tmp_28_fu_112_p3 = esl_concat<12,3>(wd3_fu_106_p2.read(), ap_const_lv3_0);
 }
 
-void scalel::thread_tmp_30_cast_fu_102_p1() {
-    tmp_30_cast_fu_102_p1 = esl_sext<12,5>(tmp_23_fu_96_p2.read());
+void scalel::thread_tmp_37_cast_cast_fu_92_p1() {
+    tmp_37_cast_cast_fu_92_p1 = esl_zext<5,4>(tmp_26_fu_86_p2.read());
 }
 
-void scalel::thread_tmp_32_cast_cast_fu_92_p1() {
-    tmp_32_cast_cast_fu_92_p1 = esl_zext<5,4>(tmp_22_fu_86_p2.read());
+void scalel::thread_tmp_38_cast_fu_102_p1() {
+    tmp_38_cast_fu_102_p1 = esl_sext<12,5>(tmp_27_fu_96_p2.read());
 }
 
 void scalel::thread_tmp_s_fu_74_p1() {
@@ -269,7 +269,7 @@ void scalel::thread_wd2_cast_cast_fu_79_p1() {
 }
 
 void scalel::thread_wd3_fu_106_p2() {
-    wd3_fu_106_p2 = (!tmp_30_cast_fu_102_p1.read().is_01())? sc_lv<12>(): ilb_table_q0.read() >> (unsigned short)tmp_30_cast_fu_102_p1.read().to_uint();
+    wd3_fu_106_p2 = (!tmp_38_cast_fu_102_p1.read().is_01())? sc_lv<12>(): ilb_table_q0.read() >> (unsigned short)tmp_38_cast_fu_102_p1.read().to_uint();
 }
 
 void scalel::thread_ap_NS_fsm() {

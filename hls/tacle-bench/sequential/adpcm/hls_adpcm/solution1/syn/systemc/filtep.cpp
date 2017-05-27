@@ -40,7 +40,7 @@ filtep::filtep(sc_module_name name) : sc_module(name), mVcdFile(0) {
     adpcm_main_mul_32cud_U6 = new adpcm_main_mul_32cud<1,6,32,32,47>("adpcm_main_mul_32cud_U6");
     adpcm_main_mul_32cud_U6->clk(ap_clk);
     adpcm_main_mul_32cud_U6->reset(ap_rst);
-    adpcm_main_mul_32cud_U6->din0(tmp_26_fu_62_p2);
+    adpcm_main_mul_32cud_U6->din0(tmp_17_fu_62_p2);
     adpcm_main_mul_32cud_U6->din1(al2);
     adpcm_main_mul_32cud_U6->ce(ap_var_for_const0);
     adpcm_main_mul_32cud_U6->dout(grp_fu_76_p2);
@@ -78,7 +78,7 @@ filtep::filtep(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( pl_reg_116 );
     sensitive << ( tmp_s_reg_121 );
 
-    SC_METHOD(thread_tmp_26_fu_62_p2);
+    SC_METHOD(thread_tmp_17_fu_62_p2);
     sensitive << ( rlt2 );
 
     SC_METHOD(thread_tmp_fu_42_p2);
@@ -120,7 +120,7 @@ filtep::filtep(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, grp_fu_76_p2, "grp_fu_76_p2");
     sc_trace(mVcdFile, tmp_s_reg_121, "tmp_s_reg_121");
     sc_trace(mVcdFile, tmp_fu_42_p2, "tmp_fu_42_p2");
-    sc_trace(mVcdFile, tmp_26_fu_62_p2, "tmp_26_fu_62_p2");
+    sc_trace(mVcdFile, tmp_17_fu_62_p2, "tmp_17_fu_62_p2");
     sc_trace(mVcdFile, ap_CS_fsm_state7, "ap_CS_fsm_state7");
     sc_trace(mVcdFile, pl_1_fu_82_p2, "pl_1_fu_82_p2");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
@@ -200,8 +200,8 @@ void filtep::thread_pl_1_fu_82_p2() {
     pl_1_fu_82_p2 = (!pl_reg_116.read().is_01() || !tmp_s_reg_121.read().is_01())? sc_lv<47>(): (sc_biguint<47>(pl_reg_116.read()) + sc_biguint<47>(tmp_s_reg_121.read()));
 }
 
-void filtep::thread_tmp_26_fu_62_p2() {
-    tmp_26_fu_62_p2 = (!ap_const_lv32_1.is_01())? sc_lv<32>(): rlt2.read() << (unsigned short)ap_const_lv32_1.to_uint();
+void filtep::thread_tmp_17_fu_62_p2() {
+    tmp_17_fu_62_p2 = (!ap_const_lv32_1.is_01())? sc_lv<32>(): rlt2.read() << (unsigned short)ap_const_lv32_1.to_uint();
 }
 
 void filtep::thread_tmp_fu_42_p2() {
