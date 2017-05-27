@@ -34,7 +34,6 @@
 #define SIZE 3
 #define IN_END 4
 
-
 /*
   Forward declaration of functions
 */
