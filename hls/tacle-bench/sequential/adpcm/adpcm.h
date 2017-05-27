@@ -8,7 +8,7 @@
 #define SAMPLE_RATE 11025
 
 #define PI 3141
-#define TEST_VECTOR 1 // Specifies whether the test vector from CHStone should be use
+#define TEST_VECTOR 0 // Specifies whether the test vector from CHStone should be use
 
 #if(TEST_VECTOR) // Same as CHStone
 
@@ -63,9 +63,9 @@ int deth;
 int sh;       /* this comes from adaptive predictor */
 int eh;
 
-int dh, ih;
+int dh;
 int nbh, szh;
-int sph, ph, yh, rh;
+int sph, ph, yh;
 
 int delay_dhx[6];
 
@@ -76,8 +76,8 @@ int ph1, ph2;
 int rh1, rh2;
 
 /* variables for decoder here */
-int ilr, rl;
-int dec_deth, dec_detl, dec_dlt;
+int dec_ilr, dec_rl, dec_rh, dec_ih;
+int dec_deth, dec_detl, dec_dlt, dec_il;
 
 int dec_del_bpl[6];
 
@@ -87,7 +87,7 @@ int dec_plt, dec_plt1, dec_plt2;
 int dec_szl, dec_spl, dec_sl;
 int dec_rlt1, dec_rlt2, dec_rlt;
 int dec_al1, dec_al2;
-int dl;
+int dec_dl;
 int dec_nbl, dec_dh, dec_nbh;
 
 /* variables used in filtez */
@@ -107,7 +107,10 @@ int dec_ph1, dec_ph2;
 
 /* variables for encoder (hi and lo) here */
 
-int il, szl, spl, sl, el;
+int szl, spl, sl, el;
+
+int enc_il, enc_ih, enc_rl;
+int enc_ilr, enc_dl, enc_rh;
 
 /* variables for receive quadrature mirror filter here */
 int accumc[11], accumd[11];

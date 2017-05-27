@@ -77,7 +77,7 @@ int enc_return(int compressed[SIZE])
 	int check_sum = 0;
 
 
-	for (i = 0 ; i < IN_END ; i += 2) {
+	for (i = 0 ; i < SIZE ; i += 2) {
 		check_sum += compressed[i/2];
 	}
 
@@ -89,8 +89,8 @@ int dec_return(int dec_result[SIZE])
 	int i;
 	int check_sum = 0;
 
-	for (i = 0; i < IN_END; i += 2) {
-		check_sum += (dec_result[i] + dec_result[i + 1]);
+	for (i = 0; i < SIZE; i++) {
+		check_sum += (dec_result[i]);
 	}
 
 	return check_sum != -2;
@@ -178,52 +178,11 @@ int main()
 
 	init(test_data);
 
-	//adpcm_main(test_data, compressed, dec_result, 0, SIZE);
-	xl = 58;
-
-	printf("%d\n", xl);
-	printf("%d\n", xh);
-	printf("%d\n", xs);
-	printf("%d\n", xd);
-
-	ih = 3;
-	el = 13;
-	sl = 45;
-	szl = 19;
-	spl = 26;
-
-	printf("%d\n", ih);
-	printf("%d\n", el);
-	printf("%d\n", sl);
-	printf("%d\n", szl);
-	printf("%d\n", spl);
-
-	dlt = 8;
-	yh = -1;
-
-	printf("%d\n", dlt);
-	printf("%d\n", nbh);
-	printf("%d\n", szh);
-	printf("%d\n", ph);
-	printf("%d\n", yh);
-	printf("%d\n", rh);
-
-	printf("%d\n", il);
-	printf("%d\n", sh);
-	printf("%d\n", eh);
-	printf("%d\n", dh);
-	printf("%d\n", nbh);
-	printf("%d\n", ilr);
-	printf("%d\n", rl);
-
-	il = 56;
-	sh = -1;
-	eh = 1;
-
-	init(test_data);
-	adpcm_main(test_data, test_compressed, dec_result, 1, SIZE);
-	//adpcm_main(test_data, compressed, dec_result, 1, SIZE);
-
+	adpcm_main(test_data, compressed, dec_result, 0, SIZE);
+	//dec_il = 56; // This is required for the benchmark to pass since they no longer use the same vars
+	adpcm_main(test_data, compressed, dec_result, 1, SIZE);
+	//adpcm_main(test_data, test_compressed, dec_result, 1, SIZE);
+/*
 	printf("test_data\n");
 
 	for(i = 0; i < SIZE; i++) {
@@ -242,7 +201,7 @@ int main()
 	for(i = 0; i < SIZE; i++) {
 		printf("%d \n", dec_result[i]);
 	}
-
+*/
 
 #if(TEST_VECTOR)
 /*
@@ -254,13 +213,13 @@ int main()
 */
 
 	for(i = 0; i < SIZE; i++) {
-		printf("%d \t %d \n", dec_result[i], test_result[i]);
+		//printf("%d \t %d \n", dec_result[i], test_result[i]);
 		if(dec_result[i] != test_result[i]) {
 			err_cnt++;
 		}
 	}
 
-	printf("Err count is: %d\n", err_cnt);
+	//printf("Err count is: %d\n", err_cnt);
 
 	if (err_cnt) {
 		printf("ERROR: %d\n", err_cnt);

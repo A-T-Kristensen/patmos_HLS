@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="adpcm_main" name="hls_adpcm">
+<project xmlns="com.autoesl.autopilot.project" name="hls_adpcm" top="adpcm_main">
     <files>
         <file name="../../adpcm_test.c" sc="0" tb="1" cflags=""/>
         <file name="adpcm.c" sc="0" tb="false" cflags=""/>

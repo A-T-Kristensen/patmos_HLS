@@ -201,7 +201,6 @@ int adpcm_dec_dec_ph1, adpcm_dec_dec_ph2;
   Arithmetic math functions
 */
 
-
 /* MAX: 1 */
 int adpcm_dec_fabs( int n )
 {

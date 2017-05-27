@@ -201,14 +201,14 @@ int encode(int xin1, int xin2)
 	el = xl - sl;
 
 	/* quantl: quantize the difference signal */
-	il = quantl(el, detl);
+	enc_il = quantl(el, detl);
 
 	/* computes quantized difference signal */
 	/* for invqbl, truncate by 2 lsbs, so mode = 3 */
-	dlt = ((long) detl * qq4_code4_table[il >> 2]) >> 15;
+	dlt = ((long) detl * qq4_code4_table[enc_il >> 2]) >> 15;
 
 	/* logscl: updates logarithmic quant. scale factor in low sub band */
-	nbl = logscl(il, nbl);
+	nbl = logscl(enc_il, nbl);
 
 	/* scalel: compute the quantizer scale factor in the lower sub band */
 	/* calling parameters nbl and 8 (constant such that scalel can be scaleh) */
@@ -254,19 +254,19 @@ int encode(int xin1, int xin2)
 	/* quanth - quantization of difference signal for higher sub-band */
 	/* quanth: in-place for speed params: eh, deth (has init. value) */
 	if (eh >= 0) {
-		ih = 3;     /* 2,3 are pos codes */
+		enc_ih = 3;     /* 2,3 are pos codes */
 	} else {
-		ih = 1;     /* 0,1 are neg codes */
+		enc_ih = 1;     /* 0,1 are neg codes */
 	}
 	decis = (564L * (long) deth) >> 12L;
 	if (adpcm_abs(eh) > decis)
-		ih--;     /* mih = 2 case */
+		enc_ih--;     /* mih = 2 case */
 
 	/* compute the quantized difference signal, higher sub-band*/
-	dh = ((long) deth * qq2_code2_table[ih]) >> 15L;
+	dh = ((long) deth * qq2_code2_table[enc_ih]) >> 15L;
 
 	/* logsch: update logarithmic quantizer scale factor in hi sub-band*/
-	nbh = logsch(ih, nbh);
+	nbh = logsch(enc_ih, nbh);
 
 	/* note : scalel and scaleh use same code, different parameters */
 	deth = scalel(nbh, 10);
@@ -296,7 +296,7 @@ int encode(int xin1, int xin2)
 	ph1 = ph;
 
 	/* multiplex ih and il to get signals together */
-	return (il | (ih << 6));
+	return (enc_il | (enc_ih << 6));
 }
 
 /* decode function, result in xout1 and xout2 */
@@ -311,8 +311,8 @@ void decode(int input)
 	int *ac_ptr, *ac_ptr1, *ad_ptr, *ad_ptr1;
 
 	/* split transmitted word from input into ilr and ih */
-	ilr = input & 0x3f;
-	ih = input >> 6;
+	dec_ilr = input & 0x3f;
+	dec_ih = input >> 6;
 
 	/* LOWER SUB_BAND DECODER */
 
@@ -325,15 +325,15 @@ void decode(int input)
 	dec_sl = dec_spl + dec_szl;
 
 	/* compute quantized difference signal for adaptive predic */
-	dec_dlt = ((long) dec_detl * qq4_code4_table[ilr >> 2]) >> 15;
+	dec_dlt = ((long) dec_detl * qq4_code4_table[dec_ilr >> 2]) >> 15;
 
 	/* compute quantized difference signal for decoder output */
-	dl = ((long) dec_detl * qq6_code6_table[il]) >> 15;
+	dec_dl = ((long) dec_detl * qq6_code6_table[dec_il]) >> 15;
 
-	rl = dl + dec_sl;
+	dec_rl = dec_dl + dec_sl;
 
 	/* logscl: quantizer scale factor adaptation in the lower sub-band */
-	dec_nbl = logscl(ilr, dec_nbl);
+	dec_nbl = logscl(dec_ilr, dec_nbl);
 
 	/* scalel: computes quantizer scale factor in the lower sub band */
 	dec_detl = scalel(dec_nbl, 8);
@@ -372,10 +372,10 @@ void decode(int input)
 	dec_sh = dec_sph + dec_szh;
 
 	/* in-place compute the quantized difference signal */
-	dec_dh = ((long) dec_deth * qq2_code2_table[ih]) >> 15L;
+	dec_dh = ((long) dec_deth * qq2_code2_table[dec_ih]) >> 15L;
 
 	/* logsch: update logarithmic quantizer scale factor in hi sub band */
-	dec_nbh = logsch(ih, dec_nbh);
+	dec_nbh = logsch(dec_ih, dec_nbh);
 
 	/* scalel: compute the quantizer scale factor in the higher sub band */
 	dec_deth = scalel(dec_nbh, 10);
@@ -393,19 +393,19 @@ void decode(int input)
 	dec_ah1 = uppol1(dec_ah1, dec_ah2, dec_ph, dec_ph1);
 
 	/* recons : compute recontructed signal for adaptive predictor */
-	rh = dec_sh + dec_dh;
+	dec_rh = dec_sh + dec_dh;
 
 	/* done with high band decode, implementing delays for next time here */
 	dec_rh2 = dec_rh1;
-	dec_rh1 = rh;
+	dec_rh1 = dec_rh;
 	dec_ph2 = dec_ph1;
 	dec_ph1 = dec_ph;
 
 	/* end of higher sub_band decoder */
 
 	/* end with receive quadrature mirror filters */
-	xd = rl - rh;
-	xs = rl + rh;
+	xd = dec_rl - dec_rh;
+	xs = dec_rl + dec_rh;
 
 	/* receive quadrature mirror filters implemented here */
 	h_ptr = h;

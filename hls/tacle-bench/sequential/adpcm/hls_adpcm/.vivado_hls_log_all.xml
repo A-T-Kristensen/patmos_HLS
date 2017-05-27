@@ -15,6 +15,17 @@
       <mgLog/>
       <packageLog/>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T20:38:32.475+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '100'." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T20:38:32.461+0200"/>
+        <logs message="ERROR: 100" projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T20:38:32.431+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T20:38:09.432+0200"/>
+        <logs message="ERROR: [HLS 200-101] Message ID '1-1' value invalid for uint argument.&#xA;&#xA;&#xA;FORMAT&#xA;  ap_puts_err [OPTIONS] [ Message namespace] [ Message ID] [ Message string]&#xA;      &lt;string>&#xA;      &lt;uint>&#xA;      &lt;string>&#xA;&#xA;&#xA;csim.mk:76: recipe for target 'obj/adpcm_test.o' failed&#xA;make: *** [obj/adpcm_test.o] Error 1" projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T20:38:09.385+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T15:14:02.765+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '100'." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T15:14:02.762+0200"/>
+        <logs message="ERROR: 100" projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T15:14:02.758+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T15:13:35.541+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '100'." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T15:13:35.538+0200"/>
+        <logs message="ERROR: 100" projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T15:13:35.534+0200"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T15:04:38.764+0200"/>
         <logs message="@E Simulation failed: Function 'main' returns nonzero value '100'." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T15:04:38.761+0200"/>
         <logs message="ERROR: 100" projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T15:04:38.758+0200"/>
