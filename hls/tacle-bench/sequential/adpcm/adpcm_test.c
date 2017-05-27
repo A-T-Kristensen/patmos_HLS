@@ -223,8 +223,8 @@ int main()
 
 	init(test_data);
 
-	adpcm_main(test_data, compressed, dec_result, 0);
-	adpcm_main(test_data, compressed, dec_result, 1);
+	adpcm_main(test_data, compressed, dec_result, 0, SIZE);
+	adpcm_main(test_data, compressed, dec_result, 1, SIZE);
 
 	//dec_return(dec_result);
 

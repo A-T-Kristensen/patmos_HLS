@@ -39,10 +39,10 @@ int adpcm_abs(int n);
 int enc_return(int compressed[SIZE]);
 int dec_return(int dec_result[SIZE]);
 
-void adpcm_enc_main(int test_data[SIZE], int compressed[SIZE]);
-void adpcm_dec_main(int compressed[SIZE], int dec_result[SIZE]);
+void adpcm_enc_main(int test_data[SIZE], int compressed[SIZE], int size);
+void adpcm_dec_main(int compressed[SIZE], int dec_result[SIZE], int size);
 void adpcm_main(int test_data[SIZE], int compressed[SIZE],
-                int dec_result[SIZE], int select);
+                int dec_result[SIZE], int select, int size);
 
 int delay_bpl[6];
 
