@@ -1,3 +1,0 @@
-matmul_hw_mul_32sbkb
-matmul_hw_b_copy_0
-matmul_hw

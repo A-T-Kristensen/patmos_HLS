@@ -1,8 +1,0 @@
-minver_hwa_fsub_3hbi
-minver_hwa_fmul_3ibs
-minver_hwa_fdiv_3jbC
-minver_hwa_fpext_kbM
-minver_hwa_fcmp_3lbW
-minver_hwa_dcmp_6mb6
-minver_hwa_work
-minver_hwa

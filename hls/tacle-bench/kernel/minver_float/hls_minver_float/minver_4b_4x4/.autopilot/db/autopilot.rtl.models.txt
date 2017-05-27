@@ -1,9 +1,0 @@
-minver_hwa_fsub_3ncg
-minver_hwa_fmul_3ocq
-minver_hwa_fdiv_3pcA
-minver_hwa_fpext_qcK
-minver_hwa_fcmp_3rcU
-minver_hwa_dcmp_6sc4
-minver_hwa_work
-aesl_mux_load_4_4_x_s
-minver_hwa
