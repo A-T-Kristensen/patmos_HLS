@@ -2047,7 +2047,1554 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ ));
 /* If we are compiling with optimizing read this file.  It contains
    several optimizing inline functions and macros.  */
 #pragma line 6 "./adpcm.h" 2
-#pragma line 24 "./adpcm.h"
+#pragma line 1 "/usr/include/math.h" 1 3 4
+/* Declarations for math functions.
+   Copyright (C) 1991-2016 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+#pragma empty_line
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+#pragma empty_line
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+#pragma empty_line
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#pragma empty_line
+/*
+ *	ISO C99 Standard: 7.12 Mathematics	<math.h>
+ */
+#pragma line 30 "/usr/include/math.h" 3 4
+/* Get machine-dependent vector math functions declarations.  */
+#pragma empty_line
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/math-vector.h" 1 3 4
+/* Platform-specific SIMD declarations of math functions.
+   Copyright (C) 2014-2016 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+#pragma empty_line
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+#pragma empty_line
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+#pragma empty_line
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Get default empty definitions for simd declarations.  */
+#pragma empty_line
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h" 1 3 4
+/* Empty definitions required for __MATHCALL_VEC unfolding in mathcalls.h.
+   Copyright (C) 2014-2016 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+#pragma empty_line
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+#pragma empty_line
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+#pragma empty_line
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Needed definitions could be generated with:
+   for func in $(grep __MATHCALL_VEC math/bits/mathcalls.h |\
+		 sed -r "s|__MATHCALL_VEC.?\(||; s|,.*||"); do
+     echo "#define __DECL_SIMD_${func}";
+     echo "#define __DECL_SIMD_${func}f";
+     echo "#define __DECL_SIMD_${func}l";
+   done
+ */
+#pragma line 26 "/usr/include/x86_64-linux-gnu/bits/math-vector.h" 2 3 4
+#pragma line 32 "/usr/include/math.h" 2 3 4
+#pragma empty_line
+/* Get machine-dependent HUGE_VAL value (returned on overflow).
+   On all IEEE754 machines, this is +Infinity.  */
+#pragma empty_line
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/huge_val.h" 1 3 4
+/* `HUGE_VAL' constant for IEEE 754 machines (where it is infinity).
+   Used by <stdlib.h> and <math.h> functions for overflow.
+   Copyright (C) 1992-2016 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+#pragma empty_line
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+#pragma empty_line
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+#pragma empty_line
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* IEEE positive infinity (-HUGE_VAL is negative infinity).  */
+#pragma line 36 "/usr/include/math.h" 2 3 4
+#pragma empty_line
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/huge_valf.h" 1 3 4
+/* `HUGE_VALF' constant for IEEE 754 machines (where it is infinity).
+   Used by <stdlib.h> and <math.h> functions for overflow.
+   Copyright (C) 1992-2016 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+#pragma empty_line
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+#pragma empty_line
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+#pragma empty_line
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* IEEE positive infinity (-HUGE_VAL is negative infinity).  */
+#pragma line 38 "/usr/include/math.h" 2 3 4
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/huge_vall.h" 1 3 4
+/* `HUGE_VALL' constant for ix86 (where it is infinity).
+   Used by <stdlib.h> and <math.h> functions for overflow.
+   Copyright (C) 1992-2016 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+#pragma empty_line
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+#pragma empty_line
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+#pragma empty_line
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#pragma line 39 "/usr/include/math.h" 2 3 4
+#pragma empty_line
+/* Get machine-dependent INFINITY value.  */
+#pragma empty_line
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/inf.h" 1 3 4
+/* `INFINITY' constant for IEEE 754 machines.
+   Copyright (C) 2004-2016 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+#pragma empty_line
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+#pragma empty_line
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+#pragma empty_line
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* IEEE positive infinity.  */
+#pragma line 42 "/usr/include/math.h" 2 3 4
+#pragma empty_line
+/* Get machine-dependent NAN value (returned for some domain errors).  */
+#pragma empty_line
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/nan.h" 1 3 4
+/* `NAN' constant for IEEE 754 machines.
+   Copyright (C) 1992-2016 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+#pragma empty_line
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+#pragma empty_line
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+#pragma empty_line
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* IEEE Not A Number.  */
+#pragma line 45 "/usr/include/math.h" 2 3 4
+#pragma empty_line
+#pragma empty_line
+/* Get general and ISO C99 specific information.  */
+#pragma empty_line
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathdef.h" 1 3 4
+/* Copyright (C) 2001-2016 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+#pragma empty_line
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+#pragma empty_line
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+#pragma empty_line
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#pragma line 26 "/usr/include/x86_64-linux-gnu/bits/mathdef.h" 3 4
+/* The x86-64 architecture computes values with the precission of the
+   used type.  Similarly for -m32 -mfpmath=sse.  */
+typedef float float_t; /* `float' expressions are evaluated as `float'.  */
+typedef double double_t; /* `double' expressions are evaluated
+				   as `double'.  */
+#pragma line 41 "/usr/include/x86_64-linux-gnu/bits/mathdef.h" 3 4
+/* The values returned by `ilogb' for 0 and NaN respectively.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* The GCC 4.6 compiler will define __FP_FAST_FMA{,F,L} if the fma{,f,l}
+   builtins are supported.  */
+#pragma line 49 "/usr/include/math.h" 2 3 4
+#pragma empty_line
+/* The file <bits/mathcalls.h> contains the prototypes for all the
+   actual math functions.  These macros are used for those prototypes,
+   so we can easily declare each function as both `name' and `__name',
+   and can declare the float versions `namef' and `__namef'.  */
+#pragma line 83 "/usr/include/math.h" 3 4
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4
+/* Prototype declarations for math functions; helper file for <math.h>.
+   Copyright (C) 1996-2016 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+#pragma empty_line
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+#pragma empty_line
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+#pragma empty_line
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#pragma empty_line
+/* NOTE: Because of the special way this file is used by <math.h>, this
+   file must NOT be protected from multiple inclusion as header files
+   usually are.
+#pragma empty_line
+   This file provides prototype declarations for the math functions.
+   Most functions are declared using the macro:
+#pragma empty_line
+   __MATHCALL (NAME,[_r], (ARGS...));
+#pragma empty_line
+   This means there is a function `NAME' returning `double' and a function
+   `NAMEf' returning `float'.  Each place `_Mdouble_' appears in the
+   prototype, that is actually `double' in the prototype for `NAME' and
+   `float' in the prototype for `NAMEf'.  Reentrant variant functions are
+   called `NAME_r' and `NAMEf_r'.
+#pragma empty_line
+   Functions returning other types like `int' are declared using the macro:
+#pragma empty_line
+   __MATHDECL (TYPE, NAME,[_r], (ARGS...));
+#pragma empty_line
+   This is just like __MATHCALL but for a function returning `TYPE'
+   instead of `_Mdouble_'.  In all of these cases, there is still
+   both a `NAME' and a `NAMEf' that takes `float' arguments.
+#pragma empty_line
+   Note that there must be no whitespace before the argument passed for
+   NAME, to make token pasting work with -traditional.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Trigonometric functions.  */
+#pragma empty_line
+#pragma empty_line
+/* Arc cosine of X.  */
+extern double acos (double __x) __attribute__ ((__nothrow__ )); extern double __acos (double __x) __attribute__ ((__nothrow__ ));
+/* Arc sine of X.  */
+extern double asin (double __x) __attribute__ ((__nothrow__ )); extern double __asin (double __x) __attribute__ ((__nothrow__ ));
+/* Arc tangent of X.  */
+extern double atan (double __x) __attribute__ ((__nothrow__ )); extern double __atan (double __x) __attribute__ ((__nothrow__ ));
+/* Arc tangent of Y/X.  */
+extern double atan2 (double __y, double __x) __attribute__ ((__nothrow__ )); extern double __atan2 (double __y, double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Cosine of X.  */
+extern double cos (double __x) __attribute__ ((__nothrow__ )); extern double __cos (double __x) __attribute__ ((__nothrow__ ));
+/* Sine of X.  */
+extern double sin (double __x) __attribute__ ((__nothrow__ )); extern double __sin (double __x) __attribute__ ((__nothrow__ ));
+/* Tangent of X.  */
+extern double tan (double __x) __attribute__ ((__nothrow__ )); extern double __tan (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Hyperbolic functions.  */
+#pragma empty_line
+/* Hyperbolic cosine of X.  */
+extern double cosh (double __x) __attribute__ ((__nothrow__ )); extern double __cosh (double __x) __attribute__ ((__nothrow__ ));
+/* Hyperbolic sine of X.  */
+extern double sinh (double __x) __attribute__ ((__nothrow__ )); extern double __sinh (double __x) __attribute__ ((__nothrow__ ));
+/* Hyperbolic tangent of X.  */
+extern double tanh (double __x) __attribute__ ((__nothrow__ )); extern double __tanh (double __x) __attribute__ ((__nothrow__ ));
+#pragma line 87 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+/* Hyperbolic arc cosine of X.  */
+extern double acosh (double __x) __attribute__ ((__nothrow__ )); extern double __acosh (double __x) __attribute__ ((__nothrow__ ));
+/* Hyperbolic arc sine of X.  */
+extern double asinh (double __x) __attribute__ ((__nothrow__ )); extern double __asinh (double __x) __attribute__ ((__nothrow__ ));
+/* Hyperbolic arc tangent of X.  */
+extern double atanh (double __x) __attribute__ ((__nothrow__ )); extern double __atanh (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Exponential and logarithmic functions.  */
+#pragma empty_line
+#pragma empty_line
+/* Exponential function of X.  */
+extern double exp (double __x) __attribute__ ((__nothrow__ )); extern double __exp (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Break VALUE into a normalized fraction and an integral power of 2.  */
+extern double frexp (double __x, int *__exponent) __attribute__ ((__nothrow__ )); extern double __frexp (double __x, int *__exponent) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* X times (two to the EXP power).  */
+extern double ldexp (double __x, int __exponent) __attribute__ ((__nothrow__ )); extern double __ldexp (double __x, int __exponent) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Natural logarithm of X.  */
+extern double log (double __x) __attribute__ ((__nothrow__ )); extern double __log (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Base-ten logarithm of X.  */
+extern double log10 (double __x) __attribute__ ((__nothrow__ )); extern double __log10 (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Break VALUE into integral and fractional parts.  */
+extern double modf (double __x, double *__iptr) __attribute__ ((__nothrow__ )); extern double __modf (double __x, double *__iptr) __attribute__ ((__nothrow__ )) __attribute__ ((__nonnull__ (2)));
+#pragma line 127 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+/* Return exp(X) - 1.  */
+extern double expm1 (double __x) __attribute__ ((__nothrow__ )); extern double __expm1 (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Return log(1 + X).  */
+extern double log1p (double __x) __attribute__ ((__nothrow__ )); extern double __log1p (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Return the base 2 signed integral exponent of X.  */
+extern double logb (double __x) __attribute__ ((__nothrow__ )); extern double __logb (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Compute base-2 exponential of X.  */
+extern double exp2 (double __x) __attribute__ ((__nothrow__ )); extern double __exp2 (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Compute base-2 logarithm of X.  */
+extern double log2 (double __x) __attribute__ ((__nothrow__ )); extern double __log2 (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Power functions.  */
+#pragma empty_line
+#pragma empty_line
+/* Return X to the Y power.  */
+extern double pow (double __x, double __y) __attribute__ ((__nothrow__ )); extern double __pow (double __x, double __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Return the square root of X.  */
+extern double sqrt (double __x) __attribute__ ((__nothrow__ )); extern double __sqrt (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return `sqrt(X*X + Y*Y)'.  */
+extern double hypot (double __x, double __y) __attribute__ ((__nothrow__ )); extern double __hypot (double __x, double __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return the cube root of X.  */
+extern double cbrt (double __x) __attribute__ ((__nothrow__ )); extern double __cbrt (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Nearest integer, absolute value, and remainder functions.  */
+#pragma empty_line
+#pragma empty_line
+/* Smallest integral value not less than X.  */
+extern double ceil (double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern double __ceil (double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Absolute value of X.  */
+extern double fabs (double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern double __fabs (double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Largest integer not greater than X.  */
+extern double floor (double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern double __floor (double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Floating-point modulo remainder of X/Y.  */
+extern double fmod (double __x, double __y) __attribute__ ((__nothrow__ )); extern double __fmod (double __x, double __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Return 0 if VALUE is finite or NaN, +1 if it
+   is +Infinity, -1 if it is -Infinity.  */
+extern int __isinf (double __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Return nonzero if VALUE is finite and not NaN.  */
+extern int __finite (double __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return 0 if VALUE is finite or NaN, +1 if it
+   is +Infinity, -1 if it is -Infinity.  */
+extern int isinf (double __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+/* Return nonzero if VALUE is finite and not NaN.  */
+extern int finite (double __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Return the remainder of X/Y.  */
+extern double drem (double __x, double __y) __attribute__ ((__nothrow__ )); extern double __drem (double __x, double __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Return the fractional part of X after dividing out `ilogb (X)'.  */
+extern double significand (double __x) __attribute__ ((__nothrow__ )); extern double __significand (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return X with its signed changed to Y's.  */
+extern double copysign (double __x, double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern double __copysign (double __x, double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return representation of qNaN for double type.  */
+extern double nan (const char *__tagb) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern double __nan (const char *__tagb) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return nonzero if VALUE is not a number.  */
+extern int __isnan (double __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return nonzero if VALUE is not a number.  */
+extern int isnan (double __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Bessel functions.  */
+extern double j0 (double) __attribute__ ((__nothrow__ )); extern double __j0 (double) __attribute__ ((__nothrow__ ));
+extern double j1 (double) __attribute__ ((__nothrow__ )); extern double __j1 (double) __attribute__ ((__nothrow__ ));
+extern double jn (int, double) __attribute__ ((__nothrow__ )); extern double __jn (int, double) __attribute__ ((__nothrow__ ));
+extern double y0 (double) __attribute__ ((__nothrow__ )); extern double __y0 (double) __attribute__ ((__nothrow__ ));
+extern double y1 (double) __attribute__ ((__nothrow__ )); extern double __y1 (double) __attribute__ ((__nothrow__ ));
+extern double yn (int, double) __attribute__ ((__nothrow__ )); extern double __yn (int, double) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Error and gamma functions.  */
+extern double erf (double) __attribute__ ((__nothrow__ )); extern double __erf (double) __attribute__ ((__nothrow__ ));
+extern double erfc (double) __attribute__ ((__nothrow__ )); extern double __erfc (double) __attribute__ ((__nothrow__ ));
+extern double lgamma (double) __attribute__ ((__nothrow__ )); extern double __lgamma (double) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* True gamma function.  */
+extern double tgamma (double) __attribute__ ((__nothrow__ )); extern double __tgamma (double) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Obsolete alias for `lgamma'.  */
+extern double gamma (double) __attribute__ ((__nothrow__ )); extern double __gamma (double) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Reentrant version of lgamma.  This function uses the global variable
+   `signgam'.  The reentrant version instead takes a pointer and stores
+   the value through it.  */
+extern double lgamma_r (double, int *__signgamp) __attribute__ ((__nothrow__ )); extern double __lgamma_r (double, int *__signgamp) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return the integer nearest X in the direction of the
+   prevailing rounding mode.  */
+extern double rint (double __x) __attribute__ ((__nothrow__ )); extern double __rint (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Return X + epsilon if X < Y, X - epsilon if X > Y.  */
+extern double nextafter (double __x, double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern double __nextafter (double __x, double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+extern double nexttoward (double __x, long double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern double __nexttoward (double __x, long double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+/* Return the remainder of integer divison X / Y with infinite precision.  */
+extern double remainder (double __x, double __y) __attribute__ ((__nothrow__ )); extern double __remainder (double __x, double __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Return X times (2 to the Nth power).  */
+extern double scalbn (double __x, int __n) __attribute__ ((__nothrow__ )); extern double __scalbn (double __x, int __n) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Return the binary exponent of X, which must be nonzero.  */
+extern int ilogb (double __x) __attribute__ ((__nothrow__ )); extern int __ilogb (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return X times (2 to the Nth power).  */
+extern double scalbln (double __x, long int __n) __attribute__ ((__nothrow__ )); extern double __scalbln (double __x, long int __n) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Round X to integral value in floating-point format using current
+   rounding direction, but do not raise inexact exception.  */
+extern double nearbyint (double __x) __attribute__ ((__nothrow__ )); extern double __nearbyint (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Round X to nearest integral value, rounding halfway cases away from
+   zero.  */
+extern double round (double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern double __round (double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Round X to the integral value in floating-point format nearest but
+   not larger in magnitude.  */
+extern double trunc (double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern double __trunc (double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Compute remainder of X and Y and put in *QUO a value with sign of x/y
+   and magnitude congruent `mod 2^n' to the magnitude of the integral
+   quotient x/y, with n >= 3.  */
+extern double remquo (double __x, double __y, int *__quo) __attribute__ ((__nothrow__ )); extern double __remquo (double __x, double __y, int *__quo) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Conversion functions.  */
+#pragma empty_line
+/* Round X to nearest integral value according to current rounding
+   direction.  */
+extern long int lrint (double __x) __attribute__ ((__nothrow__ )); extern long int __lrint (double __x) __attribute__ ((__nothrow__ ));
+__extension__
+extern long long int llrint (double __x) __attribute__ ((__nothrow__ )); extern long long int __llrint (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Round X to nearest integral value, rounding halfway cases away from
+   zero.  */
+extern long int lround (double __x) __attribute__ ((__nothrow__ )); extern long int __lround (double __x) __attribute__ ((__nothrow__ ));
+__extension__
+extern long long int llround (double __x) __attribute__ ((__nothrow__ )); extern long long int __llround (double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Return positive difference between X and Y.  */
+extern double fdim (double __x, double __y) __attribute__ ((__nothrow__ )); extern double __fdim (double __x, double __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Return maximum numeric value from X and Y.  */
+extern double fmax (double __x, double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern double __fmax (double __x, double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Return minimum numeric value from X and Y.  */
+extern double fmin (double __x, double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern double __fmin (double __x, double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+/* Classify given number.  */
+extern int __fpclassify (double __value) __attribute__ ((__nothrow__ ))
+     __attribute__ ((__const__));
+#pragma empty_line
+/* Test for negative number.  */
+extern int __signbit (double __value) __attribute__ ((__nothrow__ ))
+     __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+/* Multiply-add function computed as a ternary operation.  */
+extern double fma (double __x, double __y, double __z) __attribute__ ((__nothrow__ )); extern double __fma (double __x, double __y, double __z) __attribute__ ((__nothrow__ ));
+#pragma line 382 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+/* Return X times (2 to the Nth power).  */
+extern double scalb (double __x, double __n) __attribute__ ((__nothrow__ )); extern double __scalb (double __x, double __n) __attribute__ ((__nothrow__ ));
+#pragma line 84 "/usr/include/math.h" 2 3 4
+#pragma line 93 "/usr/include/math.h" 3 4
+/* Include the file of declarations again, this time using `float'
+   instead of `double' and appending f to each function name.  */
+#pragma line 104 "/usr/include/math.h" 3 4
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4
+/* Prototype declarations for math functions; helper file for <math.h>.
+   Copyright (C) 1996-2016 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+#pragma empty_line
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+#pragma empty_line
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+#pragma empty_line
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#pragma empty_line
+/* NOTE: Because of the special way this file is used by <math.h>, this
+   file must NOT be protected from multiple inclusion as header files
+   usually are.
+#pragma empty_line
+   This file provides prototype declarations for the math functions.
+   Most functions are declared using the macro:
+#pragma empty_line
+   __MATHCALL (NAME,[_r], (ARGS...));
+#pragma empty_line
+   This means there is a function `NAME' returning `double' and a function
+   `NAMEf' returning `float'.  Each place `_Mdouble_' appears in the
+   prototype, that is actually `double' in the prototype for `NAME' and
+   `float' in the prototype for `NAMEf'.  Reentrant variant functions are
+   called `NAME_r' and `NAMEf_r'.
+#pragma empty_line
+   Functions returning other types like `int' are declared using the macro:
+#pragma empty_line
+   __MATHDECL (TYPE, NAME,[_r], (ARGS...));
+#pragma empty_line
+   This is just like __MATHCALL but for a function returning `TYPE'
+   instead of `_Mdouble_'.  In all of these cases, there is still
+   both a `NAME' and a `NAMEf' that takes `float' arguments.
+#pragma empty_line
+   Note that there must be no whitespace before the argument passed for
+   NAME, to make token pasting work with -traditional.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Trigonometric functions.  */
+#pragma empty_line
+#pragma empty_line
+/* Arc cosine of X.  */
+extern float acosf (float __x) __attribute__ ((__nothrow__ )); extern float __acosf (float __x) __attribute__ ((__nothrow__ ));
+/* Arc sine of X.  */
+extern float asinf (float __x) __attribute__ ((__nothrow__ )); extern float __asinf (float __x) __attribute__ ((__nothrow__ ));
+/* Arc tangent of X.  */
+extern float atanf (float __x) __attribute__ ((__nothrow__ )); extern float __atanf (float __x) __attribute__ ((__nothrow__ ));
+/* Arc tangent of Y/X.  */
+extern float atan2f (float __y, float __x) __attribute__ ((__nothrow__ )); extern float __atan2f (float __y, float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Cosine of X.  */
+extern float cosf (float __x) __attribute__ ((__nothrow__ )); extern float __cosf (float __x) __attribute__ ((__nothrow__ ));
+/* Sine of X.  */
+extern float sinf (float __x) __attribute__ ((__nothrow__ )); extern float __sinf (float __x) __attribute__ ((__nothrow__ ));
+/* Tangent of X.  */
+extern float tanf (float __x) __attribute__ ((__nothrow__ )); extern float __tanf (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Hyperbolic functions.  */
+#pragma empty_line
+/* Hyperbolic cosine of X.  */
+extern float coshf (float __x) __attribute__ ((__nothrow__ )); extern float __coshf (float __x) __attribute__ ((__nothrow__ ));
+/* Hyperbolic sine of X.  */
+extern float sinhf (float __x) __attribute__ ((__nothrow__ )); extern float __sinhf (float __x) __attribute__ ((__nothrow__ ));
+/* Hyperbolic tangent of X.  */
+extern float tanhf (float __x) __attribute__ ((__nothrow__ )); extern float __tanhf (float __x) __attribute__ ((__nothrow__ ));
+#pragma line 87 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+/* Hyperbolic arc cosine of X.  */
+extern float acoshf (float __x) __attribute__ ((__nothrow__ )); extern float __acoshf (float __x) __attribute__ ((__nothrow__ ));
+/* Hyperbolic arc sine of X.  */
+extern float asinhf (float __x) __attribute__ ((__nothrow__ )); extern float __asinhf (float __x) __attribute__ ((__nothrow__ ));
+/* Hyperbolic arc tangent of X.  */
+extern float atanhf (float __x) __attribute__ ((__nothrow__ )); extern float __atanhf (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Exponential and logarithmic functions.  */
+#pragma empty_line
+#pragma empty_line
+/* Exponential function of X.  */
+extern float expf (float __x) __attribute__ ((__nothrow__ )); extern float __expf (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Break VALUE into a normalized fraction and an integral power of 2.  */
+extern float frexpf (float __x, int *__exponent) __attribute__ ((__nothrow__ )); extern float __frexpf (float __x, int *__exponent) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* X times (two to the EXP power).  */
+extern float ldexpf (float __x, int __exponent) __attribute__ ((__nothrow__ )); extern float __ldexpf (float __x, int __exponent) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Natural logarithm of X.  */
+extern float logf (float __x) __attribute__ ((__nothrow__ )); extern float __logf (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Base-ten logarithm of X.  */
+extern float log10f (float __x) __attribute__ ((__nothrow__ )); extern float __log10f (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Break VALUE into integral and fractional parts.  */
+extern float modff (float __x, float *__iptr) __attribute__ ((__nothrow__ )); extern float __modff (float __x, float *__iptr) __attribute__ ((__nothrow__ )) __attribute__ ((__nonnull__ (2)));
+#pragma line 127 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+/* Return exp(X) - 1.  */
+extern float expm1f (float __x) __attribute__ ((__nothrow__ )); extern float __expm1f (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Return log(1 + X).  */
+extern float log1pf (float __x) __attribute__ ((__nothrow__ )); extern float __log1pf (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Return the base 2 signed integral exponent of X.  */
+extern float logbf (float __x) __attribute__ ((__nothrow__ )); extern float __logbf (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Compute base-2 exponential of X.  */
+extern float exp2f (float __x) __attribute__ ((__nothrow__ )); extern float __exp2f (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Compute base-2 logarithm of X.  */
+extern float log2f (float __x) __attribute__ ((__nothrow__ )); extern float __log2f (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Power functions.  */
+#pragma empty_line
+#pragma empty_line
+/* Return X to the Y power.  */
+extern float powf (float __x, float __y) __attribute__ ((__nothrow__ )); extern float __powf (float __x, float __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Return the square root of X.  */
+extern float sqrtf (float __x) __attribute__ ((__nothrow__ )); extern float __sqrtf (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return `sqrt(X*X + Y*Y)'.  */
+extern float hypotf (float __x, float __y) __attribute__ ((__nothrow__ )); extern float __hypotf (float __x, float __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return the cube root of X.  */
+extern float cbrtf (float __x) __attribute__ ((__nothrow__ )); extern float __cbrtf (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Nearest integer, absolute value, and remainder functions.  */
+#pragma empty_line
+#pragma empty_line
+/* Smallest integral value not less than X.  */
+extern float ceilf (float __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern float __ceilf (float __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Absolute value of X.  */
+extern float fabsf (float __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern float __fabsf (float __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Largest integer not greater than X.  */
+extern float floorf (float __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern float __floorf (float __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Floating-point modulo remainder of X/Y.  */
+extern float fmodf (float __x, float __y) __attribute__ ((__nothrow__ )); extern float __fmodf (float __x, float __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Return 0 if VALUE is finite or NaN, +1 if it
+   is +Infinity, -1 if it is -Infinity.  */
+extern int __isinff (float __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Return nonzero if VALUE is finite and not NaN.  */
+extern int __finitef (float __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return 0 if VALUE is finite or NaN, +1 if it
+   is +Infinity, -1 if it is -Infinity.  */
+extern int isinff (float __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+/* Return nonzero if VALUE is finite and not NaN.  */
+extern int finitef (float __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Return the remainder of X/Y.  */
+extern float dremf (float __x, float __y) __attribute__ ((__nothrow__ )); extern float __dremf (float __x, float __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Return the fractional part of X after dividing out `ilogb (X)'.  */
+extern float significandf (float __x) __attribute__ ((__nothrow__ )); extern float __significandf (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return X with its signed changed to Y's.  */
+extern float copysignf (float __x, float __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern float __copysignf (float __x, float __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return representation of qNaN for double type.  */
+extern float nanf (const char *__tagb) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern float __nanf (const char *__tagb) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return nonzero if VALUE is not a number.  */
+extern int __isnanf (float __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return nonzero if VALUE is not a number.  */
+extern int isnanf (float __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Bessel functions.  */
+extern float j0f (float) __attribute__ ((__nothrow__ )); extern float __j0f (float) __attribute__ ((__nothrow__ ));
+extern float j1f (float) __attribute__ ((__nothrow__ )); extern float __j1f (float) __attribute__ ((__nothrow__ ));
+extern float jnf (int, float) __attribute__ ((__nothrow__ )); extern float __jnf (int, float) __attribute__ ((__nothrow__ ));
+extern float y0f (float) __attribute__ ((__nothrow__ )); extern float __y0f (float) __attribute__ ((__nothrow__ ));
+extern float y1f (float) __attribute__ ((__nothrow__ )); extern float __y1f (float) __attribute__ ((__nothrow__ ));
+extern float ynf (int, float) __attribute__ ((__nothrow__ )); extern float __ynf (int, float) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Error and gamma functions.  */
+extern float erff (float) __attribute__ ((__nothrow__ )); extern float __erff (float) __attribute__ ((__nothrow__ ));
+extern float erfcf (float) __attribute__ ((__nothrow__ )); extern float __erfcf (float) __attribute__ ((__nothrow__ ));
+extern float lgammaf (float) __attribute__ ((__nothrow__ )); extern float __lgammaf (float) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* True gamma function.  */
+extern float tgammaf (float) __attribute__ ((__nothrow__ )); extern float __tgammaf (float) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Obsolete alias for `lgamma'.  */
+extern float gammaf (float) __attribute__ ((__nothrow__ )); extern float __gammaf (float) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Reentrant version of lgamma.  This function uses the global variable
+   `signgam'.  The reentrant version instead takes a pointer and stores
+   the value through it.  */
+extern float lgammaf_r (float, int *__signgamp) __attribute__ ((__nothrow__ )); extern float __lgammaf_r (float, int *__signgamp) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return the integer nearest X in the direction of the
+   prevailing rounding mode.  */
+extern float rintf (float __x) __attribute__ ((__nothrow__ )); extern float __rintf (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Return X + epsilon if X < Y, X - epsilon if X > Y.  */
+extern float nextafterf (float __x, float __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern float __nextafterf (float __x, float __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+extern float nexttowardf (float __x, long double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern float __nexttowardf (float __x, long double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+/* Return the remainder of integer divison X / Y with infinite precision.  */
+extern float remainderf (float __x, float __y) __attribute__ ((__nothrow__ )); extern float __remainderf (float __x, float __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Return X times (2 to the Nth power).  */
+extern float scalbnf (float __x, int __n) __attribute__ ((__nothrow__ )); extern float __scalbnf (float __x, int __n) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Return the binary exponent of X, which must be nonzero.  */
+extern int ilogbf (float __x) __attribute__ ((__nothrow__ )); extern int __ilogbf (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return X times (2 to the Nth power).  */
+extern float scalblnf (float __x, long int __n) __attribute__ ((__nothrow__ )); extern float __scalblnf (float __x, long int __n) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Round X to integral value in floating-point format using current
+   rounding direction, but do not raise inexact exception.  */
+extern float nearbyintf (float __x) __attribute__ ((__nothrow__ )); extern float __nearbyintf (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Round X to nearest integral value, rounding halfway cases away from
+   zero.  */
+extern float roundf (float __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern float __roundf (float __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Round X to the integral value in floating-point format nearest but
+   not larger in magnitude.  */
+extern float truncf (float __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern float __truncf (float __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Compute remainder of X and Y and put in *QUO a value with sign of x/y
+   and magnitude congruent `mod 2^n' to the magnitude of the integral
+   quotient x/y, with n >= 3.  */
+extern float remquof (float __x, float __y, int *__quo) __attribute__ ((__nothrow__ )); extern float __remquof (float __x, float __y, int *__quo) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Conversion functions.  */
+#pragma empty_line
+/* Round X to nearest integral value according to current rounding
+   direction.  */
+extern long int lrintf (float __x) __attribute__ ((__nothrow__ )); extern long int __lrintf (float __x) __attribute__ ((__nothrow__ ));
+__extension__
+extern long long int llrintf (float __x) __attribute__ ((__nothrow__ )); extern long long int __llrintf (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Round X to nearest integral value, rounding halfway cases away from
+   zero.  */
+extern long int lroundf (float __x) __attribute__ ((__nothrow__ )); extern long int __lroundf (float __x) __attribute__ ((__nothrow__ ));
+__extension__
+extern long long int llroundf (float __x) __attribute__ ((__nothrow__ )); extern long long int __llroundf (float __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Return positive difference between X and Y.  */
+extern float fdimf (float __x, float __y) __attribute__ ((__nothrow__ )); extern float __fdimf (float __x, float __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Return maximum numeric value from X and Y.  */
+extern float fmaxf (float __x, float __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern float __fmaxf (float __x, float __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Return minimum numeric value from X and Y.  */
+extern float fminf (float __x, float __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern float __fminf (float __x, float __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+/* Classify given number.  */
+extern int __fpclassifyf (float __value) __attribute__ ((__nothrow__ ))
+     __attribute__ ((__const__));
+#pragma empty_line
+/* Test for negative number.  */
+extern int __signbitf (float __value) __attribute__ ((__nothrow__ ))
+     __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+/* Multiply-add function computed as a ternary operation.  */
+extern float fmaf (float __x, float __y, float __z) __attribute__ ((__nothrow__ )); extern float __fmaf (float __x, float __y, float __z) __attribute__ ((__nothrow__ ));
+#pragma line 382 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+/* Return X times (2 to the Nth power).  */
+extern float scalbf (float __x, float __n) __attribute__ ((__nothrow__ )); extern float __scalbf (float __x, float __n) __attribute__ ((__nothrow__ ));
+#pragma line 105 "/usr/include/math.h" 2 3 4
+#pragma line 139 "/usr/include/math.h" 3 4
+/* Include the file of declarations again, this time using `long double'
+   instead of `double' and appending l to each function name.  */
+#pragma line 151 "/usr/include/math.h" 3 4
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4
+/* Prototype declarations for math functions; helper file for <math.h>.
+   Copyright (C) 1996-2016 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+#pragma empty_line
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+#pragma empty_line
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+#pragma empty_line
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#pragma empty_line
+/* NOTE: Because of the special way this file is used by <math.h>, this
+   file must NOT be protected from multiple inclusion as header files
+   usually are.
+#pragma empty_line
+   This file provides prototype declarations for the math functions.
+   Most functions are declared using the macro:
+#pragma empty_line
+   __MATHCALL (NAME,[_r], (ARGS...));
+#pragma empty_line
+   This means there is a function `NAME' returning `double' and a function
+   `NAMEf' returning `float'.  Each place `_Mdouble_' appears in the
+   prototype, that is actually `double' in the prototype for `NAME' and
+   `float' in the prototype for `NAMEf'.  Reentrant variant functions are
+   called `NAME_r' and `NAMEf_r'.
+#pragma empty_line
+   Functions returning other types like `int' are declared using the macro:
+#pragma empty_line
+   __MATHDECL (TYPE, NAME,[_r], (ARGS...));
+#pragma empty_line
+   This is just like __MATHCALL but for a function returning `TYPE'
+   instead of `_Mdouble_'.  In all of these cases, there is still
+   both a `NAME' and a `NAMEf' that takes `float' arguments.
+#pragma empty_line
+   Note that there must be no whitespace before the argument passed for
+   NAME, to make token pasting work with -traditional.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Trigonometric functions.  */
+#pragma empty_line
+#pragma empty_line
+/* Arc cosine of X.  */
+extern long double acosl (long double __x) __attribute__ ((__nothrow__ )); extern long double __acosl (long double __x) __attribute__ ((__nothrow__ ));
+/* Arc sine of X.  */
+extern long double asinl (long double __x) __attribute__ ((__nothrow__ )); extern long double __asinl (long double __x) __attribute__ ((__nothrow__ ));
+/* Arc tangent of X.  */
+extern long double atanl (long double __x) __attribute__ ((__nothrow__ )); extern long double __atanl (long double __x) __attribute__ ((__nothrow__ ));
+/* Arc tangent of Y/X.  */
+extern long double atan2l (long double __y, long double __x) __attribute__ ((__nothrow__ )); extern long double __atan2l (long double __y, long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Cosine of X.  */
+extern long double cosl (long double __x) __attribute__ ((__nothrow__ )); extern long double __cosl (long double __x) __attribute__ ((__nothrow__ ));
+/* Sine of X.  */
+extern long double sinl (long double __x) __attribute__ ((__nothrow__ )); extern long double __sinl (long double __x) __attribute__ ((__nothrow__ ));
+/* Tangent of X.  */
+extern long double tanl (long double __x) __attribute__ ((__nothrow__ )); extern long double __tanl (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Hyperbolic functions.  */
+#pragma empty_line
+/* Hyperbolic cosine of X.  */
+extern long double coshl (long double __x) __attribute__ ((__nothrow__ )); extern long double __coshl (long double __x) __attribute__ ((__nothrow__ ));
+/* Hyperbolic sine of X.  */
+extern long double sinhl (long double __x) __attribute__ ((__nothrow__ )); extern long double __sinhl (long double __x) __attribute__ ((__nothrow__ ));
+/* Hyperbolic tangent of X.  */
+extern long double tanhl (long double __x) __attribute__ ((__nothrow__ )); extern long double __tanhl (long double __x) __attribute__ ((__nothrow__ ));
+#pragma line 87 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+/* Hyperbolic arc cosine of X.  */
+extern long double acoshl (long double __x) __attribute__ ((__nothrow__ )); extern long double __acoshl (long double __x) __attribute__ ((__nothrow__ ));
+/* Hyperbolic arc sine of X.  */
+extern long double asinhl (long double __x) __attribute__ ((__nothrow__ )); extern long double __asinhl (long double __x) __attribute__ ((__nothrow__ ));
+/* Hyperbolic arc tangent of X.  */
+extern long double atanhl (long double __x) __attribute__ ((__nothrow__ )); extern long double __atanhl (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Exponential and logarithmic functions.  */
+#pragma empty_line
+#pragma empty_line
+/* Exponential function of X.  */
+extern long double expl (long double __x) __attribute__ ((__nothrow__ )); extern long double __expl (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Break VALUE into a normalized fraction and an integral power of 2.  */
+extern long double frexpl (long double __x, int *__exponent) __attribute__ ((__nothrow__ )); extern long double __frexpl (long double __x, int *__exponent) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* X times (two to the EXP power).  */
+extern long double ldexpl (long double __x, int __exponent) __attribute__ ((__nothrow__ )); extern long double __ldexpl (long double __x, int __exponent) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Natural logarithm of X.  */
+extern long double logl (long double __x) __attribute__ ((__nothrow__ )); extern long double __logl (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Base-ten logarithm of X.  */
+extern long double log10l (long double __x) __attribute__ ((__nothrow__ )); extern long double __log10l (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Break VALUE into integral and fractional parts.  */
+extern long double modfl (long double __x, long double *__iptr) __attribute__ ((__nothrow__ )); extern long double __modfl (long double __x, long double *__iptr) __attribute__ ((__nothrow__ )) __attribute__ ((__nonnull__ (2)));
+#pragma line 127 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+/* Return exp(X) - 1.  */
+extern long double expm1l (long double __x) __attribute__ ((__nothrow__ )); extern long double __expm1l (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Return log(1 + X).  */
+extern long double log1pl (long double __x) __attribute__ ((__nothrow__ )); extern long double __log1pl (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Return the base 2 signed integral exponent of X.  */
+extern long double logbl (long double __x) __attribute__ ((__nothrow__ )); extern long double __logbl (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Compute base-2 exponential of X.  */
+extern long double exp2l (long double __x) __attribute__ ((__nothrow__ )); extern long double __exp2l (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Compute base-2 logarithm of X.  */
+extern long double log2l (long double __x) __attribute__ ((__nothrow__ )); extern long double __log2l (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Power functions.  */
+#pragma empty_line
+#pragma empty_line
+/* Return X to the Y power.  */
+extern long double powl (long double __x, long double __y) __attribute__ ((__nothrow__ )); extern long double __powl (long double __x, long double __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Return the square root of X.  */
+extern long double sqrtl (long double __x) __attribute__ ((__nothrow__ )); extern long double __sqrtl (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return `sqrt(X*X + Y*Y)'.  */
+extern long double hypotl (long double __x, long double __y) __attribute__ ((__nothrow__ )); extern long double __hypotl (long double __x, long double __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return the cube root of X.  */
+extern long double cbrtl (long double __x) __attribute__ ((__nothrow__ )); extern long double __cbrtl (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Nearest integer, absolute value, and remainder functions.  */
+#pragma empty_line
+#pragma empty_line
+/* Smallest integral value not less than X.  */
+extern long double ceill (long double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern long double __ceill (long double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Absolute value of X.  */
+extern long double fabsl (long double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern long double __fabsl (long double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Largest integer not greater than X.  */
+extern long double floorl (long double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern long double __floorl (long double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Floating-point modulo remainder of X/Y.  */
+extern long double fmodl (long double __x, long double __y) __attribute__ ((__nothrow__ )); extern long double __fmodl (long double __x, long double __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Return 0 if VALUE is finite or NaN, +1 if it
+   is +Infinity, -1 if it is -Infinity.  */
+extern int __isinfl (long double __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Return nonzero if VALUE is finite and not NaN.  */
+extern int __finitel (long double __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return 0 if VALUE is finite or NaN, +1 if it
+   is +Infinity, -1 if it is -Infinity.  */
+extern int isinfl (long double __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+/* Return nonzero if VALUE is finite and not NaN.  */
+extern int finitel (long double __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Return the remainder of X/Y.  */
+extern long double dreml (long double __x, long double __y) __attribute__ ((__nothrow__ )); extern long double __dreml (long double __x, long double __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Return the fractional part of X after dividing out `ilogb (X)'.  */
+extern long double significandl (long double __x) __attribute__ ((__nothrow__ )); extern long double __significandl (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return X with its signed changed to Y's.  */
+extern long double copysignl (long double __x, long double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern long double __copysignl (long double __x, long double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return representation of qNaN for double type.  */
+extern long double nanl (const char *__tagb) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern long double __nanl (const char *__tagb) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return nonzero if VALUE is not a number.  */
+extern int __isnanl (long double __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return nonzero if VALUE is not a number.  */
+extern int isnanl (long double __value) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Bessel functions.  */
+extern long double j0l (long double) __attribute__ ((__nothrow__ )); extern long double __j0l (long double) __attribute__ ((__nothrow__ ));
+extern long double j1l (long double) __attribute__ ((__nothrow__ )); extern long double __j1l (long double) __attribute__ ((__nothrow__ ));
+extern long double jnl (int, long double) __attribute__ ((__nothrow__ )); extern long double __jnl (int, long double) __attribute__ ((__nothrow__ ));
+extern long double y0l (long double) __attribute__ ((__nothrow__ )); extern long double __y0l (long double) __attribute__ ((__nothrow__ ));
+extern long double y1l (long double) __attribute__ ((__nothrow__ )); extern long double __y1l (long double) __attribute__ ((__nothrow__ ));
+extern long double ynl (int, long double) __attribute__ ((__nothrow__ )); extern long double __ynl (int, long double) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Error and gamma functions.  */
+extern long double erfl (long double) __attribute__ ((__nothrow__ )); extern long double __erfl (long double) __attribute__ ((__nothrow__ ));
+extern long double erfcl (long double) __attribute__ ((__nothrow__ )); extern long double __erfcl (long double) __attribute__ ((__nothrow__ ));
+extern long double lgammal (long double) __attribute__ ((__nothrow__ )); extern long double __lgammal (long double) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* True gamma function.  */
+extern long double tgammal (long double) __attribute__ ((__nothrow__ )); extern long double __tgammal (long double) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Obsolete alias for `lgamma'.  */
+extern long double gammal (long double) __attribute__ ((__nothrow__ )); extern long double __gammal (long double) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Reentrant version of lgamma.  This function uses the global variable
+   `signgam'.  The reentrant version instead takes a pointer and stores
+   the value through it.  */
+extern long double lgammal_r (long double, int *__signgamp) __attribute__ ((__nothrow__ )); extern long double __lgammal_r (long double, int *__signgamp) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return the integer nearest X in the direction of the
+   prevailing rounding mode.  */
+extern long double rintl (long double __x) __attribute__ ((__nothrow__ )); extern long double __rintl (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Return X + epsilon if X < Y, X - epsilon if X > Y.  */
+extern long double nextafterl (long double __x, long double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern long double __nextafterl (long double __x, long double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+extern long double nexttowardl (long double __x, long double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern long double __nexttowardl (long double __x, long double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+/* Return the remainder of integer divison X / Y with infinite precision.  */
+extern long double remainderl (long double __x, long double __y) __attribute__ ((__nothrow__ )); extern long double __remainderl (long double __x, long double __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Return X times (2 to the Nth power).  */
+extern long double scalbnl (long double __x, int __n) __attribute__ ((__nothrow__ )); extern long double __scalbnl (long double __x, int __n) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Return the binary exponent of X, which must be nonzero.  */
+extern int ilogbl (long double __x) __attribute__ ((__nothrow__ )); extern int __ilogbl (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return X times (2 to the Nth power).  */
+extern long double scalblnl (long double __x, long int __n) __attribute__ ((__nothrow__ )); extern long double __scalblnl (long double __x, long int __n) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Round X to integral value in floating-point format using current
+   rounding direction, but do not raise inexact exception.  */
+extern long double nearbyintl (long double __x) __attribute__ ((__nothrow__ )); extern long double __nearbyintl (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Round X to nearest integral value, rounding halfway cases away from
+   zero.  */
+extern long double roundl (long double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern long double __roundl (long double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Round X to the integral value in floating-point format nearest but
+   not larger in magnitude.  */
+extern long double truncl (long double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern long double __truncl (long double __x) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Compute remainder of X and Y and put in *QUO a value with sign of x/y
+   and magnitude congruent `mod 2^n' to the magnitude of the integral
+   quotient x/y, with n >= 3.  */
+extern long double remquol (long double __x, long double __y, int *__quo) __attribute__ ((__nothrow__ )); extern long double __remquol (long double __x, long double __y, int *__quo) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Conversion functions.  */
+#pragma empty_line
+/* Round X to nearest integral value according to current rounding
+   direction.  */
+extern long int lrintl (long double __x) __attribute__ ((__nothrow__ )); extern long int __lrintl (long double __x) __attribute__ ((__nothrow__ ));
+__extension__
+extern long long int llrintl (long double __x) __attribute__ ((__nothrow__ )); extern long long int __llrintl (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Round X to nearest integral value, rounding halfway cases away from
+   zero.  */
+extern long int lroundl (long double __x) __attribute__ ((__nothrow__ )); extern long int __lroundl (long double __x) __attribute__ ((__nothrow__ ));
+__extension__
+extern long long int llroundl (long double __x) __attribute__ ((__nothrow__ )); extern long long int __llroundl (long double __x) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+#pragma empty_line
+/* Return positive difference between X and Y.  */
+extern long double fdiml (long double __x, long double __y) __attribute__ ((__nothrow__ )); extern long double __fdiml (long double __x, long double __y) __attribute__ ((__nothrow__ ));
+#pragma empty_line
+/* Return maximum numeric value from X and Y.  */
+extern long double fmaxl (long double __x, long double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern long double __fmaxl (long double __x, long double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+/* Return minimum numeric value from X and Y.  */
+extern long double fminl (long double __x, long double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__)); extern long double __fminl (long double __x, long double __y) __attribute__ ((__nothrow__ )) __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+/* Classify given number.  */
+extern int __fpclassifyl (long double __value) __attribute__ ((__nothrow__ ))
+     __attribute__ ((__const__));
+#pragma empty_line
+/* Test for negative number.  */
+extern int __signbitl (long double __value) __attribute__ ((__nothrow__ ))
+     __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+/* Multiply-add function computed as a ternary operation.  */
+extern long double fmal (long double __x, long double __y, long double __z) __attribute__ ((__nothrow__ )); extern long double __fmal (long double __x, long double __y, long double __z) __attribute__ ((__nothrow__ ));
+#pragma line 382 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+/* Return X times (2 to the Nth power).  */
+extern long double scalbl (long double __x, long double __n) __attribute__ ((__nothrow__ )); extern long double __scalbl (long double __x, long double __n) __attribute__ ((__nothrow__ ));
+#pragma line 152 "/usr/include/math.h" 2 3 4
+#pragma line 167 "/usr/include/math.h" 3 4
+/* This variable is used by `gamma' and `lgamma'.  */
+extern int signgam;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* ISO C99 defines some generic macros which work on any data type.  */
+#pragma empty_line
+#pragma empty_line
+/* Get the architecture specific values describing the floating-point
+   evaluation.  The following symbols will get defined:
+#pragma empty_line
+    float_t	floating-point type at least as wide as `float' used
+		to evaluate `float' expressions
+    double_t	floating-point type at least as wide as `double' used
+		to evaluate `double' expressions
+#pragma empty_line
+    FLT_EVAL_METHOD
+		Defined to
+		  0	if `float_t' is `float' and `double_t' is `double'
+		  1	if `float_t' and `double_t' are `double'
+		  2	if `float_t' and `double_t' are `long double'
+		  else	`float_t' and `double_t' are unspecified
+#pragma empty_line
+    INFINITY	representation of the infinity value of type `float'
+#pragma empty_line
+    FP_FAST_FMA
+    FP_FAST_FMAF
+    FP_FAST_FMAL
+		If defined it indicates that the `fma' function
+		generally executes about as fast as a multiply and an add.
+		This macro is defined only iff the `fma' function is
+		implemented directly with a hardware multiply-add instructions.
+#pragma empty_line
+    FP_ILOGB0	Expands to a value returned by `ilogb (0.0)'.
+    FP_ILOGBNAN	Expands to a value returned by `ilogb (NAN)'.
+#pragma empty_line
+    DECIMAL_DIG	Number of decimal digits supported by conversion between
+		decimal and all internal floating-point formats.
+#pragma empty_line
+*/
+#pragma empty_line
+/* All floating-point numbers can be put in one of these categories.  */
+enum
+  {
+    FP_NAN =
+#pragma empty_line
+      0,
+    FP_INFINITE =
+#pragma empty_line
+      1,
+    FP_ZERO =
+#pragma empty_line
+      2,
+    FP_SUBNORMAL =
+#pragma empty_line
+      3,
+    FP_NORMAL =
+#pragma empty_line
+      4
+  };
+#pragma empty_line
+/* GCC bug 66462 means we cannot use the math builtins with -fsignaling-nan,
+   so disable builtins if this is enabled.  When fixed in a newer GCC,
+   the __SUPPORT_SNAN__ check may be skipped for those versions.  */
+#pragma empty_line
+/* Return number of classification appropriate for X.  */
+#pragma line 248 "/usr/include/math.h" 3 4
+/* Return nonzero value if sign of X is negative.  */
+#pragma line 268 "/usr/include/math.h" 3 4
+/* Return nonzero value if X is not +-Inf or NaN.  */
+#pragma line 282 "/usr/include/math.h" 3 4
+/* Return nonzero value if X is neither zero, subnormal, Inf, nor NaN.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return nonzero value if X is a NaN.  We could use `fpclassify' but
+   we already have this functions `__isnan' and it is faster.  */
+#pragma line 304 "/usr/include/math.h" 3 4
+/* Return nonzero value if X is positive or negative infinity.  */
+#pragma line 318 "/usr/include/math.h" 3 4
+/* Bitmasks for the math_errhandling macro.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* By default all functions support both errno and exception handling.
+   In gcc's fast math mode and if inline functions are defined this
+   might not be true.  */
+#pragma line 346 "/usr/include/math.h" 3 4
+/* Support for various different standard error handling behaviors.  */
+typedef enum
+{
+  _IEEE_ = -1, /* According to IEEE 754/IEEE 854.  */
+  _SVID_, /* According to System V, release 4.  */
+  _XOPEN_, /* Nowadays also Unix98.  */
+  _POSIX_,
+  _ISOC_ /* Actually this is ISO C99.  */
+} _LIB_VERSION_TYPE;
+#pragma empty_line
+/* This variable can be changed at run-time to any of the values above to
+   affect floating point error handling behavior (it may also be necessary
+   to change the hardware FPU exception settings).  */
+extern _LIB_VERSION_TYPE _LIB_VERSION;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* In SVID error handling, `matherr' is called with this description
+   of the exceptional condition.
+#pragma empty_line
+   We have a problem when using C++ since `exception' is a reserved
+   name in C++.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+struct exception
+#pragma empty_line
+  {
+    int type;
+    char *name;
+    double arg1;
+    double arg2;
+    double retval;
+  };
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int matherr (struct exception *__exc);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Types of exceptions in the `type' field.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* SVID mode specifies returning this large value instead of infinity.  */
+#pragma line 411 "/usr/include/math.h" 3 4
+/* Some useful constants.  */
+#pragma line 428 "/usr/include/math.h" 3 4
+/* The above constants are not adequate for computation using `long double's.
+   Therefore we provide as an extension constants with similar names as a
+   GNU extension.  Provide enough digits for the 128-bit IEEE quad.  */
+#pragma line 448 "/usr/include/math.h" 3 4
+/* When compiling in strict ISO C compatible mode we must not use the
+   inline functions since they, among other things, do not set the
+   `errno' variable correctly.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* ISO C99 defines some macros to compare number while taking care for
+   unordered numbers.  Many FPUs provide special instructions to support
+   these operations.  Generic support in GCC for these as builtins went
+   in before 3.0.0, but not all cpus added their patterns.  We define
+   versions that use the builtins here, and <bits/mathinline.h> will
+   undef/redefine as appropriate for the specific GCC version in use.  */
+#pragma line 470 "/usr/include/math.h" 3 4
+/* Get machine-dependent inline versions (if there are any).  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Define special entry points to use when the compiler got told to
+   only expect finite results.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* If we've still got undefined comparison macros, provide defaults.  */
+#pragma empty_line
+/* Return nonzero value if X is greater than Y.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return nonzero value if X is greater than or equal to Y.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return nonzero value if X is less than Y.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return nonzero value if X is less than or equal to Y.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return nonzero value if either X is less than Y or Y is less than X.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return nonzero value if arguments are unordered.  */
+#pragma line 7 "./adpcm.h" 2
+#pragma line 25 "./adpcm.h"
 int encode(int, int);
 void decode(int);
 int filtez(int *bpl, int *dlt);
@@ -2060,18 +3607,18 @@ int uppol2(int al1, int al2, int plt, int plt1, int plt2);
 int uppol1(int al1, int apl2, int plt, int plt1);
 int logsch(int ih, int nbh);
 void reset();
-void init(int test_data[3]);
+void init(int test_data[100]);
 int adpcm_sin(int rad);
 int adpcm_cos(int rad);
 int adpcm_abs(int n);
 #pragma empty_line
-int enc_return(int compressed[3]);
-int dec_return(int dec_result[3]);
+int enc_return(int compressed[100]);
+int dec_return(int dec_result[100]);
 #pragma empty_line
-void adpcm_enc_main(int test_data[3], int compressed[3], int size);
-void adpcm_dec_main(int compressed[3], int dec_result[3], int size);
-void adpcm_main(int test_data[3], int compressed[3],
-                int dec_result[3], int select, int size);
+void adpcm_enc_main(int test_data[100], int compressed[100], int size);
+void adpcm_dec_main(int compressed[100], int dec_result[100], int size);
+void adpcm_main(int test_data[100], int compressed[100],
+                int dec_result[100], int select, int size);
 #pragma empty_line
 int delay_bpl[6];
 #pragma empty_line

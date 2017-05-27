@@ -11,17 +11,17 @@ use IEEE.numeric_std.all;
 
 entity adpcm_main is
 port (
-    test_data_address0 : OUT STD_LOGIC_VECTOR (1 downto 0);
+    test_data_address0 : OUT STD_LOGIC_VECTOR (6 downto 0);
     test_data_ce0 : OUT STD_LOGIC;
     test_data_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
     test_data_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
     test_data_we0 : OUT STD_LOGIC;
-    compressed_address0 : OUT STD_LOGIC_VECTOR (1 downto 0);
+    compressed_address0 : OUT STD_LOGIC_VECTOR (6 downto 0);
     compressed_ce0 : OUT STD_LOGIC;
     compressed_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
     compressed_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
     compressed_we0 : OUT STD_LOGIC;
-    dec_result_address0 : OUT STD_LOGIC_VECTOR (1 downto 0);
+    dec_result_address0 : OUT STD_LOGIC_VECTOR (6 downto 0);
     dec_result_ce0 : OUT STD_LOGIC;
     dec_result_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
     dec_result_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
@@ -40,8 +40,8 @@ end;
 architecture behav of adpcm_main is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "adpcm_main,hls_ip_2016_4,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a100tcsg324-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.741000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=11,HLS_SYN_DSP=70,HLS_SYN_FF=5484,HLS_SYN_LUT=5029}";
-    constant ap_const_lv2_0 : STD_LOGIC_VECTOR (1 downto 0) := "00";
+    "adpcm_main,hls_ip_2016_4,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a100tcsg324-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.741000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=11,HLS_SYN_DSP=70,HLS_SYN_FF=5548,HLS_SYN_LUT=5044}";
+    constant ap_const_lv7_0 : STD_LOGIC_VECTOR (6 downto 0) := "0000000";
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_logic_1 : STD_LOGIC := '1';
@@ -51,13 +51,13 @@ architecture behav of adpcm_main is
     signal Block_proc_U0_ap_continue : STD_LOGIC;
     signal Block_proc_U0_ap_idle : STD_LOGIC;
     signal Block_proc_U0_ap_ready : STD_LOGIC;
-    signal Block_proc_U0_dec_result_address0 : STD_LOGIC_VECTOR (1 downto 0);
+    signal Block_proc_U0_dec_result_address0 : STD_LOGIC_VECTOR (6 downto 0);
     signal Block_proc_U0_dec_result_ce0 : STD_LOGIC;
     signal Block_proc_U0_dec_result_we0 : STD_LOGIC;
     signal Block_proc_U0_dec_result_d0 : STD_LOGIC_VECTOR (31 downto 0);
-    signal Block_proc_U0_test_data_address0 : STD_LOGIC_VECTOR (1 downto 0);
+    signal Block_proc_U0_test_data_address0 : STD_LOGIC_VECTOR (6 downto 0);
     signal Block_proc_U0_test_data_ce0 : STD_LOGIC;
-    signal Block_proc_U0_compressed_address0 : STD_LOGIC_VECTOR (1 downto 0);
+    signal Block_proc_U0_compressed_address0 : STD_LOGIC_VECTOR (6 downto 0);
     signal Block_proc_U0_compressed_ce0 : STD_LOGIC;
     signal Block_proc_U0_compressed_we0 : STD_LOGIC;
     signal Block_proc_U0_compressed_d0 : STD_LOGIC_VECTOR (31 downto 0);
@@ -76,14 +76,14 @@ architecture behav of adpcm_main is
         ap_ready : OUT STD_LOGIC;
         select_r : IN STD_LOGIC_VECTOR (31 downto 0);
         size : IN STD_LOGIC_VECTOR (31 downto 0);
-        dec_result_address0 : OUT STD_LOGIC_VECTOR (1 downto 0);
+        dec_result_address0 : OUT STD_LOGIC_VECTOR (6 downto 0);
         dec_result_ce0 : OUT STD_LOGIC;
         dec_result_we0 : OUT STD_LOGIC;
         dec_result_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
-        test_data_address0 : OUT STD_LOGIC_VECTOR (1 downto 0);
+        test_data_address0 : OUT STD_LOGIC_VECTOR (6 downto 0);
         test_data_ce0 : OUT STD_LOGIC;
         test_data_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
-        compressed_address0 : OUT STD_LOGIC_VECTOR (1 downto 0);
+        compressed_address0 : OUT STD_LOGIC_VECTOR (6 downto 0);
         compressed_ce0 : OUT STD_LOGIC;
         compressed_we0 : OUT STD_LOGIC;
         compressed_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);

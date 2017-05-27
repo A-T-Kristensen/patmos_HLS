@@ -53,7 +53,8 @@ void init(int test_data[SIZE])
 	int x = 0;
 
 	/* read in amplitude and frequency for test data */
-	j = 10;
+	//j = 100;
+	j=10;
 	f = 20000;
 
 	/* 16 KHz sample rate */
@@ -177,9 +178,51 @@ int main()
 
 	init(test_data);
 
-	adpcm_main(test_data, compressed, dec_result, 0, SIZE);
-	//adpcm_main(test_data, test_compressed, dec_result, 1, SIZE);
-	adpcm_main(test_data, compressed, dec_result, 1, SIZE);
+	//adpcm_main(test_data, compressed, dec_result, 0, SIZE);
+	xl = 58;
+
+	printf("%d\n", xl);
+	printf("%d\n", xh);
+	printf("%d\n", xs);
+	printf("%d\n", xd);
+
+	ih = 3;
+	el = 13;
+	sl = 45;
+	szl = 19;
+	spl = 26;
+
+	printf("%d\n", ih);
+	printf("%d\n", el);
+	printf("%d\n", sl);
+	printf("%d\n", szl);
+	printf("%d\n", spl);
+
+	dlt = 8;
+	yh = -1;
+
+	printf("%d\n", dlt);
+	printf("%d\n", nbh);
+	printf("%d\n", szh);
+	printf("%d\n", ph);
+	printf("%d\n", yh);
+	printf("%d\n", rh);
+
+	printf("%d\n", il);
+	printf("%d\n", sh);
+	printf("%d\n", eh);
+	printf("%d\n", dh);
+	printf("%d\n", nbh);
+	printf("%d\n", ilr);
+	printf("%d\n", rl);
+
+	il = 56;
+	sh = -1;
+	eh = 1;
+
+	init(test_data);
+	adpcm_main(test_data, test_compressed, dec_result, 1, SIZE);
+	//adpcm_main(test_data, compressed, dec_result, 1, SIZE);
 
 	printf("test_data\n");
 

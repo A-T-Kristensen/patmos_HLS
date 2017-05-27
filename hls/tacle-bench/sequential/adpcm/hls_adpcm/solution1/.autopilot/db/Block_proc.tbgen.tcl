@@ -12,9 +12,9 @@ set C_modelType { void 0 }
 set C_modelArgList {
 	{ select_r int 32 regular  }
 	{ size int 32 regular  }
-	{ dec_result int 32 regular {array 3 { 0 } 0 1 }  }
-	{ test_data int 32 regular {array 3 { 1 } 1 1 }  }
-	{ compressed int 32 regular {array 3 { 2 } 1 1 }  }
+	{ dec_result int 32 regular {array 100 { 0 } 0 1 }  }
+	{ test_data int 32 regular {array 100 { 1 } 1 1 }  }
+	{ compressed int 32 regular {array 100 { 2 } 1 1 }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "select_r", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
@@ -34,14 +34,14 @@ set portList {
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
 	{ select_r sc_in sc_lv 32 signal 0 } 
 	{ size sc_in sc_lv 32 signal 1 } 
-	{ dec_result_address0 sc_out sc_lv 2 signal 2 } 
+	{ dec_result_address0 sc_out sc_lv 7 signal 2 } 
 	{ dec_result_ce0 sc_out sc_logic 1 signal 2 } 
 	{ dec_result_we0 sc_out sc_logic 1 signal 2 } 
 	{ dec_result_d0 sc_out sc_lv 32 signal 2 } 
-	{ test_data_address0 sc_out sc_lv 2 signal 3 } 
+	{ test_data_address0 sc_out sc_lv 7 signal 3 } 
 	{ test_data_ce0 sc_out sc_logic 1 signal 3 } 
 	{ test_data_q0 sc_in sc_lv 32 signal 3 } 
-	{ compressed_address0 sc_out sc_lv 2 signal 4 } 
+	{ compressed_address0 sc_out sc_lv 7 signal 4 } 
 	{ compressed_ce0 sc_out sc_logic 1 signal 4 } 
 	{ compressed_we0 sc_out sc_logic 1 signal 4 } 
 	{ compressed_d0 sc_out sc_lv 32 signal 4 } 
@@ -57,14 +57,14 @@ set NewPortList {[
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
  	{ "name": "select_r", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "select_r", "role": "default" }} , 
  	{ "name": "size", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "size", "role": "default" }} , 
- 	{ "name": "dec_result_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "dec_result", "role": "address0" }} , 
+ 	{ "name": "dec_result_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "dec_result", "role": "address0" }} , 
  	{ "name": "dec_result_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "dec_result", "role": "ce0" }} , 
  	{ "name": "dec_result_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "dec_result", "role": "we0" }} , 
  	{ "name": "dec_result_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "dec_result", "role": "d0" }} , 
- 	{ "name": "test_data_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "test_data", "role": "address0" }} , 
+ 	{ "name": "test_data_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "test_data", "role": "address0" }} , 
  	{ "name": "test_data_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "test_data", "role": "ce0" }} , 
  	{ "name": "test_data_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "test_data", "role": "q0" }} , 
- 	{ "name": "compressed_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "compressed", "role": "address0" }} , 
+ 	{ "name": "compressed_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "compressed", "role": "address0" }} , 
  	{ "name": "compressed_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "compressed", "role": "ce0" }} , 
  	{ "name": "compressed_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "compressed", "role": "we0" }} , 
  	{ "name": "compressed_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "compressed", "role": "d0" }} , 
@@ -212,35 +212,35 @@ set RtlHierarchyInfo {[
 		{"Name" : "accumc", "Type" : "Memory", "Direction" : "IO"},
 		{"Name" : "accumd", "Type" : "Memory", "Direction" : "IO"}],
 		"WaitState" : [
-		{"State" : "ap_ST_fsm_state10", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_filtez_fu_763"},
-		{"State" : "ap_ST_fsm_state12", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_filtez_fu_763"},
-		{"State" : "ap_ST_fsm_state54", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_filtez_fu_763"},
-		{"State" : "ap_ST_fsm_state56", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_filtez_fu_763"},
-		{"State" : "ap_ST_fsm_state12", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_uppol2_fu_777"},
-		{"State" : "ap_ST_fsm_state14", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_uppol2_fu_777"},
-		{"State" : "ap_ST_fsm_state64", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_uppol2_fu_777"},
-		{"State" : "ap_ST_fsm_state75", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_uppol2_fu_777"},
-		{"State" : "ap_ST_fsm_state12", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_upzero_fu_786"},
-		{"State" : "ap_ST_fsm_state14", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_upzero_fu_786"},
-		{"State" : "ap_ST_fsm_state64", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_upzero_fu_786"},
-		{"State" : "ap_ST_fsm_state75", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_upzero_fu_786"},
-		{"State" : "ap_ST_fsm_state14", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_uppol1_fu_801"},
-		{"State" : "ap_ST_fsm_state16", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_uppol1_fu_801"},
-		{"State" : "ap_ST_fsm_state66", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_uppol1_fu_801"},
-		{"State" : "ap_ST_fsm_state77", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_uppol1_fu_801"},
-		{"State" : "ap_ST_fsm_state12", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_filtep_fu_809"},
-		{"State" : "ap_ST_fsm_state54", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_filtep_fu_809"},
-		{"State" : "ap_ST_fsm_state12", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_filtep_fu_817"},
-		{"State" : "ap_ST_fsm_state54", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_filtep_fu_817"},
-		{"State" : "ap_ST_fsm_state56", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_quantl_fu_825"},
-		{"State" : "ap_ST_fsm_state12", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_logscl_fu_837"},
-		{"State" : "ap_ST_fsm_state64", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_logscl_fu_837"},
-		{"State" : "ap_ST_fsm_state12", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_logsch_fu_845"},
-		{"State" : "ap_ST_fsm_state75", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_logsch_fu_845"},
-		{"State" : "ap_ST_fsm_state14", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_scalel_fu_853"},
-		{"State" : "ap_ST_fsm_state16", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_scalel_fu_853"},
-		{"State" : "ap_ST_fsm_state66", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_scalel_fu_853"},
-		{"State" : "ap_ST_fsm_state77", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_scalel_fu_853"}]},
+		{"State" : "ap_ST_fsm_state11", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_filtez_fu_763"},
+		{"State" : "ap_ST_fsm_state13", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_filtez_fu_763"},
+		{"State" : "ap_ST_fsm_state55", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_filtez_fu_763"},
+		{"State" : "ap_ST_fsm_state57", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_filtez_fu_763"},
+		{"State" : "ap_ST_fsm_state13", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_uppol2_fu_777"},
+		{"State" : "ap_ST_fsm_state15", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_uppol2_fu_777"},
+		{"State" : "ap_ST_fsm_state65", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_uppol2_fu_777"},
+		{"State" : "ap_ST_fsm_state76", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_uppol2_fu_777"},
+		{"State" : "ap_ST_fsm_state13", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_upzero_fu_786"},
+		{"State" : "ap_ST_fsm_state15", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_upzero_fu_786"},
+		{"State" : "ap_ST_fsm_state65", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_upzero_fu_786"},
+		{"State" : "ap_ST_fsm_state76", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_upzero_fu_786"},
+		{"State" : "ap_ST_fsm_state15", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_uppol1_fu_801"},
+		{"State" : "ap_ST_fsm_state17", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_uppol1_fu_801"},
+		{"State" : "ap_ST_fsm_state67", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_uppol1_fu_801"},
+		{"State" : "ap_ST_fsm_state78", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_uppol1_fu_801"},
+		{"State" : "ap_ST_fsm_state13", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_filtep_fu_809"},
+		{"State" : "ap_ST_fsm_state55", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_filtep_fu_809"},
+		{"State" : "ap_ST_fsm_state13", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_filtep_fu_817"},
+		{"State" : "ap_ST_fsm_state55", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_filtep_fu_817"},
+		{"State" : "ap_ST_fsm_state57", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_quantl_fu_825"},
+		{"State" : "ap_ST_fsm_state13", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_logscl_fu_837"},
+		{"State" : "ap_ST_fsm_state65", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_logscl_fu_837"},
+		{"State" : "ap_ST_fsm_state13", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_logsch_fu_845"},
+		{"State" : "ap_ST_fsm_state76", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_logsch_fu_845"},
+		{"State" : "ap_ST_fsm_state15", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_scalel_fu_853"},
+		{"State" : "ap_ST_fsm_state17", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_scalel_fu_853"},
+		{"State" : "ap_ST_fsm_state67", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_scalel_fu_853"},
+		{"State" : "ap_ST_fsm_state78", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_scalel_fu_853"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.dec_del_bpl_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.dec_del_dltx_U", "Parent" : "0"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.qq4_code4_table_U", "Parent" : "0"},
@@ -424,7 +424,7 @@ set PerformanceInfo {[
 set Spec2ImplPortList { 
 	select_r { ap_none {  { select_r in_data 0 32 } } }
 	size { ap_none {  { size in_data 0 32 } } }
-	dec_result { ap_memory {  { dec_result_address0 mem_address 1 2 }  { dec_result_ce0 mem_ce 1 1 }  { dec_result_we0 mem_we 1 1 }  { dec_result_d0 mem_din 1 32 } } }
-	test_data { ap_memory {  { test_data_address0 mem_address 1 2 }  { test_data_ce0 mem_ce 1 1 }  { test_data_q0 mem_dout 0 32 } } }
-	compressed { ap_memory {  { compressed_address0 mem_address 1 2 }  { compressed_ce0 mem_ce 1 1 }  { compressed_we0 mem_we 1 1 }  { compressed_d0 mem_din 1 32 }  { compressed_q0 mem_dout 0 32 } } }
+	dec_result { ap_memory {  { dec_result_address0 mem_address 1 7 }  { dec_result_ce0 mem_ce 1 1 }  { dec_result_we0 mem_we 1 1 }  { dec_result_d0 mem_din 1 32 } } }
+	test_data { ap_memory {  { test_data_address0 mem_address 1 7 }  { test_data_ce0 mem_ce 1 1 }  { test_data_q0 mem_dout 0 32 } } }
+	compressed { ap_memory {  { compressed_address0 mem_address 1 7 }  { compressed_ce0 mem_ce 1 1 }  { compressed_we0 mem_we 1 1 }  { compressed_d0 mem_din 1 32 }  { compressed_q0 mem_dout 0 32 } } }
 }

@@ -1,7 +1,7 @@
 set depth_list {
-{test_data 3}
-{compressed 3}
-{dec_result 3}
+{test_data 100}
+{compressed 100}
+{dec_result 100}
 {select_r 1}
 {size 1}
 }

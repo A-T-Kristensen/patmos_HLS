@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Block_proc'" level="0">
-<item name = "Date">Sat May 27 13:51:00 2017
+<item name = "Date">Sat May 27 14:39:35 2017
 </item>
 <item name = "Version">2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)</item>
 <item name = "Project">hls_adpcm</item>
@@ -48,7 +48,7 @@
 <column name="- Loop 1">?, ?, 308 ~ 558, -, -, ?, no</column>
 <column name=" + Loop 1.1">70, 70, 7, -, -, 10, no</column>
 <column name=" + Loop 1.2">44, 44, 2, -, -, 22, no</column>
-<column name="- Loop 2">?, ?, 246 ~ 295, -, -, ?, no</column>
+<column name="- Loop 2">?, ?, 247 ~ 296, -, -, ?, no</column>
 <column name=" + Loop 2.1">70, 70, 7, -, -, 10, no</column>
 <column name=" + Loop 2.2">20, 20, 2, -, -, 10, no</column>
 </table>

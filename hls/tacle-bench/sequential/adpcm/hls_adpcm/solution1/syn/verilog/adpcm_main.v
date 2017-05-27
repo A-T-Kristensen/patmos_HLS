@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="adpcm_main,hls_ip_2016_4,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a100tcsg324-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.741000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=11,HLS_SYN_DSP=70,HLS_SYN_FF=5484,HLS_SYN_LUT=5029}" *)
+(* CORE_GENERATION_INFO="adpcm_main,hls_ip_2016_4,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a100tcsg324-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.741000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=11,HLS_SYN_DSP=70,HLS_SYN_FF=5548,HLS_SYN_LUT=5044}" *)
 
 module adpcm_main (
         test_data_address0,
@@ -35,20 +35,20 @@ module adpcm_main (
         ap_idle
 );
 
-parameter    ap_const_lv2_0 = 2'b00;
+parameter    ap_const_lv7_0 = 7'b0000000;
 parameter    ap_const_lv32_0 = 32'b00000000000000000000000000000000;
 
-output  [1:0] test_data_address0;
+output  [6:0] test_data_address0;
 output   test_data_ce0;
 output  [31:0] test_data_d0;
 input  [31:0] test_data_q0;
 output   test_data_we0;
-output  [1:0] compressed_address0;
+output  [6:0] compressed_address0;
 output   compressed_ce0;
 output  [31:0] compressed_d0;
 input  [31:0] compressed_q0;
 output   compressed_we0;
-output  [1:0] dec_result_address0;
+output  [6:0] dec_result_address0;
 output   dec_result_ce0;
 output  [31:0] dec_result_d0;
 input  [31:0] dec_result_q0;
@@ -67,13 +67,13 @@ wire    Block_proc_U0_ap_done;
 wire    Block_proc_U0_ap_continue;
 wire    Block_proc_U0_ap_idle;
 wire    Block_proc_U0_ap_ready;
-wire   [1:0] Block_proc_U0_dec_result_address0;
+wire   [6:0] Block_proc_U0_dec_result_address0;
 wire    Block_proc_U0_dec_result_ce0;
 wire    Block_proc_U0_dec_result_we0;
 wire   [31:0] Block_proc_U0_dec_result_d0;
-wire   [1:0] Block_proc_U0_test_data_address0;
+wire   [6:0] Block_proc_U0_test_data_address0;
 wire    Block_proc_U0_test_data_ce0;
-wire   [1:0] Block_proc_U0_compressed_address0;
+wire   [6:0] Block_proc_U0_compressed_address0;
 wire    Block_proc_U0_compressed_ce0;
 wire    Block_proc_U0_compressed_we0;
 wire   [31:0] Block_proc_U0_compressed_d0;

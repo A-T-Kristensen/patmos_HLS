@@ -548,12 +548,12 @@ define internal fastcc i32 @filtep(i32 %rlt1, i32 %al1, i32 %rlt2, i32 %al2) nou
 }
 
 ; [#uses=0]
-define void @adpcm_main([3 x i32]* %test_data, [3 x i32]* %compressed, [3 x i32]* %dec_result, i32 %select, i32 %size) nounwind uwtable {
+define void @adpcm_main([100 x i32]* %test_data, [100 x i32]* %compressed, [100 x i32]* %dec_result, i32 %select, i32 %size) nounwind uwtable {
 codeRepl:
   call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind, !dbg !656 ; [debug line = 628:1@678:3]
-  call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %test_data) nounwind, !map !667
-  call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %compressed) nounwind, !map !673
-  call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %dec_result) nounwind, !map !677
+  call void (...)* @_ssdm_op_SpecBitsMap([100 x i32]* %test_data) nounwind, !map !667
+  call void (...)* @_ssdm_op_SpecBitsMap([100 x i32]* %compressed) nounwind, !map !673
+  call void (...)* @_ssdm_op_SpecBitsMap([100 x i32]* %dec_result) nounwind, !map !677
   call void (...)* @_ssdm_op_SpecBitsMap(i32 %select) nounwind, !map !681
   call void (...)* @_ssdm_op_SpecBitsMap(i32 %size) nounwind, !map !687
   call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @adpcm_main_str) nounwind
@@ -568,20 +568,20 @@ codeRepl:
   call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str9, [1 x i8]* @p_str) nounwind, !dbg !699 ; [debug line = 668:1]
   call void (...)* @_ssdm_op_SpecInterface(i32 %size, [8 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind, !dbg !700 ; [debug line = 670:1]
   call void (...)* @_ssdm_op_SpecInterface(i32 %select, [8 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind, !dbg !701 ; [debug line = 671:1]
-  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %dec_result, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
-  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %compressed, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
-  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %test_data, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %dec_result, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %compressed, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %test_data, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
   call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str12, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind, !dbg !702 ; [debug line = 675:1]
   %size_read = call i32 @_ssdm_op_Read.ap_none.i32(i32 %size) nounwind ; [#uses=1 type=i32]
-  call void @llvm.dbg.value(metadata !{i32 %size_read}, i64 0, metadata !703), !dbg !704 ; [debug line = 657:52] [debug variable = size]
+  call void @llvm.dbg.value(metadata !{i32 %size_read}, i64 0, metadata !703), !dbg !704 ; [debug line = 657:54] [debug variable = size]
   %select_read = call i32 @_ssdm_op_Read.ap_none.i32(i32 %select) nounwind ; [#uses=1 type=i32]
-  call void @llvm.dbg.value(metadata !{i32 %select_read}, i64 0, metadata !705), !dbg !706 ; [debug line = 657:40] [debug variable = select]
-  call void @llvm.dbg.value(metadata !{[3 x i32]* %test_data}, i64 0, metadata !707), !dbg !711 ; [debug line = 656:21] [debug variable = test_data]
-  call void @llvm.dbg.value(metadata !{[3 x i32]* %compressed}, i64 0, metadata !712), !dbg !713 ; [debug line = 656:39] [debug variable = compressed]
-  call void @llvm.dbg.value(metadata !{[3 x i32]* %dec_result}, i64 0, metadata !714), !dbg !715 ; [debug line = 657:21] [debug variable = dec_result]
-  call void @llvm.dbg.value(metadata !{i32 %select}, i64 0, metadata !705), !dbg !706 ; [debug line = 657:40] [debug variable = select]
-  call void @llvm.dbg.value(metadata !{i32 %size}, i64 0, metadata !703), !dbg !704 ; [debug line = 657:52] [debug variable = size]
-  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed)
+  call void @llvm.dbg.value(metadata !{i32 %select_read}, i64 0, metadata !705), !dbg !706 ; [debug line = 657:42] [debug variable = select]
+  call void @llvm.dbg.value(metadata !{[100 x i32]* %test_data}, i64 0, metadata !707), !dbg !711 ; [debug line = 656:21] [debug variable = test_data]
+  call void @llvm.dbg.value(metadata !{[100 x i32]* %compressed}, i64 0, metadata !712), !dbg !713 ; [debug line = 656:41] [debug variable = compressed]
+  call void @llvm.dbg.value(metadata !{[100 x i32]* %dec_result}, i64 0, metadata !714), !dbg !715 ; [debug line = 657:21] [debug variable = dec_result]
+  call void @llvm.dbg.value(metadata !{i32 %select}, i64 0, metadata !705), !dbg !706 ; [debug line = 657:42] [debug variable = select]
+  call void @llvm.dbg.value(metadata !{i32 %size}, i64 0, metadata !703), !dbg !704 ; [debug line = 657:54] [debug variable = size]
+  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [100 x i32]* %dec_result, [100 x i32]* %test_data, [100 x i32]* %compressed)
   ret void, !dbg !716                             ; [debug line = 683:1]
 }
 
@@ -897,13 +897,13 @@ entry:
 }
 
 ; [#uses=1]
-define internal fastcc void @Block__proc(i32 %select, i32 %size, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed) nounwind {
+define internal fastcc void @Block__proc(i32 %select, i32 %size, [100 x i32]* %dec_result, [100 x i32]* %test_data, [100 x i32]* %compressed) nounwind {
 newFuncRoot:
-  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %test_data, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
-  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %compressed, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
-  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %dec_result, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %test_data, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %compressed, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %dec_result, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
   %size_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %size) nounwind ; [#uses=5 type=i32]
-  call void @llvm.dbg.value(metadata !{i32 %size_read}, i64 0, metadata !717) nounwind, !dbg !721 ; [debug line = 638:63@681:3] [debug variable = size]
+  call void @llvm.dbg.value(metadata !{i32 %size_read}, i64 0, metadata !717) nounwind, !dbg !721 ; [debug line = 638:67@681:3] [debug variable = size]
   %select_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %select) nounwind ; [#uses=1 type=i32]
   %tmp = icmp eq i32 %select_read, 0, !dbg !722   ; [#uses=1 type=i1] [debug line = 677:2]
   br i1 %tmp, label %.preheader.preheader, label %0, !dbg !722 ; [debug line = 677:2]
@@ -925,11 +925,11 @@ newFuncRoot:
   br i1 %tmp_38, label %adpcm_enc_main.exit.loopexit27, label %1, !dbg !723 ; [debug line = 633:7@678:3]
 
 ; <label>:0                                       ; preds = %newFuncRoot
-  call void @llvm.dbg.value(metadata !{[3 x i32]* %compressed}, i64 0, metadata !725), !dbg !726 ; [debug line = 638:25@681:3] [debug variable = compressed]
-  call void @llvm.dbg.value(metadata !{[3 x i32]* %dec_result}, i64 0, metadata !727), !dbg !728 ; [debug line = 638:44@681:3] [debug variable = dec_result]
-  call void @llvm.dbg.value(metadata !{i32 %size}, i64 0, metadata !717) nounwind, !dbg !721 ; [debug line = 638:63@681:3] [debug variable = size]
+  call void @llvm.dbg.value(metadata !{[100 x i32]* %compressed}, i64 0, metadata !725), !dbg !726 ; [debug line = 638:25@681:3] [debug variable = compressed]
+  call void @llvm.dbg.value(metadata !{[100 x i32]* %dec_result}, i64 0, metadata !727), !dbg !728 ; [debug line = 638:46@681:3] [debug variable = dec_result]
+  call void @llvm.dbg.value(metadata !{i32 %size}, i64 0, metadata !717) nounwind, !dbg !721 ; [debug line = 638:67@681:3] [debug variable = size]
   %tmp_s = add nsw i32 %size_read, -1, !dbg !729  ; [#uses=1 type=i32] [debug line = 648:3@681:3]
-  %dec_result_addr = getelementptr [3 x i32]* %dec_result, i64 0, i64 1, !dbg !733 ; [#uses=1 type=i32*] [debug line = 651:4@681:3]
+  %dec_result_addr = getelementptr [100 x i32]* %dec_result, i64 0, i64 1, !dbg !733 ; [#uses=1 type=i32*] [debug line = 651:4@681:3]
   %tmp_33 = add i32 %size_read, 1                 ; [#uses=2 type=i32]
   %tmp_34 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %tmp_33, i32 31) ; [#uses=1 type=i1]
   %p_neg3 = xor i32 %size_read, -1                ; [#uses=1 type=i32]
@@ -942,11 +942,11 @@ newFuncRoot:
 
 ; <label>:1                                       ; preds = %.preheader
   %tmp_40 = sext i32 %i_0_i to i64, !dbg !736     ; [#uses=1 type=i64] [debug line = 634:23@678:3]
-  %test_data_addr = getelementptr [3 x i32]* %test_data, i64 0, i64 %tmp_40, !dbg !736 ; [#uses=1 type=i32*] [debug line = 634:23@678:3]
+  %test_data_addr = getelementptr [100 x i32]* %test_data, i64 0, i64 %tmp_40, !dbg !736 ; [#uses=1 type=i32*] [debug line = 634:23@678:3]
   %test_data_load = load i32* %test_data_addr, align 4, !dbg !736 ; [#uses=1 type=i32] [debug line = 634:23@678:3]
   %tmp_41 = or i32 %i_0_i, 1, !dbg !736           ; [#uses=1 type=i32] [debug line = 634:23@678:3]
   %tmp_42 = sext i32 %tmp_41 to i64, !dbg !736    ; [#uses=1 type=i64] [debug line = 634:23@678:3]
-  %test_data_addr_1 = getelementptr [3 x i32]* %test_data, i64 0, i64 %tmp_42, !dbg !736 ; [#uses=1 type=i32*] [debug line = 634:23@678:3]
+  %test_data_addr_1 = getelementptr [100 x i32]* %test_data, i64 0, i64 %tmp_42, !dbg !736 ; [#uses=1 type=i32*] [debug line = 634:23@678:3]
   %test_data_load_1 = load i32* %test_data_addr_1, align 4, !dbg !736 ; [#uses=1 type=i32] [debug line = 634:23@678:3]
   call void @llvm.dbg.value(metadata !{i32 %test_data_load}, i64 0, metadata !738) nounwind, !dbg !740 ; [debug line = 154:16@634:23@678:3] [debug variable = xin1]
   call void @llvm.dbg.value(metadata !{i32 %test_data_load_1}, i64 0, metadata !741) nounwind, !dbg !742 ; [debug line = 154:26@634:23@678:3] [debug variable = xin2]
@@ -1002,7 +1002,7 @@ adpcm_enc_main.exit:                              ; preds = %adpcm_enc_main.exit
   %tmp_14 = zext i31 %p_lshr_f1 to i32, !dbg !751 ; [#uses=1 type=i32] [debug line = 646:3@681:3]
   %tmp_44 = select i1 %tmp_43, i32 %p_neg_t1, i32 %tmp_14, !dbg !751 ; [#uses=1 type=i32] [debug line = 646:3@681:3]
   %tmp_45 = sext i32 %tmp_44 to i64, !dbg !751    ; [#uses=1 type=i64] [debug line = 646:3@681:3]
-  %compressed_addr = getelementptr [3 x i32]* %compressed, i64 0, i64 %tmp_45, !dbg !751 ; [#uses=1 type=i32*] [debug line = 646:3@681:3]
+  %compressed_addr = getelementptr [100 x i32]* %compressed, i64 0, i64 %tmp_45, !dbg !751 ; [#uses=1 type=i32*] [debug line = 646:3@681:3]
   %compressed_load = load i32* %compressed_addr, align 4, !dbg !751 ; [#uses=3 type=i32] [debug line = 646:3@681:3]
   %tmp_46 = trunc i32 %compressed_load to i6      ; [#uses=2 type=i6]
   %tmp_69_cast = zext i6 %tmp_46 to i32, !dbg !752 ; [#uses=1 type=i32] [debug line = 314:2@646:3@681:3]
@@ -1363,7 +1363,7 @@ encode.exit.i:                                    ; preds = %10, %8
   %tmp_24 = zext i31 %p_lshr_f to i32, !dbg !736  ; [#uses=1 type=i32] [debug line = 634:23@678:3]
   %tmp_120 = select i1 %tmp_128, i32 %p_neg_t, i32 %tmp_24, !dbg !736 ; [#uses=1 type=i32] [debug line = 634:23@678:3]
   %tmp_121 = sext i32 %tmp_120 to i64, !dbg !736  ; [#uses=1 type=i64] [debug line = 634:23@678:3]
-  %compressed_addr_1 = getelementptr [3 x i32]* %compressed, i64 0, i64 %tmp_121, !dbg !736 ; [#uses=1 type=i32*] [debug line = 634:23@678:3]
+  %compressed_addr_1 = getelementptr [100 x i32]* %compressed, i64 0, i64 %tmp_121, !dbg !736 ; [#uses=1 type=i32*] [debug line = 634:23@678:3]
   store i32 %tmp_119, i32* %compressed_addr_1, align 4, !dbg !736 ; [debug line = 634:23@678:3]
   %i_6 = add nsw i32 2, %i_0_i, !dbg !866         ; [#uses=1 type=i32] [debug line = 633:24@678:3]
   call void @llvm.dbg.value(metadata !{i32 %i_6}, i64 0, metadata !867) nounwind, !dbg !866 ; [debug line = 633:24@678:3] [debug variable = i]
@@ -1455,7 +1455,7 @@ decode.exit.i:                                    ; preds = %14
   store i32 %tmp_74, i32* getelementptr inbounds ([11 x i32]* @accumc, i64 0, i64 0), align 16, !dbg !886 ; [debug line = 436:2@646:3@681:3]
   store i32 %tmp_73, i32* getelementptr inbounds ([11 x i32]* @accumd, i64 0, i64 0), align 16, !dbg !887 ; [debug line = 437:2@646:3@681:3]
   %tmp_108 = sext i32 %i_0_i1 to i64, !dbg !888   ; [#uses=1 type=i64] [debug line = 647:3@681:3]
-  %dec_result_addr_1 = getelementptr [3 x i32]* %dec_result, i64 0, i64 %tmp_108, !dbg !888 ; [#uses=1 type=i32*] [debug line = 647:3@681:3]
+  %dec_result_addr_1 = getelementptr [100 x i32]* %dec_result, i64 0, i64 %tmp_108, !dbg !888 ; [#uses=1 type=i32*] [debug line = 647:3@681:3]
   store i32 %tmp_83, i32* %dec_result_addr_1, align 4, !dbg !888 ; [debug line = 647:3@681:3]
   %tmp_109 = icmp slt i32 %i_0_i1, %tmp_s, !dbg !729 ; [#uses=1 type=i1] [debug line = 648:3@681:3]
   br i1 %tmp_109, label %16, label %17, !dbg !729 ; [debug line = 648:3@681:3]
@@ -1471,7 +1471,7 @@ decode.exit.i:                                    ; preds = %14
 ; <label>:16                                      ; preds = %decode.exit.i
   %tmp_122 = or i32 %i_0_i1, 1, !dbg !891         ; [#uses=1 type=i32] [debug line = 649:4@681:3]
   %tmp_123 = sext i32 %tmp_122 to i64, !dbg !891  ; [#uses=1 type=i64] [debug line = 649:4@681:3]
-  %dec_result_addr_2 = getelementptr [3 x i32]* %dec_result, i64 0, i64 %tmp_123, !dbg !891 ; [#uses=1 type=i32*] [debug line = 649:4@681:3]
+  %dec_result_addr_2 = getelementptr [100 x i32]* %dec_result, i64 0, i64 %tmp_123, !dbg !891 ; [#uses=1 type=i32*] [debug line = 649:4@681:3]
   store i32 %tmp_84, i32* %dec_result_addr_2, align 4, !dbg !891 ; [debug line = 649:4@681:3]
   br label %18, !dbg !893                         ; [debug line = 650:3@681:3]
 
@@ -2161,7 +2161,7 @@ decode.exit.i:                                    ; preds = %14
 !669 = metadata !{metadata !670}
 !670 = metadata !{metadata !"test_data", metadata !671, metadata !"int", i32 0, i32 31}
 !671 = metadata !{metadata !672}
-!672 = metadata !{i32 0, i32 2, i32 1}
+!672 = metadata !{i32 0, i32 99, i32 1}
 !673 = metadata !{metadata !674}
 !674 = metadata !{i32 0, i32 31, metadata !675}
 !675 = metadata !{metadata !676}
@@ -2193,16 +2193,16 @@ decode.exit.i:                                    ; preds = %14
 !701 = metadata !{i32 671, i32 1, metadata !663, null}
 !702 = metadata !{i32 675, i32 1, metadata !663, null}
 !703 = metadata !{i32 786689, metadata !664, metadata !"size", metadata !469, i32 83886737, metadata !472, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!704 = metadata !{i32 657, i32 52, metadata !664, null}
+!704 = metadata !{i32 657, i32 54, metadata !664, null}
 !705 = metadata !{i32 786689, metadata !664, metadata !"select", metadata !469, i32 67109521, metadata !472, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!706 = metadata !{i32 657, i32 40, metadata !664, null}
+!706 = metadata !{i32 657, i32 42, metadata !664, null}
 !707 = metadata !{i32 786689, metadata !664, metadata !"test_data", null, i32 656, metadata !708, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!708 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 96, i64 32, i32 0, i32 0, metadata !472, metadata !709, i32 0, i32 0} ; [ DW_TAG_array_type ]
+!708 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 3200, i64 32, i32 0, i32 0, metadata !472, metadata !709, i32 0, i32 0} ; [ DW_TAG_array_type ]
 !709 = metadata !{metadata !710}
-!710 = metadata !{i32 786465, i64 0, i64 2}       ; [ DW_TAG_subrange_type ]
+!710 = metadata !{i32 786465, i64 0, i64 99}      ; [ DW_TAG_subrange_type ]
 !711 = metadata !{i32 656, i32 21, metadata !664, null}
 !712 = metadata !{i32 786689, metadata !664, metadata !"compressed", null, i32 656, metadata !708, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!713 = metadata !{i32 656, i32 39, metadata !664, null}
+!713 = metadata !{i32 656, i32 41, metadata !664, null}
 !714 = metadata !{i32 786689, metadata !664, metadata !"dec_result", null, i32 657, metadata !708, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
 !715 = metadata !{i32 657, i32 21, metadata !664, null}
 !716 = metadata !{i32 683, i32 1, metadata !663, null}
@@ -2210,14 +2210,14 @@ decode.exit.i:                                    ; preds = %14
 !718 = metadata !{i32 786478, i32 0, metadata !469, metadata !"adpcm_dec_main", metadata !"adpcm_dec_main", metadata !"", metadata !469, i32 638, metadata !659, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, null, metadata !474, i32 639} ; [ DW_TAG_subprogram ]
 !719 = metadata !{i32 681, i32 3, metadata !720, null}
 !720 = metadata !{i32 786443, metadata !663, i32 680, i32 9, metadata !469, i32 43} ; [ DW_TAG_lexical_block ]
-!721 = metadata !{i32 638, i32 63, metadata !718, metadata !719}
+!721 = metadata !{i32 638, i32 67, metadata !718, metadata !719}
 !722 = metadata !{i32 677, i32 2, metadata !663, null}
 !723 = metadata !{i32 633, i32 7, metadata !724, metadata !661}
 !724 = metadata !{i32 786443, metadata !657, i32 633, i32 2, metadata !469, i32 34} ; [ DW_TAG_lexical_block ]
 !725 = metadata !{i32 786689, metadata !718, metadata !"compressed", null, i32 638, metadata !708, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
 !726 = metadata !{i32 638, i32 25, metadata !718, metadata !719}
 !727 = metadata !{i32 786689, metadata !718, metadata !"dec_result", null, i32 638, metadata !708, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!728 = metadata !{i32 638, i32 44, metadata !718, metadata !719}
+!728 = metadata !{i32 638, i32 46, metadata !718, metadata !719}
 !729 = metadata !{i32 648, i32 3, metadata !730, metadata !719}
 !730 = metadata !{i32 786443, metadata !731, i32 645, i32 33, metadata !469, i32 38} ; [ DW_TAG_lexical_block ]
 !731 = metadata !{i32 786443, metadata !732, i32 645, i32 2, metadata !469, i32 37} ; [ DW_TAG_lexical_block ]

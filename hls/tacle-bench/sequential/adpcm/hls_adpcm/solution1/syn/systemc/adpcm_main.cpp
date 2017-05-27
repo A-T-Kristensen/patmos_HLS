@@ -12,7 +12,7 @@ using namespace std;
 
 namespace ap_rtl {
 
-const sc_lv<2> adpcm_main::ap_const_lv2_0 = "00";
+const sc_lv<7> adpcm_main::ap_const_lv7_0 = "0000000";
 const sc_logic adpcm_main::ap_const_logic_0 = sc_dt::Log_0;
 const sc_lv<32> adpcm_main::ap_const_lv32_0 = "00000000000000000000000000000000";
 const sc_logic adpcm_main::ap_const_logic_1 = sc_dt::Log_1;

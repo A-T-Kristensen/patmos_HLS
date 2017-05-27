@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'adpcm_main'
 ================================================================
-* Date:           Sat May 27 13:51:04 2017
+* Date:           Sat May 27 14:39:38 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_adpcm
@@ -56,12 +56,12 @@
 |DSP              |        -|      -|       -|      -|
 |Expression       |        -|      -|       -|      -|
 |FIFO             |        -|      -|       -|      -|
-|Instance         |       11|     70|    5484|   5029|
+|Instance         |       11|     70|    5548|   5044|
 |Memory           |        -|      -|       -|      -|
 |Multiplexer      |        -|      -|       -|      -|
 |Register         |        -|      -|       -|      -|
 +-----------------+---------+-------+--------+-------+
-|Total            |       11|     70|    5484|   5029|
+|Total            |       11|     70|    5548|   5044|
 +-----------------+---------+-------+--------+-------+
 |Available        |      270|    240|  126800|  63400|
 +-----------------+---------+-------+--------+-------+
@@ -73,9 +73,9 @@
     +---------------+------------+---------+-------+------+------+
     |    Instance   |   Module   | BRAM_18K| DSP48E|  FF  |  LUT |
     +---------------+------------+---------+-------+------+------+
-    |Block_proc_U0  |Block_proc  |       11|     70|  5484|  5029|
+    |Block_proc_U0  |Block_proc  |       11|     70|  5548|  5044|
     +---------------+------------+---------+-------+------+------+
-    |Total          |            |       11|     70|  5484|  5029|
+    |Total          |            |       11|     70|  5548|  5044|
     +---------------+------------+---------+-------+------+------+
 
     * DSP48: 
@@ -105,17 +105,17 @@
 +---------------------+-----+-----+------------+--------------+--------------+
 |      RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
 +---------------------+-----+-----+------------+--------------+--------------+
-|test_data_address0   | out |    2|  ap_memory |   test_data  |     array    |
+|test_data_address0   | out |    7|  ap_memory |   test_data  |     array    |
 |test_data_ce0        | out |    1|  ap_memory |   test_data  |     array    |
 |test_data_d0         | out |   32|  ap_memory |   test_data  |     array    |
 |test_data_q0         |  in |   32|  ap_memory |   test_data  |     array    |
 |test_data_we0        | out |    1|  ap_memory |   test_data  |     array    |
-|compressed_address0  | out |    2|  ap_memory |  compressed  |     array    |
+|compressed_address0  | out |    7|  ap_memory |  compressed  |     array    |
 |compressed_ce0       | out |    1|  ap_memory |  compressed  |     array    |
 |compressed_d0        | out |   32|  ap_memory |  compressed  |     array    |
 |compressed_q0        |  in |   32|  ap_memory |  compressed  |     array    |
 |compressed_we0       | out |    1|  ap_memory |  compressed  |     array    |
-|dec_result_address0  | out |    2|  ap_memory |  dec_result  |     array    |
+|dec_result_address0  | out |    7|  ap_memory |  dec_result  |     array    |
 |dec_result_ce0       | out |    1|  ap_memory |  dec_result  |     array    |
 |dec_result_d0        | out |   32|  ap_memory |  dec_result  |     array    |
 |dec_result_q0        |  in |   32|  ap_memory |  dec_result  |     array    |

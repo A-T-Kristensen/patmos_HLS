@@ -17,17 +17,17 @@ namespace ap_rtl {
 
 struct adpcm_main : public sc_module {
     // Port declarations 23
-    sc_out< sc_lv<2> > test_data_address0;
+    sc_out< sc_lv<7> > test_data_address0;
     sc_out< sc_logic > test_data_ce0;
     sc_out< sc_lv<32> > test_data_d0;
     sc_in< sc_lv<32> > test_data_q0;
     sc_out< sc_logic > test_data_we0;
-    sc_out< sc_lv<2> > compressed_address0;
+    sc_out< sc_lv<7> > compressed_address0;
     sc_out< sc_logic > compressed_ce0;
     sc_out< sc_lv<32> > compressed_d0;
     sc_in< sc_lv<32> > compressed_q0;
     sc_out< sc_logic > compressed_we0;
-    sc_out< sc_lv<2> > dec_result_address0;
+    sc_out< sc_lv<7> > dec_result_address0;
     sc_out< sc_logic > dec_result_ce0;
     sc_out< sc_lv<32> > dec_result_d0;
     sc_in< sc_lv<32> > dec_result_q0;
@@ -58,20 +58,20 @@ struct adpcm_main : public sc_module {
     sc_signal< sc_logic > Block_proc_U0_ap_continue;
     sc_signal< sc_logic > Block_proc_U0_ap_idle;
     sc_signal< sc_logic > Block_proc_U0_ap_ready;
-    sc_signal< sc_lv<2> > Block_proc_U0_dec_result_address0;
+    sc_signal< sc_lv<7> > Block_proc_U0_dec_result_address0;
     sc_signal< sc_logic > Block_proc_U0_dec_result_ce0;
     sc_signal< sc_logic > Block_proc_U0_dec_result_we0;
     sc_signal< sc_lv<32> > Block_proc_U0_dec_result_d0;
-    sc_signal< sc_lv<2> > Block_proc_U0_test_data_address0;
+    sc_signal< sc_lv<7> > Block_proc_U0_test_data_address0;
     sc_signal< sc_logic > Block_proc_U0_test_data_ce0;
-    sc_signal< sc_lv<2> > Block_proc_U0_compressed_address0;
+    sc_signal< sc_lv<7> > Block_proc_U0_compressed_address0;
     sc_signal< sc_logic > Block_proc_U0_compressed_ce0;
     sc_signal< sc_logic > Block_proc_U0_compressed_we0;
     sc_signal< sc_lv<32> > Block_proc_U0_compressed_d0;
     sc_signal< sc_logic > ap_hs_continue;
     sc_signal< sc_logic > ap_hs_done;
     sc_signal< sc_logic > ap_hs_ready;
-    static const sc_lv<2> ap_const_lv2_0;
+    static const sc_lv<7> ap_const_lv7_0;
     static const sc_logic ap_const_logic_0;
     static const sc_lv<32> ap_const_lv32_0;
     static const sc_logic ap_const_logic_1;

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'adpcm_main'
 ================================================================
-* Date:           Sat May 27 13:51:01 2017
+* Date:           Sat May 27 14:39:35 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_adpcm
@@ -84,7 +84,7 @@ ST_1: select_read (119)  [1/1] 0.00ns
 codeRepl:23  %select_read = call i32 @_ssdm_op_Read.ap_none.i32(i32 %select_r) nounwind
 
 ST_1: StgValue_5 (120)  [2/2] 3.76ns
-codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed)
+codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [100 x i32]* %dec_result, [100 x i32]* %test_data, [100 x i32]* %compressed)
 
 
  <State 2>: 0.00ns
@@ -92,13 +92,13 @@ ST_2: StgValue_6 (96)  [1/1] 0.00ns  loc: adpcm.c:628->adpcm.c:678
 codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind
 
 ST_2: StgValue_7 (97)  [1/1] 0.00ns
-codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %test_data) nounwind, !map !467
+codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap([100 x i32]* %test_data) nounwind, !map !467
 
 ST_2: StgValue_8 (98)  [1/1] 0.00ns
-codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %compressed) nounwind, !map !473
+codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap([100 x i32]* %compressed) nounwind, !map !473
 
 ST_2: StgValue_9 (99)  [1/1] 0.00ns
-codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %dec_result) nounwind, !map !477
+codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap([100 x i32]* %dec_result) nounwind, !map !477
 
 ST_2: StgValue_10 (100)  [1/1] 0.00ns
 codeRepl:4  call void (...)* @_ssdm_op_SpecBitsMap(i32 %select_r) nounwind, !map !481
@@ -143,19 +143,19 @@ ST_2: StgValue_23 (113)  [1/1] 0.00ns  loc: adpcm.c:671
 codeRepl:17  call void (...)* @_ssdm_op_SpecInterface(i32 %select_r, [8 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
 
 ST_2: StgValue_24 (114)  [1/1] 0.00ns
-codeRepl:18  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %dec_result, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+codeRepl:18  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %dec_result, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
 
 ST_2: StgValue_25 (115)  [1/1] 0.00ns
-codeRepl:19  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %compressed, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+codeRepl:19  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %compressed, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
 
 ST_2: StgValue_26 (116)  [1/1] 0.00ns
-codeRepl:20  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %test_data, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+codeRepl:20  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %test_data, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
 
 ST_2: StgValue_27 (117)  [1/1] 0.00ns  loc: adpcm.c:675
 codeRepl:21  call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str12, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
 
 ST_2: StgValue_28 (120)  [1/2] 0.00ns
-codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed)
+codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [100 x i32]* %dec_result, [100 x i32]* %test_data, [100 x i32]* %compressed)
 
 ST_2: StgValue_29 (121)  [1/1] 0.00ns  loc: adpcm.c:683
 codeRepl:25  ret void

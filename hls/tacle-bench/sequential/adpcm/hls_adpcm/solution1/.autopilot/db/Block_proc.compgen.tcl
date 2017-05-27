@@ -1139,7 +1139,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename dec_result \
     op interface \
-    ports { dec_result_address0 { O 2 vector } dec_result_ce0 { O 1 bit } dec_result_we0 { O 1 bit } dec_result_d0 { O 32 vector } } \
+    ports { dec_result_address0 { O 7 vector } dec_result_ce0 { O 1 bit } dec_result_we0 { O 1 bit } dec_result_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'dec_result'"
@@ -1158,7 +1158,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename test_data \
     op interface \
-    ports { test_data_address0 { O 2 vector } test_data_ce0 { O 1 bit } test_data_q0 { I 32 vector } } \
+    ports { test_data_address0 { O 7 vector } test_data_ce0 { O 1 bit } test_data_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'test_data'"
@@ -1177,7 +1177,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir IO \
     corename compressed \
     op interface \
-    ports { compressed_address0 { O 2 vector } compressed_ce0 { O 1 bit } compressed_we0 { O 1 bit } compressed_d0 { O 32 vector } compressed_q0 { I 32 vector } } \
+    ports { compressed_address0 { O 7 vector } compressed_ce0 { O 1 bit } compressed_we0 { O 1 bit } compressed_d0 { O 32 vector } compressed_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'compressed'"

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'adpcm_main'
 ================================================================
-* Date:           Sat May 27 13:51:04 2017
+* Date:           Sat May 27 14:39:38 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_adpcm
@@ -56,12 +56,12 @@
 |DSP              |        -|      -|       -|      -|
 |Expression       |        -|      -|       -|      -|
 |FIFO             |        -|      -|       -|      -|
-|Instance         |       11|     70|    5484|   5029|
+|Instance         |       11|     70|    5548|   5044|
 |Memory           |        -|      -|       -|      -|
 |Multiplexer      |        -|      -|       -|      -|
 |Register         |        -|      -|       -|      -|
 +-----------------+---------+-------+--------+-------+
-|Total            |       11|     70|    5484|   5029|
+|Total            |       11|     70|    5548|   5044|
 +-----------------+---------+-------+--------+-------+
 |Available        |      270|    240|  126800|  63400|
 +-----------------+---------+-------+--------+-------+
@@ -73,9 +73,9 @@
     +---------------+------------+---------+-------+------+------+
     |    Instance   |   Module   | BRAM_18K| DSP48E|  FF  |  LUT |
     +---------------+------------+---------+-------+------+------+
-    |Block_proc_U0  |Block_proc  |       11|     70|  5484|  5029|
+    |Block_proc_U0  |Block_proc  |       11|     70|  5548|  5044|
     +---------------+------------+---------+-------+------+------+
-    |Total          |            |       11|     70|  5484|  5029|
+    |Total          |            |       11|     70|  5548|  5044|
     +---------------+------------+---------+-------+------+------+
 
     * DSP48: 
@@ -105,17 +105,17 @@
 +---------------------+-----+-----+------------+--------------+--------------+
 |      RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
 +---------------------+-----+-----+------------+--------------+--------------+
-|test_data_address0   | out |    2|  ap_memory |   test_data  |     array    |
+|test_data_address0   | out |    7|  ap_memory |   test_data  |     array    |
 |test_data_ce0        | out |    1|  ap_memory |   test_data  |     array    |
 |test_data_d0         | out |   32|  ap_memory |   test_data  |     array    |
 |test_data_q0         |  in |   32|  ap_memory |   test_data  |     array    |
 |test_data_we0        | out |    1|  ap_memory |   test_data  |     array    |
-|compressed_address0  | out |    2|  ap_memory |  compressed  |     array    |
+|compressed_address0  | out |    7|  ap_memory |  compressed  |     array    |
 |compressed_ce0       | out |    1|  ap_memory |  compressed  |     array    |
 |compressed_d0        | out |   32|  ap_memory |  compressed  |     array    |
 |compressed_q0        |  in |   32|  ap_memory |  compressed  |     array    |
 |compressed_we0       | out |    1|  ap_memory |  compressed  |     array    |
-|dec_result_address0  | out |    2|  ap_memory |  dec_result  |     array    |
+|dec_result_address0  | out |    7|  ap_memory |  dec_result  |     array    |
 |dec_result_ce0       | out |    1|  ap_memory |  dec_result  |     array    |
 |dec_result_d0        | out |   32|  ap_memory |  dec_result  |     array    |
 |dec_result_q0        |  in |   32|  ap_memory |  dec_result  |     array    |
@@ -175,7 +175,7 @@ ST_1: select_read (119)  [1/1] 0.00ns
 codeRepl:23  %select_read = call i32 @_ssdm_op_Read.ap_none.i32(i32 %select_r) nounwind
 
 ST_1: StgValue_5 (120)  [2/2] 3.76ns
-codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed)
+codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [100 x i32]* %dec_result, [100 x i32]* %test_data, [100 x i32]* %compressed)
 
 
  <State 2>: 0.00ns
@@ -183,13 +183,13 @@ ST_2: StgValue_6 (96)  [1/1] 0.00ns  loc: adpcm.c:628->adpcm.c:678
 codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind
 
 ST_2: StgValue_7 (97)  [1/1] 0.00ns
-codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %test_data) nounwind, !map !467
+codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap([100 x i32]* %test_data) nounwind, !map !467
 
 ST_2: StgValue_8 (98)  [1/1] 0.00ns
-codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %compressed) nounwind, !map !473
+codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap([100 x i32]* %compressed) nounwind, !map !473
 
 ST_2: StgValue_9 (99)  [1/1] 0.00ns
-codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %dec_result) nounwind, !map !477
+codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap([100 x i32]* %dec_result) nounwind, !map !477
 
 ST_2: StgValue_10 (100)  [1/1] 0.00ns
 codeRepl:4  call void (...)* @_ssdm_op_SpecBitsMap(i32 %select_r) nounwind, !map !481
@@ -234,19 +234,19 @@ ST_2: StgValue_23 (113)  [1/1] 0.00ns  loc: adpcm.c:671
 codeRepl:17  call void (...)* @_ssdm_op_SpecInterface(i32 %select_r, [8 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
 
 ST_2: StgValue_24 (114)  [1/1] 0.00ns
-codeRepl:18  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %dec_result, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+codeRepl:18  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %dec_result, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
 
 ST_2: StgValue_25 (115)  [1/1] 0.00ns
-codeRepl:19  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %compressed, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+codeRepl:19  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %compressed, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
 
 ST_2: StgValue_26 (116)  [1/1] 0.00ns
-codeRepl:20  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %test_data, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+codeRepl:20  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %test_data, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
 
 ST_2: StgValue_27 (117)  [1/1] 0.00ns  loc: adpcm.c:675
 codeRepl:21  call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str12, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
 
 ST_2: StgValue_28 (120)  [1/2] 0.00ns
-codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed)
+codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [100 x i32]* %dec_result, [100 x i32]* %test_data, [100 x i32]* %compressed)
 
 ST_2: StgValue_29 (121)  [1/1] 0.00ns  loc: adpcm.c:683
 codeRepl:25  ret void
@@ -2038,12 +2038,12 @@ StgValue_29 (ret                 ) [ 000]
 |----------|-------------------------|---------|---------|---------|---------|
 | Operation|     Functional Unit     |  DSP48E |  Delay  |    FF   |   LUT   |
 |----------|-------------------------|---------|---------|---------|---------|
-|   call   |  grp_Block_proc_fu_252  |    70   |  164.29 |   6846  |   5721  |
+|   call   |  grp_Block_proc_fu_252  |    70   |  164.29 |   6929  |   5736  |
 |----------|-------------------------|---------|---------|---------|---------|
 |   read   |  size_read_read_fu_240  |    0    |    0    |    0    |    0    |
 |          | select_read_read_fu_246 |    0    |    0    |    0    |    0    |
 |----------|-------------------------|---------|---------|---------|---------|
-|   Total  |                         |    70   |  164.29 |   6846  |   5721  |
+|   Total  |                         |    70   |  164.29 |   6929  |   5736  |
 |----------|-------------------------|---------|---------|---------|---------|
 
 Memories:
@@ -2101,10 +2101,10 @@ Memories:
 +-----------+--------+--------+--------+--------+--------+
 |           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+--------+
-|  Function |    -   |   70   |   164  |  6846  |  5721  |
+|  Function |    -   |   70   |   164  |  6929  |  5736  |
 |   Memory  |   11   |    -   |    -   |   507  |   60   |
 |Multiplexer|    -   |    -   |    3   |    -   |   64   |
 |  Register |    -   |    -   |    -   |   64   |    -   |
 +-----------+--------+--------+--------+--------+--------+
-|   Total   |   11   |   70   |   167  |  7417  |  5845  |
+|   Total   |   11   |   70   |   167  |  7500  |  5860  |
 +-----------+--------+--------+--------+--------+--------+

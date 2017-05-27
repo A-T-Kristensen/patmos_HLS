@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'filtez'" level="0">
-<item name = "Date">Sat May 27 13:51:01 2017
+<item name = "Date">Sat May 27 14:39:36 2017
 </item>
 <item name = "Version">2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)</item>
 <item name = "Project">hls_adpcm</item>

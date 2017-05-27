@@ -105,5 +105,57 @@
 #pragma line 909 "/usr/include/stdio.h" 3 4 ::: 2023
 #pragma line 930 "/usr/include/stdio.h" 3 4 ::: 2035
 #pragma line 6 "./adpcm.h" 2 ::: 2038
-#pragma line 24 "./adpcm.h" ::: 2039
-#pragma line 3 "adpcm_lib.c" 2 ::: 2132
+#pragma line 1 "/usr/include/math.h" 1 3 4 ::: 2039
+#pragma line 30 "/usr/include/math.h" 3 4 ::: 2061
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/math-vector.h" 1 3 4 ::: 2064
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h" 1 3 4 ::: 2090
+#pragma line 26 "/usr/include/x86_64-linux-gnu/bits/math-vector.h" 2 3 4 ::: 2122
+#pragma line 32 "/usr/include/math.h" 2 3 4 ::: 2123
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/huge_val.h" 1 3 4 ::: 2128
+#pragma line 36 "/usr/include/math.h" 2 3 4 ::: 2153
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/huge_valf.h" 1 3 4 ::: 2155
+#pragma line 38 "/usr/include/math.h" 2 3 4 ::: 2180
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/huge_vall.h" 1 3 4 ::: 2181
+#pragma line 39 "/usr/include/math.h" 2 3 4 ::: 2200
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/inf.h" 1 3 4 ::: 2204
+#pragma line 42 "/usr/include/math.h" 2 3 4 ::: 2228
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/nan.h" 1 3 4 ::: 2232
+#pragma line 45 "/usr/include/math.h" 2 3 4 ::: 2257
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathdef.h" 1 3 4 ::: 2262
+#pragma line 26 "/usr/include/x86_64-linux-gnu/bits/mathdef.h" 3 4 ::: 2279
+#pragma line 41 "/usr/include/x86_64-linux-gnu/bits/mathdef.h" 3 4 ::: 2285
+#pragma line 49 "/usr/include/math.h" 2 3 4 ::: 2292
+#pragma line 83 "/usr/include/math.h" 3 4 ::: 2298
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4 ::: 2299
+#pragma line 87 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2376
+#pragma line 127 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2406
+#pragma line 382 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2647
+#pragma line 84 "/usr/include/math.h" 2 3 4 ::: 2650
+#pragma line 93 "/usr/include/math.h" 3 4 ::: 2651
+#pragma line 104 "/usr/include/math.h" 3 4 ::: 2654
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4 ::: 2655
+#pragma line 87 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2732
+#pragma line 127 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2762
+#pragma line 382 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3003
+#pragma line 105 "/usr/include/math.h" 2 3 4 ::: 3006
+#pragma line 139 "/usr/include/math.h" 3 4 ::: 3007
+#pragma line 151 "/usr/include/math.h" 3 4 ::: 3010
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4 ::: 3011
+#pragma line 87 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3088
+#pragma line 127 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3118
+#pragma line 382 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3359
+#pragma line 152 "/usr/include/math.h" 2 3 4 ::: 3362
+#pragma line 167 "/usr/include/math.h" 3 4 ::: 3363
+#pragma line 248 "/usr/include/math.h" 3 4 ::: 3430
+#pragma line 268 "/usr/include/math.h" 3 4 ::: 3432
+#pragma line 282 "/usr/include/math.h" 3 4 ::: 3434
+#pragma line 304 "/usr/include/math.h" 3 4 ::: 3444
+#pragma line 318 "/usr/include/math.h" 3 4 ::: 3446
+#pragma line 346 "/usr/include/math.h" 3 4 ::: 3454
+#pragma line 411 "/usr/include/math.h" 3 4 ::: 3508
+#pragma line 428 "/usr/include/math.h" 3 4 ::: 3510
+#pragma line 448 "/usr/include/math.h" 3 4 ::: 3514
+#pragma line 470 "/usr/include/math.h" 3 4 ::: 3529
+#pragma line 7 "./adpcm.h" 2 ::: 3585
+#pragma line 25 "./adpcm.h" ::: 3586
+#pragma line 3 "adpcm_lib.c" 2 ::: 3679

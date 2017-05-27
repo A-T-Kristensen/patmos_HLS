@@ -17,8 +17,8 @@ entity AESL_automem_test_data is
         constant    TV_IN       :   STRING (1 to 35) := "c.adpcm_main.autotvin_test_data.dat";
         constant    TV_OUT      :   STRING (1 to 43) := "impl_rtl.adpcm_main.autotvout_test_data.dat";
         constant    DATA_WIDTH  :   INTEGER := 32;
-        constant    ADDR_WIDTH  :   integer := 2;
-        constant    DEPTH       :   integer := 3
+        constant    ADDR_WIDTH  :   integer := 7;
+        constant    DEPTH       :   integer := 100
     );
     port (
         clk         :   IN  STD_LOGIC;

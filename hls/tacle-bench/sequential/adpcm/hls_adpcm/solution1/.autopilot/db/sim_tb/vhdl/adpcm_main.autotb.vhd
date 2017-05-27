@@ -33,9 +33,9 @@ entity apatb_adpcm_main_top is
        AUTOTB_TVOUT_dec_result_out_wrapc : STRING := "./impl_rtl.adpcm_main.autotvout_dec_result.dat";
       AUTOTB_LAT_RESULT_FILE    : STRING  := "adpcm_main.result.lat.rb";
       AUTOTB_PER_RESULT_TRANS_FILE    : STRING  := "adpcm_main.performance.result.transaction.xml";
-      LENGTH_test_data     : INTEGER := 3;
-      LENGTH_compressed     : INTEGER := 3;
-      LENGTH_dec_result     : INTEGER := 3;
+      LENGTH_test_data     : INTEGER := 100;
+      LENGTH_compressed     : INTEGER := 100;
+      LENGTH_dec_result     : INTEGER := 100;
       LENGTH_select_r     : INTEGER := 1;
       LENGTH_size     : INTEGER := 1;
 	    AUTOTB_TRANSACTION_NUM    : INTEGER := 2
@@ -62,17 +62,17 @@ architecture behav of apatb_adpcm_main_top is
   signal ready :   STD_LOGIC := '0';
   signal ready_wire :   STD_LOGIC := '0';
 
-  signal test_data_address0 :  STD_LOGIC_VECTOR (1 DOWNTO 0);
+  signal test_data_address0 :  STD_LOGIC_VECTOR (6 DOWNTO 0);
   signal test_data_ce0 :  STD_LOGIC;
   signal test_data_d0 :  STD_LOGIC_VECTOR (31 DOWNTO 0);
   signal test_data_q0 :  STD_LOGIC_VECTOR (31 DOWNTO 0);
   signal test_data_we0 :  STD_LOGIC;
-  signal compressed_address0 :  STD_LOGIC_VECTOR (1 DOWNTO 0);
+  signal compressed_address0 :  STD_LOGIC_VECTOR (6 DOWNTO 0);
   signal compressed_ce0 :  STD_LOGIC;
   signal compressed_d0 :  STD_LOGIC_VECTOR (31 DOWNTO 0);
   signal compressed_q0 :  STD_LOGIC_VECTOR (31 DOWNTO 0);
   signal compressed_we0 :  STD_LOGIC;
-  signal dec_result_address0 :  STD_LOGIC_VECTOR (1 DOWNTO 0);
+  signal dec_result_address0 :  STD_LOGIC_VECTOR (6 DOWNTO 0);
   signal dec_result_ce0 :  STD_LOGIC;
   signal dec_result_d0 :  STD_LOGIC_VECTOR (31 DOWNTO 0);
   signal dec_result_q0 :  STD_LOGIC_VECTOR (31 DOWNTO 0);
@@ -108,17 +108,17 @@ architecture behav of apatb_adpcm_main_top is
   shared variable reported_stuck_cnt : INTEGER := 0;
 component adpcm_main is
 port (
-    test_data_address0 :  OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+    test_data_address0 :  OUT STD_LOGIC_VECTOR (6 DOWNTO 0);
     test_data_ce0 :  OUT STD_LOGIC;
     test_data_d0 :  OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
     test_data_q0 :  IN STD_LOGIC_VECTOR (31 DOWNTO 0);
     test_data_we0 :  OUT STD_LOGIC;
-    compressed_address0 :  OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+    compressed_address0 :  OUT STD_LOGIC_VECTOR (6 DOWNTO 0);
     compressed_ce0 :  OUT STD_LOGIC;
     compressed_d0 :  OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
     compressed_q0 :  IN STD_LOGIC_VECTOR (31 DOWNTO 0);
     compressed_we0 :  OUT STD_LOGIC;
-    dec_result_address0 :  OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+    dec_result_address0 :  OUT STD_LOGIC_VECTOR (6 DOWNTO 0);
     dec_result_ce0 :  OUT STD_LOGIC;
     dec_result_d0 :  OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
     dec_result_q0 :  IN STD_LOGIC_VECTOR (31 DOWNTO 0);
@@ -135,7 +135,7 @@ end component;
 
 signal arraytest_data_ce0, arraytest_data_ce1 : STD_LOGIC;
 signal arraytest_data_we0, arraytest_data_we1 : STD_LOGIC;
-signal arraytest_data_address0, arraytest_data_address1 : STD_LOGIC_VECTOR(1 downto 0);
+signal arraytest_data_address0, arraytest_data_address1 : STD_LOGIC_VECTOR(6 downto 0);
 signal arraytest_data_din0, arraytest_data_din1 : STD_LOGIC_VECTOR(31 downto 0);
 signal arraytest_data_dout0, arraytest_data_dout1 :  STD_LOGIC_VECTOR(31 downto 0);
 signal arraytest_data_ready : STD_LOGIC;
@@ -162,7 +162,7 @@ end component;
 
 signal arraycompressed_ce0, arraycompressed_ce1 : STD_LOGIC;
 signal arraycompressed_we0, arraycompressed_we1 : STD_LOGIC;
-signal arraycompressed_address0, arraycompressed_address1 : STD_LOGIC_VECTOR(1 downto 0);
+signal arraycompressed_address0, arraycompressed_address1 : STD_LOGIC_VECTOR(6 downto 0);
 signal arraycompressed_din0, arraycompressed_din1 : STD_LOGIC_VECTOR(31 downto 0);
 signal arraycompressed_dout0, arraycompressed_dout1 :  STD_LOGIC_VECTOR(31 downto 0);
 signal arraycompressed_ready : STD_LOGIC;
@@ -189,7 +189,7 @@ end component;
 
 signal arraydec_result_ce0, arraydec_result_ce1 : STD_LOGIC;
 signal arraydec_result_we0, arraydec_result_we1 : STD_LOGIC;
-signal arraydec_result_address0, arraydec_result_address1 : STD_LOGIC_VECTOR(1 downto 0);
+signal arraydec_result_address0, arraydec_result_address1 : STD_LOGIC_VECTOR(6 downto 0);
 signal arraydec_result_din0, arraydec_result_din1 : STD_LOGIC_VECTOR(31 downto 0);
 signal arraydec_result_dout0, arraydec_result_dout1 :  STD_LOGIC_VECTOR(31 downto 0);
 signal arraydec_result_ready : STD_LOGIC;

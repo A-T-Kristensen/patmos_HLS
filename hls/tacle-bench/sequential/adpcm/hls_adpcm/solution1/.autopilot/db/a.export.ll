@@ -447,12 +447,12 @@ define internal fastcc i32 @filtep(i32 %rlt1, i32 %al1, i32 %rlt2, i32 %al2) nou
   ret i32 %tmp_38
 }
 
-define void @adpcm_main([3 x i32]* %test_data, [3 x i32]* %compressed, [3 x i32]* %dec_result, i32 %select_r, i32 %size) nounwind uwtable {
+define void @adpcm_main([100 x i32]* %test_data, [100 x i32]* %compressed, [100 x i32]* %dec_result, i32 %select_r, i32 %size) nounwind uwtable {
 codeRepl:
   call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind
-  call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %test_data) nounwind, !map !467
-  call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %compressed) nounwind, !map !473
-  call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %dec_result) nounwind, !map !477
+  call void (...)* @_ssdm_op_SpecBitsMap([100 x i32]* %test_data) nounwind, !map !467
+  call void (...)* @_ssdm_op_SpecBitsMap([100 x i32]* %compressed) nounwind, !map !473
+  call void (...)* @_ssdm_op_SpecBitsMap([100 x i32]* %dec_result) nounwind, !map !477
   call void (...)* @_ssdm_op_SpecBitsMap(i32 %select_r) nounwind, !map !481
   call void (...)* @_ssdm_op_SpecBitsMap(i32 %size) nounwind, !map !487
   call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @adpcm_main_str) nounwind
@@ -467,13 +467,13 @@ codeRepl:
   call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str9, [1 x i8]* @p_str) nounwind
   call void (...)* @_ssdm_op_SpecInterface(i32 %size, [8 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
   call void (...)* @_ssdm_op_SpecInterface(i32 %select_r, [8 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
-  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %dec_result, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
-  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %compressed, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
-  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %test_data, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %dec_result, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %compressed, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %test_data, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
   call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str12, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
   %size_read = call i32 @_ssdm_op_Read.ap_none.i32(i32 %size) nounwind
   %select_read = call i32 @_ssdm_op_Read.ap_none.i32(i32 %select_r) nounwind
-  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed)
+  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [100 x i32]* %dec_result, [100 x i32]* %test_data, [100 x i32]* %compressed)
   ret void
 }
 
@@ -743,11 +743,11 @@ entry:
   ret i15 %empty_66
 }
 
-define internal fastcc void @Block__proc(i32 %select_r, i32 %size, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed) nounwind {
+define internal fastcc void @Block__proc(i32 %select_r, i32 %size, [100 x i32]* %dec_result, [100 x i32]* %test_data, [100 x i32]* %compressed) nounwind {
 newFuncRoot:
-  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %test_data, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
-  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %compressed, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
-  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %dec_result, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %test_data, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %compressed, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+  call void (...)* @_ssdm_op_SpecMemCore([100 x i32]* %dec_result, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
   %size_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %size) nounwind
   %select_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %select_r) nounwind
   %tmp = icmp eq i32 %select_read, 0
@@ -771,7 +771,7 @@ newFuncRoot:
 
 ; <label>:0                                       ; preds = %newFuncRoot
   %tmp_s = add nsw i32 %size_read, -1
-  %dec_result_addr = getelementptr [3 x i32]* %dec_result, i64 0, i64 1
+  %dec_result_addr = getelementptr [100 x i32]* %dec_result, i64 0, i64 1
   %tmp_33 = add i32 %size_read, 1
   %tmp_34 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %tmp_33, i32 31)
   %p_neg3 = xor i32 %size_read, -1
@@ -784,11 +784,11 @@ newFuncRoot:
 
 ; <label>:1                                       ; preds = %.preheader
   %tmp_40 = sext i32 %i_0_i to i64
-  %test_data_addr = getelementptr [3 x i32]* %test_data, i64 0, i64 %tmp_40
+  %test_data_addr = getelementptr [100 x i32]* %test_data, i64 0, i64 %tmp_40
   %test_data_load = load i32* %test_data_addr, align 4
   %tmp_41 = or i32 %i_0_i, 1
   %tmp_42 = sext i32 %tmp_41 to i64
-  %test_data_addr_1 = getelementptr [3 x i32]* %test_data, i64 0, i64 %tmp_42
+  %test_data_addr_1 = getelementptr [100 x i32]* %test_data, i64 0, i64 %tmp_42
   %test_data_load_1 = load i32* %test_data_addr_1, align 4
   %tqmf_load = load i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 0), align 16
   %p_shl = call i36 @_ssdm_op_BitConcatenate.i36.i32.i4(i32 %tqmf_load, i4 0)
@@ -840,7 +840,7 @@ adpcm_enc_main.exit:                              ; preds = %adpcm_enc_main.exit
   %tmp_14 = zext i31 %p_lshr_f1 to i32
   %tmp_44 = select i1 %tmp_43, i32 %p_neg_t1, i32 %tmp_14
   %tmp_45 = sext i32 %tmp_44 to i64
-  %compressed_addr = getelementptr [3 x i32]* %compressed, i64 0, i64 %tmp_45
+  %compressed_addr = getelementptr [100 x i32]* %compressed, i64 0, i64 %tmp_45
   %compressed_load = load i32* %compressed_addr, align 4
   %tmp_46 = trunc i32 %compressed_load to i6
   %tmp_69_cast = zext i6 %tmp_46 to i32
@@ -1185,7 +1185,7 @@ encode.exit.i:                                    ; preds = %10, %8
   %tmp_24 = zext i31 %p_lshr_f to i32
   %tmp_120 = select i1 %tmp_128, i32 %p_neg_t, i32 %tmp_24
   %tmp_121 = sext i32 %tmp_120 to i64
-  %compressed_addr_1 = getelementptr [3 x i32]* %compressed, i64 0, i64 %tmp_121
+  %compressed_addr_1 = getelementptr [100 x i32]* %compressed, i64 0, i64 %tmp_121
   store i32 %tmp_119, i32* %compressed_addr_1, align 4
   %i_6 = add nsw i32 2, %i_0_i
   br label %.preheader
@@ -1269,7 +1269,7 @@ decode.exit.i:                                    ; preds = %14
   store i32 %tmp_74, i32* getelementptr inbounds ([11 x i32]* @accumc, i64 0, i64 0), align 16
   store i32 %tmp_73, i32* getelementptr inbounds ([11 x i32]* @accumd, i64 0, i64 0), align 16
   %tmp_108 = sext i32 %i_0_i1 to i64
-  %dec_result_addr_1 = getelementptr [3 x i32]* %dec_result, i64 0, i64 %tmp_108
+  %dec_result_addr_1 = getelementptr [100 x i32]* %dec_result, i64 0, i64 %tmp_108
   store i32 %tmp_83, i32* %dec_result_addr_1, align 4
   %tmp_109 = icmp slt i32 %i_0_i1, %tmp_s
   br i1 %tmp_109, label %16, label %17
@@ -1284,7 +1284,7 @@ decode.exit.i:                                    ; preds = %14
 ; <label>:16                                      ; preds = %decode.exit.i
   %tmp_122 = or i32 %i_0_i1, 1
   %tmp_123 = sext i32 %tmp_122 to i64
-  %dec_result_addr_2 = getelementptr [3 x i32]* %dec_result, i64 0, i64 %tmp_123
+  %dec_result_addr_2 = getelementptr [100 x i32]* %dec_result, i64 0, i64 %tmp_123
   store i32 %tmp_84, i32* %dec_result_addr_2, align 4
   br label %18
 
@@ -1773,7 +1773,7 @@ decode.exit.i:                                    ; preds = %14
 !469 = metadata !{metadata !470}
 !470 = metadata !{metadata !"test_data", metadata !471, metadata !"int", i32 0, i32 31}
 !471 = metadata !{metadata !472}
-!472 = metadata !{i32 0, i32 2, i32 1}
+!472 = metadata !{i32 0, i32 99, i32 1}
 !473 = metadata !{metadata !474}
 !474 = metadata !{i32 0, i32 31, metadata !475}
 !475 = metadata !{metadata !476}

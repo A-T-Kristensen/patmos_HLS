@@ -8,7 +8,7 @@
 #define SAMPLE_RATE 11025
 
 #define PI 3141
-#define TEST_VECTOR 0 // Specifies whether the test vector from CHStone should be use
+#define TEST_VECTOR 1 // Specifies whether the test vector from CHStone should be use
 
 #if(TEST_VECTOR) // Same as CHStone
 
@@ -16,7 +16,7 @@
 
 #else // Same as TACLE
 
-#define SIZE 300
+#define SIZE 3
 
 #endif
 
@@ -114,5 +114,11 @@ int accumc[11], accumd[11];
 
 /* variables for transimit quadrature mirror filter here */
 int tqmf[24];
+
+int xl, xh;
+
+extern int xout1, xout2;
+
+extern int xs, xd;
 
 #endif

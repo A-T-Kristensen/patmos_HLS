@@ -32,7 +32,7 @@
           </Value>
           <direction>0</direction>
           <if_type>1</if_type>
-          <array_size>3</array_size>
+          <array_size>100</array_size>
           <bit_vecs class_id="7" tracking_level="0" version="0">
             <count>0</count>
             <item_version>0</item_version>
@@ -60,7 +60,7 @@
           </Value>
           <direction>2</direction>
           <if_type>1</if_type>
-          <array_size>3</array_size>
+          <array_size>100</array_size>
           <bit_vecs>
             <count>0</count>
             <item_version>0</item_version>
@@ -88,7 +88,7 @@
           </Value>
           <direction>1</direction>
           <if_type>1</if_type>
-          <array_size>3</array_size>
+          <array_size>100</array_size>
           <bit_vecs>
             <count>0</count>
             <item_version>0</item_version>
@@ -2036,11 +2036,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>5484</second>
+              <second>5548</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>5029</second>
+              <second>5044</second>
             </item>
           </second>
         </item>
