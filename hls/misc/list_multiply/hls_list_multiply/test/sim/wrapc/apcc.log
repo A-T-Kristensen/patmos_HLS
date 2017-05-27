@@ -1,8 +1,0 @@
-INFO: [HLS 200-10] Running '/home/patmos/Xilinx/Vivado_HLS/2016.4/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'patmos' on host 'ubuntu' (Linux_x86_64 version 4.4.0-66-generic) on Mon Mar 27 20:25:44 CEST 2017
-INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
-INFO: [HLS 200-10] In directory '/home/patmos/bachelor_project_HLS/hls/misc/list_multiply/hls_list_multiply/hls_list_multiply/test/sim/wrapc'
-clang: warning: argument unused during compilation: '-fno-builtin-isinf'
-clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_patmos/76311490639144703417
-INFO: [APCC 202-1] APCC is done.
