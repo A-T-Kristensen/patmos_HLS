@@ -151,9 +151,10 @@ const int wh_code_table[4] = {
 /* put input samples in xin1 = first value, xin2 = second value */
 /* returns il and ih stored together */
 
-
 int encode(int xin1, int xin2)
 {
+#pragma HLS INLINE
+
 	int i;
 	const int *h_ptr;
 	int *tqmf_ptr, *tqmf_ptr1;
@@ -302,6 +303,8 @@ int encode(int xin1, int xin2)
 
 void decode(int input)
 {
+#pragma HLS INLINE
+
 	int i;
 	long int xa1, xa2;    /* qmf accumulators */
 	const int *h_ptr;
@@ -439,6 +442,8 @@ void decode(int input)
 
 int filtez(int *bpl, int *dlt)
 {
+#pragma HLS INLINE off
+
 	int i;
 	long int zl;
 	zl = (long) (*bpl++) * (*dlt++);
@@ -453,6 +458,8 @@ int filtez(int *bpl, int *dlt)
 
 int filtep(int rlt1, int al1, int rlt2, int al2)
 {
+#pragma HLS INLINE off
+
 	long int pl, pl2;
 	pl = 2 * rlt1;
 	pl = (long) al1 *pl;
@@ -464,6 +471,8 @@ int filtep(int rlt1, int al1, int rlt2, int al2)
 /* quantl - quantize the difference signal in the lower sub-band */
 int quantl(int el, int detl)
 {
+#pragma HLS INLINE off
+
 	int ril, mil;
 	long int wd, decis;
 
@@ -488,6 +497,8 @@ int quantl(int el, int detl)
 
 int logscl(int il, int nbl)
 {
+#pragma HLS INLINE off
+
 	long int wd;
 	wd = ((long) nbl * 127L) >> 7L; /* leak factor 127/128 */
 	nbl = (int) wd + wl_code_table[il >> 2];
@@ -502,6 +513,8 @@ int logscl(int il, int nbl)
 
 int scalel(int nbl, int shift_constant)
 {
+#pragma HLS INLINE off
+
 	int wd1, wd2, wd3;
 	wd1 = (nbl >> 6) & 31;
 	wd2 = nbl >> 11;
@@ -514,6 +527,8 @@ int scalel(int nbl, int shift_constant)
 
 void upzero(int dlt, int *dlti, int *bli)
 {
+#pragma HLS INLINE off
+
 	int i, wd2, wd3;
 	/*if dlt is zero, then no sum into bli */
 	if (dlt == 0) {
@@ -544,6 +559,7 @@ void upzero(int dlt, int *dlti, int *bli)
 
 int uppol2(int al1, int al2, int plt, int plt1, int plt2)
 {
+#pragma HLS INLINE off
 
 	long int wd2, wd4;
 	int apl2;
@@ -571,6 +587,7 @@ int uppol2(int al1, int al2, int plt, int plt1, int plt2)
 
 int uppol1(int al1, int apl2, int plt, int plt1)
 {
+#pragma HLS INLINE off
 
 	long int wd2;
 	int wd3, apl1;
@@ -594,6 +611,7 @@ int uppol1(int al1, int apl2, int plt, int plt1)
 
 int logsch(int ih, int nbh)
 {
+#pragma HLS INLINE off
 
 	int wd;
 	wd = ((long) nbh * 127L) >> 7L; /* leak factor 127/128 */
@@ -607,6 +625,9 @@ int logsch(int ih, int nbh)
 
 void adpcm_enc_main(int test_data[SIZE], int compressed[SIZE], int size)
 {
+#pragma HLS DATAFLOW
+#pragma HLS INLINE
+
 	int i;
 
 	for (i = 0; i < size + 1; i += 2) {
@@ -616,6 +637,9 @@ void adpcm_enc_main(int test_data[SIZE], int compressed[SIZE], int size)
 
 void adpcm_dec_main(int compressed[SIZE], int dec_result[SIZE], int size)
 {
+#pragma HLS DATAFLOW
+#pragma HLS INLINE
+
 	int i;
 
 	for (i = 0 ; i < size + 1 ; i += 2) {
@@ -629,6 +653,23 @@ void adpcm_main(int test_data[SIZE], int compressed[SIZE],
                 int dec_result[SIZE], int select, int size)
 {
 
+#pragma HLS ALLOCATION instances=filtez limit=1 function
+#pragma HLS ALLOCATION instances=filtep limit=1 function
+#pragma HLS ALLOCATION instances=quantl limit=1 function
+#pragma HLS ALLOCATION instances=logscl limit=1 function
+#pragma HLS ALLOCATION instances=scalel limit=1 function
+#pragma HLS ALLOCATION instances=upzero limit=1 function
+#pragma HLS ALLOCATION instances=uppol1 limit=1 function
+#pragma HLS ALLOCATION instances=uppol2 limit=1 function
+#pragma HLS ALLOCATION instances=logsch limit=1 function
+
+#pragma HLS INTERFACE ap_none port=size
+#pragma HLS INTERFACE ap_none port=select
+#pragma HLS RESOURCE variable=dec_result core=RAM_1P_BRAM
+#pragma HLS RESOURCE variable=compressed core=RAM_1P_BRAM
+#pragma HLS RESOURCE variable=test_data core=RAM_1P_BRAM
+#pragma HLS INTERFACE ap_ctrl_hs port=return
+
 	if(!select) {
 		adpcm_enc_main(test_data, compressed, size);
 
@@ -636,3 +677,4 @@ void adpcm_main(int test_data[SIZE], int compressed[SIZE],
 		adpcm_dec_main(compressed, dec_result, size);
 	}
 }
+

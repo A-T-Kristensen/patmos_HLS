@@ -1,0 +1,61 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'Block_proc'" level="0">
+<item name = "Date">Sat May 27 12:14:14 2017
+</item>
+<item name = "Version">2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)</item>
+<item name = "Project">hls_adpcm</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a100tcsg324-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.74, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_filtez_fu_755">filtez, 53, 53, 53, 53, none</column>
+<column name="grp_uppol2_fu_769">uppol2, 7, 7, 7, 7, none</column>
+<column name="grp_upzero_fu_778">upzero, 18, 60, 18, 60, none</column>
+<column name="grp_uppol1_fu_793">uppol1, 7, 7, 7, 7, none</column>
+<column name="grp_filtep_fu_801">filtep, 6, 6, 6, 6, none</column>
+<column name="grp_filtep_fu_809">filtep, 6, 6, 6, 6, none</column>
+<column name="grp_quantl_fu_817">quantl, 9, 219, 9, 219, none</column>
+<column name="grp_logscl_fu_829">logscl, 2, 2, 2, 2, none</column>
+<column name="grp_logsch_fu_837">logsch, 2, 2, 2, 2, none</column>
+<column name="grp_scalel_fu_845">scalel, 1, 1, 1, 1, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">?, ?, 308 ~ 558, -, -, ?, no</column>
+<column name=" + Loop 1.1">70, 70, 7, -, -, 10, no</column>
+<column name=" + Loop 1.2">44, 44, 2, -, -, 22, no</column>
+<column name="- Loop 2">?, ?, 246 ~ 295, -, -, ?, no</column>
+<column name=" + Loop 2.1">70, 70, 7, -, -, 10, no</column>
+<column name=" + Loop 2.2">20, 20, 2, -, -, 10, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -1,0 +1,378 @@
+
+
+================================================================
+== Vivado HLS Report for 'filtez'
+================================================================
+* Date:           Sat May 27 12:14:12 2017
+
+* Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
+* Project:        hls_adpcm
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.25|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   53|   53|   53|   53|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |   45|   45|         9|          -|          -|     5|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 17
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / (!exitcond)
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	9  / true
+* FSM state operations: 
+
+ <State 1>: 2.39ns
+ST_1: dlt_addr (3)  [1/1] 0.00ns
+:0  %dlt_addr = getelementptr [6 x i32]* %dlt, i64 0, i64 0
+
+ST_1: bpl_addr (4)  [1/1] 0.00ns
+:1  %bpl_addr = getelementptr [6 x i32]* %bpl, i64 0, i64 0
+
+ST_1: bpl_load (5)  [2/2] 2.39ns  loc: adpcm.c:449
+:2  %bpl_load = load i32* %bpl_addr, align 4
+
+ST_1: dlt_load (7)  [2/2] 2.39ns  loc: adpcm.c:449
+:4  %dlt_load = load i32* %dlt_addr, align 4
+
+
+ <State 2>: 2.39ns
+ST_2: bpl_load (5)  [1/2] 2.39ns  loc: adpcm.c:449
+:2  %bpl_load = load i32* %bpl_addr, align 4
+
+ST_2: dlt_load (7)  [1/2] 2.39ns  loc: adpcm.c:449
+:4  %dlt_load = load i32* %dlt_addr, align 4
+
+
+ <State 3>: 6.68ns
+ST_3: tmp (6)  [1/1] 0.00ns  loc: adpcm.c:449
+:3  %tmp = sext i32 %bpl_load to i64
+
+ST_3: tmp_s (8)  [1/1] 0.00ns  loc: adpcm.c:449
+:5  %tmp_s = sext i32 %dlt_load to i64
+
+ST_3: zl (9)  [6/6] 6.68ns  loc: adpcm.c:449
+:6  %zl = mul nsw i64 %tmp_s, %tmp
+
+
+ <State 4>: 6.68ns
+ST_4: zl (9)  [5/6] 6.68ns  loc: adpcm.c:449
+:6  %zl = mul nsw i64 %tmp_s, %tmp
+
+
+ <State 5>: 6.68ns
+ST_5: zl (9)  [4/6] 6.68ns  loc: adpcm.c:449
+:6  %zl = mul nsw i64 %tmp_s, %tmp
+
+
+ <State 6>: 6.68ns
+ST_6: zl (9)  [3/6] 6.68ns  loc: adpcm.c:449
+:6  %zl = mul nsw i64 %tmp_s, %tmp
+
+
+ <State 7>: 6.68ns
+ST_7: zl (9)  [2/6] 6.68ns  loc: adpcm.c:449
+:6  %zl = mul nsw i64 %tmp_s, %tmp
+
+
+ <State 8>: 8.25ns
+ST_8: zl (9)  [1/6] 6.68ns  loc: adpcm.c:449
+:6  %zl = mul nsw i64 %tmp_s, %tmp
+
+ST_8: StgValue_32 (10)  [1/1] 1.57ns  loc: adpcm.c:450
+:7  br label %1
+
+
+ <State 9>: 3.14ns
+ST_9: zl1 (12)  [1/1] 0.00ns
+:0  %zl1 = phi i64 [ %zl, %0 ], [ %zl_1, %2 ]
+
+ST_9: dlt_pn_rec (13)  [1/1] 0.00ns  loc: adpcm.c:449
+:1  %dlt_pn_rec = phi i3 [ 0, %0 ], [ %p_01_rec, %2 ]
+
+ST_9: p_01_rec (14)  [1/1] 0.75ns  loc: adpcm.c:449
+:2  %p_01_rec = add i3 %dlt_pn_rec, 1
+
+ST_9: p_01_rec_cast (15)  [1/1] 0.00ns  loc: adpcm.c:449
+:3  %p_01_rec_cast = zext i3 %p_01_rec to i64
+
+ST_9: dlt_addr_1 (16)  [1/1] 0.00ns  loc: adpcm.c:449
+:4  %dlt_addr_1 = getelementptr [6 x i32]* %dlt, i64 0, i64 %p_01_rec_cast
+
+ST_9: bpl_addr_1 (17)  [1/1] 0.00ns  loc: adpcm.c:449
+:5  %bpl_addr_1 = getelementptr [6 x i32]* %bpl, i64 0, i64 %p_01_rec_cast
+
+ST_9: empty (18)  [1/1] 0.00ns
+:6  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5)
+
+ST_9: exitcond (19)  [1/1] 1.94ns  loc: adpcm.c:450
+:7  %exitcond = icmp eq i3 %dlt_pn_rec, -3
+
+ST_9: StgValue_41 (20)  [1/1] 0.00ns  loc: adpcm.c:450
+:8  br i1 %exitcond, label %3, label %2
+
+ST_9: bpl_load_1 (22)  [2/2] 2.39ns  loc: adpcm.c:451
+:0  %bpl_load_1 = load i32* %bpl_addr_1, align 4
+
+ST_9: dlt_load_1 (24)  [2/2] 2.39ns  loc: adpcm.c:451
+:2  %dlt_load_1 = load i32* %dlt_addr_1, align 4
+
+ST_9: tmp_34 (30)  [1/1] 0.00ns  loc: adpcm.c:453
+:0  %tmp_34 = call i32 @_ssdm_op_PartSelect.i32.i64.i32.i32(i64 %zl1, i32 14, i32 45)
+
+ST_9: StgValue_45 (31)  [1/1] 0.00ns  loc: adpcm.c:453
+:1  ret i32 %tmp_34
+
+
+ <State 10>: 2.39ns
+ST_10: bpl_load_1 (22)  [1/2] 2.39ns  loc: adpcm.c:451
+:0  %bpl_load_1 = load i32* %bpl_addr_1, align 4
+
+ST_10: dlt_load_1 (24)  [1/2] 2.39ns  loc: adpcm.c:451
+:2  %dlt_load_1 = load i32* %dlt_addr_1, align 4
+
+
+ <State 11>: 6.68ns
+ST_11: tmp_35 (23)  [1/1] 0.00ns  loc: adpcm.c:451
+:1  %tmp_35 = sext i32 %bpl_load_1 to i64
+
+ST_11: tmp_36 (25)  [1/1] 0.00ns  loc: adpcm.c:451
+:3  %tmp_36 = sext i32 %dlt_load_1 to i64
+
+ST_11: tmp_37 (26)  [6/6] 6.68ns  loc: adpcm.c:451
+:4  %tmp_37 = mul nsw i64 %tmp_36, %tmp_35
+
+
+ <State 12>: 6.68ns
+ST_12: tmp_37 (26)  [5/6] 6.68ns  loc: adpcm.c:451
+:4  %tmp_37 = mul nsw i64 %tmp_36, %tmp_35
+
+
+ <State 13>: 6.68ns
+ST_13: tmp_37 (26)  [4/6] 6.68ns  loc: adpcm.c:451
+:4  %tmp_37 = mul nsw i64 %tmp_36, %tmp_35
+
+
+ <State 14>: 6.68ns
+ST_14: tmp_37 (26)  [3/6] 6.68ns  loc: adpcm.c:451
+:4  %tmp_37 = mul nsw i64 %tmp_36, %tmp_35
+
+
+ <State 15>: 6.68ns
+ST_15: tmp_37 (26)  [2/6] 6.68ns  loc: adpcm.c:451
+:4  %tmp_37 = mul nsw i64 %tmp_36, %tmp_35
+
+
+ <State 16>: 6.68ns
+ST_16: tmp_37 (26)  [1/6] 6.68ns  loc: adpcm.c:451
+:4  %tmp_37 = mul nsw i64 %tmp_36, %tmp_35
+
+
+ <State 17>: 3.35ns
+ST_17: zl_1 (27)  [1/1] 3.35ns  loc: adpcm.c:451
+:5  %zl_1 = add nsw i64 %tmp_37, %zl1
+
+ST_17: StgValue_57 (28)  [1/1] 0.00ns  loc: adpcm.c:450
+:6  br label %1
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.39ns
+The critical path consists of the following:
+	'getelementptr' operation ('dlt_addr') [3]  (0 ns)
+	'load' operation ('dlt_load', adpcm.c:449) on array 'dlt' [7]  (2.39 ns)
+
+ <State 2>: 2.39ns
+The critical path consists of the following:
+	'load' operation ('bpl_load', adpcm.c:449) on array 'bpl' [5]  (2.39 ns)
+
+ <State 3>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('zl', adpcm.c:449) [9]  (6.68 ns)
+
+ <State 4>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('zl', adpcm.c:449) [9]  (6.68 ns)
+
+ <State 5>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('zl', adpcm.c:449) [9]  (6.68 ns)
+
+ <State 6>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('zl', adpcm.c:449) [9]  (6.68 ns)
+
+ <State 7>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('zl', adpcm.c:449) [9]  (6.68 ns)
+
+ <State 8>: 8.25ns
+The critical path consists of the following:
+	'mul' operation ('zl', adpcm.c:449) [9]  (6.68 ns)
+	multiplexor before 'phi' operation ('zl') with incoming values : ('zl', adpcm.c:449) ('zl', adpcm.c:451) [12]  (1.57 ns)
+
+ <State 9>: 3.14ns
+The critical path consists of the following:
+	'phi' operation ('dlt_pn_rec', adpcm.c:449) with incoming values : ('p_01_rec', adpcm.c:449) [13]  (0 ns)
+	'add' operation ('p_01_rec', adpcm.c:449) [14]  (0.75 ns)
+	'getelementptr' operation ('bpl', adpcm.c:449) [17]  (0 ns)
+	'load' operation ('bpl_load_1', adpcm.c:451) on array 'bpl' [22]  (2.39 ns)
+
+ <State 10>: 2.39ns
+The critical path consists of the following:
+	'load' operation ('bpl_load_1', adpcm.c:451) on array 'bpl' [22]  (2.39 ns)
+
+ <State 11>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('tmp_37', adpcm.c:451) [26]  (6.68 ns)
+
+ <State 12>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('tmp_37', adpcm.c:451) [26]  (6.68 ns)
+
+ <State 13>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('tmp_37', adpcm.c:451) [26]  (6.68 ns)
+
+ <State 14>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('tmp_37', adpcm.c:451) [26]  (6.68 ns)
+
+ <State 15>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('tmp_37', adpcm.c:451) [26]  (6.68 ns)
+
+ <State 16>: 6.68ns
+The critical path consists of the following:
+	'mul' operation ('tmp_37', adpcm.c:451) [26]  (6.68 ns)
+
+ <State 17>: 3.35ns
+The critical path consists of the following:
+	'add' operation ('zl', adpcm.c:451) [27]  (3.35 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

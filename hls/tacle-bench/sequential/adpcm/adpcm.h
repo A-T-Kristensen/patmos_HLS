@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 #define PI 3141
-#define TEST_VECTOR 1 // Specifies whether the test vector from CHStone should be use
+#define TEST_VECTOR 0 // Specifies whether the test vector from CHStone should be use
 
 #if(TEST_VECTOR) // Same as CHStone
 

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ph2' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.179+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ph1' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.155+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ph' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.153+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'nbh' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.150+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dh' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.148+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'deth' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.145+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'sh' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.142+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ah2' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.140+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'rh2' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.138+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ah1' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.136+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'rh1' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.133+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'plt2' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.131+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'plt1' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.129+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'plt' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.127+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'nbl' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.125+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dlt' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.122+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'detl' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.120+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'sl' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.118+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'al2' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.116+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'rlt2' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.113+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'al1' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.111+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'rlt1' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.109+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'xh' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.107+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_ph2' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.104+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_ph1' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.102+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_ph' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.100+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_nbh' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.098+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_dh' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.095+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_deth' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.093+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_sh' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.091+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_ah2' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.089+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_rh2' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.087+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_ah1' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.086+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_rh1' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.083+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_plt2' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.081+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_plt1' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.079+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_plt' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.077+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_nbl' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.076+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'rl' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.074+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'il' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.073+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_dlt' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.071+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_detl' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.069+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_sl' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.067+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_al2' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.066+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_rlt2' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.064+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_al1' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.063+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dec_rlt1' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.061+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ih' is power-on initialization." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:16.041+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'adpcm_main_mul_32bkb' is changed to 'adpcm_main_mul_32bkb_x' due to conflict." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:15.846+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'adpcm_main_mul_32bkb' is changed to 'adpcm_main_mul_32bkb_x' due to conflict." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:15.756+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'adpcm_main_mul_32bkb' is changed to 'adpcm_main_mul_32bkb_x' due to conflict." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:15.654+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'adpcm_main/select' to 'adpcm_main/select_r' to avoid the conflict with HDL keywords or other object names." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:12.697+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-223] Checking resource limit in 'adpcm_main': cannot find any callsite of 'logsch'." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:12.696+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-223] Checking resource limit in 'adpcm_main': cannot find any callsite of 'uppol2'." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:12.694+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-223] Checking resource limit in 'adpcm_main': cannot find any callsite of 'uppol1'." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:12.693+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-223] Checking resource limit in 'adpcm_main': cannot find any callsite of 'upzero'." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:12.691+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-223] Checking resource limit in 'adpcm_main': cannot find any callsite of 'scalel'." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:12.690+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-223] Checking resource limit in 'adpcm_main': cannot find any callsite of 'logscl'." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:12.689+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-223] Checking resource limit in 'adpcm_main': cannot find any callsite of 'quantl'." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:12.687+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-223] Checking resource limit in 'adpcm_main': cannot find any callsite of 'filtep'." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:12.681+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-223] Checking resource limit in 'adpcm_main': cannot find any callsite of 'filtez'." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:12.680+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:12.669+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'dec_result' (adpcm.c:653) should be updated in process function 'Block__proc' (adpcm.c:167:28), otherwise it may not be synthesized correctly." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:11.142+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'compressed' (adpcm.c:652) should be updated in process function 'Block__proc' (adpcm.c:167:28), otherwise it may not be synthesized correctly." projectName="hls_adpcm" solutionName="solution1" date="2017-05-27T12:14:11.122+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,194 @@
+
+
+================================================================
+== Vivado HLS Report for 'adpcm_main'
+================================================================
+* Date:           Sat May 27 12:14:14 2017
+
+* Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
+* Project:        hls_adpcm
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.74|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    ?|    ?|    ?|    ?| dataflow |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 2
+* Pipeline: 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 2, States = { 1 2 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+* FSM state operations: 
+
+ <State 1>: 6.15ns
+ST_1: size_read (118)  [1/1] 0.00ns
+codeRepl:22  %size_read = call i32 @_ssdm_op_Read.ap_none.i32(i32 %size) nounwind
+
+ST_1: select_read (119)  [1/1] 0.00ns
+codeRepl:23  %select_read = call i32 @_ssdm_op_Read.ap_none.i32(i32 %select_r) nounwind
+
+ST_1: StgValue_5 (120)  [2/2] 6.15ns
+codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %test_data, [3 x i32]* %compressed, [3 x i32]* %dec_result)
+
+
+ <State 2>: 0.00ns
+ST_2: StgValue_6 (96)  [1/1] 0.00ns  loc: adpcm.c:628->adpcm.c:674
+codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind
+
+ST_2: StgValue_7 (97)  [1/1] 0.00ns
+codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %test_data) nounwind, !map !467
+
+ST_2: StgValue_8 (98)  [1/1] 0.00ns
+codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %compressed) nounwind, !map !473
+
+ST_2: StgValue_9 (99)  [1/1] 0.00ns
+codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %dec_result) nounwind, !map !477
+
+ST_2: StgValue_10 (100)  [1/1] 0.00ns
+codeRepl:4  call void (...)* @_ssdm_op_SpecBitsMap(i32 %select_r) nounwind, !map !481
+
+ST_2: StgValue_11 (101)  [1/1] 0.00ns
+codeRepl:5  call void (...)* @_ssdm_op_SpecBitsMap(i32 %size) nounwind, !map !487
+
+ST_2: StgValue_12 (102)  [1/1] 0.00ns
+codeRepl:6  call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @adpcm_main_str) nounwind
+
+ST_2: StgValue_13 (103)  [1/1] 0.00ns  loc: adpcm.c:656
+codeRepl:7  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str1, [1 x i8]* @p_str) nounwind
+
+ST_2: StgValue_14 (104)  [1/1] 0.00ns  loc: adpcm.c:657
+codeRepl:8  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str2, [1 x i8]* @p_str) nounwind
+
+ST_2: StgValue_15 (105)  [1/1] 0.00ns  loc: adpcm.c:658
+codeRepl:9  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str3, [1 x i8]* @p_str) nounwind
+
+ST_2: StgValue_16 (106)  [1/1] 0.00ns  loc: adpcm.c:659
+codeRepl:10  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str4, [1 x i8]* @p_str) nounwind
+
+ST_2: StgValue_17 (107)  [1/1] 0.00ns  loc: adpcm.c:660
+codeRepl:11  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str5, [1 x i8]* @p_str) nounwind
+
+ST_2: StgValue_18 (108)  [1/1] 0.00ns  loc: adpcm.c:661
+codeRepl:12  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str6, [1 x i8]* @p_str) nounwind
+
+ST_2: StgValue_19 (109)  [1/1] 0.00ns  loc: adpcm.c:662
+codeRepl:13  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str7, [1 x i8]* @p_str) nounwind
+
+ST_2: StgValue_20 (110)  [1/1] 0.00ns  loc: adpcm.c:663
+codeRepl:14  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str8, [1 x i8]* @p_str) nounwind
+
+ST_2: StgValue_21 (111)  [1/1] 0.00ns  loc: adpcm.c:664
+codeRepl:15  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str9, [1 x i8]* @p_str) nounwind
+
+ST_2: StgValue_22 (112)  [1/1] 0.00ns  loc: adpcm.c:666
+codeRepl:16  call void (...)* @_ssdm_op_SpecInterface(i32 %size, [8 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_2: StgValue_23 (113)  [1/1] 0.00ns  loc: adpcm.c:667
+codeRepl:17  call void (...)* @_ssdm_op_SpecInterface(i32 %select_r, [8 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_2: StgValue_24 (114)  [1/1] 0.00ns
+codeRepl:18  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %dec_result, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_2: StgValue_25 (115)  [1/1] 0.00ns
+codeRepl:19  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %compressed, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_2: StgValue_26 (116)  [1/1] 0.00ns
+codeRepl:20  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %test_data, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_2: StgValue_27 (117)  [1/1] 0.00ns  loc: adpcm.c:671
+codeRepl:21  call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str12, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_2: StgValue_28 (120)  [1/2] 0.00ns
+codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %test_data, [3 x i32]* %compressed, [3 x i32]* %dec_result)
+
+ST_2: StgValue_29 (121)  [1/1] 0.00ns  loc: adpcm.c:679
+codeRepl:25  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 6.15ns
+The critical path consists of the following:
+	wire read on port 'size' [118]  (0 ns)
+	'call' operation to 'Block__proc' [120]  (6.15 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
