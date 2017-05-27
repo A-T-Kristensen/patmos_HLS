@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'adpcm_main'
 ================================================================
-* Date:           Sat May 27 21:45:30 2017
+* Date:           Sat May 27 22:04:10 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_adpcm
@@ -38,7 +38,7 @@
         |                       |            |  Latency  |  Interval | Pipeline|
         |        Instance       |   Module   | min | max | min | max |   Type  |
         +-----------------------+------------+-----+-----+-----+-----+---------+
-        |grp_Block_proc_fu_258  |Block_proc  |    ?|    ?|    ?|    ?|   none  |
+        |grp_Block_proc_fu_262  |Block_proc  |    ?|    ?|    ?|    ?|   none  |
         +-----------------------+------------+-----+-----+-----+-----+---------+
 
         * Loop: 

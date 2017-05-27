@@ -680,6 +680,8 @@ void adpcm_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE],
 #pragma HLS ALLOCATION instances=uppol2 limit=1 function
 #pragma HLS ALLOCATION instances=logsch limit=1 function
 
+#pragma HLS ALLOCATION instances=DSP48 limit=10 core
+
 #pragma HLS INTERFACE ap_none port=size
 #pragma HLS INTERFACE ap_none port=select
 #pragma HLS RESOURCE variable=dec_result core=RAM_1P_BRAM
