@@ -7,8 +7,10 @@
 
 #define SAMPLE_RATE 11025
 
+#define MAX_SIZE 100
+
 #define PI 3141
-#define TEST_VECTOR 0 // Specifies whether the test vector from CHStone should be use
+#define TEST_VECTOR 1 // Specifies whether the test vector from CHStone should be use
 
 #if(TEST_VECTOR) // Same as CHStone
 
@@ -34,18 +36,18 @@ int uppol2(int al1, int al2, int plt, int plt1, int plt2);
 int uppol1(int al1, int apl2, int plt, int plt1);
 int logsch(int ih, int nbh);
 void reset();
-void init(int test_data[SIZE]);
+void init(int test_data[MAX_SIZE]);
 int adpcm_sin(int rad);
 int adpcm_cos(int rad);
 int adpcm_abs(int n);
 
-int enc_return(int compressed[SIZE]);
-int dec_return(int dec_result[SIZE]);
+int enc_return(int compressed[MAX_SIZE]);
+int dec_return(int dec_result[MAX_SIZE]);
 
-void adpcm_enc_main(int test_data[SIZE], int compressed[SIZE], int size);
-void adpcm_dec_main(int compressed[SIZE], int dec_result[SIZE], int size);
-void adpcm_main(int test_data[SIZE], int compressed[SIZE],
-                int dec_result[SIZE], int select, int size);
+void adpcm_enc_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE], int size);
+void adpcm_dec_main(int compressed[MAX_SIZE], int dec_result[MAX_SIZE], int size);
+void adpcm_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE],
+                int dec_result[MAX_SIZE], int select, int size);
 
 int delay_bpl[6];
 

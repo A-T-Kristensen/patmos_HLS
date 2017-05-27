@@ -1,0 +1,138 @@
+
+
+================================================================
+== Vivado HLS Report for 'adpcm_main'
+================================================================
+* Date:           Sat May 27 21:23:14 2017
+
+* Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
+* Project:        hls_adpcm
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.74|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    ?|    ?|    ?|    ?| dataflow |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------+------------+-----+-----+-----+-----+---------+
+        |                       |            |  Latency  |  Interval | Pipeline|
+        |        Instance       |   Module   | min | max | min | max |   Type  |
+        +-----------------------+------------+-----+-----+-----+-----+---------+
+        |grp_Block_proc_fu_258  |Block_proc  |    ?|    ?|    ?|    ?|   none  |
+        +-----------------------+------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |       11|     70|    5518|   5129|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |       11|     70|    5518|   5129|
++-----------------+---------+-------+--------+-------+
+|Available        |      270|    240|  126800|  63400|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        4|     29|       4|      8|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +---------------+------------+---------+-------+------+------+
+    |    Instance   |   Module   | BRAM_18K| DSP48E|  FF  |  LUT |
+    +---------------+------------+---------+-------+------+------+
+    |Block_proc_U0  |Block_proc  |       11|     70|  5518|  5129|
+    +---------------+------------+---------+-------+------+------+
+    |Total          |            |       11|     70|  5518|  5129|
+    +---------------+------------+---------+-------+------+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-------------------+-----+-----+------------+--------------+--------------+
+|test_data_Addr_A   | out |   32|    bram    |   test_data  |     array    |
+|test_data_EN_A     | out |    1|    bram    |   test_data  |     array    |
+|test_data_Din_A    | out |   32|    bram    |   test_data  |     array    |
+|test_data_Dout_A   |  in |   32|    bram    |   test_data  |     array    |
+|test_data_WEN_A    | out |    4|    bram    |   test_data  |     array    |
+|test_data_Clk_A    | out |    1|    bram    |   test_data  |     array    |
+|test_data_Rst_A    | out |    1|    bram    |   test_data  |     array    |
+|ap_clk             |  in |    1| ap_ctrl_hs |  adpcm_main  | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs |  adpcm_main  | return value |
+|ap_done            | out |    1| ap_ctrl_hs |  adpcm_main  | return value |
+|ap_start           |  in |    1| ap_ctrl_hs |  adpcm_main  | return value |
+|ap_ready           | out |    1| ap_ctrl_hs |  adpcm_main  | return value |
+|ap_idle            | out |    1| ap_ctrl_hs |  adpcm_main  | return value |
+|compressed_Addr_A  | out |   32|    bram    |  compressed  |     array    |
+|compressed_EN_A    | out |    1|    bram    |  compressed  |     array    |
+|compressed_Din_A   | out |   32|    bram    |  compressed  |     array    |
+|compressed_Dout_A  |  in |   32|    bram    |  compressed  |     array    |
+|compressed_WEN_A   | out |    4|    bram    |  compressed  |     array    |
+|compressed_Clk_A   | out |    1|    bram    |  compressed  |     array    |
+|compressed_Rst_A   | out |    1|    bram    |  compressed  |     array    |
+|dec_result_Addr_A  | out |   32|    bram    |  dec_result  |     array    |
+|dec_result_EN_A    | out |    1|    bram    |  dec_result  |     array    |
+|dec_result_Din_A   | out |   32|    bram    |  dec_result  |     array    |
+|dec_result_Dout_A  |  in |   32|    bram    |  dec_result  |     array    |
+|dec_result_WEN_A   | out |    4|    bram    |  dec_result  |     array    |
+|dec_result_Clk_A   | out |    1|    bram    |  dec_result  |     array    |
+|dec_result_Rst_A   | out |    1|    bram    |  dec_result  |     array    |
+|select_r           |  in |   32|   ap_none  |   select_r   |    scalar    |
+|size               |  in |   32|   ap_none  |     size     |    scalar    |
++-------------------+-----+-----+------------+--------------+--------------+
+

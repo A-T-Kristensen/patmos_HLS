@@ -623,7 +623,7 @@ int logsch(int ih, int nbh)
 	return (nbh);
 }
 
-void adpcm_enc_main(int test_data[SIZE], int compressed[SIZE], int size)
+void adpcm_enc_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE], int size)
 {
 #pragma HLS DATAFLOW
 #pragma HLS INLINE
@@ -635,7 +635,7 @@ void adpcm_enc_main(int test_data[SIZE], int compressed[SIZE], int size)
 	}
 }
 
-void adpcm_dec_main(int compressed[SIZE], int dec_result[SIZE], int size)
+void adpcm_dec_main(int compressed[MAX_SIZE], int dec_result[MAX_SIZE], int size)
 {
 #pragma HLS DATAFLOW
 #pragma HLS INLINE
@@ -653,9 +653,13 @@ void adpcm_dec_main(int compressed[SIZE], int dec_result[SIZE], int size)
 	}
 }
 
-void adpcm_main(int test_data[SIZE], int compressed[SIZE],
-                int dec_result[SIZE], int select, int size)
+void adpcm_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE],
+                int dec_result[MAX_SIZE], int select, int size)
 {
+
+#pragma HLS INTERFACE bram port=dec_result
+#pragma HLS INTERFACE bram port=compressed
+#pragma HLS INTERFACE bram port=test_data
 
 #pragma HLS ALLOCATION instances=filtez limit=1 function
 #pragma HLS ALLOCATION instances=filtep limit=1 function
