@@ -3,6 +3,9 @@
 #define ADPCM_H_
 
 #include <stdio.h>
+#include <math.h>
+
+#define SAMPLE_RATE 11025
 
 #define PI 3141
 #define TEST_VECTOR 0 // Specifies whether the test vector from CHStone should be use
@@ -13,7 +16,7 @@
 
 #else // Same as TACLE
 
-#define SIZE 3
+#define SIZE 300
 
 #endif
 

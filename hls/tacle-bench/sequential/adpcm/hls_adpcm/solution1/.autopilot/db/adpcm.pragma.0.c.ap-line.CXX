@@ -105,5 +105,5 @@
 #pragma line 909 "/usr/include/stdio.h" 3 4 ::: 2088
 #pragma line 930 "/usr/include/stdio.h" 3 4 ::: 2100
 #pragma line 6 "./adpcm.h" 2 ::: 2103
-#pragma line 22 "./adpcm.h" ::: 2104
+#pragma line 24 "./adpcm.h" ::: 2104
 #pragma line 67 "adpcm.c" 2 ::: 2197

@@ -2047,7 +2047,7 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ ));
 /* If we are compiling with optimizing read this file.  It contains
    several optimizing inline functions and macros.  */
 #pragma line 6 "./adpcm.h" 2
-#pragma line 22 "./adpcm.h"
+#pragma line 24 "./adpcm.h"
 int encode(int, int);
 void decode(int);
 int filtez(int *bpl, int *dlt);

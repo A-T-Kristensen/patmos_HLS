@@ -3,3 +3,4 @@ sim/
 impl/ip
 impl/verilog
 .log
+.autopilot/
