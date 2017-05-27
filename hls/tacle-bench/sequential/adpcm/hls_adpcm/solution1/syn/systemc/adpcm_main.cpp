@@ -28,6 +28,10 @@ adpcm_main::adpcm_main(sc_module_name name) : sc_module(name), mVcdFile(0) {
     Block_proc_U0->ap_ready(Block_proc_U0_ap_ready);
     Block_proc_U0->select_r(select_r);
     Block_proc_U0->size(size);
+    Block_proc_U0->dec_result_address0(Block_proc_U0_dec_result_address0);
+    Block_proc_U0->dec_result_ce0(Block_proc_U0_dec_result_ce0);
+    Block_proc_U0->dec_result_we0(Block_proc_U0_dec_result_we0);
+    Block_proc_U0->dec_result_d0(Block_proc_U0_dec_result_d0);
     Block_proc_U0->test_data_address0(Block_proc_U0_test_data_address0);
     Block_proc_U0->test_data_ce0(Block_proc_U0_test_data_ce0);
     Block_proc_U0->test_data_q0(test_data_q0);
@@ -36,10 +40,6 @@ adpcm_main::adpcm_main(sc_module_name name) : sc_module(name), mVcdFile(0) {
     Block_proc_U0->compressed_we0(Block_proc_U0_compressed_we0);
     Block_proc_U0->compressed_d0(Block_proc_U0_compressed_d0);
     Block_proc_U0->compressed_q0(compressed_q0);
-    Block_proc_U0->dec_result_address0(Block_proc_U0_dec_result_address0);
-    Block_proc_U0->dec_result_ce0(Block_proc_U0_dec_result_ce0);
-    Block_proc_U0->dec_result_we0(Block_proc_U0_dec_result_we0);
-    Block_proc_U0->dec_result_d0(Block_proc_U0_dec_result_d0);
 
     SC_METHOD(thread_Block_proc_U0_ap_continue);
 
@@ -138,16 +138,16 @@ adpcm_main::adpcm_main(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, Block_proc_U0_ap_continue, "Block_proc_U0_ap_continue");
     sc_trace(mVcdFile, Block_proc_U0_ap_idle, "Block_proc_U0_ap_idle");
     sc_trace(mVcdFile, Block_proc_U0_ap_ready, "Block_proc_U0_ap_ready");
+    sc_trace(mVcdFile, Block_proc_U0_dec_result_address0, "Block_proc_U0_dec_result_address0");
+    sc_trace(mVcdFile, Block_proc_U0_dec_result_ce0, "Block_proc_U0_dec_result_ce0");
+    sc_trace(mVcdFile, Block_proc_U0_dec_result_we0, "Block_proc_U0_dec_result_we0");
+    sc_trace(mVcdFile, Block_proc_U0_dec_result_d0, "Block_proc_U0_dec_result_d0");
     sc_trace(mVcdFile, Block_proc_U0_test_data_address0, "Block_proc_U0_test_data_address0");
     sc_trace(mVcdFile, Block_proc_U0_test_data_ce0, "Block_proc_U0_test_data_ce0");
     sc_trace(mVcdFile, Block_proc_U0_compressed_address0, "Block_proc_U0_compressed_address0");
     sc_trace(mVcdFile, Block_proc_U0_compressed_ce0, "Block_proc_U0_compressed_ce0");
     sc_trace(mVcdFile, Block_proc_U0_compressed_we0, "Block_proc_U0_compressed_we0");
     sc_trace(mVcdFile, Block_proc_U0_compressed_d0, "Block_proc_U0_compressed_d0");
-    sc_trace(mVcdFile, Block_proc_U0_dec_result_address0, "Block_proc_U0_dec_result_address0");
-    sc_trace(mVcdFile, Block_proc_U0_dec_result_ce0, "Block_proc_U0_dec_result_ce0");
-    sc_trace(mVcdFile, Block_proc_U0_dec_result_we0, "Block_proc_U0_dec_result_we0");
-    sc_trace(mVcdFile, Block_proc_U0_dec_result_d0, "Block_proc_U0_dec_result_d0");
     sc_trace(mVcdFile, ap_hs_continue, "ap_hs_continue");
     sc_trace(mVcdFile, ap_hs_done, "ap_hs_done");
     sc_trace(mVcdFile, ap_hs_ready, "ap_hs_ready");

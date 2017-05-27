@@ -55,7 +55,7 @@ codeRepl:23  %select_read = call i32 @_ssdm_op_Read.ap_none.i32(i32 %select_r) n
 
 <Node id="120" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32">
 <![CDATA[
-codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %test_data, [3 x i32]* %compressed, [3 x i32]* %dec_result)
+codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -403,7 +403,7 @@ codeRepl:21  call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str12
 
 <Node id="120" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32">
 <![CDATA[
-codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %test_data, [3 x i32]* %compressed, [3 x i32]* %dec_result)
+codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -755,11 +755,11 @@ codeRepl:25  ret void
 </dataflow>
 <dataflow id="135" from="size_read" to="StgValue_5" fromId="3" toId="5">
 </dataflow>
-<dataflow id="136" from="test_data" to="StgValue_5" fromId="32" toId="5">
+<dataflow id="136" from="dec_result" to="StgValue_5" fromId="34" toId="5">
 </dataflow>
-<dataflow id="137" from="compressed" to="StgValue_5" fromId="33" toId="5">
+<dataflow id="137" from="test_data" to="StgValue_5" fromId="32" toId="5">
 </dataflow>
-<dataflow id="138" from="dec_result" to="StgValue_5" fromId="34" toId="5">
+<dataflow id="138" from="compressed" to="StgValue_5" fromId="33" toId="5">
 </dataflow>
 <dataflow id="139" from="ilr" to="StgValue_5" fromId="37" toId="5">
 </dataflow>
@@ -1253,11 +1253,11 @@ codeRepl:25  ret void
 </dataflow>
 <dataflow id="407" from="size_read" to="StgValue_28" fromId="3" toId="28">
 </dataflow>
-<dataflow id="408" from="test_data" to="StgValue_28" fromId="32" toId="28">
+<dataflow id="408" from="dec_result" to="StgValue_28" fromId="34" toId="28">
 </dataflow>
-<dataflow id="409" from="compressed" to="StgValue_28" fromId="33" toId="28">
+<dataflow id="409" from="test_data" to="StgValue_28" fromId="32" toId="28">
 </dataflow>
-<dataflow id="410" from="dec_result" to="StgValue_28" fromId="34" toId="28">
+<dataflow id="410" from="compressed" to="StgValue_28" fromId="33" toId="28">
 </dataflow>
 <dataflow id="411" from="ilr" to="StgValue_28" fromId="37" toId="28">
 </dataflow>

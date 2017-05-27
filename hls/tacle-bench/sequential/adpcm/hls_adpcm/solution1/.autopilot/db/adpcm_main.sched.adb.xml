@@ -55,7 +55,7 @@ codeRepl:23  %select_read = call i32 @_ssdm_op_Read.ap_none.i32(i32 %select_r) n
 
 <Node id="120" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32">
 <![CDATA[
-codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %test_data, [3 x i32]* %compressed, [3 x i32]* %dec_result)
+codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -403,7 +403,7 @@ codeRepl:21  call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str12
 
 <Node id="120" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32">
 <![CDATA[
-codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %test_data, [3 x i32]* %compressed, [3 x i32]* %dec_result)
+codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>

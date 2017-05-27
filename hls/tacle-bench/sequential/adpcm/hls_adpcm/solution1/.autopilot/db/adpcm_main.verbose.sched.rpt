@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'adpcm_main'
 ================================================================
-* Date:           Sat May 27 12:14:14 2017
+* Date:           Sat May 27 12:28:34 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_adpcm
@@ -76,19 +76,19 @@ IsGatedGlobalClock: 0
 2 --> 
 * FSM state operations: 
 
- <State 1>: 6.15ns
+ <State 1>: 3.76ns
 ST_1: size_read (118)  [1/1] 0.00ns
 codeRepl:22  %size_read = call i32 @_ssdm_op_Read.ap_none.i32(i32 %size) nounwind
 
 ST_1: select_read (119)  [1/1] 0.00ns
 codeRepl:23  %select_read = call i32 @_ssdm_op_Read.ap_none.i32(i32 %select_r) nounwind
 
-ST_1: StgValue_5 (120)  [2/2] 6.15ns
-codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %test_data, [3 x i32]* %compressed, [3 x i32]* %dec_result)
+ST_1: StgValue_5 (120)  [2/2] 3.76ns
+codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed)
 
 
  <State 2>: 0.00ns
-ST_2: StgValue_6 (96)  [1/1] 0.00ns  loc: adpcm.c:628->adpcm.c:674
+ST_2: StgValue_6 (96)  [1/1] 0.00ns  loc: adpcm.c:628->adpcm.c:678
 codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind
 
 ST_2: StgValue_7 (97)  [1/1] 0.00ns
@@ -109,37 +109,37 @@ codeRepl:5  call void (...)* @_ssdm_op_SpecBitsMap(i32 %size) nounwind, !map !48
 ST_2: StgValue_12 (102)  [1/1] 0.00ns
 codeRepl:6  call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @adpcm_main_str) nounwind
 
-ST_2: StgValue_13 (103)  [1/1] 0.00ns  loc: adpcm.c:656
+ST_2: StgValue_13 (103)  [1/1] 0.00ns  loc: adpcm.c:660
 codeRepl:7  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str1, [1 x i8]* @p_str) nounwind
 
-ST_2: StgValue_14 (104)  [1/1] 0.00ns  loc: adpcm.c:657
+ST_2: StgValue_14 (104)  [1/1] 0.00ns  loc: adpcm.c:661
 codeRepl:8  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str2, [1 x i8]* @p_str) nounwind
 
-ST_2: StgValue_15 (105)  [1/1] 0.00ns  loc: adpcm.c:658
+ST_2: StgValue_15 (105)  [1/1] 0.00ns  loc: adpcm.c:662
 codeRepl:9  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str3, [1 x i8]* @p_str) nounwind
 
-ST_2: StgValue_16 (106)  [1/1] 0.00ns  loc: adpcm.c:659
+ST_2: StgValue_16 (106)  [1/1] 0.00ns  loc: adpcm.c:663
 codeRepl:10  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str4, [1 x i8]* @p_str) nounwind
 
-ST_2: StgValue_17 (107)  [1/1] 0.00ns  loc: adpcm.c:660
+ST_2: StgValue_17 (107)  [1/1] 0.00ns  loc: adpcm.c:664
 codeRepl:11  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str5, [1 x i8]* @p_str) nounwind
 
-ST_2: StgValue_18 (108)  [1/1] 0.00ns  loc: adpcm.c:661
+ST_2: StgValue_18 (108)  [1/1] 0.00ns  loc: adpcm.c:665
 codeRepl:12  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str6, [1 x i8]* @p_str) nounwind
 
-ST_2: StgValue_19 (109)  [1/1] 0.00ns  loc: adpcm.c:662
+ST_2: StgValue_19 (109)  [1/1] 0.00ns  loc: adpcm.c:666
 codeRepl:13  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str7, [1 x i8]* @p_str) nounwind
 
-ST_2: StgValue_20 (110)  [1/1] 0.00ns  loc: adpcm.c:663
+ST_2: StgValue_20 (110)  [1/1] 0.00ns  loc: adpcm.c:667
 codeRepl:14  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str8, [1 x i8]* @p_str) nounwind
 
-ST_2: StgValue_21 (111)  [1/1] 0.00ns  loc: adpcm.c:664
+ST_2: StgValue_21 (111)  [1/1] 0.00ns  loc: adpcm.c:668
 codeRepl:15  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str9, [1 x i8]* @p_str) nounwind
 
-ST_2: StgValue_22 (112)  [1/1] 0.00ns  loc: adpcm.c:666
+ST_2: StgValue_22 (112)  [1/1] 0.00ns  loc: adpcm.c:670
 codeRepl:16  call void (...)* @_ssdm_op_SpecInterface(i32 %size, [8 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
 
-ST_2: StgValue_23 (113)  [1/1] 0.00ns  loc: adpcm.c:667
+ST_2: StgValue_23 (113)  [1/1] 0.00ns  loc: adpcm.c:671
 codeRepl:17  call void (...)* @_ssdm_op_SpecInterface(i32 %select_r, [8 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
 
 ST_2: StgValue_24 (114)  [1/1] 0.00ns
@@ -151,13 +151,13 @@ codeRepl:19  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %compressed, [1 x
 ST_2: StgValue_26 (116)  [1/1] 0.00ns
 codeRepl:20  call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %test_data, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
 
-ST_2: StgValue_27 (117)  [1/1] 0.00ns  loc: adpcm.c:671
+ST_2: StgValue_27 (117)  [1/1] 0.00ns  loc: adpcm.c:675
 codeRepl:21  call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str12, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
 
 ST_2: StgValue_28 (120)  [1/2] 0.00ns
-codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %test_data, [3 x i32]* %compressed, [3 x i32]* %dec_result)
+codeRepl:24  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed)
 
-ST_2: StgValue_29 (121)  [1/1] 0.00ns  loc: adpcm.c:679
+ST_2: StgValue_29 (121)  [1/1] 0.00ns  loc: adpcm.c:683
 codeRepl:25  ret void
 
 
@@ -167,10 +167,10 @@ codeRepl:25  ret void
 ============================================================
 Target clock period: 10ns, clock uncertainty: 1.25ns.
 
- <State 1>: 6.15ns
+ <State 1>: 3.76ns
 The critical path consists of the following:
 	wire read on port 'size' [118]  (0 ns)
-	'call' operation to 'Block__proc' [120]  (6.15 ns)
+	'call' operation to 'Block__proc' [120]  (3.76 ns)
 
  <State 2>: 0ns
 The critical path consists of the following:

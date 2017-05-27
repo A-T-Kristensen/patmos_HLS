@@ -15,5 +15,5 @@ create_clock -period 10 -name default
 #source "./hls_adpcm/solution1/directives.tcl"
 csim_design -clean -compiler gcc
 csynth_design
-cosim_design
+cosim_design -rtl vhdl
 export_design -format ip_catalog

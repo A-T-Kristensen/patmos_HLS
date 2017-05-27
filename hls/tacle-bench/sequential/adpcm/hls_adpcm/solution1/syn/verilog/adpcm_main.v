@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="adpcm_main,hls_ip_2016_4,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a100tcsg324-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.741000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=11,HLS_SYN_DSP=70,HLS_SYN_FF=5420,HLS_SYN_LUT=4872}" *)
+(* CORE_GENERATION_INFO="adpcm_main,hls_ip_2016_4,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a100tcsg324-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.741000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=11,HLS_SYN_DSP=70,HLS_SYN_FF=5484,HLS_SYN_LUT=5029}" *)
 
 module adpcm_main (
         test_data_address0,
@@ -67,16 +67,16 @@ wire    Block_proc_U0_ap_done;
 wire    Block_proc_U0_ap_continue;
 wire    Block_proc_U0_ap_idle;
 wire    Block_proc_U0_ap_ready;
+wire   [1:0] Block_proc_U0_dec_result_address0;
+wire    Block_proc_U0_dec_result_ce0;
+wire    Block_proc_U0_dec_result_we0;
+wire   [31:0] Block_proc_U0_dec_result_d0;
 wire   [1:0] Block_proc_U0_test_data_address0;
 wire    Block_proc_U0_test_data_ce0;
 wire   [1:0] Block_proc_U0_compressed_address0;
 wire    Block_proc_U0_compressed_ce0;
 wire    Block_proc_U0_compressed_we0;
 wire   [31:0] Block_proc_U0_compressed_d0;
-wire   [1:0] Block_proc_U0_dec_result_address0;
-wire    Block_proc_U0_dec_result_ce0;
-wire    Block_proc_U0_dec_result_we0;
-wire   [31:0] Block_proc_U0_dec_result_d0;
 wire    ap_hs_continue;
 wire    ap_hs_done;
 wire    ap_hs_ready;
@@ -91,6 +91,10 @@ Block_proc Block_proc_U0(
     .ap_ready(Block_proc_U0_ap_ready),
     .select_r(select_r),
     .size(size),
+    .dec_result_address0(Block_proc_U0_dec_result_address0),
+    .dec_result_ce0(Block_proc_U0_dec_result_ce0),
+    .dec_result_we0(Block_proc_U0_dec_result_we0),
+    .dec_result_d0(Block_proc_U0_dec_result_d0),
     .test_data_address0(Block_proc_U0_test_data_address0),
     .test_data_ce0(Block_proc_U0_test_data_ce0),
     .test_data_q0(test_data_q0),
@@ -98,11 +102,7 @@ Block_proc Block_proc_U0(
     .compressed_ce0(Block_proc_U0_compressed_ce0),
     .compressed_we0(Block_proc_U0_compressed_we0),
     .compressed_d0(Block_proc_U0_compressed_d0),
-    .compressed_q0(compressed_q0),
-    .dec_result_address0(Block_proc_U0_dec_result_address0),
-    .dec_result_ce0(Block_proc_U0_dec_result_ce0),
-    .dec_result_we0(Block_proc_U0_dec_result_we0),
-    .dec_result_d0(Block_proc_U0_dec_result_d0)
+    .compressed_q0(compressed_q0)
 );
 
 assign Block_proc_U0_ap_continue = 1'b1;

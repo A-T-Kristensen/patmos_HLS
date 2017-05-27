@@ -2772,7 +2772,7 @@ void adpcm_enc_main(int test_data[3], int compressed[3], int size)
 #pragma empty_line
  int i;
 #pragma empty_line
- for (i = 0; i < size + 1; i += 2) {
+ for (i = 0; i < size; i += 2) {
   compressed[i / 2] = encode(test_data[i], test_data[i + 1]);
  }
 }
@@ -2784,10 +2784,14 @@ void adpcm_dec_main(int compressed[3], int dec_result[3], int size)
 #pragma empty_line
  int i;
 #pragma empty_line
- for (i = 0 ; i < size + 1 ; i += 2) {
+ for (i = 0 ; i < size; i += 2) {
   decode(compressed[i / 2]);
   dec_result[i] = xout1;
-  dec_result[i + 1] = xout2;
+  if(i < size - 1) {
+   dec_result[i + 1] = xout2;
+  } else { // Do the start
+   dec_result[1] = xout2;
+  }
  }
 }
 #pragma empty_line

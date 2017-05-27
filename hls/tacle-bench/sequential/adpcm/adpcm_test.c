@@ -208,7 +208,7 @@ int main()
 	printf("Return: %d\n", enc_return(compressed));
 	printf("Return: %d\n", dec_return(dec_result));
 
-	return dec_return(dec_result);
+	return 0;
 
 #endif
 

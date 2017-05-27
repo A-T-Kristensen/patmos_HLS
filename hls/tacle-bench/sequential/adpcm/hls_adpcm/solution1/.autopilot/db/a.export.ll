@@ -473,7 +473,7 @@ codeRepl:
   call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str12, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
   %size_read = call i32 @_ssdm_op_Read.ap_none.i32(i32 %size) nounwind
   %select_read = call i32 @_ssdm_op_Read.ap_none.i32(i32 %select_r) nounwind
-  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %test_data, [3 x i32]* %compressed, [3 x i32]* %dec_result)
+  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed)
   ret void
 }
 
@@ -743,7 +743,7 @@ entry:
   ret i15 %empty_66
 }
 
-define internal fastcc void @Block__proc(i32 %select_r, i32 %size, [3 x i32]* %test_data, [3 x i32]* %compressed, [3 x i32]* %dec_result) nounwind {
+define internal fastcc void @Block__proc(i32 %select_r, i32 %size, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed) nounwind {
 newFuncRoot:
   call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %test_data, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
   call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %compressed, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
@@ -751,39 +751,44 @@ newFuncRoot:
   %size_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %size) nounwind
   %select_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %select_r) nounwind
   %tmp = icmp eq i32 %select_read, 0
-  %tmp_28 = add i32 %size_read, 2
+  br i1 %tmp, label %.preheader.preheader, label %0
+
+.preheader.preheader:                             ; preds = %newFuncRoot
+  %tmp_28 = add i32 %size_read, 1
   %tmp_29 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %tmp_28, i32 31)
-  %p_neg2 = sub i32 -2, %size_read
+  %p_neg2 = xor i32 %size_read, -1
   %p_lshr2 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %p_neg2, i32 1, i32 31)
   %p_neg_t2 = sub i31 0, %p_lshr2
   %tmp_30 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %tmp_28, i32 1, i32 31)
   %tmp_31 = select i1 %tmp_29, i31 %p_neg_t2, i31 %tmp_30
   %tmp_32 = call i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31 %tmp_31, i1 false)
-  br i1 %tmp, label %.preheader33.preheader, label %.preheader.preheader
-
-.preheader33.preheader:                           ; preds = %newFuncRoot
-  br label %.preheader33
-
-.preheader.preheader:                             ; preds = %newFuncRoot
   br label %.preheader
 
-.preheader33:                                     ; preds = %.preheader33.preheader, %encode.exit.i
-  %i_0_i = phi i32 [ %i_7, %encode.exit.i ], [ 0, %.preheader33.preheader ]
-  %tmp_33 = icmp eq i32 %i_0_i, %tmp_32
-  br i1 %tmp_33, label %adpcm_enc_main.exit.loopexit27, label %0
+.preheader:                                       ; preds = %.preheader.preheader, %encode.exit.i
+  %i_0_i = phi i32 [ %i_6, %encode.exit.i ], [ 0, %.preheader.preheader ]
+  %tmp_38 = icmp eq i32 %i_0_i, %tmp_32
+  br i1 %tmp_38, label %adpcm_enc_main.exit.loopexit27, label %1
 
-.preheader:                                       ; preds = %.preheader.preheader, %decode.exit.i
-  %i_0_i1 = phi i32 [ %i_5, %decode.exit.i ], [ 0, %.preheader.preheader ]
-  %tmp_34 = icmp eq i32 %i_0_i1, %tmp_32
-  br i1 %tmp_34, label %adpcm_enc_main.exit.loopexit, label %1
+; <label>:0                                       ; preds = %newFuncRoot
+  %tmp_s = add nsw i32 %size_read, -1
+  %dec_result_addr = getelementptr [3 x i32]* %dec_result, i64 0, i64 1
+  %tmp_33 = add i32 %size_read, 1
+  %tmp_34 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %tmp_33, i32 31)
+  %p_neg3 = xor i32 %size_read, -1
+  %p_lshr3 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %p_neg3, i32 1, i32 31)
+  %p_neg_t3 = sub i31 0, %p_lshr3
+  %tmp_35 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %tmp_33, i32 1, i32 31)
+  %tmp_36 = select i1 %tmp_34, i31 %p_neg_t3, i31 %tmp_35
+  %tmp_37 = call i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31 %tmp_36, i1 false)
+  br label %2
 
-; <label>:0                                       ; preds = %.preheader33
-  %tmp_s = sext i32 %i_0_i to i64
-  %test_data_addr = getelementptr [3 x i32]* %test_data, i64 0, i64 %tmp_s
+; <label>:1                                       ; preds = %.preheader
+  %tmp_40 = sext i32 %i_0_i to i64
+  %test_data_addr = getelementptr [3 x i32]* %test_data, i64 0, i64 %tmp_40
   %test_data_load = load i32* %test_data_addr, align 4
-  %tmp_39 = or i32 %i_0_i, 1
-  %tmp_40 = sext i32 %tmp_39 to i64
-  %test_data_addr_1 = getelementptr [3 x i32]* %test_data, i64 0, i64 %tmp_40
+  %tmp_41 = or i32 %i_0_i, 1
+  %tmp_42 = sext i32 %tmp_41 to i64
+  %test_data_addr_1 = getelementptr [3 x i32]* %test_data, i64 0, i64 %tmp_42
   %test_data_load_1 = load i32* %test_data_addr_1, align 4
   %tqmf_load = load i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 0), align 16
   %p_shl = call i36 @_ssdm_op_BitConcatenate.i36.i32.i4(i32 %tqmf_load, i4 0)
@@ -793,96 +798,114 @@ newFuncRoot:
   %xa = sub i37 %p_shl_cast, %p_shl2_cast
   %xa_cast = sext i37 %xa to i50
   %tqmf_load_1 = load i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 1), align 4
-  %tmp_66_cast = sext i32 %tqmf_load_1 to i39
-  %xb = mul i39 %tmp_66_cast, -44
+  %tmp_65_cast = sext i32 %tqmf_load_1 to i39
+  %xb = mul i39 %tmp_65_cast, -44
   %xb_cast = sext i39 %xb to i50
-  br label %2
+  br label %3
 
-adpcm_enc_main.exit.loopexit:                     ; preds = %.preheader
+adpcm_enc_main.exit.loopexit:                     ; preds = %2
   br label %adpcm_enc_main.exit
 
-adpcm_enc_main.exit.loopexit27:                   ; preds = %.preheader33
+adpcm_enc_main.exit.loopexit27:                   ; preds = %.preheader
   br label %adpcm_enc_main.exit
 
 adpcm_enc_main.exit:                              ; preds = %adpcm_enc_main.exit.loopexit27, %adpcm_enc_main.exit.loopexit
   ret void
 
-; <label>:1                                       ; preds = %.preheader
-  %tmp_35 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %i_0_i1, i32 31)
+; <label>:2                                       ; preds = %18, %0
+  %i_0_i1 = phi i32 [ 0, %0 ], [ %i_7, %18 ]
+  %tmp_39 = icmp eq i32 %i_0_i1, %tmp_37
+  br i1 %tmp_39, label %adpcm_enc_main.exit.loopexit, label %4
+
+; <label>:3                                       ; preds = %6, %1
+  %tqmf_ptr_0_rec_i_i = phi i5 [ 2, %1 ], [ %phitmp_i_i, %6 ]
+  %i_0_i_i = phi i4 [ 0, %1 ], [ %i, %6 ]
+  %xa_0_i_i = phi i50 [ %xa_cast, %1 ], [ %xa_2, %6 ]
+  %xb_0_i_i = phi i50 [ %xb_cast, %1 ], [ %xb_2, %6 ]
+  %tqmf_ptr_0_rec_i_i_c = zext i5 %tqmf_ptr_0_rec_i_i to i64
+  %h_addr = getelementptr [24 x i15]* @h, i64 0, i64 %tqmf_ptr_0_rec_i_i_c
+  %tqmf_addr = getelementptr [24 x i32]* @tqmf, i64 0, i64 %tqmf_ptr_0_rec_i_i_c
+  %exitcond2_i_i = icmp eq i4 %i_0_i_i, -6
+  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind
+  %i = add i4 %i_0_i_i, 1
+  br i1 %exitcond2_i_i, label %5, label %6
+
+; <label>:4                                       ; preds = %2
+  %tmp_43 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %i_0_i1, i32 31)
   %p_neg1 = sub i32 0, %i_0_i1
   %p_lshr1 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %p_neg1, i32 1, i32 31)
   %tmp_12 = zext i31 %p_lshr1 to i32
   %p_neg_t1 = sub i32 0, %tmp_12
   %p_lshr_f1 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %i_0_i1, i32 1, i32 31)
   %tmp_14 = zext i31 %p_lshr_f1 to i32
-  %tmp_41 = select i1 %tmp_35, i32 %p_neg_t1, i32 %tmp_14
-  %tmp_42 = sext i32 %tmp_41 to i64
-  %compressed_addr = getelementptr [3 x i32]* %compressed, i64 0, i64 %tmp_42
+  %tmp_44 = select i1 %tmp_43, i32 %p_neg_t1, i32 %tmp_14
+  %tmp_45 = sext i32 %tmp_44 to i64
+  %compressed_addr = getelementptr [3 x i32]* %compressed, i64 0, i64 %tmp_45
   %compressed_load = load i32* %compressed_addr, align 4
-  %tmp_36 = trunc i32 %compressed_load to i6
-  %tmp_69_cast = zext i6 %tmp_36 to i32
+  %tmp_46 = trunc i32 %compressed_load to i6
+  %tmp_69_cast = zext i6 %tmp_46 to i32
   store i32 %tmp_69_cast, i32* @ilr, align 4
   %tmp_15 = call i26 @_ssdm_op_PartSelect.i26.i32.i32.i32(i32 %compressed_load, i32 6, i32 31)
-  %tmp_43 = sext i26 %tmp_15 to i32
-  store i32 %tmp_43, i32* @ih, align 4
+  %tmp_47 = sext i26 %tmp_15 to i32
+  store i32 %tmp_47, i32* @ih, align 4
   %tmp_16 = call fastcc i32 @filtez([6 x i32]* @dec_del_bpl, [6 x i32]* @dec_del_dltx) nounwind
   store i32 %tmp_16, i32* @dec_szl, align 4
   %dec_rlt1_load = load i32* @dec_rlt1, align 4
   %dec_al1_load = load i32* @dec_al1, align 4
   %dec_rlt2_load = load i32* @dec_rlt2, align 4
   %dec_al2_load = load i32* @dec_al2, align 4
-  %tmp_44 = call fastcc i32 @filtep(i32 %dec_rlt1_load, i32 %dec_al1_load, i32 %dec_rlt2_load, i32 %dec_al2_load) nounwind
-  %tmp_45 = add nsw i32 %tmp_44, %tmp_16
-  store i32 %tmp_44, i32* @dec_spl, align 4
-  store i32 %tmp_45, i32* @dec_sl, align 4
+  %tmp_48 = call fastcc i32 @filtep(i32 %dec_rlt1_load, i32 %dec_al1_load, i32 %dec_rlt2_load, i32 %dec_al2_load) nounwind
+  %tmp_49 = add nsw i32 %tmp_48, %tmp_16
+  store i32 %tmp_48, i32* @dec_spl, align 4
+  store i32 %tmp_49, i32* @dec_sl, align 4
   %dec_detl_load = load i32* @dec_detl, align 4
   %tmp_73_cast = sext i32 %dec_detl_load to i47
   %tmp_18 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %compressed_load, i32 2, i32 5)
-  %tmp_46 = zext i4 %tmp_18 to i64
-  %qq4_code4_table_addr = getelementptr [16 x i16]* @qq4_code4_table, i64 0, i64 %tmp_46
+  %tmp_50 = zext i4 %tmp_18 to i64
+  %qq4_code4_table_addr = getelementptr [16 x i16]* @qq4_code4_table, i64 0, i64 %tmp_50
   %qq4_code4_table_load = load i16* %qq4_code4_table_addr, align 2
   %tmp_75_cast = sext i16 %qq4_code4_table_load to i47
-  %tmp_47 = mul i47 %tmp_75_cast, %tmp_73_cast
-  %tmp_48 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_47, i32 15, i32 46)
-  %tmp_49 = add nsw i32 %tmp_48, %tmp_16
-  store i32 %tmp_48, i32* @dec_dlt, align 4
+  %tmp_51 = mul i47 %tmp_75_cast, %tmp_73_cast
+  %tmp_52 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_51, i32 15, i32 46)
+  %tmp_53 = add nsw i32 %tmp_52, %tmp_16
+  store i32 %tmp_52, i32* @dec_dlt, align 4
   %il_load = load i32* @il, align 4
-  %tmp_50 = sext i32 %il_load to i64
-  %qq6_code6_table_addr = getelementptr [64 x i16]* @qq6_code6_table, i64 0, i64 %tmp_50
+  %tmp_54 = sext i32 %il_load to i64
+  %qq6_code6_table_addr = getelementptr [64 x i16]* @qq6_code6_table, i64 0, i64 %tmp_54
   %qq6_code6_table_load = load i16* %qq6_code6_table_addr, align 2
   %tmp_80_cast = sext i16 %qq6_code6_table_load to i47
-  %tmp_51 = mul i47 %tmp_80_cast, %tmp_73_cast
-  %tmp_52 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_51, i32 15, i32 46)
-  %tmp_53 = add nsw i32 %tmp_45, %tmp_52
-  store i32 %tmp_52, i32* @dl, align 4
-  store i32 %tmp_53, i32* @rl, align 4
+  %tmp_55 = mul i47 %tmp_80_cast, %tmp_73_cast
+  %tmp_56 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_55, i32 15, i32 46)
+  %tmp_57 = add nsw i32 %tmp_49, %tmp_56
+  store i32 %tmp_56, i32* @dl, align 4
+  store i32 %tmp_57, i32* @rl, align 4
   %dec_nbl_load = load i32* @dec_nbl, align 4
-  %tmp_54 = call fastcc i15 @logscl(i6 %tmp_36, i32 %dec_nbl_load) nounwind
-  %tmp_85_ext = zext i15 %tmp_54 to i32
+  %tmp_58 = call fastcc i15 @logscl(i6 %tmp_46, i32 %dec_nbl_load) nounwind
+  %tmp_85_ext = zext i15 %tmp_58 to i32
   store i32 %tmp_85_ext, i32* @dec_nbl, align 4
-  %tmp_55 = call fastcc i15 @scalel(i15 %tmp_54, i5 8) nounwind
-  %p_trunc45_ext = zext i15 %tmp_55 to i32
+  %tmp_59 = call fastcc i15 @scalel(i15 %tmp_58, i5 8) nounwind
+  %p_trunc45_ext = zext i15 %tmp_59 to i32
   store i32 %p_trunc45_ext, i32* @dec_detl, align 4
-  store i32 %tmp_49, i32* @dec_plt, align 4
-  call fastcc void @upzero(i32 %tmp_48, [6 x i32]* @dec_del_dltx, [6 x i32]* @dec_del_bpl) nounwind
+  store i32 %tmp_53, i32* @dec_plt, align 4
+  call fastcc void @upzero(i32 %tmp_52, [6 x i32]* @dec_del_dltx, [6 x i32]* @dec_del_bpl) nounwind
   %dec_al1_load_1 = load i32* @dec_al1, align 4
   %dec_al2_load_1 = load i32* @dec_al2, align 4
   %dec_plt_load = load i32* @dec_plt, align 4
   %dec_plt1_load = load i32* @dec_plt1, align 4
   %dec_plt2_load = load i32* @dec_plt2, align 4
-  %tmp_56 = call fastcc i15 @uppol2(i32 %dec_al1_load_1, i32 %dec_al2_load_1, i32 %dec_plt_load, i32 %dec_plt1_load, i32 %dec_plt2_load) nounwind
-  %tmp_88_ext = sext i15 %tmp_56 to i32
+  %tmp_60 = call fastcc i15 @uppol2(i32 %dec_al1_load_1, i32 %dec_al2_load_1, i32 %dec_plt_load, i32 %dec_plt1_load, i32 %dec_plt2_load) nounwind
+  %tmp_88_ext = sext i15 %tmp_60 to i32
   store i32 %tmp_88_ext, i32* @dec_al2, align 4
-  %tmp_57 = call fastcc i16 @uppol1(i32 %dec_al1_load_1, i15 %tmp_56, i32 %dec_plt_load, i32 %dec_plt1_load) nounwind
-  %p_trunc_ext1 = sext i16 %tmp_57 to i32
+  %tmp_61 = call fastcc i16 @uppol1(i32 %dec_al1_load_1, i15 %tmp_60, i32 %dec_plt_load, i32 %dec_plt1_load) nounwind
+  %p_trunc_ext1 = sext i16 %tmp_61 to i32
   store i32 %p_trunc_ext1, i32* @dec_al1, align 4
   %dec_sl_load = load i32* @dec_sl, align 4
   %dec_dlt_load = load i32* @dec_dlt, align 4
-  %tmp_58 = add nsw i32 %dec_sl_load, %dec_dlt_load
-  store i32 %tmp_58, i32* @dec_rlt, align 4
+  %tmp_62 = add nsw i32 %dec_sl_load, %dec_dlt_load
+  store i32 %tmp_62, i32* @dec_rlt, align 4
   %dec_rlt1_load_1 = load i32* @dec_rlt1, align 4
   store i32 %dec_rlt1_load_1, i32* @dec_rlt2, align 4
-  store i32 %tmp_58, i32* @dec_rlt1, align 4
+  store i32 %tmp_62, i32* @dec_rlt1, align 4
   store i32 %dec_plt1_load, i32* @dec_plt2, align 4
   store i32 %dec_plt_load, i32* @dec_plt1, align 4
   %tmp_19 = call fastcc i32 @filtez([6 x i32]* @dec_del_bph, [6 x i32]* @dec_del_dhx) nounwind
@@ -891,99 +914,86 @@ adpcm_enc_main.exit:                              ; preds = %adpcm_enc_main.exit
   %dec_ah1_load = load i32* @dec_ah1, align 4
   %dec_rh2_load = load i32* @dec_rh2, align 4
   %dec_ah2_load = load i32* @dec_ah2, align 4
-  %tmp_59 = call fastcc i32 @filtep(i32 %dec_rh1_load, i32 %dec_ah1_load, i32 %dec_rh2_load, i32 %dec_ah2_load) nounwind
-  %tmp_60 = add nsw i32 %tmp_59, %tmp_19
-  store i32 %tmp_59, i32* @dec_sph, align 4
-  store i32 %tmp_60, i32* @dec_sh, align 4
+  %tmp_63 = call fastcc i32 @filtep(i32 %dec_rh1_load, i32 %dec_ah1_load, i32 %dec_rh2_load, i32 %dec_ah2_load) nounwind
+  %tmp_64 = add nsw i32 %tmp_63, %tmp_19
+  store i32 %tmp_63, i32* @dec_sph, align 4
+  store i32 %tmp_64, i32* @dec_sh, align 4
   %dec_deth_load = load i32* @dec_deth, align 4
   %tmp_93_cast = sext i32 %dec_deth_load to i45
   %ih_load = load i32* @ih, align 4
-  %tmp_61 = sext i32 %ih_load to i64
-  %qq2_code2_table_addr = getelementptr [4 x i14]* @qq2_code2_table, i64 0, i64 %tmp_61
+  %tmp_65 = sext i32 %ih_load to i64
+  %qq2_code2_table_addr = getelementptr [4 x i14]* @qq2_code2_table, i64 0, i64 %tmp_65
   %qq2_code2_table_load = load i14* %qq2_code2_table_addr, align 2
   %tmp_95_cast = sext i14 %qq2_code2_table_load to i45
-  %tmp_62 = mul i45 %tmp_95_cast, %tmp_93_cast
-  %tmp_10 = call i30 @_ssdm_op_PartSelect.i30.i45.i32.i32(i45 %tmp_62, i32 15, i32 44)
+  %tmp_66 = mul i45 %tmp_95_cast, %tmp_93_cast
+  %tmp_10 = call i30 @_ssdm_op_PartSelect.i30.i45.i32.i32(i45 %tmp_66, i32 15, i32 44)
   %tmp_11 = sext i30 %tmp_10 to i32
-  %tmp_63 = add nsw i32 %tmp_11, %tmp_19
+  %tmp_67 = add nsw i32 %tmp_11, %tmp_19
   store i32 %tmp_11, i32* @dec_dh, align 4
   %dec_nbh_load = load i32* @dec_nbh, align 4
-  %tmp_64 = call fastcc i15 @logsch(i32 %ih_load, i32 %dec_nbh_load) nounwind
-  %tmp_99_ext = zext i15 %tmp_64 to i32
+  %tmp_68 = call fastcc i15 @logsch(i32 %ih_load, i32 %dec_nbh_load) nounwind
+  %tmp_99_ext = zext i15 %tmp_68 to i32
   store i32 %tmp_99_ext, i32* @dec_nbh, align 4
-  %tmp_65 = call fastcc i15 @scalel(i15 %tmp_64, i5 10) nounwind
-  %p_trunc46_ext = zext i15 %tmp_65 to i32
+  %tmp_69 = call fastcc i15 @scalel(i15 %tmp_68, i5 10) nounwind
+  %p_trunc46_ext = zext i15 %tmp_69 to i32
   store i32 %p_trunc46_ext, i32* @dec_deth, align 4
-  store i32 %tmp_63, i32* @dec_ph, align 4
+  store i32 %tmp_67, i32* @dec_ph, align 4
   call fastcc void @upzero(i32 %tmp_11, [6 x i32]* @dec_del_dhx, [6 x i32]* @dec_del_bph) nounwind
   %dec_ah1_load_1 = load i32* @dec_ah1, align 4
   %dec_ah2_load_1 = load i32* @dec_ah2, align 4
   %dec_ph_load = load i32* @dec_ph, align 4
   %dec_ph1_load = load i32* @dec_ph1, align 4
   %dec_ph2_load = load i32* @dec_ph2, align 4
-  %tmp_66 = call fastcc i15 @uppol2(i32 %dec_ah1_load_1, i32 %dec_ah2_load_1, i32 %dec_ph_load, i32 %dec_ph1_load, i32 %dec_ph2_load) nounwind
-  %tmp_102_ext = sext i15 %tmp_66 to i32
+  %tmp_70 = call fastcc i15 @uppol2(i32 %dec_ah1_load_1, i32 %dec_ah2_load_1, i32 %dec_ph_load, i32 %dec_ph1_load, i32 %dec_ph2_load) nounwind
+  %tmp_102_ext = sext i15 %tmp_70 to i32
   store i32 %tmp_102_ext, i32* @dec_ah2, align 4
-  %tmp_67 = call fastcc i16 @uppol1(i32 %dec_ah1_load_1, i15 %tmp_66, i32 %dec_ph_load, i32 %dec_ph1_load) nounwind
-  %p_trunc2_ext = sext i16 %tmp_67 to i32
+  %tmp_71 = call fastcc i16 @uppol1(i32 %dec_ah1_load_1, i15 %tmp_70, i32 %dec_ph_load, i32 %dec_ph1_load) nounwind
+  %p_trunc2_ext = sext i16 %tmp_71 to i32
   store i32 %p_trunc2_ext, i32* @dec_ah1, align 4
   %dec_sh_load = load i32* @dec_sh, align 4
   %dec_dh_load = load i32* @dec_dh, align 4
-  %tmp_68 = add nsw i32 %dec_sh_load, %dec_dh_load
-  store i32 %tmp_68, i32* @rh, align 4
+  %tmp_72 = add nsw i32 %dec_sh_load, %dec_dh_load
+  store i32 %tmp_72, i32* @rh, align 4
   %dec_rh1_load_1 = load i32* @dec_rh1, align 4
   store i32 %dec_rh1_load_1, i32* @dec_rh2, align 4
-  store i32 %tmp_68, i32* @dec_rh1, align 4
+  store i32 %tmp_72, i32* @dec_rh1, align 4
   store i32 %dec_ph1_load, i32* @dec_ph2, align 4
   store i32 %dec_ph_load, i32* @dec_ph1, align 4
   %rl_load = load i32* @rl, align 4
-  %tmp_69 = add nsw i32 %tmp_68, %rl_load
-  %tmp_108_cast = sext i32 %tmp_69 to i39
-  %tmp_70 = sub nsw i32 %rl_load, %tmp_68
-  store i32 %tmp_70, i32* @xd, align 4
-  store i32 %tmp_69, i32* @xs, align 4
-  %p_shl3 = call i36 @_ssdm_op_BitConcatenate.i36.i32.i4(i32 %tmp_70, i4 0)
+  %tmp_73 = add nsw i32 %tmp_72, %rl_load
+  %tmp_108_cast = sext i32 %tmp_73 to i39
+  %tmp_74 = sub nsw i32 %rl_load, %tmp_72
+  store i32 %tmp_74, i32* @xd, align 4
+  store i32 %tmp_73, i32* @xs, align 4
+  %p_shl3 = call i36 @_ssdm_op_BitConcatenate.i36.i32.i4(i32 %tmp_74, i4 0)
   %p_shl3_cast = sext i36 %p_shl3 to i37
-  %p_shl4 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %tmp_70, i2 0)
+  %p_shl4 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %tmp_74, i2 0)
   %p_shl4_cast = sext i34 %p_shl4 to i37
   %xa1 = sub i37 %p_shl3_cast, %p_shl4_cast
   %xa1_cast = sext i37 %xa1 to i50
   %xa2 = mul i39 -44, %tmp_108_cast
   %xa2_cast = sext i39 %xa2 to i50
-  br label %9
+  br label %11
 
-; <label>:2                                       ; preds = %4, %0
-  %tqmf_ptr_0_rec_i_i = phi i5 [ 2, %0 ], [ %phitmp_i_i, %4 ]
-  %i_0_i_i = phi i4 [ 0, %0 ], [ %i, %4 ]
-  %xa_0_i_i = phi i50 [ %xa_cast, %0 ], [ %xa_2, %4 ]
-  %xb_0_i_i = phi i50 [ %xb_cast, %0 ], [ %xb_2, %4 ]
-  %tqmf_ptr_0_rec_i_i_c = zext i5 %tqmf_ptr_0_rec_i_i to i64
-  %h_addr = getelementptr [24 x i15]* @h, i64 0, i64 %tqmf_ptr_0_rec_i_i_c
-  %tqmf_addr = getelementptr [24 x i32]* @tqmf, i64 0, i64 %tqmf_ptr_0_rec_i_i_c
-  %exitcond2_i_i = icmp eq i4 %i_0_i_i, -6
-  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind
-  %i = add i4 %i_0_i_i, 1
-  br i1 %exitcond2_i_i, label %3, label %4
-
-; <label>:3                                       ; preds = %2
-  %tmp_37 = trunc i50 %xb_0_i_i to i47
-  %tmp_38 = trunc i50 %xa_0_i_i to i47
+; <label>:5                                       ; preds = %3
+  %tmp_75 = trunc i50 %xb_0_i_i to i47
+  %tmp_76 = trunc i50 %xa_0_i_i to i47
   %tqmf_load_2 = load i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 22), align 8
   %tmp_109_cast = sext i32 %tqmf_load_2 to i39
-  %tmp_71 = mul i39 -44, %tmp_109_cast
-  %tmp_110_cast = sext i39 %tmp_71 to i47
-  %xa_1 = add i47 %tmp_38, %tmp_110_cast
+  %tmp_77 = mul i39 -44, %tmp_109_cast
+  %tmp_110_cast = sext i39 %tmp_77 to i47
+  %xa_1 = add i47 %tmp_76, %tmp_110_cast
   %tqmf_load_3 = load i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 23), align 4
   %p_shl5 = call i36 @_ssdm_op_BitConcatenate.i36.i32.i4(i32 %tqmf_load_3, i4 0)
   %p_shl5_cast = sext i36 %p_shl5 to i37
   %p_shl6 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %tqmf_load_3, i2 0)
   %p_shl6_cast = sext i34 %p_shl6 to i37
-  %tmp_72 = sub i37 %p_shl5_cast, %p_shl6_cast
-  %tmp_112_cast = sext i37 %tmp_72 to i47
-  %xb_1 = add i47 %tmp_37, %tmp_112_cast
-  br label %5
+  %tmp_78 = sub i37 %p_shl5_cast, %p_shl6_cast
+  %tmp_112_cast = sext i37 %tmp_78 to i47
+  %xb_1 = add i47 %tmp_75, %tmp_112_cast
+  br label %7
 
-; <label>:4                                       ; preds = %2
+; <label>:6                                       ; preds = %3
   %tqmf_ptr_0_sum67_i_i = or i5 %tqmf_ptr_0_rec_i_i, 1
   %tqmf_ptr_0_sum67_i_i_1 = zext i5 %tqmf_ptr_0_sum67_i_i to i64
   %tqmf_ptr = getelementptr [24 x i32]* @tqmf, i64 0, i64 %tqmf_ptr_0_sum67_i_i_1
@@ -992,22 +1002,22 @@ adpcm_enc_main.exit:                              ; preds = %adpcm_enc_main.exit
   %h_ptr = getelementptr [24 x i15]* @h, i64 0, i64 %tqmf_ptr_0_sum67_i_i_1
   %h_load = load i15* %h_addr, align 4
   %tmp_114_cast = sext i15 %h_load to i46
-  %tmp_73 = mul i46 %tmp_113_cast, %tmp_114_cast
-  %tmp_115_cast = sext i46 %tmp_73 to i50
+  %tmp_79 = mul i46 %tmp_113_cast, %tmp_114_cast
+  %tmp_115_cast = sext i46 %tmp_79 to i50
   %xa_2 = add i50 %tmp_115_cast, %xa_0_i_i
   %tqmf_ptr_load = load i32* %tqmf_ptr, align 4
   %tmp_116_cast = sext i32 %tqmf_ptr_load to i46
   %h_ptr_load = load i15* %h_ptr, align 2
   %tmp_117_cast = sext i15 %h_ptr_load to i46
-  %tmp_74 = mul i46 %tmp_116_cast, %tmp_117_cast
-  %tmp_118_cast = sext i46 %tmp_74 to i50
+  %tmp_80 = mul i46 %tmp_116_cast, %tmp_117_cast
+  %tmp_118_cast = sext i46 %tmp_80 to i50
   %xb_2 = add i50 %tmp_118_cast, %xb_0_i_i
   %phitmp_i_i = add i5 %tqmf_ptr_0_rec_i_i, 2
-  br label %2
+  br label %3
 
-; <label>:5                                       ; preds = %7, %3
-  %tqmf_ptr_0_pn_rec_i_s = phi i6 [ 0, %3 ], [ %tqmf_ptr1_0_rec_i_i, %7 ]
-  %i_1_i_i = phi i5 [ 0, %3 ], [ %i_4, %7 ]
+; <label>:7                                       ; preds = %9, %5
+  %tqmf_ptr_0_pn_rec_i_s = phi i6 [ 0, %5 ], [ %tqmf_ptr1_0_rec_i_i, %9 ]
+  %i_1_i_i = phi i5 [ 0, %5 ], [ %i_4, %9 ]
   %p_sum_i_i = add i6 %tqmf_ptr_0_pn_rec_i_s, 23
   %p_sum_i_i_cast = zext i6 %p_sum_i_i to i64
   %tqmf_addr_2 = getelementptr [24 x i32]* @tqmf, i64 0, i64 %p_sum_i_i_cast
@@ -1018,70 +1028,70 @@ adpcm_enc_main.exit:                              ; preds = %adpcm_enc_main.exit
   %exitcond_i_i = icmp eq i5 %i_1_i_i, -10
   %empty_67 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 22, i64 22, i64 22) nounwind
   %i_4 = add i5 %i_1_i_i, 1
-  br i1 %exitcond_i_i, label %6, label %7
+  br i1 %exitcond_i_i, label %8, label %9
 
-; <label>:6                                       ; preds = %5
+; <label>:8                                       ; preds = %7
   store i32 %test_data_load, i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 1), align 4
   store i32 %test_data_load_1, i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 0), align 16
-  %tmp_83 = add i47 %xa_1, %xb_1
-  %tmp_84 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_83, i32 15, i32 46)
-  store i32 %tmp_84, i32* @xl, align 4
-  %tmp_85 = sub i47 %xa_1, %xb_1
-  %tmp_86 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_85, i32 15, i32 46)
-  store i32 %tmp_86, i32* @xh, align 4
+  %tmp_87 = add i47 %xa_1, %xb_1
+  %tmp_88 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_87, i32 15, i32 46)
+  store i32 %tmp_88, i32* @xl, align 4
+  %tmp_89 = sub i47 %xa_1, %xb_1
+  %tmp_90 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_89, i32 15, i32 46)
+  store i32 %tmp_90, i32* @xh, align 4
   %tmp_20 = call fastcc i32 @filtez([6 x i32]* @delay_bpl, [6 x i32]* @delay_dltx) nounwind
   store i32 %tmp_20, i32* @szl, align 4
   %rlt1_load = load i32* @rlt1, align 4
   %al1_load = load i32* @al1, align 4
   %rlt2_load = load i32* @rlt2, align 4
   %al2_load = load i32* @al2, align 4
-  %tmp_87 = call fastcc i32 @filtep(i32 %rlt1_load, i32 %al1_load, i32 %rlt2_load, i32 %al2_load) nounwind
-  %tmp_88 = add nsw i32 %tmp_87, %tmp_20
-  %tmp_89 = sub nsw i32 %tmp_84, %tmp_88
-  store i32 %tmp_87, i32* @spl, align 4
-  store i32 %tmp_88, i32* @sl, align 4
-  store i32 %tmp_89, i32* @el, align 4
+  %tmp_91 = call fastcc i32 @filtep(i32 %rlt1_load, i32 %al1_load, i32 %rlt2_load, i32 %al2_load) nounwind
+  %tmp_92 = add nsw i32 %tmp_91, %tmp_20
+  %tmp_93 = sub nsw i32 %tmp_88, %tmp_92
+  store i32 %tmp_91, i32* @spl, align 4
+  store i32 %tmp_92, i32* @sl, align 4
+  store i32 %tmp_93, i32* @el, align 4
   %detl_load = load i32* @detl, align 4
   %tmp_143_cast = sext i32 %detl_load to i47
-  %tmp_90 = call fastcc i6 @quantl(i32 %tmp_89, i32 %detl_load) nounwind
-  %tmp_142_ext = zext i6 %tmp_90 to i32
+  %tmp_94 = call fastcc i6 @quantl(i32 %tmp_93, i32 %detl_load) nounwind
+  %tmp_142_ext = zext i6 %tmp_94 to i32
   store i32 %tmp_142_ext, i32* @il, align 4
-  %tmp_21 = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %tmp_90, i32 2, i32 5)
-  %tmp_91 = zext i4 %tmp_21 to i64
-  %qq4_code4_table_addr_1 = getelementptr [16 x i16]* @qq4_code4_table, i64 0, i64 %tmp_91
+  %tmp_21 = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %tmp_94, i32 2, i32 5)
+  %tmp_95 = zext i4 %tmp_21 to i64
+  %qq4_code4_table_addr_1 = getelementptr [16 x i16]* @qq4_code4_table, i64 0, i64 %tmp_95
   %qq4_code4_table_load_1 = load i16* %qq4_code4_table_addr_1, align 2
   %tmp_145_cast = sext i16 %qq4_code4_table_load_1 to i47
-  %tmp_92 = mul i47 %tmp_143_cast, %tmp_145_cast
-  %tmp_93 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_92, i32 15, i32 46)
-  %tmp_94 = add nsw i32 %tmp_93, %tmp_20
-  store i32 %tmp_93, i32* @dlt, align 4
+  %tmp_96 = mul i47 %tmp_143_cast, %tmp_145_cast
+  %tmp_97 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_96, i32 15, i32 46)
+  %tmp_98 = add nsw i32 %tmp_97, %tmp_20
+  store i32 %tmp_97, i32* @dlt, align 4
   %nbl_load = load i32* @nbl, align 4
-  %tmp_95 = call fastcc i15 @logscl(i6 %tmp_90, i32 %nbl_load) nounwind
-  %tmp_149_ext = zext i15 %tmp_95 to i32
+  %tmp_99 = call fastcc i15 @logscl(i6 %tmp_94, i32 %nbl_load) nounwind
+  %tmp_149_ext = zext i15 %tmp_99 to i32
   store i32 %tmp_149_ext, i32* @nbl, align 4
-  %tmp_96 = call fastcc i15 @scalel(i15 %tmp_95, i5 8) nounwind
-  %p_trunc_ext = zext i15 %tmp_96 to i32
+  %tmp_100 = call fastcc i15 @scalel(i15 %tmp_99, i5 8) nounwind
+  %p_trunc_ext = zext i15 %tmp_100 to i32
   store i32 %p_trunc_ext, i32* @detl, align 4
-  store i32 %tmp_94, i32* @plt, align 4
-  call fastcc void @upzero(i32 %tmp_93, [6 x i32]* @delay_dltx, [6 x i32]* @delay_bpl) nounwind
+  store i32 %tmp_98, i32* @plt, align 4
+  call fastcc void @upzero(i32 %tmp_97, [6 x i32]* @delay_dltx, [6 x i32]* @delay_bpl) nounwind
   %al1_load_1 = load i32* @al1, align 4
   %al2_load_1 = load i32* @al2, align 4
   %plt_load = load i32* @plt, align 4
   %plt1_load = load i32* @plt1, align 4
   %plt2_load = load i32* @plt2, align 4
-  %tmp_97 = call fastcc i15 @uppol2(i32 %al1_load_1, i32 %al2_load_1, i32 %plt_load, i32 %plt1_load, i32 %plt2_load) nounwind
-  %tmp_152_ext = sext i15 %tmp_97 to i32
+  %tmp_101 = call fastcc i15 @uppol2(i32 %al1_load_1, i32 %al2_load_1, i32 %plt_load, i32 %plt1_load, i32 %plt2_load) nounwind
+  %tmp_152_ext = sext i15 %tmp_101 to i32
   store i32 %tmp_152_ext, i32* @al2, align 4
-  %tmp_98 = call fastcc i16 @uppol1(i32 %al1_load_1, i15 %tmp_97, i32 %plt_load, i32 %plt1_load) nounwind
-  %p_trunc3_ext = sext i16 %tmp_98 to i32
+  %tmp_102 = call fastcc i16 @uppol1(i32 %al1_load_1, i15 %tmp_101, i32 %plt_load, i32 %plt1_load) nounwind
+  %p_trunc3_ext = sext i16 %tmp_102 to i32
   store i32 %p_trunc3_ext, i32* @al1, align 4
   %sl_load = load i32* @sl, align 4
   %dlt_load = load i32* @dlt, align 4
-  %tmp_99 = add nsw i32 %sl_load, %dlt_load
-  store i32 %tmp_99, i32* @rlt, align 4
+  %tmp_103 = add nsw i32 %sl_load, %dlt_load
+  store i32 %tmp_103, i32* @rlt, align 4
   %rlt1_load_1 = load i32* @rlt1, align 4
   store i32 %rlt1_load_1, i32* @rlt2, align 4
-  store i32 %tmp_99, i32* @rlt1, align 4
+  store i32 %tmp_103, i32* @rlt1, align 4
   store i32 %plt1_load, i32* @plt2, align 4
   store i32 %plt_load, i32* @plt1, align 4
   %tmp_23 = call fastcc i32 @filtez([6 x i32]* @delay_bph, [6 x i32]* @delay_dhx) nounwind
@@ -1090,101 +1100,101 @@ adpcm_enc_main.exit:                              ; preds = %adpcm_enc_main.exit
   %ah1_load = load i32* @ah1, align 4
   %rh2_load = load i32* @rh2, align 4
   %ah2_load = load i32* @ah2, align 4
-  %tmp_100 = call fastcc i32 @filtep(i32 %rh1_load, i32 %ah1_load, i32 %rh2_load, i32 %ah2_load) nounwind
-  %tmp_101 = add nsw i32 %tmp_100, %tmp_23
-  store i32 %tmp_100, i32* @sph, align 4
-  store i32 %tmp_101, i32* @sh, align 4
+  %tmp_104 = call fastcc i32 @filtep(i32 %rh1_load, i32 %ah1_load, i32 %rh2_load, i32 %ah2_load) nounwind
+  %tmp_105 = add nsw i32 %tmp_104, %tmp_23
+  store i32 %tmp_104, i32* @sph, align 4
+  store i32 %tmp_105, i32* @sh, align 4
   %xh_load = load i32* @xh, align 4
-  %n_assign = sub nsw i32 %xh_load, %tmp_101
+  %n_assign = sub nsw i32 %xh_load, %tmp_105
   store i32 %n_assign, i32* @eh, align 4
-  %tmp_102 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %n_assign, i32 31)
-  %tmp_158_cast_cast_ca = select i1 %tmp_102, i32 1, i32 3
+  %tmp_125 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %n_assign, i32 31)
+  %tmp_158_cast_cast_ca = select i1 %tmp_125, i32 1, i32 3
   store i32 %tmp_158_cast_cast_ca, i32* @ih, align 4
   %deth_load = load i32* @deth, align 4
   %tmp_159_cast1 = sext i32 %deth_load to i45
   %tmp_159_cast = sext i32 %deth_load to i43
-  %tmp_103 = mul i43 %tmp_159_cast, 564
-  %tmp_13 = call i31 @_ssdm_op_PartSelect.i31.i43.i32.i32(i43 %tmp_103, i32 12, i32 42)
+  %tmp_106 = mul i43 %tmp_159_cast, 564
+  %tmp_13 = call i31 @_ssdm_op_PartSelect.i31.i43.i32.i32(i43 %tmp_106, i32 12, i32 42)
   %decis = sext i31 %tmp_13 to i32
-  %tmp_104 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %n_assign, i32 31)
+  %tmp_126 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %n_assign, i32 31)
   %m = sub nsw i32 0, %n_assign
-  %n_assign_1 = select i1 %tmp_104, i32 %m, i32 %n_assign
-  %tmp_105 = icmp sgt i32 %n_assign_1, %decis
-  br i1 %tmp_105, label %8, label %encode.exit.i
+  %n_assign_1 = select i1 %tmp_126, i32 %m, i32 %n_assign
+  %tmp_107 = icmp sgt i32 %n_assign_1, %decis
+  br i1 %tmp_107, label %10, label %encode.exit.i
 
-; <label>:7                                       ; preds = %5
+; <label>:9                                       ; preds = %7
   %tqmf_ptr1_load = load i32* %tqmf_ptr1, align 4
   store i32 %tqmf_ptr1_load, i32* %tqmf_addr_2, align 4
-  br label %5
+  br label %7
 
-; <label>:8                                       ; preds = %6
-  %tmp_167_cast_cast_ca = select i1 %tmp_102, i32 0, i32 2
-  store i32 %tmp_167_cast_cast_ca, i32* @ih, align 4
+; <label>:10                                      ; preds = %8
+  %tmp_164_cast_cast_ca = select i1 %tmp_125, i32 0, i32 2
+  store i32 %tmp_164_cast_cast_ca, i32* @ih, align 4
   br label %encode.exit.i
 
-encode.exit.i:                                    ; preds = %8, %6
+encode.exit.i:                                    ; preds = %10, %8
   %ih_load_1 = load i32* @ih, align 4
-  %tmp_109 = sext i32 %ih_load_1 to i64
-  %qq2_code2_table_addr_1 = getelementptr [4 x i14]* @qq2_code2_table, i64 0, i64 %tmp_109
+  %tmp_110 = sext i32 %ih_load_1 to i64
+  %qq2_code2_table_addr_1 = getelementptr [4 x i14]* @qq2_code2_table, i64 0, i64 %tmp_110
   %qq2_code2_table_load_1 = load i14* %qq2_code2_table_addr_1, align 2
-  %tmp_169_cast = sext i14 %qq2_code2_table_load_1 to i45
-  %tmp_110 = mul i45 %tmp_169_cast, %tmp_159_cast1
-  %tmp_26 = call i30 @_ssdm_op_PartSelect.i30.i45.i32.i32(i45 %tmp_110, i32 15, i32 44)
+  %tmp_166_cast = sext i14 %qq2_code2_table_load_1 to i45
+  %tmp_111 = mul i45 %tmp_166_cast, %tmp_159_cast1
+  %tmp_26 = call i30 @_ssdm_op_PartSelect.i30.i45.i32.i32(i45 %tmp_111, i32 15, i32 44)
   %tmp_27 = sext i30 %tmp_26 to i32
   store i32 %tmp_27, i32* @dh, align 4
   %nbh_load = load i32* @nbh, align 4
-  %tmp_111 = call fastcc i15 @logsch(i32 %ih_load_1, i32 %nbh_load) nounwind
-  %tmp_173_ext = zext i15 %tmp_111 to i32
-  store i32 %tmp_173_ext, i32* @nbh, align 4
-  %tmp_112 = call fastcc i15 @scalel(i15 %tmp_111, i5 10) nounwind
-  %p_trunc44_ext = zext i15 %tmp_112 to i32
+  %tmp_112 = call fastcc i15 @logsch(i32 %ih_load_1, i32 %nbh_load) nounwind
+  %tmp_170_ext = zext i15 %tmp_112 to i32
+  store i32 %tmp_170_ext, i32* @nbh, align 4
+  %tmp_113 = call fastcc i15 @scalel(i15 %tmp_112, i5 10) nounwind
+  %p_trunc44_ext = zext i15 %tmp_113 to i32
   store i32 %p_trunc44_ext, i32* @deth, align 4
-  %tmp_113 = add nsw i32 %tmp_27, %tmp_23
-  store i32 %tmp_113, i32* @ph, align 4
+  %tmp_114 = add nsw i32 %tmp_27, %tmp_23
+  store i32 %tmp_114, i32* @ph, align 4
   call fastcc void @upzero(i32 %tmp_27, [6 x i32]* @delay_dhx, [6 x i32]* @delay_bph) nounwind
   %ah1_load_1 = load i32* @ah1, align 4
   %ah2_load_1 = load i32* @ah2, align 4
   %ph_load = load i32* @ph, align 4
   %ph1_load = load i32* @ph1, align 4
   %ph2_load = load i32* @ph2, align 4
-  %tmp_114 = call fastcc i15 @uppol2(i32 %ah1_load_1, i32 %ah2_load_1, i32 %ph_load, i32 %ph1_load, i32 %ph2_load) nounwind
-  %tmp_176_ext = sext i15 %tmp_114 to i32
-  store i32 %tmp_176_ext, i32* @ah2, align 4
-  %tmp_115 = call fastcc i16 @uppol1(i32 %ah1_load_1, i15 %tmp_114, i32 %ph_load, i32 %ph1_load) nounwind
-  %p_trunc4_ext = sext i16 %tmp_115 to i32
+  %tmp_115 = call fastcc i15 @uppol2(i32 %ah1_load_1, i32 %ah2_load_1, i32 %ph_load, i32 %ph1_load, i32 %ph2_load) nounwind
+  %tmp_173_ext = sext i15 %tmp_115 to i32
+  store i32 %tmp_173_ext, i32* @ah2, align 4
+  %tmp_116 = call fastcc i16 @uppol1(i32 %ah1_load_1, i15 %tmp_115, i32 %ph_load, i32 %ph1_load) nounwind
+  %p_trunc4_ext = sext i16 %tmp_116 to i32
   store i32 %p_trunc4_ext, i32* @ah1, align 4
   %sh_load = load i32* @sh, align 4
   %dh_load = load i32* @dh, align 4
-  %tmp_116 = add nsw i32 %dh_load, %sh_load
-  store i32 %tmp_116, i32* @yh, align 4
+  %tmp_117 = add nsw i32 %dh_load, %sh_load
+  store i32 %tmp_117, i32* @yh, align 4
   %rh1_load_1 = load i32* @rh1, align 4
   store i32 %rh1_load_1, i32* @rh2, align 4
-  store i32 %tmp_116, i32* @rh1, align 4
+  store i32 %tmp_117, i32* @rh1, align 4
   store i32 %ph1_load, i32* @ph2, align 4
   store i32 %ph_load, i32* @ph1, align 4
   %il_load_1 = load i32* @il, align 4
   %ih_load_2 = load i32* @ih, align 4
-  %tmp_117 = shl i32 %ih_load_2, 6
-  %tmp_118 = or i32 %il_load_1, %tmp_117
-  %tmp_119 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %i_0_i, i32 31)
+  %tmp_127 = shl i32 %ih_load_2, 6
+  %tmp_119 = or i32 %il_load_1, %tmp_127
+  %tmp_128 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %i_0_i, i32 31)
   %p_neg = sub i32 0, %i_0_i
   %p_lshr = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %p_neg, i32 1, i32 31)
   %tmp_22 = zext i31 %p_lshr to i32
   %p_neg_t = sub i32 0, %tmp_22
   %p_lshr_f = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %i_0_i, i32 1, i32 31)
   %tmp_24 = zext i31 %p_lshr_f to i32
-  %tmp_120 = select i1 %tmp_119, i32 %p_neg_t, i32 %tmp_24
+  %tmp_120 = select i1 %tmp_128, i32 %p_neg_t, i32 %tmp_24
   %tmp_121 = sext i32 %tmp_120 to i64
   %compressed_addr_1 = getelementptr [3 x i32]* %compressed, i64 0, i64 %tmp_121
-  store i32 %tmp_118, i32* %compressed_addr_1, align 4
-  %i_7 = add nsw i32 2, %i_0_i
-  br label %.preheader33
+  store i32 %tmp_119, i32* %compressed_addr_1, align 4
+  %i_6 = add nsw i32 2, %i_0_i
+  br label %.preheader
 
-; <label>:9                                       ; preds = %11, %1
-  %ad_ptr_0_rec_i_i = phi i4 [ 0, %1 ], [ %p_rec2_i_i, %11 ]
-  %h_ptr_0_rec_i_i = phi i5 [ 2, %1 ], [ %phitmp_i_i3, %11 ]
-  %xa2_0_i_i = phi i50 [ %xa2_cast, %1 ], [ %xa2_2, %11 ]
-  %xa1_0_i_i = phi i50 [ %xa1_cast, %1 ], [ %xa1_2, %11 ]
+; <label>:11                                      ; preds = %13, %4
+  %ad_ptr_0_rec_i_i = phi i4 [ 0, %4 ], [ %p_rec2_i_i, %13 ]
+  %h_ptr_0_rec_i_i = phi i5 [ 2, %4 ], [ %phitmp_i_i3, %13 ]
+  %xa2_0_i_i = phi i50 [ %xa2_cast, %4 ], [ %xa2_2, %13 ]
+  %xa1_0_i_i = phi i50 [ %xa1_cast, %4 ], [ %xa1_2, %13 ]
   %h_ptr_0_rec_i_i_cast = zext i5 %h_ptr_0_rec_i_i to i64
   %ad_ptr_0_rec_i_i_cas = zext i4 %ad_ptr_0_rec_i_i to i64
   %h_addr_1 = getelementptr [24 x i15]* @h, i64 0, i64 %h_ptr_0_rec_i_i_cast
@@ -1193,31 +1203,31 @@ encode.exit.i:                                    ; preds = %8, %6
   %empty_68 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind
   %exitcond = icmp eq i4 %ad_ptr_0_rec_i_i, -6
   %p_rec2_i_i = add i4 %ad_ptr_0_rec_i_i, 1
-  br i1 %exitcond, label %10, label %11
+  br i1 %exitcond, label %12, label %13
 
-; <label>:10                                      ; preds = %9
-  %tmp_75 = trunc i50 %xa1_0_i_i to i46
-  %tmp_76 = trunc i50 %xa2_0_i_i to i46
+; <label>:12                                      ; preds = %11
+  %tmp_118 = trunc i50 %xa1_0_i_i to i46
+  %tmp_124 = trunc i50 %xa2_0_i_i to i46
   %accumc_load = load i32* getelementptr inbounds ([11 x i32]* @accumc, i64 0, i64 10), align 8
   %tmp_119_cast = sext i32 %accumc_load to i39
-  %tmp_77 = mul i39 -44, %tmp_119_cast
-  %tmp_120_cast = sext i39 %tmp_77 to i46
-  %xa1_1 = add i46 %tmp_75, %tmp_120_cast
+  %tmp_81 = mul i39 -44, %tmp_119_cast
+  %tmp_120_cast = sext i39 %tmp_81 to i46
+  %xa1_1 = add i46 %tmp_118, %tmp_120_cast
   %accumd_load = load i32* getelementptr inbounds ([11 x i32]* @accumd, i64 0, i64 10), align 8
   %p_shl7 = call i36 @_ssdm_op_BitConcatenate.i36.i32.i4(i32 %accumd_load, i4 0)
   %p_shl7_cast = sext i36 %p_shl7 to i37
   %p_shl8 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %accumd_load, i2 0)
   %p_shl8_cast = sext i34 %p_shl8 to i37
-  %tmp_78 = sub i37 %p_shl7_cast, %p_shl8_cast
-  %tmp_122_cast = sext i37 %tmp_78 to i46
-  %xa2_1 = add i46 %tmp_76, %tmp_122_cast
-  %tmp_79 = call i32 @_ssdm_op_PartSelect.i32.i46.i32.i32(i46 %xa1_1, i32 14, i32 45)
-  store i32 %tmp_79, i32* @xout1, align 4
-  %tmp_80 = call i32 @_ssdm_op_PartSelect.i32.i46.i32.i32(i46 %xa2_1, i32 14, i32 45)
-  store i32 %tmp_80, i32* @xout2, align 4
-  br label %12
+  %tmp_82 = sub i37 %p_shl7_cast, %p_shl8_cast
+  %tmp_122_cast = sext i37 %tmp_82 to i46
+  %xa2_1 = add i46 %tmp_124, %tmp_122_cast
+  %tmp_83 = call i32 @_ssdm_op_PartSelect.i32.i46.i32.i32(i46 %xa1_1, i32 14, i32 45)
+  store i32 %tmp_83, i32* @xout1, align 4
+  %tmp_84 = call i32 @_ssdm_op_PartSelect.i32.i46.i32.i32(i46 %xa2_1, i32 14, i32 45)
+  store i32 %tmp_84, i32* @xout2, align 4
+  br label %14
 
-; <label>:11                                      ; preds = %9
+; <label>:13                                      ; preds = %11
   %accumc_load_1 = load i32* %accumc_addr, align 4
   %tmp_127_cast = sext i32 %accumc_load_1 to i46
   %h_ptr_0_sum9_i_i = or i5 %h_ptr_0_rec_i_i, 1
@@ -1225,22 +1235,22 @@ encode.exit.i:                                    ; preds = %8, %6
   %h_ptr_1 = getelementptr [24 x i15]* @h, i64 0, i64 %h_ptr_0_sum9_i_i_cas
   %h_load_1 = load i15* %h_addr_1, align 4
   %tmp_128_cast = sext i15 %h_load_1 to i46
-  %tmp_81 = mul i46 %tmp_127_cast, %tmp_128_cast
-  %tmp_129_cast = sext i46 %tmp_81 to i50
+  %tmp_85 = mul i46 %tmp_127_cast, %tmp_128_cast
+  %tmp_129_cast = sext i46 %tmp_85 to i50
   %xa1_2 = add i50 %tmp_129_cast, %xa1_0_i_i
   %accumd_load_1 = load i32* %accumd_addr, align 4
   %tmp_130_cast = sext i32 %accumd_load_1 to i46
   %h_ptr_1_load = load i15* %h_ptr_1, align 2
   %tmp_131_cast = sext i15 %h_ptr_1_load to i46
-  %tmp_82 = mul i46 %tmp_130_cast, %tmp_131_cast
-  %tmp_132_cast = sext i46 %tmp_82 to i50
+  %tmp_86 = mul i46 %tmp_130_cast, %tmp_131_cast
+  %tmp_132_cast = sext i46 %tmp_86 to i50
   %xa2_2 = add i50 %tmp_132_cast, %xa2_0_i_i
   %phitmp_i_i3 = add i5 %h_ptr_0_rec_i_i, 2
-  br label %9
+  br label %11
 
-; <label>:12                                      ; preds = %13, %10
-  %ad_ptr_1_rec_i_i = phi i5 [ 0, %10 ], [ %p_rec_i_i, %13 ]
-  %i_1_i_i4 = phi i4 [ 0, %10 ], [ %i_6, %13 ]
+; <label>:14                                      ; preds = %15, %12
+  %ad_ptr_1_rec_i_i = phi i5 [ 0, %12 ], [ %p_rec_i_i, %15 ]
+  %i_1_i_i4 = phi i4 [ 0, %12 ], [ %i_5, %15 ]
   %ac_ptr_0_sum_i_i = add i5 %ad_ptr_1_rec_i_i, 10
   %ac_ptr_0_sum_i_i_cas = zext i5 %ac_ptr_0_sum_i_i to i64
   %accumc_addr_1 = getelementptr [11 x i32]* @accumc, i64 0, i64 %ac_ptr_0_sum_i_i_cas
@@ -1252,28 +1262,39 @@ encode.exit.i:                                    ; preds = %8, %6
   %ac_ptr1 = getelementptr [11 x i32]* @accumc, i64 0, i64 %ad_ptr_0_sum7_i_i_ca
   %exitcond_i_i5 = icmp eq i4 %i_1_i_i4, -6
   %empty_69 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind
-  %i_6 = add i4 %i_1_i_i4, 1
-  br i1 %exitcond_i_i5, label %decode.exit.i, label %13
+  %i_5 = add i4 %i_1_i_i4, 1
+  br i1 %exitcond_i_i5, label %decode.exit.i, label %15
 
-decode.exit.i:                                    ; preds = %12
-  store i32 %tmp_70, i32* getelementptr inbounds ([11 x i32]* @accumc, i64 0, i64 0), align 16
-  store i32 %tmp_69, i32* getelementptr inbounds ([11 x i32]* @accumd, i64 0, i64 0), align 16
-  %tmp_106 = sext i32 %i_0_i1 to i64
-  %dec_result_addr = getelementptr [3 x i32]* %dec_result, i64 0, i64 %tmp_106
-  store i32 %tmp_79, i32* %dec_result_addr, align 4
-  %tmp_107 = or i32 %i_0_i1, 1
-  %tmp_108 = sext i32 %tmp_107 to i64
+decode.exit.i:                                    ; preds = %14
+  store i32 %tmp_74, i32* getelementptr inbounds ([11 x i32]* @accumc, i64 0, i64 0), align 16
+  store i32 %tmp_73, i32* getelementptr inbounds ([11 x i32]* @accumd, i64 0, i64 0), align 16
+  %tmp_108 = sext i32 %i_0_i1 to i64
   %dec_result_addr_1 = getelementptr [3 x i32]* %dec_result, i64 0, i64 %tmp_108
-  store i32 %tmp_80, i32* %dec_result_addr_1, align 4
-  %i_5 = add nsw i32 %i_0_i1, 2
-  br label %.preheader
+  store i32 %tmp_83, i32* %dec_result_addr_1, align 4
+  %tmp_109 = icmp slt i32 %i_0_i1, %tmp_s
+  br i1 %tmp_109, label %16, label %17
 
-; <label>:13                                      ; preds = %12
+; <label>:15                                      ; preds = %14
   %ac_ptr1_load = load i32* %ac_ptr1, align 4
   store i32 %ac_ptr1_load, i32* %accumc_addr_1, align 4
   %ad_ptr1_load = load i32* %ad_ptr1, align 4
   store i32 %ad_ptr1_load, i32* %accumd_addr_1, align 4
-  br label %12
+  br label %14
+
+; <label>:16                                      ; preds = %decode.exit.i
+  %tmp_122 = or i32 %i_0_i1, 1
+  %tmp_123 = sext i32 %tmp_122 to i64
+  %dec_result_addr_2 = getelementptr [3 x i32]* %dec_result, i64 0, i64 %tmp_123
+  store i32 %tmp_84, i32* %dec_result_addr_2, align 4
+  br label %18
+
+; <label>:17                                      ; preds = %decode.exit.i
+  store i32 %tmp_84, i32* %dec_result_addr, align 4
+  br label %18
+
+; <label>:18                                      ; preds = %17, %16
+  %i_7 = add nsw i32 %i_0_i1, 2
+  br label %2
 }
 
 !opencl.kernels = !{!0, !7, !7, !9, !15, !17, !21, !27, !29, !31, !33, !39, !45, !47, !49, !53, !55}

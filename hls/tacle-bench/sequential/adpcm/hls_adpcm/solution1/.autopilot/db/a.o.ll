@@ -98,7 +98,7 @@ target triple = "x86_64-unknown-linux-gnu"
 @xd = common global i32 0, align 4                ; [#uses=3 type=i32*]
 @xs = common global i32 0, align 4                ; [#uses=3 type=i32*]
 @xout1 = common global i32 0, align 4             ; [#uses=2 type=i32*]
-@xout2 = common global i32 0, align 4             ; [#uses=2 type=i32*]
+@xout2 = common global i32 0, align 4             ; [#uses=3 type=i32*]
 @.str1 = private unnamed_addr constant [7 x i8] c"filtez\00", align 1 ; [#uses=1 type=[7 x i8]*]
 @.str2 = private unnamed_addr constant [7 x i8] c"filtep\00", align 1 ; [#uses=1 type=[7 x i8]*]
 @.str3 = private unnamed_addr constant [7 x i8] c"quantl\00", align 1 ; [#uses=1 type=[7 x i8]*]
@@ -1600,41 +1600,40 @@ define void @adpcm_enc_main(i32* %test_data, i32* %compressed, i32 %size) nounwi
   store i32 0, i32* %i, align 4, !dbg !681        ; [debug line = 633:7]
   br label %6, !dbg !681                          ; [debug line = 633:7]
 
-; <label>:6                                       ; preds = %29, %0
+; <label>:6                                       ; preds = %28, %0
   %7 = load i32* %i, align 4, !dbg !681           ; [#uses=1 type=i32] [debug line = 633:7]
   %8 = load i32* %3, align 4, !dbg !681           ; [#uses=1 type=i32] [debug line = 633:7]
-  %9 = add nsw i32 %8, 1, !dbg !681               ; [#uses=1 type=i32] [debug line = 633:7]
-  %10 = icmp slt i32 %7, %9, !dbg !681            ; [#uses=1 type=i1] [debug line = 633:7]
-  br i1 %10, label %11, label %32, !dbg !681      ; [debug line = 633:7]
+  %9 = icmp slt i32 %7, %8, !dbg !681             ; [#uses=1 type=i1] [debug line = 633:7]
+  br i1 %9, label %10, label %31, !dbg !681       ; [debug line = 633:7]
 
-; <label>:11                                      ; preds = %6
-  %12 = load i32* %i, align 4, !dbg !683          ; [#uses=1 type=i32] [debug line = 634:23]
-  %13 = sext i32 %12 to i64, !dbg !683            ; [#uses=1 type=i64] [debug line = 634:23]
-  %14 = load i32** %1, align 8, !dbg !683         ; [#uses=1 type=i32*] [debug line = 634:23]
-  %15 = getelementptr inbounds i32* %14, i64 %13, !dbg !683 ; [#uses=1 type=i32*] [debug line = 634:23]
-  %16 = load i32* %15, align 4, !dbg !683         ; [#uses=1 type=i32] [debug line = 634:23]
-  %17 = load i32* %i, align 4, !dbg !683          ; [#uses=1 type=i32] [debug line = 634:23]
-  %18 = add nsw i32 %17, 1, !dbg !683             ; [#uses=1 type=i32] [debug line = 634:23]
-  %19 = sext i32 %18 to i64, !dbg !683            ; [#uses=1 type=i64] [debug line = 634:23]
-  %20 = load i32** %1, align 8, !dbg !683         ; [#uses=1 type=i32*] [debug line = 634:23]
-  %21 = getelementptr inbounds i32* %20, i64 %19, !dbg !683 ; [#uses=1 type=i32*] [debug line = 634:23]
-  %22 = load i32* %21, align 4, !dbg !683         ; [#uses=1 type=i32] [debug line = 634:23]
-  %23 = call i32 @encode(i32 %16, i32 %22), !dbg !683 ; [#uses=1 type=i32] [debug line = 634:23]
-  %24 = load i32* %i, align 4, !dbg !683          ; [#uses=1 type=i32] [debug line = 634:23]
-  %25 = sdiv i32 %24, 2, !dbg !683                ; [#uses=1 type=i32] [debug line = 634:23]
-  %26 = sext i32 %25 to i64, !dbg !683            ; [#uses=1 type=i64] [debug line = 634:23]
-  %27 = load i32** %2, align 8, !dbg !683         ; [#uses=1 type=i32*] [debug line = 634:23]
-  %28 = getelementptr inbounds i32* %27, i64 %26, !dbg !683 ; [#uses=1 type=i32*] [debug line = 634:23]
-  store i32 %23, i32* %28, align 4, !dbg !683     ; [debug line = 634:23]
-  br label %29, !dbg !685                         ; [debug line = 635:2]
+; <label>:10                                      ; preds = %6
+  %11 = load i32* %i, align 4, !dbg !683          ; [#uses=1 type=i32] [debug line = 634:23]
+  %12 = sext i32 %11 to i64, !dbg !683            ; [#uses=1 type=i64] [debug line = 634:23]
+  %13 = load i32** %1, align 8, !dbg !683         ; [#uses=1 type=i32*] [debug line = 634:23]
+  %14 = getelementptr inbounds i32* %13, i64 %12, !dbg !683 ; [#uses=1 type=i32*] [debug line = 634:23]
+  %15 = load i32* %14, align 4, !dbg !683         ; [#uses=1 type=i32] [debug line = 634:23]
+  %16 = load i32* %i, align 4, !dbg !683          ; [#uses=1 type=i32] [debug line = 634:23]
+  %17 = add nsw i32 %16, 1, !dbg !683             ; [#uses=1 type=i32] [debug line = 634:23]
+  %18 = sext i32 %17 to i64, !dbg !683            ; [#uses=1 type=i64] [debug line = 634:23]
+  %19 = load i32** %1, align 8, !dbg !683         ; [#uses=1 type=i32*] [debug line = 634:23]
+  %20 = getelementptr inbounds i32* %19, i64 %18, !dbg !683 ; [#uses=1 type=i32*] [debug line = 634:23]
+  %21 = load i32* %20, align 4, !dbg !683         ; [#uses=1 type=i32] [debug line = 634:23]
+  %22 = call i32 @encode(i32 %15, i32 %21), !dbg !683 ; [#uses=1 type=i32] [debug line = 634:23]
+  %23 = load i32* %i, align 4, !dbg !683          ; [#uses=1 type=i32] [debug line = 634:23]
+  %24 = sdiv i32 %23, 2, !dbg !683                ; [#uses=1 type=i32] [debug line = 634:23]
+  %25 = sext i32 %24 to i64, !dbg !683            ; [#uses=1 type=i64] [debug line = 634:23]
+  %26 = load i32** %2, align 8, !dbg !683         ; [#uses=1 type=i32*] [debug line = 634:23]
+  %27 = getelementptr inbounds i32* %26, i64 %25, !dbg !683 ; [#uses=1 type=i32*] [debug line = 634:23]
+  store i32 %22, i32* %27, align 4, !dbg !683     ; [debug line = 634:23]
+  br label %28, !dbg !685                         ; [debug line = 635:2]
 
-; <label>:29                                      ; preds = %11
-  %30 = load i32* %i, align 4, !dbg !686          ; [#uses=1 type=i32] [debug line = 633:28]
-  %31 = add nsw i32 %30, 2, !dbg !686             ; [#uses=1 type=i32] [debug line = 633:28]
-  store i32 %31, i32* %i, align 4, !dbg !686      ; [debug line = 633:28]
-  br label %6, !dbg !686                          ; [debug line = 633:28]
+; <label>:28                                      ; preds = %10
+  %29 = load i32* %i, align 4, !dbg !686          ; [#uses=1 type=i32] [debug line = 633:24]
+  %30 = add nsw i32 %29, 2, !dbg !686             ; [#uses=1 type=i32] [debug line = 633:24]
+  store i32 %30, i32* %i, align 4, !dbg !686      ; [debug line = 633:24]
+  br label %6, !dbg !686                          ; [debug line = 633:24]
 
-; <label>:32                                      ; preds = %6
+; <label>:31                                      ; preds = %6
   ret void, !dbg !687                             ; [debug line = 636:1]
 }
 
@@ -1647,9 +1646,9 @@ declare void @_ssdm_op_SpecDataflowPipeline(...) nounwind
 ; [#uses=1]
 define void @adpcm_dec_main(i32* %compressed, i32* %dec_result, i32 %size) nounwind uwtable {
   %1 = alloca i32*, align 8                       ; [#uses=3 type=i32**]
-  %2 = alloca i32*, align 8                       ; [#uses=4 type=i32**]
-  %3 = alloca i32, align 4                        ; [#uses=2 type=i32*]
-  %i = alloca i32, align 4                        ; [#uses=7 type=i32*]
+  %2 = alloca i32*, align 8                       ; [#uses=5 type=i32**]
+  %3 = alloca i32, align 4                        ; [#uses=3 type=i32*]
+  %i = alloca i32, align 4                        ; [#uses=8 type=i32*]
   store i32* %compressed, i32** %1, align 8
   call void @llvm.dbg.declare(metadata !{i32** %1}, metadata !688), !dbg !689 ; [debug line = 638:25] [debug variable = compressed]
   store i32* %dec_result, i32** %2, align 8
@@ -1666,44 +1665,60 @@ define void @adpcm_dec_main(i32* %compressed, i32* %dec_result, i32 %size) nounw
   store i32 0, i32* %i, align 4, !dbg !701        ; [debug line = 645:7]
   br label %6, !dbg !701                          ; [debug line = 645:7]
 
-; <label>:6                                       ; preds = %29, %0
+; <label>:6                                       ; preds = %38, %0
   %7 = load i32* %i, align 4, !dbg !701           ; [#uses=1 type=i32] [debug line = 645:7]
   %8 = load i32* %3, align 4, !dbg !701           ; [#uses=1 type=i32] [debug line = 645:7]
-  %9 = add nsw i32 %8, 1, !dbg !701               ; [#uses=1 type=i32] [debug line = 645:7]
-  %10 = icmp slt i32 %7, %9, !dbg !701            ; [#uses=1 type=i1] [debug line = 645:7]
-  br i1 %10, label %11, label %32, !dbg !701      ; [debug line = 645:7]
+  %9 = icmp slt i32 %7, %8, !dbg !701             ; [#uses=1 type=i1] [debug line = 645:7]
+  br i1 %9, label %10, label %41, !dbg !701       ; [debug line = 645:7]
 
-; <label>:11                                      ; preds = %6
-  %12 = load i32* %i, align 4, !dbg !703          ; [#uses=1 type=i32] [debug line = 646:3]
-  %13 = sdiv i32 %12, 2, !dbg !703                ; [#uses=1 type=i32] [debug line = 646:3]
-  %14 = sext i32 %13 to i64, !dbg !703            ; [#uses=1 type=i64] [debug line = 646:3]
-  %15 = load i32** %1, align 8, !dbg !703         ; [#uses=1 type=i32*] [debug line = 646:3]
-  %16 = getelementptr inbounds i32* %15, i64 %14, !dbg !703 ; [#uses=1 type=i32*] [debug line = 646:3]
-  %17 = load i32* %16, align 4, !dbg !703         ; [#uses=1 type=i32] [debug line = 646:3]
-  call void @decode(i32 %17), !dbg !703           ; [debug line = 646:3]
-  %18 = load i32* @xout1, align 4, !dbg !705      ; [#uses=1 type=i32] [debug line = 647:3]
-  %19 = load i32* %i, align 4, !dbg !705          ; [#uses=1 type=i32] [debug line = 647:3]
-  %20 = sext i32 %19 to i64, !dbg !705            ; [#uses=1 type=i64] [debug line = 647:3]
-  %21 = load i32** %2, align 8, !dbg !705         ; [#uses=1 type=i32*] [debug line = 647:3]
-  %22 = getelementptr inbounds i32* %21, i64 %20, !dbg !705 ; [#uses=1 type=i32*] [debug line = 647:3]
-  store i32 %18, i32* %22, align 4, !dbg !705     ; [debug line = 647:3]
-  %23 = load i32* @xout2, align 4, !dbg !706      ; [#uses=1 type=i32] [debug line = 648:3]
-  %24 = load i32* %i, align 4, !dbg !706          ; [#uses=1 type=i32] [debug line = 648:3]
-  %25 = add nsw i32 %24, 1, !dbg !706             ; [#uses=1 type=i32] [debug line = 648:3]
-  %26 = sext i32 %25 to i64, !dbg !706            ; [#uses=1 type=i64] [debug line = 648:3]
-  %27 = load i32** %2, align 8, !dbg !706         ; [#uses=1 type=i32*] [debug line = 648:3]
-  %28 = getelementptr inbounds i32* %27, i64 %26, !dbg !706 ; [#uses=1 type=i32*] [debug line = 648:3]
-  store i32 %23, i32* %28, align 4, !dbg !706     ; [debug line = 648:3]
-  br label %29, !dbg !707                         ; [debug line = 649:2]
+; <label>:10                                      ; preds = %6
+  %11 = load i32* %i, align 4, !dbg !703          ; [#uses=1 type=i32] [debug line = 646:3]
+  %12 = sdiv i32 %11, 2, !dbg !703                ; [#uses=1 type=i32] [debug line = 646:3]
+  %13 = sext i32 %12 to i64, !dbg !703            ; [#uses=1 type=i64] [debug line = 646:3]
+  %14 = load i32** %1, align 8, !dbg !703         ; [#uses=1 type=i32*] [debug line = 646:3]
+  %15 = getelementptr inbounds i32* %14, i64 %13, !dbg !703 ; [#uses=1 type=i32*] [debug line = 646:3]
+  %16 = load i32* %15, align 4, !dbg !703         ; [#uses=1 type=i32] [debug line = 646:3]
+  call void @decode(i32 %16), !dbg !703           ; [debug line = 646:3]
+  %17 = load i32* @xout1, align 4, !dbg !705      ; [#uses=1 type=i32] [debug line = 647:3]
+  %18 = load i32* %i, align 4, !dbg !705          ; [#uses=1 type=i32] [debug line = 647:3]
+  %19 = sext i32 %18 to i64, !dbg !705            ; [#uses=1 type=i64] [debug line = 647:3]
+  %20 = load i32** %2, align 8, !dbg !705         ; [#uses=1 type=i32*] [debug line = 647:3]
+  %21 = getelementptr inbounds i32* %20, i64 %19, !dbg !705 ; [#uses=1 type=i32*] [debug line = 647:3]
+  store i32 %17, i32* %21, align 4, !dbg !705     ; [debug line = 647:3]
+  %22 = load i32* %i, align 4, !dbg !706          ; [#uses=1 type=i32] [debug line = 648:3]
+  %23 = load i32* %3, align 4, !dbg !706          ; [#uses=1 type=i32] [debug line = 648:3]
+  %24 = sub nsw i32 %23, 1, !dbg !706             ; [#uses=1 type=i32] [debug line = 648:3]
+  %25 = icmp slt i32 %22, %24, !dbg !706          ; [#uses=1 type=i1] [debug line = 648:3]
+  br i1 %25, label %26, label %33, !dbg !706      ; [debug line = 648:3]
 
-; <label>:29                                      ; preds = %11
-  %30 = load i32* %i, align 4, !dbg !708          ; [#uses=1 type=i32] [debug line = 645:30]
-  %31 = add nsw i32 %30, 2, !dbg !708             ; [#uses=1 type=i32] [debug line = 645:30]
-  store i32 %31, i32* %i, align 4, !dbg !708      ; [debug line = 645:30]
-  br label %6, !dbg !708                          ; [debug line = 645:30]
+; <label>:26                                      ; preds = %10
+  %27 = load i32* @xout2, align 4, !dbg !707      ; [#uses=1 type=i32] [debug line = 649:4]
+  %28 = load i32* %i, align 4, !dbg !707          ; [#uses=1 type=i32] [debug line = 649:4]
+  %29 = add nsw i32 %28, 1, !dbg !707             ; [#uses=1 type=i32] [debug line = 649:4]
+  %30 = sext i32 %29 to i64, !dbg !707            ; [#uses=1 type=i64] [debug line = 649:4]
+  %31 = load i32** %2, align 8, !dbg !707         ; [#uses=1 type=i32*] [debug line = 649:4]
+  %32 = getelementptr inbounds i32* %31, i64 %30, !dbg !707 ; [#uses=1 type=i32*] [debug line = 649:4]
+  store i32 %27, i32* %32, align 4, !dbg !707     ; [debug line = 649:4]
+  br label %37, !dbg !709                         ; [debug line = 650:3]
 
-; <label>:32                                      ; preds = %6
-  ret void, !dbg !709                             ; [debug line = 650:1]
+; <label>:33                                      ; preds = %10
+  %34 = load i32* @xout2, align 4, !dbg !710      ; [#uses=1 type=i32] [debug line = 651:4]
+  %35 = load i32** %2, align 8, !dbg !710         ; [#uses=1 type=i32*] [debug line = 651:4]
+  %36 = getelementptr inbounds i32* %35, i64 1, !dbg !710 ; [#uses=1 type=i32*] [debug line = 651:4]
+  store i32 %34, i32* %36, align 4, !dbg !710     ; [debug line = 651:4]
+  br label %37
+
+; <label>:37                                      ; preds = %33, %26
+  br label %38, !dbg !712                         ; [debug line = 653:2]
+
+; <label>:38                                      ; preds = %37
+  %39 = load i32* %i, align 4, !dbg !713          ; [#uses=1 type=i32] [debug line = 645:25]
+  %40 = add nsw i32 %39, 2, !dbg !713             ; [#uses=1 type=i32] [debug line = 645:25]
+  store i32 %40, i32* %i, align 4, !dbg !713      ; [debug line = 645:25]
+  br label %6, !dbg !713                          ; [debug line = 645:25]
+
+; <label>:41                                      ; preds = %6
+  ret void, !dbg !714                             ; [debug line = 654:1]
 }
 
 ; [#uses=0]
@@ -1714,61 +1729,61 @@ define void @adpcm_main(i32* %test_data, i32* %compressed, i32* %dec_result, i32
   %4 = alloca i32, align 4                        ; [#uses=3 type=i32*]
   %5 = alloca i32, align 4                        ; [#uses=4 type=i32*]
   store i32* %test_data, i32** %1, align 8
-  call void @llvm.dbg.declare(metadata !{i32** %1}, metadata !710), !dbg !711 ; [debug line = 652:21] [debug variable = test_data]
+  call void @llvm.dbg.declare(metadata !{i32** %1}, metadata !715), !dbg !716 ; [debug line = 656:21] [debug variable = test_data]
   store i32* %compressed, i32** %2, align 8
-  call void @llvm.dbg.declare(metadata !{i32** %2}, metadata !712), !dbg !713 ; [debug line = 652:39] [debug variable = compressed]
+  call void @llvm.dbg.declare(metadata !{i32** %2}, metadata !717), !dbg !718 ; [debug line = 656:39] [debug variable = compressed]
   store i32* %dec_result, i32** %3, align 8
-  call void @llvm.dbg.declare(metadata !{i32** %3}, metadata !714), !dbg !715 ; [debug line = 653:21] [debug variable = dec_result]
+  call void @llvm.dbg.declare(metadata !{i32** %3}, metadata !719), !dbg !720 ; [debug line = 657:21] [debug variable = dec_result]
   store i32 %select, i32* %4, align 4
-  call void @llvm.dbg.declare(metadata !{i32* %4}, metadata !716), !dbg !717 ; [debug line = 653:40] [debug variable = select]
+  call void @llvm.dbg.declare(metadata !{i32* %4}, metadata !721), !dbg !722 ; [debug line = 657:40] [debug variable = select]
   store i32 %size, i32* %5, align 4
-  call void @llvm.dbg.declare(metadata !{i32* %5}, metadata !718), !dbg !719 ; [debug line = 653:52] [debug variable = size]
-  %6 = load i32** %1, align 8, !dbg !720          ; [#uses=1 type=i32*] [debug line = 654:2]
-  call void (...)* @_ssdm_SpecArrayDimSize(i32* %6, i32 3) nounwind, !dbg !720 ; [debug line = 654:2]
-  %7 = load i32** %3, align 8, !dbg !722          ; [#uses=1 type=i32*] [debug line = 654:38]
-  call void (...)* @_ssdm_SpecArrayDimSize(i32* %7, i32 3) nounwind, !dbg !722 ; [debug line = 654:38]
-  %8 = load i32** %2, align 8, !dbg !723          ; [#uses=1 type=i32*] [debug line = 654:75]
-  call void (...)* @_ssdm_SpecArrayDimSize(i32* %8, i32 3) nounwind, !dbg !723 ; [debug line = 654:75]
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str1, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !724 ; [debug line = 656:1]
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str2, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !725 ; [debug line = 657:1]
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str3, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !726 ; [debug line = 658:1]
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str4, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !727 ; [debug line = 659:1]
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str5, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !728 ; [debug line = 660:1]
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str6, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !729 ; [debug line = 661:1]
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str7, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !730 ; [debug line = 662:1]
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str8, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !731 ; [debug line = 663:1]
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str9, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !732 ; [debug line = 664:1]
-  %9 = load i32* %5, align 4, !dbg !733           ; [#uses=1 type=i32] [debug line = 666:1]
-  call void (...)* @_ssdm_op_SpecInterface(i32 %9, i8* getelementptr inbounds ([8 x i8]* @.str10, i32 0, i32 0), i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 0, i32 0, i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !733 ; [debug line = 666:1]
-  %10 = load i32* %4, align 4, !dbg !734          ; [#uses=1 type=i32] [debug line = 667:1]
-  call void (...)* @_ssdm_op_SpecInterface(i32 %10, i8* getelementptr inbounds ([8 x i8]* @.str10, i32 0, i32 0), i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 0, i32 0, i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !734 ; [debug line = 667:1]
-  %11 = load i32** %3, align 8, !dbg !735         ; [#uses=1 type=i32*] [debug line = 668:1]
-  call void (...)* @_ssdm_op_SpecResource(i32* %11, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 -1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !735 ; [debug line = 668:1]
-  %12 = load i32** %2, align 8, !dbg !736         ; [#uses=1 type=i32*] [debug line = 669:1]
-  call void (...)* @_ssdm_op_SpecResource(i32* %12, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 -1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !736 ; [debug line = 669:1]
-  %13 = load i32** %1, align 8, !dbg !737         ; [#uses=1 type=i32*] [debug line = 670:1]
-  call void (...)* @_ssdm_op_SpecResource(i32* %13, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 -1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !737 ; [debug line = 670:1]
-  call void (...)* @_ssdm_op_SpecInterface(i32 0, i8* getelementptr inbounds ([11 x i8]* @.str12, i32 0, i32 0), i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 0, i32 0, i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !738 ; [debug line = 671:1]
-  %14 = load i32* %4, align 4, !dbg !739          ; [#uses=1 type=i32] [debug line = 673:2]
-  %15 = icmp ne i32 %14, 0, !dbg !739             ; [#uses=1 type=i1] [debug line = 673:2]
-  br i1 %15, label %20, label %16, !dbg !739      ; [debug line = 673:2]
+  call void @llvm.dbg.declare(metadata !{i32* %5}, metadata !723), !dbg !724 ; [debug line = 657:52] [debug variable = size]
+  %6 = load i32** %1, align 8, !dbg !725          ; [#uses=1 type=i32*] [debug line = 658:2]
+  call void (...)* @_ssdm_SpecArrayDimSize(i32* %6, i32 3) nounwind, !dbg !725 ; [debug line = 658:2]
+  %7 = load i32** %3, align 8, !dbg !727          ; [#uses=1 type=i32*] [debug line = 658:38]
+  call void (...)* @_ssdm_SpecArrayDimSize(i32* %7, i32 3) nounwind, !dbg !727 ; [debug line = 658:38]
+  %8 = load i32** %2, align 8, !dbg !728          ; [#uses=1 type=i32*] [debug line = 658:75]
+  call void (...)* @_ssdm_SpecArrayDimSize(i32* %8, i32 3) nounwind, !dbg !728 ; [debug line = 658:75]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str1, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !729 ; [debug line = 660:1]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str2, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !730 ; [debug line = 661:1]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str3, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !731 ; [debug line = 662:1]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str4, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !732 ; [debug line = 663:1]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str5, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !733 ; [debug line = 664:1]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str6, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !734 ; [debug line = 665:1]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str7, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !735 ; [debug line = 666:1]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str8, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !736 ; [debug line = 667:1]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str9, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !737 ; [debug line = 668:1]
+  %9 = load i32* %5, align 4, !dbg !738           ; [#uses=1 type=i32] [debug line = 670:1]
+  call void (...)* @_ssdm_op_SpecInterface(i32 %9, i8* getelementptr inbounds ([8 x i8]* @.str10, i32 0, i32 0), i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 0, i32 0, i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !738 ; [debug line = 670:1]
+  %10 = load i32* %4, align 4, !dbg !739          ; [#uses=1 type=i32] [debug line = 671:1]
+  call void (...)* @_ssdm_op_SpecInterface(i32 %10, i8* getelementptr inbounds ([8 x i8]* @.str10, i32 0, i32 0), i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 0, i32 0, i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !739 ; [debug line = 671:1]
+  %11 = load i32** %3, align 8, !dbg !740         ; [#uses=1 type=i32*] [debug line = 672:1]
+  call void (...)* @_ssdm_op_SpecResource(i32* %11, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 -1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !740 ; [debug line = 672:1]
+  %12 = load i32** %2, align 8, !dbg !741         ; [#uses=1 type=i32*] [debug line = 673:1]
+  call void (...)* @_ssdm_op_SpecResource(i32* %12, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 -1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !741 ; [debug line = 673:1]
+  %13 = load i32** %1, align 8, !dbg !742         ; [#uses=1 type=i32*] [debug line = 674:1]
+  call void (...)* @_ssdm_op_SpecResource(i32* %13, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 -1, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !742 ; [debug line = 674:1]
+  call void (...)* @_ssdm_op_SpecInterface(i32 0, i8* getelementptr inbounds ([11 x i8]* @.str12, i32 0, i32 0), i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i32 0, i32 0, i32 0, i32 0, i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !743 ; [debug line = 675:1]
+  %14 = load i32* %4, align 4, !dbg !744          ; [#uses=1 type=i32] [debug line = 677:2]
+  %15 = icmp ne i32 %14, 0, !dbg !744             ; [#uses=1 type=i1] [debug line = 677:2]
+  br i1 %15, label %20, label %16, !dbg !744      ; [debug line = 677:2]
 
 ; <label>:16                                      ; preds = %0
-  %17 = load i32** %1, align 8, !dbg !740         ; [#uses=1 type=i32*] [debug line = 674:3]
-  %18 = load i32** %2, align 8, !dbg !740         ; [#uses=1 type=i32*] [debug line = 674:3]
-  %19 = load i32* %5, align 4, !dbg !740          ; [#uses=1 type=i32] [debug line = 674:3]
-  call void @adpcm_enc_main(i32* %17, i32* %18, i32 %19), !dbg !740 ; [debug line = 674:3]
-  br label %24, !dbg !742                         ; [debug line = 676:2]
+  %17 = load i32** %1, align 8, !dbg !745         ; [#uses=1 type=i32*] [debug line = 678:3]
+  %18 = load i32** %2, align 8, !dbg !745         ; [#uses=1 type=i32*] [debug line = 678:3]
+  %19 = load i32* %5, align 4, !dbg !745          ; [#uses=1 type=i32] [debug line = 678:3]
+  call void @adpcm_enc_main(i32* %17, i32* %18, i32 %19), !dbg !745 ; [debug line = 678:3]
+  br label %24, !dbg !747                         ; [debug line = 680:2]
 
 ; <label>:20                                      ; preds = %0
-  %21 = load i32** %2, align 8, !dbg !743         ; [#uses=1 type=i32*] [debug line = 677:3]
-  %22 = load i32** %3, align 8, !dbg !743         ; [#uses=1 type=i32*] [debug line = 677:3]
-  %23 = load i32* %5, align 4, !dbg !743          ; [#uses=1 type=i32] [debug line = 677:3]
-  call void @adpcm_dec_main(i32* %21, i32* %22, i32 %23), !dbg !743 ; [debug line = 677:3]
+  %21 = load i32** %2, align 8, !dbg !748         ; [#uses=1 type=i32*] [debug line = 681:3]
+  %22 = load i32** %3, align 8, !dbg !748         ; [#uses=1 type=i32*] [debug line = 681:3]
+  %23 = load i32* %5, align 4, !dbg !748          ; [#uses=1 type=i32] [debug line = 681:3]
+  call void @adpcm_dec_main(i32* %21, i32* %22, i32 %23), !dbg !748 ; [debug line = 681:3]
   br label %24
 
 ; <label>:24                                      ; preds = %20, %16
-  ret void, !dbg !745                             ; [debug line = 679:1]
+  ret void, !dbg !750                             ; [debug line = 683:1]
 }
 
 ; [#uses=9]
@@ -1923,7 +1938,7 @@ declare void @_ssdm_op_SpecResource(...) nounwind
 !136 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !137, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
 !137 = metadata !{null, metadata !120, metadata !120, metadata !9}
 !138 = metadata !{i32 786478, i32 0, metadata !111, metadata !"adpcm_dec_main", metadata !"adpcm_dec_main", metadata !"", metadata !111, i32 638, metadata !136, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (i32*, i32*, i32)* @adpcm_dec_main, null, null, metadata !10, i32 639} ; [ DW_TAG_subprogram ]
-!139 = metadata !{i32 786478, i32 0, metadata !111, metadata !"adpcm_main", metadata !"adpcm_main", metadata !"", metadata !111, i32 652, metadata !140, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (i32*, i32*, i32*, i32, i32)* @adpcm_main, null, null, metadata !10, i32 654} ; [ DW_TAG_subprogram ]
+!139 = metadata !{i32 786478, i32 0, metadata !111, metadata !"adpcm_main", metadata !"adpcm_main", metadata !"", metadata !111, i32 656, metadata !140, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (i32*, i32*, i32*, i32, i32)* @adpcm_main, null, null, metadata !10, i32 658} ; [ DW_TAG_subprogram ]
 !140 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !141, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
 !141 = metadata !{null, metadata !120, metadata !120, metadata !120, metadata !9, metadata !9}
 !142 = metadata !{metadata !143}
@@ -2468,9 +2483,9 @@ declare void @_ssdm_op_SpecResource(...) nounwind
 !681 = metadata !{i32 633, i32 7, metadata !682, null}
 !682 = metadata !{i32 786443, metadata !675, i32 633, i32 2, metadata !111, i32 34} ; [ DW_TAG_lexical_block ]
 !683 = metadata !{i32 634, i32 23, metadata !684, null}
-!684 = metadata !{i32 786443, metadata !682, i32 633, i32 36, metadata !111, i32 35} ; [ DW_TAG_lexical_block ]
+!684 = metadata !{i32 786443, metadata !682, i32 633, i32 32, metadata !111, i32 35} ; [ DW_TAG_lexical_block ]
 !685 = metadata !{i32 635, i32 2, metadata !684, null}
-!686 = metadata !{i32 633, i32 28, metadata !682, null}
+!686 = metadata !{i32 633, i32 24, metadata !682, null}
 !687 = metadata !{i32 636, i32 1, metadata !675, null}
 !688 = metadata !{i32 786689, metadata !138, metadata !"compressed", metadata !111, i32 16777854, metadata !120, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
 !689 = metadata !{i32 638, i32 25, metadata !138, null}
@@ -2488,45 +2503,50 @@ declare void @_ssdm_op_SpecResource(...) nounwind
 !701 = metadata !{i32 645, i32 7, metadata !702, null}
 !702 = metadata !{i32 786443, metadata !695, i32 645, i32 2, metadata !111, i32 37} ; [ DW_TAG_lexical_block ]
 !703 = metadata !{i32 646, i32 3, metadata !704, null}
-!704 = metadata !{i32 786443, metadata !702, i32 645, i32 38, metadata !111, i32 38} ; [ DW_TAG_lexical_block ]
+!704 = metadata !{i32 786443, metadata !702, i32 645, i32 33, metadata !111, i32 38} ; [ DW_TAG_lexical_block ]
 !705 = metadata !{i32 647, i32 3, metadata !704, null}
 !706 = metadata !{i32 648, i32 3, metadata !704, null}
-!707 = metadata !{i32 649, i32 2, metadata !704, null}
-!708 = metadata !{i32 645, i32 30, metadata !702, null}
-!709 = metadata !{i32 650, i32 1, metadata !695, null}
-!710 = metadata !{i32 786689, metadata !139, metadata !"test_data", metadata !111, i32 16777868, metadata !120, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!711 = metadata !{i32 652, i32 21, metadata !139, null}
-!712 = metadata !{i32 786689, metadata !139, metadata !"compressed", metadata !111, i32 33555084, metadata !120, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!713 = metadata !{i32 652, i32 39, metadata !139, null}
-!714 = metadata !{i32 786689, metadata !139, metadata !"dec_result", metadata !111, i32 50332301, metadata !120, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!715 = metadata !{i32 653, i32 21, metadata !139, null}
-!716 = metadata !{i32 786689, metadata !139, metadata !"select", metadata !111, i32 67109517, metadata !9, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!717 = metadata !{i32 653, i32 40, metadata !139, null}
-!718 = metadata !{i32 786689, metadata !139, metadata !"size", metadata !111, i32 83886733, metadata !9, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!719 = metadata !{i32 653, i32 52, metadata !139, null}
-!720 = metadata !{i32 654, i32 2, metadata !721, null}
-!721 = metadata !{i32 786443, metadata !139, i32 654, i32 1, metadata !111, i32 39} ; [ DW_TAG_lexical_block ]
-!722 = metadata !{i32 654, i32 38, metadata !721, null}
-!723 = metadata !{i32 654, i32 75, metadata !721, null}
-!724 = metadata !{i32 656, i32 1, metadata !721, null}
-!725 = metadata !{i32 657, i32 1, metadata !721, null}
-!726 = metadata !{i32 658, i32 1, metadata !721, null}
-!727 = metadata !{i32 659, i32 1, metadata !721, null}
-!728 = metadata !{i32 660, i32 1, metadata !721, null}
-!729 = metadata !{i32 661, i32 1, metadata !721, null}
-!730 = metadata !{i32 662, i32 1, metadata !721, null}
-!731 = metadata !{i32 663, i32 1, metadata !721, null}
-!732 = metadata !{i32 664, i32 1, metadata !721, null}
-!733 = metadata !{i32 666, i32 1, metadata !721, null}
-!734 = metadata !{i32 667, i32 1, metadata !721, null}
-!735 = metadata !{i32 668, i32 1, metadata !721, null}
-!736 = metadata !{i32 669, i32 1, metadata !721, null}
-!737 = metadata !{i32 670, i32 1, metadata !721, null}
-!738 = metadata !{i32 671, i32 1, metadata !721, null}
-!739 = metadata !{i32 673, i32 2, metadata !721, null}
-!740 = metadata !{i32 674, i32 3, metadata !741, null}
-!741 = metadata !{i32 786443, metadata !721, i32 673, i32 14, metadata !111, i32 40} ; [ DW_TAG_lexical_block ]
-!742 = metadata !{i32 676, i32 2, metadata !741, null}
-!743 = metadata !{i32 677, i32 3, metadata !744, null}
-!744 = metadata !{i32 786443, metadata !721, i32 676, i32 9, metadata !111, i32 41} ; [ DW_TAG_lexical_block ]
-!745 = metadata !{i32 679, i32 1, metadata !721, null}
+!707 = metadata !{i32 649, i32 4, metadata !708, null}
+!708 = metadata !{i32 786443, metadata !704, i32 648, i32 20, metadata !111, i32 39} ; [ DW_TAG_lexical_block ]
+!709 = metadata !{i32 650, i32 3, metadata !708, null}
+!710 = metadata !{i32 651, i32 4, metadata !711, null}
+!711 = metadata !{i32 786443, metadata !704, i32 650, i32 10, metadata !111, i32 40} ; [ DW_TAG_lexical_block ]
+!712 = metadata !{i32 653, i32 2, metadata !704, null}
+!713 = metadata !{i32 645, i32 25, metadata !702, null}
+!714 = metadata !{i32 654, i32 1, metadata !695, null}
+!715 = metadata !{i32 786689, metadata !139, metadata !"test_data", metadata !111, i32 16777872, metadata !120, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!716 = metadata !{i32 656, i32 21, metadata !139, null}
+!717 = metadata !{i32 786689, metadata !139, metadata !"compressed", metadata !111, i32 33555088, metadata !120, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!718 = metadata !{i32 656, i32 39, metadata !139, null}
+!719 = metadata !{i32 786689, metadata !139, metadata !"dec_result", metadata !111, i32 50332305, metadata !120, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!720 = metadata !{i32 657, i32 21, metadata !139, null}
+!721 = metadata !{i32 786689, metadata !139, metadata !"select", metadata !111, i32 67109521, metadata !9, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!722 = metadata !{i32 657, i32 40, metadata !139, null}
+!723 = metadata !{i32 786689, metadata !139, metadata !"size", metadata !111, i32 83886737, metadata !9, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!724 = metadata !{i32 657, i32 52, metadata !139, null}
+!725 = metadata !{i32 658, i32 2, metadata !726, null}
+!726 = metadata !{i32 786443, metadata !139, i32 658, i32 1, metadata !111, i32 41} ; [ DW_TAG_lexical_block ]
+!727 = metadata !{i32 658, i32 38, metadata !726, null}
+!728 = metadata !{i32 658, i32 75, metadata !726, null}
+!729 = metadata !{i32 660, i32 1, metadata !726, null}
+!730 = metadata !{i32 661, i32 1, metadata !726, null}
+!731 = metadata !{i32 662, i32 1, metadata !726, null}
+!732 = metadata !{i32 663, i32 1, metadata !726, null}
+!733 = metadata !{i32 664, i32 1, metadata !726, null}
+!734 = metadata !{i32 665, i32 1, metadata !726, null}
+!735 = metadata !{i32 666, i32 1, metadata !726, null}
+!736 = metadata !{i32 667, i32 1, metadata !726, null}
+!737 = metadata !{i32 668, i32 1, metadata !726, null}
+!738 = metadata !{i32 670, i32 1, metadata !726, null}
+!739 = metadata !{i32 671, i32 1, metadata !726, null}
+!740 = metadata !{i32 672, i32 1, metadata !726, null}
+!741 = metadata !{i32 673, i32 1, metadata !726, null}
+!742 = metadata !{i32 674, i32 1, metadata !726, null}
+!743 = metadata !{i32 675, i32 1, metadata !726, null}
+!744 = metadata !{i32 677, i32 2, metadata !726, null}
+!745 = metadata !{i32 678, i32 3, metadata !746, null}
+!746 = metadata !{i32 786443, metadata !726, i32 677, i32 14, metadata !111, i32 42} ; [ DW_TAG_lexical_block ]
+!747 = metadata !{i32 680, i32 2, metadata !746, null}
+!748 = metadata !{i32 681, i32 3, metadata !749, null}
+!749 = metadata !{i32 786443, metadata !726, i32 680, i32 9, metadata !111, i32 43} ; [ DW_TAG_lexical_block ]
+!750 = metadata !{i32 683, i32 1, metadata !726, null}

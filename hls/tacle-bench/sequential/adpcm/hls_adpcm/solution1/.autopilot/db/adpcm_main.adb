@@ -343,7 +343,7 @@
               <name/>
               <fileName>adpcm.c</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>679</lineNumber>
+              <lineNumber>683</lineNumber>
               <contextFuncName>adpcm_main</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -358,7 +358,7 @@
                         <first>adpcm.c</first>
                         <second>adpcm_main</second>
                       </first>
-                      <second>679</second>
+                      <second>683</second>
                     </item>
                   </second>
                 </item>
@@ -470,19 +470,19 @@
         <item class_id_reference="20" object_id="_17">
           <id>132</id>
           <edge_type>1</edge_type>
-          <source_obj>1</source_obj>
+          <source_obj>3</source_obj>
           <sink_obj>120</sink_obj>
         </item>
         <item class_id_reference="20" object_id="_18">
           <id>133</id>
           <edge_type>1</edge_type>
-          <source_obj>2</source_obj>
+          <source_obj>1</source_obj>
           <sink_obj>120</sink_obj>
         </item>
         <item class_id_reference="20" object_id="_19">
           <id>134</id>
           <edge_type>1</edge_type>
-          <source_obj>3</source_obj>
+          <source_obj>2</source_obj>
           <sink_obj>120</sink_obj>
         </item>
         <item class_id_reference="20" object_id="_20">
@@ -1087,25 +1087,25 @@
                 </item>
                 <item class_id_reference="28" object_id="_118">
                   <port class_id_reference="29" object_id="_119">
+                    <name>dec_result</name>
+                    <dir>2</dir>
+                    <type>1</type>
+                  </port>
+                  <inst class_id_reference="30" object_id_reference="_115"/>
+                </item>
+                <item class_id_reference="28" object_id="_120">
+                  <port class_id_reference="29" object_id="_121">
                     <name>test_data</name>
                     <dir>2</dir>
                     <type>0</type>
                   </port>
                   <inst class_id_reference="30" object_id_reference="_115"/>
                 </item>
-                <item class_id_reference="28" object_id="_120">
-                  <port class_id_reference="29" object_id="_121">
+                <item class_id_reference="28" object_id="_122">
+                  <port class_id_reference="29" object_id="_123">
                     <name>compressed</name>
                     <dir>2</dir>
                     <type>2</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_115"/>
-                </item>
-                <item class_id_reference="28" object_id="_122">
-                  <port class_id_reference="29" object_id="_123">
-                    <name>dec_result</name>
-                    <dir>2</dir>
-                    <type>1</type>
                   </port>
                   <inst class_id_reference="30" object_id_reference="_115"/>
                 </item>
@@ -2036,11 +2036,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>5420</second>
+              <second>5484</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>4872</second>
+              <second>5029</second>
             </item>
           </second>
         </item>

@@ -473,7 +473,7 @@ declare i32 @llvm.part.select.i32(i32, i32, i32) nounwind readnone
 ; [#uses=2]
 declare i15 @llvm.part.select.i15(i15, i32, i32) nounwind readnone
 
-; [#uses=115]
+; [#uses=119]
 declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 
 ; [#uses=4]
@@ -550,39 +550,39 @@ define internal fastcc i32 @filtep(i32 %rlt1, i32 %al1, i32 %rlt2, i32 %al2) nou
 ; [#uses=0]
 define void @adpcm_main([3 x i32]* %test_data, [3 x i32]* %compressed, [3 x i32]* %dec_result, i32 %select, i32 %size) nounwind uwtable {
 codeRepl:
-  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind, !dbg !656 ; [debug line = 628:1@674:3]
+  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind, !dbg !656 ; [debug line = 628:1@678:3]
   call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %test_data) nounwind, !map !667
   call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %compressed) nounwind, !map !673
   call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %dec_result) nounwind, !map !677
   call void (...)* @_ssdm_op_SpecBitsMap(i32 %select) nounwind, !map !681
   call void (...)* @_ssdm_op_SpecBitsMap(i32 %size) nounwind, !map !687
   call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @adpcm_main_str) nounwind
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str1, [1 x i8]* @p_str) nounwind, !dbg !691 ; [debug line = 656:1]
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str2, [1 x i8]* @p_str) nounwind, !dbg !692 ; [debug line = 657:1]
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str3, [1 x i8]* @p_str) nounwind, !dbg !693 ; [debug line = 658:1]
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str4, [1 x i8]* @p_str) nounwind, !dbg !694 ; [debug line = 659:1]
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str5, [1 x i8]* @p_str) nounwind, !dbg !695 ; [debug line = 660:1]
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str6, [1 x i8]* @p_str) nounwind, !dbg !696 ; [debug line = 661:1]
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str7, [1 x i8]* @p_str) nounwind, !dbg !697 ; [debug line = 662:1]
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str8, [1 x i8]* @p_str) nounwind, !dbg !698 ; [debug line = 663:1]
-  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str9, [1 x i8]* @p_str) nounwind, !dbg !699 ; [debug line = 664:1]
-  call void (...)* @_ssdm_op_SpecInterface(i32 %size, [8 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind, !dbg !700 ; [debug line = 666:1]
-  call void (...)* @_ssdm_op_SpecInterface(i32 %select, [8 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind, !dbg !701 ; [debug line = 667:1]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str1, [1 x i8]* @p_str) nounwind, !dbg !691 ; [debug line = 660:1]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str2, [1 x i8]* @p_str) nounwind, !dbg !692 ; [debug line = 661:1]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str3, [1 x i8]* @p_str) nounwind, !dbg !693 ; [debug line = 662:1]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str4, [1 x i8]* @p_str) nounwind, !dbg !694 ; [debug line = 663:1]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str5, [1 x i8]* @p_str) nounwind, !dbg !695 ; [debug line = 664:1]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str6, [1 x i8]* @p_str) nounwind, !dbg !696 ; [debug line = 665:1]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str7, [1 x i8]* @p_str) nounwind, !dbg !697 ; [debug line = 666:1]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str8, [1 x i8]* @p_str) nounwind, !dbg !698 ; [debug line = 667:1]
+  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [7 x i8]* @p_str9, [1 x i8]* @p_str) nounwind, !dbg !699 ; [debug line = 668:1]
+  call void (...)* @_ssdm_op_SpecInterface(i32 %size, [8 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind, !dbg !700 ; [debug line = 670:1]
+  call void (...)* @_ssdm_op_SpecInterface(i32 %select, [8 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind, !dbg !701 ; [debug line = 671:1]
   call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %dec_result, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
   call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %compressed, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
   call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %test_data, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
-  call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str12, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind, !dbg !702 ; [debug line = 671:1]
+  call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str12, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind, !dbg !702 ; [debug line = 675:1]
   %size_read = call i32 @_ssdm_op_Read.ap_none.i32(i32 %size) nounwind ; [#uses=1 type=i32]
-  call void @llvm.dbg.value(metadata !{i32 %size_read}, i64 0, metadata !703), !dbg !704 ; [debug line = 653:52] [debug variable = size]
+  call void @llvm.dbg.value(metadata !{i32 %size_read}, i64 0, metadata !703), !dbg !704 ; [debug line = 657:52] [debug variable = size]
   %select_read = call i32 @_ssdm_op_Read.ap_none.i32(i32 %select) nounwind ; [#uses=1 type=i32]
-  call void @llvm.dbg.value(metadata !{i32 %select_read}, i64 0, metadata !705), !dbg !706 ; [debug line = 653:40] [debug variable = select]
-  call void @llvm.dbg.value(metadata !{[3 x i32]* %test_data}, i64 0, metadata !707), !dbg !711 ; [debug line = 652:21] [debug variable = test_data]
-  call void @llvm.dbg.value(metadata !{[3 x i32]* %compressed}, i64 0, metadata !712), !dbg !713 ; [debug line = 652:39] [debug variable = compressed]
-  call void @llvm.dbg.value(metadata !{[3 x i32]* %dec_result}, i64 0, metadata !714), !dbg !715 ; [debug line = 653:21] [debug variable = dec_result]
-  call void @llvm.dbg.value(metadata !{i32 %select}, i64 0, metadata !705), !dbg !706 ; [debug line = 653:40] [debug variable = select]
-  call void @llvm.dbg.value(metadata !{i32 %size}, i64 0, metadata !703), !dbg !704 ; [debug line = 653:52] [debug variable = size]
-  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %test_data, [3 x i32]* %compressed, [3 x i32]* %dec_result)
-  ret void, !dbg !716                             ; [debug line = 679:1]
+  call void @llvm.dbg.value(metadata !{i32 %select_read}, i64 0, metadata !705), !dbg !706 ; [debug line = 657:40] [debug variable = select]
+  call void @llvm.dbg.value(metadata !{[3 x i32]* %test_data}, i64 0, metadata !707), !dbg !711 ; [debug line = 656:21] [debug variable = test_data]
+  call void @llvm.dbg.value(metadata !{[3 x i32]* %compressed}, i64 0, metadata !712), !dbg !713 ; [debug line = 656:39] [debug variable = compressed]
+  call void @llvm.dbg.value(metadata !{[3 x i32]* %dec_result}, i64 0, metadata !714), !dbg !715 ; [debug line = 657:21] [debug variable = dec_result]
+  call void @llvm.dbg.value(metadata !{i32 %select}, i64 0, metadata !705), !dbg !706 ; [debug line = 657:40] [debug variable = select]
+  call void @llvm.dbg.value(metadata !{i32 %size}, i64 0, metadata !703), !dbg !704 ; [debug line = 657:52] [debug variable = size]
+  call fastcc void @Block__proc(i32 %select_read, i32 %size_read, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed)
+  ret void, !dbg !716                             ; [debug line = 683:1]
 }
 
 ; [#uses=1]
@@ -765,7 +765,7 @@ entry:
   ret i31 %empty_38
 }
 
-; [#uses=6]
+; [#uses=8]
 define weak i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32, i32, i32) nounwind readnone {
 entry:
   %empty = call i32 @llvm.part.select.i32(i32 %0, i32 %1, i32 %2) ; [#uses=1 type=i32]
@@ -824,7 +824,7 @@ entry:
   ret i1 %empty_46
 }
 
-; [#uses=8]
+; [#uses=9]
 define weak i1 @_ssdm_op_BitSelect.i1.i32.i32(i32, i32) nounwind readnone {
 entry:
   %empty = shl i32 1, %1                          ; [#uses=1 type=i32]
@@ -873,7 +873,7 @@ entry:
   ret i34 %empty_60
 }
 
-; [#uses=1]
+; [#uses=2]
 define weak i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31, i1) nounwind readnone {
 entry:
   %empty = zext i31 %0 to i32                     ; [#uses=1 type=i32]
@@ -897,567 +897,592 @@ entry:
 }
 
 ; [#uses=1]
-define internal fastcc void @Block__proc(i32 %select, i32 %size, [3 x i32]* %test_data, [3 x i32]* %compressed, [3 x i32]* %dec_result) nounwind {
+define internal fastcc void @Block__proc(i32 %select, i32 %size, [3 x i32]* %dec_result, [3 x i32]* %test_data, [3 x i32]* %compressed) nounwind {
 newFuncRoot:
   call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %test_data, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
   call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %compressed, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
   call void (...)* @_ssdm_op_SpecMemCore([3 x i32]* %dec_result, [1 x i8]* @p_str, [12 x i8]* @p_str11, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
-  %size_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %size) nounwind ; [#uses=2 type=i32]
+  %size_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %size) nounwind ; [#uses=5 type=i32]
+  call void @llvm.dbg.value(metadata !{i32 %size_read}, i64 0, metadata !717) nounwind, !dbg !721 ; [debug line = 638:63@681:3] [debug variable = size]
   %select_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %select) nounwind ; [#uses=1 type=i32]
-  %tmp = icmp eq i32 %select_read, 0, !dbg !717   ; [#uses=1 type=i1] [debug line = 673:2]
-  %tmp_28 = add i32 %size_read, 2                 ; [#uses=2 type=i32]
+  %tmp = icmp eq i32 %select_read, 0, !dbg !722   ; [#uses=1 type=i1] [debug line = 677:2]
+  br i1 %tmp, label %.preheader.preheader, label %0, !dbg !722 ; [debug line = 677:2]
+
+.preheader.preheader:                             ; preds = %newFuncRoot
+  %tmp_28 = add i32 %size_read, 1                 ; [#uses=2 type=i32]
   %tmp_29 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %tmp_28, i32 31) ; [#uses=1 type=i1]
-  %p_neg2 = sub i32 -2, %size_read                ; [#uses=1 type=i32]
+  %p_neg2 = xor i32 %size_read, -1                ; [#uses=1 type=i32]
   %p_lshr2 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %p_neg2, i32 1, i32 31) ; [#uses=1 type=i31]
   %p_neg_t2 = sub i31 0, %p_lshr2                 ; [#uses=1 type=i31]
   %tmp_30 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %tmp_28, i32 1, i32 31) ; [#uses=1 type=i31]
   %tmp_31 = select i1 %tmp_29, i31 %p_neg_t2, i31 %tmp_30 ; [#uses=1 type=i31]
-  %tmp_32 = call i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31 %tmp_31, i1 false) ; [#uses=2 type=i32]
-  br i1 %tmp, label %.preheader33.preheader, label %.preheader.preheader, !dbg !717 ; [debug line = 673:2]
+  %tmp_32 = call i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31 %tmp_31, i1 false) ; [#uses=1 type=i32]
+  br label %.preheader, !dbg !723                 ; [debug line = 633:7@678:3]
 
-.preheader33.preheader:                           ; preds = %newFuncRoot
-  br label %.preheader33
+.preheader:                                       ; preds = %encode.exit.i, %.preheader.preheader
+  %i_0_i = phi i32 [ %i_6, %encode.exit.i ], [ 0, %.preheader.preheader ] ; [#uses=7 type=i32]
+  %tmp_38 = icmp eq i32 %i_0_i, %tmp_32           ; [#uses=1 type=i1]
+  br i1 %tmp_38, label %adpcm_enc_main.exit.loopexit27, label %1, !dbg !723 ; [debug line = 633:7@678:3]
 
-.preheader.preheader:                             ; preds = %newFuncRoot
-  br label %.preheader
+; <label>:0                                       ; preds = %newFuncRoot
+  call void @llvm.dbg.value(metadata !{[3 x i32]* %compressed}, i64 0, metadata !725), !dbg !726 ; [debug line = 638:25@681:3] [debug variable = compressed]
+  call void @llvm.dbg.value(metadata !{[3 x i32]* %dec_result}, i64 0, metadata !727), !dbg !728 ; [debug line = 638:44@681:3] [debug variable = dec_result]
+  call void @llvm.dbg.value(metadata !{i32 %size}, i64 0, metadata !717) nounwind, !dbg !721 ; [debug line = 638:63@681:3] [debug variable = size]
+  %tmp_s = add nsw i32 %size_read, -1, !dbg !729  ; [#uses=1 type=i32] [debug line = 648:3@681:3]
+  %dec_result_addr = getelementptr [3 x i32]* %dec_result, i64 0, i64 1, !dbg !733 ; [#uses=1 type=i32*] [debug line = 651:4@681:3]
+  %tmp_33 = add i32 %size_read, 1                 ; [#uses=2 type=i32]
+  %tmp_34 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %tmp_33, i32 31) ; [#uses=1 type=i1]
+  %p_neg3 = xor i32 %size_read, -1                ; [#uses=1 type=i32]
+  %p_lshr3 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %p_neg3, i32 1, i32 31) ; [#uses=1 type=i31]
+  %p_neg_t3 = sub i31 0, %p_lshr3                 ; [#uses=1 type=i31]
+  %tmp_35 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %tmp_33, i32 1, i32 31) ; [#uses=1 type=i31]
+  %tmp_36 = select i1 %tmp_34, i31 %p_neg_t3, i31 %tmp_35 ; [#uses=1 type=i31]
+  %tmp_37 = call i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31 %tmp_36, i1 false) ; [#uses=1 type=i32]
+  br label %2, !dbg !735                          ; [debug line = 645:7@681:3]
 
-.preheader33:                                     ; preds = %encode.exit.i, %.preheader33.preheader
-  %i_0_i = phi i32 [ %i_7, %encode.exit.i ], [ 0, %.preheader33.preheader ] ; [#uses=7 type=i32]
-  %tmp_33 = icmp eq i32 %i_0_i, %tmp_32           ; [#uses=1 type=i1]
-  br i1 %tmp_33, label %adpcm_enc_main.exit.loopexit27, label %0, !dbg !718 ; [debug line = 633:7@674:3]
+; <label>:1                                       ; preds = %.preheader
+  %tmp_40 = sext i32 %i_0_i to i64, !dbg !736     ; [#uses=1 type=i64] [debug line = 634:23@678:3]
+  %test_data_addr = getelementptr [3 x i32]* %test_data, i64 0, i64 %tmp_40, !dbg !736 ; [#uses=1 type=i32*] [debug line = 634:23@678:3]
+  %test_data_load = load i32* %test_data_addr, align 4, !dbg !736 ; [#uses=1 type=i32] [debug line = 634:23@678:3]
+  %tmp_41 = or i32 %i_0_i, 1, !dbg !736           ; [#uses=1 type=i32] [debug line = 634:23@678:3]
+  %tmp_42 = sext i32 %tmp_41 to i64, !dbg !736    ; [#uses=1 type=i64] [debug line = 634:23@678:3]
+  %test_data_addr_1 = getelementptr [3 x i32]* %test_data, i64 0, i64 %tmp_42, !dbg !736 ; [#uses=1 type=i32*] [debug line = 634:23@678:3]
+  %test_data_load_1 = load i32* %test_data_addr_1, align 4, !dbg !736 ; [#uses=1 type=i32] [debug line = 634:23@678:3]
+  call void @llvm.dbg.value(metadata !{i32 %test_data_load}, i64 0, metadata !738) nounwind, !dbg !740 ; [debug line = 154:16@634:23@678:3] [debug variable = xin1]
+  call void @llvm.dbg.value(metadata !{i32 %test_data_load_1}, i64 0, metadata !741) nounwind, !dbg !742 ; [debug line = 154:26@634:23@678:3] [debug variable = xin2]
+  %tqmf_load = load i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 0), align 16, !dbg !743 ; [#uses=2 type=i32] [debug line = 167:2@634:23@678:3]
+  %p_shl = call i36 @_ssdm_op_BitConcatenate.i36.i32.i4(i32 %tqmf_load, i4 0), !dbg !743 ; [#uses=1 type=i36] [debug line = 167:2@634:23@678:3]
+  %p_shl_cast = sext i36 %p_shl to i37, !dbg !743 ; [#uses=1 type=i37] [debug line = 167:2@634:23@678:3]
+  %p_shl2 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %tqmf_load, i2 0), !dbg !743 ; [#uses=1 type=i34] [debug line = 167:2@634:23@678:3]
+  %p_shl2_cast = sext i34 %p_shl2 to i37, !dbg !743 ; [#uses=1 type=i37] [debug line = 167:2@634:23@678:3]
+  %xa = sub i37 %p_shl_cast, %p_shl2_cast, !dbg !743 ; [#uses=1 type=i37] [debug line = 167:2@634:23@678:3]
+  %xa_cast = sext i37 %xa to i50, !dbg !743       ; [#uses=1 type=i50] [debug line = 167:2@634:23@678:3]
+  call void @llvm.dbg.value(metadata !{i37 %xa}, i64 0, metadata !745) nounwind, !dbg !743 ; [debug line = 167:2@634:23@678:3] [debug variable = xa]
+  %tqmf_load_1 = load i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 1), align 4, !dbg !746 ; [#uses=1 type=i32] [debug line = 168:2@634:23@678:3]
+  %tmp_65_cast = sext i32 %tqmf_load_1 to i39, !dbg !746 ; [#uses=1 type=i39] [debug line = 168:2@634:23@678:3]
+  %xb = mul i39 %tmp_65_cast, -44, !dbg !746      ; [#uses=1 type=i39] [debug line = 168:2@634:23@678:3]
+  %xb_cast = sext i39 %xb to i50, !dbg !746       ; [#uses=1 type=i50] [debug line = 168:2@634:23@678:3]
+  call void @llvm.dbg.value(metadata !{i39 %xb}, i64 0, metadata !747) nounwind, !dbg !746 ; [debug line = 168:2@634:23@678:3] [debug variable = xb]
+  br label %3, !dbg !748                          ; [debug line = 170:7@634:23@678:3]
 
-.preheader:                                       ; preds = %decode.exit.i, %.preheader.preheader
-  %i_0_i1 = phi i32 [ %i_5, %decode.exit.i ], [ 0, %.preheader.preheader ] ; [#uses=7 type=i32]
-  %tmp_34 = icmp eq i32 %i_0_i1, %tmp_32          ; [#uses=1 type=i1]
-  br i1 %tmp_34, label %adpcm_enc_main.exit.loopexit, label %1, !dbg !720 ; [debug line = 645:7@677:3]
-
-; <label>:0                                       ; preds = %.preheader33
-  %tmp_s = sext i32 %i_0_i to i64, !dbg !726      ; [#uses=1 type=i64] [debug line = 634:23@674:3]
-  %test_data_addr = getelementptr [3 x i32]* %test_data, i64 0, i64 %tmp_s, !dbg !726 ; [#uses=1 type=i32*] [debug line = 634:23@674:3]
-  %test_data_load = load i32* %test_data_addr, align 4, !dbg !726 ; [#uses=1 type=i32] [debug line = 634:23@674:3]
-  %tmp_39 = or i32 %i_0_i, 1, !dbg !726           ; [#uses=1 type=i32] [debug line = 634:23@674:3]
-  %tmp_40 = sext i32 %tmp_39 to i64, !dbg !726    ; [#uses=1 type=i64] [debug line = 634:23@674:3]
-  %test_data_addr_1 = getelementptr [3 x i32]* %test_data, i64 0, i64 %tmp_40, !dbg !726 ; [#uses=1 type=i32*] [debug line = 634:23@674:3]
-  %test_data_load_1 = load i32* %test_data_addr_1, align 4, !dbg !726 ; [#uses=1 type=i32] [debug line = 634:23@674:3]
-  call void @llvm.dbg.value(metadata !{i32 %test_data_load}, i64 0, metadata !728) nounwind, !dbg !730 ; [debug line = 154:16@634:23@674:3] [debug variable = xin1]
-  call void @llvm.dbg.value(metadata !{i32 %test_data_load_1}, i64 0, metadata !731) nounwind, !dbg !732 ; [debug line = 154:26@634:23@674:3] [debug variable = xin2]
-  %tqmf_load = load i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 0), align 16, !dbg !733 ; [#uses=2 type=i32] [debug line = 167:2@634:23@674:3]
-  %p_shl = call i36 @_ssdm_op_BitConcatenate.i36.i32.i4(i32 %tqmf_load, i4 0), !dbg !733 ; [#uses=1 type=i36] [debug line = 167:2@634:23@674:3]
-  %p_shl_cast = sext i36 %p_shl to i37, !dbg !733 ; [#uses=1 type=i37] [debug line = 167:2@634:23@674:3]
-  %p_shl2 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %tqmf_load, i2 0), !dbg !733 ; [#uses=1 type=i34] [debug line = 167:2@634:23@674:3]
-  %p_shl2_cast = sext i34 %p_shl2 to i37, !dbg !733 ; [#uses=1 type=i37] [debug line = 167:2@634:23@674:3]
-  %xa = sub i37 %p_shl_cast, %p_shl2_cast, !dbg !733 ; [#uses=1 type=i37] [debug line = 167:2@634:23@674:3]
-  %xa_cast = sext i37 %xa to i50, !dbg !733       ; [#uses=1 type=i50] [debug line = 167:2@634:23@674:3]
-  call void @llvm.dbg.value(metadata !{i37 %xa}, i64 0, metadata !735) nounwind, !dbg !733 ; [debug line = 167:2@634:23@674:3] [debug variable = xa]
-  %tqmf_load_1 = load i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 1), align 4, !dbg !736 ; [#uses=1 type=i32] [debug line = 168:2@634:23@674:3]
-  %tmp_66_cast = sext i32 %tqmf_load_1 to i39, !dbg !736 ; [#uses=1 type=i39] [debug line = 168:2@634:23@674:3]
-  %xb = mul i39 %tmp_66_cast, -44, !dbg !736      ; [#uses=1 type=i39] [debug line = 168:2@634:23@674:3]
-  %xb_cast = sext i39 %xb to i50, !dbg !736       ; [#uses=1 type=i50] [debug line = 168:2@634:23@674:3]
-  call void @llvm.dbg.value(metadata !{i39 %xb}, i64 0, metadata !737) nounwind, !dbg !736 ; [debug line = 168:2@634:23@674:3] [debug variable = xb]
-  br label %2, !dbg !738                          ; [debug line = 170:7@634:23@674:3]
-
-adpcm_enc_main.exit.loopexit:                     ; preds = %.preheader
+adpcm_enc_main.exit.loopexit:                     ; preds = %2
   br label %adpcm_enc_main.exit
 
-adpcm_enc_main.exit.loopexit27:                   ; preds = %.preheader33
+adpcm_enc_main.exit.loopexit27:                   ; preds = %.preheader
   br label %adpcm_enc_main.exit
 
 adpcm_enc_main.exit:                              ; preds = %adpcm_enc_main.exit.loopexit27, %adpcm_enc_main.exit.loopexit
   ret void
 
-; <label>:1                                       ; preds = %.preheader
-  %tmp_35 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %i_0_i1, i32 31), !dbg !740 ; [#uses=1 type=i1] [debug line = 646:3@677:3]
-  %p_neg1 = sub i32 0, %i_0_i1, !dbg !740         ; [#uses=1 type=i32] [debug line = 646:3@677:3]
-  %p_lshr1 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %p_neg1, i32 1, i32 31), !dbg !740 ; [#uses=1 type=i31] [debug line = 646:3@677:3]
-  %tmp_12 = zext i31 %p_lshr1 to i32, !dbg !740   ; [#uses=1 type=i32] [debug line = 646:3@677:3]
-  %p_neg_t1 = sub i32 0, %tmp_12, !dbg !740       ; [#uses=1 type=i32] [debug line = 646:3@677:3]
-  %p_lshr_f1 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %i_0_i1, i32 1, i32 31), !dbg !740 ; [#uses=1 type=i31] [debug line = 646:3@677:3]
-  %tmp_14 = zext i31 %p_lshr_f1 to i32, !dbg !740 ; [#uses=1 type=i32] [debug line = 646:3@677:3]
-  %tmp_41 = select i1 %tmp_35, i32 %p_neg_t1, i32 %tmp_14, !dbg !740 ; [#uses=1 type=i32] [debug line = 646:3@677:3]
-  %tmp_42 = sext i32 %tmp_41 to i64, !dbg !740    ; [#uses=1 type=i64] [debug line = 646:3@677:3]
-  %compressed_addr = getelementptr [3 x i32]* %compressed, i64 0, i64 %tmp_42, !dbg !740 ; [#uses=1 type=i32*] [debug line = 646:3@677:3]
-  %compressed_load = load i32* %compressed_addr, align 4, !dbg !740 ; [#uses=3 type=i32] [debug line = 646:3@677:3]
-  %tmp_36 = trunc i32 %compressed_load to i6      ; [#uses=2 type=i6]
-  %tmp_69_cast = zext i6 %tmp_36 to i32, !dbg !742 ; [#uses=1 type=i32] [debug line = 314:2@646:3@677:3]
-  call void @llvm.dbg.value(metadata !{i32 %compressed_load}, i64 0, metadata !747) nounwind, !dbg !748 ; [debug line = 304:17@646:3@677:3] [debug variable = input]
-  store i32 %tmp_69_cast, i32* @ilr, align 4, !dbg !742 ; [debug line = 314:2@646:3@677:3]
-  %tmp_15 = call i26 @_ssdm_op_PartSelect.i26.i32.i32.i32(i32 %compressed_load, i32 6, i32 31), !dbg !749 ; [#uses=1 type=i26] [debug line = 315:2@646:3@677:3]
-  %tmp_43 = sext i26 %tmp_15 to i32, !dbg !749    ; [#uses=1 type=i32] [debug line = 315:2@646:3@677:3]
-  store i32 %tmp_43, i32* @ih, align 4, !dbg !749 ; [debug line = 315:2@646:3@677:3]
-  %tmp_16 = call fastcc i32 @filtez([6 x i32]* @dec_del_bpl, [6 x i32]* @dec_del_dltx) nounwind, !dbg !750 ; [#uses=3 type=i32] [debug line = 320:12@646:3@677:3]
-  store i32 %tmp_16, i32* @dec_szl, align 4, !dbg !750 ; [debug line = 320:12@646:3@677:3]
-  %dec_rlt1_load = load i32* @dec_rlt1, align 4, !dbg !751 ; [#uses=1 type=i32] [debug line = 323:12@646:3@677:3]
-  %dec_al1_load = load i32* @dec_al1, align 4, !dbg !751 ; [#uses=1 type=i32] [debug line = 323:12@646:3@677:3]
-  %dec_rlt2_load = load i32* @dec_rlt2, align 4, !dbg !751 ; [#uses=1 type=i32] [debug line = 323:12@646:3@677:3]
-  %dec_al2_load = load i32* @dec_al2, align 4, !dbg !751 ; [#uses=1 type=i32] [debug line = 323:12@646:3@677:3]
-  %tmp_44 = call fastcc i32 @filtep(i32 %dec_rlt1_load, i32 %dec_al1_load, i32 %dec_rlt2_load, i32 %dec_al2_load) nounwind, !dbg !751 ; [#uses=2 type=i32] [debug line = 323:12@646:3@677:3]
-  %tmp_45 = add nsw i32 %tmp_44, %tmp_16, !dbg !752 ; [#uses=2 type=i32] [debug line = 325:2@646:3@677:3]
-  store i32 %tmp_44, i32* @dec_spl, align 4, !dbg !751 ; [debug line = 323:12@646:3@677:3]
-  store i32 %tmp_45, i32* @dec_sl, align 4, !dbg !752 ; [debug line = 325:2@646:3@677:3]
-  %dec_detl_load = load i32* @dec_detl, align 4, !dbg !753 ; [#uses=1 type=i32] [debug line = 328:2@646:3@677:3]
-  %tmp_73_cast = sext i32 %dec_detl_load to i47, !dbg !753 ; [#uses=2 type=i47] [debug line = 328:2@646:3@677:3]
-  %tmp_18 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %compressed_load, i32 2, i32 5), !dbg !753 ; [#uses=1 type=i4] [debug line = 328:2@646:3@677:3]
-  %tmp_46 = zext i4 %tmp_18 to i64, !dbg !753     ; [#uses=1 type=i64] [debug line = 328:2@646:3@677:3]
-  %qq4_code4_table_addr = getelementptr [16 x i16]* @qq4_code4_table, i64 0, i64 %tmp_46, !dbg !753 ; [#uses=1 type=i16*] [debug line = 328:2@646:3@677:3]
-  %qq4_code4_table_load = load i16* %qq4_code4_table_addr, align 2, !dbg !753 ; [#uses=1 type=i16] [debug line = 328:2@646:3@677:3]
-  %tmp_75_cast = sext i16 %qq4_code4_table_load to i47, !dbg !753 ; [#uses=1 type=i47] [debug line = 328:2@646:3@677:3]
-  %tmp_47 = mul i47 %tmp_75_cast, %tmp_73_cast, !dbg !753 ; [#uses=1 type=i47] [debug line = 328:2@646:3@677:3]
-  %tmp_48 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_47, i32 15, i32 46), !dbg !753 ; [#uses=3 type=i32] [debug line = 328:2@646:3@677:3]
-  %tmp_49 = add nsw i32 %tmp_48, %tmp_16, !dbg !754 ; [#uses=1 type=i32] [debug line = 343:2@646:3@677:3]
-  store i32 %tmp_48, i32* @dec_dlt, align 4, !dbg !753 ; [debug line = 328:2@646:3@677:3]
-  %il_load = load i32* @il, align 4, !dbg !755    ; [#uses=1 type=i32] [debug line = 331:2@646:3@677:3]
-  %tmp_50 = sext i32 %il_load to i64, !dbg !755   ; [#uses=1 type=i64] [debug line = 331:2@646:3@677:3]
-  %qq6_code6_table_addr = getelementptr [64 x i16]* @qq6_code6_table, i64 0, i64 %tmp_50, !dbg !755 ; [#uses=1 type=i16*] [debug line = 331:2@646:3@677:3]
-  %qq6_code6_table_load = load i16* %qq6_code6_table_addr, align 2, !dbg !755 ; [#uses=1 type=i16] [debug line = 331:2@646:3@677:3]
-  %tmp_80_cast = sext i16 %qq6_code6_table_load to i47, !dbg !755 ; [#uses=1 type=i47] [debug line = 331:2@646:3@677:3]
-  %tmp_51 = mul i47 %tmp_80_cast, %tmp_73_cast, !dbg !755 ; [#uses=1 type=i47] [debug line = 331:2@646:3@677:3]
-  %tmp_52 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_51, i32 15, i32 46), !dbg !755 ; [#uses=2 type=i32] [debug line = 331:2@646:3@677:3]
-  %tmp_53 = add nsw i32 %tmp_45, %tmp_52, !dbg !756 ; [#uses=1 type=i32] [debug line = 333:2@646:3@677:3]
-  store i32 %tmp_52, i32* @dl, align 4, !dbg !755 ; [debug line = 331:2@646:3@677:3]
-  store i32 %tmp_53, i32* @rl, align 4, !dbg !756 ; [debug line = 333:2@646:3@677:3]
-  %dec_nbl_load = load i32* @dec_nbl, align 4, !dbg !757 ; [#uses=1 type=i32] [debug line = 336:12@646:3@677:3]
-  %tmp_54 = call fastcc i15 @logscl(i6 %tmp_36, i32 %dec_nbl_load) nounwind, !dbg !757 ; [#uses=2 type=i15] [debug line = 336:12@646:3@677:3]
-  %tmp_85_ext = zext i15 %tmp_54 to i32, !dbg !757 ; [#uses=1 type=i32] [debug line = 336:12@646:3@677:3]
-  store i32 %tmp_85_ext, i32* @dec_nbl, align 4, !dbg !757 ; [debug line = 336:12@646:3@677:3]
-  %tmp_55 = call fastcc i15 @scalel(i15 %tmp_54, i5 8) nounwind, !dbg !758 ; [#uses=1 type=i15] [debug line = 339:13@646:3@677:3]
-  %p_trunc45_ext = zext i15 %tmp_55 to i32, !dbg !758 ; [#uses=1 type=i32] [debug line = 339:13@646:3@677:3]
-  store i32 %p_trunc45_ext, i32* @dec_detl, align 4, !dbg !758 ; [debug line = 339:13@646:3@677:3]
-  store i32 %tmp_49, i32* @dec_plt, align 4, !dbg !754 ; [debug line = 343:2@646:3@677:3]
-  call fastcc void @upzero(i32 %tmp_48, [6 x i32]* @dec_del_dltx, [6 x i32]* @dec_del_bpl) nounwind, !dbg !759 ; [debug line = 346:2@646:3@677:3]
-  %dec_al1_load_1 = load i32* @dec_al1, align 4, !dbg !760 ; [#uses=2 type=i32] [debug line = 349:12@646:3@677:3]
-  %dec_al2_load_1 = load i32* @dec_al2, align 4, !dbg !760 ; [#uses=1 type=i32] [debug line = 349:12@646:3@677:3]
-  %dec_plt_load = load i32* @dec_plt, align 4, !dbg !760 ; [#uses=3 type=i32] [debug line = 349:12@646:3@677:3]
-  %dec_plt1_load = load i32* @dec_plt1, align 4, !dbg !760 ; [#uses=3 type=i32] [debug line = 349:12@646:3@677:3]
-  %dec_plt2_load = load i32* @dec_plt2, align 4, !dbg !760 ; [#uses=1 type=i32] [debug line = 349:12@646:3@677:3]
-  %tmp_56 = call fastcc i15 @uppol2(i32 %dec_al1_load_1, i32 %dec_al2_load_1, i32 %dec_plt_load, i32 %dec_plt1_load, i32 %dec_plt2_load) nounwind, !dbg !760 ; [#uses=2 type=i15] [debug line = 349:12@646:3@677:3]
-  %tmp_88_ext = sext i15 %tmp_56 to i32, !dbg !760 ; [#uses=1 type=i32] [debug line = 349:12@646:3@677:3]
-  store i32 %tmp_88_ext, i32* @dec_al2, align 4, !dbg !760 ; [debug line = 349:12@646:3@677:3]
-  %tmp_57 = call fastcc i16 @uppol1(i32 %dec_al1_load_1, i15 %tmp_56, i32 %dec_plt_load, i32 %dec_plt1_load) nounwind, !dbg !761 ; [#uses=1 type=i16] [debug line = 352:12@646:3@677:3]
-  %p_trunc_ext1 = sext i16 %tmp_57 to i32, !dbg !761 ; [#uses=1 type=i32] [debug line = 352:12@646:3@677:3]
-  store i32 %p_trunc_ext1, i32* @dec_al1, align 4, !dbg !761 ; [debug line = 352:12@646:3@677:3]
-  %dec_sl_load = load i32* @dec_sl, align 4, !dbg !762 ; [#uses=1 type=i32] [debug line = 355:2@646:3@677:3]
-  %dec_dlt_load = load i32* @dec_dlt, align 4, !dbg !762 ; [#uses=1 type=i32] [debug line = 355:2@646:3@677:3]
-  %tmp_58 = add nsw i32 %dec_sl_load, %dec_dlt_load, !dbg !762 ; [#uses=2 type=i32] [debug line = 355:2@646:3@677:3]
-  store i32 %tmp_58, i32* @dec_rlt, align 4, !dbg !762 ; [debug line = 355:2@646:3@677:3]
-  %dec_rlt1_load_1 = load i32* @dec_rlt1, align 4, !dbg !763 ; [#uses=1 type=i32] [debug line = 358:2@646:3@677:3]
-  store i32 %dec_rlt1_load_1, i32* @dec_rlt2, align 4, !dbg !763 ; [debug line = 358:2@646:3@677:3]
-  store i32 %tmp_58, i32* @dec_rlt1, align 4, !dbg !764 ; [debug line = 359:2@646:3@677:3]
-  store i32 %dec_plt1_load, i32* @dec_plt2, align 4, !dbg !765 ; [debug line = 360:2@646:3@677:3]
-  store i32 %dec_plt_load, i32* @dec_plt1, align 4, !dbg !766 ; [debug line = 361:2@646:3@677:3]
-  %tmp_19 = call fastcc i32 @filtez([6 x i32]* @dec_del_bph, [6 x i32]* @dec_del_dhx) nounwind, !dbg !767 ; [#uses=3 type=i32] [debug line = 366:12@646:3@677:3]
-  store i32 %tmp_19, i32* @dec_szh, align 4, !dbg !767 ; [debug line = 366:12@646:3@677:3]
-  %dec_rh1_load = load i32* @dec_rh1, align 4, !dbg !768 ; [#uses=1 type=i32] [debug line = 369:12@646:3@677:3]
-  %dec_ah1_load = load i32* @dec_ah1, align 4, !dbg !768 ; [#uses=1 type=i32] [debug line = 369:12@646:3@677:3]
-  %dec_rh2_load = load i32* @dec_rh2, align 4, !dbg !768 ; [#uses=1 type=i32] [debug line = 369:12@646:3@677:3]
-  %dec_ah2_load = load i32* @dec_ah2, align 4, !dbg !768 ; [#uses=1 type=i32] [debug line = 369:12@646:3@677:3]
-  %tmp_59 = call fastcc i32 @filtep(i32 %dec_rh1_load, i32 %dec_ah1_load, i32 %dec_rh2_load, i32 %dec_ah2_load) nounwind, !dbg !768 ; [#uses=2 type=i32] [debug line = 369:12@646:3@677:3]
-  %tmp_60 = add nsw i32 %tmp_59, %tmp_19, !dbg !769 ; [#uses=1 type=i32] [debug line = 372:2@646:3@677:3]
-  store i32 %tmp_59, i32* @dec_sph, align 4, !dbg !768 ; [debug line = 369:12@646:3@677:3]
-  store i32 %tmp_60, i32* @dec_sh, align 4, !dbg !769 ; [debug line = 372:2@646:3@677:3]
-  %dec_deth_load = load i32* @dec_deth, align 4, !dbg !770 ; [#uses=1 type=i32] [debug line = 375:2@646:3@677:3]
-  %tmp_93_cast = sext i32 %dec_deth_load to i45, !dbg !770 ; [#uses=1 type=i45] [debug line = 375:2@646:3@677:3]
-  %ih_load = load i32* @ih, align 4, !dbg !770    ; [#uses=2 type=i32] [debug line = 375:2@646:3@677:3]
-  %tmp_61 = sext i32 %ih_load to i64, !dbg !770   ; [#uses=1 type=i64] [debug line = 375:2@646:3@677:3]
-  %qq2_code2_table_addr = getelementptr [4 x i14]* @qq2_code2_table, i64 0, i64 %tmp_61, !dbg !770 ; [#uses=1 type=i14*] [debug line = 375:2@646:3@677:3]
-  %qq2_code2_table_load = load i14* %qq2_code2_table_addr, align 2, !dbg !770 ; [#uses=1 type=i14] [debug line = 375:2@646:3@677:3]
-  %tmp_95_cast = sext i14 %qq2_code2_table_load to i45, !dbg !770 ; [#uses=1 type=i45] [debug line = 375:2@646:3@677:3]
-  %tmp_62 = mul i45 %tmp_95_cast, %tmp_93_cast, !dbg !770 ; [#uses=1 type=i45] [debug line = 375:2@646:3@677:3]
-  %tmp_10 = call i30 @_ssdm_op_PartSelect.i30.i45.i32.i32(i45 %tmp_62, i32 15, i32 44), !dbg !770 ; [#uses=1 type=i30] [debug line = 375:2@646:3@677:3]
-  %tmp_11 = sext i30 %tmp_10 to i32, !dbg !770    ; [#uses=3 type=i32] [debug line = 375:2@646:3@677:3]
-  %tmp_63 = add nsw i32 %tmp_11, %tmp_19, !dbg !771 ; [#uses=1 type=i32] [debug line = 384:2@646:3@677:3]
-  store i32 %tmp_11, i32* @dec_dh, align 4, !dbg !770 ; [debug line = 375:2@646:3@677:3]
-  %dec_nbh_load = load i32* @dec_nbh, align 4, !dbg !772 ; [#uses=1 type=i32] [debug line = 378:12@646:3@677:3]
-  %tmp_64 = call fastcc i15 @logsch(i32 %ih_load, i32 %dec_nbh_load) nounwind, !dbg !772 ; [#uses=2 type=i15] [debug line = 378:12@646:3@677:3]
-  %tmp_99_ext = zext i15 %tmp_64 to i32, !dbg !772 ; [#uses=1 type=i32] [debug line = 378:12@646:3@677:3]
-  store i32 %tmp_99_ext, i32* @dec_nbh, align 4, !dbg !772 ; [debug line = 378:12@646:3@677:3]
-  %tmp_65 = call fastcc i15 @scalel(i15 %tmp_64, i5 10) nounwind, !dbg !773 ; [#uses=1 type=i15] [debug line = 381:13@646:3@677:3]
-  %p_trunc46_ext = zext i15 %tmp_65 to i32, !dbg !773 ; [#uses=1 type=i32] [debug line = 381:13@646:3@677:3]
-  store i32 %p_trunc46_ext, i32* @dec_deth, align 4, !dbg !773 ; [debug line = 381:13@646:3@677:3]
-  store i32 %tmp_63, i32* @dec_ph, align 4, !dbg !771 ; [debug line = 384:2@646:3@677:3]
-  call fastcc void @upzero(i32 %tmp_11, [6 x i32]* @dec_del_dhx, [6 x i32]* @dec_del_bph) nounwind, !dbg !774 ; [debug line = 387:2@646:3@677:3]
-  %dec_ah1_load_1 = load i32* @dec_ah1, align 4, !dbg !775 ; [#uses=2 type=i32] [debug line = 390:12@646:3@677:3]
-  %dec_ah2_load_1 = load i32* @dec_ah2, align 4, !dbg !775 ; [#uses=1 type=i32] [debug line = 390:12@646:3@677:3]
-  %dec_ph_load = load i32* @dec_ph, align 4, !dbg !775 ; [#uses=3 type=i32] [debug line = 390:12@646:3@677:3]
-  %dec_ph1_load = load i32* @dec_ph1, align 4, !dbg !775 ; [#uses=3 type=i32] [debug line = 390:12@646:3@677:3]
-  %dec_ph2_load = load i32* @dec_ph2, align 4, !dbg !775 ; [#uses=1 type=i32] [debug line = 390:12@646:3@677:3]
-  %tmp_66 = call fastcc i15 @uppol2(i32 %dec_ah1_load_1, i32 %dec_ah2_load_1, i32 %dec_ph_load, i32 %dec_ph1_load, i32 %dec_ph2_load) nounwind, !dbg !775 ; [#uses=2 type=i15] [debug line = 390:12@646:3@677:3]
-  %tmp_102_ext = sext i15 %tmp_66 to i32, !dbg !775 ; [#uses=1 type=i32] [debug line = 390:12@646:3@677:3]
-  store i32 %tmp_102_ext, i32* @dec_ah2, align 4, !dbg !775 ; [debug line = 390:12@646:3@677:3]
-  %tmp_67 = call fastcc i16 @uppol1(i32 %dec_ah1_load_1, i15 %tmp_66, i32 %dec_ph_load, i32 %dec_ph1_load) nounwind, !dbg !776 ; [#uses=1 type=i16] [debug line = 393:12@646:3@677:3]
-  %p_trunc2_ext = sext i16 %tmp_67 to i32, !dbg !776 ; [#uses=1 type=i32] [debug line = 393:12@646:3@677:3]
-  store i32 %p_trunc2_ext, i32* @dec_ah1, align 4, !dbg !776 ; [debug line = 393:12@646:3@677:3]
-  %dec_sh_load = load i32* @dec_sh, align 4, !dbg !777 ; [#uses=1 type=i32] [debug line = 396:2@646:3@677:3]
-  %dec_dh_load = load i32* @dec_dh, align 4, !dbg !777 ; [#uses=1 type=i32] [debug line = 396:2@646:3@677:3]
-  %tmp_68 = add nsw i32 %dec_sh_load, %dec_dh_load, !dbg !777 ; [#uses=4 type=i32] [debug line = 396:2@646:3@677:3]
-  store i32 %tmp_68, i32* @rh, align 4, !dbg !777 ; [debug line = 396:2@646:3@677:3]
-  %dec_rh1_load_1 = load i32* @dec_rh1, align 4, !dbg !778 ; [#uses=1 type=i32] [debug line = 399:2@646:3@677:3]
-  store i32 %dec_rh1_load_1, i32* @dec_rh2, align 4, !dbg !778 ; [debug line = 399:2@646:3@677:3]
-  store i32 %tmp_68, i32* @dec_rh1, align 4, !dbg !779 ; [debug line = 400:2@646:3@677:3]
-  store i32 %dec_ph1_load, i32* @dec_ph2, align 4, !dbg !780 ; [debug line = 401:2@646:3@677:3]
-  store i32 %dec_ph_load, i32* @dec_ph1, align 4, !dbg !781 ; [debug line = 402:2@646:3@677:3]
-  %rl_load = load i32* @rl, align 4, !dbg !782    ; [#uses=2 type=i32] [debug line = 407:2@646:3@677:3]
-  %tmp_69 = add nsw i32 %tmp_68, %rl_load, !dbg !783 ; [#uses=3 type=i32] [debug line = 408:2@646:3@677:3]
-  %tmp_108_cast = sext i32 %tmp_69 to i39, !dbg !784 ; [#uses=1 type=i39] [debug line = 415:2@646:3@677:3]
-  %tmp_70 = sub nsw i32 %rl_load, %tmp_68, !dbg !782 ; [#uses=4 type=i32] [debug line = 407:2@646:3@677:3]
-  store i32 %tmp_70, i32* @xd, align 4, !dbg !782 ; [debug line = 407:2@646:3@677:3]
-  store i32 %tmp_69, i32* @xs, align 4, !dbg !783 ; [debug line = 408:2@646:3@677:3]
-  %p_shl3 = call i36 @_ssdm_op_BitConcatenate.i36.i32.i4(i32 %tmp_70, i4 0), !dbg !785 ; [#uses=1 type=i36] [debug line = 414:2@646:3@677:3]
-  %p_shl3_cast = sext i36 %p_shl3 to i37, !dbg !785 ; [#uses=1 type=i37] [debug line = 414:2@646:3@677:3]
-  %p_shl4 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %tmp_70, i2 0), !dbg !785 ; [#uses=1 type=i34] [debug line = 414:2@646:3@677:3]
-  %p_shl4_cast = sext i34 %p_shl4 to i37, !dbg !785 ; [#uses=1 type=i37] [debug line = 414:2@646:3@677:3]
-  %xa1 = sub i37 %p_shl3_cast, %p_shl4_cast, !dbg !785 ; [#uses=1 type=i37] [debug line = 414:2@646:3@677:3]
-  %xa1_cast = sext i37 %xa1 to i50, !dbg !785     ; [#uses=1 type=i50] [debug line = 414:2@646:3@677:3]
-  call void @llvm.dbg.value(metadata !{i37 %xa1}, i64 0, metadata !786) nounwind, !dbg !785 ; [debug line = 414:2@646:3@677:3] [debug variable = xa1]
-  %xa2 = mul i39 -44, %tmp_108_cast, !dbg !784    ; [#uses=1 type=i39] [debug line = 415:2@646:3@677:3]
-  %xa2_cast = sext i39 %xa2 to i50, !dbg !784     ; [#uses=1 type=i50] [debug line = 415:2@646:3@677:3]
-  call void @llvm.dbg.value(metadata !{i39 %xa2}, i64 0, metadata !787) nounwind, !dbg !784 ; [debug line = 415:2@646:3@677:3] [debug variable = xa2]
-  br label %9, !dbg !788                          ; [debug line = 417:7@646:3@677:3]
+; <label>:2                                       ; preds = %18, %0
+  %i_0_i1 = phi i32 [ 0, %0 ], [ %i_7, %18 ]      ; [#uses=8 type=i32]
+  %tmp_39 = icmp eq i32 %i_0_i1, %tmp_37          ; [#uses=1 type=i1]
+  br i1 %tmp_39, label %adpcm_enc_main.exit.loopexit, label %4, !dbg !735 ; [debug line = 645:7@681:3]
 
-; <label>:2                                       ; preds = %4, %0
-  %tqmf_ptr_0_rec_i_i = phi i5 [ 2, %0 ], [ %phitmp_i_i, %4 ] ; [#uses=3 type=i5]
-  %i_0_i_i = phi i4 [ 0, %0 ], [ %i, %4 ]         ; [#uses=2 type=i4]
-  %xa_0_i_i = phi i50 [ %xa_cast, %0 ], [ %xa_2, %4 ] ; [#uses=2 type=i50]
-  %xb_0_i_i = phi i50 [ %xb_cast, %0 ], [ %xb_2, %4 ] ; [#uses=2 type=i50]
+; <label>:3                                       ; preds = %6, %1
+  %tqmf_ptr_0_rec_i_i = phi i5 [ 2, %1 ], [ %phitmp_i_i, %6 ] ; [#uses=3 type=i5]
+  %i_0_i_i = phi i4 [ 0, %1 ], [ %i, %6 ]         ; [#uses=2 type=i4]
+  %xa_0_i_i = phi i50 [ %xa_cast, %1 ], [ %xa_2, %6 ] ; [#uses=2 type=i50]
+  %xb_0_i_i = phi i50 [ %xb_cast, %1 ], [ %xb_2, %6 ] ; [#uses=2 type=i50]
   %tqmf_ptr_0_rec_i_i_c = zext i5 %tqmf_ptr_0_rec_i_i to i64 ; [#uses=2 type=i64]
   %h_addr = getelementptr [24 x i15]* @h, i64 0, i64 %tqmf_ptr_0_rec_i_i_c ; [#uses=1 type=i15*]
   %tqmf_addr = getelementptr [24 x i32]* @tqmf, i64 0, i64 %tqmf_ptr_0_rec_i_i_c ; [#uses=1 type=i32*]
-  %exitcond2_i_i = icmp eq i4 %i_0_i_i, -6, !dbg !738 ; [#uses=1 type=i1] [debug line = 170:7@634:23@674:3]
+  %exitcond2_i_i = icmp eq i4 %i_0_i_i, -6, !dbg !748 ; [#uses=1 type=i1] [debug line = 170:7@634:23@678:3]
   %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind ; [#uses=0 type=i32]
-  %i = add i4 %i_0_i_i, 1, !dbg !790              ; [#uses=1 type=i4] [debug line = 170:22@634:23@674:3]
-  br i1 %exitcond2_i_i, label %3, label %4, !dbg !738 ; [debug line = 170:7@634:23@674:3]
-
-; <label>:3                                       ; preds = %2
-  %tmp_37 = trunc i50 %xb_0_i_i to i47            ; [#uses=1 type=i47]
-  %tmp_38 = trunc i50 %xa_0_i_i to i47            ; [#uses=1 type=i47]
-  %tqmf_load_2 = load i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 22), align 8, !dbg !791 ; [#uses=1 type=i32] [debug line = 175:2@634:23@674:3]
-  %tmp_109_cast = sext i32 %tqmf_load_2 to i39, !dbg !791 ; [#uses=1 type=i39] [debug line = 175:2@634:23@674:3]
-  %tmp_71 = mul i39 -44, %tmp_109_cast, !dbg !791 ; [#uses=1 type=i39] [debug line = 175:2@634:23@674:3]
-  %tmp_110_cast = sext i39 %tmp_71 to i47, !dbg !791 ; [#uses=1 type=i47] [debug line = 175:2@634:23@674:3]
-  %xa_1 = add i47 %tmp_38, %tmp_110_cast, !dbg !791 ; [#uses=2 type=i47] [debug line = 175:2@634:23@674:3]
-  call void @llvm.dbg.value(metadata !{i47 %xa_1}, i64 0, metadata !735) nounwind, !dbg !791 ; [debug line = 175:2@634:23@674:3] [debug variable = xa]
-  %tqmf_load_3 = load i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 23), align 4, !dbg !792 ; [#uses=2 type=i32] [debug line = 176:2@634:23@674:3]
-  %p_shl5 = call i36 @_ssdm_op_BitConcatenate.i36.i32.i4(i32 %tqmf_load_3, i4 0), !dbg !792 ; [#uses=1 type=i36] [debug line = 176:2@634:23@674:3]
-  %p_shl5_cast = sext i36 %p_shl5 to i37, !dbg !792 ; [#uses=1 type=i37] [debug line = 176:2@634:23@674:3]
-  %p_shl6 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %tqmf_load_3, i2 0), !dbg !792 ; [#uses=1 type=i34] [debug line = 176:2@634:23@674:3]
-  %p_shl6_cast = sext i34 %p_shl6 to i37, !dbg !792 ; [#uses=1 type=i37] [debug line = 176:2@634:23@674:3]
-  %tmp_72 = sub i37 %p_shl5_cast, %p_shl6_cast, !dbg !792 ; [#uses=1 type=i37] [debug line = 176:2@634:23@674:3]
-  %tmp_112_cast = sext i37 %tmp_72 to i47, !dbg !792 ; [#uses=1 type=i47] [debug line = 176:2@634:23@674:3]
-  %xb_1 = add i47 %tmp_37, %tmp_112_cast, !dbg !792 ; [#uses=2 type=i47] [debug line = 176:2@634:23@674:3]
-  call void @llvm.dbg.value(metadata !{i47 %xb_1}, i64 0, metadata !737) nounwind, !dbg !792 ; [debug line = 176:2@634:23@674:3] [debug variable = xb]
-  br label %5, !dbg !793                          ; [debug line = 180:7@634:23@674:3]
+  %i = add i4 %i_0_i_i, 1, !dbg !750              ; [#uses=1 type=i4] [debug line = 170:22@634:23@678:3]
+  br i1 %exitcond2_i_i, label %5, label %6, !dbg !748 ; [debug line = 170:7@634:23@678:3]
 
 ; <label>:4                                       ; preds = %2
-  %tqmf_ptr_0_sum67_i_i = or i5 %tqmf_ptr_0_rec_i_i, 1, !dbg !795 ; [#uses=1 type=i5] [debug line = 171:3@634:23@674:3]
-  %tqmf_ptr_0_sum67_i_i_1 = zext i5 %tqmf_ptr_0_sum67_i_i to i64, !dbg !795 ; [#uses=2 type=i64] [debug line = 171:3@634:23@674:3]
-  %tqmf_ptr = getelementptr [24 x i32]* @tqmf, i64 0, i64 %tqmf_ptr_0_sum67_i_i_1, !dbg !795 ; [#uses=1 type=i32*] [debug line = 171:3@634:23@674:3]
-  call void @llvm.dbg.value(metadata !{i32* %tqmf_ptr}, i64 0, metadata !797) nounwind, !dbg !795 ; [debug line = 171:3@634:23@674:3] [debug variable = tqmf_ptr]
-  %tqmf_load_4 = load i32* %tqmf_addr, align 8, !dbg !795 ; [#uses=1 type=i32] [debug line = 171:3@634:23@674:3]
-  %tmp_113_cast = sext i32 %tqmf_load_4 to i46, !dbg !795 ; [#uses=1 type=i46] [debug line = 171:3@634:23@674:3]
-  %h_ptr = getelementptr [24 x i15]* @h, i64 0, i64 %tqmf_ptr_0_sum67_i_i_1, !dbg !795 ; [#uses=1 type=i15*] [debug line = 171:3@634:23@674:3]
-  call void @llvm.dbg.value(metadata !{i15* %h_ptr}, i64 0, metadata !798) nounwind, !dbg !795 ; [debug line = 171:3@634:23@674:3] [debug variable = h_ptr]
-  %h_load = load i15* %h_addr, align 4, !dbg !795 ; [#uses=1 type=i15] [debug line = 171:3@634:23@674:3]
-  %tmp_114_cast = sext i15 %h_load to i46, !dbg !795 ; [#uses=1 type=i46] [debug line = 171:3@634:23@674:3]
-  %tmp_73 = mul i46 %tmp_113_cast, %tmp_114_cast, !dbg !795 ; [#uses=1 type=i46] [debug line = 171:3@634:23@674:3]
-  %tmp_115_cast = sext i46 %tmp_73 to i50, !dbg !795 ; [#uses=1 type=i50] [debug line = 171:3@634:23@674:3]
-  %xa_2 = add i50 %tmp_115_cast, %xa_0_i_i, !dbg !795 ; [#uses=1 type=i50] [debug line = 171:3@634:23@674:3]
-  call void @llvm.dbg.value(metadata !{i50 %xa_2}, i64 0, metadata !735) nounwind, !dbg !795 ; [debug line = 171:3@634:23@674:3] [debug variable = xa]
-  %tqmf_ptr_load = load i32* %tqmf_ptr, align 4, !dbg !801 ; [#uses=1 type=i32] [debug line = 172:3@634:23@674:3]
-  %tmp_116_cast = sext i32 %tqmf_ptr_load to i46, !dbg !801 ; [#uses=1 type=i46] [debug line = 172:3@634:23@674:3]
-  %h_ptr_load = load i15* %h_ptr, align 2, !dbg !801 ; [#uses=1 type=i15] [debug line = 172:3@634:23@674:3]
-  %tmp_117_cast = sext i15 %h_ptr_load to i46, !dbg !801 ; [#uses=1 type=i46] [debug line = 172:3@634:23@674:3]
-  %tmp_74 = mul i46 %tmp_116_cast, %tmp_117_cast, !dbg !801 ; [#uses=1 type=i46] [debug line = 172:3@634:23@674:3]
-  %tmp_118_cast = sext i46 %tmp_74 to i50, !dbg !801 ; [#uses=1 type=i50] [debug line = 172:3@634:23@674:3]
-  %xb_2 = add i50 %tmp_118_cast, %xb_0_i_i, !dbg !801 ; [#uses=1 type=i50] [debug line = 172:3@634:23@674:3]
-  call void @llvm.dbg.value(metadata !{i50 %xb_2}, i64 0, metadata !737) nounwind, !dbg !801 ; [debug line = 172:3@634:23@674:3] [debug variable = xb]
-  call void @llvm.dbg.value(metadata !{i4 %i}, i64 0, metadata !802) nounwind, !dbg !790 ; [debug line = 170:22@634:23@674:3] [debug variable = i]
-  %phitmp_i_i = add i5 %tqmf_ptr_0_rec_i_i, 2, !dbg !790 ; [#uses=1 type=i5] [debug line = 170:22@634:23@674:3]
-  br label %2, !dbg !790                          ; [debug line = 170:22@634:23@674:3]
+  %tmp_43 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %i_0_i1, i32 31), !dbg !751 ; [#uses=1 type=i1] [debug line = 646:3@681:3]
+  %p_neg1 = sub i32 0, %i_0_i1, !dbg !751         ; [#uses=1 type=i32] [debug line = 646:3@681:3]
+  %p_lshr1 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %p_neg1, i32 1, i32 31), !dbg !751 ; [#uses=1 type=i31] [debug line = 646:3@681:3]
+  %tmp_12 = zext i31 %p_lshr1 to i32, !dbg !751   ; [#uses=1 type=i32] [debug line = 646:3@681:3]
+  %p_neg_t1 = sub i32 0, %tmp_12, !dbg !751       ; [#uses=1 type=i32] [debug line = 646:3@681:3]
+  %p_lshr_f1 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %i_0_i1, i32 1, i32 31), !dbg !751 ; [#uses=1 type=i31] [debug line = 646:3@681:3]
+  %tmp_14 = zext i31 %p_lshr_f1 to i32, !dbg !751 ; [#uses=1 type=i32] [debug line = 646:3@681:3]
+  %tmp_44 = select i1 %tmp_43, i32 %p_neg_t1, i32 %tmp_14, !dbg !751 ; [#uses=1 type=i32] [debug line = 646:3@681:3]
+  %tmp_45 = sext i32 %tmp_44 to i64, !dbg !751    ; [#uses=1 type=i64] [debug line = 646:3@681:3]
+  %compressed_addr = getelementptr [3 x i32]* %compressed, i64 0, i64 %tmp_45, !dbg !751 ; [#uses=1 type=i32*] [debug line = 646:3@681:3]
+  %compressed_load = load i32* %compressed_addr, align 4, !dbg !751 ; [#uses=3 type=i32] [debug line = 646:3@681:3]
+  %tmp_46 = trunc i32 %compressed_load to i6      ; [#uses=2 type=i6]
+  %tmp_69_cast = zext i6 %tmp_46 to i32, !dbg !752 ; [#uses=1 type=i32] [debug line = 314:2@646:3@681:3]
+  call void @llvm.dbg.value(metadata !{i32 %compressed_load}, i64 0, metadata !757) nounwind, !dbg !758 ; [debug line = 304:17@646:3@681:3] [debug variable = input]
+  store i32 %tmp_69_cast, i32* @ilr, align 4, !dbg !752 ; [debug line = 314:2@646:3@681:3]
+  %tmp_15 = call i26 @_ssdm_op_PartSelect.i26.i32.i32.i32(i32 %compressed_load, i32 6, i32 31), !dbg !759 ; [#uses=1 type=i26] [debug line = 315:2@646:3@681:3]
+  %tmp_47 = sext i26 %tmp_15 to i32, !dbg !759    ; [#uses=1 type=i32] [debug line = 315:2@646:3@681:3]
+  store i32 %tmp_47, i32* @ih, align 4, !dbg !759 ; [debug line = 315:2@646:3@681:3]
+  %tmp_16 = call fastcc i32 @filtez([6 x i32]* @dec_del_bpl, [6 x i32]* @dec_del_dltx) nounwind, !dbg !760 ; [#uses=3 type=i32] [debug line = 320:12@646:3@681:3]
+  store i32 %tmp_16, i32* @dec_szl, align 4, !dbg !760 ; [debug line = 320:12@646:3@681:3]
+  %dec_rlt1_load = load i32* @dec_rlt1, align 4, !dbg !761 ; [#uses=1 type=i32] [debug line = 323:12@646:3@681:3]
+  %dec_al1_load = load i32* @dec_al1, align 4, !dbg !761 ; [#uses=1 type=i32] [debug line = 323:12@646:3@681:3]
+  %dec_rlt2_load = load i32* @dec_rlt2, align 4, !dbg !761 ; [#uses=1 type=i32] [debug line = 323:12@646:3@681:3]
+  %dec_al2_load = load i32* @dec_al2, align 4, !dbg !761 ; [#uses=1 type=i32] [debug line = 323:12@646:3@681:3]
+  %tmp_48 = call fastcc i32 @filtep(i32 %dec_rlt1_load, i32 %dec_al1_load, i32 %dec_rlt2_load, i32 %dec_al2_load) nounwind, !dbg !761 ; [#uses=2 type=i32] [debug line = 323:12@646:3@681:3]
+  %tmp_49 = add nsw i32 %tmp_48, %tmp_16, !dbg !762 ; [#uses=2 type=i32] [debug line = 325:2@646:3@681:3]
+  store i32 %tmp_48, i32* @dec_spl, align 4, !dbg !761 ; [debug line = 323:12@646:3@681:3]
+  store i32 %tmp_49, i32* @dec_sl, align 4, !dbg !762 ; [debug line = 325:2@646:3@681:3]
+  %dec_detl_load = load i32* @dec_detl, align 4, !dbg !763 ; [#uses=1 type=i32] [debug line = 328:2@646:3@681:3]
+  %tmp_73_cast = sext i32 %dec_detl_load to i47, !dbg !763 ; [#uses=2 type=i47] [debug line = 328:2@646:3@681:3]
+  %tmp_18 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %compressed_load, i32 2, i32 5), !dbg !763 ; [#uses=1 type=i4] [debug line = 328:2@646:3@681:3]
+  %tmp_50 = zext i4 %tmp_18 to i64, !dbg !763     ; [#uses=1 type=i64] [debug line = 328:2@646:3@681:3]
+  %qq4_code4_table_addr = getelementptr [16 x i16]* @qq4_code4_table, i64 0, i64 %tmp_50, !dbg !763 ; [#uses=1 type=i16*] [debug line = 328:2@646:3@681:3]
+  %qq4_code4_table_load = load i16* %qq4_code4_table_addr, align 2, !dbg !763 ; [#uses=1 type=i16] [debug line = 328:2@646:3@681:3]
+  %tmp_75_cast = sext i16 %qq4_code4_table_load to i47, !dbg !763 ; [#uses=1 type=i47] [debug line = 328:2@646:3@681:3]
+  %tmp_51 = mul i47 %tmp_75_cast, %tmp_73_cast, !dbg !763 ; [#uses=1 type=i47] [debug line = 328:2@646:3@681:3]
+  %tmp_52 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_51, i32 15, i32 46), !dbg !763 ; [#uses=3 type=i32] [debug line = 328:2@646:3@681:3]
+  %tmp_53 = add nsw i32 %tmp_52, %tmp_16, !dbg !764 ; [#uses=1 type=i32] [debug line = 343:2@646:3@681:3]
+  store i32 %tmp_52, i32* @dec_dlt, align 4, !dbg !763 ; [debug line = 328:2@646:3@681:3]
+  %il_load = load i32* @il, align 4, !dbg !765    ; [#uses=1 type=i32] [debug line = 331:2@646:3@681:3]
+  %tmp_54 = sext i32 %il_load to i64, !dbg !765   ; [#uses=1 type=i64] [debug line = 331:2@646:3@681:3]
+  %qq6_code6_table_addr = getelementptr [64 x i16]* @qq6_code6_table, i64 0, i64 %tmp_54, !dbg !765 ; [#uses=1 type=i16*] [debug line = 331:2@646:3@681:3]
+  %qq6_code6_table_load = load i16* %qq6_code6_table_addr, align 2, !dbg !765 ; [#uses=1 type=i16] [debug line = 331:2@646:3@681:3]
+  %tmp_80_cast = sext i16 %qq6_code6_table_load to i47, !dbg !765 ; [#uses=1 type=i47] [debug line = 331:2@646:3@681:3]
+  %tmp_55 = mul i47 %tmp_80_cast, %tmp_73_cast, !dbg !765 ; [#uses=1 type=i47] [debug line = 331:2@646:3@681:3]
+  %tmp_56 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_55, i32 15, i32 46), !dbg !765 ; [#uses=2 type=i32] [debug line = 331:2@646:3@681:3]
+  %tmp_57 = add nsw i32 %tmp_49, %tmp_56, !dbg !766 ; [#uses=1 type=i32] [debug line = 333:2@646:3@681:3]
+  store i32 %tmp_56, i32* @dl, align 4, !dbg !765 ; [debug line = 331:2@646:3@681:3]
+  store i32 %tmp_57, i32* @rl, align 4, !dbg !766 ; [debug line = 333:2@646:3@681:3]
+  %dec_nbl_load = load i32* @dec_nbl, align 4, !dbg !767 ; [#uses=1 type=i32] [debug line = 336:12@646:3@681:3]
+  %tmp_58 = call fastcc i15 @logscl(i6 %tmp_46, i32 %dec_nbl_load) nounwind, !dbg !767 ; [#uses=2 type=i15] [debug line = 336:12@646:3@681:3]
+  %tmp_85_ext = zext i15 %tmp_58 to i32, !dbg !767 ; [#uses=1 type=i32] [debug line = 336:12@646:3@681:3]
+  store i32 %tmp_85_ext, i32* @dec_nbl, align 4, !dbg !767 ; [debug line = 336:12@646:3@681:3]
+  %tmp_59 = call fastcc i15 @scalel(i15 %tmp_58, i5 8) nounwind, !dbg !768 ; [#uses=1 type=i15] [debug line = 339:13@646:3@681:3]
+  %p_trunc45_ext = zext i15 %tmp_59 to i32, !dbg !768 ; [#uses=1 type=i32] [debug line = 339:13@646:3@681:3]
+  store i32 %p_trunc45_ext, i32* @dec_detl, align 4, !dbg !768 ; [debug line = 339:13@646:3@681:3]
+  store i32 %tmp_53, i32* @dec_plt, align 4, !dbg !764 ; [debug line = 343:2@646:3@681:3]
+  call fastcc void @upzero(i32 %tmp_52, [6 x i32]* @dec_del_dltx, [6 x i32]* @dec_del_bpl) nounwind, !dbg !769 ; [debug line = 346:2@646:3@681:3]
+  %dec_al1_load_1 = load i32* @dec_al1, align 4, !dbg !770 ; [#uses=2 type=i32] [debug line = 349:12@646:3@681:3]
+  %dec_al2_load_1 = load i32* @dec_al2, align 4, !dbg !770 ; [#uses=1 type=i32] [debug line = 349:12@646:3@681:3]
+  %dec_plt_load = load i32* @dec_plt, align 4, !dbg !770 ; [#uses=3 type=i32] [debug line = 349:12@646:3@681:3]
+  %dec_plt1_load = load i32* @dec_plt1, align 4, !dbg !770 ; [#uses=3 type=i32] [debug line = 349:12@646:3@681:3]
+  %dec_plt2_load = load i32* @dec_plt2, align 4, !dbg !770 ; [#uses=1 type=i32] [debug line = 349:12@646:3@681:3]
+  %tmp_60 = call fastcc i15 @uppol2(i32 %dec_al1_load_1, i32 %dec_al2_load_1, i32 %dec_plt_load, i32 %dec_plt1_load, i32 %dec_plt2_load) nounwind, !dbg !770 ; [#uses=2 type=i15] [debug line = 349:12@646:3@681:3]
+  %tmp_88_ext = sext i15 %tmp_60 to i32, !dbg !770 ; [#uses=1 type=i32] [debug line = 349:12@646:3@681:3]
+  store i32 %tmp_88_ext, i32* @dec_al2, align 4, !dbg !770 ; [debug line = 349:12@646:3@681:3]
+  %tmp_61 = call fastcc i16 @uppol1(i32 %dec_al1_load_1, i15 %tmp_60, i32 %dec_plt_load, i32 %dec_plt1_load) nounwind, !dbg !771 ; [#uses=1 type=i16] [debug line = 352:12@646:3@681:3]
+  %p_trunc_ext1 = sext i16 %tmp_61 to i32, !dbg !771 ; [#uses=1 type=i32] [debug line = 352:12@646:3@681:3]
+  store i32 %p_trunc_ext1, i32* @dec_al1, align 4, !dbg !771 ; [debug line = 352:12@646:3@681:3]
+  %dec_sl_load = load i32* @dec_sl, align 4, !dbg !772 ; [#uses=1 type=i32] [debug line = 355:2@646:3@681:3]
+  %dec_dlt_load = load i32* @dec_dlt, align 4, !dbg !772 ; [#uses=1 type=i32] [debug line = 355:2@646:3@681:3]
+  %tmp_62 = add nsw i32 %dec_sl_load, %dec_dlt_load, !dbg !772 ; [#uses=2 type=i32] [debug line = 355:2@646:3@681:3]
+  store i32 %tmp_62, i32* @dec_rlt, align 4, !dbg !772 ; [debug line = 355:2@646:3@681:3]
+  %dec_rlt1_load_1 = load i32* @dec_rlt1, align 4, !dbg !773 ; [#uses=1 type=i32] [debug line = 358:2@646:3@681:3]
+  store i32 %dec_rlt1_load_1, i32* @dec_rlt2, align 4, !dbg !773 ; [debug line = 358:2@646:3@681:3]
+  store i32 %tmp_62, i32* @dec_rlt1, align 4, !dbg !774 ; [debug line = 359:2@646:3@681:3]
+  store i32 %dec_plt1_load, i32* @dec_plt2, align 4, !dbg !775 ; [debug line = 360:2@646:3@681:3]
+  store i32 %dec_plt_load, i32* @dec_plt1, align 4, !dbg !776 ; [debug line = 361:2@646:3@681:3]
+  %tmp_19 = call fastcc i32 @filtez([6 x i32]* @dec_del_bph, [6 x i32]* @dec_del_dhx) nounwind, !dbg !777 ; [#uses=3 type=i32] [debug line = 366:12@646:3@681:3]
+  store i32 %tmp_19, i32* @dec_szh, align 4, !dbg !777 ; [debug line = 366:12@646:3@681:3]
+  %dec_rh1_load = load i32* @dec_rh1, align 4, !dbg !778 ; [#uses=1 type=i32] [debug line = 369:12@646:3@681:3]
+  %dec_ah1_load = load i32* @dec_ah1, align 4, !dbg !778 ; [#uses=1 type=i32] [debug line = 369:12@646:3@681:3]
+  %dec_rh2_load = load i32* @dec_rh2, align 4, !dbg !778 ; [#uses=1 type=i32] [debug line = 369:12@646:3@681:3]
+  %dec_ah2_load = load i32* @dec_ah2, align 4, !dbg !778 ; [#uses=1 type=i32] [debug line = 369:12@646:3@681:3]
+  %tmp_63 = call fastcc i32 @filtep(i32 %dec_rh1_load, i32 %dec_ah1_load, i32 %dec_rh2_load, i32 %dec_ah2_load) nounwind, !dbg !778 ; [#uses=2 type=i32] [debug line = 369:12@646:3@681:3]
+  %tmp_64 = add nsw i32 %tmp_63, %tmp_19, !dbg !779 ; [#uses=1 type=i32] [debug line = 372:2@646:3@681:3]
+  store i32 %tmp_63, i32* @dec_sph, align 4, !dbg !778 ; [debug line = 369:12@646:3@681:3]
+  store i32 %tmp_64, i32* @dec_sh, align 4, !dbg !779 ; [debug line = 372:2@646:3@681:3]
+  %dec_deth_load = load i32* @dec_deth, align 4, !dbg !780 ; [#uses=1 type=i32] [debug line = 375:2@646:3@681:3]
+  %tmp_93_cast = sext i32 %dec_deth_load to i45, !dbg !780 ; [#uses=1 type=i45] [debug line = 375:2@646:3@681:3]
+  %ih_load = load i32* @ih, align 4, !dbg !780    ; [#uses=2 type=i32] [debug line = 375:2@646:3@681:3]
+  %tmp_65 = sext i32 %ih_load to i64, !dbg !780   ; [#uses=1 type=i64] [debug line = 375:2@646:3@681:3]
+  %qq2_code2_table_addr = getelementptr [4 x i14]* @qq2_code2_table, i64 0, i64 %tmp_65, !dbg !780 ; [#uses=1 type=i14*] [debug line = 375:2@646:3@681:3]
+  %qq2_code2_table_load = load i14* %qq2_code2_table_addr, align 2, !dbg !780 ; [#uses=1 type=i14] [debug line = 375:2@646:3@681:3]
+  %tmp_95_cast = sext i14 %qq2_code2_table_load to i45, !dbg !780 ; [#uses=1 type=i45] [debug line = 375:2@646:3@681:3]
+  %tmp_66 = mul i45 %tmp_95_cast, %tmp_93_cast, !dbg !780 ; [#uses=1 type=i45] [debug line = 375:2@646:3@681:3]
+  %tmp_10 = call i30 @_ssdm_op_PartSelect.i30.i45.i32.i32(i45 %tmp_66, i32 15, i32 44), !dbg !780 ; [#uses=1 type=i30] [debug line = 375:2@646:3@681:3]
+  %tmp_11 = sext i30 %tmp_10 to i32, !dbg !780    ; [#uses=3 type=i32] [debug line = 375:2@646:3@681:3]
+  %tmp_67 = add nsw i32 %tmp_11, %tmp_19, !dbg !781 ; [#uses=1 type=i32] [debug line = 384:2@646:3@681:3]
+  store i32 %tmp_11, i32* @dec_dh, align 4, !dbg !780 ; [debug line = 375:2@646:3@681:3]
+  %dec_nbh_load = load i32* @dec_nbh, align 4, !dbg !782 ; [#uses=1 type=i32] [debug line = 378:12@646:3@681:3]
+  %tmp_68 = call fastcc i15 @logsch(i32 %ih_load, i32 %dec_nbh_load) nounwind, !dbg !782 ; [#uses=2 type=i15] [debug line = 378:12@646:3@681:3]
+  %tmp_99_ext = zext i15 %tmp_68 to i32, !dbg !782 ; [#uses=1 type=i32] [debug line = 378:12@646:3@681:3]
+  store i32 %tmp_99_ext, i32* @dec_nbh, align 4, !dbg !782 ; [debug line = 378:12@646:3@681:3]
+  %tmp_69 = call fastcc i15 @scalel(i15 %tmp_68, i5 10) nounwind, !dbg !783 ; [#uses=1 type=i15] [debug line = 381:13@646:3@681:3]
+  %p_trunc46_ext = zext i15 %tmp_69 to i32, !dbg !783 ; [#uses=1 type=i32] [debug line = 381:13@646:3@681:3]
+  store i32 %p_trunc46_ext, i32* @dec_deth, align 4, !dbg !783 ; [debug line = 381:13@646:3@681:3]
+  store i32 %tmp_67, i32* @dec_ph, align 4, !dbg !781 ; [debug line = 384:2@646:3@681:3]
+  call fastcc void @upzero(i32 %tmp_11, [6 x i32]* @dec_del_dhx, [6 x i32]* @dec_del_bph) nounwind, !dbg !784 ; [debug line = 387:2@646:3@681:3]
+  %dec_ah1_load_1 = load i32* @dec_ah1, align 4, !dbg !785 ; [#uses=2 type=i32] [debug line = 390:12@646:3@681:3]
+  %dec_ah2_load_1 = load i32* @dec_ah2, align 4, !dbg !785 ; [#uses=1 type=i32] [debug line = 390:12@646:3@681:3]
+  %dec_ph_load = load i32* @dec_ph, align 4, !dbg !785 ; [#uses=3 type=i32] [debug line = 390:12@646:3@681:3]
+  %dec_ph1_load = load i32* @dec_ph1, align 4, !dbg !785 ; [#uses=3 type=i32] [debug line = 390:12@646:3@681:3]
+  %dec_ph2_load = load i32* @dec_ph2, align 4, !dbg !785 ; [#uses=1 type=i32] [debug line = 390:12@646:3@681:3]
+  %tmp_70 = call fastcc i15 @uppol2(i32 %dec_ah1_load_1, i32 %dec_ah2_load_1, i32 %dec_ph_load, i32 %dec_ph1_load, i32 %dec_ph2_load) nounwind, !dbg !785 ; [#uses=2 type=i15] [debug line = 390:12@646:3@681:3]
+  %tmp_102_ext = sext i15 %tmp_70 to i32, !dbg !785 ; [#uses=1 type=i32] [debug line = 390:12@646:3@681:3]
+  store i32 %tmp_102_ext, i32* @dec_ah2, align 4, !dbg !785 ; [debug line = 390:12@646:3@681:3]
+  %tmp_71 = call fastcc i16 @uppol1(i32 %dec_ah1_load_1, i15 %tmp_70, i32 %dec_ph_load, i32 %dec_ph1_load) nounwind, !dbg !786 ; [#uses=1 type=i16] [debug line = 393:12@646:3@681:3]
+  %p_trunc2_ext = sext i16 %tmp_71 to i32, !dbg !786 ; [#uses=1 type=i32] [debug line = 393:12@646:3@681:3]
+  store i32 %p_trunc2_ext, i32* @dec_ah1, align 4, !dbg !786 ; [debug line = 393:12@646:3@681:3]
+  %dec_sh_load = load i32* @dec_sh, align 4, !dbg !787 ; [#uses=1 type=i32] [debug line = 396:2@646:3@681:3]
+  %dec_dh_load = load i32* @dec_dh, align 4, !dbg !787 ; [#uses=1 type=i32] [debug line = 396:2@646:3@681:3]
+  %tmp_72 = add nsw i32 %dec_sh_load, %dec_dh_load, !dbg !787 ; [#uses=4 type=i32] [debug line = 396:2@646:3@681:3]
+  store i32 %tmp_72, i32* @rh, align 4, !dbg !787 ; [debug line = 396:2@646:3@681:3]
+  %dec_rh1_load_1 = load i32* @dec_rh1, align 4, !dbg !788 ; [#uses=1 type=i32] [debug line = 399:2@646:3@681:3]
+  store i32 %dec_rh1_load_1, i32* @dec_rh2, align 4, !dbg !788 ; [debug line = 399:2@646:3@681:3]
+  store i32 %tmp_72, i32* @dec_rh1, align 4, !dbg !789 ; [debug line = 400:2@646:3@681:3]
+  store i32 %dec_ph1_load, i32* @dec_ph2, align 4, !dbg !790 ; [debug line = 401:2@646:3@681:3]
+  store i32 %dec_ph_load, i32* @dec_ph1, align 4, !dbg !791 ; [debug line = 402:2@646:3@681:3]
+  %rl_load = load i32* @rl, align 4, !dbg !792    ; [#uses=2 type=i32] [debug line = 407:2@646:3@681:3]
+  %tmp_73 = add nsw i32 %tmp_72, %rl_load, !dbg !793 ; [#uses=3 type=i32] [debug line = 408:2@646:3@681:3]
+  %tmp_108_cast = sext i32 %tmp_73 to i39, !dbg !794 ; [#uses=1 type=i39] [debug line = 415:2@646:3@681:3]
+  %tmp_74 = sub nsw i32 %rl_load, %tmp_72, !dbg !792 ; [#uses=4 type=i32] [debug line = 407:2@646:3@681:3]
+  store i32 %tmp_74, i32* @xd, align 4, !dbg !792 ; [debug line = 407:2@646:3@681:3]
+  store i32 %tmp_73, i32* @xs, align 4, !dbg !793 ; [debug line = 408:2@646:3@681:3]
+  %p_shl3 = call i36 @_ssdm_op_BitConcatenate.i36.i32.i4(i32 %tmp_74, i4 0), !dbg !795 ; [#uses=1 type=i36] [debug line = 414:2@646:3@681:3]
+  %p_shl3_cast = sext i36 %p_shl3 to i37, !dbg !795 ; [#uses=1 type=i37] [debug line = 414:2@646:3@681:3]
+  %p_shl4 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %tmp_74, i2 0), !dbg !795 ; [#uses=1 type=i34] [debug line = 414:2@646:3@681:3]
+  %p_shl4_cast = sext i34 %p_shl4 to i37, !dbg !795 ; [#uses=1 type=i37] [debug line = 414:2@646:3@681:3]
+  %xa1 = sub i37 %p_shl3_cast, %p_shl4_cast, !dbg !795 ; [#uses=1 type=i37] [debug line = 414:2@646:3@681:3]
+  %xa1_cast = sext i37 %xa1 to i50, !dbg !795     ; [#uses=1 type=i50] [debug line = 414:2@646:3@681:3]
+  call void @llvm.dbg.value(metadata !{i37 %xa1}, i64 0, metadata !796) nounwind, !dbg !795 ; [debug line = 414:2@646:3@681:3] [debug variable = xa1]
+  %xa2 = mul i39 -44, %tmp_108_cast, !dbg !794    ; [#uses=1 type=i39] [debug line = 415:2@646:3@681:3]
+  %xa2_cast = sext i39 %xa2 to i50, !dbg !794     ; [#uses=1 type=i50] [debug line = 415:2@646:3@681:3]
+  call void @llvm.dbg.value(metadata !{i39 %xa2}, i64 0, metadata !797) nounwind, !dbg !794 ; [debug line = 415:2@646:3@681:3] [debug variable = xa2]
+  br label %11, !dbg !798                         ; [debug line = 417:7@646:3@681:3]
 
-; <label>:5                                       ; preds = %7, %3
-  %tqmf_ptr_0_pn_rec_i_s = phi i6 [ 0, %3 ], [ %tqmf_ptr1_0_rec_i_i, %7 ] ; [#uses=3 type=i6]
-  %i_1_i_i = phi i5 [ 0, %3 ], [ %i_4, %7 ]       ; [#uses=2 type=i5]
+; <label>:5                                       ; preds = %3
+  %tmp_75 = trunc i50 %xb_0_i_i to i47            ; [#uses=1 type=i47]
+  %tmp_76 = trunc i50 %xa_0_i_i to i47            ; [#uses=1 type=i47]
+  %tqmf_load_2 = load i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 22), align 8, !dbg !800 ; [#uses=1 type=i32] [debug line = 175:2@634:23@678:3]
+  %tmp_109_cast = sext i32 %tqmf_load_2 to i39, !dbg !800 ; [#uses=1 type=i39] [debug line = 175:2@634:23@678:3]
+  %tmp_77 = mul i39 -44, %tmp_109_cast, !dbg !800 ; [#uses=1 type=i39] [debug line = 175:2@634:23@678:3]
+  %tmp_110_cast = sext i39 %tmp_77 to i47, !dbg !800 ; [#uses=1 type=i47] [debug line = 175:2@634:23@678:3]
+  %xa_1 = add i47 %tmp_76, %tmp_110_cast, !dbg !800 ; [#uses=2 type=i47] [debug line = 175:2@634:23@678:3]
+  call void @llvm.dbg.value(metadata !{i47 %xa_1}, i64 0, metadata !745) nounwind, !dbg !800 ; [debug line = 175:2@634:23@678:3] [debug variable = xa]
+  %tqmf_load_3 = load i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 23), align 4, !dbg !801 ; [#uses=2 type=i32] [debug line = 176:2@634:23@678:3]
+  %p_shl5 = call i36 @_ssdm_op_BitConcatenate.i36.i32.i4(i32 %tqmf_load_3, i4 0), !dbg !801 ; [#uses=1 type=i36] [debug line = 176:2@634:23@678:3]
+  %p_shl5_cast = sext i36 %p_shl5 to i37, !dbg !801 ; [#uses=1 type=i37] [debug line = 176:2@634:23@678:3]
+  %p_shl6 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %tqmf_load_3, i2 0), !dbg !801 ; [#uses=1 type=i34] [debug line = 176:2@634:23@678:3]
+  %p_shl6_cast = sext i34 %p_shl6 to i37, !dbg !801 ; [#uses=1 type=i37] [debug line = 176:2@634:23@678:3]
+  %tmp_78 = sub i37 %p_shl5_cast, %p_shl6_cast, !dbg !801 ; [#uses=1 type=i37] [debug line = 176:2@634:23@678:3]
+  %tmp_112_cast = sext i37 %tmp_78 to i47, !dbg !801 ; [#uses=1 type=i47] [debug line = 176:2@634:23@678:3]
+  %xb_1 = add i47 %tmp_75, %tmp_112_cast, !dbg !801 ; [#uses=2 type=i47] [debug line = 176:2@634:23@678:3]
+  call void @llvm.dbg.value(metadata !{i47 %xb_1}, i64 0, metadata !747) nounwind, !dbg !801 ; [debug line = 176:2@634:23@678:3] [debug variable = xb]
+  br label %7, !dbg !802                          ; [debug line = 180:7@634:23@678:3]
+
+; <label>:6                                       ; preds = %3
+  %tqmf_ptr_0_sum67_i_i = or i5 %tqmf_ptr_0_rec_i_i, 1, !dbg !804 ; [#uses=1 type=i5] [debug line = 171:3@634:23@678:3]
+  %tqmf_ptr_0_sum67_i_i_1 = zext i5 %tqmf_ptr_0_sum67_i_i to i64, !dbg !804 ; [#uses=2 type=i64] [debug line = 171:3@634:23@678:3]
+  %tqmf_ptr = getelementptr [24 x i32]* @tqmf, i64 0, i64 %tqmf_ptr_0_sum67_i_i_1, !dbg !804 ; [#uses=1 type=i32*] [debug line = 171:3@634:23@678:3]
+  call void @llvm.dbg.value(metadata !{i32* %tqmf_ptr}, i64 0, metadata !806) nounwind, !dbg !804 ; [debug line = 171:3@634:23@678:3] [debug variable = tqmf_ptr]
+  %tqmf_load_4 = load i32* %tqmf_addr, align 8, !dbg !804 ; [#uses=1 type=i32] [debug line = 171:3@634:23@678:3]
+  %tmp_113_cast = sext i32 %tqmf_load_4 to i46, !dbg !804 ; [#uses=1 type=i46] [debug line = 171:3@634:23@678:3]
+  %h_ptr = getelementptr [24 x i15]* @h, i64 0, i64 %tqmf_ptr_0_sum67_i_i_1, !dbg !804 ; [#uses=1 type=i15*] [debug line = 171:3@634:23@678:3]
+  call void @llvm.dbg.value(metadata !{i15* %h_ptr}, i64 0, metadata !807) nounwind, !dbg !804 ; [debug line = 171:3@634:23@678:3] [debug variable = h_ptr]
+  %h_load = load i15* %h_addr, align 4, !dbg !804 ; [#uses=1 type=i15] [debug line = 171:3@634:23@678:3]
+  %tmp_114_cast = sext i15 %h_load to i46, !dbg !804 ; [#uses=1 type=i46] [debug line = 171:3@634:23@678:3]
+  %tmp_79 = mul i46 %tmp_113_cast, %tmp_114_cast, !dbg !804 ; [#uses=1 type=i46] [debug line = 171:3@634:23@678:3]
+  %tmp_115_cast = sext i46 %tmp_79 to i50, !dbg !804 ; [#uses=1 type=i50] [debug line = 171:3@634:23@678:3]
+  %xa_2 = add i50 %tmp_115_cast, %xa_0_i_i, !dbg !804 ; [#uses=1 type=i50] [debug line = 171:3@634:23@678:3]
+  call void @llvm.dbg.value(metadata !{i50 %xa_2}, i64 0, metadata !745) nounwind, !dbg !804 ; [debug line = 171:3@634:23@678:3] [debug variable = xa]
+  %tqmf_ptr_load = load i32* %tqmf_ptr, align 4, !dbg !810 ; [#uses=1 type=i32] [debug line = 172:3@634:23@678:3]
+  %tmp_116_cast = sext i32 %tqmf_ptr_load to i46, !dbg !810 ; [#uses=1 type=i46] [debug line = 172:3@634:23@678:3]
+  %h_ptr_load = load i15* %h_ptr, align 2, !dbg !810 ; [#uses=1 type=i15] [debug line = 172:3@634:23@678:3]
+  %tmp_117_cast = sext i15 %h_ptr_load to i46, !dbg !810 ; [#uses=1 type=i46] [debug line = 172:3@634:23@678:3]
+  %tmp_80 = mul i46 %tmp_116_cast, %tmp_117_cast, !dbg !810 ; [#uses=1 type=i46] [debug line = 172:3@634:23@678:3]
+  %tmp_118_cast = sext i46 %tmp_80 to i50, !dbg !810 ; [#uses=1 type=i50] [debug line = 172:3@634:23@678:3]
+  %xb_2 = add i50 %tmp_118_cast, %xb_0_i_i, !dbg !810 ; [#uses=1 type=i50] [debug line = 172:3@634:23@678:3]
+  call void @llvm.dbg.value(metadata !{i50 %xb_2}, i64 0, metadata !747) nounwind, !dbg !810 ; [debug line = 172:3@634:23@678:3] [debug variable = xb]
+  call void @llvm.dbg.value(metadata !{i4 %i}, i64 0, metadata !811) nounwind, !dbg !750 ; [debug line = 170:22@634:23@678:3] [debug variable = i]
+  %phitmp_i_i = add i5 %tqmf_ptr_0_rec_i_i, 2, !dbg !750 ; [#uses=1 type=i5] [debug line = 170:22@634:23@678:3]
+  br label %3, !dbg !750                          ; [debug line = 170:22@634:23@678:3]
+
+; <label>:7                                       ; preds = %9, %5
+  %tqmf_ptr_0_pn_rec_i_s = phi i6 [ 0, %5 ], [ %tqmf_ptr1_0_rec_i_i, %9 ] ; [#uses=3 type=i6]
+  %i_1_i_i = phi i5 [ 0, %5 ], [ %i_4, %9 ]       ; [#uses=2 type=i5]
   %p_sum_i_i = add i6 %tqmf_ptr_0_pn_rec_i_s, 23  ; [#uses=1 type=i6]
   %p_sum_i_i_cast = zext i6 %p_sum_i_i to i64     ; [#uses=1 type=i64]
   %tqmf_addr_2 = getelementptr [24 x i32]* @tqmf, i64 0, i64 %p_sum_i_i_cast ; [#uses=1 type=i32*]
-  %tqmf_ptr1_0_rec_i_i = add i6 %tqmf_ptr_0_pn_rec_i_s, -1, !dbg !803 ; [#uses=1 type=i6] [debug line = 179:2@634:23@674:3]
-  %tqmf_ptr_0_sum_i_i = add i6 %tqmf_ptr_0_pn_rec_i_s, 21, !dbg !803 ; [#uses=1 type=i6] [debug line = 179:2@634:23@674:3]
-  %tqmf_ptr_0_sum_i_i_c = zext i6 %tqmf_ptr_0_sum_i_i to i64, !dbg !803 ; [#uses=1 type=i64] [debug line = 179:2@634:23@674:3]
-  %tqmf_ptr1 = getelementptr [24 x i32]* @tqmf, i64 0, i64 %tqmf_ptr_0_sum_i_i_c, !dbg !803 ; [#uses=1 type=i32*] [debug line = 179:2@634:23@674:3]
-  call void @llvm.dbg.value(metadata !{i32* %tqmf_ptr1}, i64 0, metadata !804) nounwind, !dbg !803 ; [debug line = 179:2@634:23@674:3] [debug variable = tqmf_ptr1]
-  %exitcond_i_i = icmp eq i5 %i_1_i_i, -10, !dbg !793 ; [#uses=1 type=i1] [debug line = 180:7@634:23@674:3]
+  %tqmf_ptr1_0_rec_i_i = add i6 %tqmf_ptr_0_pn_rec_i_s, -1, !dbg !812 ; [#uses=1 type=i6] [debug line = 179:2@634:23@678:3]
+  %tqmf_ptr_0_sum_i_i = add i6 %tqmf_ptr_0_pn_rec_i_s, 21, !dbg !812 ; [#uses=1 type=i6] [debug line = 179:2@634:23@678:3]
+  %tqmf_ptr_0_sum_i_i_c = zext i6 %tqmf_ptr_0_sum_i_i to i64, !dbg !812 ; [#uses=1 type=i64] [debug line = 179:2@634:23@678:3]
+  %tqmf_ptr1 = getelementptr [24 x i32]* @tqmf, i64 0, i64 %tqmf_ptr_0_sum_i_i_c, !dbg !812 ; [#uses=1 type=i32*] [debug line = 179:2@634:23@678:3]
+  call void @llvm.dbg.value(metadata !{i32* %tqmf_ptr1}, i64 0, metadata !813) nounwind, !dbg !812 ; [debug line = 179:2@634:23@678:3] [debug variable = tqmf_ptr1]
+  %exitcond_i_i = icmp eq i5 %i_1_i_i, -10, !dbg !802 ; [#uses=1 type=i1] [debug line = 180:7@634:23@678:3]
   %empty_67 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 22, i64 22, i64 22) nounwind ; [#uses=0 type=i32]
-  %i_4 = add i5 %i_1_i_i, 1, !dbg !805            ; [#uses=1 type=i5] [debug line = 180:22@634:23@674:3]
-  br i1 %exitcond_i_i, label %6, label %7, !dbg !793 ; [debug line = 180:7@634:23@674:3]
+  %i_4 = add i5 %i_1_i_i, 1, !dbg !814            ; [#uses=1 type=i5] [debug line = 180:22@634:23@678:3]
+  br i1 %exitcond_i_i, label %8, label %9, !dbg !802 ; [debug line = 180:7@634:23@678:3]
 
-; <label>:6                                       ; preds = %5
-  store i32 %test_data_load, i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 1), align 4, !dbg !806 ; [debug line = 182:2@634:23@674:3]
-  store i32 %test_data_load_1, i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 0), align 16, !dbg !807 ; [debug line = 183:2@634:23@674:3]
-  %tmp_83 = add i47 %xa_1, %xb_1, !dbg !808       ; [#uses=1 type=i47] [debug line = 186:2@634:23@674:3]
-  %tmp_84 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_83, i32 15, i32 46), !dbg !808 ; [#uses=2 type=i32] [debug line = 186:2@634:23@674:3]
-  store i32 %tmp_84, i32* @xl, align 4, !dbg !808 ; [debug line = 186:2@634:23@674:3]
-  %tmp_85 = sub i47 %xa_1, %xb_1, !dbg !809       ; [#uses=1 type=i47] [debug line = 187:2@634:23@674:3]
-  %tmp_86 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_85, i32 15, i32 46), !dbg !809 ; [#uses=1 type=i32] [debug line = 187:2@634:23@674:3]
-  store i32 %tmp_86, i32* @xh, align 4, !dbg !809 ; [debug line = 187:2@634:23@674:3]
-  %tmp_20 = call fastcc i32 @filtez([6 x i32]* @delay_bpl, [6 x i32]* @delay_dltx) nounwind, !dbg !810 ; [#uses=3 type=i32] [debug line = 194:8@634:23@674:3]
-  store i32 %tmp_20, i32* @szl, align 4, !dbg !810 ; [debug line = 194:8@634:23@674:3]
-  %rlt1_load = load i32* @rlt1, align 4, !dbg !811 ; [#uses=1 type=i32] [debug line = 197:8@634:23@674:3]
-  %al1_load = load i32* @al1, align 4, !dbg !811  ; [#uses=1 type=i32] [debug line = 197:8@634:23@674:3]
-  %rlt2_load = load i32* @rlt2, align 4, !dbg !811 ; [#uses=1 type=i32] [debug line = 197:8@634:23@674:3]
-  %al2_load = load i32* @al2, align 4, !dbg !811  ; [#uses=1 type=i32] [debug line = 197:8@634:23@674:3]
-  %tmp_87 = call fastcc i32 @filtep(i32 %rlt1_load, i32 %al1_load, i32 %rlt2_load, i32 %al2_load) nounwind, !dbg !811 ; [#uses=2 type=i32] [debug line = 197:8@634:23@674:3]
-  %tmp_88 = add nsw i32 %tmp_87, %tmp_20, !dbg !812 ; [#uses=2 type=i32] [debug line = 200:2@634:23@674:3]
-  %tmp_89 = sub nsw i32 %tmp_84, %tmp_88, !dbg !813 ; [#uses=2 type=i32] [debug line = 201:2@634:23@674:3]
-  store i32 %tmp_87, i32* @spl, align 4, !dbg !811 ; [debug line = 197:8@634:23@674:3]
-  store i32 %tmp_88, i32* @sl, align 4, !dbg !812 ; [debug line = 200:2@634:23@674:3]
-  store i32 %tmp_89, i32* @el, align 4, !dbg !813 ; [debug line = 201:2@634:23@674:3]
-  %detl_load = load i32* @detl, align 4, !dbg !814 ; [#uses=2 type=i32] [debug line = 204:7@634:23@674:3]
-  %tmp_143_cast = sext i32 %detl_load to i47, !dbg !815 ; [#uses=1 type=i47] [debug line = 208:2@634:23@674:3]
-  %tmp_90 = call fastcc i6 @quantl(i32 %tmp_89, i32 %detl_load) nounwind, !dbg !814 ; [#uses=3 type=i6] [debug line = 204:7@634:23@674:3]
-  %tmp_142_ext = zext i6 %tmp_90 to i32, !dbg !814 ; [#uses=1 type=i32] [debug line = 204:7@634:23@674:3]
-  store i32 %tmp_142_ext, i32* @il, align 4, !dbg !814 ; [debug line = 204:7@634:23@674:3]
-  %tmp_21 = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %tmp_90, i32 2, i32 5), !dbg !815 ; [#uses=1 type=i4] [debug line = 208:2@634:23@674:3]
-  %tmp_91 = zext i4 %tmp_21 to i64, !dbg !815     ; [#uses=1 type=i64] [debug line = 208:2@634:23@674:3]
-  %qq4_code4_table_addr_1 = getelementptr [16 x i16]* @qq4_code4_table, i64 0, i64 %tmp_91, !dbg !815 ; [#uses=1 type=i16*] [debug line = 208:2@634:23@674:3]
-  %qq4_code4_table_load_1 = load i16* %qq4_code4_table_addr_1, align 2, !dbg !815 ; [#uses=1 type=i16] [debug line = 208:2@634:23@674:3]
-  %tmp_145_cast = sext i16 %qq4_code4_table_load_1 to i47, !dbg !815 ; [#uses=1 type=i47] [debug line = 208:2@634:23@674:3]
-  %tmp_92 = mul i47 %tmp_143_cast, %tmp_145_cast, !dbg !815 ; [#uses=1 type=i47] [debug line = 208:2@634:23@674:3]
-  %tmp_93 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_92, i32 15, i32 46), !dbg !815 ; [#uses=3 type=i32] [debug line = 208:2@634:23@674:3]
-  %tmp_94 = add nsw i32 %tmp_93, %tmp_20, !dbg !816 ; [#uses=1 type=i32] [debug line = 218:2@634:23@674:3]
-  store i32 %tmp_93, i32* @dlt, align 4, !dbg !815 ; [debug line = 208:2@634:23@674:3]
-  %nbl_load = load i32* @nbl, align 4, !dbg !817  ; [#uses=1 type=i32] [debug line = 211:8@634:23@674:3]
-  %tmp_95 = call fastcc i15 @logscl(i6 %tmp_90, i32 %nbl_load) nounwind, !dbg !817 ; [#uses=2 type=i15] [debug line = 211:8@634:23@674:3]
-  %tmp_149_ext = zext i15 %tmp_95 to i32, !dbg !817 ; [#uses=1 type=i32] [debug line = 211:8@634:23@674:3]
-  store i32 %tmp_149_ext, i32* @nbl, align 4, !dbg !817 ; [debug line = 211:8@634:23@674:3]
-  %tmp_96 = call fastcc i15 @scalel(i15 %tmp_95, i5 8) nounwind, !dbg !818 ; [#uses=1 type=i15] [debug line = 215:9@634:23@674:3]
-  %p_trunc_ext = zext i15 %tmp_96 to i32, !dbg !818 ; [#uses=1 type=i32] [debug line = 215:9@634:23@674:3]
-  store i32 %p_trunc_ext, i32* @detl, align 4, !dbg !818 ; [debug line = 215:9@634:23@674:3]
-  store i32 %tmp_94, i32* @plt, align 4, !dbg !816 ; [debug line = 218:2@634:23@674:3]
-  call fastcc void @upzero(i32 %tmp_93, [6 x i32]* @delay_dltx, [6 x i32]* @delay_bpl) nounwind, !dbg !819 ; [debug line = 224:2@634:23@674:3]
-  %al1_load_1 = load i32* @al1, align 4, !dbg !820 ; [#uses=2 type=i32] [debug line = 228:8@634:23@674:3]
-  %al2_load_1 = load i32* @al2, align 4, !dbg !820 ; [#uses=1 type=i32] [debug line = 228:8@634:23@674:3]
-  %plt_load = load i32* @plt, align 4, !dbg !820  ; [#uses=3 type=i32] [debug line = 228:8@634:23@674:3]
-  %plt1_load = load i32* @plt1, align 4, !dbg !820 ; [#uses=3 type=i32] [debug line = 228:8@634:23@674:3]
-  %plt2_load = load i32* @plt2, align 4, !dbg !820 ; [#uses=1 type=i32] [debug line = 228:8@634:23@674:3]
-  %tmp_97 = call fastcc i15 @uppol2(i32 %al1_load_1, i32 %al2_load_1, i32 %plt_load, i32 %plt1_load, i32 %plt2_load) nounwind, !dbg !820 ; [#uses=2 type=i15] [debug line = 228:8@634:23@674:3]
-  %tmp_152_ext = sext i15 %tmp_97 to i32, !dbg !820 ; [#uses=1 type=i32] [debug line = 228:8@634:23@674:3]
-  store i32 %tmp_152_ext, i32* @al2, align 4, !dbg !820 ; [debug line = 228:8@634:23@674:3]
-  %tmp_98 = call fastcc i16 @uppol1(i32 %al1_load_1, i15 %tmp_97, i32 %plt_load, i32 %plt1_load) nounwind, !dbg !821 ; [#uses=1 type=i16] [debug line = 232:8@634:23@674:3]
-  %p_trunc3_ext = sext i16 %tmp_98 to i32, !dbg !821 ; [#uses=1 type=i32] [debug line = 232:8@634:23@674:3]
-  store i32 %p_trunc3_ext, i32* @al1, align 4, !dbg !821 ; [debug line = 232:8@634:23@674:3]
-  %sl_load = load i32* @sl, align 4, !dbg !822    ; [#uses=1 type=i32] [debug line = 235:2@634:23@674:3]
-  %dlt_load = load i32* @dlt, align 4, !dbg !822  ; [#uses=1 type=i32] [debug line = 235:2@634:23@674:3]
-  %tmp_99 = add nsw i32 %sl_load, %dlt_load, !dbg !822 ; [#uses=2 type=i32] [debug line = 235:2@634:23@674:3]
-  store i32 %tmp_99, i32* @rlt, align 4, !dbg !822 ; [debug line = 235:2@634:23@674:3]
-  %rlt1_load_1 = load i32* @rlt1, align 4, !dbg !823 ; [#uses=1 type=i32] [debug line = 238:2@634:23@674:3]
-  store i32 %rlt1_load_1, i32* @rlt2, align 4, !dbg !823 ; [debug line = 238:2@634:23@674:3]
-  store i32 %tmp_99, i32* @rlt1, align 4, !dbg !824 ; [debug line = 239:2@634:23@674:3]
-  store i32 %plt1_load, i32* @plt2, align 4, !dbg !825 ; [debug line = 240:2@634:23@674:3]
-  store i32 %plt_load, i32* @plt1, align 4, !dbg !826 ; [debug line = 241:2@634:23@674:3]
-  %tmp_23 = call fastcc i32 @filtez([6 x i32]* @delay_bph, [6 x i32]* @delay_dhx) nounwind, !dbg !827 ; [#uses=3 type=i32] [debug line = 245:8@634:23@674:3]
-  store i32 %tmp_23, i32* @szh, align 4, !dbg !827 ; [debug line = 245:8@634:23@674:3]
-  %rh1_load = load i32* @rh1, align 4, !dbg !828  ; [#uses=1 type=i32] [debug line = 247:8@634:23@674:3]
-  %ah1_load = load i32* @ah1, align 4, !dbg !828  ; [#uses=1 type=i32] [debug line = 247:8@634:23@674:3]
-  %rh2_load = load i32* @rh2, align 4, !dbg !828  ; [#uses=1 type=i32] [debug line = 247:8@634:23@674:3]
-  %ah2_load = load i32* @ah2, align 4, !dbg !828  ; [#uses=1 type=i32] [debug line = 247:8@634:23@674:3]
-  %tmp_100 = call fastcc i32 @filtep(i32 %rh1_load, i32 %ah1_load, i32 %rh2_load, i32 %ah2_load) nounwind, !dbg !828 ; [#uses=2 type=i32] [debug line = 247:8@634:23@674:3]
-  %tmp_101 = add nsw i32 %tmp_100, %tmp_23, !dbg !829 ; [#uses=2 type=i32] [debug line = 250:2@634:23@674:3]
-  store i32 %tmp_100, i32* @sph, align 4, !dbg !828 ; [debug line = 247:8@634:23@674:3]
-  store i32 %tmp_101, i32* @sh, align 4, !dbg !829 ; [debug line = 250:2@634:23@674:3]
-  %xh_load = load i32* @xh, align 4, !dbg !830    ; [#uses=1 type=i32] [debug line = 252:2@634:23@674:3]
-  %n_assign = sub nsw i32 %xh_load, %tmp_101, !dbg !830 ; [#uses=5 type=i32] [debug line = 252:2@634:23@674:3]
-  store i32 %n_assign, i32* @eh, align 4, !dbg !830 ; [debug line = 252:2@634:23@674:3]
-  %tmp_102 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %n_assign, i32 31), !dbg !831 ; [#uses=2 type=i1] [debug line = 256:2@634:23@674:3]
-  %tmp_158_cast_cast_ca = select i1 %tmp_102, i32 1, i32 3 ; [#uses=1 type=i32]
-  store i32 %tmp_158_cast_cast_ca, i32* @ih, align 4, !dbg !832 ; [debug line = 257:3@634:23@674:3]
-  %deth_load = load i32* @deth, align 4, !dbg !834 ; [#uses=2 type=i32] [debug line = 261:2@634:23@674:3]
-  %tmp_159_cast1 = sext i32 %deth_load to i45, !dbg !834 ; [#uses=1 type=i45] [debug line = 261:2@634:23@674:3]
-  %tmp_159_cast = sext i32 %deth_load to i43, !dbg !834 ; [#uses=1 type=i43] [debug line = 261:2@634:23@674:3]
-  %tmp_103 = mul i43 %tmp_159_cast, 564, !dbg !834 ; [#uses=1 type=i43] [debug line = 261:2@634:23@674:3]
-  %tmp_13 = call i31 @_ssdm_op_PartSelect.i31.i43.i32.i32(i43 %tmp_103, i32 12, i32 42), !dbg !834 ; [#uses=1 type=i31] [debug line = 261:2@634:23@674:3]
-  %decis = sext i31 %tmp_13 to i32, !dbg !834     ; [#uses=1 type=i32] [debug line = 261:2@634:23@674:3]
-  call void @llvm.dbg.value(metadata !{i32 %decis}, i64 0, metadata !835) nounwind, !dbg !834 ; [debug line = 261:2@634:23@674:3] [debug variable = decis]
-  call void @llvm.dbg.value(metadata !{i32 %n_assign}, i64 0, metadata !836), !dbg !838 ; [debug line = 4:19@262:6@634:23@674:3] [debug variable = n]
-  %tmp_104 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %n_assign, i32 31), !dbg !839 ; [#uses=1 type=i1] [debug line = 8:2@262:6@634:23@674:3]
-  %m = sub nsw i32 0, %n_assign, !dbg !840        ; [#uses=1 type=i32] [debug line = 11:3@262:6@634:23@674:3]
-  call void @llvm.dbg.value(metadata !{i32 %m}, i64 0, metadata !841), !dbg !840 ; [debug line = 11:3@262:6@634:23@674:3] [debug variable = m]
-  %n_assign_1 = select i1 %tmp_104, i32 %m, i32 %n_assign, !dbg !839 ; [#uses=1 type=i32] [debug line = 8:2@262:6@634:23@674:3]
-  call void @llvm.dbg.value(metadata !{i32 %n_assign_1}, i64 0, metadata !836), !dbg !839 ; [debug line = 8:2@262:6@634:23@674:3] [debug variable = n]
-  %tmp_105 = icmp sgt i32 %n_assign_1, %decis, !dbg !837 ; [#uses=1 type=i1] [debug line = 262:6@634:23@674:3]
-  br i1 %tmp_105, label %8, label %encode.exit.i, !dbg !837 ; [debug line = 262:6@634:23@674:3]
+; <label>:8                                       ; preds = %7
+  store i32 %test_data_load, i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 1), align 4, !dbg !815 ; [debug line = 182:2@634:23@678:3]
+  store i32 %test_data_load_1, i32* getelementptr inbounds ([24 x i32]* @tqmf, i64 0, i64 0), align 16, !dbg !816 ; [debug line = 183:2@634:23@678:3]
+  %tmp_87 = add i47 %xa_1, %xb_1, !dbg !817       ; [#uses=1 type=i47] [debug line = 186:2@634:23@678:3]
+  %tmp_88 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_87, i32 15, i32 46), !dbg !817 ; [#uses=2 type=i32] [debug line = 186:2@634:23@678:3]
+  store i32 %tmp_88, i32* @xl, align 4, !dbg !817 ; [debug line = 186:2@634:23@678:3]
+  %tmp_89 = sub i47 %xa_1, %xb_1, !dbg !818       ; [#uses=1 type=i47] [debug line = 187:2@634:23@678:3]
+  %tmp_90 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_89, i32 15, i32 46), !dbg !818 ; [#uses=1 type=i32] [debug line = 187:2@634:23@678:3]
+  store i32 %tmp_90, i32* @xh, align 4, !dbg !818 ; [debug line = 187:2@634:23@678:3]
+  %tmp_20 = call fastcc i32 @filtez([6 x i32]* @delay_bpl, [6 x i32]* @delay_dltx) nounwind, !dbg !819 ; [#uses=3 type=i32] [debug line = 194:8@634:23@678:3]
+  store i32 %tmp_20, i32* @szl, align 4, !dbg !819 ; [debug line = 194:8@634:23@678:3]
+  %rlt1_load = load i32* @rlt1, align 4, !dbg !820 ; [#uses=1 type=i32] [debug line = 197:8@634:23@678:3]
+  %al1_load = load i32* @al1, align 4, !dbg !820  ; [#uses=1 type=i32] [debug line = 197:8@634:23@678:3]
+  %rlt2_load = load i32* @rlt2, align 4, !dbg !820 ; [#uses=1 type=i32] [debug line = 197:8@634:23@678:3]
+  %al2_load = load i32* @al2, align 4, !dbg !820  ; [#uses=1 type=i32] [debug line = 197:8@634:23@678:3]
+  %tmp_91 = call fastcc i32 @filtep(i32 %rlt1_load, i32 %al1_load, i32 %rlt2_load, i32 %al2_load) nounwind, !dbg !820 ; [#uses=2 type=i32] [debug line = 197:8@634:23@678:3]
+  %tmp_92 = add nsw i32 %tmp_91, %tmp_20, !dbg !821 ; [#uses=2 type=i32] [debug line = 200:2@634:23@678:3]
+  %tmp_93 = sub nsw i32 %tmp_88, %tmp_92, !dbg !822 ; [#uses=2 type=i32] [debug line = 201:2@634:23@678:3]
+  store i32 %tmp_91, i32* @spl, align 4, !dbg !820 ; [debug line = 197:8@634:23@678:3]
+  store i32 %tmp_92, i32* @sl, align 4, !dbg !821 ; [debug line = 200:2@634:23@678:3]
+  store i32 %tmp_93, i32* @el, align 4, !dbg !822 ; [debug line = 201:2@634:23@678:3]
+  %detl_load = load i32* @detl, align 4, !dbg !823 ; [#uses=2 type=i32] [debug line = 204:7@634:23@678:3]
+  %tmp_143_cast = sext i32 %detl_load to i47, !dbg !824 ; [#uses=1 type=i47] [debug line = 208:2@634:23@678:3]
+  %tmp_94 = call fastcc i6 @quantl(i32 %tmp_93, i32 %detl_load) nounwind, !dbg !823 ; [#uses=3 type=i6] [debug line = 204:7@634:23@678:3]
+  %tmp_142_ext = zext i6 %tmp_94 to i32, !dbg !823 ; [#uses=1 type=i32] [debug line = 204:7@634:23@678:3]
+  store i32 %tmp_142_ext, i32* @il, align 4, !dbg !823 ; [debug line = 204:7@634:23@678:3]
+  %tmp_21 = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %tmp_94, i32 2, i32 5), !dbg !824 ; [#uses=1 type=i4] [debug line = 208:2@634:23@678:3]
+  %tmp_95 = zext i4 %tmp_21 to i64, !dbg !824     ; [#uses=1 type=i64] [debug line = 208:2@634:23@678:3]
+  %qq4_code4_table_addr_1 = getelementptr [16 x i16]* @qq4_code4_table, i64 0, i64 %tmp_95, !dbg !824 ; [#uses=1 type=i16*] [debug line = 208:2@634:23@678:3]
+  %qq4_code4_table_load_1 = load i16* %qq4_code4_table_addr_1, align 2, !dbg !824 ; [#uses=1 type=i16] [debug line = 208:2@634:23@678:3]
+  %tmp_145_cast = sext i16 %qq4_code4_table_load_1 to i47, !dbg !824 ; [#uses=1 type=i47] [debug line = 208:2@634:23@678:3]
+  %tmp_96 = mul i47 %tmp_143_cast, %tmp_145_cast, !dbg !824 ; [#uses=1 type=i47] [debug line = 208:2@634:23@678:3]
+  %tmp_97 = call i32 @_ssdm_op_PartSelect.i32.i47.i32.i32(i47 %tmp_96, i32 15, i32 46), !dbg !824 ; [#uses=3 type=i32] [debug line = 208:2@634:23@678:3]
+  %tmp_98 = add nsw i32 %tmp_97, %tmp_20, !dbg !825 ; [#uses=1 type=i32] [debug line = 218:2@634:23@678:3]
+  store i32 %tmp_97, i32* @dlt, align 4, !dbg !824 ; [debug line = 208:2@634:23@678:3]
+  %nbl_load = load i32* @nbl, align 4, !dbg !826  ; [#uses=1 type=i32] [debug line = 211:8@634:23@678:3]
+  %tmp_99 = call fastcc i15 @logscl(i6 %tmp_94, i32 %nbl_load) nounwind, !dbg !826 ; [#uses=2 type=i15] [debug line = 211:8@634:23@678:3]
+  %tmp_149_ext = zext i15 %tmp_99 to i32, !dbg !826 ; [#uses=1 type=i32] [debug line = 211:8@634:23@678:3]
+  store i32 %tmp_149_ext, i32* @nbl, align 4, !dbg !826 ; [debug line = 211:8@634:23@678:3]
+  %tmp_100 = call fastcc i15 @scalel(i15 %tmp_99, i5 8) nounwind, !dbg !827 ; [#uses=1 type=i15] [debug line = 215:9@634:23@678:3]
+  %p_trunc_ext = zext i15 %tmp_100 to i32, !dbg !827 ; [#uses=1 type=i32] [debug line = 215:9@634:23@678:3]
+  store i32 %p_trunc_ext, i32* @detl, align 4, !dbg !827 ; [debug line = 215:9@634:23@678:3]
+  store i32 %tmp_98, i32* @plt, align 4, !dbg !825 ; [debug line = 218:2@634:23@678:3]
+  call fastcc void @upzero(i32 %tmp_97, [6 x i32]* @delay_dltx, [6 x i32]* @delay_bpl) nounwind, !dbg !828 ; [debug line = 224:2@634:23@678:3]
+  %al1_load_1 = load i32* @al1, align 4, !dbg !829 ; [#uses=2 type=i32] [debug line = 228:8@634:23@678:3]
+  %al2_load_1 = load i32* @al2, align 4, !dbg !829 ; [#uses=1 type=i32] [debug line = 228:8@634:23@678:3]
+  %plt_load = load i32* @plt, align 4, !dbg !829  ; [#uses=3 type=i32] [debug line = 228:8@634:23@678:3]
+  %plt1_load = load i32* @plt1, align 4, !dbg !829 ; [#uses=3 type=i32] [debug line = 228:8@634:23@678:3]
+  %plt2_load = load i32* @plt2, align 4, !dbg !829 ; [#uses=1 type=i32] [debug line = 228:8@634:23@678:3]
+  %tmp_101 = call fastcc i15 @uppol2(i32 %al1_load_1, i32 %al2_load_1, i32 %plt_load, i32 %plt1_load, i32 %plt2_load) nounwind, !dbg !829 ; [#uses=2 type=i15] [debug line = 228:8@634:23@678:3]
+  %tmp_152_ext = sext i15 %tmp_101 to i32, !dbg !829 ; [#uses=1 type=i32] [debug line = 228:8@634:23@678:3]
+  store i32 %tmp_152_ext, i32* @al2, align 4, !dbg !829 ; [debug line = 228:8@634:23@678:3]
+  %tmp_102 = call fastcc i16 @uppol1(i32 %al1_load_1, i15 %tmp_101, i32 %plt_load, i32 %plt1_load) nounwind, !dbg !830 ; [#uses=1 type=i16] [debug line = 232:8@634:23@678:3]
+  %p_trunc3_ext = sext i16 %tmp_102 to i32, !dbg !830 ; [#uses=1 type=i32] [debug line = 232:8@634:23@678:3]
+  store i32 %p_trunc3_ext, i32* @al1, align 4, !dbg !830 ; [debug line = 232:8@634:23@678:3]
+  %sl_load = load i32* @sl, align 4, !dbg !831    ; [#uses=1 type=i32] [debug line = 235:2@634:23@678:3]
+  %dlt_load = load i32* @dlt, align 4, !dbg !831  ; [#uses=1 type=i32] [debug line = 235:2@634:23@678:3]
+  %tmp_103 = add nsw i32 %sl_load, %dlt_load, !dbg !831 ; [#uses=2 type=i32] [debug line = 235:2@634:23@678:3]
+  store i32 %tmp_103, i32* @rlt, align 4, !dbg !831 ; [debug line = 235:2@634:23@678:3]
+  %rlt1_load_1 = load i32* @rlt1, align 4, !dbg !832 ; [#uses=1 type=i32] [debug line = 238:2@634:23@678:3]
+  store i32 %rlt1_load_1, i32* @rlt2, align 4, !dbg !832 ; [debug line = 238:2@634:23@678:3]
+  store i32 %tmp_103, i32* @rlt1, align 4, !dbg !833 ; [debug line = 239:2@634:23@678:3]
+  store i32 %plt1_load, i32* @plt2, align 4, !dbg !834 ; [debug line = 240:2@634:23@678:3]
+  store i32 %plt_load, i32* @plt1, align 4, !dbg !835 ; [debug line = 241:2@634:23@678:3]
+  %tmp_23 = call fastcc i32 @filtez([6 x i32]* @delay_bph, [6 x i32]* @delay_dhx) nounwind, !dbg !836 ; [#uses=3 type=i32] [debug line = 245:8@634:23@678:3]
+  store i32 %tmp_23, i32* @szh, align 4, !dbg !836 ; [debug line = 245:8@634:23@678:3]
+  %rh1_load = load i32* @rh1, align 4, !dbg !837  ; [#uses=1 type=i32] [debug line = 247:8@634:23@678:3]
+  %ah1_load = load i32* @ah1, align 4, !dbg !837  ; [#uses=1 type=i32] [debug line = 247:8@634:23@678:3]
+  %rh2_load = load i32* @rh2, align 4, !dbg !837  ; [#uses=1 type=i32] [debug line = 247:8@634:23@678:3]
+  %ah2_load = load i32* @ah2, align 4, !dbg !837  ; [#uses=1 type=i32] [debug line = 247:8@634:23@678:3]
+  %tmp_104 = call fastcc i32 @filtep(i32 %rh1_load, i32 %ah1_load, i32 %rh2_load, i32 %ah2_load) nounwind, !dbg !837 ; [#uses=2 type=i32] [debug line = 247:8@634:23@678:3]
+  %tmp_105 = add nsw i32 %tmp_104, %tmp_23, !dbg !838 ; [#uses=2 type=i32] [debug line = 250:2@634:23@678:3]
+  store i32 %tmp_104, i32* @sph, align 4, !dbg !837 ; [debug line = 247:8@634:23@678:3]
+  store i32 %tmp_105, i32* @sh, align 4, !dbg !838 ; [debug line = 250:2@634:23@678:3]
+  %xh_load = load i32* @xh, align 4, !dbg !839    ; [#uses=1 type=i32] [debug line = 252:2@634:23@678:3]
+  %n_assign = sub nsw i32 %xh_load, %tmp_105, !dbg !839 ; [#uses=5 type=i32] [debug line = 252:2@634:23@678:3]
+  store i32 %n_assign, i32* @eh, align 4, !dbg !839 ; [debug line = 252:2@634:23@678:3]
+  %tmp_125 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %n_assign, i32 31), !dbg !840 ; [#uses=2 type=i1] [debug line = 256:2@634:23@678:3]
+  %tmp_158_cast_cast_ca = select i1 %tmp_125, i32 1, i32 3 ; [#uses=1 type=i32]
+  store i32 %tmp_158_cast_cast_ca, i32* @ih, align 4, !dbg !841 ; [debug line = 257:3@634:23@678:3]
+  %deth_load = load i32* @deth, align 4, !dbg !843 ; [#uses=2 type=i32] [debug line = 261:2@634:23@678:3]
+  %tmp_159_cast1 = sext i32 %deth_load to i45, !dbg !843 ; [#uses=1 type=i45] [debug line = 261:2@634:23@678:3]
+  %tmp_159_cast = sext i32 %deth_load to i43, !dbg !843 ; [#uses=1 type=i43] [debug line = 261:2@634:23@678:3]
+  %tmp_106 = mul i43 %tmp_159_cast, 564, !dbg !843 ; [#uses=1 type=i43] [debug line = 261:2@634:23@678:3]
+  %tmp_13 = call i31 @_ssdm_op_PartSelect.i31.i43.i32.i32(i43 %tmp_106, i32 12, i32 42), !dbg !843 ; [#uses=1 type=i31] [debug line = 261:2@634:23@678:3]
+  %decis = sext i31 %tmp_13 to i32, !dbg !843     ; [#uses=1 type=i32] [debug line = 261:2@634:23@678:3]
+  call void @llvm.dbg.value(metadata !{i32 %decis}, i64 0, metadata !844) nounwind, !dbg !843 ; [debug line = 261:2@634:23@678:3] [debug variable = decis]
+  call void @llvm.dbg.value(metadata !{i32 %n_assign}, i64 0, metadata !845), !dbg !847 ; [debug line = 4:19@262:6@634:23@678:3] [debug variable = n]
+  %tmp_126 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %n_assign, i32 31), !dbg !848 ; [#uses=1 type=i1] [debug line = 8:2@262:6@634:23@678:3]
+  %m = sub nsw i32 0, %n_assign, !dbg !849        ; [#uses=1 type=i32] [debug line = 11:3@262:6@634:23@678:3]
+  call void @llvm.dbg.value(metadata !{i32 %m}, i64 0, metadata !850), !dbg !849 ; [debug line = 11:3@262:6@634:23@678:3] [debug variable = m]
+  %n_assign_1 = select i1 %tmp_126, i32 %m, i32 %n_assign, !dbg !848 ; [#uses=1 type=i32] [debug line = 8:2@262:6@634:23@678:3]
+  call void @llvm.dbg.value(metadata !{i32 %n_assign_1}, i64 0, metadata !845), !dbg !848 ; [debug line = 8:2@262:6@634:23@678:3] [debug variable = n]
+  %tmp_107 = icmp sgt i32 %n_assign_1, %decis, !dbg !846 ; [#uses=1 type=i1] [debug line = 262:6@634:23@678:3]
+  br i1 %tmp_107, label %10, label %encode.exit.i, !dbg !846 ; [debug line = 262:6@634:23@678:3]
 
-; <label>:7                                       ; preds = %5
-  %tqmf_ptr1_load = load i32* %tqmf_ptr1, align 4, !dbg !842 ; [#uses=1 type=i32] [debug line = 181:3@634:23@674:3]
-  store i32 %tqmf_ptr1_load, i32* %tqmf_addr_2, align 4, !dbg !842 ; [debug line = 181:3@634:23@674:3]
-  call void @llvm.dbg.value(metadata !{i5 %i_4}, i64 0, metadata !802) nounwind, !dbg !805 ; [debug line = 180:22@634:23@674:3] [debug variable = i]
-  br label %5, !dbg !805                          ; [debug line = 180:22@634:23@674:3]
+; <label>:9                                       ; preds = %7
+  %tqmf_ptr1_load = load i32* %tqmf_ptr1, align 4, !dbg !851 ; [#uses=1 type=i32] [debug line = 181:3@634:23@678:3]
+  store i32 %tqmf_ptr1_load, i32* %tqmf_addr_2, align 4, !dbg !851 ; [debug line = 181:3@634:23@678:3]
+  call void @llvm.dbg.value(metadata !{i5 %i_4}, i64 0, metadata !811) nounwind, !dbg !814 ; [debug line = 180:22@634:23@678:3] [debug variable = i]
+  br label %7, !dbg !814                          ; [debug line = 180:22@634:23@678:3]
 
-; <label>:8                                       ; preds = %6
-  %tmp_167_cast_cast_ca = select i1 %tmp_102, i32 0, i32 2 ; [#uses=1 type=i32]
-  store i32 %tmp_167_cast_cast_ca, i32* @ih, align 4, !dbg !843 ; [debug line = 263:3@634:23@674:3]
-  br label %encode.exit.i, !dbg !843              ; [debug line = 263:3@634:23@674:3]
+; <label>:10                                      ; preds = %8
+  %tmp_164_cast_cast_ca = select i1 %tmp_125, i32 0, i32 2 ; [#uses=1 type=i32]
+  store i32 %tmp_164_cast_cast_ca, i32* @ih, align 4, !dbg !852 ; [debug line = 263:3@634:23@678:3]
+  br label %encode.exit.i, !dbg !852              ; [debug line = 263:3@634:23@678:3]
 
-encode.exit.i:                                    ; preds = %8, %6
-  %ih_load_1 = load i32* @ih, align 4, !dbg !844  ; [#uses=2 type=i32] [debug line = 266:2@634:23@674:3]
-  %tmp_109 = sext i32 %ih_load_1 to i64, !dbg !844 ; [#uses=1 type=i64] [debug line = 266:2@634:23@674:3]
-  %qq2_code2_table_addr_1 = getelementptr [4 x i14]* @qq2_code2_table, i64 0, i64 %tmp_109, !dbg !844 ; [#uses=1 type=i14*] [debug line = 266:2@634:23@674:3]
-  %qq2_code2_table_load_1 = load i14* %qq2_code2_table_addr_1, align 2, !dbg !844 ; [#uses=1 type=i14] [debug line = 266:2@634:23@674:3]
-  %tmp_169_cast = sext i14 %qq2_code2_table_load_1 to i45, !dbg !844 ; [#uses=1 type=i45] [debug line = 266:2@634:23@674:3]
-  %tmp_110 = mul i45 %tmp_169_cast, %tmp_159_cast1, !dbg !844 ; [#uses=1 type=i45] [debug line = 266:2@634:23@674:3]
-  %tmp_26 = call i30 @_ssdm_op_PartSelect.i30.i45.i32.i32(i45 %tmp_110, i32 15, i32 44), !dbg !844 ; [#uses=1 type=i30] [debug line = 266:2@634:23@674:3]
-  %tmp_27 = sext i30 %tmp_26 to i32, !dbg !844    ; [#uses=3 type=i32] [debug line = 266:2@634:23@674:3]
-  store i32 %tmp_27, i32* @dh, align 4, !dbg !844 ; [debug line = 266:2@634:23@674:3]
-  %nbh_load = load i32* @nbh, align 4, !dbg !845  ; [#uses=1 type=i32] [debug line = 269:8@634:23@674:3]
-  %tmp_111 = call fastcc i15 @logsch(i32 %ih_load_1, i32 %nbh_load) nounwind, !dbg !845 ; [#uses=2 type=i15] [debug line = 269:8@634:23@674:3]
-  %tmp_173_ext = zext i15 %tmp_111 to i32, !dbg !845 ; [#uses=1 type=i32] [debug line = 269:8@634:23@674:3]
-  store i32 %tmp_173_ext, i32* @nbh, align 4, !dbg !845 ; [debug line = 269:8@634:23@674:3]
-  %tmp_112 = call fastcc i15 @scalel(i15 %tmp_111, i5 10) nounwind, !dbg !846 ; [#uses=1 type=i15] [debug line = 272:9@634:23@674:3]
-  %p_trunc44_ext = zext i15 %tmp_112 to i32, !dbg !846 ; [#uses=1 type=i32] [debug line = 272:9@634:23@674:3]
-  store i32 %p_trunc44_ext, i32* @deth, align 4, !dbg !846 ; [debug line = 272:9@634:23@674:3]
-  %tmp_113 = add nsw i32 %tmp_27, %tmp_23, !dbg !847 ; [#uses=1 type=i32] [debug line = 275:2@634:23@674:3]
-  store i32 %tmp_113, i32* @ph, align 4, !dbg !847 ; [debug line = 275:2@634:23@674:3]
-  call fastcc void @upzero(i32 %tmp_27, [6 x i32]* @delay_dhx, [6 x i32]* @delay_bph) nounwind, !dbg !848 ; [debug line = 280:2@634:23@674:3]
-  %ah1_load_1 = load i32* @ah1, align 4, !dbg !849 ; [#uses=2 type=i32] [debug line = 284:8@634:23@674:3]
-  %ah2_load_1 = load i32* @ah2, align 4, !dbg !849 ; [#uses=1 type=i32] [debug line = 284:8@634:23@674:3]
-  %ph_load = load i32* @ph, align 4, !dbg !849    ; [#uses=3 type=i32] [debug line = 284:8@634:23@674:3]
-  %ph1_load = load i32* @ph1, align 4, !dbg !849  ; [#uses=3 type=i32] [debug line = 284:8@634:23@674:3]
-  %ph2_load = load i32* @ph2, align 4, !dbg !849  ; [#uses=1 type=i32] [debug line = 284:8@634:23@674:3]
-  %tmp_114 = call fastcc i15 @uppol2(i32 %ah1_load_1, i32 %ah2_load_1, i32 %ph_load, i32 %ph1_load, i32 %ph2_load) nounwind, !dbg !849 ; [#uses=2 type=i15] [debug line = 284:8@634:23@674:3]
-  %tmp_176_ext = sext i15 %tmp_114 to i32, !dbg !849 ; [#uses=1 type=i32] [debug line = 284:8@634:23@674:3]
-  store i32 %tmp_176_ext, i32* @ah2, align 4, !dbg !849 ; [debug line = 284:8@634:23@674:3]
-  %tmp_115 = call fastcc i16 @uppol1(i32 %ah1_load_1, i15 %tmp_114, i32 %ph_load, i32 %ph1_load) nounwind, !dbg !850 ; [#uses=1 type=i16] [debug line = 287:8@634:23@674:3]
-  %p_trunc4_ext = sext i16 %tmp_115 to i32, !dbg !850 ; [#uses=1 type=i32] [debug line = 287:8@634:23@674:3]
-  store i32 %p_trunc4_ext, i32* @ah1, align 4, !dbg !850 ; [debug line = 287:8@634:23@674:3]
-  %sh_load = load i32* @sh, align 4, !dbg !851    ; [#uses=1 type=i32] [debug line = 290:2@634:23@674:3]
-  %dh_load = load i32* @dh, align 4, !dbg !851    ; [#uses=1 type=i32] [debug line = 290:2@634:23@674:3]
-  %tmp_116 = add nsw i32 %dh_load, %sh_load, !dbg !851 ; [#uses=2 type=i32] [debug line = 290:2@634:23@674:3]
-  store i32 %tmp_116, i32* @yh, align 4, !dbg !851 ; [debug line = 290:2@634:23@674:3]
-  %rh1_load_1 = load i32* @rh1, align 4, !dbg !852 ; [#uses=1 type=i32] [debug line = 293:2@634:23@674:3]
-  store i32 %rh1_load_1, i32* @rh2, align 4, !dbg !852 ; [debug line = 293:2@634:23@674:3]
-  store i32 %tmp_116, i32* @rh1, align 4, !dbg !853 ; [debug line = 294:2@634:23@674:3]
-  store i32 %ph1_load, i32* @ph2, align 4, !dbg !854 ; [debug line = 295:2@634:23@674:3]
-  store i32 %ph_load, i32* @ph1, align 4, !dbg !855 ; [debug line = 296:2@634:23@674:3]
-  %il_load_1 = load i32* @il, align 4, !dbg !856  ; [#uses=1 type=i32] [debug line = 299:2@634:23@674:3]
-  %ih_load_2 = load i32* @ih, align 4, !dbg !856  ; [#uses=1 type=i32] [debug line = 299:2@634:23@674:3]
-  %tmp_117 = shl i32 %ih_load_2, 6, !dbg !856     ; [#uses=1 type=i32] [debug line = 299:2@634:23@674:3]
-  %tmp_118 = or i32 %il_load_1, %tmp_117, !dbg !856 ; [#uses=1 type=i32] [debug line = 299:2@634:23@674:3]
-  %tmp_119 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %i_0_i, i32 31), !dbg !726 ; [#uses=1 type=i1] [debug line = 634:23@674:3]
-  %p_neg = sub i32 0, %i_0_i, !dbg !726           ; [#uses=1 type=i32] [debug line = 634:23@674:3]
-  %p_lshr = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %p_neg, i32 1, i32 31), !dbg !726 ; [#uses=1 type=i31] [debug line = 634:23@674:3]
-  %tmp_22 = zext i31 %p_lshr to i32, !dbg !726    ; [#uses=1 type=i32] [debug line = 634:23@674:3]
-  %p_neg_t = sub i32 0, %tmp_22, !dbg !726        ; [#uses=1 type=i32] [debug line = 634:23@674:3]
-  %p_lshr_f = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %i_0_i, i32 1, i32 31), !dbg !726 ; [#uses=1 type=i31] [debug line = 634:23@674:3]
-  %tmp_24 = zext i31 %p_lshr_f to i32, !dbg !726  ; [#uses=1 type=i32] [debug line = 634:23@674:3]
-  %tmp_120 = select i1 %tmp_119, i32 %p_neg_t, i32 %tmp_24, !dbg !726 ; [#uses=1 type=i32] [debug line = 634:23@674:3]
-  %tmp_121 = sext i32 %tmp_120 to i64, !dbg !726  ; [#uses=1 type=i64] [debug line = 634:23@674:3]
-  %compressed_addr_1 = getelementptr [3 x i32]* %compressed, i64 0, i64 %tmp_121, !dbg !726 ; [#uses=1 type=i32*] [debug line = 634:23@674:3]
-  store i32 %tmp_118, i32* %compressed_addr_1, align 4, !dbg !726 ; [debug line = 634:23@674:3]
-  %i_7 = add nsw i32 2, %i_0_i, !dbg !857         ; [#uses=1 type=i32] [debug line = 633:28@674:3]
-  call void @llvm.dbg.value(metadata !{i32 %i_7}, i64 0, metadata !858) nounwind, !dbg !857 ; [debug line = 633:28@674:3] [debug variable = i]
-  br label %.preheader33, !dbg !857               ; [debug line = 633:28@674:3]
+encode.exit.i:                                    ; preds = %10, %8
+  %ih_load_1 = load i32* @ih, align 4, !dbg !853  ; [#uses=2 type=i32] [debug line = 266:2@634:23@678:3]
+  %tmp_110 = sext i32 %ih_load_1 to i64, !dbg !853 ; [#uses=1 type=i64] [debug line = 266:2@634:23@678:3]
+  %qq2_code2_table_addr_1 = getelementptr [4 x i14]* @qq2_code2_table, i64 0, i64 %tmp_110, !dbg !853 ; [#uses=1 type=i14*] [debug line = 266:2@634:23@678:3]
+  %qq2_code2_table_load_1 = load i14* %qq2_code2_table_addr_1, align 2, !dbg !853 ; [#uses=1 type=i14] [debug line = 266:2@634:23@678:3]
+  %tmp_166_cast = sext i14 %qq2_code2_table_load_1 to i45, !dbg !853 ; [#uses=1 type=i45] [debug line = 266:2@634:23@678:3]
+  %tmp_111 = mul i45 %tmp_166_cast, %tmp_159_cast1, !dbg !853 ; [#uses=1 type=i45] [debug line = 266:2@634:23@678:3]
+  %tmp_26 = call i30 @_ssdm_op_PartSelect.i30.i45.i32.i32(i45 %tmp_111, i32 15, i32 44), !dbg !853 ; [#uses=1 type=i30] [debug line = 266:2@634:23@678:3]
+  %tmp_27 = sext i30 %tmp_26 to i32, !dbg !853    ; [#uses=3 type=i32] [debug line = 266:2@634:23@678:3]
+  store i32 %tmp_27, i32* @dh, align 4, !dbg !853 ; [debug line = 266:2@634:23@678:3]
+  %nbh_load = load i32* @nbh, align 4, !dbg !854  ; [#uses=1 type=i32] [debug line = 269:8@634:23@678:3]
+  %tmp_112 = call fastcc i15 @logsch(i32 %ih_load_1, i32 %nbh_load) nounwind, !dbg !854 ; [#uses=2 type=i15] [debug line = 269:8@634:23@678:3]
+  %tmp_170_ext = zext i15 %tmp_112 to i32, !dbg !854 ; [#uses=1 type=i32] [debug line = 269:8@634:23@678:3]
+  store i32 %tmp_170_ext, i32* @nbh, align 4, !dbg !854 ; [debug line = 269:8@634:23@678:3]
+  %tmp_113 = call fastcc i15 @scalel(i15 %tmp_112, i5 10) nounwind, !dbg !855 ; [#uses=1 type=i15] [debug line = 272:9@634:23@678:3]
+  %p_trunc44_ext = zext i15 %tmp_113 to i32, !dbg !855 ; [#uses=1 type=i32] [debug line = 272:9@634:23@678:3]
+  store i32 %p_trunc44_ext, i32* @deth, align 4, !dbg !855 ; [debug line = 272:9@634:23@678:3]
+  %tmp_114 = add nsw i32 %tmp_27, %tmp_23, !dbg !856 ; [#uses=1 type=i32] [debug line = 275:2@634:23@678:3]
+  store i32 %tmp_114, i32* @ph, align 4, !dbg !856 ; [debug line = 275:2@634:23@678:3]
+  call fastcc void @upzero(i32 %tmp_27, [6 x i32]* @delay_dhx, [6 x i32]* @delay_bph) nounwind, !dbg !857 ; [debug line = 280:2@634:23@678:3]
+  %ah1_load_1 = load i32* @ah1, align 4, !dbg !858 ; [#uses=2 type=i32] [debug line = 284:8@634:23@678:3]
+  %ah2_load_1 = load i32* @ah2, align 4, !dbg !858 ; [#uses=1 type=i32] [debug line = 284:8@634:23@678:3]
+  %ph_load = load i32* @ph, align 4, !dbg !858    ; [#uses=3 type=i32] [debug line = 284:8@634:23@678:3]
+  %ph1_load = load i32* @ph1, align 4, !dbg !858  ; [#uses=3 type=i32] [debug line = 284:8@634:23@678:3]
+  %ph2_load = load i32* @ph2, align 4, !dbg !858  ; [#uses=1 type=i32] [debug line = 284:8@634:23@678:3]
+  %tmp_115 = call fastcc i15 @uppol2(i32 %ah1_load_1, i32 %ah2_load_1, i32 %ph_load, i32 %ph1_load, i32 %ph2_load) nounwind, !dbg !858 ; [#uses=2 type=i15] [debug line = 284:8@634:23@678:3]
+  %tmp_173_ext = sext i15 %tmp_115 to i32, !dbg !858 ; [#uses=1 type=i32] [debug line = 284:8@634:23@678:3]
+  store i32 %tmp_173_ext, i32* @ah2, align 4, !dbg !858 ; [debug line = 284:8@634:23@678:3]
+  %tmp_116 = call fastcc i16 @uppol1(i32 %ah1_load_1, i15 %tmp_115, i32 %ph_load, i32 %ph1_load) nounwind, !dbg !859 ; [#uses=1 type=i16] [debug line = 287:8@634:23@678:3]
+  %p_trunc4_ext = sext i16 %tmp_116 to i32, !dbg !859 ; [#uses=1 type=i32] [debug line = 287:8@634:23@678:3]
+  store i32 %p_trunc4_ext, i32* @ah1, align 4, !dbg !859 ; [debug line = 287:8@634:23@678:3]
+  %sh_load = load i32* @sh, align 4, !dbg !860    ; [#uses=1 type=i32] [debug line = 290:2@634:23@678:3]
+  %dh_load = load i32* @dh, align 4, !dbg !860    ; [#uses=1 type=i32] [debug line = 290:2@634:23@678:3]
+  %tmp_117 = add nsw i32 %dh_load, %sh_load, !dbg !860 ; [#uses=2 type=i32] [debug line = 290:2@634:23@678:3]
+  store i32 %tmp_117, i32* @yh, align 4, !dbg !860 ; [debug line = 290:2@634:23@678:3]
+  %rh1_load_1 = load i32* @rh1, align 4, !dbg !861 ; [#uses=1 type=i32] [debug line = 293:2@634:23@678:3]
+  store i32 %rh1_load_1, i32* @rh2, align 4, !dbg !861 ; [debug line = 293:2@634:23@678:3]
+  store i32 %tmp_117, i32* @rh1, align 4, !dbg !862 ; [debug line = 294:2@634:23@678:3]
+  store i32 %ph1_load, i32* @ph2, align 4, !dbg !863 ; [debug line = 295:2@634:23@678:3]
+  store i32 %ph_load, i32* @ph1, align 4, !dbg !864 ; [debug line = 296:2@634:23@678:3]
+  %il_load_1 = load i32* @il, align 4, !dbg !865  ; [#uses=1 type=i32] [debug line = 299:2@634:23@678:3]
+  %ih_load_2 = load i32* @ih, align 4, !dbg !865  ; [#uses=1 type=i32] [debug line = 299:2@634:23@678:3]
+  %tmp_127 = shl i32 %ih_load_2, 6, !dbg !865     ; [#uses=1 type=i32] [debug line = 299:2@634:23@678:3]
+  %tmp_119 = or i32 %il_load_1, %tmp_127, !dbg !865 ; [#uses=1 type=i32] [debug line = 299:2@634:23@678:3]
+  %tmp_128 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %i_0_i, i32 31), !dbg !736 ; [#uses=1 type=i1] [debug line = 634:23@678:3]
+  %p_neg = sub i32 0, %i_0_i, !dbg !736           ; [#uses=1 type=i32] [debug line = 634:23@678:3]
+  %p_lshr = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %p_neg, i32 1, i32 31), !dbg !736 ; [#uses=1 type=i31] [debug line = 634:23@678:3]
+  %tmp_22 = zext i31 %p_lshr to i32, !dbg !736    ; [#uses=1 type=i32] [debug line = 634:23@678:3]
+  %p_neg_t = sub i32 0, %tmp_22, !dbg !736        ; [#uses=1 type=i32] [debug line = 634:23@678:3]
+  %p_lshr_f = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %i_0_i, i32 1, i32 31), !dbg !736 ; [#uses=1 type=i31] [debug line = 634:23@678:3]
+  %tmp_24 = zext i31 %p_lshr_f to i32, !dbg !736  ; [#uses=1 type=i32] [debug line = 634:23@678:3]
+  %tmp_120 = select i1 %tmp_128, i32 %p_neg_t, i32 %tmp_24, !dbg !736 ; [#uses=1 type=i32] [debug line = 634:23@678:3]
+  %tmp_121 = sext i32 %tmp_120 to i64, !dbg !736  ; [#uses=1 type=i64] [debug line = 634:23@678:3]
+  %compressed_addr_1 = getelementptr [3 x i32]* %compressed, i64 0, i64 %tmp_121, !dbg !736 ; [#uses=1 type=i32*] [debug line = 634:23@678:3]
+  store i32 %tmp_119, i32* %compressed_addr_1, align 4, !dbg !736 ; [debug line = 634:23@678:3]
+  %i_6 = add nsw i32 2, %i_0_i, !dbg !866         ; [#uses=1 type=i32] [debug line = 633:24@678:3]
+  call void @llvm.dbg.value(metadata !{i32 %i_6}, i64 0, metadata !867) nounwind, !dbg !866 ; [debug line = 633:24@678:3] [debug variable = i]
+  br label %.preheader, !dbg !866                 ; [debug line = 633:24@678:3]
 
-; <label>:9                                       ; preds = %11, %1
-  %ad_ptr_0_rec_i_i = phi i4 [ 0, %1 ], [ %p_rec2_i_i, %11 ] ; [#uses=3 type=i4]
-  %h_ptr_0_rec_i_i = phi i5 [ 2, %1 ], [ %phitmp_i_i3, %11 ] ; [#uses=3 type=i5]
-  %xa2_0_i_i = phi i50 [ %xa2_cast, %1 ], [ %xa2_2, %11 ] ; [#uses=2 type=i50]
-  %xa1_0_i_i = phi i50 [ %xa1_cast, %1 ], [ %xa1_2, %11 ] ; [#uses=2 type=i50]
+; <label>:11                                      ; preds = %13, %4
+  %ad_ptr_0_rec_i_i = phi i4 [ 0, %4 ], [ %p_rec2_i_i, %13 ] ; [#uses=3 type=i4]
+  %h_ptr_0_rec_i_i = phi i5 [ 2, %4 ], [ %phitmp_i_i3, %13 ] ; [#uses=3 type=i5]
+  %xa2_0_i_i = phi i50 [ %xa2_cast, %4 ], [ %xa2_2, %13 ] ; [#uses=2 type=i50]
+  %xa1_0_i_i = phi i50 [ %xa1_cast, %4 ], [ %xa1_2, %13 ] ; [#uses=2 type=i50]
   %h_ptr_0_rec_i_i_cast = zext i5 %h_ptr_0_rec_i_i to i64 ; [#uses=1 type=i64]
   %ad_ptr_0_rec_i_i_cas = zext i4 %ad_ptr_0_rec_i_i to i64 ; [#uses=2 type=i64]
   %h_addr_1 = getelementptr [24 x i15]* @h, i64 0, i64 %h_ptr_0_rec_i_i_cast ; [#uses=1 type=i15*]
   %accumc_addr = getelementptr [11 x i32]* @accumc, i64 0, i64 %ad_ptr_0_rec_i_i_cas ; [#uses=1 type=i32*]
   %accumd_addr = getelementptr [11 x i32]* @accumd, i64 0, i64 %ad_ptr_0_rec_i_i_cas ; [#uses=1 type=i32*]
   %empty_68 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind ; [#uses=0 type=i32]
-  %exitcond = icmp eq i4 %ad_ptr_0_rec_i_i, -6, !dbg !788 ; [#uses=1 type=i1] [debug line = 417:7@646:3@677:3]
-  %p_rec2_i_i = add i4 %ad_ptr_0_rec_i_i, 1, !dbg !859 ; [#uses=1 type=i4] [debug line = 419:3@646:3@677:3]
-  br i1 %exitcond, label %10, label %11, !dbg !788 ; [debug line = 417:7@646:3@677:3]
+  %exitcond = icmp eq i4 %ad_ptr_0_rec_i_i, -6, !dbg !798 ; [#uses=1 type=i1] [debug line = 417:7@646:3@681:3]
+  %p_rec2_i_i = add i4 %ad_ptr_0_rec_i_i, 1, !dbg !868 ; [#uses=1 type=i4] [debug line = 419:3@646:3@681:3]
+  br i1 %exitcond, label %12, label %13, !dbg !798 ; [debug line = 417:7@646:3@681:3]
 
-; <label>:10                                      ; preds = %9
-  %tmp_75 = trunc i50 %xa1_0_i_i to i46           ; [#uses=1 type=i46]
-  %tmp_76 = trunc i50 %xa2_0_i_i to i46           ; [#uses=1 type=i46]
-  %accumc_load = load i32* getelementptr inbounds ([11 x i32]* @accumc, i64 0, i64 10), align 8, !dbg !861 ; [#uses=1 type=i32] [debug line = 422:2@646:3@677:3]
-  %tmp_119_cast = sext i32 %accumc_load to i39, !dbg !861 ; [#uses=1 type=i39] [debug line = 422:2@646:3@677:3]
-  %tmp_77 = mul i39 -44, %tmp_119_cast, !dbg !861 ; [#uses=1 type=i39] [debug line = 422:2@646:3@677:3]
-  %tmp_120_cast = sext i39 %tmp_77 to i46, !dbg !861 ; [#uses=1 type=i46] [debug line = 422:2@646:3@677:3]
-  %xa1_1 = add i46 %tmp_75, %tmp_120_cast, !dbg !861 ; [#uses=1 type=i46] [debug line = 422:2@646:3@677:3]
-  call void @llvm.dbg.value(metadata !{i46 %xa1_1}, i64 0, metadata !786) nounwind, !dbg !861 ; [debug line = 422:2@646:3@677:3] [debug variable = xa1]
-  %accumd_load = load i32* getelementptr inbounds ([11 x i32]* @accumd, i64 0, i64 10), align 8, !dbg !862 ; [#uses=2 type=i32] [debug line = 423:2@646:3@677:3]
-  %p_shl7 = call i36 @_ssdm_op_BitConcatenate.i36.i32.i4(i32 %accumd_load, i4 0), !dbg !862 ; [#uses=1 type=i36] [debug line = 423:2@646:3@677:3]
-  %p_shl7_cast = sext i36 %p_shl7 to i37, !dbg !862 ; [#uses=1 type=i37] [debug line = 423:2@646:3@677:3]
-  %p_shl8 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %accumd_load, i2 0), !dbg !862 ; [#uses=1 type=i34] [debug line = 423:2@646:3@677:3]
-  %p_shl8_cast = sext i34 %p_shl8 to i37, !dbg !862 ; [#uses=1 type=i37] [debug line = 423:2@646:3@677:3]
-  %tmp_78 = sub i37 %p_shl7_cast, %p_shl8_cast, !dbg !862 ; [#uses=1 type=i37] [debug line = 423:2@646:3@677:3]
-  %tmp_122_cast = sext i37 %tmp_78 to i46, !dbg !862 ; [#uses=1 type=i46] [debug line = 423:2@646:3@677:3]
-  %xa2_1 = add i46 %tmp_76, %tmp_122_cast, !dbg !862 ; [#uses=1 type=i46] [debug line = 423:2@646:3@677:3]
-  call void @llvm.dbg.value(metadata !{i46 %xa2_1}, i64 0, metadata !787) nounwind, !dbg !862 ; [debug line = 423:2@646:3@677:3] [debug variable = xa2]
-  %tmp_79 = call i32 @_ssdm_op_PartSelect.i32.i46.i32.i32(i46 %xa1_1, i32 14, i32 45), !dbg !863 ; [#uses=2 type=i32] [debug line = 426:2@646:3@677:3]
-  store i32 %tmp_79, i32* @xout1, align 4, !dbg !863 ; [debug line = 426:2@646:3@677:3]
-  %tmp_80 = call i32 @_ssdm_op_PartSelect.i32.i46.i32.i32(i46 %xa2_1, i32 14, i32 45), !dbg !864 ; [#uses=2 type=i32] [debug line = 427:2@646:3@677:3]
-  store i32 %tmp_80, i32* @xout2, align 4, !dbg !864 ; [debug line = 427:2@646:3@677:3]
-  br label %12, !dbg !865                         ; [debug line = 432:7@646:3@677:3]
+; <label>:12                                      ; preds = %11
+  %tmp_118 = trunc i50 %xa1_0_i_i to i46          ; [#uses=1 type=i46]
+  %tmp_124 = trunc i50 %xa2_0_i_i to i46          ; [#uses=1 type=i46]
+  %accumc_load = load i32* getelementptr inbounds ([11 x i32]* @accumc, i64 0, i64 10), align 8, !dbg !870 ; [#uses=1 type=i32] [debug line = 422:2@646:3@681:3]
+  %tmp_119_cast = sext i32 %accumc_load to i39, !dbg !870 ; [#uses=1 type=i39] [debug line = 422:2@646:3@681:3]
+  %tmp_81 = mul i39 -44, %tmp_119_cast, !dbg !870 ; [#uses=1 type=i39] [debug line = 422:2@646:3@681:3]
+  %tmp_120_cast = sext i39 %tmp_81 to i46, !dbg !870 ; [#uses=1 type=i46] [debug line = 422:2@646:3@681:3]
+  %xa1_1 = add i46 %tmp_118, %tmp_120_cast, !dbg !870 ; [#uses=1 type=i46] [debug line = 422:2@646:3@681:3]
+  call void @llvm.dbg.value(metadata !{i46 %xa1_1}, i64 0, metadata !796) nounwind, !dbg !870 ; [debug line = 422:2@646:3@681:3] [debug variable = xa1]
+  %accumd_load = load i32* getelementptr inbounds ([11 x i32]* @accumd, i64 0, i64 10), align 8, !dbg !871 ; [#uses=2 type=i32] [debug line = 423:2@646:3@681:3]
+  %p_shl7 = call i36 @_ssdm_op_BitConcatenate.i36.i32.i4(i32 %accumd_load, i4 0), !dbg !871 ; [#uses=1 type=i36] [debug line = 423:2@646:3@681:3]
+  %p_shl7_cast = sext i36 %p_shl7 to i37, !dbg !871 ; [#uses=1 type=i37] [debug line = 423:2@646:3@681:3]
+  %p_shl8 = call i34 @_ssdm_op_BitConcatenate.i34.i32.i2(i32 %accumd_load, i2 0), !dbg !871 ; [#uses=1 type=i34] [debug line = 423:2@646:3@681:3]
+  %p_shl8_cast = sext i34 %p_shl8 to i37, !dbg !871 ; [#uses=1 type=i37] [debug line = 423:2@646:3@681:3]
+  %tmp_82 = sub i37 %p_shl7_cast, %p_shl8_cast, !dbg !871 ; [#uses=1 type=i37] [debug line = 423:2@646:3@681:3]
+  %tmp_122_cast = sext i37 %tmp_82 to i46, !dbg !871 ; [#uses=1 type=i46] [debug line = 423:2@646:3@681:3]
+  %xa2_1 = add i46 %tmp_124, %tmp_122_cast, !dbg !871 ; [#uses=1 type=i46] [debug line = 423:2@646:3@681:3]
+  call void @llvm.dbg.value(metadata !{i46 %xa2_1}, i64 0, metadata !797) nounwind, !dbg !871 ; [debug line = 423:2@646:3@681:3] [debug variable = xa2]
+  %tmp_83 = call i32 @_ssdm_op_PartSelect.i32.i46.i32.i32(i46 %xa1_1, i32 14, i32 45), !dbg !872 ; [#uses=2 type=i32] [debug line = 426:2@646:3@681:3]
+  store i32 %tmp_83, i32* @xout1, align 4, !dbg !872 ; [debug line = 426:2@646:3@681:3]
+  %tmp_84 = call i32 @_ssdm_op_PartSelect.i32.i46.i32.i32(i46 %xa2_1, i32 14, i32 45), !dbg !873 ; [#uses=3 type=i32] [debug line = 427:2@646:3@681:3]
+  store i32 %tmp_84, i32* @xout2, align 4, !dbg !873 ; [debug line = 427:2@646:3@681:3]
+  br label %14, !dbg !874                         ; [debug line = 432:7@646:3@681:3]
 
-; <label>:11                                      ; preds = %9
-  %accumc_load_1 = load i32* %accumc_addr, align 4, !dbg !867 ; [#uses=1 type=i32] [debug line = 418:3@646:3@677:3]
-  %tmp_127_cast = sext i32 %accumc_load_1 to i46, !dbg !867 ; [#uses=1 type=i46] [debug line = 418:3@646:3@677:3]
-  %h_ptr_0_sum9_i_i = or i5 %h_ptr_0_rec_i_i, 1, !dbg !867 ; [#uses=1 type=i5] [debug line = 418:3@646:3@677:3]
-  %h_ptr_0_sum9_i_i_cas = zext i5 %h_ptr_0_sum9_i_i to i64, !dbg !867 ; [#uses=1 type=i64] [debug line = 418:3@646:3@677:3]
-  %h_ptr_1 = getelementptr [24 x i15]* @h, i64 0, i64 %h_ptr_0_sum9_i_i_cas, !dbg !867 ; [#uses=1 type=i15*] [debug line = 418:3@646:3@677:3]
-  call void @llvm.dbg.value(metadata !{i15* %h_ptr_1}, i64 0, metadata !868) nounwind, !dbg !867 ; [debug line = 418:3@646:3@677:3] [debug variable = h_ptr]
-  %h_load_1 = load i15* %h_addr_1, align 4, !dbg !867 ; [#uses=1 type=i15] [debug line = 418:3@646:3@677:3]
-  %tmp_128_cast = sext i15 %h_load_1 to i46, !dbg !867 ; [#uses=1 type=i46] [debug line = 418:3@646:3@677:3]
-  %tmp_81 = mul i46 %tmp_127_cast, %tmp_128_cast, !dbg !867 ; [#uses=1 type=i46] [debug line = 418:3@646:3@677:3]
-  %tmp_129_cast = sext i46 %tmp_81 to i50, !dbg !867 ; [#uses=1 type=i50] [debug line = 418:3@646:3@677:3]
-  %xa1_2 = add i50 %tmp_129_cast, %xa1_0_i_i, !dbg !867 ; [#uses=1 type=i50] [debug line = 418:3@646:3@677:3]
-  call void @llvm.dbg.value(metadata !{i50 %xa1_2}, i64 0, metadata !786) nounwind, !dbg !867 ; [debug line = 418:3@646:3@677:3] [debug variable = xa1]
-  %accumd_load_1 = load i32* %accumd_addr, align 4, !dbg !859 ; [#uses=1 type=i32] [debug line = 419:3@646:3@677:3]
-  %tmp_130_cast = sext i32 %accumd_load_1 to i46, !dbg !859 ; [#uses=1 type=i46] [debug line = 419:3@646:3@677:3]
-  %h_ptr_1_load = load i15* %h_ptr_1, align 2, !dbg !859 ; [#uses=1 type=i15] [debug line = 419:3@646:3@677:3]
-  %tmp_131_cast = sext i15 %h_ptr_1_load to i46, !dbg !859 ; [#uses=1 type=i46] [debug line = 419:3@646:3@677:3]
-  %tmp_82 = mul i46 %tmp_130_cast, %tmp_131_cast, !dbg !859 ; [#uses=1 type=i46] [debug line = 419:3@646:3@677:3]
-  %tmp_132_cast = sext i46 %tmp_82 to i50, !dbg !859 ; [#uses=1 type=i50] [debug line = 419:3@646:3@677:3]
-  %xa2_2 = add i50 %tmp_132_cast, %xa2_0_i_i, !dbg !859 ; [#uses=1 type=i50] [debug line = 419:3@646:3@677:3]
-  call void @llvm.dbg.value(metadata !{i50 %xa2_2}, i64 0, metadata !787) nounwind, !dbg !859 ; [debug line = 419:3@646:3@677:3] [debug variable = xa2]
-  %phitmp_i_i3 = add i5 %h_ptr_0_rec_i_i, 2, !dbg !869 ; [#uses=1 type=i5] [debug line = 417:22@646:3@677:3]
-  br label %9, !dbg !869                          ; [debug line = 417:22@646:3@677:3]
+; <label>:13                                      ; preds = %11
+  %accumc_load_1 = load i32* %accumc_addr, align 4, !dbg !876 ; [#uses=1 type=i32] [debug line = 418:3@646:3@681:3]
+  %tmp_127_cast = sext i32 %accumc_load_1 to i46, !dbg !876 ; [#uses=1 type=i46] [debug line = 418:3@646:3@681:3]
+  %h_ptr_0_sum9_i_i = or i5 %h_ptr_0_rec_i_i, 1, !dbg !876 ; [#uses=1 type=i5] [debug line = 418:3@646:3@681:3]
+  %h_ptr_0_sum9_i_i_cas = zext i5 %h_ptr_0_sum9_i_i to i64, !dbg !876 ; [#uses=1 type=i64] [debug line = 418:3@646:3@681:3]
+  %h_ptr_1 = getelementptr [24 x i15]* @h, i64 0, i64 %h_ptr_0_sum9_i_i_cas, !dbg !876 ; [#uses=1 type=i15*] [debug line = 418:3@646:3@681:3]
+  call void @llvm.dbg.value(metadata !{i15* %h_ptr_1}, i64 0, metadata !877) nounwind, !dbg !876 ; [debug line = 418:3@646:3@681:3] [debug variable = h_ptr]
+  %h_load_1 = load i15* %h_addr_1, align 4, !dbg !876 ; [#uses=1 type=i15] [debug line = 418:3@646:3@681:3]
+  %tmp_128_cast = sext i15 %h_load_1 to i46, !dbg !876 ; [#uses=1 type=i46] [debug line = 418:3@646:3@681:3]
+  %tmp_85 = mul i46 %tmp_127_cast, %tmp_128_cast, !dbg !876 ; [#uses=1 type=i46] [debug line = 418:3@646:3@681:3]
+  %tmp_129_cast = sext i46 %tmp_85 to i50, !dbg !876 ; [#uses=1 type=i50] [debug line = 418:3@646:3@681:3]
+  %xa1_2 = add i50 %tmp_129_cast, %xa1_0_i_i, !dbg !876 ; [#uses=1 type=i50] [debug line = 418:3@646:3@681:3]
+  call void @llvm.dbg.value(metadata !{i50 %xa1_2}, i64 0, metadata !796) nounwind, !dbg !876 ; [debug line = 418:3@646:3@681:3] [debug variable = xa1]
+  %accumd_load_1 = load i32* %accumd_addr, align 4, !dbg !868 ; [#uses=1 type=i32] [debug line = 419:3@646:3@681:3]
+  %tmp_130_cast = sext i32 %accumd_load_1 to i46, !dbg !868 ; [#uses=1 type=i46] [debug line = 419:3@646:3@681:3]
+  %h_ptr_1_load = load i15* %h_ptr_1, align 2, !dbg !868 ; [#uses=1 type=i15] [debug line = 419:3@646:3@681:3]
+  %tmp_131_cast = sext i15 %h_ptr_1_load to i46, !dbg !868 ; [#uses=1 type=i46] [debug line = 419:3@646:3@681:3]
+  %tmp_86 = mul i46 %tmp_130_cast, %tmp_131_cast, !dbg !868 ; [#uses=1 type=i46] [debug line = 419:3@646:3@681:3]
+  %tmp_132_cast = sext i46 %tmp_86 to i50, !dbg !868 ; [#uses=1 type=i50] [debug line = 419:3@646:3@681:3]
+  %xa2_2 = add i50 %tmp_132_cast, %xa2_0_i_i, !dbg !868 ; [#uses=1 type=i50] [debug line = 419:3@646:3@681:3]
+  call void @llvm.dbg.value(metadata !{i50 %xa2_2}, i64 0, metadata !797) nounwind, !dbg !868 ; [debug line = 419:3@646:3@681:3] [debug variable = xa2]
+  %phitmp_i_i3 = add i5 %h_ptr_0_rec_i_i, 2, !dbg !878 ; [#uses=1 type=i5] [debug line = 417:22@646:3@681:3]
+  br label %11, !dbg !878                         ; [debug line = 417:22@646:3@681:3]
 
-; <label>:12                                      ; preds = %13, %10
-  %ad_ptr_1_rec_i_i = phi i5 [ 0, %10 ], [ %p_rec_i_i, %13 ] ; [#uses=3 type=i5]
-  %i_1_i_i4 = phi i4 [ 0, %10 ], [ %i_6, %13 ]    ; [#uses=2 type=i4]
+; <label>:14                                      ; preds = %15, %12
+  %ad_ptr_1_rec_i_i = phi i5 [ 0, %12 ], [ %p_rec_i_i, %15 ] ; [#uses=3 type=i5]
+  %i_1_i_i4 = phi i4 [ 0, %12 ], [ %i_5, %15 ]    ; [#uses=2 type=i4]
   %ac_ptr_0_sum_i_i = add i5 %ad_ptr_1_rec_i_i, 10 ; [#uses=1 type=i5]
   %ac_ptr_0_sum_i_i_cas = zext i5 %ac_ptr_0_sum_i_i to i64 ; [#uses=2 type=i64]
   %accumc_addr_1 = getelementptr [11 x i32]* @accumc, i64 0, i64 %ac_ptr_0_sum_i_i_cas ; [#uses=1 type=i32*]
   %accumd_addr_1 = getelementptr [11 x i32]* @accumd, i64 0, i64 %ac_ptr_0_sum_i_i_cas ; [#uses=1 type=i32*]
-  %p_rec_i_i = add i5 %ad_ptr_1_rec_i_i, -1, !dbg !870 ; [#uses=1 type=i5] [debug line = 434:3@646:3@677:3]
-  %ad_ptr_0_sum7_i_i = add i5 %ad_ptr_1_rec_i_i, 9, !dbg !872 ; [#uses=1 type=i5] [debug line = 431:2@646:3@677:3]
-  %ad_ptr_0_sum7_i_i_ca = zext i5 %ad_ptr_0_sum7_i_i to i64, !dbg !872 ; [#uses=2 type=i64] [debug line = 431:2@646:3@677:3]
-  %ad_ptr1 = getelementptr [11 x i32]* @accumd, i64 0, i64 %ad_ptr_0_sum7_i_i_ca, !dbg !872 ; [#uses=1 type=i32*] [debug line = 431:2@646:3@677:3]
-  call void @llvm.dbg.value(metadata !{i32* %ad_ptr1}, i64 0, metadata !873) nounwind, !dbg !872 ; [debug line = 431:2@646:3@677:3] [debug variable = ad_ptr1]
-  %ac_ptr1 = getelementptr [11 x i32]* @accumc, i64 0, i64 %ad_ptr_0_sum7_i_i_ca, !dbg !874 ; [#uses=1 type=i32*] [debug line = 430:2@646:3@677:3]
-  call void @llvm.dbg.value(metadata !{i32* %ac_ptr1}, i64 0, metadata !875) nounwind, !dbg !874 ; [debug line = 430:2@646:3@677:3] [debug variable = ac_ptr1]
-  %exitcond_i_i5 = icmp eq i4 %i_1_i_i4, -6, !dbg !865 ; [#uses=1 type=i1] [debug line = 432:7@646:3@677:3]
+  %p_rec_i_i = add i5 %ad_ptr_1_rec_i_i, -1, !dbg !879 ; [#uses=1 type=i5] [debug line = 434:3@646:3@681:3]
+  %ad_ptr_0_sum7_i_i = add i5 %ad_ptr_1_rec_i_i, 9, !dbg !881 ; [#uses=1 type=i5] [debug line = 431:2@646:3@681:3]
+  %ad_ptr_0_sum7_i_i_ca = zext i5 %ad_ptr_0_sum7_i_i to i64, !dbg !881 ; [#uses=2 type=i64] [debug line = 431:2@646:3@681:3]
+  %ad_ptr1 = getelementptr [11 x i32]* @accumd, i64 0, i64 %ad_ptr_0_sum7_i_i_ca, !dbg !881 ; [#uses=1 type=i32*] [debug line = 431:2@646:3@681:3]
+  call void @llvm.dbg.value(metadata !{i32* %ad_ptr1}, i64 0, metadata !882) nounwind, !dbg !881 ; [debug line = 431:2@646:3@681:3] [debug variable = ad_ptr1]
+  %ac_ptr1 = getelementptr [11 x i32]* @accumc, i64 0, i64 %ad_ptr_0_sum7_i_i_ca, !dbg !883 ; [#uses=1 type=i32*] [debug line = 430:2@646:3@681:3]
+  call void @llvm.dbg.value(metadata !{i32* %ac_ptr1}, i64 0, metadata !884) nounwind, !dbg !883 ; [debug line = 430:2@646:3@681:3] [debug variable = ac_ptr1]
+  %exitcond_i_i5 = icmp eq i4 %i_1_i_i4, -6, !dbg !874 ; [#uses=1 type=i1] [debug line = 432:7@646:3@681:3]
   %empty_69 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind ; [#uses=0 type=i32]
-  %i_6 = add i4 %i_1_i_i4, 1, !dbg !876           ; [#uses=1 type=i4] [debug line = 432:22@646:3@677:3]
-  br i1 %exitcond_i_i5, label %decode.exit.i, label %13, !dbg !865 ; [debug line = 432:7@646:3@677:3]
+  %i_5 = add i4 %i_1_i_i4, 1, !dbg !885           ; [#uses=1 type=i4] [debug line = 432:22@646:3@681:3]
+  br i1 %exitcond_i_i5, label %decode.exit.i, label %15, !dbg !874 ; [debug line = 432:7@646:3@681:3]
 
-decode.exit.i:                                    ; preds = %12
-  store i32 %tmp_70, i32* getelementptr inbounds ([11 x i32]* @accumc, i64 0, i64 0), align 16, !dbg !877 ; [debug line = 436:2@646:3@677:3]
-  store i32 %tmp_69, i32* getelementptr inbounds ([11 x i32]* @accumd, i64 0, i64 0), align 16, !dbg !878 ; [debug line = 437:2@646:3@677:3]
-  %tmp_106 = sext i32 %i_0_i1 to i64, !dbg !879   ; [#uses=1 type=i64] [debug line = 647:3@677:3]
-  %dec_result_addr = getelementptr [3 x i32]* %dec_result, i64 0, i64 %tmp_106, !dbg !879 ; [#uses=1 type=i32*] [debug line = 647:3@677:3]
-  store i32 %tmp_79, i32* %dec_result_addr, align 4, !dbg !879 ; [debug line = 647:3@677:3]
-  %tmp_107 = or i32 %i_0_i1, 1, !dbg !880         ; [#uses=1 type=i32] [debug line = 648:3@677:3]
-  %tmp_108 = sext i32 %tmp_107 to i64, !dbg !880  ; [#uses=1 type=i64] [debug line = 648:3@677:3]
-  %dec_result_addr_1 = getelementptr [3 x i32]* %dec_result, i64 0, i64 %tmp_108, !dbg !880 ; [#uses=1 type=i32*] [debug line = 648:3@677:3]
-  store i32 %tmp_80, i32* %dec_result_addr_1, align 4, !dbg !880 ; [debug line = 648:3@677:3]
-  %i_5 = add nsw i32 %i_0_i1, 2, !dbg !881        ; [#uses=1 type=i32] [debug line = 645:30@677:3]
-  call void @llvm.dbg.value(metadata !{i32 %i_5}, i64 0, metadata !882) nounwind, !dbg !881 ; [debug line = 645:30@677:3] [debug variable = i]
-  br label %.preheader, !dbg !881                 ; [debug line = 645:30@677:3]
+decode.exit.i:                                    ; preds = %14
+  store i32 %tmp_74, i32* getelementptr inbounds ([11 x i32]* @accumc, i64 0, i64 0), align 16, !dbg !886 ; [debug line = 436:2@646:3@681:3]
+  store i32 %tmp_73, i32* getelementptr inbounds ([11 x i32]* @accumd, i64 0, i64 0), align 16, !dbg !887 ; [debug line = 437:2@646:3@681:3]
+  %tmp_108 = sext i32 %i_0_i1 to i64, !dbg !888   ; [#uses=1 type=i64] [debug line = 647:3@681:3]
+  %dec_result_addr_1 = getelementptr [3 x i32]* %dec_result, i64 0, i64 %tmp_108, !dbg !888 ; [#uses=1 type=i32*] [debug line = 647:3@681:3]
+  store i32 %tmp_83, i32* %dec_result_addr_1, align 4, !dbg !888 ; [debug line = 647:3@681:3]
+  %tmp_109 = icmp slt i32 %i_0_i1, %tmp_s, !dbg !729 ; [#uses=1 type=i1] [debug line = 648:3@681:3]
+  br i1 %tmp_109, label %16, label %17, !dbg !729 ; [debug line = 648:3@681:3]
 
-; <label>:13                                      ; preds = %12
-  %ac_ptr1_load = load i32* %ac_ptr1, align 4, !dbg !883 ; [#uses=1 type=i32] [debug line = 433:3@646:3@677:3]
-  store i32 %ac_ptr1_load, i32* %accumc_addr_1, align 4, !dbg !883 ; [debug line = 433:3@646:3@677:3]
-  %ad_ptr1_load = load i32* %ad_ptr1, align 4, !dbg !870 ; [#uses=1 type=i32] [debug line = 434:3@646:3@677:3]
-  store i32 %ad_ptr1_load, i32* %accumd_addr_1, align 4, !dbg !870 ; [debug line = 434:3@646:3@677:3]
-  call void @llvm.dbg.value(metadata !{i4 %i_6}, i64 0, metadata !884) nounwind, !dbg !876 ; [debug line = 432:22@646:3@677:3] [debug variable = i]
-  br label %12, !dbg !876                         ; [debug line = 432:22@646:3@677:3]
+; <label>:15                                      ; preds = %14
+  %ac_ptr1_load = load i32* %ac_ptr1, align 4, !dbg !889 ; [#uses=1 type=i32] [debug line = 433:3@646:3@681:3]
+  store i32 %ac_ptr1_load, i32* %accumc_addr_1, align 4, !dbg !889 ; [debug line = 433:3@646:3@681:3]
+  %ad_ptr1_load = load i32* %ad_ptr1, align 4, !dbg !879 ; [#uses=1 type=i32] [debug line = 434:3@646:3@681:3]
+  store i32 %ad_ptr1_load, i32* %accumd_addr_1, align 4, !dbg !879 ; [debug line = 434:3@646:3@681:3]
+  call void @llvm.dbg.value(metadata !{i4 %i_5}, i64 0, metadata !890) nounwind, !dbg !885 ; [debug line = 432:22@646:3@681:3] [debug variable = i]
+  br label %14, !dbg !885                         ; [debug line = 432:22@646:3@681:3]
+
+; <label>:16                                      ; preds = %decode.exit.i
+  %tmp_122 = or i32 %i_0_i1, 1, !dbg !891         ; [#uses=1 type=i32] [debug line = 649:4@681:3]
+  %tmp_123 = sext i32 %tmp_122 to i64, !dbg !891  ; [#uses=1 type=i64] [debug line = 649:4@681:3]
+  %dec_result_addr_2 = getelementptr [3 x i32]* %dec_result, i64 0, i64 %tmp_123, !dbg !891 ; [#uses=1 type=i32*] [debug line = 649:4@681:3]
+  store i32 %tmp_84, i32* %dec_result_addr_2, align 4, !dbg !891 ; [debug line = 649:4@681:3]
+  br label %18, !dbg !893                         ; [debug line = 650:3@681:3]
+
+; <label>:17                                      ; preds = %decode.exit.i
+  store i32 %tmp_84, i32* %dec_result_addr, align 4, !dbg !733 ; [debug line = 651:4@681:3]
+  br label %18
+
+; <label>:18                                      ; preds = %17, %16
+  %i_7 = add nsw i32 %i_0_i1, 2, !dbg !894        ; [#uses=1 type=i32] [debug line = 645:25@681:3]
+  call void @llvm.dbg.value(metadata !{i32 %i_7}, i64 0, metadata !895) nounwind, !dbg !894 ; [debug line = 645:25@681:3] [debug variable = i]
+  br label %2, !dbg !894                          ; [debug line = 645:25@681:3]
 }
 
 !opencl.kernels = !{!0, !7, !7, !9, !15, !17, !21, !27, !29, !31, !33, !39, !45, !47, !49, !53, !55}
@@ -2125,10 +2150,10 @@ decode.exit.i:                                    ; preds = %12
 !658 = metadata !{i32 786478, i32 0, metadata !469, metadata !"adpcm_enc_main", metadata !"adpcm_enc_main", metadata !"", metadata !469, i32 626, metadata !659, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, null, metadata !474, i32 627} ; [ DW_TAG_subprogram ]
 !659 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !660, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
 !660 = metadata !{null, metadata !473, metadata !473, metadata !472}
-!661 = metadata !{i32 674, i32 3, metadata !662, null}
-!662 = metadata !{i32 786443, metadata !663, i32 673, i32 14, metadata !469, i32 40} ; [ DW_TAG_lexical_block ]
-!663 = metadata !{i32 786443, metadata !664, i32 654, i32 1, metadata !469, i32 39} ; [ DW_TAG_lexical_block ]
-!664 = metadata !{i32 786478, i32 0, metadata !469, metadata !"adpcm_main", metadata !"adpcm_main", metadata !"", metadata !469, i32 652, metadata !665, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, null, metadata !474, i32 654} ; [ DW_TAG_subprogram ]
+!661 = metadata !{i32 678, i32 3, metadata !662, null}
+!662 = metadata !{i32 786443, metadata !663, i32 677, i32 14, metadata !469, i32 42} ; [ DW_TAG_lexical_block ]
+!663 = metadata !{i32 786443, metadata !664, i32 658, i32 1, metadata !469, i32 41} ; [ DW_TAG_lexical_block ]
+!664 = metadata !{i32 786478, i32 0, metadata !469, metadata !"adpcm_main", metadata !"adpcm_main", metadata !"", metadata !469, i32 656, metadata !665, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, null, metadata !474, i32 658} ; [ DW_TAG_subprogram ]
 !665 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !666, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
 !666 = metadata !{null, metadata !473, metadata !473, metadata !473, metadata !472, metadata !472}
 !667 = metadata !{metadata !668}
@@ -2155,197 +2180,208 @@ decode.exit.i:                                    ; preds = %12
 !688 = metadata !{i32 0, i32 31, metadata !689}
 !689 = metadata !{metadata !690}
 !690 = metadata !{metadata !"size", metadata !685, metadata !"int", i32 0, i32 31}
-!691 = metadata !{i32 656, i32 1, metadata !663, null}
-!692 = metadata !{i32 657, i32 1, metadata !663, null}
-!693 = metadata !{i32 658, i32 1, metadata !663, null}
-!694 = metadata !{i32 659, i32 1, metadata !663, null}
-!695 = metadata !{i32 660, i32 1, metadata !663, null}
-!696 = metadata !{i32 661, i32 1, metadata !663, null}
-!697 = metadata !{i32 662, i32 1, metadata !663, null}
-!698 = metadata !{i32 663, i32 1, metadata !663, null}
-!699 = metadata !{i32 664, i32 1, metadata !663, null}
-!700 = metadata !{i32 666, i32 1, metadata !663, null}
-!701 = metadata !{i32 667, i32 1, metadata !663, null}
-!702 = metadata !{i32 671, i32 1, metadata !663, null}
-!703 = metadata !{i32 786689, metadata !664, metadata !"size", metadata !469, i32 83886733, metadata !472, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!704 = metadata !{i32 653, i32 52, metadata !664, null}
-!705 = metadata !{i32 786689, metadata !664, metadata !"select", metadata !469, i32 67109517, metadata !472, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!706 = metadata !{i32 653, i32 40, metadata !664, null}
-!707 = metadata !{i32 786689, metadata !664, metadata !"test_data", null, i32 652, metadata !708, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!691 = metadata !{i32 660, i32 1, metadata !663, null}
+!692 = metadata !{i32 661, i32 1, metadata !663, null}
+!693 = metadata !{i32 662, i32 1, metadata !663, null}
+!694 = metadata !{i32 663, i32 1, metadata !663, null}
+!695 = metadata !{i32 664, i32 1, metadata !663, null}
+!696 = metadata !{i32 665, i32 1, metadata !663, null}
+!697 = metadata !{i32 666, i32 1, metadata !663, null}
+!698 = metadata !{i32 667, i32 1, metadata !663, null}
+!699 = metadata !{i32 668, i32 1, metadata !663, null}
+!700 = metadata !{i32 670, i32 1, metadata !663, null}
+!701 = metadata !{i32 671, i32 1, metadata !663, null}
+!702 = metadata !{i32 675, i32 1, metadata !663, null}
+!703 = metadata !{i32 786689, metadata !664, metadata !"size", metadata !469, i32 83886737, metadata !472, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!704 = metadata !{i32 657, i32 52, metadata !664, null}
+!705 = metadata !{i32 786689, metadata !664, metadata !"select", metadata !469, i32 67109521, metadata !472, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!706 = metadata !{i32 657, i32 40, metadata !664, null}
+!707 = metadata !{i32 786689, metadata !664, metadata !"test_data", null, i32 656, metadata !708, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
 !708 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 96, i64 32, i32 0, i32 0, metadata !472, metadata !709, i32 0, i32 0} ; [ DW_TAG_array_type ]
 !709 = metadata !{metadata !710}
 !710 = metadata !{i32 786465, i64 0, i64 2}       ; [ DW_TAG_subrange_type ]
-!711 = metadata !{i32 652, i32 21, metadata !664, null}
-!712 = metadata !{i32 786689, metadata !664, metadata !"compressed", null, i32 652, metadata !708, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!713 = metadata !{i32 652, i32 39, metadata !664, null}
-!714 = metadata !{i32 786689, metadata !664, metadata !"dec_result", null, i32 653, metadata !708, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!715 = metadata !{i32 653, i32 21, metadata !664, null}
-!716 = metadata !{i32 679, i32 1, metadata !663, null}
-!717 = metadata !{i32 673, i32 2, metadata !663, null}
-!718 = metadata !{i32 633, i32 7, metadata !719, metadata !661}
-!719 = metadata !{i32 786443, metadata !657, i32 633, i32 2, metadata !469, i32 34} ; [ DW_TAG_lexical_block ]
-!720 = metadata !{i32 645, i32 7, metadata !721, metadata !724}
-!721 = metadata !{i32 786443, metadata !722, i32 645, i32 2, metadata !469, i32 37} ; [ DW_TAG_lexical_block ]
-!722 = metadata !{i32 786443, metadata !723, i32 639, i32 1, metadata !469, i32 36} ; [ DW_TAG_lexical_block ]
-!723 = metadata !{i32 786478, i32 0, metadata !469, metadata !"adpcm_dec_main", metadata !"adpcm_dec_main", metadata !"", metadata !469, i32 638, metadata !659, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, null, metadata !474, i32 639} ; [ DW_TAG_subprogram ]
-!724 = metadata !{i32 677, i32 3, metadata !725, null}
-!725 = metadata !{i32 786443, metadata !663, i32 676, i32 9, metadata !469, i32 41} ; [ DW_TAG_lexical_block ]
-!726 = metadata !{i32 634, i32 23, metadata !727, metadata !661}
-!727 = metadata !{i32 786443, metadata !719, i32 633, i32 36, metadata !469, i32 35} ; [ DW_TAG_lexical_block ]
-!728 = metadata !{i32 786689, metadata !729, metadata !"xin1", metadata !469, i32 16777370, metadata !472, i32 0, metadata !726} ; [ DW_TAG_arg_variable ]
-!729 = metadata !{i32 786478, i32 0, metadata !469, metadata !"encode", metadata !"encode", metadata !"", metadata !469, i32 154, metadata !561, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, null, metadata !474, i32 155} ; [ DW_TAG_subprogram ]
-!730 = metadata !{i32 154, i32 16, metadata !729, metadata !726}
-!731 = metadata !{i32 786689, metadata !729, metadata !"xin2", metadata !469, i32 33554586, metadata !472, i32 0, metadata !726} ; [ DW_TAG_arg_variable ]
-!732 = metadata !{i32 154, i32 26, metadata !729, metadata !726}
-!733 = metadata !{i32 167, i32 2, metadata !734, metadata !726}
-!734 = metadata !{i32 786443, metadata !729, i32 155, i32 1, metadata !469, i32 0} ; [ DW_TAG_lexical_block ]
-!735 = metadata !{i32 786688, metadata !734, metadata !"xa", metadata !469, i32 161, metadata !525, i32 0, metadata !726} ; [ DW_TAG_auto_variable ]
-!736 = metadata !{i32 168, i32 2, metadata !734, metadata !726}
-!737 = metadata !{i32 786688, metadata !734, metadata !"xb", metadata !469, i32 161, metadata !525, i32 0, metadata !726} ; [ DW_TAG_auto_variable ]
-!738 = metadata !{i32 170, i32 7, metadata !739, metadata !726}
-!739 = metadata !{i32 786443, metadata !734, i32 170, i32 2, metadata !469, i32 1} ; [ DW_TAG_lexical_block ]
-!740 = metadata !{i32 646, i32 3, metadata !741, metadata !724}
-!741 = metadata !{i32 786443, metadata !721, i32 645, i32 38, metadata !469, i32 38} ; [ DW_TAG_lexical_block ]
-!742 = metadata !{i32 314, i32 2, metadata !743, metadata !740}
-!743 = metadata !{i32 786443, metadata !744, i32 305, i32 1, metadata !469, i32 6} ; [ DW_TAG_lexical_block ]
-!744 = metadata !{i32 786478, i32 0, metadata !469, metadata !"decode", metadata !"decode", metadata !"", metadata !469, i32 304, metadata !745, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, null, metadata !474, i32 305} ; [ DW_TAG_subprogram ]
-!745 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !746, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
-!746 = metadata !{null, metadata !472}
-!747 = metadata !{i32 786689, metadata !744, metadata !"input", metadata !469, i32 16777520, metadata !472, i32 0, metadata !740} ; [ DW_TAG_arg_variable ]
-!748 = metadata !{i32 304, i32 17, metadata !744, metadata !740}
-!749 = metadata !{i32 315, i32 2, metadata !743, metadata !740}
-!750 = metadata !{i32 320, i32 12, metadata !743, metadata !740}
-!751 = metadata !{i32 323, i32 12, metadata !743, metadata !740}
-!752 = metadata !{i32 325, i32 2, metadata !743, metadata !740}
-!753 = metadata !{i32 328, i32 2, metadata !743, metadata !740}
-!754 = metadata !{i32 343, i32 2, metadata !743, metadata !740}
-!755 = metadata !{i32 331, i32 2, metadata !743, metadata !740}
-!756 = metadata !{i32 333, i32 2, metadata !743, metadata !740}
-!757 = metadata !{i32 336, i32 12, metadata !743, metadata !740}
-!758 = metadata !{i32 339, i32 13, metadata !743, metadata !740}
-!759 = metadata !{i32 346, i32 2, metadata !743, metadata !740}
-!760 = metadata !{i32 349, i32 12, metadata !743, metadata !740}
-!761 = metadata !{i32 352, i32 12, metadata !743, metadata !740}
-!762 = metadata !{i32 355, i32 2, metadata !743, metadata !740}
-!763 = metadata !{i32 358, i32 2, metadata !743, metadata !740}
-!764 = metadata !{i32 359, i32 2, metadata !743, metadata !740}
-!765 = metadata !{i32 360, i32 2, metadata !743, metadata !740}
-!766 = metadata !{i32 361, i32 2, metadata !743, metadata !740}
-!767 = metadata !{i32 366, i32 12, metadata !743, metadata !740}
-!768 = metadata !{i32 369, i32 12, metadata !743, metadata !740}
-!769 = metadata !{i32 372, i32 2, metadata !743, metadata !740}
-!770 = metadata !{i32 375, i32 2, metadata !743, metadata !740}
-!771 = metadata !{i32 384, i32 2, metadata !743, metadata !740}
-!772 = metadata !{i32 378, i32 12, metadata !743, metadata !740}
-!773 = metadata !{i32 381, i32 13, metadata !743, metadata !740}
-!774 = metadata !{i32 387, i32 2, metadata !743, metadata !740}
-!775 = metadata !{i32 390, i32 12, metadata !743, metadata !740}
-!776 = metadata !{i32 393, i32 12, metadata !743, metadata !740}
-!777 = metadata !{i32 396, i32 2, metadata !743, metadata !740}
-!778 = metadata !{i32 399, i32 2, metadata !743, metadata !740}
-!779 = metadata !{i32 400, i32 2, metadata !743, metadata !740}
-!780 = metadata !{i32 401, i32 2, metadata !743, metadata !740}
-!781 = metadata !{i32 402, i32 2, metadata !743, metadata !740}
-!782 = metadata !{i32 407, i32 2, metadata !743, metadata !740}
-!783 = metadata !{i32 408, i32 2, metadata !743, metadata !740}
-!784 = metadata !{i32 415, i32 2, metadata !743, metadata !740}
-!785 = metadata !{i32 414, i32 2, metadata !743, metadata !740}
-!786 = metadata !{i32 786688, metadata !743, metadata !"xa1", metadata !469, i32 309, metadata !525, i32 0, metadata !740} ; [ DW_TAG_auto_variable ]
-!787 = metadata !{i32 786688, metadata !743, metadata !"xa2", metadata !469, i32 309, metadata !525, i32 0, metadata !740} ; [ DW_TAG_auto_variable ]
-!788 = metadata !{i32 417, i32 7, metadata !789, metadata !740}
-!789 = metadata !{i32 786443, metadata !743, i32 417, i32 2, metadata !469, i32 7} ; [ DW_TAG_lexical_block ]
-!790 = metadata !{i32 170, i32 22, metadata !739, metadata !726}
-!791 = metadata !{i32 175, i32 2, metadata !734, metadata !726}
-!792 = metadata !{i32 176, i32 2, metadata !734, metadata !726}
-!793 = metadata !{i32 180, i32 7, metadata !794, metadata !726}
-!794 = metadata !{i32 786443, metadata !734, i32 180, i32 2, metadata !469, i32 3} ; [ DW_TAG_lexical_block ]
-!795 = metadata !{i32 171, i32 3, metadata !796, metadata !726}
-!796 = metadata !{i32 786443, metadata !739, i32 170, i32 27, metadata !469, i32 2} ; [ DW_TAG_lexical_block ]
-!797 = metadata !{i32 786688, metadata !734, metadata !"tqmf_ptr", metadata !469, i32 160, metadata !473, i32 0, metadata !726} ; [ DW_TAG_auto_variable ]
-!798 = metadata !{i32 786688, metadata !734, metadata !"h_ptr", metadata !469, i32 159, metadata !799, i32 0, metadata !726} ; [ DW_TAG_auto_variable ]
-!799 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !800} ; [ DW_TAG_pointer_type ]
-!800 = metadata !{i32 786470, null, metadata !"", null, i32 0, i64 0, i64 0, i64 0, i32 0, metadata !472} ; [ DW_TAG_const_type ]
-!801 = metadata !{i32 172, i32 3, metadata !796, metadata !726}
-!802 = metadata !{i32 786688, metadata !734, metadata !"i", metadata !469, i32 158, metadata !472, i32 0, metadata !726} ; [ DW_TAG_auto_variable ]
-!803 = metadata !{i32 179, i32 2, metadata !734, metadata !726}
-!804 = metadata !{i32 786688, metadata !734, metadata !"tqmf_ptr1", metadata !469, i32 160, metadata !473, i32 0, metadata !726} ; [ DW_TAG_auto_variable ]
-!805 = metadata !{i32 180, i32 22, metadata !794, metadata !726}
-!806 = metadata !{i32 182, i32 2, metadata !734, metadata !726}
-!807 = metadata !{i32 183, i32 2, metadata !734, metadata !726}
-!808 = metadata !{i32 186, i32 2, metadata !734, metadata !726}
-!809 = metadata !{i32 187, i32 2, metadata !734, metadata !726}
-!810 = metadata !{i32 194, i32 8, metadata !734, metadata !726}
-!811 = metadata !{i32 197, i32 8, metadata !734, metadata !726}
-!812 = metadata !{i32 200, i32 2, metadata !734, metadata !726}
-!813 = metadata !{i32 201, i32 2, metadata !734, metadata !726}
-!814 = metadata !{i32 204, i32 7, metadata !734, metadata !726}
-!815 = metadata !{i32 208, i32 2, metadata !734, metadata !726}
-!816 = metadata !{i32 218, i32 2, metadata !734, metadata !726}
-!817 = metadata !{i32 211, i32 8, metadata !734, metadata !726}
-!818 = metadata !{i32 215, i32 9, metadata !734, metadata !726}
-!819 = metadata !{i32 224, i32 2, metadata !734, metadata !726}
-!820 = metadata !{i32 228, i32 8, metadata !734, metadata !726}
-!821 = metadata !{i32 232, i32 8, metadata !734, metadata !726}
-!822 = metadata !{i32 235, i32 2, metadata !734, metadata !726}
-!823 = metadata !{i32 238, i32 2, metadata !734, metadata !726}
-!824 = metadata !{i32 239, i32 2, metadata !734, metadata !726}
-!825 = metadata !{i32 240, i32 2, metadata !734, metadata !726}
-!826 = metadata !{i32 241, i32 2, metadata !734, metadata !726}
-!827 = metadata !{i32 245, i32 8, metadata !734, metadata !726}
-!828 = metadata !{i32 247, i32 8, metadata !734, metadata !726}
-!829 = metadata !{i32 250, i32 2, metadata !734, metadata !726}
-!830 = metadata !{i32 252, i32 2, metadata !734, metadata !726}
-!831 = metadata !{i32 256, i32 2, metadata !734, metadata !726}
-!832 = metadata !{i32 257, i32 3, metadata !833, metadata !726}
-!833 = metadata !{i32 786443, metadata !734, i32 256, i32 15, metadata !469, i32 4} ; [ DW_TAG_lexical_block ]
-!834 = metadata !{i32 261, i32 2, metadata !734, metadata !726}
-!835 = metadata !{i32 786688, metadata !734, metadata !"decis", metadata !469, i32 162, metadata !472, i32 0, metadata !726} ; [ DW_TAG_auto_variable ]
-!836 = metadata !{i32 786689, metadata !578, metadata !"n", metadata !579, i32 16777220, metadata !472, i32 0, metadata !837} ; [ DW_TAG_arg_variable ]
-!837 = metadata !{i32 262, i32 6, metadata !734, metadata !726}
-!838 = metadata !{i32 4, i32 19, metadata !578, metadata !837}
-!839 = metadata !{i32 8, i32 2, metadata !586, metadata !837}
-!840 = metadata !{i32 11, i32 3, metadata !586, metadata !837}
-!841 = metadata !{i32 786688, metadata !586, metadata !"m", metadata !579, i32 6, metadata !472, i32 0, metadata !837} ; [ DW_TAG_auto_variable ]
-!842 = metadata !{i32 181, i32 3, metadata !794, metadata !726}
-!843 = metadata !{i32 263, i32 3, metadata !734, metadata !726}
-!844 = metadata !{i32 266, i32 2, metadata !734, metadata !726}
-!845 = metadata !{i32 269, i32 8, metadata !734, metadata !726}
-!846 = metadata !{i32 272, i32 9, metadata !734, metadata !726}
-!847 = metadata !{i32 275, i32 2, metadata !734, metadata !726}
-!848 = metadata !{i32 280, i32 2, metadata !734, metadata !726}
-!849 = metadata !{i32 284, i32 8, metadata !734, metadata !726}
-!850 = metadata !{i32 287, i32 8, metadata !734, metadata !726}
-!851 = metadata !{i32 290, i32 2, metadata !734, metadata !726}
-!852 = metadata !{i32 293, i32 2, metadata !734, metadata !726}
-!853 = metadata !{i32 294, i32 2, metadata !734, metadata !726}
-!854 = metadata !{i32 295, i32 2, metadata !734, metadata !726}
-!855 = metadata !{i32 296, i32 2, metadata !734, metadata !726}
-!856 = metadata !{i32 299, i32 2, metadata !734, metadata !726}
-!857 = metadata !{i32 633, i32 28, metadata !719, metadata !661}
-!858 = metadata !{i32 786688, metadata !657, metadata !"i", metadata !469, i32 631, metadata !472, i32 0, metadata !661} ; [ DW_TAG_auto_variable ]
-!859 = metadata !{i32 419, i32 3, metadata !860, metadata !740}
-!860 = metadata !{i32 786443, metadata !789, i32 417, i32 27, metadata !469, i32 8} ; [ DW_TAG_lexical_block ]
-!861 = metadata !{i32 422, i32 2, metadata !743, metadata !740}
-!862 = metadata !{i32 423, i32 2, metadata !743, metadata !740}
-!863 = metadata !{i32 426, i32 2, metadata !743, metadata !740}
-!864 = metadata !{i32 427, i32 2, metadata !743, metadata !740}
-!865 = metadata !{i32 432, i32 7, metadata !866, metadata !740}
-!866 = metadata !{i32 786443, metadata !743, i32 432, i32 2, metadata !469, i32 9} ; [ DW_TAG_lexical_block ]
-!867 = metadata !{i32 418, i32 3, metadata !860, metadata !740}
-!868 = metadata !{i32 786688, metadata !743, metadata !"h_ptr", metadata !469, i32 310, metadata !799, i32 0, metadata !740} ; [ DW_TAG_auto_variable ]
-!869 = metadata !{i32 417, i32 22, metadata !789, metadata !740}
-!870 = metadata !{i32 434, i32 3, metadata !871, metadata !740}
-!871 = metadata !{i32 786443, metadata !866, i32 432, i32 27, metadata !469, i32 10} ; [ DW_TAG_lexical_block ]
-!872 = metadata !{i32 431, i32 2, metadata !743, metadata !740}
-!873 = metadata !{i32 786688, metadata !743, metadata !"ad_ptr1", metadata !469, i32 311, metadata !473, i32 0, metadata !740} ; [ DW_TAG_auto_variable ]
-!874 = metadata !{i32 430, i32 2, metadata !743, metadata !740}
-!875 = metadata !{i32 786688, metadata !743, metadata !"ac_ptr1", metadata !469, i32 311, metadata !473, i32 0, metadata !740} ; [ DW_TAG_auto_variable ]
-!876 = metadata !{i32 432, i32 22, metadata !866, metadata !740}
-!877 = metadata !{i32 436, i32 2, metadata !743, metadata !740}
-!878 = metadata !{i32 437, i32 2, metadata !743, metadata !740}
-!879 = metadata !{i32 647, i32 3, metadata !741, metadata !724}
-!880 = metadata !{i32 648, i32 3, metadata !741, metadata !724}
-!881 = metadata !{i32 645, i32 30, metadata !721, metadata !724}
-!882 = metadata !{i32 786688, metadata !722, metadata !"i", metadata !469, i32 643, metadata !472, i32 0, metadata !724} ; [ DW_TAG_auto_variable ]
-!883 = metadata !{i32 433, i32 3, metadata !871, metadata !740}
-!884 = metadata !{i32 786688, metadata !743, metadata !"i", metadata !469, i32 308, metadata !472, i32 0, metadata !740} ; [ DW_TAG_auto_variable ]
+!711 = metadata !{i32 656, i32 21, metadata !664, null}
+!712 = metadata !{i32 786689, metadata !664, metadata !"compressed", null, i32 656, metadata !708, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!713 = metadata !{i32 656, i32 39, metadata !664, null}
+!714 = metadata !{i32 786689, metadata !664, metadata !"dec_result", null, i32 657, metadata !708, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!715 = metadata !{i32 657, i32 21, metadata !664, null}
+!716 = metadata !{i32 683, i32 1, metadata !663, null}
+!717 = metadata !{i32 786689, metadata !718, metadata !"size", metadata !469, i32 50332286, metadata !472, i32 0, metadata !719} ; [ DW_TAG_arg_variable ]
+!718 = metadata !{i32 786478, i32 0, metadata !469, metadata !"adpcm_dec_main", metadata !"adpcm_dec_main", metadata !"", metadata !469, i32 638, metadata !659, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, null, metadata !474, i32 639} ; [ DW_TAG_subprogram ]
+!719 = metadata !{i32 681, i32 3, metadata !720, null}
+!720 = metadata !{i32 786443, metadata !663, i32 680, i32 9, metadata !469, i32 43} ; [ DW_TAG_lexical_block ]
+!721 = metadata !{i32 638, i32 63, metadata !718, metadata !719}
+!722 = metadata !{i32 677, i32 2, metadata !663, null}
+!723 = metadata !{i32 633, i32 7, metadata !724, metadata !661}
+!724 = metadata !{i32 786443, metadata !657, i32 633, i32 2, metadata !469, i32 34} ; [ DW_TAG_lexical_block ]
+!725 = metadata !{i32 786689, metadata !718, metadata !"compressed", null, i32 638, metadata !708, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!726 = metadata !{i32 638, i32 25, metadata !718, metadata !719}
+!727 = metadata !{i32 786689, metadata !718, metadata !"dec_result", null, i32 638, metadata !708, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!728 = metadata !{i32 638, i32 44, metadata !718, metadata !719}
+!729 = metadata !{i32 648, i32 3, metadata !730, metadata !719}
+!730 = metadata !{i32 786443, metadata !731, i32 645, i32 33, metadata !469, i32 38} ; [ DW_TAG_lexical_block ]
+!731 = metadata !{i32 786443, metadata !732, i32 645, i32 2, metadata !469, i32 37} ; [ DW_TAG_lexical_block ]
+!732 = metadata !{i32 786443, metadata !718, i32 639, i32 1, metadata !469, i32 36} ; [ DW_TAG_lexical_block ]
+!733 = metadata !{i32 651, i32 4, metadata !734, metadata !719}
+!734 = metadata !{i32 786443, metadata !730, i32 650, i32 10, metadata !469, i32 40} ; [ DW_TAG_lexical_block ]
+!735 = metadata !{i32 645, i32 7, metadata !731, metadata !719}
+!736 = metadata !{i32 634, i32 23, metadata !737, metadata !661}
+!737 = metadata !{i32 786443, metadata !724, i32 633, i32 32, metadata !469, i32 35} ; [ DW_TAG_lexical_block ]
+!738 = metadata !{i32 786689, metadata !739, metadata !"xin1", metadata !469, i32 16777370, metadata !472, i32 0, metadata !736} ; [ DW_TAG_arg_variable ]
+!739 = metadata !{i32 786478, i32 0, metadata !469, metadata !"encode", metadata !"encode", metadata !"", metadata !469, i32 154, metadata !561, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, null, metadata !474, i32 155} ; [ DW_TAG_subprogram ]
+!740 = metadata !{i32 154, i32 16, metadata !739, metadata !736}
+!741 = metadata !{i32 786689, metadata !739, metadata !"xin2", metadata !469, i32 33554586, metadata !472, i32 0, metadata !736} ; [ DW_TAG_arg_variable ]
+!742 = metadata !{i32 154, i32 26, metadata !739, metadata !736}
+!743 = metadata !{i32 167, i32 2, metadata !744, metadata !736}
+!744 = metadata !{i32 786443, metadata !739, i32 155, i32 1, metadata !469, i32 0} ; [ DW_TAG_lexical_block ]
+!745 = metadata !{i32 786688, metadata !744, metadata !"xa", metadata !469, i32 161, metadata !525, i32 0, metadata !736} ; [ DW_TAG_auto_variable ]
+!746 = metadata !{i32 168, i32 2, metadata !744, metadata !736}
+!747 = metadata !{i32 786688, metadata !744, metadata !"xb", metadata !469, i32 161, metadata !525, i32 0, metadata !736} ; [ DW_TAG_auto_variable ]
+!748 = metadata !{i32 170, i32 7, metadata !749, metadata !736}
+!749 = metadata !{i32 786443, metadata !744, i32 170, i32 2, metadata !469, i32 1} ; [ DW_TAG_lexical_block ]
+!750 = metadata !{i32 170, i32 22, metadata !749, metadata !736}
+!751 = metadata !{i32 646, i32 3, metadata !730, metadata !719}
+!752 = metadata !{i32 314, i32 2, metadata !753, metadata !751}
+!753 = metadata !{i32 786443, metadata !754, i32 305, i32 1, metadata !469, i32 6} ; [ DW_TAG_lexical_block ]
+!754 = metadata !{i32 786478, i32 0, metadata !469, metadata !"decode", metadata !"decode", metadata !"", metadata !469, i32 304, metadata !755, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, null, metadata !474, i32 305} ; [ DW_TAG_subprogram ]
+!755 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !756, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
+!756 = metadata !{null, metadata !472}
+!757 = metadata !{i32 786689, metadata !754, metadata !"input", metadata !469, i32 16777520, metadata !472, i32 0, metadata !751} ; [ DW_TAG_arg_variable ]
+!758 = metadata !{i32 304, i32 17, metadata !754, metadata !751}
+!759 = metadata !{i32 315, i32 2, metadata !753, metadata !751}
+!760 = metadata !{i32 320, i32 12, metadata !753, metadata !751}
+!761 = metadata !{i32 323, i32 12, metadata !753, metadata !751}
+!762 = metadata !{i32 325, i32 2, metadata !753, metadata !751}
+!763 = metadata !{i32 328, i32 2, metadata !753, metadata !751}
+!764 = metadata !{i32 343, i32 2, metadata !753, metadata !751}
+!765 = metadata !{i32 331, i32 2, metadata !753, metadata !751}
+!766 = metadata !{i32 333, i32 2, metadata !753, metadata !751}
+!767 = metadata !{i32 336, i32 12, metadata !753, metadata !751}
+!768 = metadata !{i32 339, i32 13, metadata !753, metadata !751}
+!769 = metadata !{i32 346, i32 2, metadata !753, metadata !751}
+!770 = metadata !{i32 349, i32 12, metadata !753, metadata !751}
+!771 = metadata !{i32 352, i32 12, metadata !753, metadata !751}
+!772 = metadata !{i32 355, i32 2, metadata !753, metadata !751}
+!773 = metadata !{i32 358, i32 2, metadata !753, metadata !751}
+!774 = metadata !{i32 359, i32 2, metadata !753, metadata !751}
+!775 = metadata !{i32 360, i32 2, metadata !753, metadata !751}
+!776 = metadata !{i32 361, i32 2, metadata !753, metadata !751}
+!777 = metadata !{i32 366, i32 12, metadata !753, metadata !751}
+!778 = metadata !{i32 369, i32 12, metadata !753, metadata !751}
+!779 = metadata !{i32 372, i32 2, metadata !753, metadata !751}
+!780 = metadata !{i32 375, i32 2, metadata !753, metadata !751}
+!781 = metadata !{i32 384, i32 2, metadata !753, metadata !751}
+!782 = metadata !{i32 378, i32 12, metadata !753, metadata !751}
+!783 = metadata !{i32 381, i32 13, metadata !753, metadata !751}
+!784 = metadata !{i32 387, i32 2, metadata !753, metadata !751}
+!785 = metadata !{i32 390, i32 12, metadata !753, metadata !751}
+!786 = metadata !{i32 393, i32 12, metadata !753, metadata !751}
+!787 = metadata !{i32 396, i32 2, metadata !753, metadata !751}
+!788 = metadata !{i32 399, i32 2, metadata !753, metadata !751}
+!789 = metadata !{i32 400, i32 2, metadata !753, metadata !751}
+!790 = metadata !{i32 401, i32 2, metadata !753, metadata !751}
+!791 = metadata !{i32 402, i32 2, metadata !753, metadata !751}
+!792 = metadata !{i32 407, i32 2, metadata !753, metadata !751}
+!793 = metadata !{i32 408, i32 2, metadata !753, metadata !751}
+!794 = metadata !{i32 415, i32 2, metadata !753, metadata !751}
+!795 = metadata !{i32 414, i32 2, metadata !753, metadata !751}
+!796 = metadata !{i32 786688, metadata !753, metadata !"xa1", metadata !469, i32 309, metadata !525, i32 0, metadata !751} ; [ DW_TAG_auto_variable ]
+!797 = metadata !{i32 786688, metadata !753, metadata !"xa2", metadata !469, i32 309, metadata !525, i32 0, metadata !751} ; [ DW_TAG_auto_variable ]
+!798 = metadata !{i32 417, i32 7, metadata !799, metadata !751}
+!799 = metadata !{i32 786443, metadata !753, i32 417, i32 2, metadata !469, i32 7} ; [ DW_TAG_lexical_block ]
+!800 = metadata !{i32 175, i32 2, metadata !744, metadata !736}
+!801 = metadata !{i32 176, i32 2, metadata !744, metadata !736}
+!802 = metadata !{i32 180, i32 7, metadata !803, metadata !736}
+!803 = metadata !{i32 786443, metadata !744, i32 180, i32 2, metadata !469, i32 3} ; [ DW_TAG_lexical_block ]
+!804 = metadata !{i32 171, i32 3, metadata !805, metadata !736}
+!805 = metadata !{i32 786443, metadata !749, i32 170, i32 27, metadata !469, i32 2} ; [ DW_TAG_lexical_block ]
+!806 = metadata !{i32 786688, metadata !744, metadata !"tqmf_ptr", metadata !469, i32 160, metadata !473, i32 0, metadata !736} ; [ DW_TAG_auto_variable ]
+!807 = metadata !{i32 786688, metadata !744, metadata !"h_ptr", metadata !469, i32 159, metadata !808, i32 0, metadata !736} ; [ DW_TAG_auto_variable ]
+!808 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !809} ; [ DW_TAG_pointer_type ]
+!809 = metadata !{i32 786470, null, metadata !"", null, i32 0, i64 0, i64 0, i64 0, i32 0, metadata !472} ; [ DW_TAG_const_type ]
+!810 = metadata !{i32 172, i32 3, metadata !805, metadata !736}
+!811 = metadata !{i32 786688, metadata !744, metadata !"i", metadata !469, i32 158, metadata !472, i32 0, metadata !736} ; [ DW_TAG_auto_variable ]
+!812 = metadata !{i32 179, i32 2, metadata !744, metadata !736}
+!813 = metadata !{i32 786688, metadata !744, metadata !"tqmf_ptr1", metadata !469, i32 160, metadata !473, i32 0, metadata !736} ; [ DW_TAG_auto_variable ]
+!814 = metadata !{i32 180, i32 22, metadata !803, metadata !736}
+!815 = metadata !{i32 182, i32 2, metadata !744, metadata !736}
+!816 = metadata !{i32 183, i32 2, metadata !744, metadata !736}
+!817 = metadata !{i32 186, i32 2, metadata !744, metadata !736}
+!818 = metadata !{i32 187, i32 2, metadata !744, metadata !736}
+!819 = metadata !{i32 194, i32 8, metadata !744, metadata !736}
+!820 = metadata !{i32 197, i32 8, metadata !744, metadata !736}
+!821 = metadata !{i32 200, i32 2, metadata !744, metadata !736}
+!822 = metadata !{i32 201, i32 2, metadata !744, metadata !736}
+!823 = metadata !{i32 204, i32 7, metadata !744, metadata !736}
+!824 = metadata !{i32 208, i32 2, metadata !744, metadata !736}
+!825 = metadata !{i32 218, i32 2, metadata !744, metadata !736}
+!826 = metadata !{i32 211, i32 8, metadata !744, metadata !736}
+!827 = metadata !{i32 215, i32 9, metadata !744, metadata !736}
+!828 = metadata !{i32 224, i32 2, metadata !744, metadata !736}
+!829 = metadata !{i32 228, i32 8, metadata !744, metadata !736}
+!830 = metadata !{i32 232, i32 8, metadata !744, metadata !736}
+!831 = metadata !{i32 235, i32 2, metadata !744, metadata !736}
+!832 = metadata !{i32 238, i32 2, metadata !744, metadata !736}
+!833 = metadata !{i32 239, i32 2, metadata !744, metadata !736}
+!834 = metadata !{i32 240, i32 2, metadata !744, metadata !736}
+!835 = metadata !{i32 241, i32 2, metadata !744, metadata !736}
+!836 = metadata !{i32 245, i32 8, metadata !744, metadata !736}
+!837 = metadata !{i32 247, i32 8, metadata !744, metadata !736}
+!838 = metadata !{i32 250, i32 2, metadata !744, metadata !736}
+!839 = metadata !{i32 252, i32 2, metadata !744, metadata !736}
+!840 = metadata !{i32 256, i32 2, metadata !744, metadata !736}
+!841 = metadata !{i32 257, i32 3, metadata !842, metadata !736}
+!842 = metadata !{i32 786443, metadata !744, i32 256, i32 15, metadata !469, i32 4} ; [ DW_TAG_lexical_block ]
+!843 = metadata !{i32 261, i32 2, metadata !744, metadata !736}
+!844 = metadata !{i32 786688, metadata !744, metadata !"decis", metadata !469, i32 162, metadata !472, i32 0, metadata !736} ; [ DW_TAG_auto_variable ]
+!845 = metadata !{i32 786689, metadata !578, metadata !"n", metadata !579, i32 16777220, metadata !472, i32 0, metadata !846} ; [ DW_TAG_arg_variable ]
+!846 = metadata !{i32 262, i32 6, metadata !744, metadata !736}
+!847 = metadata !{i32 4, i32 19, metadata !578, metadata !846}
+!848 = metadata !{i32 8, i32 2, metadata !586, metadata !846}
+!849 = metadata !{i32 11, i32 3, metadata !586, metadata !846}
+!850 = metadata !{i32 786688, metadata !586, metadata !"m", metadata !579, i32 6, metadata !472, i32 0, metadata !846} ; [ DW_TAG_auto_variable ]
+!851 = metadata !{i32 181, i32 3, metadata !803, metadata !736}
+!852 = metadata !{i32 263, i32 3, metadata !744, metadata !736}
+!853 = metadata !{i32 266, i32 2, metadata !744, metadata !736}
+!854 = metadata !{i32 269, i32 8, metadata !744, metadata !736}
+!855 = metadata !{i32 272, i32 9, metadata !744, metadata !736}
+!856 = metadata !{i32 275, i32 2, metadata !744, metadata !736}
+!857 = metadata !{i32 280, i32 2, metadata !744, metadata !736}
+!858 = metadata !{i32 284, i32 8, metadata !744, metadata !736}
+!859 = metadata !{i32 287, i32 8, metadata !744, metadata !736}
+!860 = metadata !{i32 290, i32 2, metadata !744, metadata !736}
+!861 = metadata !{i32 293, i32 2, metadata !744, metadata !736}
+!862 = metadata !{i32 294, i32 2, metadata !744, metadata !736}
+!863 = metadata !{i32 295, i32 2, metadata !744, metadata !736}
+!864 = metadata !{i32 296, i32 2, metadata !744, metadata !736}
+!865 = metadata !{i32 299, i32 2, metadata !744, metadata !736}
+!866 = metadata !{i32 633, i32 24, metadata !724, metadata !661}
+!867 = metadata !{i32 786688, metadata !657, metadata !"i", metadata !469, i32 631, metadata !472, i32 0, metadata !661} ; [ DW_TAG_auto_variable ]
+!868 = metadata !{i32 419, i32 3, metadata !869, metadata !751}
+!869 = metadata !{i32 786443, metadata !799, i32 417, i32 27, metadata !469, i32 8} ; [ DW_TAG_lexical_block ]
+!870 = metadata !{i32 422, i32 2, metadata !753, metadata !751}
+!871 = metadata !{i32 423, i32 2, metadata !753, metadata !751}
+!872 = metadata !{i32 426, i32 2, metadata !753, metadata !751}
+!873 = metadata !{i32 427, i32 2, metadata !753, metadata !751}
+!874 = metadata !{i32 432, i32 7, metadata !875, metadata !751}
+!875 = metadata !{i32 786443, metadata !753, i32 432, i32 2, metadata !469, i32 9} ; [ DW_TAG_lexical_block ]
+!876 = metadata !{i32 418, i32 3, metadata !869, metadata !751}
+!877 = metadata !{i32 786688, metadata !753, metadata !"h_ptr", metadata !469, i32 310, metadata !808, i32 0, metadata !751} ; [ DW_TAG_auto_variable ]
+!878 = metadata !{i32 417, i32 22, metadata !799, metadata !751}
+!879 = metadata !{i32 434, i32 3, metadata !880, metadata !751}
+!880 = metadata !{i32 786443, metadata !875, i32 432, i32 27, metadata !469, i32 10} ; [ DW_TAG_lexical_block ]
+!881 = metadata !{i32 431, i32 2, metadata !753, metadata !751}
+!882 = metadata !{i32 786688, metadata !753, metadata !"ad_ptr1", metadata !469, i32 311, metadata !473, i32 0, metadata !751} ; [ DW_TAG_auto_variable ]
+!883 = metadata !{i32 430, i32 2, metadata !753, metadata !751}
+!884 = metadata !{i32 786688, metadata !753, metadata !"ac_ptr1", metadata !469, i32 311, metadata !473, i32 0, metadata !751} ; [ DW_TAG_auto_variable ]
+!885 = metadata !{i32 432, i32 22, metadata !875, metadata !751}
+!886 = metadata !{i32 436, i32 2, metadata !753, metadata !751}
+!887 = metadata !{i32 437, i32 2, metadata !753, metadata !751}
+!888 = metadata !{i32 647, i32 3, metadata !730, metadata !719}
+!889 = metadata !{i32 433, i32 3, metadata !880, metadata !751}
+!890 = metadata !{i32 786688, metadata !753, metadata !"i", metadata !469, i32 308, metadata !472, i32 0, metadata !751} ; [ DW_TAG_auto_variable ]
+!891 = metadata !{i32 649, i32 4, metadata !892, metadata !719}
+!892 = metadata !{i32 786443, metadata !730, i32 648, i32 20, metadata !469, i32 39} ; [ DW_TAG_lexical_block ]
+!893 = metadata !{i32 650, i32 3, metadata !892, metadata !719}
+!894 = metadata !{i32 645, i32 25, metadata !731, metadata !719}
+!895 = metadata !{i32 786688, metadata !732, metadata !"i", metadata !469, i32 643, metadata !472, i32 0, metadata !719} ; [ DW_TAG_auto_variable ]

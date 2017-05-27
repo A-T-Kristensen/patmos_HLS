@@ -2972,7 +2972,7 @@ _ssdm_InlineSelf(0, "");
 
  int i;
 
- for (i = 0; i < size + 1; i += 2) {
+ for (i = 0; i < size; i += 2) {
   compressed[i / 2] = encode(test_data[i], test_data[i + 1]);
  }
 }
@@ -2984,10 +2984,14 @@ _ssdm_InlineSelf(0, "");
 
  int i;
 
- for (i = 0 ; i < size + 1 ; i += 2) {
+ for (i = 0 ; i < size; i += 2) {
   decode(compressed[i / 2]);
   dec_result[i] = xout1;
-  dec_result[i + 1] = xout2;
+  if(i < size - 1) {
+   dec_result[i + 1] = xout2;
+  } else { // Do the start
+   dec_result[1] = xout2;
+  }
  }
 }
 

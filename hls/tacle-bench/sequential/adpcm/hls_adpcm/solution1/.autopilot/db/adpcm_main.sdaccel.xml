@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'adpcm_main'" level="0">
-<item name = "Date">Sat May 27 12:14:17 2017
+<item name = "Date">Sat May 27 12:28:36 2017
 </item>
 <item name = "Version">2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)</item>
 <item name = "Project">hls_adpcm</item>
@@ -48,7 +48,7 @@
 <column name="DSP">-, -, -, -</column>
 <column name="Expression">-, -, -, -</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">11, 70, 5420, 4872</column>
+<column name="Instance">11, 70, 5484, 5029</column>
 <column name="Memory">-, -, -, -</column>
 <column name="Multiplexer">-, -, -, -</column>
 <column name="Register">-, -, -, -</column>
@@ -60,7 +60,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="Block_proc_U0">Block_proc, 11, 70, 5420, 4872</column>
+<column name="Block_proc_U0">Block_proc, 11, 70, 5484, 5029</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -122,11 +122,11 @@
 </section>
 
 <section name = "Critical Path" level="0">
-<item name = "Max Delay">6.15</item>
+<item name = "Max Delay">3.76</item>
 <item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
 <keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
 <column name="'size'">read, 0.00, 0.00, -, -, -, wire, read, &apos;size&apos;, -, -, -, -, -</column>
-<column name="">call, 6.15, 6.15, -, -, -, -, -, -, -, -, -, Block__proc, -</column>
+<column name="">call, 3.76, 3.76, -, -, -, -, -, -, -, -, -, Block__proc, -</column>
 </table>
 </item>
 </section>
