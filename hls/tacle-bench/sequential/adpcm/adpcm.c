@@ -65,49 +65,7 @@
 
 #include "adpcm.h"
 
-#define PI 3141
-#define TEST_VECTOR 0 // Specifies whether the test vector from CHStone should be use
-
-#if(TEST_VECTOR) // Same as CHStone
-
-#define SIZE 100
-#define IN_END 100
-
-#else // Same as TACLE
-
-#define SIZE 3
-#define IN_END 4
-
-#endif
-
-int encode(int, int);
-void decode(int);
-int filtez(int *bpl, int *dlt);
-void upzero(int dlt, int *dlti, int *bli);
-int filtep(int rlt1, int al1, int rlt2, int al2);
-int quantl(int el, int detl);
-int logscl(int il, int nbl);
-int scalel(int nbl, int shift_constant);
-int uppol2(int al1, int al2, int plt, int plt1, int plt2);
-int uppol1(int al1, int apl2, int plt, int plt1);
-int logsch(int ih, int nbh);
-void reset();
-void init(int test_data[SIZE]);
-int adpcm_sin(int rad);
-int adpcm_cos(int rad);
-
-int enc_return(int compressed[SIZE]);
-int dec_return(int dec_result[SIZE]);
-
-void adpcm_enc_main(int test_data[SIZE], int compressed[SIZE]);
-void adpcm_dec_main(int compressed[SIZE], int dec_result[SIZE]);
-void adpcm_main(int test_data[SIZE], int compressed[SIZE],
-                int dec_result[SIZE], int select);
-
 /* G722 C code */
-
-/* variables for transimit quadrature mirror filter here */
-int tqmf[24];
 
 /* QMF filter coefficients:
 scaled by a factor of 4 compared to G722 CCITT recomendation */
@@ -119,17 +77,10 @@ const int h[24] = {
 
 int xl, xh;
 
-/* variables for receive quadrature mirror filter here */
-int accumc[11], accumd[11];
-
 /* outputs of decode() */
 int xout1, xout2;
 
 int xs, xd;
-
-/* variables for encoder (hi and lo) here */
-
-int il, szl, spl, sl, el;
 
 const int qq4_code4_table[16] = {
 	0, -20456, -12896, -8968, -6288, -4240, -2584, -1200,
@@ -148,10 +99,6 @@ const int qq6_code6_table[64] = {
 	1688, 1360, 1040, 728, 432, 136, -432, -136
 };
 
-int delay_bpl[6];
-
-int delay_dltx[6];
-
 const int wl_code_table[16] = {
 	-60, 3042, 1198, 538, 334, 172, 58, -30,
 	3042, 1198, 538, 334, 172, 58, -30, -60
@@ -164,12 +111,6 @@ const int ilb_table[32] = {
 	3444, 3520, 3597, 3676, 3756, 3838, 3922, 4008
 };
 
-int nbl;      /* delay line */
-int al1, al2;
-int plt, plt1, plt2;
-int dlt;
-int rlt, rlt1, rlt2;
-
 /* decision levels - pre-multiplied by 8, 0 to indicate end */
 const int decis_levl[30] = {
 	280, 576, 880, 1200, 1520, 1864, 2208, 2584,
@@ -178,7 +119,6 @@ const int decis_levl[30] = {
 	14120, 15840, 17560, 20456, 23352, 32767
 };
 
-int detl;
 
 /* quantization table 31 long to make quantl look-up easier,
 last entry is for mil=30 case when wd is max */
@@ -198,11 +138,6 @@ const int quant26bt_neg[31] = {
 	9, 8, 7, 6, 5, 4, 4
 };
 
-
-int deth;
-int sh;       /* this comes from adaptive predictor */
-int eh;
-
 const int qq2_code2_table[4] = {
 	-7408, -1616, 7408, 1616
 };
@@ -211,103 +146,10 @@ const int wh_code_table[4] = {
 	798, -214, 798, -214
 };
 
-
-int dh, ih;
-int nbh, szh;
-int sph, ph, yh, rh;
-
-int delay_dhx[6];
-
-int delay_bph[6];
-
-int ah1, ah2;
-int ph1, ph2;
-int rh1, rh2;
-
-/* variables for decoder here */
-int ilr, rl;
-int dec_deth, dec_detl, dec_dlt;
-
-int dec_del_bpl[6];
-
-int dec_del_dltx[6];
-
-int dec_plt, dec_plt1, dec_plt2;
-int dec_szl, dec_spl, dec_sl;
-int dec_rlt1, dec_rlt2, dec_rlt;
-int dec_al1, dec_al2;
-int dl;
-int dec_nbl, dec_dh, dec_nbh;
-
-/* variables used in filtez */
-int dec_del_bph[6];
-
-int dec_del_dhx[6];
-
-int dec_szh;
-/* variables used in filtep */
-int dec_rh1, dec_rh2;
-int dec_ah1, dec_ah2;
-int dec_ph, dec_sph;
-
-int dec_sh;
-
-int dec_ph1, dec_ph2;
-
 /* G722 encode function two ints in, one 8 bit output */
 
 /* put input samples in xin1 = first value, xin2 = second value */
 /* returns il and ih stored together */
-
-int abs(int n)
-{
-	int m;
-
-	if (n >= 0)
-		m = n;
-	else
-		m = -n;
-	return m;
-}
-
-int adpcm_sin(int rad)
-{
-	int diff;
-	int app = 0;
-	int inc = 1;
-
-	/* MAX dependent on rad's value, say 50 */
-	while ( rad > 2 * PI ) {
-		rad -= 2 * PI;
-	}
-
-	/* MAX dependent on rad's value, say 50 */
-	while ( rad < -2 * PI ) {
-		rad += 2 * PI;
-	}
-
-	diff = rad;
-	app = diff;
-	diff = (diff * (-(rad*rad))) / ((2 * inc) * (2 * inc + 1));
-	app = app + diff;
-	inc++;
-
-	/* REALLY: while(my_fabs(diff) >= 0.00001) { */
-	/* MAX: 1000 */
-	while (abs(diff) >= 1 ) {
-		diff = (diff * (-(rad*rad))) / ((2 * inc) * (2 * inc + 1));
-		app = app + diff;
-		inc++;
-	}
-
-	return app;
-}
-
-
-int adpcm_cos(int rad)
-{
-	return(adpcm_sin( PI / 2 - rad ));
-}
 
 
 int encode(int xin1, int xin2)
@@ -416,7 +258,7 @@ int encode(int xin1, int xin2)
 		ih = 1;     /* 0,1 are neg codes */
 	}
 	decis = (564L * (long) deth) >> 12L;
-	if (abs(eh) > decis)
+	if (adpcm_abs(eh) > decis)
 		ih--;     /* mih = 2 case */
 
 	/* compute the quantized difference signal, higher sub-band*/
@@ -625,8 +467,8 @@ int quantl(int el, int detl)
 	int ril, mil;
 	long int wd, decis;
 
-	/* abs of difference signal */
-	wd = abs(el);
+	/* adpcm_abs of difference signal */
+	wd = adpcm_abs(el);
 	/* determine mil based on decision levels and detl gain */
 	for (mil = 0; mil < 30; mil++) {
 		decis = (decis_levl[mil] * (long) detl) >> 15L;
@@ -763,97 +605,6 @@ int logsch(int ih, int nbh)
 	return (nbh);
 }
 
-/* clear all storage locations */
-
-void reset()
-{
-	int i;
-
-	detl = dec_detl = 32; /* reset to min scale factor */
-	deth = dec_deth = 8;
-	nbl = al1 = al2 = plt1 = plt2 = rlt1 = rlt2 = 0;
-	nbh = ah1 = ah2 = ph1 = ph2 = rh1 = rh2 = 0;
-	dec_nbl = dec_al1 = dec_al2 = dec_plt1 = dec_plt2 = dec_rlt1 =
-	                                  dec_rlt2 = 0;
-	dec_nbh = dec_ah1 = dec_ah2 = dec_ph1 = dec_ph2 = dec_rh1 = dec_rh2 =
-	        0;
-
-	for (i = 0; i < 6; i++) {
-		delay_dltx[i] = 0;
-		delay_dhx[i] = 0;
-		dec_del_dltx[i] = 0;
-		dec_del_dhx[i] = 0;
-	}
-
-	for (i = 0; i < 6; i++) {
-		delay_bpl[i] = 0;
-		delay_bph[i] = 0;
-		dec_del_bpl[i] = 0;
-		dec_del_bph[i] = 0;
-	}
-
-	for (i = 0; i < 24; i++)
-		tqmf[i] = 0;    // i<23
-
-	for (i = 0; i < 11; i++) {
-		accumc[i] = 0;
-		accumd[i] = 0;
-	}
-}
-
-void init(int test_data[SIZE])
-{
-	/* reset, initialize required memory */
-	reset();
-
-#if(TEST_VECTOR)
-
-#else
-
-	int i, j, f;
-	int x = 0;
-
-	/* read in amplitude and frequency for test data */
-	j = 10;
-	f = 2000;
-
-	/* 16 KHz sample rate */
-	/* XXmain_0, MAX: 2 */
-	/* Since the number of times we loop in my_sin depends on the argument we
-	   add the fact: xxmain_0:[]: */
-	for ( i = 0 ; i < SIZE ; i++) {
-		test_data[i] = (int) j * adpcm_cos( f * PI * i );
-
-		test_data[i] += x;
-	}
-
-#endif
-}
-
-int enc_return(int compressed[SIZE])
-{
-	int i;
-	int check_sum = 0;
-
-	for (i = 0 ; i < IN_END ; i += 2) {
-		check_sum += compressed[i/2];
-	}
-
-	return check_sum != 385;
-}
-
-int dec_return(int dec_result[SIZE])
-{
-	int i;
-	int check_sum = 0;
-
-	for (i = 0; i < IN_END; i += 2) {
-		check_sum += (dec_result[i] + dec_result[i + 1]);
-	}
-
-	return check_sum != -2;
-}
-
 void adpcm_enc_main(int test_data[SIZE], int compressed[SIZE])
 {
 	int i;
@@ -886,119 +637,3 @@ void adpcm_main(int test_data[SIZE], int compressed[SIZE],
 	}
 }
 
-int main()
-{
-	int i;
-
-	/* Input data for the decoder usually generated by the encoder. */
-	int compressed[SIZE];
-	/* Output data frome the decoder */
-	int dec_result[SIZE];
-
-#if(TEST_VECTOR)
-
-	int test_data[SIZE] = {
-		0x44, 0x44, 0x44, 0x44, 0x44,
-		0x44, 0x44, 0x44, 0x44, 0x44,
-		0x44, 0x44, 0x44, 0x44, 0x44,
-		0x44, 0x44, 0x43, 0x43, 0x43,
-		0x43, 0x43, 0x43, 0x43, 0x42,
-		0x42, 0x42, 0x42, 0x42, 0x42,
-		0x41, 0x41, 0x41, 0x41, 0x41,
-		0x40, 0x40, 0x40, 0x40, 0x40,
-		0x40, 0x40, 0x40, 0x3f, 0x3f,
-		0x3f, 0x3f, 0x3f, 0x3e, 0x3e,
-		0x3e, 0x3e, 0x3e, 0x3e, 0x3d,
-		0x3d, 0x3d, 0x3d, 0x3d, 0x3d,
-		0x3c, 0x3c, 0x3c, 0x3c, 0x3c,
-		0x3c, 0x3c, 0x3c, 0x3c, 0x3b,
-		0x3b, 0x3b, 0x3b, 0x3b, 0x3b,
-		0x3b, 0x3b, 0x3b, 0x3b, 0x3b,
-		0x3b, 0x3b, 0x3b, 0x3b, 0x3b,
-		0x3b, 0x3b, 0x3b, 0x3b, 0x3b,
-		0x3b, 0x3b, 0x3c, 0x3c, 0x3c,
-		0x3c, 0x3c, 0x3c, 0x3c, 0x3c
-	};
-
-	int test_compressed[SIZE] = {
-		0xfd, 0xde, 0x77, 0xba, 0xf2,
-		0x90, 0x20, 0xa0, 0xec, 0xed,
-		0xef, 0xf1, 0xf3, 0xf4, 0xf5,
-		0xf5, 0xf5, 0xf5, 0xf6, 0xf6,
-		0xf6, 0xf7, 0xf8, 0xf7, 0xf8,
-		0xf7, 0xf9, 0xf8, 0xf7, 0xf9,
-		0xf8, 0xf8, 0xf6, 0xf8, 0xf8,
-		0xf7, 0xf9, 0xf9, 0xf9, 0xf8,
-		0xf7, 0xfa, 0xf8, 0xf8, 0xf7,
-		0xfb, 0xfa, 0xf9, 0xf8, 0xf8
-	};
-
-	int test_result[SIZE] = {
-		0, 0xffffffff, 0xffffffff, 0, 0,
-		0xffffffff, 0, 0, 0xffffffff, 0xffffffff,
-		0, 0, 0x1, 0x1, 0,
-		0xfffffffe, 0xffffffff, 0xfffffffe, 0, 0xfffffffc,
-		0x1, 0x1, 0x1, 0xfffffffb, 0x2,
-		0x2, 0x3, 0xb, 0x14, 0x14,
-		0x16, 0x18, 0x20, 0x21, 0x26,
-		0x27, 0x2e, 0x2f, 0x33, 0x32,
-		0x35, 0x33, 0x36, 0x34, 0x37,
-		0x34, 0x37, 0x35, 0x38, 0x36,
-		0x39, 0x38, 0x3b, 0x3a, 0x3f,
-		0x3f, 0x40, 0x3a, 0x3d, 0x3e,
-		0x41, 0x3c, 0x3e, 0x3f, 0x42,
-		0x3e, 0x3b, 0x37, 0x3b, 0x3e,
-		0x41, 0x3b, 0x3b, 0x3a, 0x3b,
-		0x36, 0x39, 0x3b, 0x3f, 0x3c,
-		0x3b, 0x37, 0x3b, 0x3d, 0x41,
-		0x3d, 0x3e, 0x3c, 0x3e, 0x3b,
-		0x3a, 0x37, 0x3b, 0x3e, 0x41,
-		0x3c, 0x3b, 0x39, 0x3a, 0x36
-	};
-
-#else
-
-	/* Input data for the encoder usually generated by the init function. */
-	int test_data[SIZE];
-
-#endif
-
-	init(test_data);
-
-	adpcm_main(test_data, compressed, dec_result, 0);
-	adpcm_main(test_data, compressed, dec_result, 1);
-
-	//dec_return(dec_result);
-
-#if(TEST_VECTOR)
-
-	int err_cnt = 0;
-
-	for(i = 0; i < SIZE/2; i++) {
-		if(compressed[i] != test_compressed[i]){
-			err_cnt++;
-		}
-	}
-
-	for(i = 0; i < SIZE; i++) {
-		if(dec_result[i] != test_result[i]){
-			err_cnt++;
-		}
-	}	
-
-	printf("Err count is: %d\n", err_cnt);
-
-
-#else
-
-	printf("Return: %d\n", enc_return(compressed));
-	printf("Return: %d\n", dec_return(dec_result));
-
-#endif
-
-	for(i = 0; i < SIZE; i++) {
-		printf("%d \t %d \n", test_data[i], dec_result[i]);
-	}
-
-	return 0;
-}
