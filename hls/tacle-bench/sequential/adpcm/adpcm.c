@@ -180,7 +180,7 @@ int encode(int xin1, int xin2)
 	/* update delay line tqmf */
 	tqmf_ptr1 = tqmf_ptr - 2;
 	for (i = 0; i < 22; i++){
-	#pragma HLS PIPELINE rewind
+	#pragma HLS PIPELINE
 		*tqmf_ptr-- = *tqmf_ptr1--;
 	}
 	*tqmf_ptr-- = xin1;
@@ -422,7 +422,7 @@ void decode(int input)
 	xa2 = (long) xs *(*h_ptr++);
 	/* main multiply accumulate loop for samples and coefficients */
 	for (i = 0; i < 10; i++) {
-	#pragma HLS PIPELINE rewind
+	#pragma HLS PIPELINE
 		xa1 += (long) (*ac_ptr++) * (*h_ptr++);
 		xa2 += (long) (*ad_ptr++) * (*h_ptr++);
 	}
@@ -438,7 +438,7 @@ void decode(int input)
 	ac_ptr1 = ac_ptr - 1;
 	ad_ptr1 = ad_ptr - 1;
 	for (i = 0; i < 10; i++) {
-	#pragma HLS PIPELINE rewind
+	#pragma HLS PIPELINE
 		*ac_ptr-- = *ac_ptr1--;
 		*ad_ptr-- = *ad_ptr1--;
 	}
@@ -461,7 +461,7 @@ int filtez(int *bpl, int *dlt)
 	long int zl;
 	zl = (long) (*bpl++) * (*dlt++);
 	for (i = 1; i < 6; i++){
-	#pragma HLS PIPELINE rewind
+	#pragma HLS PIPELINE
 		temp = (*bpl++) * (*dlt++);
 		zl += (long) temp;
 	}
@@ -500,7 +500,7 @@ int quantl(int el, int detl)
 	wd = adpcm_abs(el);
 	/* determine mil based on decision levels and detl gain */
 	for (mil = 0; mil < 30; mil++) {
-	#pragma HLS PIPELINE rewind
+	#pragma HLS PIPELINE
 		decis = (decis_levl[mil] * (long) detl) >> 15L;
 		if (wd <= decis)
 			break;
@@ -642,7 +642,6 @@ int uppol1(int al1, int apl2, int plt, int plt1)
 int logsch(int ih, int nbh)
 {
 #pragma HLS INLINE off
-#pragma HLS ALLOCATION instances=mul limit=1 operation
 
 	int wd;
 	wd = ((long) nbh * 127L) >> 7L; /* leak factor 127/128 */
@@ -692,10 +691,16 @@ void adpcm_dec_main(int compressed[MAX_SIZE], int dec_result[MAX_SIZE], int size
 void adpcm_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE],
                 int dec_result[MAX_SIZE], int select, int size)
 {
-
+#pragma HLS INTERFACE ap_none port=size
+#pragma HLS INTERFACE ap_none port=select
 #pragma HLS INTERFACE bram port=dec_result
 #pragma HLS INTERFACE bram port=compressed
 #pragma HLS INTERFACE bram port=test_data
+
+#pragma HLS RESOURCE variable=dec_result core=RAM_1P_BRAM
+#pragma HLS RESOURCE variable=compressed core=RAM_1P_BRAM
+#pragma HLS RESOURCE variable=test_data core=RAM_1P_BRAM
+#pragma HLS INTERFACE ap_ctrl_hs port=return
 
 #pragma HLS ALLOCATION instances=filtez limit=1 function
 #pragma HLS ALLOCATION instances=filtep limit=1 function
@@ -707,12 +712,6 @@ void adpcm_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE],
 #pragma HLS ALLOCATION instances=uppol2 limit=1 function
 #pragma HLS ALLOCATION instances=logsch limit=1 function
 
-#pragma HLS INTERFACE ap_none port=size
-#pragma HLS INTERFACE ap_none port=select
-#pragma HLS RESOURCE variable=dec_result core=RAM_1P_BRAM
-#pragma HLS RESOURCE variable=compressed core=RAM_1P_BRAM
-#pragma HLS RESOURCE variable=test_data core=RAM_1P_BRAM
-#pragma HLS INTERFACE ap_ctrl_hs port=return
 
 	if(!select) {
 		adpcm_enc_main(test_data, compressed, size);

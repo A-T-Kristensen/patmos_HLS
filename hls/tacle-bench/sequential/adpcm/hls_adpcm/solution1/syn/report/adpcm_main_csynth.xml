@@ -33,8 +33,8 @@
 <Latency>undef</Latency>
 <IterationLatency>
 <range>
-<min>256</min>
-<max>416</max>
+<min>276</min>
+<max>432</max>
 </range>
 </IterationLatency>
 <Loop1.1>
@@ -45,7 +45,7 @@
 </Loop1.1>
 <Loop1.2>
 <TripCount>22</TripCount>
-<Latency>87</Latency>
+<Latency>89</Latency>
 <PipelineII>4</PipelineII>
 <PipelineDepth>4</PipelineDepth>
 </Loop1.2>
@@ -55,8 +55,8 @@
 <Latency>undef</Latency>
 <IterationLatency>
 <range>
-<min>186</min>
-<max>214</max>
+<min>206</min>
+<max>232</max>
 </range>
 </IterationLatency>
 <Loop2.1>
@@ -67,7 +67,7 @@
 </Loop2.1>
 <Loop2.2>
 <TripCount>10</TripCount>
-<Latency>39</Latency>
+<Latency>41</Latency>
 <PipelineII>4</PipelineII>
 <PipelineDepth>4</PipelineDepth>
 </Loop2.2>
@@ -79,8 +79,8 @@
 <Resources>
 <BRAM_18K>11</BRAM_18K>
 <DSP48E>26</DSP48E>
-<FF>5410</FF>
-<LUT>5759</LUT>
+<FF>5031</FF>
+<LUT>5808</LUT>
 </Resources>
 <AvailableResources>
 <BRAM_18K>270</BRAM_18K>

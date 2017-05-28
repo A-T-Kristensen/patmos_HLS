@@ -16,4 +16,4 @@ create_clock -period 10 -name default
 csim_design -clean -compiler gcc
 csynth_design
 cosim_design -trace_level all -rtl vhdl
-export_design -format ip_catalog
+export_design -rtl vhdl -format ip_catalog
