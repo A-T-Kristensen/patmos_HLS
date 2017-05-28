@@ -51,18 +51,19 @@ wire   [0:0] ap_CS_fsm_state1;
 wire   [4:0] ilb_table_address0;
 reg    ilb_table_ce0;
 wire   [11:0] ilb_table_q0;
-reg   [3:0] tmp_reg_120;
+reg   [3:0] tmp_reg_124;
 wire   [63:0] tmp_s_fu_74_p1;
 wire   [0:0] ap_CS_fsm_state2;
 wire   [4:0] wd1_fu_54_p4;
-wire   [3:0] tmp_12_fu_82_p1;
-wire   [3:0] tmp_26_fu_86_p2;
-wire   [4:0] tmp_37_cast_cast_fu_92_p1;
-wire   [4:0] wd2_cast_cast_fu_79_p1;
-wire   [4:0] tmp_27_fu_96_p2;
-wire  signed [11:0] tmp_38_cast_fu_102_p1;
-wire   [11:0] wd3_fu_106_p2;
-wire   [14:0] tmp_28_fu_112_p3;
+wire   [3:0] tmp_11_fu_86_p1;
+wire   [3:0] tmp_27_fu_90_p2;
+wire   [21:0] tmp_37_cast_fu_96_p1;
+wire   [21:0] wd2_cast_fu_79_p1;
+wire   [21:0] ilb_table_load_cast_fu_82_p1;
+wire   [21:0] tmp_28_fu_100_p2;
+wire   [21:0] wd3_fu_106_p2;
+wire   [11:0] tmp_12_fu_112_p1;
+wire   [14:0] tmp_29_fu_116_p3;
 reg   [14:0] ap_return_preg;
 reg   [1:0] ap_NS_fsm;
 
@@ -108,14 +109,14 @@ always @ (posedge ap_clk) begin
         ap_return_preg[14] <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state2)) begin
-                        ap_return_preg[14 : 3] <= tmp_28_fu_112_p3[14 : 3];
+                        ap_return_preg[14 : 3] <= tmp_29_fu_116_p3[14 : 3];
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0))) begin
-        tmp_reg_120 <= {{nbl[ap_const_lv32_E : ap_const_lv32_B]}};
+        tmp_reg_124 <= {{nbl[ap_const_lv32_E : ap_const_lv32_B]}};
     end
 end
 
@@ -145,7 +146,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        ap_return = tmp_28_fu_112_p3;
+        ap_return = tmp_29_fu_116_p3;
     end else begin
         ap_return = ap_return_preg;
     end
@@ -183,25 +184,27 @@ assign ap_CS_fsm_state2 = ap_CS_fsm[ap_const_lv32_1];
 
 assign ilb_table_address0 = tmp_s_fu_74_p1;
 
-assign tmp_12_fu_82_p1 = shift_constant[3:0];
+assign ilb_table_load_cast_fu_82_p1 = ilb_table_q0;
 
-assign tmp_26_fu_86_p2 = (ap_const_lv4_1 + tmp_12_fu_82_p1);
+assign tmp_11_fu_86_p1 = shift_constant[3:0];
 
-assign tmp_27_fu_96_p2 = (tmp_37_cast_cast_fu_92_p1 - wd2_cast_cast_fu_79_p1);
+assign tmp_12_fu_112_p1 = wd3_fu_106_p2[11:0];
 
-assign tmp_28_fu_112_p3 = {{wd3_fu_106_p2}, {ap_const_lv3_0}};
+assign tmp_27_fu_90_p2 = (ap_const_lv4_1 + tmp_11_fu_86_p1);
 
-assign tmp_37_cast_cast_fu_92_p1 = tmp_26_fu_86_p2;
+assign tmp_28_fu_100_p2 = (tmp_37_cast_fu_96_p1 - wd2_cast_fu_79_p1);
 
-assign tmp_38_cast_fu_102_p1 = $signed(tmp_27_fu_96_p2);
+assign tmp_29_fu_116_p3 = {{tmp_12_fu_112_p1}, {ap_const_lv3_0}};
+
+assign tmp_37_cast_fu_96_p1 = tmp_27_fu_90_p2;
 
 assign tmp_s_fu_74_p1 = wd1_fu_54_p4;
 
 assign wd1_fu_54_p4 = {{nbl[ap_const_lv32_A : ap_const_lv32_6]}};
 
-assign wd2_cast_cast_fu_79_p1 = tmp_reg_120;
+assign wd2_cast_fu_79_p1 = tmp_reg_124;
 
-assign wd3_fu_106_p2 = ilb_table_q0 >> tmp_38_cast_fu_102_p1;
+assign wd3_fu_106_p2 = ilb_table_load_cast_fu_82_p1 >> tmp_28_fu_100_p2;
 
 always @ (posedge ap_clk) begin
     ap_return_preg[2:0] <= 3'b000;

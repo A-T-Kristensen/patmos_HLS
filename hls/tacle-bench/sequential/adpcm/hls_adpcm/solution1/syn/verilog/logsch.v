@@ -19,18 +19,18 @@ module logsch (
         ap_return
 );
 
-parameter    ap_ST_fsm_state1 = 3'b1;
-parameter    ap_ST_fsm_state2 = 3'b10;
-parameter    ap_ST_fsm_state3 = 3'b100;
+parameter    ap_ST_fsm_state1 = 2'b1;
+parameter    ap_ST_fsm_state2 = 2'b10;
 parameter    ap_const_lv32_0 = 32'b00000000000000000000000000000000;
-parameter    ap_const_lv32_1 = 32'b1;
 parameter    ap_const_lv7_0 = 7'b0000000;
 parameter    ap_const_lv32_7 = 32'b111;
 parameter    ap_const_lv32_26 = 32'b100110;
+parameter    ap_const_lv32_31E = 32'b1100011110;
+parameter    ap_const_lv32_FFFFFF2A = 32'b11111111111111111111111100101010;
 parameter    ap_const_lv32_25 = 32'b100101;
 parameter    ap_const_lv32_1F = 32'b11111;
 parameter    ap_const_lv31_0 = 31'b0000000000000000000000000000000;
-parameter    ap_const_lv32_2 = 32'b10;
+parameter    ap_const_lv32_1 = 32'b1;
 parameter    ap_const_lv31_5800 = 31'b101100000000000;
 parameter    ap_const_lv15_5800 = 15'b101100000000000;
 
@@ -48,45 +48,47 @@ reg ap_done;
 reg ap_idle;
 reg ap_ready;
 
-(* fsm_encoding = "none" *) reg   [2:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [1:0] ap_CS_fsm;
 wire   [0:0] ap_CS_fsm_state1;
-wire   [1:0] wh_code_table_address0;
-reg    wh_code_table_ce0;
-wire   [10:0] wh_code_table_q0;
-wire   [30:0] nbh_assign_cast_fu_115_p2;
-reg   [30:0] nbh_assign_cast_reg_158;
+wire   [30:0] nbh_assign_cast_fu_122_p2;
+reg   [30:0] nbh_assign_cast_reg_160;
+reg   [0:0] tmp_18_reg_165;
+wire   [38:0] p_shl_fu_60_p3;
+wire  signed [38:0] tmp_cast2_fu_56_p1;
+wire   [38:0] tmp_s_fu_68_p2;
+wire   [1:0] tmp_fu_88_p5;
+wire   [31:0] tmp_fu_88_p6;
+wire   [31:0] wd_fu_74_p4;
+wire   [30:0] tmp_17_fu_112_p1;
+wire   [30:0] tmp_4_fu_102_p4;
+wire   [31:0] nbh_assign_fu_116_p2;
 wire   [0:0] ap_CS_fsm_state2;
-reg   [0:0] tmp_15_reg_163;
-wire  signed [63:0] tmp_38_fu_58_p1;
-wire   [38:0] p_shl_fu_67_p3;
-wire  signed [38:0] tmp_cast2_fu_63_p1;
-wire   [38:0] tmp_s_fu_75_p2;
-wire   [31:0] wd_fu_81_p4;
-wire  signed [31:0] wh_code_table_load_c_fu_91_p1;
-wire   [30:0] tmp_5_fu_99_p4;
-wire  signed [30:0] tmp_fu_95_p1;
-wire   [31:0] nbh_assign_fu_109_p2;
-wire   [0:0] ap_CS_fsm_state3;
-wire   [30:0] p_s_fu_129_p3;
-wire   [0:0] tmp_39_fu_139_p2;
-wire   [14:0] tmp_16_fu_135_p1;
-reg   [2:0] ap_NS_fsm;
+wire   [30:0] p_s_fu_136_p3;
+wire   [0:0] tmp_38_fu_146_p2;
+wire   [14:0] tmp_19_fu_142_p1;
+reg   [1:0] ap_NS_fsm;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 3'b1;
+#0 ap_CS_fsm = 2'b1;
 end
 
-logsch_wh_code_taeOg #(
-    .DataWidth( 11 ),
-    .AddressRange( 4 ),
-    .AddressWidth( 2 ))
-wh_code_table_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .address0(wh_code_table_address0),
-    .ce0(wh_code_table_ce0),
-    .q0(wh_code_table_q0)
+adpcm_main_mux_42eOg #(
+    .ID( 1 ),
+    .NUM_STAGE( 1 ),
+    .din1_WIDTH( 32 ),
+    .din2_WIDTH( 32 ),
+    .din3_WIDTH( 32 ),
+    .din4_WIDTH( 32 ),
+    .din5_WIDTH( 2 ),
+    .dout_WIDTH( 32 ))
+adpcm_main_mux_42eOg_U30(
+    .din1(ap_const_lv32_31E),
+    .din2(ap_const_lv32_FFFFFF2A),
+    .din3(ap_const_lv32_31E),
+    .din4(ap_const_lv32_FFFFFF2A),
+    .din5(tmp_fu_88_p5),
+    .dout(tmp_fu_88_p6)
 );
 
 always @ (posedge ap_clk) begin
@@ -98,14 +100,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
-        nbh_assign_cast_reg_158 <= nbh_assign_cast_fu_115_p2;
-        tmp_15_reg_163 <= nbh_assign_fu_109_p2[ap_const_lv32_1F];
+    if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0))) begin
+        nbh_assign_cast_reg_160 <= nbh_assign_cast_fu_122_p2;
+        tmp_18_reg_165 <= nbh_assign_fu_116_p2[ap_const_lv32_1F];
     end
 end
 
 always @ (*) begin
-    if ((((1'b0 == ap_start) & (ap_CS_fsm_state1 == 1'b1)) | (1'b1 == ap_CS_fsm_state3))) begin
+    if ((((1'b0 == ap_start) & (ap_CS_fsm_state1 == 1'b1)) | (1'b1 == ap_CS_fsm_state2))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -121,18 +123,10 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0))) begin
-        wh_code_table_ce0 = 1'b1;
-    end else begin
-        wh_code_table_ce0 = 1'b0;
     end
 end
 
@@ -146,9 +140,6 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            ap_NS_fsm = ap_ST_fsm_state3;
-        end
-        ap_ST_fsm_state3 : begin
             ap_NS_fsm = ap_ST_fsm_state1;
         end
         default : begin
@@ -161,36 +152,30 @@ assign ap_CS_fsm_state1 = ap_CS_fsm[ap_const_lv32_0];
 
 assign ap_CS_fsm_state2 = ap_CS_fsm[ap_const_lv32_1];
 
-assign ap_CS_fsm_state3 = ap_CS_fsm[ap_const_lv32_2];
+assign ap_return = ((tmp_38_fu_146_p2[0:0] === 1'b1) ? ap_const_lv15_5800 : tmp_19_fu_142_p1);
 
-assign ap_return = ((tmp_39_fu_139_p2[0:0] === 1'b1) ? ap_const_lv15_5800 : tmp_16_fu_135_p1);
+assign nbh_assign_cast_fu_122_p2 = (tmp_17_fu_112_p1 + tmp_4_fu_102_p4);
 
-assign nbh_assign_cast_fu_115_p2 = ($signed(tmp_5_fu_99_p4) + $signed(tmp_fu_95_p1));
+assign nbh_assign_fu_116_p2 = (wd_fu_74_p4 + tmp_fu_88_p6);
 
-assign nbh_assign_fu_109_p2 = ($signed(wd_fu_81_p4) + $signed(wh_code_table_load_c_fu_91_p1));
+assign p_s_fu_136_p3 = ((tmp_18_reg_165[0:0] === 1'b1) ? ap_const_lv31_0 : nbh_assign_cast_reg_160);
 
-assign p_s_fu_129_p3 = ((tmp_15_reg_163[0:0] === 1'b1) ? ap_const_lv31_0 : nbh_assign_cast_reg_158);
+assign p_shl_fu_60_p3 = {{nbh}, {ap_const_lv7_0}};
 
-assign p_shl_fu_67_p3 = {{nbh}, {ap_const_lv7_0}};
+assign tmp_17_fu_112_p1 = tmp_fu_88_p6[30:0];
 
-assign tmp_16_fu_135_p1 = p_s_fu_129_p3[14:0];
+assign tmp_19_fu_142_p1 = p_s_fu_136_p3[14:0];
 
-assign tmp_38_fu_58_p1 = $signed(ih);
+assign tmp_38_fu_146_p2 = ((p_s_fu_136_p3 > ap_const_lv31_5800) ? 1'b1 : 1'b0);
 
-assign tmp_39_fu_139_p2 = ((p_s_fu_129_p3 > ap_const_lv31_5800) ? 1'b1 : 1'b0);
+assign tmp_4_fu_102_p4 = {{tmp_s_fu_68_p2[ap_const_lv32_25 : ap_const_lv32_7]}};
 
-assign tmp_5_fu_99_p4 = {{tmp_s_fu_75_p2[ap_const_lv32_25 : ap_const_lv32_7]}};
+assign tmp_cast2_fu_56_p1 = $signed(nbh);
 
-assign tmp_cast2_fu_63_p1 = $signed(nbh);
+assign tmp_fu_88_p5 = ih[1:0];
 
-assign tmp_fu_95_p1 = $signed(wh_code_table_q0);
+assign tmp_s_fu_68_p2 = ($signed(p_shl_fu_60_p3) - $signed(tmp_cast2_fu_56_p1));
 
-assign tmp_s_fu_75_p2 = ($signed(p_shl_fu_67_p3) - $signed(tmp_cast2_fu_63_p1));
-
-assign wd_fu_81_p4 = {{tmp_s_fu_75_p2[ap_const_lv32_26 : ap_const_lv32_7]}};
-
-assign wh_code_table_address0 = tmp_38_fu_58_p1;
-
-assign wh_code_table_load_c_fu_91_p1 = $signed(wh_code_table_q0);
+assign wd_fu_74_p4 = {{tmp_s_fu_68_p2[ap_const_lv32_26 : ap_const_lv32_7]}};
 
 endmodule //logsch

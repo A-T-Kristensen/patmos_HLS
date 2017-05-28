@@ -34,20 +34,22 @@ module upzero (
         bli_d1
 );
 
-parameter    ap_ST_fsm_state1 = 9'b1;
-parameter    ap_ST_fsm_pp0_stage0 = 9'b10;
-parameter    ap_ST_fsm_state11 = 9'b100;
-parameter    ap_ST_fsm_pp1_stage0 = 9'b1000;
-parameter    ap_ST_fsm_state14 = 9'b10000;
-parameter    ap_ST_fsm_state15 = 9'b100000;
-parameter    ap_ST_fsm_state16 = 9'b1000000;
-parameter    ap_ST_fsm_state17 = 9'b10000000;
-parameter    ap_ST_fsm_state18 = 9'b100000000;
+parameter    ap_ST_fsm_state1 = 10'b1;
+parameter    ap_ST_fsm_pp0_stage0 = 10'b10;
+parameter    ap_ST_fsm_pp0_stage1 = 10'b100;
+parameter    ap_ST_fsm_state12 = 10'b1000;
+parameter    ap_ST_fsm_pp1_stage0 = 10'b10000;
+parameter    ap_ST_fsm_state15 = 10'b100000;
+parameter    ap_ST_fsm_state16 = 10'b1000000;
+parameter    ap_ST_fsm_state17 = 10'b10000000;
+parameter    ap_ST_fsm_state18 = 10'b100000000;
+parameter    ap_ST_fsm_state19 = 10'b1000000000;
 parameter    ap_const_lv32_0 = 32'b00000000000000000000000000000000;
 parameter    ap_const_lv32_1 = 32'b1;
 parameter    ap_const_lv32_4 = 32'b100;
 parameter    ap_const_lv32_5 = 32'b101;
 parameter    ap_const_lv32_6 = 32'b110;
+parameter    ap_const_lv32_7 = 32'b111;
 parameter    ap_const_lv32_2 = 32'b10;
 parameter    ap_const_lv32_3 = 32'b11;
 parameter    ap_const_lv3_0 = 3'b000;
@@ -57,10 +59,10 @@ parameter    ap_const_lv64_3 = 64'b11;
 parameter    ap_const_lv64_2 = 64'b10;
 parameter    ap_const_lv64_1 = 64'b1;
 parameter    ap_const_lv64_5 = 64'b101;
-parameter    ap_const_lv32_7 = 32'b111;
 parameter    ap_const_lv32_8 = 32'b1000;
-parameter    ap_const_lv3_6 = 3'b110;
+parameter    ap_const_lv32_9 = 32'b1001;
 parameter    ap_const_lv3_1 = 3'b1;
+parameter    ap_const_lv3_6 = 3'b110;
 parameter    ap_const_lv32_3F = 32'b111111;
 parameter    ap_const_lv32_FFFFFF80 = 32'b11111111111111111111111110000000;
 parameter    ap_const_lv32_80 = 32'b10000000;
@@ -109,90 +111,77 @@ reg bli_ce1;
 reg bli_we1;
 reg[31:0] bli_d1;
 
-(* fsm_encoding = "none" *) reg   [8:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [9:0] ap_CS_fsm;
 wire   [0:0] ap_CS_fsm_state1;
-reg   [2:0] i_1_reg_162;
-reg   [2:0] i_reg_173;
-reg  signed [31:0] reg_184;
+reg   [2:0] i_1_reg_168;
+reg   [2:0] i_reg_180;
+wire   [31:0] grp_fu_191_p2;
+reg   [2:0] i_3_reg_202;
 wire   [0:0] ap_CS_fsm_pp0_stage0;
+reg    ap_enable_reg_pp0_iter0;
+wire   [0:0] ap_CS_fsm_pp1_stage0;
+reg    ap_enable_reg_pp1_iter0;
+reg  signed [31:0] reg_229;
 reg    ap_enable_reg_pp0_iter1;
-reg   [0:0] exitcond_reg_342;
-wire   [0:0] ap_CS_fsm_state14;
+reg   [0:0] exitcond_reg_366;
 wire   [0:0] ap_CS_fsm_state15;
 wire   [0:0] ap_CS_fsm_state16;
-wire   [0:0] tmp_fu_191_p2;
-wire  signed [63:0] tmp_1_fu_197_p1;
-reg  signed [63:0] tmp_1_reg_337;
-wire   [0:0] exitcond_fu_201_p2;
-reg   [0:0] ap_pipeline_reg_pp0_iter1_exitcond_reg_342;
-reg   [0:0] ap_pipeline_reg_pp0_iter2_exitcond_reg_342;
-reg   [0:0] ap_pipeline_reg_pp0_iter3_exitcond_reg_342;
-reg   [0:0] ap_pipeline_reg_pp0_iter4_exitcond_reg_342;
-reg   [0:0] ap_pipeline_reg_pp0_iter5_exitcond_reg_342;
-reg   [0:0] ap_pipeline_reg_pp0_iter6_exitcond_reg_342;
-reg   [0:0] ap_pipeline_reg_pp0_iter7_exitcond_reg_342;
-wire   [2:0] i_3_fu_207_p2;
-reg    ap_enable_reg_pp0_iter0;
-reg   [2:0] bli_addr_1_reg_356;
-reg   [2:0] ap_pipeline_reg_pp0_iter1_bli_addr_1_reg_356;
-reg   [2:0] ap_pipeline_reg_pp0_iter2_bli_addr_1_reg_356;
-reg   [2:0] ap_pipeline_reg_pp0_iter3_bli_addr_1_reg_356;
-reg   [2:0] ap_pipeline_reg_pp0_iter4_bli_addr_1_reg_356;
-reg   [2:0] ap_pipeline_reg_pp0_iter5_bli_addr_1_reg_356;
-reg   [2:0] ap_pipeline_reg_pp0_iter6_bli_addr_1_reg_356;
-reg   [2:0] ap_pipeline_reg_pp0_iter7_bli_addr_1_reg_356;
-wire   [63:0] grp_fu_223_p2;
-reg   [63:0] tmp_s_reg_367;
-reg   [31:0] bli_load_1_reg_372;
-reg    ap_enable_reg_pp0_iter7;
-wire   [0:0] ap_CS_fsm_state11;
-wire   [0:0] exitcond1_fu_276_p2;
-reg   [0:0] exitcond1_reg_390;
-wire   [0:0] ap_CS_fsm_pp1_stage0;
-wire   [2:0] i_2_fu_282_p2;
-reg    ap_enable_reg_pp1_iter0;
-reg   [2:0] bli_addr_reg_399;
-reg   [31:0] dlti_load_2_reg_405;
-wire   [2:0] dlti_addr_4_reg_410;
-wire   [2:0] dlti_addr_5_reg_415;
-reg   [31:0] dlti_load_4_reg_420;
+wire   [0:0] ap_CS_fsm_state17;
+wire   [0:0] tmp_fu_236_p2;
+wire  signed [63:0] tmp_1_fu_242_p1;
+reg  signed [63:0] tmp_1_reg_361;
+wire   [0:0] exitcond_fu_246_p2;
+reg   [0:0] ap_pipeline_reg_pp0_iter1_exitcond_reg_366;
+reg   [0:0] ap_pipeline_reg_pp0_iter2_exitcond_reg_366;
+reg   [0:0] ap_pipeline_reg_pp0_iter3_exitcond_reg_366;
+reg   [0:0] ap_pipeline_reg_pp0_iter4_exitcond_reg_366;
+wire   [0:0] ap_CS_fsm_pp0_stage1;
+reg   [2:0] bli_addr_1_reg_375;
+reg   [2:0] ap_pipeline_reg_pp0_iter1_bli_addr_1_reg_375;
+reg   [2:0] ap_pipeline_reg_pp0_iter2_bli_addr_1_reg_375;
+reg   [2:0] ap_pipeline_reg_pp0_iter3_bli_addr_1_reg_375;
+wire   [63:0] grp_fu_218_p2;
+reg   [63:0] tmp_s_reg_386;
+reg   [31:0] bli_load_1_reg_391;
+reg    ap_enable_reg_pp0_iter4;
+wire   [0:0] ap_CS_fsm_state12;
+wire   [0:0] exitcond1_fu_306_p2;
+reg   [0:0] exitcond1_reg_409;
+reg   [2:0] bli_addr_reg_413;
+reg   [31:0] dlti_load_2_reg_419;
+wire   [2:0] dlti_addr_4_reg_424;
+wire   [2:0] dlti_addr_5_reg_429;
+reg   [31:0] dlti_load_4_reg_434;
 reg    ap_enable_reg_pp0_iter2;
 reg    ap_enable_reg_pp0_iter3;
-reg    ap_enable_reg_pp0_iter4;
-reg    ap_enable_reg_pp0_iter5;
-reg    ap_enable_reg_pp0_iter6;
-reg    ap_enable_reg_pp0_iter8;
 reg    ap_enable_reg_pp1_iter1;
-wire   [63:0] tmp_8_fu_213_p1;
-wire   [63:0] tmp_2_fu_288_p1;
-wire   [0:0] ap_CS_fsm_state17;
+reg   [2:0] i_1_phi_fu_172_p4;
+wire   [63:0] tmp_8_fu_252_p1;
+wire   [63:0] tmp_2_fu_312_p1;
 wire   [0:0] ap_CS_fsm_state18;
-wire   [31:0] tmp_11_fu_269_p2;
-wire  signed [31:0] grp_fu_223_p0;
-wire   [0:0] tmp_7_fu_228_p3;
-wire   [39:0] p_shl1_fu_246_p3;
-wire  signed [39:0] tmp_10_cast_fu_243_p1;
-wire   [39:0] tmp_10_fu_253_p2;
-wire   [31:0] wd2_cast_cast_cast_fu_235_p3;
-wire   [31:0] wd3_fu_259_p4;
-wire   [39:0] p_shl_fu_297_p3;
-wire  signed [39:0] tmp_3_cast_fu_293_p1;
-wire   [39:0] tmp_4_fu_305_p2;
-reg   [8:0] ap_NS_fsm;
+wire   [0:0] ap_CS_fsm_state19;
+reg   [31:0] grp_fu_191_p0;
+wire   [31:0] wd2_cast_cast_fu_270_p3;
+reg   [31:0] grp_fu_191_p1;
+wire  signed [31:0] grp_fu_218_p0;
+wire   [0:0] tmp_7_fu_263_p3;
+wire   [39:0] p_shl1_fu_282_p3;
+wire  signed [39:0] tmp_10_cast_fu_279_p1;
+wire   [39:0] tmp_10_fu_289_p2;
+wire   [39:0] p_shl_fu_321_p3;
+wire  signed [39:0] tmp_3_cast_fu_317_p1;
+wire   [39:0] tmp_4_fu_329_p2;
+reg   [9:0] ap_NS_fsm;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 9'b1;
-#0 ap_enable_reg_pp0_iter1 = 1'b0;
+#0 ap_CS_fsm = 10'b1;
 #0 ap_enable_reg_pp0_iter0 = 1'b0;
-#0 ap_enable_reg_pp0_iter7 = 1'b0;
 #0 ap_enable_reg_pp1_iter0 = 1'b0;
+#0 ap_enable_reg_pp0_iter1 = 1'b0;
+#0 ap_enable_reg_pp0_iter4 = 1'b0;
 #0 ap_enable_reg_pp0_iter2 = 1'b0;
 #0 ap_enable_reg_pp0_iter3 = 1'b0;
-#0 ap_enable_reg_pp0_iter4 = 1'b0;
-#0 ap_enable_reg_pp0_iter5 = 1'b0;
-#0 ap_enable_reg_pp0_iter6 = 1'b0;
-#0 ap_enable_reg_pp0_iter8 = 1'b0;
 #0 ap_enable_reg_pp1_iter1 = 1'b0;
 end
 
@@ -202,13 +191,13 @@ adpcm_main_mul_32bkb #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 64 ))
-adpcm_main_mul_32bkb_x_U17(
+adpcm_main_mul_32bkb_x_U15(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(grp_fu_223_p0),
-    .din1(reg_184),
+    .din0(grp_fu_218_p0),
+    .din1(reg_229),
     .ce(1'b1),
-    .dout(grp_fu_223_p2)
+    .dout(grp_fu_218_p2)
 );
 
 always @ (posedge ap_clk) begin
@@ -223,9 +212,9 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         ap_enable_reg_pp0_iter0 <= 1'b0;
     end else begin
-        if (((1'b1 == ap_CS_fsm_pp0_stage0) & ~(1'b0 == exitcond_fu_201_p2))) begin
+        if (((1'b1 == ap_CS_fsm_pp0_stage0) & ~(1'b0 == exitcond_fu_246_p2))) begin
             ap_enable_reg_pp0_iter0 <= 1'b0;
-        end else if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0) & (1'b0 == tmp_fu_191_p2))) begin
+        end else if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0) & (1'b0 == tmp_fu_236_p2))) begin
             ap_enable_reg_pp0_iter0 <= 1'b1;
         end
     end
@@ -235,9 +224,9 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         ap_enable_reg_pp0_iter1 <= 1'b0;
     end else begin
-        if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == exitcond_fu_201_p2))) begin
+        if (((exitcond_reg_366 == 1'b0) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
             ap_enable_reg_pp0_iter1 <= 1'b1;
-        end else if ((((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0) & (1'b0 == tmp_fu_191_p2)) | ((1'b1 == ap_CS_fsm_pp0_stage0) & ~(1'b0 == exitcond_fu_201_p2)))) begin
+        end else if ((((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0) & (1'b0 == tmp_fu_236_p2)) | ((1'b1 == ap_CS_fsm_pp0_stage1) & ~(exitcond_reg_366 == 1'b0)))) begin
             ap_enable_reg_pp0_iter1 <= 1'b0;
         end
     end
@@ -247,7 +236,9 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         ap_enable_reg_pp0_iter2 <= 1'b0;
     end else begin
-        ap_enable_reg_pp0_iter2 <= ap_enable_reg_pp0_iter1;
+        if ((1'b1 == ap_CS_fsm_pp0_stage1)) begin
+            ap_enable_reg_pp0_iter2 <= ap_enable_reg_pp0_iter1;
+        end
     end
 end
 
@@ -255,7 +246,9 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         ap_enable_reg_pp0_iter3 <= 1'b0;
     end else begin
-        ap_enable_reg_pp0_iter3 <= ap_enable_reg_pp0_iter2;
+        if ((1'b1 == ap_CS_fsm_pp0_stage1)) begin
+            ap_enable_reg_pp0_iter3 <= ap_enable_reg_pp0_iter2;
+        end
     end
 end
 
@@ -263,39 +256,11 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         ap_enable_reg_pp0_iter4 <= 1'b0;
     end else begin
-        ap_enable_reg_pp0_iter4 <= ap_enable_reg_pp0_iter3;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_enable_reg_pp0_iter5 <= 1'b0;
-    end else begin
-        ap_enable_reg_pp0_iter5 <= ap_enable_reg_pp0_iter4;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_enable_reg_pp0_iter6 <= 1'b0;
-    end else begin
-        ap_enable_reg_pp0_iter6 <= ap_enable_reg_pp0_iter5;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_enable_reg_pp0_iter7 <= 1'b0;
-    end else begin
-        ap_enable_reg_pp0_iter7 <= ap_enable_reg_pp0_iter6;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_enable_reg_pp0_iter8 <= 1'b0;
-    end else begin
-        ap_enable_reg_pp0_iter8 <= ap_enable_reg_pp0_iter7;
+        if ((1'b1 == ap_CS_fsm_pp0_stage1)) begin
+            ap_enable_reg_pp0_iter4 <= ap_enable_reg_pp0_iter3;
+        end else if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0) & (1'b0 == tmp_fu_236_p2))) begin
+            ap_enable_reg_pp0_iter4 <= 1'b0;
+        end
     end
 end
 
@@ -303,9 +268,9 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         ap_enable_reg_pp1_iter0 <= 1'b0;
     end else begin
-        if (((1'b1 == ap_CS_fsm_pp1_stage0) & ~(1'b0 == exitcond1_fu_276_p2))) begin
+        if (((1'b1 == ap_CS_fsm_pp1_stage0) & ~(1'b0 == exitcond1_fu_306_p2))) begin
             ap_enable_reg_pp1_iter0 <= 1'b0;
-        end else if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0) & ~(1'b0 == tmp_fu_191_p2))) begin
+        end else if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0) & ~(1'b0 == tmp_fu_236_p2))) begin
             ap_enable_reg_pp1_iter0 <= 1'b1;
         end
     end
@@ -315,113 +280,112 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         ap_enable_reg_pp1_iter1 <= 1'b0;
     end else begin
-        if (((1'b1 == ap_CS_fsm_pp1_stage0) & (1'b0 == exitcond1_fu_276_p2))) begin
+        if (((1'b1 == ap_CS_fsm_pp1_stage0) & (1'b0 == exitcond1_fu_306_p2))) begin
             ap_enable_reg_pp1_iter1 <= 1'b1;
-        end else if ((((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0) & ~(1'b0 == tmp_fu_191_p2)) | ((1'b1 == ap_CS_fsm_pp1_stage0) & ~(1'b0 == exitcond1_fu_276_p2)))) begin
+        end else if ((((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0) & ~(1'b0 == tmp_fu_236_p2)) | ((1'b1 == ap_CS_fsm_pp1_stage0) & ~(1'b0 == exitcond1_fu_306_p2)))) begin
             ap_enable_reg_pp1_iter1 <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0) & (1'b0 == tmp_fu_191_p2))) begin
-        i_1_reg_162 <= ap_const_lv3_0;
-    end else if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_enable_reg_pp0_iter0) & (1'b0 == exitcond_fu_201_p2))) begin
-        i_1_reg_162 <= i_3_fu_207_p2;
+    if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0) & (1'b0 == tmp_fu_236_p2))) begin
+        i_1_reg_168 <= ap_const_lv3_0;
+    end else if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_enable_reg_pp0_iter1) & (exitcond_reg_366 == 1'b0))) begin
+        i_1_reg_168 <= i_3_reg_202;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0) & ~(1'b0 == tmp_fu_191_p2))) begin
-        i_reg_173 <= ap_const_lv3_0;
-    end else if (((1'b1 == ap_CS_fsm_pp1_stage0) & (1'b1 == ap_enable_reg_pp1_iter0) & (1'b0 == exitcond1_fu_276_p2))) begin
-        i_reg_173 <= i_2_fu_282_p2;
+    if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0) & ~(1'b0 == tmp_fu_236_p2))) begin
+        i_reg_180 <= ap_const_lv3_0;
+    end else if (((1'b1 == ap_CS_fsm_pp1_stage0) & (1'b1 == ap_enable_reg_pp1_iter0) & (1'b0 == exitcond1_fu_306_p2))) begin
+        i_reg_180 <= grp_fu_191_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state15)) begin
-        reg_184 <= dlti_q1;
-    end else if ((((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_enable_reg_pp0_iter1) & (exitcond_reg_342 == 1'b0)) | (1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state16))) begin
-        reg_184 <= dlti_q0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        reg_229 <= dlti_q1;
+    end else if ((((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_enable_reg_pp0_iter1) & (exitcond_reg_366 == 1'b0)) | (1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state17))) begin
+        reg_229 <= dlti_q0;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_pp0_stage1)) begin
+        ap_pipeline_reg_pp0_iter1_bli_addr_1_reg_375 <= bli_addr_1_reg_375;
+        ap_pipeline_reg_pp0_iter2_bli_addr_1_reg_375 <= ap_pipeline_reg_pp0_iter1_bli_addr_1_reg_375;
+        ap_pipeline_reg_pp0_iter3_bli_addr_1_reg_375 <= ap_pipeline_reg_pp0_iter2_bli_addr_1_reg_375;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_pp0_stage0)) begin
-        ap_pipeline_reg_pp0_iter1_bli_addr_1_reg_356 <= bli_addr_1_reg_356;
-        ap_pipeline_reg_pp0_iter1_exitcond_reg_342 <= exitcond_reg_342;
-        exitcond_reg_342 <= exitcond_fu_201_p2;
+        ap_pipeline_reg_pp0_iter1_exitcond_reg_366 <= exitcond_reg_366;
+        ap_pipeline_reg_pp0_iter2_exitcond_reg_366 <= ap_pipeline_reg_pp0_iter1_exitcond_reg_366;
+        ap_pipeline_reg_pp0_iter3_exitcond_reg_366 <= ap_pipeline_reg_pp0_iter2_exitcond_reg_366;
+        ap_pipeline_reg_pp0_iter4_exitcond_reg_366 <= ap_pipeline_reg_pp0_iter3_exitcond_reg_366;
+        exitcond_reg_366 <= exitcond_fu_246_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == 1'b1)) begin
-        ap_pipeline_reg_pp0_iter2_bli_addr_1_reg_356 <= ap_pipeline_reg_pp0_iter1_bli_addr_1_reg_356;
-        ap_pipeline_reg_pp0_iter2_exitcond_reg_342 <= ap_pipeline_reg_pp0_iter1_exitcond_reg_342;
-        ap_pipeline_reg_pp0_iter3_bli_addr_1_reg_356 <= ap_pipeline_reg_pp0_iter2_bli_addr_1_reg_356;
-        ap_pipeline_reg_pp0_iter3_exitcond_reg_342 <= ap_pipeline_reg_pp0_iter2_exitcond_reg_342;
-        ap_pipeline_reg_pp0_iter4_bli_addr_1_reg_356 <= ap_pipeline_reg_pp0_iter3_bli_addr_1_reg_356;
-        ap_pipeline_reg_pp0_iter4_exitcond_reg_342 <= ap_pipeline_reg_pp0_iter3_exitcond_reg_342;
-        ap_pipeline_reg_pp0_iter5_bli_addr_1_reg_356 <= ap_pipeline_reg_pp0_iter4_bli_addr_1_reg_356;
-        ap_pipeline_reg_pp0_iter5_exitcond_reg_342 <= ap_pipeline_reg_pp0_iter4_exitcond_reg_342;
-        ap_pipeline_reg_pp0_iter6_bli_addr_1_reg_356 <= ap_pipeline_reg_pp0_iter5_bli_addr_1_reg_356;
-        ap_pipeline_reg_pp0_iter6_exitcond_reg_342 <= ap_pipeline_reg_pp0_iter5_exitcond_reg_342;
-        ap_pipeline_reg_pp0_iter7_bli_addr_1_reg_356 <= ap_pipeline_reg_pp0_iter6_bli_addr_1_reg_356;
-        ap_pipeline_reg_pp0_iter7_exitcond_reg_342 <= ap_pipeline_reg_pp0_iter6_exitcond_reg_342;
+    if (((exitcond_reg_366 == 1'b0) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+        bli_addr_1_reg_375 <= tmp_8_fu_252_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == exitcond_fu_201_p2))) begin
-        bli_addr_1_reg_356 <= tmp_8_fu_213_p1;
+    if (((1'b1 == ap_CS_fsm_pp1_stage0) & (1'b0 == exitcond1_fu_306_p2))) begin
+        bli_addr_reg_413 <= tmp_2_fu_312_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_pp1_stage0) & (1'b0 == exitcond1_fu_276_p2))) begin
-        bli_addr_reg_399 <= tmp_2_fu_288_p1;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_pipeline_reg_pp0_iter6_exitcond_reg_342) & (1'b1 == ap_enable_reg_pp0_iter7))) begin
-        bli_load_1_reg_372 <= bli_q0;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state14)) begin
-        dlti_load_2_reg_405 <= dlti_q1;
+    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_pipeline_reg_pp0_iter3_exitcond_reg_366) & (1'b1 == ap_enable_reg_pp0_iter4))) begin
+        bli_load_1_reg_391 <= bli_q0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state15)) begin
-        dlti_load_4_reg_420 <= dlti_q0;
+        dlti_load_2_reg_419 <= dlti_q1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        dlti_load_4_reg_434 <= dlti_q0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_pp1_stage0)) begin
-        exitcond1_reg_390 <= exitcond1_fu_276_p2;
+        exitcond1_reg_409 <= exitcond1_fu_306_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0) & (1'b0 == tmp_fu_191_p2))) begin
-        tmp_1_reg_337 <= tmp_1_fu_197_p1;
+    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_enable_reg_pp0_iter0))) begin
+        i_3_reg_202 <= grp_fu_191_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b0 == ap_pipeline_reg_pp0_iter6_exitcond_reg_342)) begin
-        tmp_s_reg_367 <= grp_fu_223_p2;
+    if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0) & (1'b0 == tmp_fu_236_p2))) begin
+        tmp_1_reg_361 <= tmp_1_fu_242_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_pipeline_reg_pp0_iter3_exitcond_reg_366))) begin
+        tmp_s_reg_386 <= grp_fu_218_p2;
     end
 end
 
 always @ (*) begin
-    if ((((1'b0 == ap_start) & (ap_CS_fsm_state1 == 1'b1)) | (1'b1 == ap_CS_fsm_state18))) begin
+    if ((((1'b0 == ap_start) & (ap_CS_fsm_state1 == 1'b1)) | (1'b1 == ap_CS_fsm_state19))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -437,7 +401,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
+    if ((1'b1 == ap_CS_fsm_state19)) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -446,9 +410,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_pp1_stage0) & (1'b1 == ap_enable_reg_pp1_iter0))) begin
-        bli_address0 = tmp_2_fu_288_p1;
-    end else if ((1'b1 == ap_enable_reg_pp0_iter6)) begin
-        bli_address0 = ap_pipeline_reg_pp0_iter5_bli_addr_1_reg_356;
+        bli_address0 = tmp_2_fu_312_p1;
+    end else if (((1'b1 == ap_CS_fsm_pp0_stage1) & (1'b1 == ap_enable_reg_pp0_iter3))) begin
+        bli_address0 = ap_pipeline_reg_pp0_iter2_bli_addr_1_reg_375;
     end else begin
         bli_address0 = 'bx;
     end
@@ -456,16 +420,16 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_pp1_stage0) & (1'b1 == ap_enable_reg_pp1_iter1))) begin
-        bli_address1 = bli_addr_reg_399;
-    end else if ((1'b1 == ap_enable_reg_pp0_iter8)) begin
-        bli_address1 = ap_pipeline_reg_pp0_iter7_bli_addr_1_reg_356;
+        bli_address1 = bli_addr_reg_413;
+    end else if (((1'b1 == ap_CS_fsm_pp0_stage1) & (1'b1 == ap_enable_reg_pp0_iter4))) begin
+        bli_address1 = ap_pipeline_reg_pp0_iter3_bli_addr_1_reg_375;
     end else begin
         bli_address1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((((1'b1 == ap_CS_fsm_pp1_stage0) & (1'b1 == ap_enable_reg_pp1_iter0)) | (1'b1 == ap_enable_reg_pp0_iter6))) begin
+    if ((((1'b1 == ap_CS_fsm_pp1_stage0) & (1'b1 == ap_enable_reg_pp1_iter0)) | ((1'b1 == ap_CS_fsm_pp0_stage1) & (1'b1 == ap_enable_reg_pp0_iter3)))) begin
         bli_ce0 = 1'b1;
     end else begin
         bli_ce0 = 1'b0;
@@ -473,7 +437,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_enable_reg_pp0_iter8) | ((1'b1 == ap_CS_fsm_pp1_stage0) & (1'b1 == ap_enable_reg_pp1_iter1)))) begin
+    if ((((1'b1 == ap_CS_fsm_pp0_stage1) & (1'b1 == ap_enable_reg_pp0_iter4)) | ((1'b1 == ap_CS_fsm_pp1_stage0) & (1'b1 == ap_enable_reg_pp1_iter1)))) begin
         bli_ce1 = 1'b1;
     end else begin
         bli_ce1 = 1'b0;
@@ -482,16 +446,16 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_pp1_stage0) & (1'b1 == ap_enable_reg_pp1_iter1))) begin
-        bli_d1 = {{tmp_4_fu_305_p2[ap_const_lv32_27 : ap_const_lv32_8]}};
-    end else if ((1'b1 == ap_enable_reg_pp0_iter8)) begin
-        bli_d1 = tmp_11_fu_269_p2;
+        bli_d1 = {{tmp_4_fu_329_p2[ap_const_lv32_27 : ap_const_lv32_8]}};
+    end else if (((1'b1 == ap_CS_fsm_pp0_stage1) & (1'b1 == ap_enable_reg_pp0_iter4))) begin
+        bli_d1 = grp_fu_191_p2;
     end else begin
         bli_d1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((((1'b1 == ap_enable_reg_pp0_iter8) & (1'b0 == ap_pipeline_reg_pp0_iter7_exitcond_reg_342)) | ((1'b1 == ap_CS_fsm_pp1_stage0) & (1'b1 == ap_enable_reg_pp1_iter1) & (1'b0 == exitcond1_reg_390)))) begin
+    if ((((1'b1 == ap_CS_fsm_pp0_stage1) & (1'b1 == ap_enable_reg_pp0_iter4) & (1'b0 == ap_pipeline_reg_pp0_iter4_exitcond_reg_366)) | ((1'b1 == ap_CS_fsm_pp1_stage0) & (1'b1 == ap_enable_reg_pp1_iter1) & (1'b0 == exitcond1_reg_409)))) begin
         bli_we1 = 1'b1;
     end else begin
         bli_we1 = 1'b0;
@@ -499,35 +463,35 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state17)) begin
-        dlti_address0 = dlti_addr_5_reg_415;
-    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        dlti_address0 = dlti_addr_5_reg_429;
+    end else if ((1'b1 == ap_CS_fsm_state17)) begin
         dlti_address0 = ap_const_lv64_3;
-    end else if ((1'b1 == ap_CS_fsm_state15)) begin
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
         dlti_address0 = ap_const_lv64_0;
-    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+    end else if ((1'b1 == ap_CS_fsm_state15)) begin
         dlti_address0 = ap_const_lv64_1;
-    end else if ((1'b1 == ap_CS_fsm_state11)) begin
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
         dlti_address0 = ap_const_lv64_4;
-    end else if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_enable_reg_pp0_iter0))) begin
-        dlti_address0 = tmp_8_fu_213_p1;
+    end else if (((1'b1 == ap_enable_reg_pp0_iter0) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+        dlti_address0 = tmp_8_fu_252_p1;
     end else begin
         dlti_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
+    if ((1'b1 == ap_CS_fsm_state19)) begin
         dlti_address1 = ap_const_lv64_0;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        dlti_address1 = dlti_addr_4_reg_424;
     end else if ((1'b1 == ap_CS_fsm_state17)) begin
-        dlti_address1 = dlti_addr_4_reg_410;
-    end else if ((1'b1 == ap_CS_fsm_state16)) begin
         dlti_address1 = ap_const_lv64_4;
-    end else if ((1'b1 == ap_CS_fsm_state15)) begin
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
         dlti_address1 = ap_const_lv64_5;
-    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+    end else if ((1'b1 == ap_CS_fsm_state15)) begin
         dlti_address1 = ap_const_lv64_2;
-    end else if ((1'b1 == ap_CS_fsm_state11)) begin
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
         dlti_address1 = ap_const_lv64_3;
     end else begin
         dlti_address1 = 'bx;
@@ -535,7 +499,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state16) | ((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_enable_reg_pp0_iter0)) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state17))) begin
+    if (((1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state17) | (1'b1 == ap_CS_fsm_state12) | ((1'b1 == ap_enable_reg_pp0_iter0) & (1'b1 == ap_CS_fsm_pp0_stage1)) | (1'b1 == ap_CS_fsm_state18))) begin
         dlti_ce0 = 1'b1;
     end else begin
         dlti_ce0 = 1'b0;
@@ -543,7 +507,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state17) | (1'b1 == ap_CS_fsm_state18))) begin
+    if (((1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state17) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state18) | (1'b1 == ap_CS_fsm_state19))) begin
         dlti_ce1 = 1'b1;
     end else begin
         dlti_ce1 = 1'b0;
@@ -551,21 +515,21 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
+    if ((1'b1 == ap_CS_fsm_state19)) begin
         dlti_d1 = dlt;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        dlti_d1 = dlti_load_4_reg_434;
     end else if ((1'b1 == ap_CS_fsm_state17)) begin
-        dlti_d1 = dlti_load_4_reg_420;
+        dlti_d1 = dlti_load_2_reg_419;
     end else if ((1'b1 == ap_CS_fsm_state16)) begin
-        dlti_d1 = dlti_load_2_reg_405;
-    end else if ((1'b1 == ap_CS_fsm_state15)) begin
-        dlti_d1 = reg_184;
+        dlti_d1 = reg_229;
     end else begin
         dlti_d1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state17))) begin
+    if (((1'b1 == ap_CS_fsm_state17) | (1'b1 == ap_CS_fsm_state18))) begin
         dlti_we0 = 1'b1;
     end else begin
         dlti_we0 = 1'b0;
@@ -573,7 +537,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state17) | (1'b1 == ap_CS_fsm_state18))) begin
+    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state17) | (1'b1 == ap_CS_fsm_state18) | (1'b1 == ap_CS_fsm_state19))) begin
         dlti_we1 = 1'b1;
     end else begin
         dlti_we1 = 1'b0;
@@ -581,37 +545,69 @@ always @ (*) begin
 end
 
 always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_pp1_stage0) & (1'b1 == ap_enable_reg_pp1_iter0))) begin
+        grp_fu_191_p0 = i_reg_180;
+    end else if (((1'b1 == ap_CS_fsm_pp0_stage1) & (1'b1 == ap_enable_reg_pp0_iter4))) begin
+        grp_fu_191_p0 = wd2_cast_cast_fu_270_p3;
+    end else if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_enable_reg_pp0_iter0))) begin
+        grp_fu_191_p0 = i_1_phi_fu_172_p4;
+    end else begin
+        grp_fu_191_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_pp0_stage1) & (1'b1 == ap_enable_reg_pp0_iter4))) begin
+        grp_fu_191_p1 = {{tmp_10_fu_289_p2[ap_const_lv32_27 : ap_const_lv32_8]}};
+    end else if ((((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_enable_reg_pp0_iter0)) | ((1'b1 == ap_CS_fsm_pp1_stage0) & (1'b1 == ap_enable_reg_pp1_iter0)))) begin
+        grp_fu_191_p1 = ap_const_lv3_1;
+    end else begin
+        grp_fu_191_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_enable_reg_pp0_iter1) & (exitcond_reg_366 == 1'b0))) begin
+        i_1_phi_fu_172_p4 = i_3_reg_202;
+    end else begin
+        i_1_phi_fu_172_p4 = i_1_reg_168;
+    end
+end
+
+always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if ((~(ap_start == 1'b0) & ~(1'b0 == tmp_fu_191_p2))) begin
+            if ((~(ap_start == 1'b0) & ~(1'b0 == tmp_fu_236_p2))) begin
                 ap_NS_fsm = ap_ST_fsm_pp1_stage0;
-            end else if ((~(ap_start == 1'b0) & (1'b0 == tmp_fu_191_p2))) begin
+            end else if ((~(ap_start == 1'b0) & (1'b0 == tmp_fu_236_p2))) begin
                 ap_NS_fsm = ap_ST_fsm_pp0_stage0;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end
         end
         ap_ST_fsm_pp0_stage0 : begin
-            if ((~((1'b1 == ap_enable_reg_pp0_iter8) & ~(1'b1 == ap_enable_reg_pp0_iter7)) & ~((1'b1 == ap_enable_reg_pp0_iter0) & ~(1'b0 == exitcond_fu_201_p2) & ~(1'b1 == ap_enable_reg_pp0_iter1)))) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage0;
-            end else if (((1'b1 == ap_enable_reg_pp0_iter0) & ~(1'b0 == exitcond_fu_201_p2) & ~(1'b1 == ap_enable_reg_pp0_iter1))) begin
-                ap_NS_fsm = ap_ST_fsm_state11;
+            if (~((1'b1 == ap_enable_reg_pp0_iter0) & ~(1'b0 == exitcond_fu_246_p2) & ~(1'b1 == ap_enable_reg_pp0_iter1))) begin
+                ap_NS_fsm = ap_ST_fsm_pp0_stage1;
             end else begin
-                ap_NS_fsm = ap_ST_fsm_state11;
+                ap_NS_fsm = ap_ST_fsm_state12;
             end
         end
-        ap_ST_fsm_state11 : begin
-            ap_NS_fsm = ap_ST_fsm_state14;
+        ap_ST_fsm_pp0_stage1 : begin
+            if (~((1'b1 == ap_CS_fsm_pp0_stage1) & (1'b1 == ap_enable_reg_pp0_iter4) & ~(1'b1 == ap_enable_reg_pp0_iter3))) begin
+                ap_NS_fsm = ap_ST_fsm_pp0_stage0;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state12;
+            end
+        end
+        ap_ST_fsm_state12 : begin
+            ap_NS_fsm = ap_ST_fsm_state15;
         end
         ap_ST_fsm_pp1_stage0 : begin
-            if (~((1'b1 == ap_enable_reg_pp1_iter0) & ~(1'b0 == exitcond1_fu_276_p2))) begin
+            if (~((1'b1 == ap_enable_reg_pp1_iter0) & ~(1'b0 == exitcond1_fu_306_p2))) begin
                 ap_NS_fsm = ap_ST_fsm_pp1_stage0;
             end else begin
-                ap_NS_fsm = ap_ST_fsm_state11;
+                ap_NS_fsm = ap_ST_fsm_state12;
             end
-        end
-        ap_ST_fsm_state14 : begin
-            ap_NS_fsm = ap_ST_fsm_state15;
         end
         ap_ST_fsm_state15 : begin
             ap_NS_fsm = ap_ST_fsm_state16;
@@ -623,6 +619,9 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state18;
         end
         ap_ST_fsm_state18 : begin
+            ap_NS_fsm = ap_ST_fsm_state19;
+        end
+        ap_ST_fsm_state19 : begin
             ap_NS_fsm = ap_ST_fsm_state1;
         end
         default : begin
@@ -633,13 +632,13 @@ end
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[ap_const_lv32_1];
 
-assign ap_CS_fsm_pp1_stage0 = ap_CS_fsm[ap_const_lv32_3];
+assign ap_CS_fsm_pp0_stage1 = ap_CS_fsm[ap_const_lv32_2];
+
+assign ap_CS_fsm_pp1_stage0 = ap_CS_fsm[ap_const_lv32_4];
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[ap_const_lv32_0];
 
-assign ap_CS_fsm_state11 = ap_CS_fsm[ap_const_lv32_2];
-
-assign ap_CS_fsm_state14 = ap_CS_fsm[ap_const_lv32_4];
+assign ap_CS_fsm_state12 = ap_CS_fsm[ap_const_lv32_3];
 
 assign ap_CS_fsm_state15 = ap_CS_fsm[ap_const_lv32_5];
 
@@ -649,48 +648,44 @@ assign ap_CS_fsm_state17 = ap_CS_fsm[ap_const_lv32_7];
 
 assign ap_CS_fsm_state18 = ap_CS_fsm[ap_const_lv32_8];
 
-assign dlti_addr_4_reg_410 = ap_const_lv64_2;
+assign ap_CS_fsm_state19 = ap_CS_fsm[ap_const_lv32_9];
 
-assign dlti_addr_5_reg_415 = ap_const_lv64_1;
+assign dlti_addr_4_reg_424 = ap_const_lv64_2;
 
-assign dlti_d0 = reg_184;
+assign dlti_addr_5_reg_429 = ap_const_lv64_1;
 
-assign exitcond1_fu_276_p2 = ((i_reg_173 == ap_const_lv3_6) ? 1'b1 : 1'b0);
+assign dlti_d0 = reg_229;
 
-assign exitcond_fu_201_p2 = ((i_1_reg_162 == ap_const_lv3_6) ? 1'b1 : 1'b0);
+assign exitcond1_fu_306_p2 = ((i_reg_180 == ap_const_lv3_6) ? 1'b1 : 1'b0);
 
-assign grp_fu_223_p0 = tmp_1_reg_337;
+assign exitcond_fu_246_p2 = ((i_1_phi_fu_172_p4 == ap_const_lv3_6) ? 1'b1 : 1'b0);
 
-assign i_2_fu_282_p2 = (i_reg_173 + ap_const_lv3_1);
+assign grp_fu_191_p2 = (grp_fu_191_p0 + grp_fu_191_p1);
 
-assign i_3_fu_207_p2 = (i_1_reg_162 + ap_const_lv3_1);
+assign grp_fu_218_p0 = tmp_1_reg_361;
 
-assign p_shl1_fu_246_p3 = {{bli_load_1_reg_372}, {ap_const_lv8_0}};
+assign p_shl1_fu_282_p3 = {{bli_load_1_reg_391}, {ap_const_lv8_0}};
 
-assign p_shl_fu_297_p3 = {{bli_q0}, {ap_const_lv8_0}};
+assign p_shl_fu_321_p3 = {{bli_q0}, {ap_const_lv8_0}};
 
-assign tmp_10_cast_fu_243_p1 = $signed(bli_load_1_reg_372);
+assign tmp_10_cast_fu_279_p1 = $signed(bli_load_1_reg_391);
 
-assign tmp_10_fu_253_p2 = ($signed(p_shl1_fu_246_p3) - $signed(tmp_10_cast_fu_243_p1));
+assign tmp_10_fu_289_p2 = ($signed(p_shl1_fu_282_p3) - $signed(tmp_10_cast_fu_279_p1));
 
-assign tmp_11_fu_269_p2 = (wd2_cast_cast_cast_fu_235_p3 + wd3_fu_259_p4);
+assign tmp_1_fu_242_p1 = $signed(dlt);
 
-assign tmp_1_fu_197_p1 = $signed(dlt);
+assign tmp_2_fu_312_p1 = i_reg_180;
 
-assign tmp_2_fu_288_p1 = i_reg_173;
+assign tmp_3_cast_fu_317_p1 = $signed(bli_q0);
 
-assign tmp_3_cast_fu_293_p1 = $signed(bli_q0);
+assign tmp_4_fu_329_p2 = ($signed(p_shl_fu_321_p3) - $signed(tmp_3_cast_fu_317_p1));
 
-assign tmp_4_fu_305_p2 = ($signed(p_shl_fu_297_p3) - $signed(tmp_3_cast_fu_293_p1));
+assign tmp_7_fu_263_p3 = tmp_s_reg_386[ap_const_lv32_3F];
 
-assign tmp_7_fu_228_p3 = tmp_s_reg_367[ap_const_lv32_3F];
+assign tmp_8_fu_252_p1 = i_1_reg_168;
 
-assign tmp_8_fu_213_p1 = i_1_reg_162;
+assign tmp_fu_236_p2 = ((dlt == ap_const_lv32_0) ? 1'b1 : 1'b0);
 
-assign tmp_fu_191_p2 = ((dlt == ap_const_lv32_0) ? 1'b1 : 1'b0);
-
-assign wd2_cast_cast_cast_fu_235_p3 = ((tmp_7_fu_228_p3[0:0] === 1'b1) ? ap_const_lv32_FFFFFF80 : ap_const_lv32_80);
-
-assign wd3_fu_259_p4 = {{tmp_10_fu_253_p2[ap_const_lv32_27 : ap_const_lv32_8]}};
+assign wd2_cast_cast_fu_270_p3 = ((tmp_7_fu_263_p3[0:0] === 1'b1) ? ap_const_lv32_FFFFFF80 : ap_const_lv32_80);
 
 endmodule //upzero

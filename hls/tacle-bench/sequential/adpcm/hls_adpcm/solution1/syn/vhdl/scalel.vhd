@@ -47,19 +47,20 @@ architecture behav of scalel is
     signal ilb_table_address0 : STD_LOGIC_VECTOR (4 downto 0);
     signal ilb_table_ce0 : STD_LOGIC;
     signal ilb_table_q0 : STD_LOGIC_VECTOR (11 downto 0);
-    signal tmp_reg_120 : STD_LOGIC_VECTOR (3 downto 0);
+    signal tmp_reg_124 : STD_LOGIC_VECTOR (3 downto 0);
     signal tmp_s_fu_74_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_CS_fsm_state2 : STD_LOGIC_VECTOR (0 downto 0);
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
     signal wd1_fu_54_p4 : STD_LOGIC_VECTOR (4 downto 0);
-    signal tmp_12_fu_82_p1 : STD_LOGIC_VECTOR (3 downto 0);
-    signal tmp_26_fu_86_p2 : STD_LOGIC_VECTOR (3 downto 0);
-    signal tmp_37_cast_cast_fu_92_p1 : STD_LOGIC_VECTOR (4 downto 0);
-    signal wd2_cast_cast_fu_79_p1 : STD_LOGIC_VECTOR (4 downto 0);
-    signal tmp_27_fu_96_p2 : STD_LOGIC_VECTOR (4 downto 0);
-    signal tmp_38_cast_fu_102_p1 : STD_LOGIC_VECTOR (11 downto 0);
-    signal wd3_fu_106_p2 : STD_LOGIC_VECTOR (11 downto 0);
-    signal tmp_28_fu_112_p3 : STD_LOGIC_VECTOR (14 downto 0);
+    signal tmp_11_fu_86_p1 : STD_LOGIC_VECTOR (3 downto 0);
+    signal tmp_27_fu_90_p2 : STD_LOGIC_VECTOR (3 downto 0);
+    signal tmp_37_cast_fu_96_p1 : STD_LOGIC_VECTOR (21 downto 0);
+    signal wd2_cast_fu_79_p1 : STD_LOGIC_VECTOR (21 downto 0);
+    signal ilb_table_load_cast_fu_82_p1 : STD_LOGIC_VECTOR (21 downto 0);
+    signal tmp_28_fu_100_p2 : STD_LOGIC_VECTOR (21 downto 0);
+    signal wd3_fu_106_p2 : STD_LOGIC_VECTOR (21 downto 0);
+    signal tmp_12_fu_112_p1 : STD_LOGIC_VECTOR (11 downto 0);
+    signal tmp_29_fu_116_p3 : STD_LOGIC_VECTOR (14 downto 0);
     signal ap_return_preg : STD_LOGIC_VECTOR (14 downto 0) := "000000000000000";
     signal ap_NS_fsm : STD_LOGIC_VECTOR (1 downto 0);
 
@@ -125,7 +126,7 @@ begin
                 ap_return_preg(14) <= '0';
             else
                 if (((ap_const_lv1_1 = ap_CS_fsm_state2))) then 
-                                        ap_return_preg(14 downto 3) <= tmp_28_fu_112_p3(14 downto 3);
+                                        ap_return_preg(14 downto 3) <= tmp_29_fu_116_p3(14 downto 3);
                 end if; 
             end if;
         end if;
@@ -135,7 +136,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_CS_fsm_state1 = ap_const_lv1_1) and not((ap_start = ap_const_logic_0)))) then
-                tmp_reg_120 <= nbl(14 downto 11);
+                tmp_reg_124 <= nbl(14 downto 11);
             end if;
         end if;
     end process;
@@ -189,10 +190,10 @@ begin
     end process;
 
 
-    ap_return_assign_proc : process(ap_CS_fsm_state2, tmp_28_fu_112_p3, ap_return_preg)
+    ap_return_assign_proc : process(ap_CS_fsm_state2, tmp_29_fu_116_p3, ap_return_preg)
     begin
         if (((ap_const_lv1_1 = ap_CS_fsm_state2))) then 
-            ap_return <= tmp_28_fu_112_p3;
+            ap_return <= tmp_29_fu_116_p3;
         else 
             ap_return <= ap_return_preg;
         end if; 
@@ -209,15 +210,15 @@ begin
         end if; 
     end process;
 
-    tmp_12_fu_82_p1 <= shift_constant(4 - 1 downto 0);
-    tmp_26_fu_86_p2 <= std_logic_vector(unsigned(ap_const_lv4_1) + unsigned(tmp_12_fu_82_p1));
-    tmp_27_fu_96_p2 <= std_logic_vector(unsigned(tmp_37_cast_cast_fu_92_p1) - unsigned(wd2_cast_cast_fu_79_p1));
-    tmp_28_fu_112_p3 <= (wd3_fu_106_p2 & ap_const_lv3_0);
-    tmp_37_cast_cast_fu_92_p1 <= std_logic_vector(resize(unsigned(tmp_26_fu_86_p2),5));
-        tmp_38_cast_fu_102_p1 <= std_logic_vector(resize(signed(tmp_27_fu_96_p2),12));
-
+    ilb_table_load_cast_fu_82_p1 <= std_logic_vector(resize(unsigned(ilb_table_q0),22));
+    tmp_11_fu_86_p1 <= shift_constant(4 - 1 downto 0);
+    tmp_12_fu_112_p1 <= wd3_fu_106_p2(12 - 1 downto 0);
+    tmp_27_fu_90_p2 <= std_logic_vector(unsigned(ap_const_lv4_1) + unsigned(tmp_11_fu_86_p1));
+    tmp_28_fu_100_p2 <= std_logic_vector(unsigned(tmp_37_cast_fu_96_p1) - unsigned(wd2_cast_fu_79_p1));
+    tmp_29_fu_116_p3 <= (tmp_12_fu_112_p1 & ap_const_lv3_0);
+    tmp_37_cast_fu_96_p1 <= std_logic_vector(resize(unsigned(tmp_27_fu_90_p2),22));
     tmp_s_fu_74_p1 <= std_logic_vector(resize(unsigned(wd1_fu_54_p4),64));
     wd1_fu_54_p4 <= nbl(10 downto 6);
-    wd2_cast_cast_fu_79_p1 <= std_logic_vector(resize(unsigned(tmp_reg_120),5));
-    wd3_fu_106_p2 <= std_logic_vector(shift_right(unsigned(ilb_table_q0),to_integer(unsigned('0' & tmp_38_cast_fu_102_p1(12-1 downto 0)))));
+    wd2_cast_fu_79_p1 <= std_logic_vector(resize(unsigned(tmp_reg_124),22));
+    wd3_fu_106_p2 <= std_logic_vector(shift_right(unsigned(ilb_table_load_cast_fu_82_p1),to_integer(unsigned('0' & tmp_28_fu_100_p2(22-1 downto 0)))));
 end behav;

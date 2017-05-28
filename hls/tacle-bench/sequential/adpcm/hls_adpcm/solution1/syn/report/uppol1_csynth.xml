@@ -33,7 +33,7 @@
 <Resources>
 <DSP48E>4</DSP48E>
 <FF>120</FF>
-<LUT>188</LUT>
+<LUT>204</LUT>
 <BRAM_18K>0</BRAM_18K>
 </Resources>
 <AvailableResources>
@@ -119,7 +119,7 @@
 <IOProtocol>ap_ctrl_hs</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>16</Bits>
+<Bits>32</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>

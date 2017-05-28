@@ -11,7 +11,7 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "logsch_wh_code_taeOg.h"
+#include "adpcm_main_mux_42eOg.h"
 
 namespace ap_rtl {
 
@@ -26,6 +26,8 @@ struct logsch : public sc_module {
     sc_in< sc_lv<32> > ih;
     sc_in< sc_lv<32> > nbh;
     sc_out< sc_lv<15> > ap_return;
+    sc_signal< sc_lv<32> > ap_var_for_const0;
+    sc_signal< sc_lv<32> > ap_var_for_const1;
 
 
     // Module declarations
@@ -36,71 +38,65 @@ struct logsch : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    logsch_wh_code_taeOg* wh_code_table_U;
-    sc_signal< sc_lv<3> > ap_CS_fsm;
+    adpcm_main_mux_42eOg<1,1,32,32,32,32,2,32>* adpcm_main_mux_42eOg_U30;
+    sc_signal< sc_lv<2> > ap_CS_fsm;
     sc_signal< sc_lv<1> > ap_CS_fsm_state1;
-    sc_signal< sc_lv<2> > wh_code_table_address0;
-    sc_signal< sc_logic > wh_code_table_ce0;
-    sc_signal< sc_lv<11> > wh_code_table_q0;
-    sc_signal< sc_lv<31> > nbh_assign_cast_fu_115_p2;
-    sc_signal< sc_lv<31> > nbh_assign_cast_reg_158;
+    sc_signal< sc_lv<31> > nbh_assign_cast_fu_122_p2;
+    sc_signal< sc_lv<31> > nbh_assign_cast_reg_160;
+    sc_signal< sc_lv<1> > tmp_18_reg_165;
+    sc_signal< sc_lv<39> > p_shl_fu_60_p3;
+    sc_signal< sc_lv<39> > tmp_cast2_fu_56_p1;
+    sc_signal< sc_lv<39> > tmp_s_fu_68_p2;
+    sc_signal< sc_lv<2> > tmp_fu_88_p5;
+    sc_signal< sc_lv<32> > tmp_fu_88_p6;
+    sc_signal< sc_lv<32> > wd_fu_74_p4;
+    sc_signal< sc_lv<31> > tmp_17_fu_112_p1;
+    sc_signal< sc_lv<31> > tmp_4_fu_102_p4;
+    sc_signal< sc_lv<32> > nbh_assign_fu_116_p2;
     sc_signal< sc_lv<1> > ap_CS_fsm_state2;
-    sc_signal< sc_lv<1> > tmp_15_reg_163;
-    sc_signal< sc_lv<64> > tmp_38_fu_58_p1;
-    sc_signal< sc_lv<39> > p_shl_fu_67_p3;
-    sc_signal< sc_lv<39> > tmp_cast2_fu_63_p1;
-    sc_signal< sc_lv<39> > tmp_s_fu_75_p2;
-    sc_signal< sc_lv<32> > wd_fu_81_p4;
-    sc_signal< sc_lv<32> > wh_code_table_load_c_fu_91_p1;
-    sc_signal< sc_lv<31> > tmp_5_fu_99_p4;
-    sc_signal< sc_lv<31> > tmp_fu_95_p1;
-    sc_signal< sc_lv<32> > nbh_assign_fu_109_p2;
-    sc_signal< sc_lv<1> > ap_CS_fsm_state3;
-    sc_signal< sc_lv<31> > p_s_fu_129_p3;
-    sc_signal< sc_lv<1> > tmp_39_fu_139_p2;
-    sc_signal< sc_lv<15> > tmp_16_fu_135_p1;
-    sc_signal< sc_lv<3> > ap_NS_fsm;
+    sc_signal< sc_lv<31> > p_s_fu_136_p3;
+    sc_signal< sc_lv<1> > tmp_38_fu_146_p2;
+    sc_signal< sc_lv<15> > tmp_19_fu_142_p1;
+    sc_signal< sc_lv<2> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
-    static const sc_lv<3> ap_ST_fsm_state1;
-    static const sc_lv<3> ap_ST_fsm_state2;
-    static const sc_lv<3> ap_ST_fsm_state3;
+    static const sc_lv<2> ap_ST_fsm_state1;
+    static const sc_lv<2> ap_ST_fsm_state2;
     static const sc_lv<32> ap_const_lv32_0;
     static const sc_lv<1> ap_const_lv1_1;
-    static const sc_lv<32> ap_const_lv32_1;
     static const sc_lv<7> ap_const_lv7_0;
     static const sc_lv<32> ap_const_lv32_7;
     static const sc_lv<32> ap_const_lv32_26;
+    static const sc_lv<32> ap_const_lv32_31E;
+    static const sc_lv<32> ap_const_lv32_FFFFFF2A;
     static const sc_lv<32> ap_const_lv32_25;
     static const sc_lv<32> ap_const_lv32_1F;
     static const sc_lv<31> ap_const_lv31_0;
-    static const sc_lv<32> ap_const_lv32_2;
+    static const sc_lv<32> ap_const_lv32_1;
     static const sc_lv<31> ap_const_lv31_5800;
     static const sc_lv<15> ap_const_lv15_5800;
     // Thread declarations
+    void thread_ap_var_for_const0();
+    void thread_ap_var_for_const1();
     void thread_ap_clk_no_reset_();
     void thread_ap_CS_fsm_state1();
     void thread_ap_CS_fsm_state2();
-    void thread_ap_CS_fsm_state3();
     void thread_ap_done();
     void thread_ap_idle();
     void thread_ap_ready();
     void thread_ap_return();
-    void thread_nbh_assign_cast_fu_115_p2();
-    void thread_nbh_assign_fu_109_p2();
-    void thread_p_s_fu_129_p3();
-    void thread_p_shl_fu_67_p3();
-    void thread_tmp_16_fu_135_p1();
-    void thread_tmp_38_fu_58_p1();
-    void thread_tmp_39_fu_139_p2();
-    void thread_tmp_5_fu_99_p4();
-    void thread_tmp_cast2_fu_63_p1();
-    void thread_tmp_fu_95_p1();
-    void thread_tmp_s_fu_75_p2();
-    void thread_wd_fu_81_p4();
-    void thread_wh_code_table_address0();
-    void thread_wh_code_table_ce0();
-    void thread_wh_code_table_load_c_fu_91_p1();
+    void thread_nbh_assign_cast_fu_122_p2();
+    void thread_nbh_assign_fu_116_p2();
+    void thread_p_s_fu_136_p3();
+    void thread_p_shl_fu_60_p3();
+    void thread_tmp_17_fu_112_p1();
+    void thread_tmp_19_fu_142_p1();
+    void thread_tmp_38_fu_146_p2();
+    void thread_tmp_4_fu_102_p4();
+    void thread_tmp_cast2_fu_56_p1();
+    void thread_tmp_fu_88_p5();
+    void thread_tmp_s_fu_68_p2();
+    void thread_wd_fu_74_p4();
     void thread_ap_NS_fsm();
 };
 

@@ -153,6 +153,8 @@ const int wh_code_table[4] = {
 int encode(int xin1, int xin2)
 {
 #pragma HLS INLINE
+#pragma HLS ALLOCATION instances=mul limit=1 operation
+#pragma HLS ALLOCATION instances=add limit=1 operation
 
 	int i;
 	const int *h_ptr;
@@ -178,7 +180,7 @@ int encode(int xin1, int xin2)
 	/* update delay line tqmf */
 	tqmf_ptr1 = tqmf_ptr - 2;
 	for (i = 0; i < 22; i++){
-	#pragma HLS PIPELINE
+	#pragma HLS PIPELINE rewind
 		*tqmf_ptr-- = *tqmf_ptr1--;
 	}
 	*tqmf_ptr-- = xin1;
@@ -306,6 +308,9 @@ int encode(int xin1, int xin2)
 void decode(int input)
 {
 #pragma HLS INLINE
+#pragma HLS ALLOCATION instances=mul limit=1 operation
+#pragma HLS ALLOCATION instances=add limit=1 operation
+
 
 	int i;
 	long int xa1, xa2;    /* qmf accumulators */
@@ -417,7 +422,7 @@ void decode(int input)
 	xa2 = (long) xs *(*h_ptr++);
 	/* main multiply accumulate loop for samples and coefficients */
 	for (i = 0; i < 10; i++) {
-	#pragma HLS PIPELINE
+	#pragma HLS PIPELINE rewind
 		xa1 += (long) (*ac_ptr++) * (*h_ptr++);
 		xa2 += (long) (*ad_ptr++) * (*h_ptr++);
 	}
@@ -433,7 +438,7 @@ void decode(int input)
 	ac_ptr1 = ac_ptr - 1;
 	ad_ptr1 = ad_ptr - 1;
 	for (i = 0; i < 10; i++) {
-	#pragma HLS PIPELINE
+	#pragma HLS PIPELINE rewind
 		*ac_ptr-- = *ac_ptr1--;
 		*ad_ptr-- = *ad_ptr1--;
 	}
@@ -446,14 +451,19 @@ void decode(int input)
 
 int filtez(int *bpl, int *dlt)
 {
+#pragma HLS ALLOCATION instances=mul limit=1 operation
+#pragma HLS ALLOCATION instances=add limit=1 operation
+
 #pragma HLS INLINE off
 
 	int i;
+	int temp;
 	long int zl;
 	zl = (long) (*bpl++) * (*dlt++);
 	for (i = 1; i < 6; i++){
-	#pragma HLS PIPELINE
-		zl += (long) (*bpl++) * (*dlt++);
+	#pragma HLS PIPELINE rewind
+		temp = (*bpl++) * (*dlt++);
+		zl += (long) temp;
 	}
 
 	return ((int) (zl >> 14));  /* x2 here */
@@ -465,6 +475,8 @@ int filtez(int *bpl, int *dlt)
 int filtep(int rlt1, int al1, int rlt2, int al2)
 {
 #pragma HLS INLINE off
+#pragma HLS ALLOCATION instances=mul limit=1 operation
+#pragma HLS ALLOCATION instances=add limit=1 operation
 
 	long int pl, pl2;
 	pl = 2 * rlt1;
@@ -478,6 +490,8 @@ int filtep(int rlt1, int al1, int rlt2, int al2)
 int quantl(int el, int detl)
 {
 #pragma HLS INLINE off
+#pragma HLS ALLOCATION instances=mul limit=1 operation
+#pragma HLS ALLOCATION instances=add limit=1 operation
 
 	int ril, mil;
 	long int wd, decis;
@@ -486,7 +500,7 @@ int quantl(int el, int detl)
 	wd = adpcm_abs(el);
 	/* determine mil based on decision levels and detl gain */
 	for (mil = 0; mil < 30; mil++) {
-	#pragma HLS PIPELINE
+	#pragma HLS PIPELINE rewind
 		decis = (decis_levl[mil] * (long) detl) >> 15L;
 		if (wd <= decis)
 			break;
@@ -505,6 +519,7 @@ int quantl(int el, int detl)
 int logscl(int il, int nbl)
 {
 #pragma HLS INLINE off
+#pragma HLS ALLOCATION instances=mul limit=1 operation
 
 	long int wd;
 	wd = ((long) nbl * 127L) >> 7L; /* leak factor 127/128 */
@@ -535,6 +550,8 @@ int scalel(int nbl, int shift_constant)
 void upzero(int dlt, int *dlti, int *bli)
 {
 #pragma HLS INLINE off
+#pragma HLS ALLOCATION instances=mul limit=1 operation
+#pragma HLS ALLOCATION instances=add limit=1 operation
 
 	int i, wd2, wd3;
 	/*if dlt is zero, then no sum into bli */
@@ -569,6 +586,8 @@ void upzero(int dlt, int *dlti, int *bli)
 int uppol2(int al1, int al2, int plt, int plt1, int plt2)
 {
 #pragma HLS INLINE off
+#pragma HLS ALLOCATION instances=mul limit=1 operation
+#pragma HLS ALLOCATION instances=add limit=1 operation
 
 	long int wd2, wd4;
 	int apl2;
@@ -597,6 +616,8 @@ int uppol2(int al1, int al2, int plt, int plt1, int plt2)
 int uppol1(int al1, int apl2, int plt, int plt1)
 {
 #pragma HLS INLINE off
+#pragma HLS ALLOCATION instances=mul limit=1 operation
+#pragma HLS ALLOCATION instances=add limit=1 operation
 
 	long int wd2;
 	int wd3, apl1;
@@ -621,6 +642,7 @@ int uppol1(int al1, int apl2, int plt, int plt1)
 int logsch(int ih, int nbh)
 {
 #pragma HLS INLINE off
+#pragma HLS ALLOCATION instances=mul limit=1 operation
 
 	int wd;
 	wd = ((long) nbh * 127L) >> 7L; /* leak factor 127/128 */
@@ -634,7 +656,7 @@ int logsch(int ih, int nbh)
 
 void adpcm_enc_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE], int size)
 {
-#pragma HLS DATAFLOW
+//#pragma HLS DATAFLOW
 #pragma HLS INLINE
 
 	int i;
@@ -648,7 +670,7 @@ void adpcm_enc_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE], int size)
 
 void adpcm_dec_main(int compressed[MAX_SIZE], int dec_result[MAX_SIZE], int size)
 {
-#pragma HLS DATAFLOW
+//#pragma HLS DATAFLOW
 #pragma HLS INLINE
 
 	int i;
@@ -684,8 +706,6 @@ void adpcm_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE],
 #pragma HLS ALLOCATION instances=uppol1 limit=1 function
 #pragma HLS ALLOCATION instances=uppol2 limit=1 function
 #pragma HLS ALLOCATION instances=logsch limit=1 function
-
-#pragma HLS ALLOCATION instances=DSP48 limit=10 core
 
 #pragma HLS INTERFACE ap_none port=size
 #pragma HLS INTERFACE ap_none port=select

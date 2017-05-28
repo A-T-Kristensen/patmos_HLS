@@ -21,17 +21,19 @@ module filtep (
         ap_return
 );
 
-parameter    ap_ST_fsm_state1 = 7'b1;
-parameter    ap_ST_fsm_state2 = 7'b10;
-parameter    ap_ST_fsm_state3 = 7'b100;
-parameter    ap_ST_fsm_state4 = 7'b1000;
-parameter    ap_ST_fsm_state5 = 7'b10000;
-parameter    ap_ST_fsm_state6 = 7'b100000;
-parameter    ap_ST_fsm_state7 = 7'b1000000;
+parameter    ap_ST_fsm_state1 = 8'b1;
+parameter    ap_ST_fsm_state2 = 8'b10;
+parameter    ap_ST_fsm_state3 = 8'b100;
+parameter    ap_ST_fsm_state4 = 8'b1000;
+parameter    ap_ST_fsm_state5 = 8'b10000;
+parameter    ap_ST_fsm_state6 = 8'b100000;
+parameter    ap_ST_fsm_state7 = 8'b1000000;
+parameter    ap_ST_fsm_state8 = 8'b10000000;
 parameter    ap_const_lv32_0 = 32'b00000000000000000000000000000000;
-parameter    ap_const_lv32_5 = 32'b101;
 parameter    ap_const_lv32_1 = 32'b1;
+parameter    ap_const_lv32_5 = 32'b101;
 parameter    ap_const_lv32_6 = 32'b110;
+parameter    ap_const_lv32_7 = 32'b111;
 parameter    ap_const_lv32_F = 32'b1111;
 parameter    ap_const_lv32_2E = 32'b101110;
 
@@ -50,23 +52,31 @@ output  [31:0] ap_return;
 reg ap_done;
 reg ap_idle;
 reg ap_ready;
+reg[31:0] ap_return;
 
-(* fsm_encoding = "none" *) reg   [6:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [7:0] ap_CS_fsm;
 wire   [0:0] ap_CS_fsm_state1;
-wire   [46:0] grp_fu_56_p2;
-reg   [46:0] pl_reg_116;
+wire  signed [46:0] pl_cast_fu_80_p1;
+wire  signed [46:0] tmp_cast_fu_85_p1;
+wire  signed [46:0] pl2_cast_fu_96_p1;
+wire   [0:0] ap_CS_fsm_state2;
+wire  signed [46:0] tmp_57_cast_fu_101_p1;
+wire   [46:0] grp_fu_60_p2;
+reg   [46:0] pl_reg_136;
 wire   [0:0] ap_CS_fsm_state6;
-wire   [46:0] grp_fu_76_p2;
-reg   [46:0] tmp_s_reg_121;
-wire  signed [31:0] tmp_fu_42_p2;
-wire  signed [31:0] tmp_17_fu_62_p2;
+reg   [46:0] tmp_s_reg_141;
 wire   [0:0] ap_CS_fsm_state7;
-wire   [46:0] pl_1_fu_82_p2;
-reg   [6:0] ap_NS_fsm;
+wire   [0:0] ap_CS_fsm_state8;
+reg  signed [31:0] grp_fu_60_p0;
+reg  signed [31:0] grp_fu_60_p1;
+wire   [31:0] tmp_fu_74_p2;
+wire   [31:0] tmp_20_fu_90_p2;
+wire   [46:0] pl_1_fu_50_p2;
+reg   [7:0] ap_NS_fsm;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 7'b1;
+#0 ap_CS_fsm = 8'b1;
 end
 
 adpcm_main_mul_32cud #(
@@ -75,28 +85,13 @@ adpcm_main_mul_32cud #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 47 ))
-adpcm_main_mul_32cud_U5(
+adpcm_main_mul_32cud_U4(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(tmp_fu_42_p2),
-    .din1(al1),
+    .din0(grp_fu_60_p0),
+    .din1(grp_fu_60_p1),
     .ce(1'b1),
-    .dout(grp_fu_56_p2)
-);
-
-adpcm_main_mul_32cud #(
-    .ID( 1 ),
-    .NUM_STAGE( 6 ),
-    .din0_WIDTH( 32 ),
-    .din1_WIDTH( 32 ),
-    .dout_WIDTH( 47 ))
-adpcm_main_mul_32cud_U6(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .din0(tmp_17_fu_62_p2),
-    .din1(al2),
-    .ce(1'b1),
-    .dout(grp_fu_76_p2)
+    .dout(grp_fu_60_p2)
 );
 
 always @ (posedge ap_clk) begin
@@ -108,14 +103,25 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        ap_return <= {{pl_1_fu_50_p2[ap_const_lv32_2E : ap_const_lv32_F]}};
+    end
+end
+
+always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state6)) begin
-        pl_reg_116 <= grp_fu_56_p2;
-        tmp_s_reg_121 <= grp_fu_76_p2;
+        pl_reg_136 <= grp_fu_60_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state7)) begin
+        tmp_s_reg_141 <= grp_fu_60_p2;
     end
 end
 
 always @ (*) begin
-    if ((((1'b0 == ap_start) & (ap_CS_fsm_state1 == 1'b1)) | (1'b1 == ap_CS_fsm_state7))) begin
+    if (((1'b0 == ap_start) & (ap_CS_fsm_state1 == 1'b1))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -131,10 +137,30 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state7)) begin
+    if ((1'b1 == ap_CS_fsm_state8)) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_60_p0 = pl2_cast_fu_96_p1;
+    end else if ((ap_CS_fsm_state1 == 1'b1)) begin
+        grp_fu_60_p0 = pl_cast_fu_80_p1;
+    end else begin
+        grp_fu_60_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_60_p1 = tmp_57_cast_fu_101_p1;
+    end else if ((ap_CS_fsm_state1 == 1'b1)) begin
+        grp_fu_60_p1 = tmp_cast_fu_85_p1;
+    end else begin
+        grp_fu_60_p1 = 'bx;
     end
 end
 
@@ -163,6 +189,9 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state7;
         end
         ap_ST_fsm_state7 : begin
+            ap_NS_fsm = ap_ST_fsm_state8;
+        end
+        ap_ST_fsm_state8 : begin
             ap_NS_fsm = ap_ST_fsm_state1;
         end
         default : begin
@@ -173,16 +202,26 @@ end
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[ap_const_lv32_0];
 
+assign ap_CS_fsm_state2 = ap_CS_fsm[ap_const_lv32_1];
+
 assign ap_CS_fsm_state6 = ap_CS_fsm[ap_const_lv32_5];
 
 assign ap_CS_fsm_state7 = ap_CS_fsm[ap_const_lv32_6];
 
-assign ap_return = {{pl_1_fu_82_p2[ap_const_lv32_2E : ap_const_lv32_F]}};
+assign ap_CS_fsm_state8 = ap_CS_fsm[ap_const_lv32_7];
 
-assign pl_1_fu_82_p2 = (pl_reg_116 + tmp_s_reg_121);
+assign pl2_cast_fu_96_p1 = $signed(tmp_20_fu_90_p2);
 
-assign tmp_17_fu_62_p2 = rlt2 << ap_const_lv32_1;
+assign pl_1_fu_50_p2 = (pl_reg_136 + tmp_s_reg_141);
 
-assign tmp_fu_42_p2 = rlt1 << ap_const_lv32_1;
+assign pl_cast_fu_80_p1 = $signed(tmp_fu_74_p2);
+
+assign tmp_20_fu_90_p2 = rlt2 << ap_const_lv32_1;
+
+assign tmp_57_cast_fu_101_p1 = $signed(al2);
+
+assign tmp_cast_fu_85_p1 = $signed(al1);
+
+assign tmp_fu_74_p2 = rlt1 << ap_const_lv32_1;
 
 endmodule //filtep

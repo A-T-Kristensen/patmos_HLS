@@ -14,18 +14,18 @@
 </UserAssignments>
 
 <PerformanceEstimates>
-<PipelineType>none</PipelineType>
+<PipelineType>loop rewind</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
 <EstimatedClockPeriod>9.61</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>12</Best-caseLatency>
-<Average-caseLatency>82</Average-caseLatency>
-<Worst-caseLatency>157</Worst-caseLatency>
-<Interval-min>12</Interval-min>
-<Interval-max>157</Interval-max>
+<Best-caseLatency>5</Best-caseLatency>
+<Average-caseLatency>75</Average-caseLatency>
+<Worst-caseLatency>151</Worst-caseLatency>
+<Interval-min>5</Interval-min>
+<Interval-max>150</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <Loop1>
@@ -37,12 +37,12 @@
 </TripCount>
 <Latency>
 <range>
-<min>9</min>
-<max>154</max>
+<min>5</min>
+<max>150</max>
 </range>
 </Latency>
 <PipelineII>5</PipelineII>
-<PipelineDepth>5</PipelineDepth>
+<PipelineDepth>6</PipelineDepth>
 </Loop1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
@@ -51,8 +51,8 @@
 <Resources>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>2</DSP48E>
-<FF>132</FF>
-<LUT>117</LUT>
+<FF>249</FF>
+<LUT>252</LUT>
 </Resources>
 <AvailableResources>
 <BRAM_18K>270</BRAM_18K>
