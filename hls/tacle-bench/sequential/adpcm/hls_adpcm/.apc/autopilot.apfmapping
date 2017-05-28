@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="adpcm.c" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/sequential/adpcm/adpcm.c"/>
-    <originFiles name="adpcm.h" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/sequential/adpcm/adpcm.h"/>
     <originFiles name="adpcm_lib.c" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/sequential/adpcm/adpcm_lib.c"/>
+    <originFiles name="adpcm.h" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/sequential/adpcm/adpcm.h"/>
+    <originFiles name="adpcm.c" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/sequential/adpcm/adpcm.c"/>
   </source>
   <testbench>
     <originFiles name="adpcm_test.c" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/sequential/adpcm/adpcm_test.c"/>

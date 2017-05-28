@@ -638,6 +638,8 @@ void adpcm_enc_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE], int size)
 #pragma HLS INLINE
 
 	int i;
+	detl = 32; /* reset to min scale factor */
+	deth = 8;
 
 	for (i = 0; i < size; i += 2) {
 		compressed[i / 2] = encode(test_data[i], test_data[i + 1]);
@@ -650,6 +652,9 @@ void adpcm_dec_main(int compressed[MAX_SIZE], int dec_result[MAX_SIZE], int size
 #pragma HLS INLINE
 
 	int i;
+
+	dec_detl = 32; /* reset to min scale factor */
+	dec_deth = 8;
 
 	for (i = 0 ; i < size; i += 2) {
 		decode(compressed[i / 2]);
