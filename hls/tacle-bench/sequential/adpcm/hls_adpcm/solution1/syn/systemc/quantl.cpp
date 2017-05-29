@@ -57,13 +57,13 @@ quantl::quantl(sc_module_name name) : sc_module(name), mVcdFile(0) {
     quant26bt_neg_U->address0(quant26bt_neg_address0);
     quant26bt_neg_U->ce0(quant26bt_neg_ce0);
     quant26bt_neg_U->q0(quant26bt_neg_q0);
-    adpcm_main_mul_32hbi_U33 = new adpcm_main_mul_32hbi<1,4,32,15,47>("adpcm_main_mul_32hbi_U33");
-    adpcm_main_mul_32hbi_U33->clk(ap_clk);
-    adpcm_main_mul_32hbi_U33->reset(ap_rst);
-    adpcm_main_mul_32hbi_U33->din0(grp_fu_136_p0);
-    adpcm_main_mul_32hbi_U33->din1(grp_fu_136_p1);
-    adpcm_main_mul_32hbi_U33->ce(ap_var_for_const0);
-    adpcm_main_mul_32hbi_U33->dout(grp_fu_136_p2);
+    adpcm_main_mul_32hbi_U76 = new adpcm_main_mul_32hbi<1,4,32,15,47>("adpcm_main_mul_32hbi_U76");
+    adpcm_main_mul_32hbi_U76->clk(ap_clk);
+    adpcm_main_mul_32hbi_U76->reset(ap_rst);
+    adpcm_main_mul_32hbi_U76->din0(grp_fu_136_p0);
+    adpcm_main_mul_32hbi_U76->din1(grp_fu_136_p1);
+    adpcm_main_mul_32hbi_U76->ce(ap_var_for_const0);
+    adpcm_main_mul_32hbi_U76->dout(grp_fu_136_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -106,7 +106,7 @@ quantl::quantl(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_decis_levl_address0);
     sensitive << ( ap_CS_fsm_state2 );
-    sensitive << ( tmp_31_fu_179_p1 );
+    sensitive << ( tmp_33_fu_179_p1 );
 
     SC_METHOD(thread_decis_levl_ce0);
     sensitive << ( ap_CS_fsm_state2 );
@@ -135,14 +135,14 @@ quantl::quantl(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_quant26bt_neg_address0);
     sensitive << ( ap_CS_fsm_state7 );
-    sensitive << ( tmp_34_fu_204_p1 );
+    sensitive << ( tmp_36_fu_204_p1 );
 
     SC_METHOD(thread_quant26bt_neg_ce0);
     sensitive << ( ap_CS_fsm_state7 );
 
     SC_METHOD(thread_quant26bt_pos_address0);
     sensitive << ( ap_CS_fsm_state7 );
-    sensitive << ( tmp_34_fu_204_p1 );
+    sensitive << ( tmp_36_fu_204_p1 );
 
     SC_METHOD(thread_quant26bt_pos_ce0);
     sensitive << ( ap_CS_fsm_state7 );
@@ -155,16 +155,16 @@ quantl::quantl(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_tmp_2_fu_189_p4);
     sensitive << ( grp_fu_136_p2 );
 
-    SC_METHOD(thread_tmp_31_fu_179_p1);
+    SC_METHOD(thread_tmp_33_fu_179_p1);
     sensitive << ( mil_reg_108 );
 
-    SC_METHOD(thread_tmp_33_fu_199_p2);
+    SC_METHOD(thread_tmp_35_fu_199_p2);
     sensitive << ( n_assign_reg_222 );
     sensitive << ( tmp_s_reg_232 );
     sensitive << ( ap_CS_fsm_state6 );
     sensitive << ( tmp_2_fu_189_p4 );
 
-    SC_METHOD(thread_tmp_34_fu_204_p1);
+    SC_METHOD(thread_tmp_36_fu_204_p1);
     sensitive << ( mil_reg_108 );
 
     SC_METHOD(thread_tmp_cast_fu_169_p1);
@@ -181,7 +181,7 @@ quantl::quantl(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm );
     sensitive << ( tmp_s_reg_232 );
-    sensitive << ( tmp_33_fu_199_p2 );
+    sensitive << ( tmp_35_fu_199_p2 );
 
     SC_THREAD(thread_ap_var_for_const0);
 
@@ -232,9 +232,9 @@ quantl::quantl(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, ap_CS_fsm_state7, "ap_CS_fsm_state7");
     sc_trace(mVcdFile, mil_reg_108, "mil_reg_108");
     sc_trace(mVcdFile, ap_CS_fsm_state6, "ap_CS_fsm_state6");
-    sc_trace(mVcdFile, tmp_33_fu_199_p2, "tmp_33_fu_199_p2");
-    sc_trace(mVcdFile, tmp_31_fu_179_p1, "tmp_31_fu_179_p1");
-    sc_trace(mVcdFile, tmp_34_fu_204_p1, "tmp_34_fu_204_p1");
+    sc_trace(mVcdFile, tmp_35_fu_199_p2, "tmp_35_fu_199_p2");
+    sc_trace(mVcdFile, tmp_33_fu_179_p1, "tmp_33_fu_179_p1");
+    sc_trace(mVcdFile, tmp_36_fu_204_p1, "tmp_36_fu_204_p1");
     sc_trace(mVcdFile, grp_fu_136_p0, "grp_fu_136_p0");
     sc_trace(mVcdFile, grp_fu_136_p1, "grp_fu_136_p1");
     sc_trace(mVcdFile, m_fu_155_p2, "m_fu_155_p2");
@@ -257,7 +257,7 @@ quantl::~quantl() {
     delete decis_levl_U;
     delete quant26bt_pos_U;
     delete quant26bt_neg_U;
-    delete adpcm_main_mul_32hbi_U33;
+    delete adpcm_main_mul_32hbi_U76;
 }
 
 void quantl::thread_ap_var_for_const0() {
@@ -279,7 +279,7 @@ void quantl::thread_ap_clk_no_reset_() {
     }
     if ((!esl_seteq<1,1,1>(tmp_s_reg_232.read(), ap_const_lv1_0) && 
          esl_seteq<1,1,1>(ap_const_lv1_1, ap_CS_fsm_state6.read()) && 
-         !esl_seteq<1,1,1>(ap_const_lv1_0, tmp_33_fu_199_p2.read()))) {
+         !esl_seteq<1,1,1>(ap_const_lv1_0, tmp_35_fu_199_p2.read()))) {
         mil_reg_108 = mil_1_reg_131.read();
     } else if ((esl_seteq<1,1,1>(ap_CS_fsm_state1.read(), ap_const_lv1_1) && 
                 !esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0))) {
@@ -356,7 +356,7 @@ void quantl::thread_ap_return() {
 }
 
 void quantl::thread_decis_levl_address0() {
-    decis_levl_address0 =  (sc_lv<5>) (tmp_31_fu_179_p1.read());
+    decis_levl_address0 =  (sc_lv<5>) (tmp_33_fu_179_p1.read());
 }
 
 void quantl::thread_decis_levl_ce0() {
@@ -392,7 +392,7 @@ void quantl::thread_n_assign_fu_161_p3() {
 }
 
 void quantl::thread_quant26bt_neg_address0() {
-    quant26bt_neg_address0 =  (sc_lv<5>) (tmp_34_fu_204_p1.read());
+    quant26bt_neg_address0 =  (sc_lv<5>) (tmp_36_fu_204_p1.read());
 }
 
 void quantl::thread_quant26bt_neg_ce0() {
@@ -404,7 +404,7 @@ void quantl::thread_quant26bt_neg_ce0() {
 }
 
 void quantl::thread_quant26bt_pos_address0() {
-    quant26bt_pos_address0 =  (sc_lv<5>) (tmp_34_fu_204_p1.read());
+    quant26bt_pos_address0 =  (sc_lv<5>) (tmp_36_fu_204_p1.read());
 }
 
 void quantl::thread_quant26bt_pos_ce0() {
@@ -423,16 +423,16 @@ void quantl::thread_tmp_2_fu_189_p4() {
     tmp_2_fu_189_p4 = grp_fu_136_p2.read().range(46, 15);
 }
 
-void quantl::thread_tmp_31_fu_179_p1() {
-    tmp_31_fu_179_p1 = esl_zext<64,5>(mil_reg_108.read());
+void quantl::thread_tmp_33_fu_179_p1() {
+    tmp_33_fu_179_p1 = esl_zext<64,5>(mil_reg_108.read());
 }
 
-void quantl::thread_tmp_33_fu_199_p2() {
-    tmp_33_fu_199_p2 = (!n_assign_reg_222.read().is_01() || !tmp_2_fu_189_p4.read().is_01())? sc_lv<1>(): (sc_bigint<32>(n_assign_reg_222.read()) > sc_bigint<32>(tmp_2_fu_189_p4.read()));
+void quantl::thread_tmp_35_fu_199_p2() {
+    tmp_35_fu_199_p2 = (!n_assign_reg_222.read().is_01() || !tmp_2_fu_189_p4.read().is_01())? sc_lv<1>(): (sc_bigint<32>(n_assign_reg_222.read()) > sc_bigint<32>(tmp_2_fu_189_p4.read()));
 }
 
-void quantl::thread_tmp_34_fu_204_p1() {
-    tmp_34_fu_204_p1 = esl_zext<64,5>(mil_reg_108.read());
+void quantl::thread_tmp_36_fu_204_p1() {
+    tmp_36_fu_204_p1 = esl_zext<64,5>(mil_reg_108.read());
 }
 
 void quantl::thread_tmp_cast_fu_169_p1() {
@@ -469,7 +469,7 @@ void quantl::thread_ap_NS_fsm() {
             ap_NS_fsm = ap_ST_fsm_state6;
             break;
         case 32 : 
-            if ((!esl_seteq<1,1,1>(tmp_s_reg_232.read(), ap_const_lv1_0) && !esl_seteq<1,1,1>(ap_const_lv1_0, tmp_33_fu_199_p2.read()))) {
+            if ((!esl_seteq<1,1,1>(tmp_s_reg_232.read(), ap_const_lv1_0) && !esl_seteq<1,1,1>(ap_const_lv1_0, tmp_35_fu_199_p2.read()))) {
                 ap_NS_fsm = ap_ST_fsm_state2;
             } else {
                 ap_NS_fsm = ap_ST_fsm_state7;

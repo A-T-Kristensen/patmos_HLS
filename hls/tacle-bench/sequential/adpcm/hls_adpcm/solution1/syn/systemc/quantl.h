@@ -43,7 +43,7 @@ struct quantl : public sc_module {
     quantl_decis_levl* decis_levl_U;
     quantl_quant26bt_fYi* quant26bt_pos_U;
     quantl_quant26bt_g8j* quant26bt_neg_U;
-    adpcm_main_mul_32hbi<1,4,32,15,47>* adpcm_main_mul_32hbi_U33;
+    adpcm_main_mul_32hbi<1,4,32,15,47>* adpcm_main_mul_32hbi_U76;
     sc_signal< sc_lv<8> > ap_CS_fsm;
     sc_signal< sc_lv<1> > ap_CS_fsm_state1;
     sc_signal< sc_lv<5> > decis_levl_address0;
@@ -70,9 +70,9 @@ struct quantl : public sc_module {
     sc_signal< sc_lv<1> > ap_CS_fsm_state7;
     sc_signal< sc_lv<5> > mil_reg_108;
     sc_signal< sc_lv<1> > ap_CS_fsm_state6;
-    sc_signal< sc_lv<1> > tmp_33_fu_199_p2;
-    sc_signal< sc_lv<64> > tmp_31_fu_179_p1;
-    sc_signal< sc_lv<64> > tmp_34_fu_204_p1;
+    sc_signal< sc_lv<1> > tmp_35_fu_199_p2;
+    sc_signal< sc_lv<64> > tmp_33_fu_179_p1;
+    sc_signal< sc_lv<64> > tmp_36_fu_204_p1;
     sc_signal< sc_lv<32> > grp_fu_136_p0;
     sc_signal< sc_lv<15> > grp_fu_136_p1;
     sc_signal< sc_lv<32> > m_fu_155_p2;
@@ -135,9 +135,9 @@ struct quantl : public sc_module {
     void thread_quant26bt_pos_ce0();
     void thread_ril_2_fu_210_p3();
     void thread_tmp_2_fu_189_p4();
-    void thread_tmp_31_fu_179_p1();
-    void thread_tmp_33_fu_199_p2();
-    void thread_tmp_34_fu_204_p1();
+    void thread_tmp_33_fu_179_p1();
+    void thread_tmp_35_fu_199_p2();
+    void thread_tmp_36_fu_204_p1();
     void thread_tmp_cast_fu_169_p1();
     void thread_tmp_fu_147_p3();
     void thread_tmp_s_fu_173_p2();

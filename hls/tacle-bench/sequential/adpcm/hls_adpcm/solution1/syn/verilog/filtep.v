@@ -60,7 +60,7 @@ wire  signed [46:0] pl_cast_fu_80_p1;
 wire  signed [46:0] tmp_cast_fu_85_p1;
 wire  signed [46:0] pl2_cast_fu_96_p1;
 wire   [0:0] ap_CS_fsm_state2;
-wire  signed [46:0] tmp_57_cast_fu_101_p1;
+wire  signed [46:0] tmp_59_cast_fu_101_p1;
 wire   [46:0] grp_fu_60_p2;
 reg   [46:0] pl_reg_136;
 wire   [0:0] ap_CS_fsm_state6;
@@ -85,7 +85,7 @@ adpcm_main_mul_32cud #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 47 ))
-adpcm_main_mul_32cud_U4(
+adpcm_main_mul_32cud_U47(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_60_p0),
@@ -156,7 +156,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_60_p1 = tmp_57_cast_fu_101_p1;
+        grp_fu_60_p1 = tmp_59_cast_fu_101_p1;
     end else if ((ap_CS_fsm_state1 == 1'b1)) begin
         grp_fu_60_p1 = tmp_cast_fu_85_p1;
     end else begin
@@ -218,7 +218,7 @@ assign pl_cast_fu_80_p1 = $signed(tmp_fu_74_p2);
 
 assign tmp_20_fu_90_p2 = rlt2 << ap_const_lv32_1;
 
-assign tmp_57_cast_fu_101_p1 = $signed(al2);
+assign tmp_59_cast_fu_101_p1 = $signed(al2);
 
 assign tmp_cast_fu_85_p1 = $signed(al1);
 

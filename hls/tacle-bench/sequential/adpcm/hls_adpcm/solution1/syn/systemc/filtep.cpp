@@ -32,13 +32,13 @@ const sc_lv<32> filtep::ap_const_lv32_F = "1111";
 const sc_lv<32> filtep::ap_const_lv32_2E = "101110";
 
 filtep::filtep(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    adpcm_main_mul_32cud_U4 = new adpcm_main_mul_32cud<1,6,32,32,47>("adpcm_main_mul_32cud_U4");
-    adpcm_main_mul_32cud_U4->clk(ap_clk);
-    adpcm_main_mul_32cud_U4->reset(ap_rst);
-    adpcm_main_mul_32cud_U4->din0(grp_fu_60_p0);
-    adpcm_main_mul_32cud_U4->din1(grp_fu_60_p1);
-    adpcm_main_mul_32cud_U4->ce(ap_var_for_const0);
-    adpcm_main_mul_32cud_U4->dout(grp_fu_60_p2);
+    adpcm_main_mul_32cud_U47 = new adpcm_main_mul_32cud<1,6,32,32,47>("adpcm_main_mul_32cud_U47");
+    adpcm_main_mul_32cud_U47->clk(ap_clk);
+    adpcm_main_mul_32cud_U47->reset(ap_rst);
+    adpcm_main_mul_32cud_U47->din0(grp_fu_60_p0);
+    adpcm_main_mul_32cud_U47->din1(grp_fu_60_p1);
+    adpcm_main_mul_32cud_U47->ce(ap_var_for_const0);
+    adpcm_main_mul_32cud_U47->dout(grp_fu_60_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -80,7 +80,7 @@ filtep::filtep(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( ap_CS_fsm_state1 );
     sensitive << ( tmp_cast_fu_85_p1 );
     sensitive << ( ap_CS_fsm_state2 );
-    sensitive << ( tmp_57_cast_fu_101_p1 );
+    sensitive << ( tmp_59_cast_fu_101_p1 );
 
     SC_METHOD(thread_pl2_cast_fu_96_p1);
     sensitive << ( tmp_20_fu_90_p2 );
@@ -95,7 +95,7 @@ filtep::filtep(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_tmp_20_fu_90_p2);
     sensitive << ( rlt2 );
 
-    SC_METHOD(thread_tmp_57_cast_fu_101_p1);
+    SC_METHOD(thread_tmp_59_cast_fu_101_p1);
     sensitive << ( al2 );
 
     SC_METHOD(thread_tmp_cast_fu_85_p1);
@@ -138,7 +138,7 @@ filtep::filtep(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, tmp_cast_fu_85_p1, "tmp_cast_fu_85_p1");
     sc_trace(mVcdFile, pl2_cast_fu_96_p1, "pl2_cast_fu_96_p1");
     sc_trace(mVcdFile, ap_CS_fsm_state2, "ap_CS_fsm_state2");
-    sc_trace(mVcdFile, tmp_57_cast_fu_101_p1, "tmp_57_cast_fu_101_p1");
+    sc_trace(mVcdFile, tmp_59_cast_fu_101_p1, "tmp_59_cast_fu_101_p1");
     sc_trace(mVcdFile, grp_fu_60_p2, "grp_fu_60_p2");
     sc_trace(mVcdFile, pl_reg_136, "pl_reg_136");
     sc_trace(mVcdFile, ap_CS_fsm_state6, "ap_CS_fsm_state6");
@@ -160,7 +160,7 @@ filtep::~filtep() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
-    delete adpcm_main_mul_32cud_U4;
+    delete adpcm_main_mul_32cud_U47;
 }
 
 void filtep::thread_ap_var_for_const0() {
@@ -242,7 +242,7 @@ void filtep::thread_grp_fu_60_p0() {
 
 void filtep::thread_grp_fu_60_p1() {
     if ((esl_seteq<1,1,1>(ap_const_lv1_1, ap_CS_fsm_state2.read()))) {
-        grp_fu_60_p1 =  (sc_lv<32>) (tmp_57_cast_fu_101_p1.read());
+        grp_fu_60_p1 =  (sc_lv<32>) (tmp_59_cast_fu_101_p1.read());
     } else if ((esl_seteq<1,1,1>(ap_CS_fsm_state1.read(), ap_const_lv1_1))) {
         grp_fu_60_p1 =  (sc_lv<32>) (tmp_cast_fu_85_p1.read());
     } else {
@@ -266,8 +266,8 @@ void filtep::thread_tmp_20_fu_90_p2() {
     tmp_20_fu_90_p2 = (!ap_const_lv32_1.is_01())? sc_lv<32>(): rlt2.read() << (unsigned short)ap_const_lv32_1.to_uint();
 }
 
-void filtep::thread_tmp_57_cast_fu_101_p1() {
-    tmp_57_cast_fu_101_p1 = esl_sext<47,32>(al2.read());
+void filtep::thread_tmp_59_cast_fu_101_p1() {
+    tmp_59_cast_fu_101_p1 = esl_sext<47,32>(al2.read());
 }
 
 void filtep::thread_tmp_cast_fu_85_p1() {

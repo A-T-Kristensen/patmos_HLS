@@ -39,7 +39,7 @@ struct uppol1 : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    adpcm_main_mul_32bkb<1,6,32,32,64>* adpcm_main_mul_32bkb_x_U25;
+    adpcm_main_mul_32bkb<1,6,32,32,64>* adpcm_main_mul_32bkb_x_U68;
     sc_signal< sc_lv<8> > ap_CS_fsm;
     sc_signal< sc_lv<1> > ap_CS_fsm_state1;
     sc_signal< sc_lv<32> > apl1_fu_68_p2;

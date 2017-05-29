@@ -1,0 +1,253 @@
+
+
+================================================================
+== Vivado HLS Report for 'reset'
+================================================================
+* Date:           Mon May 29 15:21:59 2017
+
+* Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
+* Project:        hls_adpcm
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      2.39|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   51|   51|   51|   51|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    6|    6|         1|          -|          -|     6|    no    |
+        |- Loop 2  |    6|    6|         1|          -|          -|     6|    no    |
+        |- Loop 3  |   24|   24|         1|          -|          -|    24|    no    |
+        |- Loop 4  |   11|   11|         1|          -|          -|    11|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|     23|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     16|
+|Register         |        -|      -|      20|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|      20|     39|
++-----------------+---------+-------+--------+-------+
+|Available        |      270|    240|  126800|  63400|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |i_4_fu_505_p2        |     +    |      0|  0|   3|           3|           1|
+    |i_5_fu_525_p2        |     +    |      0|  0|   3|           3|           1|
+    |i_6_fu_545_p2        |     +    |      0|  0|   5|           5|           1|
+    |i_7_fu_562_p2        |     +    |      0|  0|   4|           4|           1|
+    |exitcond1_fu_539_p2  |   icmp   |      0|  0|   2|           5|           5|
+    |exitcond2_fu_519_p2  |   icmp   |      0|  0|   2|           3|           3|
+    |exitcond3_fu_499_p2  |   icmp   |      0|  0|   2|           3|           3|
+    |exitcond_fu_556_p2   |   icmp   |      0|  0|   2|           4|           4|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |Total                |          |      0|  0|  23|          30|          19|
+    +---------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------+----+-----------+-----+-----------+
+    |     Name    | LUT| Input Size| Bits| Total Bits|
+    +-------------+----+-----------+-----+-----------+
+    |ap_NS_fsm    |   1|          6|    1|          6|
+    |i_1_reg_274  |   3|          2|    3|          6|
+    |i_2_reg_285  |   5|          2|    5|         10|
+    |i_3_reg_296  |   4|          2|    4|          8|
+    |i_reg_263    |   3|          2|    3|          6|
+    +-------------+----+-----------+-----+-----------+
+    |Total        |  16|         14|   16|         36|
+    +-------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  5|   0|    5|          0|
+    |i_1_reg_274  |  3|   0|    3|          0|
+    |i_2_reg_285  |  5|   0|    5|          0|
+    |i_3_reg_296  |  4|   0|    4|          0|
+    |i_reg_263    |  3|   0|    3|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        | 20|   0|   20|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------------+-----+-----+------------+--------------+--------------+
+|ap_clk                 |  in |    1| ap_ctrl_hs |     reset    | return value |
+|ap_rst                 |  in |    1| ap_ctrl_hs |     reset    | return value |
+|ap_start               |  in |    1| ap_ctrl_hs |     reset    | return value |
+|ap_done                | out |    1| ap_ctrl_hs |     reset    | return value |
+|ap_idle                | out |    1| ap_ctrl_hs |     reset    | return value |
+|ap_ready               | out |    1| ap_ctrl_hs |     reset    | return value |
+|dec_detl               | out |   32|   ap_vld   |   dec_detl   |    pointer   |
+|dec_detl_ap_vld        | out |    1|   ap_vld   |   dec_detl   |    pointer   |
+|detl                   | out |   32|   ap_vld   |     detl     |    pointer   |
+|detl_ap_vld            | out |    1|   ap_vld   |     detl     |    pointer   |
+|dec_deth               | out |   32|   ap_vld   |   dec_deth   |    pointer   |
+|dec_deth_ap_vld        | out |    1|   ap_vld   |   dec_deth   |    pointer   |
+|deth                   | out |   32|   ap_vld   |     deth     |    pointer   |
+|deth_ap_vld            | out |    1|   ap_vld   |     deth     |    pointer   |
+|rlt2                   | out |   32|   ap_vld   |     rlt2     |    pointer   |
+|rlt2_ap_vld            | out |    1|   ap_vld   |     rlt2     |    pointer   |
+|rlt1                   | out |   32|   ap_vld   |     rlt1     |    pointer   |
+|rlt1_ap_vld            | out |    1|   ap_vld   |     rlt1     |    pointer   |
+|plt2                   | out |   32|   ap_vld   |     plt2     |    pointer   |
+|plt2_ap_vld            | out |    1|   ap_vld   |     plt2     |    pointer   |
+|plt1                   | out |   32|   ap_vld   |     plt1     |    pointer   |
+|plt1_ap_vld            | out |    1|   ap_vld   |     plt1     |    pointer   |
+|al2                    | out |   32|   ap_vld   |      al2     |    pointer   |
+|al2_ap_vld             | out |    1|   ap_vld   |      al2     |    pointer   |
+|al1                    | out |   32|   ap_vld   |      al1     |    pointer   |
+|al1_ap_vld             | out |    1|   ap_vld   |      al1     |    pointer   |
+|nbl                    | out |   32|   ap_vld   |      nbl     |    pointer   |
+|nbl_ap_vld             | out |    1|   ap_vld   |      nbl     |    pointer   |
+|rh2                    | out |   32|   ap_vld   |      rh2     |    pointer   |
+|rh2_ap_vld             | out |    1|   ap_vld   |      rh2     |    pointer   |
+|rh1                    | out |   32|   ap_vld   |      rh1     |    pointer   |
+|rh1_ap_vld             | out |    1|   ap_vld   |      rh1     |    pointer   |
+|ph2                    | out |   32|   ap_vld   |      ph2     |    pointer   |
+|ph2_ap_vld             | out |    1|   ap_vld   |      ph2     |    pointer   |
+|ph1                    | out |   32|   ap_vld   |      ph1     |    pointer   |
+|ph1_ap_vld             | out |    1|   ap_vld   |      ph1     |    pointer   |
+|ah2                    | out |   32|   ap_vld   |      ah2     |    pointer   |
+|ah2_ap_vld             | out |    1|   ap_vld   |      ah2     |    pointer   |
+|ah1                    | out |   32|   ap_vld   |      ah1     |    pointer   |
+|ah1_ap_vld             | out |    1|   ap_vld   |      ah1     |    pointer   |
+|nbh                    | out |   32|   ap_vld   |      nbh     |    pointer   |
+|nbh_ap_vld             | out |    1|   ap_vld   |      nbh     |    pointer   |
+|dec_rlt2               | out |   32|   ap_vld   |   dec_rlt2   |    pointer   |
+|dec_rlt2_ap_vld        | out |    1|   ap_vld   |   dec_rlt2   |    pointer   |
+|dec_rlt1               | out |   32|   ap_vld   |   dec_rlt1   |    pointer   |
+|dec_rlt1_ap_vld        | out |    1|   ap_vld   |   dec_rlt1   |    pointer   |
+|dec_plt2               | out |   32|   ap_vld   |   dec_plt2   |    pointer   |
+|dec_plt2_ap_vld        | out |    1|   ap_vld   |   dec_plt2   |    pointer   |
+|dec_plt1               | out |   32|   ap_vld   |   dec_plt1   |    pointer   |
+|dec_plt1_ap_vld        | out |    1|   ap_vld   |   dec_plt1   |    pointer   |
+|dec_al2                | out |   32|   ap_vld   |    dec_al2   |    pointer   |
+|dec_al2_ap_vld         | out |    1|   ap_vld   |    dec_al2   |    pointer   |
+|dec_al1                | out |   32|   ap_vld   |    dec_al1   |    pointer   |
+|dec_al1_ap_vld         | out |    1|   ap_vld   |    dec_al1   |    pointer   |
+|dec_nbl                | out |   32|   ap_vld   |    dec_nbl   |    pointer   |
+|dec_nbl_ap_vld         | out |    1|   ap_vld   |    dec_nbl   |    pointer   |
+|dec_rh2                | out |   32|   ap_vld   |    dec_rh2   |    pointer   |
+|dec_rh2_ap_vld         | out |    1|   ap_vld   |    dec_rh2   |    pointer   |
+|dec_rh1                | out |   32|   ap_vld   |    dec_rh1   |    pointer   |
+|dec_rh1_ap_vld         | out |    1|   ap_vld   |    dec_rh1   |    pointer   |
+|dec_ph2                | out |   32|   ap_vld   |    dec_ph2   |    pointer   |
+|dec_ph2_ap_vld         | out |    1|   ap_vld   |    dec_ph2   |    pointer   |
+|dec_ph1                | out |   32|   ap_vld   |    dec_ph1   |    pointer   |
+|dec_ph1_ap_vld         | out |    1|   ap_vld   |    dec_ph1   |    pointer   |
+|dec_ah2                | out |   32|   ap_vld   |    dec_ah2   |    pointer   |
+|dec_ah2_ap_vld         | out |    1|   ap_vld   |    dec_ah2   |    pointer   |
+|dec_ah1                | out |   32|   ap_vld   |    dec_ah1   |    pointer   |
+|dec_ah1_ap_vld         | out |    1|   ap_vld   |    dec_ah1   |    pointer   |
+|dec_nbh                | out |   32|   ap_vld   |    dec_nbh   |    pointer   |
+|dec_nbh_ap_vld         | out |    1|   ap_vld   |    dec_nbh   |    pointer   |
+|delay_dltx_address0    | out |    3|  ap_memory |  delay_dltx  |     array    |
+|delay_dltx_ce0         | out |    1|  ap_memory |  delay_dltx  |     array    |
+|delay_dltx_we0         | out |    1|  ap_memory |  delay_dltx  |     array    |
+|delay_dltx_d0          | out |   32|  ap_memory |  delay_dltx  |     array    |
+|delay_dhx_address0     | out |    3|  ap_memory |   delay_dhx  |     array    |
+|delay_dhx_ce0          | out |    1|  ap_memory |   delay_dhx  |     array    |
+|delay_dhx_we0          | out |    1|  ap_memory |   delay_dhx  |     array    |
+|delay_dhx_d0           | out |   32|  ap_memory |   delay_dhx  |     array    |
+|dec_del_dltx_address0  | out |    3|  ap_memory | dec_del_dltx |     array    |
+|dec_del_dltx_ce0       | out |    1|  ap_memory | dec_del_dltx |     array    |
+|dec_del_dltx_we0       | out |    1|  ap_memory | dec_del_dltx |     array    |
+|dec_del_dltx_d0        | out |   32|  ap_memory | dec_del_dltx |     array    |
+|dec_del_dhx_address0   | out |    3|  ap_memory |  dec_del_dhx |     array    |
+|dec_del_dhx_ce0        | out |    1|  ap_memory |  dec_del_dhx |     array    |
+|dec_del_dhx_we0        | out |    1|  ap_memory |  dec_del_dhx |     array    |
+|dec_del_dhx_d0         | out |   32|  ap_memory |  dec_del_dhx |     array    |
+|delay_bpl_address0     | out |    3|  ap_memory |   delay_bpl  |     array    |
+|delay_bpl_ce0          | out |    1|  ap_memory |   delay_bpl  |     array    |
+|delay_bpl_we0          | out |    1|  ap_memory |   delay_bpl  |     array    |
+|delay_bpl_d0           | out |   32|  ap_memory |   delay_bpl  |     array    |
+|delay_bph_address0     | out |    3|  ap_memory |   delay_bph  |     array    |
+|delay_bph_ce0          | out |    1|  ap_memory |   delay_bph  |     array    |
+|delay_bph_we0          | out |    1|  ap_memory |   delay_bph  |     array    |
+|delay_bph_d0           | out |   32|  ap_memory |   delay_bph  |     array    |
+|dec_del_bpl_address0   | out |    3|  ap_memory |  dec_del_bpl |     array    |
+|dec_del_bpl_ce0        | out |    1|  ap_memory |  dec_del_bpl |     array    |
+|dec_del_bpl_we0        | out |    1|  ap_memory |  dec_del_bpl |     array    |
+|dec_del_bpl_d0         | out |   32|  ap_memory |  dec_del_bpl |     array    |
+|dec_del_bph_address0   | out |    3|  ap_memory |  dec_del_bph |     array    |
+|dec_del_bph_ce0        | out |    1|  ap_memory |  dec_del_bph |     array    |
+|dec_del_bph_we0        | out |    1|  ap_memory |  dec_del_bph |     array    |
+|dec_del_bph_d0         | out |   32|  ap_memory |  dec_del_bph |     array    |
+|tqmf_address0          | out |    5|  ap_memory |     tqmf     |     array    |
+|tqmf_ce0               | out |    1|  ap_memory |     tqmf     |     array    |
+|tqmf_we0               | out |    1|  ap_memory |     tqmf     |     array    |
+|tqmf_d0                | out |   32|  ap_memory |     tqmf     |     array    |
+|accumc_address0        | out |    4|  ap_memory |    accumc    |     array    |
+|accumc_ce0             | out |    1|  ap_memory |    accumc    |     array    |
+|accumc_we0             | out |    1|  ap_memory |    accumc    |     array    |
+|accumc_d0              | out |   32|  ap_memory |    accumc    |     array    |
+|accumd_address0        | out |    4|  ap_memory |    accumd    |     array    |
+|accumd_ce0             | out |    1|  ap_memory |    accumd    |     array    |
+|accumd_we0             | out |    1|  ap_memory |    accumd    |     array    |
+|accumd_d0              | out |   32|  ap_memory |    accumd    |     array    |
++-----------------------+-----+-----+------------+--------------+--------------+
+

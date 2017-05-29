@@ -96,7 +96,7 @@ architecture behav of filtez is
     signal dlt_pn_rec_phi_fu_100_p4 : STD_LOGIC_VECTOR (2 downto 0);
     signal p_01_rec_cast_fu_170_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal grp_fu_107_p0 : STD_LOGIC_VECTOR (63 downto 0);
-    signal tmp_41_fu_176_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_43_fu_176_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal grp_fu_107_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal grp_fu_130_p0 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_fu_130_p1 : STD_LOGIC_VECTOR (31 downto 0);
@@ -123,7 +123,7 @@ architecture behav of filtez is
 
 
 begin
-    adpcm_main_mul_32bkb_U1 : component adpcm_main_mul_32bkb
+    adpcm_main_mul_32bkb_U44 : component adpcm_main_mul_32bkb
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -431,10 +431,10 @@ begin
 
     exitcond1_fu_164_p2 <= "1" when (dlt_pn_rec_phi_fu_100_p4 = ap_const_lv3_5) else "0";
 
-    grp_fu_107_p0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_CS_fsm_pp0_stage1, ap_enable_reg_pp0_iter4, dlt_pn_rec_phi_fu_100_p4, tmp_41_fu_176_p1)
+    grp_fu_107_p0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_CS_fsm_pp0_stage1, ap_enable_reg_pp0_iter4, dlt_pn_rec_phi_fu_100_p4, tmp_43_fu_176_p1)
     begin
         if (((ap_const_lv1_1 = ap_CS_fsm_pp0_stage1) and (ap_const_logic_1 = ap_enable_reg_pp0_iter4))) then 
-            grp_fu_107_p0 <= tmp_41_fu_176_p1;
+            grp_fu_107_p0 <= tmp_43_fu_176_p1;
         elsif (((ap_const_lv1_1 = ap_CS_fsm_pp0_stage0) and (ap_const_logic_1 = ap_enable_reg_pp0_iter0))) then 
             grp_fu_107_p0 <= std_logic_vector(resize(unsigned(dlt_pn_rec_phi_fu_100_p4),64));
         else 
@@ -480,7 +480,7 @@ begin
     end process;
 
     p_01_rec_cast_fu_170_p1 <= std_logic_vector(resize(unsigned(p_01_rec_reg_118),64));
-        tmp_41_fu_176_p1 <= std_logic_vector(resize(signed(temp_reg_229),64));
+        tmp_43_fu_176_p1 <= std_logic_vector(resize(signed(temp_reg_229),64));
 
         tmp_fu_154_p1 <= std_logic_vector(resize(signed(reg_144),64));
 

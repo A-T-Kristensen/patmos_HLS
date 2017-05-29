@@ -37,13 +37,13 @@ const sc_lv<32> uppol1::ap_const_lv32_7 = "111";
 const sc_lv<16> uppol1::ap_const_lv16_0 = "0000000000000000";
 
 uppol1::uppol1(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    adpcm_main_mul_32bkb_x_U25 = new adpcm_main_mul_32bkb<1,6,32,32,64>("adpcm_main_mul_32bkb_x_U25");
-    adpcm_main_mul_32bkb_x_U25->clk(ap_clk);
-    adpcm_main_mul_32bkb_x_U25->reset(ap_rst);
-    adpcm_main_mul_32bkb_x_U25->din0(plt);
-    adpcm_main_mul_32bkb_x_U25->din1(plt1);
-    adpcm_main_mul_32bkb_x_U25->ce(ap_var_for_const0);
-    adpcm_main_mul_32bkb_x_U25->dout(grp_fu_79_p2);
+    adpcm_main_mul_32bkb_x_U68 = new adpcm_main_mul_32bkb<1,6,32,32,64>("adpcm_main_mul_32bkb_x_U68");
+    adpcm_main_mul_32bkb_x_U68->clk(ap_clk);
+    adpcm_main_mul_32bkb_x_U68->reset(ap_rst);
+    adpcm_main_mul_32bkb_x_U68->din0(plt);
+    adpcm_main_mul_32bkb_x_U68->din1(plt1);
+    adpcm_main_mul_32bkb_x_U68->ce(ap_var_for_const0);
+    adpcm_main_mul_32bkb_x_U68->dout(grp_fu_79_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -198,7 +198,7 @@ uppol1::~uppol1() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
-    delete adpcm_main_mul_32bkb_x_U25;
+    delete adpcm_main_mul_32bkb_x_U68;
 }
 
 void uppol1::thread_ap_var_for_const0() {

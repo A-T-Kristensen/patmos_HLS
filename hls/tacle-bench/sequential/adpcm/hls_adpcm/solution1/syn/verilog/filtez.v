@@ -102,7 +102,7 @@ reg    ap_enable_reg_pp0_iter3;
 reg   [2:0] dlt_pn_rec_phi_fu_100_p4;
 wire   [63:0] p_01_rec_cast_fu_170_p1;
 reg   [63:0] grp_fu_107_p0;
-wire  signed [63:0] tmp_41_fu_176_p1;
+wire  signed [63:0] tmp_43_fu_176_p1;
 reg   [63:0] grp_fu_107_p1;
 reg  signed [31:0] grp_fu_130_p0;
 reg  signed [31:0] grp_fu_130_p1;
@@ -125,7 +125,7 @@ adpcm_main_mul_32bkb #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 64 ))
-adpcm_main_mul_32bkb_U1(
+adpcm_main_mul_32bkb_U44(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_130_p0),
@@ -319,7 +319,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage1) & (1'b1 == ap_enable_reg_pp0_iter4))) begin
-        grp_fu_107_p0 = tmp_41_fu_176_p1;
+        grp_fu_107_p0 = tmp_43_fu_176_p1;
     end else if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_enable_reg_pp0_iter0))) begin
         grp_fu_107_p0 = dlt_pn_rec_phi_fu_100_p4;
     end else begin
@@ -430,7 +430,7 @@ assign grp_fu_107_p2 = (grp_fu_107_p0 + grp_fu_107_p1);
 
 assign p_01_rec_cast_fu_170_p1 = p_01_rec_reg_118;
 
-assign tmp_41_fu_176_p1 = $signed(temp_reg_229);
+assign tmp_43_fu_176_p1 = $signed(temp_reg_229);
 
 assign tmp_fu_154_p1 = $signed(reg_144);
 

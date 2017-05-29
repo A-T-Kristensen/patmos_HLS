@@ -122,7 +122,7 @@ adpcm_main_mul_32bkb #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 64 ))
-adpcm_main_mul_32bkb_x_U19(
+adpcm_main_mul_32bkb_x_U62(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_105_p0),

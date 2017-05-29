@@ -5,8 +5,8 @@
 // 
 // ==============================================================
 
-#ifndef __adpcm_main_qq6_copcA_H__
-#define __adpcm_main_qq6_copcA_H__
+#ifndef __adpcm_main_qq6_corcU_H__
+#define __adpcm_main_qq6_corcU_H__
 
 
 #include <systemc>
@@ -19,7 +19,7 @@ using namespace sc_dt;
 #include <iostream>
 #include <fstream>
 
-struct adpcm_main_qq6_copcA_ram : public sc_core::sc_module {
+struct adpcm_main_qq6_corcU_ram : public sc_core::sc_module {
 
   static const unsigned DataWidth = 16;
   static const unsigned AddressRange = 64;
@@ -38,7 +38,7 @@ sc_core::sc_in<bool> clk;
 sc_lv<DataWidth> ram[AddressRange];
 
 
-   SC_CTOR(adpcm_main_qq6_copcA_ram) {
+   SC_CTOR(adpcm_main_qq6_corcU_ram) {
         ram[0] = "0b1111111101111000";
         ram[1] = "0b1111111101111000";
         ram[2] = "0b1111111101111000";
@@ -125,7 +125,7 @@ void prc_write_0()
 }; //endmodule
 
 
-SC_MODULE(adpcm_main_qq6_copcA) {
+SC_MODULE(adpcm_main_qq6_corcU) {
 
 
 static const unsigned DataWidth = 16;
@@ -139,11 +139,11 @@ sc_core::sc_in<sc_logic> reset;
 sc_core::sc_in<bool> clk;
 
 
-adpcm_main_qq6_copcA_ram* meminst;
+adpcm_main_qq6_corcU_ram* meminst;
 
 
-SC_CTOR(adpcm_main_qq6_copcA) {
-meminst = new adpcm_main_qq6_copcA_ram("adpcm_main_qq6_copcA_ram");
+SC_CTOR(adpcm_main_qq6_corcU) {
+meminst = new adpcm_main_qq6_corcU_ram("adpcm_main_qq6_corcU_ram");
 meminst->address0(address0);
 meminst->ce0(ce0);
 meminst->q0(q0);
@@ -151,7 +151,7 @@ meminst->q0(q0);
 meminst->reset(reset);
 meminst->clk(clk);
 }
-~adpcm_main_qq6_copcA() {
+~adpcm_main_qq6_corcU() {
     delete meminst;
 }
 

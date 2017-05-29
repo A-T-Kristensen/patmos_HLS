@@ -39,14 +39,14 @@ struct filtep : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    adpcm_main_mul_32cud<1,6,32,32,47>* adpcm_main_mul_32cud_U4;
+    adpcm_main_mul_32cud<1,6,32,32,47>* adpcm_main_mul_32cud_U47;
     sc_signal< sc_lv<8> > ap_CS_fsm;
     sc_signal< sc_lv<1> > ap_CS_fsm_state1;
     sc_signal< sc_lv<47> > pl_cast_fu_80_p1;
     sc_signal< sc_lv<47> > tmp_cast_fu_85_p1;
     sc_signal< sc_lv<47> > pl2_cast_fu_96_p1;
     sc_signal< sc_lv<1> > ap_CS_fsm_state2;
-    sc_signal< sc_lv<47> > tmp_57_cast_fu_101_p1;
+    sc_signal< sc_lv<47> > tmp_59_cast_fu_101_p1;
     sc_signal< sc_lv<47> > grp_fu_60_p2;
     sc_signal< sc_lv<47> > pl_reg_136;
     sc_signal< sc_lv<1> > ap_CS_fsm_state6;
@@ -94,7 +94,7 @@ struct filtep : public sc_module {
     void thread_pl_1_fu_50_p2();
     void thread_pl_cast_fu_80_p1();
     void thread_tmp_20_fu_90_p2();
-    void thread_tmp_57_cast_fu_101_p1();
+    void thread_tmp_59_cast_fu_101_p1();
     void thread_tmp_cast_fu_85_p1();
     void thread_tmp_fu_74_p2();
     void thread_ap_NS_fsm();

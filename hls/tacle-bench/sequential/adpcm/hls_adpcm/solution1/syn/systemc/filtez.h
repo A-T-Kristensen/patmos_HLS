@@ -41,7 +41,7 @@ struct filtez : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    adpcm_main_mul_32bkb<1,6,32,32,64>* adpcm_main_mul_32bkb_U1;
+    adpcm_main_mul_32bkb<1,6,32,32,64>* adpcm_main_mul_32bkb_U44;
     sc_signal< sc_lv<11> > ap_CS_fsm;
     sc_signal< sc_lv<1> > ap_CS_fsm_state1;
     sc_signal< sc_lv<64> > zl1_reg_86;
@@ -73,7 +73,7 @@ struct filtez : public sc_module {
     sc_signal< sc_lv<3> > dlt_pn_rec_phi_fu_100_p4;
     sc_signal< sc_lv<64> > p_01_rec_cast_fu_170_p1;
     sc_signal< sc_lv<64> > grp_fu_107_p0;
-    sc_signal< sc_lv<64> > tmp_41_fu_176_p1;
+    sc_signal< sc_lv<64> > tmp_43_fu_176_p1;
     sc_signal< sc_lv<64> > grp_fu_107_p1;
     sc_signal< sc_lv<32> > grp_fu_130_p0;
     sc_signal< sc_lv<32> > grp_fu_130_p1;
@@ -132,7 +132,7 @@ struct filtez : public sc_module {
     void thread_grp_fu_130_p0();
     void thread_grp_fu_130_p1();
     void thread_p_01_rec_cast_fu_170_p1();
-    void thread_tmp_41_fu_176_p1();
+    void thread_tmp_43_fu_176_p1();
     void thread_tmp_fu_154_p1();
     void thread_tmp_s_fu_159_p1();
     void thread_ap_NS_fsm();

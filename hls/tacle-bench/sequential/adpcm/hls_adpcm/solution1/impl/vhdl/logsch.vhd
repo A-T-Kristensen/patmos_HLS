@@ -62,7 +62,7 @@ architecture behav of logsch is
     signal ap_CS_fsm_state2 : STD_LOGIC_VECTOR (0 downto 0);
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
     signal p_s_fu_128_p3 : STD_LOGIC_VECTOR (30 downto 0);
-    signal tmp_38_fu_138_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_40_fu_138_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_19_fu_134_p1 : STD_LOGIC_VECTOR (14 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (1 downto 0);
 
@@ -88,7 +88,7 @@ architecture behav of logsch is
 
 
 begin
-    adpcm_main_mux_42eOg_U30 : component adpcm_main_mux_42eOg
+    adpcm_main_mux_42eOg_U73 : component adpcm_main_mux_42eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -179,7 +179,7 @@ begin
     end process;
 
     ap_return <= 
-        ap_const_lv15_5800 when (tmp_38_fu_138_p2(0) = '1') else 
+        ap_const_lv15_5800 when (tmp_40_fu_138_p2(0) = '1') else 
         tmp_19_fu_134_p1;
     nbh_assign_cast_fu_114_p2 <= std_logic_vector(unsigned(tmp_17_fu_104_p1) + unsigned(tmp_4_fu_94_p4));
     nbh_assign_fu_108_p2 <= std_logic_vector(unsigned(wd_fu_66_p4) + unsigned(tmp_fu_80_p6));
@@ -189,7 +189,7 @@ begin
     p_shl_fu_52_p3 <= (nbh & ap_const_lv7_0);
     tmp_17_fu_104_p1 <= tmp_fu_80_p6(31 - 1 downto 0);
     tmp_19_fu_134_p1 <= p_s_fu_128_p3(15 - 1 downto 0);
-    tmp_38_fu_138_p2 <= "1" when (unsigned(p_s_fu_128_p3) > unsigned(ap_const_lv31_5800)) else "0";
+    tmp_40_fu_138_p2 <= "1" when (unsigned(p_s_fu_128_p3) > unsigned(ap_const_lv31_5800)) else "0";
     tmp_4_fu_94_p4 <= tmp_s_fu_60_p2(37 downto 7);
         tmp_cast2_fu_48_p1 <= std_logic_vector(resize(signed(nbh),39));
 

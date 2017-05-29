@@ -52,7 +52,7 @@ struct upzero : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    adpcm_main_mul_32bkb<1,6,32,32,64>* adpcm_main_mul_32bkb_x_U15;
+    adpcm_main_mul_32bkb<1,6,32,32,64>* adpcm_main_mul_32bkb_x_U58;
     sc_signal< sc_lv<10> > ap_CS_fsm;
     sc_signal< sc_lv<1> > ap_CS_fsm_state1;
     sc_signal< sc_lv<3> > i_1_reg_168;

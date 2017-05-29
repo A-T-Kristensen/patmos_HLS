@@ -5,8 +5,8 @@
 // 
 // ==============================================================
 
-#ifndef __adpcm_main_delay_jbC_H__
-#define __adpcm_main_delay_jbC_H__
+#ifndef __adpcm_main_delay_mb6_H__
+#define __adpcm_main_delay_mb6_H__
 
 
 #include <systemc>
@@ -19,7 +19,7 @@ using namespace sc_dt;
 #include <iostream>
 #include <fstream>
 
-struct adpcm_main_delay_jbC_ram : public sc_core::sc_module {
+struct adpcm_main_delay_mb6_ram : public sc_core::sc_module {
 
   static const unsigned DataWidth = 32;
   static const unsigned AddressRange = 6;
@@ -35,7 +35,6 @@ sc_core::sc_in<sc_logic> we0;
 sc_core::sc_in<sc_lv<DataWidth> > d0;
 sc_core::sc_in <sc_lv<AddressWidth> > address1;
 sc_core::sc_in <sc_logic> ce1;
-sc_core::sc_out <sc_lv<DataWidth> > q1;
 sc_core::sc_in<sc_logic> we1;
 sc_core::sc_in<sc_lv<DataWidth> > d1;
 sc_core::sc_in<sc_logic> reset;
@@ -45,7 +44,7 @@ sc_core::sc_in<bool> clk;
 sc_lv<DataWidth> ram[AddressRange];
 
 
-   SC_CTOR(adpcm_main_delay_jbC_ram) {
+   SC_CTOR(adpcm_main_delay_mb6_ram) {
         for (unsigned i = 0; i < 6; i = i + 1) {
             ram[i] = 0;
         }
@@ -93,16 +92,7 @@ void prc_write_1()
            if(address1.read().is_01() && address1.read().to_uint()<AddressRange)
            {
               ram[address1.read().to_uint()] = d1.read(); 
-              q1 = d1.read();
            }
-           else
-              q1 = sc_lv<DataWidth>();
-        }
-        else {
-            if(address1.read().is_01() && address1.read().to_uint()<AddressRange)
-              q1 = ram[address1.read().to_uint()];
-            else
-              q1 = sc_lv<DataWidth>();
         }
     }
 }
@@ -111,7 +101,7 @@ void prc_write_1()
 }; //endmodule
 
 
-SC_MODULE(adpcm_main_delay_jbC) {
+SC_MODULE(adpcm_main_delay_mb6) {
 
 
 static const unsigned DataWidth = 32;
@@ -125,18 +115,17 @@ sc_core::sc_in<sc_logic> we0;
 sc_core::sc_in<sc_lv<DataWidth> > d0;
 sc_core::sc_in <sc_lv<AddressWidth> > address1;
 sc_core::sc_in<sc_logic> ce1;
-sc_core::sc_out <sc_lv<DataWidth> > q1;
 sc_core::sc_in<sc_logic> we1;
 sc_core::sc_in<sc_lv<DataWidth> > d1;
 sc_core::sc_in<sc_logic> reset;
 sc_core::sc_in<bool> clk;
 
 
-adpcm_main_delay_jbC_ram* meminst;
+adpcm_main_delay_mb6_ram* meminst;
 
 
-SC_CTOR(adpcm_main_delay_jbC) {
-meminst = new adpcm_main_delay_jbC_ram("adpcm_main_delay_jbC_ram");
+SC_CTOR(adpcm_main_delay_mb6) {
+meminst = new adpcm_main_delay_mb6_ram("adpcm_main_delay_mb6_ram");
 meminst->address0(address0);
 meminst->ce0(ce0);
 meminst->q0(q0);
@@ -145,14 +134,13 @@ meminst->d0(d0);
 
 meminst->address1(address1);
 meminst->ce1(ce1);
-meminst->q1(q1);
 meminst->we1(we1);
 meminst->d1(d1);
 
 meminst->reset(reset);
 meminst->clk(clk);
 }
-~adpcm_main_delay_jbC() {
+~adpcm_main_delay_mb6() {
     delete meminst;
 }
 

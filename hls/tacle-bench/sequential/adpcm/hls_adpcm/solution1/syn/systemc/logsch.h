@@ -38,7 +38,7 @@ struct logsch : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    adpcm_main_mux_42eOg<1,1,32,32,32,32,2,32>* adpcm_main_mux_42eOg_U30;
+    adpcm_main_mux_42eOg<1,1,32,32,32,32,2,32>* adpcm_main_mux_42eOg_U73;
     sc_signal< sc_lv<2> > ap_CS_fsm;
     sc_signal< sc_lv<1> > ap_CS_fsm_state1;
     sc_signal< sc_lv<31> > nbh_assign_cast_fu_114_p2;
@@ -55,7 +55,7 @@ struct logsch : public sc_module {
     sc_signal< sc_lv<32> > nbh_assign_fu_108_p2;
     sc_signal< sc_lv<1> > ap_CS_fsm_state2;
     sc_signal< sc_lv<31> > p_s_fu_128_p3;
-    sc_signal< sc_lv<1> > tmp_38_fu_138_p2;
+    sc_signal< sc_lv<1> > tmp_40_fu_138_p2;
     sc_signal< sc_lv<15> > tmp_19_fu_134_p1;
     sc_signal< sc_lv<2> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
@@ -91,7 +91,7 @@ struct logsch : public sc_module {
     void thread_p_shl_fu_52_p3();
     void thread_tmp_17_fu_104_p1();
     void thread_tmp_19_fu_134_p1();
-    void thread_tmp_38_fu_138_p2();
+    void thread_tmp_40_fu_138_p2();
     void thread_tmp_4_fu_94_p4();
     void thread_tmp_cast2_fu_48_p1();
     void thread_tmp_fu_80_p5();

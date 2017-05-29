@@ -83,9 +83,9 @@ architecture behav of quantl is
     signal mil_reg_108 : STD_LOGIC_VECTOR (4 downto 0);
     signal ap_CS_fsm_state6 : STD_LOGIC_VECTOR (0 downto 0);
     attribute fsm_encoding of ap_CS_fsm_state6 : signal is "none";
-    signal tmp_33_fu_199_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_31_fu_179_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal tmp_34_fu_204_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_35_fu_199_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_33_fu_179_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_36_fu_204_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal grp_fu_136_p0 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_fu_136_p1 : STD_LOGIC_VECTOR (14 downto 0);
     signal m_fu_155_p2 : STD_LOGIC_VECTOR (31 downto 0);
@@ -195,7 +195,7 @@ begin
         ce0 => quant26bt_neg_ce0,
         q0 => quant26bt_neg_q0);
 
-    adpcm_main_mul_32hbi_U33 : component adpcm_main_mul_32hbi
+    adpcm_main_mul_32hbi_U76 : component adpcm_main_mul_32hbi
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -243,7 +243,7 @@ begin
     mil_reg_108_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if ((not((tmp_s_reg_232 = ap_const_lv1_0)) and (ap_const_lv1_1 = ap_CS_fsm_state6) and not((ap_const_lv1_0 = tmp_33_fu_199_p2)))) then 
+            if ((not((tmp_s_reg_232 = ap_const_lv1_0)) and (ap_const_lv1_1 = ap_CS_fsm_state6) and not((ap_const_lv1_0 = tmp_35_fu_199_p2)))) then 
                 mil_reg_108 <= mil_1_reg_131;
             elsif (((ap_CS_fsm_state1 = ap_const_lv1_1) and not((ap_start = ap_const_logic_0)))) then 
                 mil_reg_108 <= ap_const_lv5_0;
@@ -270,7 +270,7 @@ begin
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, tmp_s_reg_232, tmp_33_fu_199_p2)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, tmp_s_reg_232, tmp_35_fu_199_p2)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -288,7 +288,7 @@ begin
             when ap_ST_fsm_state5 => 
                 ap_NS_fsm <= ap_ST_fsm_state6;
             when ap_ST_fsm_state6 => 
-                if ((not((tmp_s_reg_232 = ap_const_lv1_0)) and not((ap_const_lv1_0 = tmp_33_fu_199_p2)))) then
+                if ((not((tmp_s_reg_232 = ap_const_lv1_0)) and not((ap_const_lv1_0 = tmp_35_fu_199_p2)))) then
                     ap_NS_fsm <= ap_ST_fsm_state2;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state7;
@@ -347,7 +347,7 @@ begin
         end if; 
     end process;
 
-    decis_levl_address0 <= tmp_31_fu_179_p1(5 - 1 downto 0);
+    decis_levl_address0 <= tmp_33_fu_179_p1(5 - 1 downto 0);
 
     decis_levl_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -366,7 +366,7 @@ begin
     n_assign_fu_161_p3 <= 
         m_fu_155_p2 when (tmp_fu_147_p3(0) = '1') else 
         el;
-    quant26bt_neg_address0 <= tmp_34_fu_204_p1(5 - 1 downto 0);
+    quant26bt_neg_address0 <= tmp_36_fu_204_p1(5 - 1 downto 0);
 
     quant26bt_neg_ce0_assign_proc : process(ap_CS_fsm_state7)
     begin
@@ -377,7 +377,7 @@ begin
         end if; 
     end process;
 
-    quant26bt_pos_address0 <= tmp_34_fu_204_p1(5 - 1 downto 0);
+    quant26bt_pos_address0 <= tmp_36_fu_204_p1(5 - 1 downto 0);
 
     quant26bt_pos_ce0_assign_proc : process(ap_CS_fsm_state7)
     begin
@@ -392,9 +392,9 @@ begin
         quant26bt_neg_q0 when (tmp_reg_217(0) = '1') else 
         quant26bt_pos_q0;
     tmp_2_fu_189_p4 <= grp_fu_136_p2(46 downto 15);
-    tmp_31_fu_179_p1 <= std_logic_vector(resize(unsigned(mil_reg_108),64));
-    tmp_33_fu_199_p2 <= "1" when (signed(n_assign_reg_222) > signed(tmp_2_fu_189_p4)) else "0";
-    tmp_34_fu_204_p1 <= std_logic_vector(resize(unsigned(mil_reg_108),64));
+    tmp_33_fu_179_p1 <= std_logic_vector(resize(unsigned(mil_reg_108),64));
+    tmp_35_fu_199_p2 <= "1" when (signed(n_assign_reg_222) > signed(tmp_2_fu_189_p4)) else "0";
+    tmp_36_fu_204_p1 <= std_logic_vector(resize(unsigned(mil_reg_108),64));
         tmp_cast_fu_169_p1 <= std_logic_vector(resize(signed(detl),47));
 
     tmp_fu_147_p3 <= el(31 downto 31);

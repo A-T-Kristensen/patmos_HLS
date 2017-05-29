@@ -47,7 +47,7 @@ int dec_return(int dec_result[MAX_SIZE]);
 void adpcm_enc_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE], int size);
 void adpcm_dec_main(int compressed[MAX_SIZE], int dec_result[MAX_SIZE], int size);
 void adpcm_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE],
-                int dec_result[MAX_SIZE], int select, int size);
+				int dec_result[MAX_SIZE], int select, int size);
 
 int delay_bpl[6];
 

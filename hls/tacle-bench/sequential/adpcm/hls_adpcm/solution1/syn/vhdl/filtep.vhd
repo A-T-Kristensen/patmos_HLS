@@ -55,7 +55,7 @@ architecture behav of filtep is
     signal pl2_cast_fu_96_p1 : STD_LOGIC_VECTOR (46 downto 0);
     signal ap_CS_fsm_state2 : STD_LOGIC_VECTOR (0 downto 0);
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
-    signal tmp_57_cast_fu_101_p1 : STD_LOGIC_VECTOR (46 downto 0);
+    signal tmp_59_cast_fu_101_p1 : STD_LOGIC_VECTOR (46 downto 0);
     signal grp_fu_60_p2 : STD_LOGIC_VECTOR (46 downto 0);
     signal pl_reg_136 : STD_LOGIC_VECTOR (46 downto 0);
     signal ap_CS_fsm_state6 : STD_LOGIC_VECTOR (0 downto 0);
@@ -91,7 +91,7 @@ architecture behav of filtep is
 
 
 begin
-    adpcm_main_mul_32cud_U4 : component adpcm_main_mul_32cud
+    adpcm_main_mul_32cud_U47 : component adpcm_main_mul_32cud
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -221,10 +221,10 @@ begin
     end process;
 
 
-    grp_fu_60_p1_assign_proc : process(ap_CS_fsm_state1, tmp_cast_fu_85_p1, ap_CS_fsm_state2, tmp_57_cast_fu_101_p1)
+    grp_fu_60_p1_assign_proc : process(ap_CS_fsm_state1, tmp_cast_fu_85_p1, ap_CS_fsm_state2, tmp_59_cast_fu_101_p1)
     begin
         if (((ap_const_lv1_1 = ap_CS_fsm_state2))) then 
-            grp_fu_60_p1 <= tmp_57_cast_fu_101_p1(32 - 1 downto 0);
+            grp_fu_60_p1 <= tmp_59_cast_fu_101_p1(32 - 1 downto 0);
         elsif (((ap_CS_fsm_state1 = ap_const_lv1_1))) then 
             grp_fu_60_p1 <= tmp_cast_fu_85_p1(32 - 1 downto 0);
         else 
@@ -238,7 +238,7 @@ begin
         pl_cast_fu_80_p1 <= std_logic_vector(resize(signed(tmp_fu_74_p2),47));
 
     tmp_20_fu_90_p2 <= std_logic_vector(shift_left(unsigned(rlt2),to_integer(unsigned('0' & ap_const_lv32_1(31-1 downto 0)))));
-        tmp_57_cast_fu_101_p1 <= std_logic_vector(resize(signed(al2),47));
+        tmp_59_cast_fu_101_p1 <= std_logic_vector(resize(signed(al2),47));
 
         tmp_cast_fu_85_p1 <= std_logic_vector(resize(signed(al1),47));
 

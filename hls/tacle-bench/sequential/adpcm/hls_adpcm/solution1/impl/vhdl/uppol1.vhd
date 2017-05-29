@@ -102,7 +102,7 @@ architecture behav of uppol1 is
 
 
 begin
-    adpcm_main_mul_32bkb_x_U25 : component adpcm_main_mul_32bkb
+    adpcm_main_mul_32bkb_x_U68 : component adpcm_main_mul_32bkb
     generic map (
         ID => 1,
         NUM_STAGE => 6,

@@ -4,46 +4,11 @@
 
 /* clear all storage locations */
 
-void reset()
-{
-	int i;
 
-	detl = dec_detl = 32; /* reset to min scale factor */
-	deth = dec_deth = 8;
-	nbl = al1 = al2 = plt1 = plt2 = rlt1 = rlt2 = 0;
-	nbh = ah1 = ah2 = ph1 = ph2 = rh1 = rh2 = 0;
-	dec_nbl = dec_al1 = dec_al2 = dec_plt1 = dec_plt2 = dec_rlt1 =
-	                                  dec_rlt2 = 0;
-	dec_nbh = dec_ah1 = dec_ah2 = dec_ph1 = dec_ph2 = dec_rh1 = dec_rh2 =
-	        0;
-
-	for (i = 0; i < 6; i++) {
-		delay_dltx[i] = 0;
-		delay_dhx[i] = 0;
-		dec_del_dltx[i] = 0;
-		dec_del_dhx[i] = 0;
-	}
-
-	for (i = 0; i < 6; i++) {
-		delay_bpl[i] = 0;
-		delay_bph[i] = 0;
-		dec_del_bpl[i] = 0;
-		dec_del_bph[i] = 0;
-	}
-
-	for (i = 0; i < 24; i++)
-		tqmf[i] = 0;    // i<23
-
-	for (i = 0; i < 11; i++) {
-		accumc[i] = 0;
-		accumd[i] = 0;
-	}
-}
 
 void init(int test_data[MAX_SIZE])
 {
 	/* reset, initialize required memory */
-	reset();
 
 #if(TEST_VECTOR)
 
@@ -61,8 +26,8 @@ void init(int test_data[MAX_SIZE])
 	/* XXmain_0, MAX: 2 */
 	/* Since the number of times we loop in my_sin depends on the argument we
 	   add the fact: xxmain_0:[]: */
-	for ( i = 0 ; i < SIZE ; i++) {
-		test_data[i] = (int) j * adpcm_cos( f * PI * i );
+	for(i = 0 ; i < SIZE ; i++) {
+		test_data[i] = (int) j * adpcm_cos(f * PI * i);
 		//test_data[i] = (int) j*sin(2*f*i*3.14159265);
 
 		test_data[i] += x;
@@ -77,7 +42,7 @@ int enc_return(int compressed[MAX_SIZE])
 	int check_sum = 0;
 
 
-	for (i = 0 ; i < SIZE ; i += 2) {
+	for(i = 0 ; i < SIZE ; i += 2) {
 		check_sum += compressed[i/2];
 	}
 
@@ -89,7 +54,7 @@ int dec_return(int dec_result[MAX_SIZE])
 	int i;
 	int check_sum = 0;
 
-	for (i = 0; i < SIZE; i++) {
+	for(i = 0; i < SIZE; i++) {
 		check_sum += (dec_result[i]);
 	}
 
@@ -183,6 +148,16 @@ int main()
 	adpcm_main(test_data, compressed, dec_result, 1, SIZE);
 	//adpcm_main(test_data, test_compressed, dec_result, 1, SIZE);
 
+	adpcm_main(test_data, compressed, dec_result, 0, SIZE);
+	adpcm_main(test_data, compressed, dec_result, 1, SIZE);
+
+
+	adpcm_main(test_data, compressed, dec_result, 0, SIZE);
+	adpcm_main(test_data, compressed, dec_result, 1, SIZE);
+
+	adpcm_main(test_data, compressed, dec_result, 0, SIZE);
+	adpcm_main(test_data, compressed, dec_result, 1, SIZE);
+
 	printf("test_data\n");
 
 	for(i = 0; i < SIZE; i++) {
@@ -204,13 +179,13 @@ int main()
 
 
 #if(TEST_VECTOR)
-/*
-	for(i = 0; i < SIZE/2; i++) {
-		if(compressed[i] != test_compressed[i]) {
-			err_cnt++;
+	/*
+		for(i = 0; i < SIZE/2; i++) {
+			if(compressed[i] != test_compressed[i]) {
+				err_cnt++;
+			}
 		}
-	}
-*/
+	*/
 
 	for(i = 0; i < SIZE; i++) {
 		//printf("%d \t %d \n", dec_result[i], test_result[i]);
@@ -221,7 +196,7 @@ int main()
 
 	//printf("Err count is: %d\n", err_cnt);
 
-	if (err_cnt) {
+	if(err_cnt) {
 		printf("ERROR: %d\n", err_cnt);
 	} else {
 		printf("Test Passes:\n");

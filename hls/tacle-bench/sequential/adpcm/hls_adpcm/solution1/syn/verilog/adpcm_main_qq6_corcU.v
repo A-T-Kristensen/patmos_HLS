@@ -6,22 +6,22 @@
 // ==============================================================
 
 `timescale 1 ns / 1 ps
-(* rom_style = "distributed" *) module adpcm_main_qq4_cokbM_rom (
+module adpcm_main_qq6_corcU_rom (
 addr0, ce0, q0, clk);
 
 parameter DWIDTH = 16;
-parameter AWIDTH = 4;
-parameter MEM_SIZE = 16;
+parameter AWIDTH = 6;
+parameter MEM_SIZE = 64;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
 output reg[DWIDTH-1:0] q0;
 input clk;
 
-(* ram_style = "distributed" *)reg [DWIDTH-1:0] ram[0:MEM_SIZE-1];
+reg [DWIDTH-1:0] ram[0:MEM_SIZE-1];
 
 initial begin
-    $readmemh("./adpcm_main_qq4_cokbM_rom.dat", ram);
+    $readmemh("./adpcm_main_qq6_corcU_rom.dat", ram);
 end
 
 
@@ -40,7 +40,7 @@ endmodule
 
 
 `timescale 1 ns / 1 ps
-module adpcm_main_qq4_cokbM(
+module adpcm_main_qq6_corcU(
     reset,
     clk,
     address0,
@@ -48,8 +48,8 @@ module adpcm_main_qq4_cokbM(
     q0);
 
 parameter DataWidth = 32'd16;
-parameter AddressRange = 32'd16;
-parameter AddressWidth = 32'd4;
+parameter AddressRange = 32'd64;
+parameter AddressWidth = 32'd6;
 input reset;
 input clk;
 input[AddressWidth - 1:0] address0;
@@ -58,7 +58,7 @@ output[DataWidth - 1:0] q0;
 
 
 
-adpcm_main_qq4_cokbM_rom adpcm_main_qq4_cokbM_rom_U(
+adpcm_main_qq6_corcU_rom adpcm_main_qq6_corcU_rom_U(
     .clk( clk ),
     .addr0( address0 ),
     .ce0( ce0 ),

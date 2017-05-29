@@ -6,7 +6,7 @@
 // ==============================================================
 
 `timescale 1 ns / 1 ps
-module adpcm_main_delay_jbC_ram (addr0, ce0, d0, we0, q0, addr1, ce1, d1, we1, q1,  clk);
+module adpcm_main_delay_mb6_ram (addr0, ce0, d0, we0, q0, addr1, ce1, d1, we1,  clk);
 
 parameter DWIDTH = 32;
 parameter AWIDTH = 3;
@@ -21,13 +21,12 @@ input[AWIDTH-1:0] addr1;
 input ce1;
 input[DWIDTH-1:0] d1;
 input we1;
-output reg[DWIDTH-1:0] q1;
 input clk;
 
 (* ram_style = "block" *)reg [DWIDTH-1:0] ram[0:MEM_SIZE-1];
 
 initial begin
-    $readmemh("./adpcm_main_delay_jbC_ram.dat", ram);
+    $readmemh("./adpcm_main_delay_mb6_ram.dat", ram);
 end
 
 
@@ -54,10 +53,7 @@ begin
         if (we1) 
         begin 
             ram[addr1] <= d1; 
-            q1 <= d1;
         end 
-        else 
-            q1 <= ram[addr1];
     end
 end
 
@@ -66,7 +62,7 @@ endmodule
 
 
 `timescale 1 ns / 1 ps
-module adpcm_main_delay_jbC(
+module adpcm_main_delay_mb6(
     reset,
     clk,
     address0,
@@ -77,8 +73,7 @@ module adpcm_main_delay_jbC(
     address1,
     ce1,
     we1,
-    d1,
-    q1);
+    d1);
 
 parameter DataWidth = 32'd32;
 parameter AddressRange = 32'd6;
@@ -94,11 +89,10 @@ input[AddressWidth - 1:0] address1;
 input ce1;
 input we1;
 input[DataWidth - 1:0] d1;
-output[DataWidth - 1:0] q1;
 
 
 
-adpcm_main_delay_jbC_ram adpcm_main_delay_jbC_ram_U(
+adpcm_main_delay_mb6_ram adpcm_main_delay_mb6_ram_U(
     .clk( clk ),
     .addr0( address0 ),
     .ce0( ce0 ),
@@ -108,8 +102,7 @@ adpcm_main_delay_jbC_ram adpcm_main_delay_jbC_ram_U(
     .addr1( address1 ),
     .ce1( ce1 ),
     .d1( d1 ),
-    .we1( we1 ),
-    .q1( q1 ));
+    .we1( we1 ));
 
 endmodule
 

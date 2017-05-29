@@ -9,7 +9,7 @@ library ieee;
 use ieee.std_logic_1164.all; 
 use ieee.std_logic_unsigned.all;
 
-entity adpcm_main_qq6_copcA_rom is 
+entity adpcm_main_qq6_corcU_rom is 
     generic(
              dwidth     : integer := 16; 
              awidth     : integer := 6; 
@@ -24,7 +24,7 @@ entity adpcm_main_qq6_copcA_rom is
 end entity; 
 
 
-architecture rtl of adpcm_main_qq6_copcA_rom is 
+architecture rtl of adpcm_main_qq6_corcU_rom is 
 
 signal addr0_tmp : std_logic_vector(awidth-1 downto 0); 
 type mem_array is array (0 to mem_size-1) of std_logic_vector (dwidth-1 downto 0); 
@@ -83,7 +83,7 @@ end rtl;
 Library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity adpcm_main_qq6_copcA is
+entity adpcm_main_qq6_corcU is
     generic (
         DataWidth : INTEGER := 16;
         AddressRange : INTEGER := 64;
@@ -96,8 +96,8 @@ entity adpcm_main_qq6_copcA is
         q0 : OUT STD_LOGIC_VECTOR(DataWidth - 1 DOWNTO 0));
 end entity;
 
-architecture arch of adpcm_main_qq6_copcA is
-    component adpcm_main_qq6_copcA_rom is
+architecture arch of adpcm_main_qq6_corcU is
+    component adpcm_main_qq6_corcU_rom is
         port (
             clk : IN STD_LOGIC;
             addr0 : IN STD_LOGIC_VECTOR;
@@ -108,7 +108,7 @@ architecture arch of adpcm_main_qq6_copcA is
 
 
 begin
-    adpcm_main_qq6_copcA_rom_U :  component adpcm_main_qq6_copcA_rom
+    adpcm_main_qq6_corcU_rom_U :  component adpcm_main_qq6_corcU_rom
     port map (
         clk => clk,
         addr0 => address0,

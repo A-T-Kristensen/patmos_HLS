@@ -165,22 +165,22 @@ int encode(int xin1, int xin2)
 	/* transmit quadrature mirror filters implemented here */
 	h_ptr = h;
 	tqmf_ptr = tqmf;
-	xa = (long) (*tqmf_ptr++) * (*h_ptr++);
-	xb = (long) (*tqmf_ptr++) * (*h_ptr++);
+	xa = (long)(*tqmf_ptr++) * (*h_ptr++);
+	xb = (long)(*tqmf_ptr++) * (*h_ptr++);
 	/* main multiply accumulate loop for samples and coefficients */
-	for (i = 0; i < 10; i++) {
-	#pragma HLS PIPELINE
-		xa += (long) (*tqmf_ptr++) * (*h_ptr++);
-		xb += (long) (*tqmf_ptr++) * (*h_ptr++);
+	for(i = 0; i < 10; i++) {
+#pragma HLS PIPELINE
+		xa += (long)(*tqmf_ptr++) * (*h_ptr++);
+		xb += (long)(*tqmf_ptr++) * (*h_ptr++);
 	}
 	/* final mult/accumulate */
-	xa += (long) (*tqmf_ptr++) * (*h_ptr++);
-	xb += (long) (*tqmf_ptr) * (*h_ptr++);
+	xa += (long)(*tqmf_ptr++) * (*h_ptr++);
+	xb += (long)(*tqmf_ptr) * (*h_ptr++);
 
 	/* update delay line tqmf */
 	tqmf_ptr1 = tqmf_ptr - 2;
-	for (i = 0; i < 22; i++){
-	#pragma HLS PIPELINE
+	for(i = 0; i < 22; i++) {
+#pragma HLS PIPELINE
 		*tqmf_ptr-- = *tqmf_ptr1--;
 	}
 	*tqmf_ptr-- = xin1;
@@ -257,13 +257,13 @@ int encode(int xin1, int xin2)
 
 	/* quanth - quantization of difference signal for higher sub-band */
 	/* quanth: in-place for speed params: eh, deth (has init. value) */
-	if (eh >= 0) {
+	if(eh >= 0) {
 		enc_ih = 3;     /* 2,3 are pos codes */
 	} else {
 		enc_ih = 1;     /* 0,1 are neg codes */
 	}
 	decis = (564L * (long) deth) >> 12L;
-	if (adpcm_abs(eh) > decis)
+	if(adpcm_abs(eh) > decis)
 		enc_ih--;     /* mih = 2 case */
 
 	/* compute the quantized difference signal, higher sub-band*/
@@ -421,14 +421,14 @@ void decode(int input)
 	xa1 = (long) xd *(*h_ptr++);
 	xa2 = (long) xs *(*h_ptr++);
 	/* main multiply accumulate loop for samples and coefficients */
-	for (i = 0; i < 10; i++) {
-	#pragma HLS PIPELINE
-		xa1 += (long) (*ac_ptr++) * (*h_ptr++);
-		xa2 += (long) (*ad_ptr++) * (*h_ptr++);
+	for(i = 0; i < 10; i++) {
+#pragma HLS PIPELINE
+		xa1 += (long)(*ac_ptr++) * (*h_ptr++);
+		xa2 += (long)(*ad_ptr++) * (*h_ptr++);
 	}
 	/* final mult/accumulate */
-	xa1 += (long) (*ac_ptr) * (*h_ptr++);
-	xa2 += (long) (*ad_ptr) * (*h_ptr++);
+	xa1 += (long)(*ac_ptr) * (*h_ptr++);
+	xa2 += (long)(*ad_ptr) * (*h_ptr++);
 
 	/* scale by 2^14 */
 	xout1 = xa1 >> 14;
@@ -437,8 +437,8 @@ void decode(int input)
 	/* update delay lines */
 	ac_ptr1 = ac_ptr - 1;
 	ad_ptr1 = ad_ptr - 1;
-	for (i = 0; i < 10; i++) {
-	#pragma HLS PIPELINE
+	for(i = 0; i < 10; i++) {
+#pragma HLS PIPELINE
 		*ac_ptr-- = *ac_ptr1--;
 		*ad_ptr-- = *ad_ptr1--;
 	}
@@ -459,14 +459,14 @@ int filtez(int *bpl, int *dlt)
 	int i;
 	int temp;
 	long int zl;
-	zl = (long) (*bpl++) * (*dlt++);
-	for (i = 1; i < 6; i++){
-	#pragma HLS PIPELINE
+	zl = (long)(*bpl++) * (*dlt++);
+	for(i = 1; i < 6; i++) {
+#pragma HLS PIPELINE
 		temp = (*bpl++) * (*dlt++);
 		zl += (long) temp;
 	}
 
-	return ((int) (zl >> 14));  /* x2 here */
+	return ((int)(zl >> 14));   /* x2 here */
 }
 
 /* filtep - compute predictor output signal (pole section) */
@@ -483,7 +483,7 @@ int filtep(int rlt1, int al1, int rlt2, int al2)
 	pl = (long) al1 *pl;
 	pl2 = 2 * rlt2;
 	pl += (long) al2 *pl2;
-	return ((int) (pl >> 15));
+	return ((int)(pl >> 15));
 }
 
 /* quantl - quantize the difference signal in the lower sub-band */
@@ -499,14 +499,14 @@ int quantl(int el, int detl)
 	/* adpcm_abs of difference signal */
 	wd = adpcm_abs(el);
 	/* determine mil based on decision levels and detl gain */
-	for (mil = 0; mil < 30; mil++) {
-	#pragma HLS PIPELINE
+	for(mil = 0; mil < 30; mil++) {
+#pragma HLS PIPELINE
 		decis = (decis_levl[mil] * (long) detl) >> 15L;
-		if (wd <= decis)
+		if(wd <= decis)
 			break;
 	}
 	/* if mil=30 then wd is less than all decision levels */
-	if (el >= 0)
+	if(el >= 0)
 		ril = quant26bt_pos[mil];
 	else
 		ril = quant26bt_neg[mil];
@@ -524,9 +524,9 @@ int logscl(int il, int nbl)
 	long int wd;
 	wd = ((long) nbl * 127L) >> 7L; /* leak factor 127/128 */
 	nbl = (int) wd + wl_code_table[il >> 2];
-	if (nbl < 0)
+	if(nbl < 0)
 		nbl = 0;
-	if (nbl > 18432)
+	if(nbl > 18432)
 		nbl = 18432;
 	return (nbl);
 }
@@ -555,19 +555,19 @@ void upzero(int dlt, int *dlti, int *bli)
 
 	int i, wd2, wd3;
 	/*if dlt is zero, then no sum into bli */
-	if (dlt == 0) {
-		for (i = 0; i < 6; i++) {
-		#pragma HLS PIPELINE
-			bli[i] = (int) ((255L * bli[i]) >> 8L); /* leak factor of 255/256 */
+	if(dlt == 0) {
+		for(i = 0; i < 6; i++) {
+#pragma HLS PIPELINE
+			bli[i] = (int)((255L * bli[i]) >> 8L);  /* leak factor of 255/256 */
 		}
 	} else {
-		for (i = 0; i < 6; i++) {
-		#pragma HLS PIPELINE
-			if ((long) dlt * dlti[i] >= 0)
+		for(i = 0; i < 6; i++) {
+#pragma HLS PIPELINE
+			if((long) dlt * dlti[i] >= 0)
 				wd2 = 128;
 			else
 				wd2 = -128;
-			wd3 = (int) ((255L * bli[i]) >> 8L);  /* leak factor of 255/256 */
+			wd3 = (int)((255L * bli[i]) >> 8L);   /* leak factor of 255/256 */
 			bli[i] = wd2 + wd3;
 		}
 	}
@@ -592,10 +592,10 @@ int uppol2(int al1, int al2, int plt, int plt1, int plt2)
 	long int wd2, wd4;
 	int apl2;
 	wd2 = 4L * (long) al1;
-	if ((long) plt * plt1 >= 0L)
+	if((long) plt * plt1 >= 0L)
 		wd2 = -wd2;   /* check same sign */
 	wd2 = wd2 >> 7;   /* gain of 1/128 */
-	if ((long) plt * plt2 >= 0L) {
+	if((long) plt * plt2 >= 0L) {
 		wd4 = wd2 + 128;  /* same sign case */
 	} else {
 		wd4 = wd2 - 128;
@@ -603,9 +603,9 @@ int uppol2(int al1, int al2, int plt, int plt1, int plt2)
 	apl2 = wd4 + (127L * (long) al2 >> 7L); /* leak factor of 127/128 */
 
 	/* apl2 is limited to +-.75 */
-	if (apl2 > 12288)
+	if(apl2 > 12288)
 		apl2 = 12288;
-	if (apl2 < -12288)
+	if(apl2 < -12288)
 		apl2 = -12288;
 	return (apl2);
 }
@@ -622,16 +622,16 @@ int uppol1(int al1, int apl2, int plt, int plt1)
 	long int wd2;
 	int wd3, apl1;
 	wd2 = ((long) al1 * 255L) >> 8L;  /* leak factor of 255/256 */
-	if ((long) plt * plt1 >= 0L) {
+	if((long) plt * plt1 >= 0L) {
 		apl1 = (int) wd2 + 192; /* same sign case */
 	} else {
 		apl1 = (int) wd2 - 192;
 	}
 	/* note: wd3= .9375-.75 is always positive */
 	wd3 = 15360 - apl2;   /* limit value */
-	if (apl1 > wd3)
+	if(apl1 > wd3)
 		apl1 = wd3;
-	if (apl1 < -wd3)
+	if(apl1 < -wd3)
 		apl1 = -wd3;
 	return (apl1);
 }
@@ -646,11 +646,47 @@ int logsch(int ih, int nbh)
 	int wd;
 	wd = ((long) nbh * 127L) >> 7L; /* leak factor 127/128 */
 	nbh = wd + wh_code_table[ih];
-	if (nbh < 0)
+	if(nbh < 0)
 		nbh = 0;
-	if (nbh > 22528)
+	if(nbh > 22528)
 		nbh = 22528;
 	return (nbh);
+}
+
+void reset()
+{
+	int i;
+
+	detl = dec_detl = 32; /* reset to min scale factor */
+	deth = dec_deth = 8;
+	nbl = al1 = al2 = plt1 = plt2 = rlt1 = rlt2 = 0;
+	nbh = ah1 = ah2 = ph1 = ph2 = rh1 = rh2 = 0;
+	dec_nbl = dec_al1 = dec_al2 = dec_plt1 = dec_plt2 = dec_rlt1 =
+									  dec_rlt2 = 0;
+	dec_nbh = dec_ah1 = dec_ah2 = dec_ph1 = dec_ph2 = dec_rh1 = dec_rh2 =
+			0;
+
+	for(i = 0; i < 6; i++) {
+		delay_dltx[i] = 0;
+		delay_dhx[i] = 0;
+		dec_del_dltx[i] = 0;
+		dec_del_dhx[i] = 0;
+	}
+
+	for(i = 0; i < 6; i++) {
+		delay_bpl[i] = 0;
+		delay_bph[i] = 0;
+		dec_del_bpl[i] = 0;
+		dec_del_bph[i] = 0;
+	}
+
+	for(i = 0; i < 24; i++)
+		tqmf[i] = 0;    // i<23
+
+	for(i = 0; i < 11; i++) {
+		accumc[i] = 0;
+		accumd[i] = 0;
+	}
 }
 
 void adpcm_enc_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE], int size)
@@ -662,7 +698,7 @@ void adpcm_enc_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE], int size)
 	detl = 32; /* reset to min scale factor */
 	deth = 8;
 
-	for (i = 0; i < size; i += 2) {
+	for(i = 0; i < size; i += 2) {
 		compressed[i / 2] = encode(test_data[i], test_data[i + 1]);
 	}
 }
@@ -677,7 +713,7 @@ void adpcm_dec_main(int compressed[MAX_SIZE], int dec_result[MAX_SIZE], int size
 	dec_detl = 32; /* reset to min scale factor */
 	dec_deth = 8;
 
-	for (i = 0 ; i < size; i += 2) {
+	for(i = 0 ; i < size; i += 2) {
 		decode(compressed[i / 2]);
 		dec_result[i] = xout1;
 		if(i < size - 1) {
@@ -689,7 +725,7 @@ void adpcm_dec_main(int compressed[MAX_SIZE], int dec_result[MAX_SIZE], int size
 }
 
 void adpcm_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE],
-                int dec_result[MAX_SIZE], int select, int size)
+				int dec_result[MAX_SIZE], int select, int size)
 {
 #pragma HLS INTERFACE ap_none port=size
 #pragma HLS INTERFACE ap_none port=select
@@ -711,7 +747,7 @@ void adpcm_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE],
 #pragma HLS ALLOCATION instances=uppol1 limit=1 function
 #pragma HLS ALLOCATION instances=uppol2 limit=1 function
 #pragma HLS ALLOCATION instances=logsch limit=1 function
-
+	reset();
 
 	if(!select) {
 		adpcm_enc_main(test_data, compressed, size);

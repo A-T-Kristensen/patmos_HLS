@@ -64,7 +64,7 @@ wire   [30:0] tmp_4_fu_94_p4;
 wire   [31:0] nbh_assign_fu_108_p2;
 wire   [0:0] ap_CS_fsm_state2;
 wire   [30:0] p_s_fu_128_p3;
-wire   [0:0] tmp_38_fu_138_p2;
+wire   [0:0] tmp_40_fu_138_p2;
 wire   [14:0] tmp_19_fu_134_p1;
 reg   [1:0] ap_NS_fsm;
 
@@ -82,7 +82,7 @@ adpcm_main_mux_42eOg #(
     .din4_WIDTH( 32 ),
     .din5_WIDTH( 2 ),
     .dout_WIDTH( 32 ))
-adpcm_main_mux_42eOg_U30(
+adpcm_main_mux_42eOg_U73(
     .din1(ap_const_lv32_31E),
     .din2(ap_const_lv32_FFFFFF2A),
     .din3(ap_const_lv32_31E),
@@ -152,7 +152,7 @@ assign ap_CS_fsm_state1 = ap_CS_fsm[ap_const_lv32_0];
 
 assign ap_CS_fsm_state2 = ap_CS_fsm[ap_const_lv32_1];
 
-assign ap_return = ((tmp_38_fu_138_p2[0:0] === 1'b1) ? ap_const_lv15_5800 : tmp_19_fu_134_p1);
+assign ap_return = ((tmp_40_fu_138_p2[0:0] === 1'b1) ? ap_const_lv15_5800 : tmp_19_fu_134_p1);
 
 assign nbh_assign_cast_fu_114_p2 = (tmp_17_fu_104_p1 + tmp_4_fu_94_p4);
 
@@ -166,7 +166,7 @@ assign tmp_17_fu_104_p1 = tmp_fu_80_p6[30:0];
 
 assign tmp_19_fu_134_p1 = p_s_fu_128_p3[14:0];
 
-assign tmp_38_fu_138_p2 = ((p_s_fu_128_p3 > ap_const_lv31_5800) ? 1'b1 : 1'b0);
+assign tmp_40_fu_138_p2 = ((p_s_fu_128_p3 > ap_const_lv31_5800) ? 1'b1 : 1'b0);
 
 assign tmp_4_fu_94_p4 = {{tmp_s_fu_60_p2[ap_const_lv32_25 : ap_const_lv32_7]}};
 

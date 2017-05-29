@@ -27,7 +27,6 @@
 								<option id="gnu.cpp.compiler.option.include.paths.603211597" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc"/>
-									<listOptionValue builtIn="false" value="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/sequential/adpcm"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/systemc/include"/>
@@ -45,7 +44,6 @@
 								<option id="gnu.c.compiler.option.include.paths.2001352906" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc"/>
-									<listOptionValue builtIn="false" value="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/sequential/adpcm"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/systemc/include"/>
@@ -113,7 +111,6 @@
 								<option id="gnu.cpp.compiler.option.include.paths.68131111" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc"/>
-									<listOptionValue builtIn="false" value="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/sequential/adpcm"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/systemc/include"/>
@@ -126,7 +123,6 @@
 								<option id="gnu.c.compiler.option.include.paths.1035194000" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include/etc"/>
-									<listOptionValue builtIn="false" value="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/sequential/adpcm"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/include"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/home/patmos/Xilinx/Vivado_HLS/2016.4/lnx64/tools/systemc/include"/>

@@ -31,13 +31,13 @@ const sc_lv<31> logsch::ap_const_lv31_5800 = "101100000000000";
 const sc_lv<15> logsch::ap_const_lv15_5800 = "101100000000000";
 
 logsch::logsch(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    adpcm_main_mux_42eOg_U30 = new adpcm_main_mux_42eOg<1,1,32,32,32,32,2,32>("adpcm_main_mux_42eOg_U30");
-    adpcm_main_mux_42eOg_U30->din1(ap_var_for_const0);
-    adpcm_main_mux_42eOg_U30->din2(ap_var_for_const1);
-    adpcm_main_mux_42eOg_U30->din3(ap_var_for_const0);
-    adpcm_main_mux_42eOg_U30->din4(ap_var_for_const1);
-    adpcm_main_mux_42eOg_U30->din5(tmp_fu_80_p5);
-    adpcm_main_mux_42eOg_U30->dout(tmp_fu_80_p6);
+    adpcm_main_mux_42eOg_U73 = new adpcm_main_mux_42eOg<1,1,32,32,32,32,2,32>("adpcm_main_mux_42eOg_U73");
+    adpcm_main_mux_42eOg_U73->din1(ap_var_for_const0);
+    adpcm_main_mux_42eOg_U73->din2(ap_var_for_const1);
+    adpcm_main_mux_42eOg_U73->din3(ap_var_for_const0);
+    adpcm_main_mux_42eOg_U73->din4(ap_var_for_const1);
+    adpcm_main_mux_42eOg_U73->din5(tmp_fu_80_p5);
+    adpcm_main_mux_42eOg_U73->dout(tmp_fu_80_p6);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -63,7 +63,7 @@ logsch::logsch(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_ap_return);
     sensitive << ( ap_CS_fsm_state2 );
-    sensitive << ( tmp_38_fu_138_p2 );
+    sensitive << ( tmp_40_fu_138_p2 );
     sensitive << ( tmp_19_fu_134_p1 );
 
     SC_METHOD(thread_nbh_assign_cast_fu_114_p2);
@@ -87,7 +87,7 @@ logsch::logsch(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_tmp_19_fu_134_p1);
     sensitive << ( p_s_fu_128_p3 );
 
-    SC_METHOD(thread_tmp_38_fu_138_p2);
+    SC_METHOD(thread_tmp_40_fu_138_p2);
     sensitive << ( ap_CS_fsm_state2 );
     sensitive << ( p_s_fu_128_p3 );
 
@@ -152,7 +152,7 @@ logsch::logsch(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, nbh_assign_fu_108_p2, "nbh_assign_fu_108_p2");
     sc_trace(mVcdFile, ap_CS_fsm_state2, "ap_CS_fsm_state2");
     sc_trace(mVcdFile, p_s_fu_128_p3, "p_s_fu_128_p3");
-    sc_trace(mVcdFile, tmp_38_fu_138_p2, "tmp_38_fu_138_p2");
+    sc_trace(mVcdFile, tmp_40_fu_138_p2, "tmp_40_fu_138_p2");
     sc_trace(mVcdFile, tmp_19_fu_134_p1, "tmp_19_fu_134_p1");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
 #endif
@@ -164,7 +164,7 @@ logsch::~logsch() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
-    delete adpcm_main_mux_42eOg_U30;
+    delete adpcm_main_mux_42eOg_U73;
 }
 
 void logsch::thread_ap_var_for_const0() {
@@ -223,7 +223,7 @@ void logsch::thread_ap_ready() {
 }
 
 void logsch::thread_ap_return() {
-    ap_return = (!tmp_38_fu_138_p2.read()[0].is_01())? sc_lv<15>(): ((tmp_38_fu_138_p2.read()[0].to_bool())? ap_const_lv15_5800: tmp_19_fu_134_p1.read());
+    ap_return = (!tmp_40_fu_138_p2.read()[0].is_01())? sc_lv<15>(): ((tmp_40_fu_138_p2.read()[0].to_bool())? ap_const_lv15_5800: tmp_19_fu_134_p1.read());
 }
 
 void logsch::thread_nbh_assign_cast_fu_114_p2() {
@@ -250,8 +250,8 @@ void logsch::thread_tmp_19_fu_134_p1() {
     tmp_19_fu_134_p1 = p_s_fu_128_p3.read().range(15-1, 0);
 }
 
-void logsch::thread_tmp_38_fu_138_p2() {
-    tmp_38_fu_138_p2 = (!p_s_fu_128_p3.read().is_01() || !ap_const_lv31_5800.is_01())? sc_lv<1>(): (sc_biguint<31>(p_s_fu_128_p3.read()) > sc_biguint<31>(ap_const_lv31_5800));
+void logsch::thread_tmp_40_fu_138_p2() {
+    tmp_40_fu_138_p2 = (!p_s_fu_128_p3.read().is_01() || !ap_const_lv31_5800.is_01())? sc_lv<1>(): (sc_biguint<31>(p_s_fu_128_p3.read()) > sc_biguint<31>(ap_const_lv31_5800));
 }
 
 void logsch::thread_tmp_4_fu_94_p4() {

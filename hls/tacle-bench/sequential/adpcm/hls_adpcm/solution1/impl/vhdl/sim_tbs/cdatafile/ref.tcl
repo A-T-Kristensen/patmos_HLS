@@ -5,4 +5,4 @@ set depth_list {
 {select_r 1}
 {size 1}
 }
-set trans_num 2
+set trans_num 8

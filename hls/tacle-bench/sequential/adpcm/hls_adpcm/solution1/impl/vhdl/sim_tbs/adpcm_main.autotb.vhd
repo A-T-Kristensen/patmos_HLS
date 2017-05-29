@@ -38,7 +38,7 @@ entity apatb_adpcm_main_top is
       LENGTH_dec_result     : INTEGER := 100;
       LENGTH_select_r     : INTEGER := 1;
       LENGTH_size     : INTEGER := 1;
-	    AUTOTB_TRANSACTION_NUM    : INTEGER := 2
+	    AUTOTB_TRANSACTION_NUM    : INTEGER := 8
 );
 
 end apatb_adpcm_main_top;

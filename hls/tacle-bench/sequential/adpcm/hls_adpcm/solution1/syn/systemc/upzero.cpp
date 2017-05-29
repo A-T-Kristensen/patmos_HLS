@@ -52,13 +52,13 @@ const sc_lv<8> upzero::ap_const_lv8_0 = "00000000";
 const sc_lv<32> upzero::ap_const_lv32_27 = "100111";
 
 upzero::upzero(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    adpcm_main_mul_32bkb_x_U15 = new adpcm_main_mul_32bkb<1,6,32,32,64>("adpcm_main_mul_32bkb_x_U15");
-    adpcm_main_mul_32bkb_x_U15->clk(ap_clk);
-    adpcm_main_mul_32bkb_x_U15->reset(ap_rst);
-    adpcm_main_mul_32bkb_x_U15->din0(grp_fu_218_p0);
-    adpcm_main_mul_32bkb_x_U15->din1(reg_229);
-    adpcm_main_mul_32bkb_x_U15->ce(ap_var_for_const0);
-    adpcm_main_mul_32bkb_x_U15->dout(grp_fu_218_p2);
+    adpcm_main_mul_32bkb_x_U58 = new adpcm_main_mul_32bkb<1,6,32,32,64>("adpcm_main_mul_32bkb_x_U58");
+    adpcm_main_mul_32bkb_x_U58->clk(ap_clk);
+    adpcm_main_mul_32bkb_x_U58->reset(ap_rst);
+    adpcm_main_mul_32bkb_x_U58->din0(grp_fu_218_p0);
+    adpcm_main_mul_32bkb_x_U58->din1(reg_229);
+    adpcm_main_mul_32bkb_x_U58->ce(ap_var_for_const0);
+    adpcm_main_mul_32bkb_x_U58->dout(grp_fu_218_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -431,7 +431,7 @@ upzero::~upzero() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
-    delete adpcm_main_mul_32bkb_x_U15;
+    delete adpcm_main_mul_32bkb_x_U58;
 }
 
 void upzero::thread_ap_var_for_const0() {
