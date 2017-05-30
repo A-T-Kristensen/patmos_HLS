@@ -78,42 +78,42 @@ module reset (
         dec_ah1_ap_vld,
         dec_nbh,
         dec_nbh_ap_vld,
-        delay_dltx_address0,
-        delay_dltx_ce0,
-        delay_dltx_we0,
-        delay_dltx_d0,
-        delay_dhx_address0,
-        delay_dhx_ce0,
-        delay_dhx_we0,
-        delay_dhx_d0,
-        dec_del_dltx_address0,
-        dec_del_dltx_ce0,
-        dec_del_dltx_we0,
-        dec_del_dltx_d0,
-        dec_del_dhx_address0,
-        dec_del_dhx_ce0,
-        dec_del_dhx_we0,
-        dec_del_dhx_d0,
-        delay_bpl_address0,
-        delay_bpl_ce0,
-        delay_bpl_we0,
-        delay_bpl_d0,
-        delay_bph_address0,
-        delay_bph_ce0,
-        delay_bph_we0,
-        delay_bph_d0,
-        dec_del_bpl_address0,
-        dec_del_bpl_ce0,
-        dec_del_bpl_we0,
-        dec_del_bpl_d0,
-        dec_del_bph_address0,
-        dec_del_bph_ce0,
-        dec_del_bph_we0,
-        dec_del_bph_d0,
-        tqmf_address0,
-        tqmf_ce0,
-        tqmf_we0,
-        tqmf_d0,
+        delay_dltx_address1,
+        delay_dltx_ce1,
+        delay_dltx_we1,
+        delay_dltx_d1,
+        delay_dhx_address1,
+        delay_dhx_ce1,
+        delay_dhx_we1,
+        delay_dhx_d1,
+        dec_del_dltx_address1,
+        dec_del_dltx_ce1,
+        dec_del_dltx_we1,
+        dec_del_dltx_d1,
+        dec_del_dhx_address1,
+        dec_del_dhx_ce1,
+        dec_del_dhx_we1,
+        dec_del_dhx_d1,
+        delay_bpl_address1,
+        delay_bpl_ce1,
+        delay_bpl_we1,
+        delay_bpl_d1,
+        delay_bph_address1,
+        delay_bph_ce1,
+        delay_bph_we1,
+        delay_bph_d1,
+        dec_del_bpl_address1,
+        dec_del_bpl_ce1,
+        dec_del_bpl_we1,
+        dec_del_bpl_d1,
+        dec_del_bph_address1,
+        dec_del_bph_ce1,
+        dec_del_bph_we1,
+        dec_del_bph_d1,
+        tqmf_address1,
+        tqmf_ce1,
+        tqmf_we1,
+        tqmf_d1,
         accumc_address0,
         accumc_ce0,
         accumc_we0,
@@ -216,42 +216,42 @@ output  [31:0] dec_ah1;
 output   dec_ah1_ap_vld;
 output  [31:0] dec_nbh;
 output   dec_nbh_ap_vld;
-output  [2:0] delay_dltx_address0;
-output   delay_dltx_ce0;
-output   delay_dltx_we0;
-output  [31:0] delay_dltx_d0;
-output  [2:0] delay_dhx_address0;
-output   delay_dhx_ce0;
-output   delay_dhx_we0;
-output  [31:0] delay_dhx_d0;
-output  [2:0] dec_del_dltx_address0;
-output   dec_del_dltx_ce0;
-output   dec_del_dltx_we0;
-output  [31:0] dec_del_dltx_d0;
-output  [2:0] dec_del_dhx_address0;
-output   dec_del_dhx_ce0;
-output   dec_del_dhx_we0;
-output  [31:0] dec_del_dhx_d0;
-output  [2:0] delay_bpl_address0;
-output   delay_bpl_ce0;
-output   delay_bpl_we0;
-output  [31:0] delay_bpl_d0;
-output  [2:0] delay_bph_address0;
-output   delay_bph_ce0;
-output   delay_bph_we0;
-output  [31:0] delay_bph_d0;
-output  [2:0] dec_del_bpl_address0;
-output   dec_del_bpl_ce0;
-output   dec_del_bpl_we0;
-output  [31:0] dec_del_bpl_d0;
-output  [2:0] dec_del_bph_address0;
-output   dec_del_bph_ce0;
-output   dec_del_bph_we0;
-output  [31:0] dec_del_bph_d0;
-output  [4:0] tqmf_address0;
-output   tqmf_ce0;
-output   tqmf_we0;
-output  [31:0] tqmf_d0;
+output  [2:0] delay_dltx_address1;
+output   delay_dltx_ce1;
+output   delay_dltx_we1;
+output  [31:0] delay_dltx_d1;
+output  [2:0] delay_dhx_address1;
+output   delay_dhx_ce1;
+output   delay_dhx_we1;
+output  [31:0] delay_dhx_d1;
+output  [2:0] dec_del_dltx_address1;
+output   dec_del_dltx_ce1;
+output   dec_del_dltx_we1;
+output  [31:0] dec_del_dltx_d1;
+output  [2:0] dec_del_dhx_address1;
+output   dec_del_dhx_ce1;
+output   dec_del_dhx_we1;
+output  [31:0] dec_del_dhx_d1;
+output  [2:0] delay_bpl_address1;
+output   delay_bpl_ce1;
+output   delay_bpl_we1;
+output  [31:0] delay_bpl_d1;
+output  [2:0] delay_bph_address1;
+output   delay_bph_ce1;
+output   delay_bph_we1;
+output  [31:0] delay_bph_d1;
+output  [2:0] dec_del_bpl_address1;
+output   dec_del_bpl_ce1;
+output   dec_del_bpl_we1;
+output  [31:0] dec_del_bpl_d1;
+output  [2:0] dec_del_bph_address1;
+output   dec_del_bph_ce1;
+output   dec_del_bph_we1;
+output  [31:0] dec_del_bph_d1;
+output  [4:0] tqmf_address1;
+output   tqmf_ce1;
+output   tqmf_we1;
+output  [31:0] tqmf_d1;
 output  [3:0] accumc_address0;
 output   accumc_ce0;
 output   accumc_we0;
@@ -296,24 +296,24 @@ reg dec_ph1_ap_vld;
 reg dec_ah2_ap_vld;
 reg dec_ah1_ap_vld;
 reg dec_nbh_ap_vld;
-reg delay_dltx_ce0;
-reg delay_dltx_we0;
-reg delay_dhx_ce0;
-reg delay_dhx_we0;
-reg dec_del_dltx_ce0;
-reg dec_del_dltx_we0;
-reg dec_del_dhx_ce0;
-reg dec_del_dhx_we0;
-reg delay_bpl_ce0;
-reg delay_bpl_we0;
-reg delay_bph_ce0;
-reg delay_bph_we0;
-reg dec_del_bpl_ce0;
-reg dec_del_bpl_we0;
-reg dec_del_bph_ce0;
-reg dec_del_bph_we0;
-reg tqmf_ce0;
-reg tqmf_we0;
+reg delay_dltx_ce1;
+reg delay_dltx_we1;
+reg delay_dhx_ce1;
+reg delay_dhx_we1;
+reg dec_del_dltx_ce1;
+reg dec_del_dltx_we1;
+reg dec_del_dhx_ce1;
+reg dec_del_dhx_we1;
+reg delay_bpl_ce1;
+reg delay_bpl_we1;
+reg delay_bph_ce1;
+reg delay_bph_we1;
+reg dec_del_bpl_ce1;
+reg dec_del_bpl_we1;
+reg dec_del_bph_ce1;
+reg dec_del_bph_we1;
+reg tqmf_ce1;
+reg tqmf_we1;
 reg accumc_ce0;
 reg accumc_we0;
 reg accumd_ce0;
@@ -321,26 +321,26 @@ reg accumd_we0;
 
 (* fsm_encoding = "none" *) reg   [4:0] ap_CS_fsm;
 wire   [0:0] ap_CS_fsm_state1;
-wire   [2:0] i_4_fu_505_p2;
+wire   [2:0] i_4_fu_542_p2;
 wire   [0:0] ap_CS_fsm_state2;
-wire   [2:0] i_5_fu_525_p2;
+wire   [2:0] i_5_fu_562_p2;
 wire   [0:0] ap_CS_fsm_state3;
-wire   [4:0] i_6_fu_545_p2;
+wire   [4:0] i_6_fu_582_p2;
 wire   [0:0] ap_CS_fsm_state4;
-wire   [3:0] i_7_fu_562_p2;
+wire   [3:0] i_7_fu_599_p2;
 wire   [0:0] ap_CS_fsm_state5;
-reg   [2:0] i_reg_263;
-wire   [0:0] exitcond3_fu_499_p2;
-reg   [2:0] i_1_reg_274;
-wire   [0:0] exitcond2_fu_519_p2;
-reg   [4:0] i_2_reg_285;
-wire   [0:0] exitcond1_fu_539_p2;
-reg   [3:0] i_3_reg_296;
-wire   [0:0] exitcond_fu_556_p2;
-wire   [63:0] tmp_fu_511_p1;
-wire   [63:0] tmp_s_fu_531_p1;
-wire   [63:0] tmp_30_fu_551_p1;
-wire   [63:0] tmp_31_fu_568_p1;
+reg   [2:0] i_reg_300;
+wire   [0:0] exitcond3_fu_536_p2;
+reg   [2:0] i_1_reg_311;
+wire   [0:0] exitcond2_fu_556_p2;
+reg   [4:0] i_2_reg_322;
+wire   [0:0] exitcond1_fu_576_p2;
+reg   [3:0] i_3_reg_333;
+wire   [0:0] exitcond_fu_593_p2;
+wire   [63:0] tmp_fu_548_p1;
+wire   [63:0] tmp_s_fu_568_p1;
+wire   [63:0] tmp_30_fu_588_p1;
+wire   [63:0] tmp_31_fu_605_p1;
 reg   [4:0] ap_NS_fsm;
 
 // power-on initialization
@@ -357,34 +357,34 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state2) & ~(exitcond3_fu_499_p2 == 1'b0))) begin
-        i_1_reg_274 <= ap_const_lv3_0;
-    end else if (((1'b1 == ap_CS_fsm_state3) & (1'b0 == exitcond2_fu_519_p2))) begin
-        i_1_reg_274 <= i_5_fu_525_p2;
+    if (((1'b1 == ap_CS_fsm_state2) & ~(exitcond3_fu_536_p2 == 1'b0))) begin
+        i_1_reg_311 <= ap_const_lv3_0;
+    end else if (((1'b1 == ap_CS_fsm_state3) & (1'b0 == exitcond2_fu_556_p2))) begin
+        i_1_reg_311 <= i_5_fu_562_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state3) & ~(1'b0 == exitcond2_fu_519_p2))) begin
-        i_2_reg_285 <= ap_const_lv5_0;
-    end else if (((1'b1 == ap_CS_fsm_state4) & (1'b0 == exitcond1_fu_539_p2))) begin
-        i_2_reg_285 <= i_6_fu_545_p2;
+    if (((1'b1 == ap_CS_fsm_state3) & ~(1'b0 == exitcond2_fu_556_p2))) begin
+        i_2_reg_322 <= ap_const_lv5_0;
+    end else if (((1'b1 == ap_CS_fsm_state4) & (1'b0 == exitcond1_fu_576_p2))) begin
+        i_2_reg_322 <= i_6_fu_582_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state4) & ~(1'b0 == exitcond1_fu_539_p2))) begin
-        i_3_reg_296 <= ap_const_lv4_0;
-    end else if (((1'b1 == ap_CS_fsm_state5) & (1'b0 == exitcond_fu_556_p2))) begin
-        i_3_reg_296 <= i_7_fu_562_p2;
+    if (((1'b1 == ap_CS_fsm_state4) & ~(1'b0 == exitcond1_fu_576_p2))) begin
+        i_3_reg_333 <= ap_const_lv4_0;
+    end else if (((1'b1 == ap_CS_fsm_state5) & (1'b0 == exitcond_fu_593_p2))) begin
+        i_3_reg_333 <= i_7_fu_599_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (exitcond3_fu_499_p2 == 1'b0))) begin
-        i_reg_263 <= i_4_fu_505_p2;
+    if (((1'b1 == ap_CS_fsm_state2) & (exitcond3_fu_536_p2 == 1'b0))) begin
+        i_reg_300 <= i_4_fu_542_p2;
     end else if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0))) begin
-        i_reg_263 <= ap_const_lv3_0;
+        i_reg_300 <= ap_const_lv3_0;
     end
 end
 
@@ -397,7 +397,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) & (1'b0 == exitcond_fu_556_p2))) begin
+    if (((1'b1 == ap_CS_fsm_state5) & (1'b0 == exitcond_fu_593_p2))) begin
         accumc_we0 = 1'b1;
     end else begin
         accumc_we0 = 1'b0;
@@ -413,7 +413,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) & (1'b0 == exitcond_fu_556_p2))) begin
+    if (((1'b1 == ap_CS_fsm_state5) & (1'b0 == exitcond_fu_593_p2))) begin
         accumd_we0 = 1'b1;
     end else begin
         accumd_we0 = 1'b0;
@@ -453,7 +453,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((1'b0 == ap_start) & (ap_CS_fsm_state1 == 1'b1)) | ((1'b1 == ap_CS_fsm_state5) & ~(1'b0 == exitcond_fu_556_p2)))) begin
+    if ((((1'b0 == ap_start) & (ap_CS_fsm_state1 == 1'b1)) | ((1'b1 == ap_CS_fsm_state5) & ~(1'b0 == exitcond_fu_593_p2)))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -469,7 +469,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) & ~(1'b0 == exitcond_fu_556_p2))) begin
+    if (((1'b1 == ap_CS_fsm_state5) & ~(1'b0 == exitcond_fu_593_p2))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -510,65 +510,65 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        dec_del_bph_ce0 = 1'b1;
+        dec_del_bph_ce1 = 1'b1;
     end else begin
-        dec_del_bph_ce0 = 1'b0;
+        dec_del_bph_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (1'b0 == exitcond2_fu_519_p2))) begin
-        dec_del_bph_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state3) & (1'b0 == exitcond2_fu_556_p2))) begin
+        dec_del_bph_we1 = 1'b1;
     end else begin
-        dec_del_bph_we0 = 1'b0;
+        dec_del_bph_we1 = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        dec_del_bpl_ce0 = 1'b1;
+        dec_del_bpl_ce1 = 1'b1;
     end else begin
-        dec_del_bpl_ce0 = 1'b0;
+        dec_del_bpl_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (1'b0 == exitcond2_fu_519_p2))) begin
-        dec_del_bpl_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state3) & (1'b0 == exitcond2_fu_556_p2))) begin
+        dec_del_bpl_we1 = 1'b1;
     end else begin
-        dec_del_bpl_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
-        dec_del_dhx_ce0 = 1'b1;
-    end else begin
-        dec_del_dhx_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (exitcond3_fu_499_p2 == 1'b0))) begin
-        dec_del_dhx_we0 = 1'b1;
-    end else begin
-        dec_del_dhx_we0 = 1'b0;
+        dec_del_bpl_we1 = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        dec_del_dltx_ce0 = 1'b1;
+        dec_del_dhx_ce1 = 1'b1;
     end else begin
-        dec_del_dltx_ce0 = 1'b0;
+        dec_del_dhx_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (exitcond3_fu_499_p2 == 1'b0))) begin
-        dec_del_dltx_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state2) & (exitcond3_fu_536_p2 == 1'b0))) begin
+        dec_del_dhx_we1 = 1'b1;
     end else begin
-        dec_del_dltx_we0 = 1'b0;
+        dec_del_dhx_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        dec_del_dltx_ce1 = 1'b1;
+    end else begin
+        dec_del_dltx_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state2) & (exitcond3_fu_536_p2 == 1'b0))) begin
+        dec_del_dltx_we1 = 1'b1;
+    end else begin
+        dec_del_dltx_we1 = 1'b0;
     end
 end
 
@@ -670,65 +670,65 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        delay_bph_ce0 = 1'b1;
+        delay_bph_ce1 = 1'b1;
     end else begin
-        delay_bph_ce0 = 1'b0;
+        delay_bph_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (1'b0 == exitcond2_fu_519_p2))) begin
-        delay_bph_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state3) & (1'b0 == exitcond2_fu_556_p2))) begin
+        delay_bph_we1 = 1'b1;
     end else begin
-        delay_bph_we0 = 1'b0;
+        delay_bph_we1 = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        delay_bpl_ce0 = 1'b1;
+        delay_bpl_ce1 = 1'b1;
     end else begin
-        delay_bpl_ce0 = 1'b0;
+        delay_bpl_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (1'b0 == exitcond2_fu_519_p2))) begin
-        delay_bpl_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state3) & (1'b0 == exitcond2_fu_556_p2))) begin
+        delay_bpl_we1 = 1'b1;
     end else begin
-        delay_bpl_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
-        delay_dhx_ce0 = 1'b1;
-    end else begin
-        delay_dhx_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (exitcond3_fu_499_p2 == 1'b0))) begin
-        delay_dhx_we0 = 1'b1;
-    end else begin
-        delay_dhx_we0 = 1'b0;
+        delay_bpl_we1 = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        delay_dltx_ce0 = 1'b1;
+        delay_dhx_ce1 = 1'b1;
     end else begin
-        delay_dltx_ce0 = 1'b0;
+        delay_dhx_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (exitcond3_fu_499_p2 == 1'b0))) begin
-        delay_dltx_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state2) & (exitcond3_fu_536_p2 == 1'b0))) begin
+        delay_dhx_we1 = 1'b1;
     end else begin
-        delay_dltx_we0 = 1'b0;
+        delay_dhx_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        delay_dltx_ce1 = 1'b1;
+    end else begin
+        delay_dltx_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state2) & (exitcond3_fu_536_p2 == 1'b0))) begin
+        delay_dltx_we1 = 1'b1;
+    end else begin
+        delay_dltx_we1 = 1'b0;
     end
 end
 
@@ -830,17 +830,17 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
-        tqmf_ce0 = 1'b1;
+        tqmf_ce1 = 1'b1;
     end else begin
-        tqmf_ce0 = 1'b0;
+        tqmf_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) & (1'b0 == exitcond1_fu_539_p2))) begin
-        tqmf_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state4) & (1'b0 == exitcond1_fu_576_p2))) begin
+        tqmf_we1 = 1'b1;
     end else begin
-        tqmf_we0 = 1'b0;
+        tqmf_we1 = 1'b0;
     end
 end
 
@@ -854,28 +854,28 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (~(exitcond3_fu_499_p2 == 1'b0)) begin
+            if (~(exitcond3_fu_536_p2 == 1'b0)) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end
         end
         ap_ST_fsm_state3 : begin
-            if (~(1'b0 == exitcond2_fu_519_p2)) begin
+            if (~(1'b0 == exitcond2_fu_556_p2)) begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end
         end
         ap_ST_fsm_state4 : begin
-            if (~(1'b0 == exitcond1_fu_539_p2)) begin
+            if (~(1'b0 == exitcond1_fu_576_p2)) begin
                 ap_NS_fsm = ap_ST_fsm_state5;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end
         end
         ap_ST_fsm_state5 : begin
-            if (~(1'b0 == exitcond_fu_556_p2)) begin
+            if (~(1'b0 == exitcond_fu_593_p2)) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state5;
@@ -887,11 +887,11 @@ always @ (*) begin
     endcase
 end
 
-assign accumc_address0 = tmp_31_fu_568_p1;
+assign accumc_address0 = tmp_31_fu_605_p1;
 
 assign accumc_d0 = ap_const_lv32_0;
 
-assign accumd_address0 = tmp_31_fu_568_p1;
+assign accumd_address0 = tmp_31_fu_605_p1;
 
 assign accumd_d0 = ap_const_lv32_0;
 
@@ -921,21 +921,21 @@ assign dec_al1 = ap_const_lv32_0;
 
 assign dec_al2 = ap_const_lv32_0;
 
-assign dec_del_bph_address0 = tmp_s_fu_531_p1;
+assign dec_del_bph_address1 = tmp_s_fu_568_p1;
 
-assign dec_del_bph_d0 = ap_const_lv32_0;
+assign dec_del_bph_d1 = ap_const_lv32_0;
 
-assign dec_del_bpl_address0 = tmp_s_fu_531_p1;
+assign dec_del_bpl_address1 = tmp_s_fu_568_p1;
 
-assign dec_del_bpl_d0 = ap_const_lv32_0;
+assign dec_del_bpl_d1 = ap_const_lv32_0;
 
-assign dec_del_dhx_address0 = tmp_fu_511_p1;
+assign dec_del_dhx_address1 = tmp_fu_548_p1;
 
-assign dec_del_dhx_d0 = ap_const_lv32_0;
+assign dec_del_dhx_d1 = ap_const_lv32_0;
 
-assign dec_del_dltx_address0 = tmp_fu_511_p1;
+assign dec_del_dltx_address1 = tmp_fu_548_p1;
 
-assign dec_del_dltx_d0 = ap_const_lv32_0;
+assign dec_del_dltx_d1 = ap_const_lv32_0;
 
 assign dec_deth = ap_const_lv32_8;
 
@@ -961,41 +961,41 @@ assign dec_rlt1 = ap_const_lv32_0;
 
 assign dec_rlt2 = ap_const_lv32_0;
 
-assign delay_bph_address0 = tmp_s_fu_531_p1;
+assign delay_bph_address1 = tmp_s_fu_568_p1;
 
-assign delay_bph_d0 = ap_const_lv32_0;
+assign delay_bph_d1 = ap_const_lv32_0;
 
-assign delay_bpl_address0 = tmp_s_fu_531_p1;
+assign delay_bpl_address1 = tmp_s_fu_568_p1;
 
-assign delay_bpl_d0 = ap_const_lv32_0;
+assign delay_bpl_d1 = ap_const_lv32_0;
 
-assign delay_dhx_address0 = tmp_fu_511_p1;
+assign delay_dhx_address1 = tmp_fu_548_p1;
 
-assign delay_dhx_d0 = ap_const_lv32_0;
+assign delay_dhx_d1 = ap_const_lv32_0;
 
-assign delay_dltx_address0 = tmp_fu_511_p1;
+assign delay_dltx_address1 = tmp_fu_548_p1;
 
-assign delay_dltx_d0 = ap_const_lv32_0;
+assign delay_dltx_d1 = ap_const_lv32_0;
 
 assign deth = ap_const_lv32_8;
 
 assign detl = ap_const_lv32_20;
 
-assign exitcond1_fu_539_p2 = ((i_2_reg_285 == ap_const_lv5_18) ? 1'b1 : 1'b0);
+assign exitcond1_fu_576_p2 = ((i_2_reg_322 == ap_const_lv5_18) ? 1'b1 : 1'b0);
 
-assign exitcond2_fu_519_p2 = ((i_1_reg_274 == ap_const_lv3_6) ? 1'b1 : 1'b0);
+assign exitcond2_fu_556_p2 = ((i_1_reg_311 == ap_const_lv3_6) ? 1'b1 : 1'b0);
 
-assign exitcond3_fu_499_p2 = ((i_reg_263 == ap_const_lv3_6) ? 1'b1 : 1'b0);
+assign exitcond3_fu_536_p2 = ((i_reg_300 == ap_const_lv3_6) ? 1'b1 : 1'b0);
 
-assign exitcond_fu_556_p2 = ((i_3_reg_296 == ap_const_lv4_B) ? 1'b1 : 1'b0);
+assign exitcond_fu_593_p2 = ((i_3_reg_333 == ap_const_lv4_B) ? 1'b1 : 1'b0);
 
-assign i_4_fu_505_p2 = (i_reg_263 + ap_const_lv3_1);
+assign i_4_fu_542_p2 = (i_reg_300 + ap_const_lv3_1);
 
-assign i_5_fu_525_p2 = (i_1_reg_274 + ap_const_lv3_1);
+assign i_5_fu_562_p2 = (i_1_reg_311 + ap_const_lv3_1);
 
-assign i_6_fu_545_p2 = (i_2_reg_285 + ap_const_lv5_1);
+assign i_6_fu_582_p2 = (i_2_reg_322 + ap_const_lv5_1);
 
-assign i_7_fu_562_p2 = (i_3_reg_296 + ap_const_lv4_1);
+assign i_7_fu_599_p2 = (i_3_reg_333 + ap_const_lv4_1);
 
 assign nbh = ap_const_lv32_0;
 
@@ -1017,16 +1017,16 @@ assign rlt1 = ap_const_lv32_0;
 
 assign rlt2 = ap_const_lv32_0;
 
-assign tmp_30_fu_551_p1 = i_2_reg_285;
+assign tmp_30_fu_588_p1 = i_2_reg_322;
 
-assign tmp_31_fu_568_p1 = i_3_reg_296;
+assign tmp_31_fu_605_p1 = i_3_reg_333;
 
-assign tmp_fu_511_p1 = i_reg_263;
+assign tmp_fu_548_p1 = i_reg_300;
 
-assign tmp_s_fu_531_p1 = i_1_reg_274;
+assign tmp_s_fu_568_p1 = i_1_reg_311;
 
-assign tqmf_address0 = tmp_30_fu_551_p1;
+assign tqmf_address1 = tmp_30_fu_588_p1;
 
-assign tqmf_d0 = ap_const_lv32_0;
+assign tqmf_d1 = ap_const_lv32_0;
 
 endmodule //reset

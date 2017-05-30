@@ -17,7 +17,7 @@
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>2.39</EstimatedClockPeriod>
+<EstimatedClockPeriod>3.86</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -838,7 +838,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>delay_dltx_address0</name>
+<name>delay_dltx_address1</name>
 <Object>delay_dltx</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -849,7 +849,7 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>delay_dltx_ce0</name>
+<name>delay_dltx_ce1</name>
 <Object>delay_dltx</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -860,7 +860,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>delay_dltx_we0</name>
+<name>delay_dltx_we1</name>
 <Object>delay_dltx</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -871,7 +871,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>delay_dltx_d0</name>
+<name>delay_dltx_d1</name>
 <Object>delay_dltx</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -882,7 +882,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>delay_dhx_address0</name>
+<name>delay_dhx_address1</name>
 <Object>delay_dhx</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -893,7 +893,7 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>delay_dhx_ce0</name>
+<name>delay_dhx_ce1</name>
 <Object>delay_dhx</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -904,7 +904,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>delay_dhx_we0</name>
+<name>delay_dhx_we1</name>
 <Object>delay_dhx</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -915,7 +915,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>delay_dhx_d0</name>
+<name>delay_dhx_d1</name>
 <Object>delay_dhx</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -926,7 +926,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>dec_del_dltx_address0</name>
+<name>dec_del_dltx_address1</name>
 <Object>dec_del_dltx</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -937,7 +937,7 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>dec_del_dltx_ce0</name>
+<name>dec_del_dltx_ce1</name>
 <Object>dec_del_dltx</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -948,7 +948,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>dec_del_dltx_we0</name>
+<name>dec_del_dltx_we1</name>
 <Object>dec_del_dltx</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -959,7 +959,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>dec_del_dltx_d0</name>
+<name>dec_del_dltx_d1</name>
 <Object>dec_del_dltx</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -970,7 +970,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>dec_del_dhx_address0</name>
+<name>dec_del_dhx_address1</name>
 <Object>dec_del_dhx</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -981,7 +981,7 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>dec_del_dhx_ce0</name>
+<name>dec_del_dhx_ce1</name>
 <Object>dec_del_dhx</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -992,7 +992,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>dec_del_dhx_we0</name>
+<name>dec_del_dhx_we1</name>
 <Object>dec_del_dhx</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1003,7 +1003,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>dec_del_dhx_d0</name>
+<name>dec_del_dhx_d1</name>
 <Object>dec_del_dhx</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1014,7 +1014,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>delay_bpl_address0</name>
+<name>delay_bpl_address1</name>
 <Object>delay_bpl</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1025,7 +1025,7 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>delay_bpl_ce0</name>
+<name>delay_bpl_ce1</name>
 <Object>delay_bpl</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1036,7 +1036,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>delay_bpl_we0</name>
+<name>delay_bpl_we1</name>
 <Object>delay_bpl</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1047,7 +1047,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>delay_bpl_d0</name>
+<name>delay_bpl_d1</name>
 <Object>delay_bpl</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1058,7 +1058,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>delay_bph_address0</name>
+<name>delay_bph_address1</name>
 <Object>delay_bph</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1069,7 +1069,7 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>delay_bph_ce0</name>
+<name>delay_bph_ce1</name>
 <Object>delay_bph</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1080,7 +1080,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>delay_bph_we0</name>
+<name>delay_bph_we1</name>
 <Object>delay_bph</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1091,7 +1091,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>delay_bph_d0</name>
+<name>delay_bph_d1</name>
 <Object>delay_bph</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1102,7 +1102,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>dec_del_bpl_address0</name>
+<name>dec_del_bpl_address1</name>
 <Object>dec_del_bpl</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1113,7 +1113,7 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>dec_del_bpl_ce0</name>
+<name>dec_del_bpl_ce1</name>
 <Object>dec_del_bpl</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1124,7 +1124,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>dec_del_bpl_we0</name>
+<name>dec_del_bpl_we1</name>
 <Object>dec_del_bpl</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1135,7 +1135,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>dec_del_bpl_d0</name>
+<name>dec_del_bpl_d1</name>
 <Object>dec_del_bpl</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1146,7 +1146,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>dec_del_bph_address0</name>
+<name>dec_del_bph_address1</name>
 <Object>dec_del_bph</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1157,7 +1157,7 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>dec_del_bph_ce0</name>
+<name>dec_del_bph_ce1</name>
 <Object>dec_del_bph</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1168,7 +1168,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>dec_del_bph_we0</name>
+<name>dec_del_bph_we1</name>
 <Object>dec_del_bph</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1179,7 +1179,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>dec_del_bph_d0</name>
+<name>dec_del_bph_d1</name>
 <Object>dec_del_bph</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1190,7 +1190,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>tqmf_address0</name>
+<name>tqmf_address1</name>
 <Object>tqmf</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1201,7 +1201,7 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>tqmf_ce0</name>
+<name>tqmf_ce1</name>
 <Object>tqmf</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1212,7 +1212,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>tqmf_we0</name>
+<name>tqmf_we1</name>
 <Object>tqmf</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -1223,7 +1223,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>tqmf_d0</name>
+<name>tqmf_d1</name>
 <Object>tqmf</Object>
 <Type>array</Type>
 <Scope>global</Scope>

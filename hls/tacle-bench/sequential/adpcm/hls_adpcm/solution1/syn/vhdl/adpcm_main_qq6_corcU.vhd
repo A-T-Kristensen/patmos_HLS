@@ -51,6 +51,10 @@ signal mem : mem_array := (
     60 => "0000000110110000", 61 => "0000000010001000", 62 => "1111111001010000", 
     63 => "1111111101111000" );
 
+attribute syn_rom_style : string;
+attribute syn_rom_style of mem : signal is "block_rom";
+attribute ROM_STYLE : string;
+attribute ROM_STYLE of mem : signal is "block";
 
 attribute EQUIVALENT_REGISTER_REMOVAL : string;
 begin 

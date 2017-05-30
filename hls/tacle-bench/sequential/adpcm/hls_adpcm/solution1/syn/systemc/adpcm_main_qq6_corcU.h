@@ -148,6 +148,7 @@ meminst->address0(address0);
 meminst->ce0(ce0);
 meminst->q0(q0);
 
+
 meminst->reset(reset);
 meminst->clk(clk);
 }

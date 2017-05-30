@@ -311,7 +311,6 @@ void decode(int input)
 #pragma HLS ALLOCATION instances=mul limit=1 operation
 #pragma HLS ALLOCATION instances=add limit=1 operation
 
-
 	int i;
 	long int xa1, xa2;    /* qmf accumulators */
 	const int *h_ptr;
@@ -747,6 +746,22 @@ void adpcm_main(int test_data[MAX_SIZE], int compressed[MAX_SIZE],
 #pragma HLS ALLOCATION instances=uppol1 limit=1 function
 #pragma HLS ALLOCATION instances=uppol2 limit=1 function
 #pragma HLS ALLOCATION instances=logsch limit=1 function
+
+#pragma HLS RESOURCE variable=dec_del_bph core=RAM_2P_LUTRAM
+#pragma HLS RESOURCE variable=dec_del_bpl core=RAM_2P_LUTRAM
+
+#pragma HLS RESOURCE variable=delay_bpl core=RAM_2P_LUTRAM
+#pragma HLS RESOURCE variable=delay_bpl core=RAM_2P_LUTRAM
+
+#pragma HLS RESOURCE variable=delay_dltx core=RAM_2P_LUTRAM
+#pragma HLS RESOURCE variable=delay_dhx core=RAM_2P_LUTRAM
+
+#pragma HLS RESOURCE variable=dec_del_dltx core=RAM_2P_LUTRAM
+#pragma HLS RESOURCE variable=dec_del_dhx core=RAM_2P_LUTRAM
+
+#pragma HLS RESOURCE variable=qq6_code6_table core=ROM_2P_BRAM
+#pragma HLS RESOURCE variable=tqmf core=RAM_2P_BRAM
+
 	reset();
 
 	if(!select) {
