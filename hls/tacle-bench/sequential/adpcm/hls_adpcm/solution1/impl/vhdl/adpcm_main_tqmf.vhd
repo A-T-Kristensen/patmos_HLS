@@ -20,8 +20,6 @@ entity adpcm_main_tqmf_ram is
     port (
           addr0     : in std_logic_vector(awidth-1 downto 0); 
           ce0       : in std_logic; 
-          d0        : in std_logic_vector(dwidth-1 downto 0); 
-          we0       : in std_logic; 
           q0        : out std_logic_vector(dwidth-1 downto 0);
           addr1     : in std_logic_vector(awidth-1 downto 0); 
           ce1       : in std_logic; 
@@ -63,9 +61,6 @@ p_memory_access_0: process (clk)
 begin 
     if (clk'event and clk = '1') then
         if (ce0 = '1') then 
-            if (we0 = '1') then 
-                ram(CONV_INTEGER(addr0_tmp)) := d0; 
-            end if;
             q0 <= ram(CONV_INTEGER(addr0_tmp)); 
         end if;
     end if;
@@ -100,8 +95,6 @@ entity adpcm_main_tqmf is
         clk : IN STD_LOGIC;
         address0 : IN STD_LOGIC_VECTOR(AddressWidth - 1 DOWNTO 0);
         ce0 : IN STD_LOGIC;
-        we0 : IN STD_LOGIC;
-        d0 : IN STD_LOGIC_VECTOR(DataWidth - 1 DOWNTO 0);
         q0 : OUT STD_LOGIC_VECTOR(DataWidth - 1 DOWNTO 0);
         address1 : IN STD_LOGIC_VECTOR(AddressWidth - 1 DOWNTO 0);
         ce1 : IN STD_LOGIC;
@@ -115,8 +108,6 @@ architecture arch of adpcm_main_tqmf is
             clk : IN STD_LOGIC;
             addr0 : IN STD_LOGIC_VECTOR;
             ce0 : IN STD_LOGIC;
-            d0 : IN STD_LOGIC_VECTOR;
-            we0 : IN STD_LOGIC;
             q0 : OUT STD_LOGIC_VECTOR;
             addr1 : IN STD_LOGIC_VECTOR;
             ce1 : IN STD_LOGIC;
@@ -132,8 +123,6 @@ begin
         clk => clk,
         addr0 => address0,
         ce0 => ce0,
-        d0 => d0,
-        we0 => we0,
         q0 => q0,
         addr1 => address1,
         ce1 => ce1,
