@@ -45,7 +45,6 @@ int adpcm_sin(int rad)
 	return app;
 }
 
-
 int adpcm_cos(int rad)
 {
 	return(adpcm_sin(PI / 2 - rad));

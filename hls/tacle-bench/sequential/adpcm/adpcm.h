@@ -7,7 +7,7 @@
 
 #define SAMPLE_RATE 11025
 
-#define MAX_SIZE 100
+#define MAX_SIZE 100 // For variable length input, it needs a defined MAX_SIZE
 
 #define PI 3141
 #define TEST_VECTOR 0 // Specifies whether the test vector from CHStone should be use

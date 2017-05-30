@@ -1,11 +1,6 @@
 
 #include "adpcm.h"
 
-
-/* clear all storage locations */
-
-
-
 void init(int test_data[MAX_SIZE])
 {
 	/* reset, initialize required memory */
@@ -60,7 +55,6 @@ int dec_return(int dec_result[MAX_SIZE])
 
 	return check_sum != -2;
 }
-
 
 int main()
 {
@@ -144,64 +138,22 @@ int main()
 	init(test_data);
 
 	adpcm_main(test_data, compressed, dec_result, 0, SIZE);
-	//dec_il = 56; // This is required for the benchmark to pass since they no longer use the same vars
 	adpcm_main(test_data, compressed, dec_result, 1, SIZE);
-	//adpcm_main(test_data, test_compressed, dec_result, 1, SIZE);
-
-	adpcm_main(test_data, compressed, dec_result, 0, SIZE);
-	adpcm_main(test_data, compressed, dec_result, 1, SIZE);
-
-
-	adpcm_main(test_data, compressed, dec_result, 0, SIZE);
-	adpcm_main(test_data, compressed, dec_result, 1, SIZE);
-
-	adpcm_main(test_data, compressed, dec_result, 0, SIZE);
-	adpcm_main(test_data, compressed, dec_result, 1, SIZE);
-
-	printf("test_data\n");
-
-	for(i = 0; i < SIZE; i++) {
-		printf("%d \n", test_data[i]);
-	}
-
-	printf("Compressed\n");
-
-	for(i = 0; i < SIZE/2; i++) {
-		printf("%d\n", compressed[i]);
-	}
-
-	printf("dec_result\n");
-
-
-	for(i = 0; i < SIZE; i++) {
-		printf("%d \n", dec_result[i]);
-	}
-
 
 #if(TEST_VECTOR)
-	/*
-		for(i = 0; i < SIZE/2; i++) {
-			if(compressed[i] != test_compressed[i]) {
-				err_cnt++;
-			}
-		}
-	*/
 
 	for(i = 0; i < SIZE; i++) {
-		//printf("%d \t %d \n", dec_result[i], test_result[i]);
 		if(dec_result[i] != test_result[i]) {
 			err_cnt++;
 		}
 	}
-
-	//printf("Err count is: %d\n", err_cnt);
 
 	if(err_cnt) {
 		printf("ERROR: %d\n", err_cnt);
 	} else {
 		printf("Test Passes:\n");
 	}
-	//return err_cnt; Until you have test array for CHStone
+
 	return 0;
 
 #else
