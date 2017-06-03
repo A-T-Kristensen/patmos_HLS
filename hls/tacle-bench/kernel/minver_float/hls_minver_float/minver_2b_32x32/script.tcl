@@ -5,9 +5,9 @@
 ############################################################
 open_project hls_minver_float
 set_top minver_hwa
-add_files minver.h
-add_files minver.c
 add_files minver_lib.c
+add_files minver.c
+add_files minver.h
 add_files -tb minver_test.c
 open_solution "minver_2b_32x32"
 set_part {xc7a100tcsg324-1} -tool vivado

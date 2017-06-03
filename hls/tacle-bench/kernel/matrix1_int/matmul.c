@@ -14,8 +14,6 @@ void matmul_hw(mat_type a[X][Y], mat_type b[Y][Z], mat_type c[X][Z])
 #pragma HLS INTERFACE bram port=c
 #pragma HLS RESOURCE variable=c core=RAM_1P_BRAM
 
-	mat_type a_row[X];
-	mat_type b_copy[Y][Z];
 	mat_type tmp;
 
 	for(int i = 0; i < Z; i++) {
@@ -26,21 +24,8 @@ void matmul_hw(mat_type a[X][Y], mat_type b[Y][Z], mat_type c[X][Z])
 
 		  tmp = 0;
 
-		  // Cache each row (so it's only read once per function)
-		  if (j == 0) {
-			cache_row: for(int k = 0; k < Y; k++)
-			  a_row[k] = a[i][k];
-		  }
-
-		   // Cache all cols (so they are only read once per function)
-		 if (i == 0) {
-			 cache_col: for(int k = 0; k < Y; k++) {
-				  b_copy[k][j] = b[k][j];
-			 }
-		 }
-
 		  Product: for(int k = 0; k < Y; k++) {
-			tmp += a_row[k] * b_copy[k][j];
+			tmp += a[i][k] * b[k][j];
 		  }
 
 		  c[i][j] = tmp;

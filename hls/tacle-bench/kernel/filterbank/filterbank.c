@@ -39,14 +39,12 @@ void filterbank_core_hwa( vec_type r[ 256 ],
 
 #pragma HLS RESOURCE variable=r core=RAM_1P_BRAM
 #pragma HLS INTERFACE bram port=r
-//#pragma HLS ARRAY_RESHAPE variable=r block factor=8 dim=1
 
 #pragma HLS RESOURCE variable=y core=RAM_1P_BRAM
 #pragma HLS INTERFACE bram port=y
 
 #pragma HLS RESOURCE variable=H core=RAM_1P_BRAM
 #pragma HLS INTERFACE bram port=H
-//#pragma HLS ARRAY_RESHAPE variable=H cyclic factor=8 dim=2
 
 #pragma HLS RESOURCE variable=F core=RAM_1P_BRAM
 #pragma HLS INTERFACE bram port=F

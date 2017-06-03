@@ -15,8 +15,8 @@
         <solution name="matmul_3b_4x4" status="inactive"/>
         <solution name="matmul_5b_32x32" status="inactive"/>
         <solution name="matmul_5b_16x16" status="inactive"/>
-        <solution name="matmul_5b_4x4" status="inactive"/>
-        <solution name="matmul_9b_16x16" status="active"/>
+        <solution name="matmul_5b_4x4" status="active"/>
+        <solution name="matmul_9b_16x16" status="inactive"/>
         <solution name="matmul_9b_4x4" status="inactive"/>
         <solution name="matmul_9b_32x32" status="inactive"/>
     </solutions>

@@ -16,6 +16,13 @@
                 <option name="dim" value="1"/>
             </pragma>
         </directive>
+        <directive functionName="matmul_hw" label="" functionLabel="">
+            <pragma name="ALLOCATION">
+                <option name="instances" value="mul" positionalBoolean="4"/>
+                <option name="limit" value="2"/>
+                <option name="operation" value="" positionalBoolean="type"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 
