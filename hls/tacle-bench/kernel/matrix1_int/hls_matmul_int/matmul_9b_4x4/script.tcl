@@ -14,5 +14,5 @@ create_clock -period 10 -name default
 source "./hls_matmul_int/matmul_9b_4x4/directives.tcl"
 csim_design -clean
 csynth_design
-cosim_design
+cosim_design -rtl vhdl
 export_design -rtl verilog -format ip_catalog
