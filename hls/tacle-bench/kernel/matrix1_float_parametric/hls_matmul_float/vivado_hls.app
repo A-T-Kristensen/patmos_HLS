@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="matmul_hw" name="hls_matmul_float">
+<project xmlns="com.autoesl.autopilot.project" name="hls_matmul_float" top="matmul_hw">
     <includePaths/>
     <libraryPaths/>
     <Simulation>
@@ -6,8 +6,8 @@
     </Simulation>
     <files xmlns="">
         <file name="../../matmul_test.c" sc="0" tb="1" cflags=" "/>
-        <file name="matmul.h" sc="0" tb="false" cflags=""/>
         <file name="matmul.c" sc="0" tb="false" cflags=""/>
+        <file name="matmul.h" sc="0" tb="false" cflags=""/>
     </files>
     <solutions xmlns="">
         <solution name="solution1" status="active"/>

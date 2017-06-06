@@ -12,19 +12,19 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/b_Din_A' to 0." projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T18:41:05.187+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/b_WEN_A' to 0." projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T18:41:05.162+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/a_Din_A' to 0." projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T18:41:05.155+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/a_WEN_A' to 0." projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T18:41:05.140+0200" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('a_load_1', matmul.c:40) on array 'a' due to limited memory ports." projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T18:41:04.087+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-542] the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop." projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T18:41:02.678+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (matmul.c:28:6) in function 'matmul_hw' : " projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T18:41:02.364+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/b_Din_A' to 0." projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T20:48:13.787+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/b_WEN_A' to 0." projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T20:48:13.753+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/a_Din_A' to 0." projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T20:48:13.751+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_hw/a_WEN_A' to 0." projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T20:48:13.737+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('a_load_1', matmul.c:42) on array 'a' due to limited memory ports." projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T20:48:12.586+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop." projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T20:48:10.883+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (matmul.c:30:6) in function 'matmul_hw' : " projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T20:48:10.566+0200" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>
       <packageLog>
-        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'matmul_hw_ap_fadd_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T18:41:25.471+0200" type="Warning"/>
-        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'matmul_hw_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T18:41:24.395+0200" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'matmul_hw_ap_fadd_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T20:48:34.201+0200" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'matmul_hw_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="hls_matmul_float" solutionName="solution1" date="2017-06-06T20:48:33.055+0200" type="Warning"/>
       </packageLog>
       <csimLog/>
     </logs>

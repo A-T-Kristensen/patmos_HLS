@@ -25,6 +25,8 @@ void matmul_hw(mat_type a[MAX_SIZE],
 
 	int f, i, k;
 
+	// Adding breaks to the loops does not make it faster, it makes it slower.
+
 	for(k = 0; k < MAX_LOOP; k++) {
 		if(k < size) {
 			p_a = &a[0];
@@ -40,7 +42,6 @@ void matmul_hw(mat_type a[MAX_SIZE],
 							tmp += *p_a++ * *p_b++;
 						}
 					}
-
 					*p_c = tmp;
 					p_c++;
 				}

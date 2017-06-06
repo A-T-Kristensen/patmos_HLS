@@ -1,7 +1,0 @@
-#pragma line 1 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/matmul.c" ::: -10
-#pragma line 1 "<built-in>" ::: -9
-#pragma line 1 "<command-line>" ::: -8
-#pragma line 1 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/matmul.c" ::: -7
-#pragma line 1 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/matmul.h" 1 ::: -5
-#pragma line 17 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/matmul.h" ::: -4
-#pragma line 3 "/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/matmul.c" 2 ::: 5
