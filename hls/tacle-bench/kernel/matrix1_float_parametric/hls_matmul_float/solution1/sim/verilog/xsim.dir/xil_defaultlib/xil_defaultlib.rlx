@@ -1,0 +1,13 @@
+0.6
+2016.4
+Dec 14 2016
+22:45:39
+/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/hls_matmul_float/solution1/sim/verilog/AESL_autobram_a.v,1496767108,systemVerilog,,,,AESL_autobram_a,/home/patmos/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/hls_matmul_float/solution1/sim/verilog/AESL_autobram_b.v,1496767108,systemVerilog,,,,AESL_autobram_b,/home/patmos/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/hls_matmul_float/solution1/sim/verilog/AESL_autobram_c.v,1496767108,systemVerilog,,,,AESL_autobram_c,/home/patmos/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/hls_matmul_float/solution1/sim/verilog/ip/xil_defaultlib/matmul_hw_ap_fadd_3_full_dsp_32.vhd,1496767120,vhdl,,,,matmul_hw_ap_fadd_3_full_dsp_32,/home/patmos/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/hls_matmul_float/solution1/sim/verilog/ip/xil_defaultlib/matmul_hw_ap_fmul_2_max_dsp_32.vhd,1496767119,vhdl,,,,matmul_hw_ap_fmul_2_max_dsp_32,/home/patmos/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/hls_matmul_float/solution1/sim/verilog/matmul_hw.autotb.v,1496767108,systemVerilog,,,,apatb_matmul_hw_top,/home/patmos/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/hls_matmul_float/solution1/sim/verilog/matmul_hw.v,1496767094,systemVerilog,,,,matmul_hw,/home/patmos/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/hls_matmul_float/solution1/sim/verilog/matmul_hw_fadd_32bkb.v,1496767095,systemVerilog,,,,matmul_hw_fadd_32bkb,/home/patmos/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/hls_matmul_float/solution1/sim/verilog/matmul_hw_fmul_32cud.v,1496767095,systemVerilog,,,,matmul_hw_fmul_32cud,/home/patmos/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
