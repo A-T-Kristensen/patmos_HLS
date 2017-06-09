@@ -6,7 +6,7 @@
 
 // A[X x Y] * B[Y x Z] = C[X x Z]
 
-#define DIM 16
+#define DIM 4
 
 #define X DIM /* first dimension of array A */
 #define Y DIM /* second dimension of array A, first dimension of array B */
