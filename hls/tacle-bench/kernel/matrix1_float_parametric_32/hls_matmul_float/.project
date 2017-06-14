@@ -29,47 +29,87 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/hls_matmul_float/.apc/.src</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric_32/hls_matmul_float/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/hls_matmul_float/.apc/.tb</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric_32/hls_matmul_float/.apc/.tb</location>
 		</link>
 		<link>
-			<name>solution1/constraints</name>
+			<name>matmul_float_3b/constraints</name>
 			<type>2</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/hls_matmul_float/solution1/.tcls</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric_32/hls_matmul_float/matmul_float_3b/.tcls</location>
+		</link>
+		<link>
+			<name>matmul_float_5b/constraints</name>
+			<type>2</type>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric_32/hls_matmul_float/matmul_float_5b/.tcls</location>
+		</link>
+		<link>
+			<name>matmul_float_9b/constraints</name>
+			<type>2</type>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric_32/hls_matmul_float/matmul_float_9b/.tcls</location>
 		</link>
 		<link>
 			<name>source/matmul.c</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/matmul.c</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric_32/matmul.c</location>
 		</link>
 		<link>
 			<name>source/matmul.h</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/matmul.h</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric_32/matmul.h</location>
 		</link>
 		<link>
 			<name>testbench/matmul_test.c</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/matmul_test.c</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric_32/matmul_test.c</location>
 		</link>
 		<link>
-			<name>solution1/constraints/.xml.directive</name>
+			<name>matmul_float_3b/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/hls_matmul_float/solution1/solution1.directive</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric_32/hls_matmul_float/matmul_float_3b/matmul_float_3b.directive</location>
 		</link>
 		<link>
-			<name>solution1/constraints/directives.tcl</name>
+			<name>matmul_float_3b/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/hls_matmul_float/solution1/directives.tcl</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric_32/hls_matmul_float/matmul_float_3b/directives.tcl</location>
 		</link>
 		<link>
-			<name>solution1/constraints/script.tcl</name>
+			<name>matmul_float_3b/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric/hls_matmul_float/solution1/script.tcl</location>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric_32/hls_matmul_float/matmul_float_3b/script.tcl</location>
+		</link>
+		<link>
+			<name>matmul_float_5b/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric_32/hls_matmul_float/matmul_float_5b/matmul_float_5b.directive</location>
+		</link>
+		<link>
+			<name>matmul_float_5b/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric_32/hls_matmul_float/matmul_float_5b/directives.tcl</location>
+		</link>
+		<link>
+			<name>matmul_float_5b/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric_32/hls_matmul_float/matmul_float_5b/script.tcl</location>
+		</link>
+		<link>
+			<name>matmul_float_9b/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric_32/hls_matmul_float/matmul_float_9b/matmul_float_9b.directive</location>
+		</link>
+		<link>
+			<name>matmul_float_9b/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric_32/hls_matmul_float/matmul_float_9b/directives.tcl</location>
+		</link>
+		<link>
+			<name>matmul_float_9b/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/home/andreas/github/bachelor_project_HLS/hls/tacle-bench/kernel/matrix1_float_parametric_32/hls_matmul_float/matmul_float_9b/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

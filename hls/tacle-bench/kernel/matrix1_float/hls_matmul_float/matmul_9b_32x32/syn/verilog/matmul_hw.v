@@ -763,13 +763,13 @@ initial begin
 #0 ap_enable_reg_pp0_iter19 = 1'b0;
 end
 
-matmul_hw_fadd_32fYi #(
+matmul_hw_fadd_32bkb #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_fadd_32fYi_U1(
+matmul_hw_fadd_32bkb_U1(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_705_p0),
@@ -778,13 +778,13 @@ matmul_hw_fadd_32fYi_U1(
     .dout(grp_fu_705_p2)
 );
 
-matmul_hw_fadd_32fYi #(
+matmul_hw_fadd_32bkb #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_fadd_32fYi_U2(
+matmul_hw_fadd_32bkb_U2(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_710_p0),
@@ -793,13 +793,13 @@ matmul_hw_fadd_32fYi_U2(
     .dout(grp_fu_710_p2)
 );
 
-matmul_hw_fadd_32fYi #(
+matmul_hw_fadd_32bkb #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_fadd_32fYi_U3(
+matmul_hw_fadd_32bkb_U3(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_714_p0),
@@ -808,13 +808,13 @@ matmul_hw_fadd_32fYi_U3(
     .dout(grp_fu_714_p2)
 );
 
-matmul_hw_fadd_32fYi #(
+matmul_hw_fadd_32bkb #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_fadd_32fYi_U4(
+matmul_hw_fadd_32bkb_U4(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_718_p0),
@@ -823,13 +823,13 @@ matmul_hw_fadd_32fYi_U4(
     .dout(grp_fu_718_p2)
 );
 
-matmul_hw_fmul_32g8j #(
+matmul_hw_fmul_32cud #(
     .ID( 1 ),
     .NUM_STAGE( 4 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_fmul_32g8j_U5(
+matmul_hw_fmul_32cud_U5(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_0_Dout_A),
@@ -838,13 +838,13 @@ matmul_hw_fmul_32g8j_U5(
     .dout(grp_fu_722_p2)
 );
 
-matmul_hw_fmul_32g8j #(
+matmul_hw_fmul_32cud #(
     .ID( 1 ),
     .NUM_STAGE( 4 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_fmul_32g8j_U6(
+matmul_hw_fmul_32cud_U6(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_1_Dout_A),
@@ -853,13 +853,13 @@ matmul_hw_fmul_32g8j_U6(
     .dout(grp_fu_728_p2)
 );
 
-matmul_hw_fmul_32g8j #(
+matmul_hw_fmul_32cud #(
     .ID( 1 ),
     .NUM_STAGE( 4 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_fmul_32g8j_U7(
+matmul_hw_fmul_32cud_U7(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_2_Dout_A),
@@ -868,13 +868,13 @@ matmul_hw_fmul_32g8j_U7(
     .dout(grp_fu_734_p2)
 );
 
-matmul_hw_fmul_32g8j #(
+matmul_hw_fmul_32cud #(
     .ID( 1 ),
     .NUM_STAGE( 4 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-matmul_hw_fmul_32g8j_U8(
+matmul_hw_fmul_32cud_U8(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(a_3_Dout_A),

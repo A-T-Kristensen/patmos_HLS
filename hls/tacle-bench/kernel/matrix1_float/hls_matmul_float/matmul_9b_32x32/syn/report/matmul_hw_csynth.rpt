@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'matmul_hw'
 ================================================================
-* Date:           Sat Jun  3 11:12:25 2017
+* Date:           Wed Jun 14 06:47:41 2017
 
 * Version:        2016.4 (Build 1733598 on Wed Dec 14 22:59:20 MST 2016)
 * Project:        hls_matmul_float
@@ -73,14 +73,14 @@
     +-------------------------+----------------------+---------+-------+-----+-----+
     |         Instance        |        Module        | BRAM_18K| DSP48E|  FF | LUT |
     +-------------------------+----------------------+---------+-------+-----+-----+
-    |matmul_hw_fadd_32fYi_U1  |matmul_hw_fadd_32fYi  |        0|      2|  205|  205|
-    |matmul_hw_fadd_32fYi_U2  |matmul_hw_fadd_32fYi  |        0|      2|  205|  205|
-    |matmul_hw_fadd_32fYi_U3  |matmul_hw_fadd_32fYi  |        0|      2|  205|  205|
-    |matmul_hw_fadd_32fYi_U4  |matmul_hw_fadd_32fYi  |        0|      2|  205|  205|
-    |matmul_hw_fmul_32g8j_U5  |matmul_hw_fmul_32g8j  |        0|      3|  143|  140|
-    |matmul_hw_fmul_32g8j_U6  |matmul_hw_fmul_32g8j  |        0|      3|  143|  140|
-    |matmul_hw_fmul_32g8j_U7  |matmul_hw_fmul_32g8j  |        0|      3|  143|  140|
-    |matmul_hw_fmul_32g8j_U8  |matmul_hw_fmul_32g8j  |        0|      3|  143|  140|
+    |matmul_hw_fadd_32bkb_U1  |matmul_hw_fadd_32bkb  |        0|      2|  205|  205|
+    |matmul_hw_fadd_32bkb_U2  |matmul_hw_fadd_32bkb  |        0|      2|  205|  205|
+    |matmul_hw_fadd_32bkb_U3  |matmul_hw_fadd_32bkb  |        0|      2|  205|  205|
+    |matmul_hw_fadd_32bkb_U4  |matmul_hw_fadd_32bkb  |        0|      2|  205|  205|
+    |matmul_hw_fmul_32cud_U5  |matmul_hw_fmul_32cud  |        0|      3|  143|  140|
+    |matmul_hw_fmul_32cud_U6  |matmul_hw_fmul_32cud  |        0|      3|  143|  140|
+    |matmul_hw_fmul_32cud_U7  |matmul_hw_fmul_32cud  |        0|      3|  143|  140|
+    |matmul_hw_fmul_32cud_U8  |matmul_hw_fmul_32cud  |        0|      3|  143|  140|
     +-------------------------+----------------------+---------+-------+-----+-----+
     |Total                    |                      |        0|     20| 1392| 1380|
     +-------------------------+----------------------+---------+-------+-----+-----+
