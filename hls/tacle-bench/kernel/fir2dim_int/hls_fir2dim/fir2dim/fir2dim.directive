@@ -1,0 +1,33 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="fir2dim_hwa" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="array1" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="fir2dim_hwa" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="array2" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="fir2dim_hwa" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="array3" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="fir2dim_hwa" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="coeffs" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

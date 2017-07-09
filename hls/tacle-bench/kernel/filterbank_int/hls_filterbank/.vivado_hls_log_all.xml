@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog>
+        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***&#xA;command 'ap_source' returned error code&#xA;    while executing&#xA;&quot;source /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank_int/hls_filterbank/solution1/cosim.tcl&quot;&#xA;    invoked from within&#xA;&quot;hls::main /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank_int/hls_filterbank/solution1/cosim.tcl&quot;&#xA;    (&quot;uplevel&quot; body line 1)&#xA;    invoked from within&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xA;    invoked from within&#xA;&quot;hls_proc $argv&quot;&#xA;" projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:08:46.970+0200"/>
+        <logs message="ERROR: Index -1 out of bound 0 to 255&#xA;Time: 3075 ns  Iteration: 4  Process: /apatb_filterbank_core_hwa_top/AESL_inst_r/read_proc_A&#xA;  File: /home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank_int/hls_filterbank/solution1/sim/vhdl/AESL_autobram_r.vhd&#xA;## quit" projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:08:46.748+0200"/>
+      </simLog>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'filterbank_core_hwa/F_Din_A' to 0." projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:07:21.057+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'filterbank_core_hwa/F_WEN_A' to 0." projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:07:20.946+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'filterbank_core_hwa/H_Din_A' to 0." projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:07:20.944+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'filterbank_core_hwa/H_WEN_A' to 0." projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:07:20.942+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'filterbank_core_hwa/r_Din_A' to 0." projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:07:20.940+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'filterbank_core_hwa/r_WEN_A' to 0." projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:07:20.927+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'store' operation (filterbank.c:120) of variable 'tmp_19', filterbank.c:120 on array 'y' due to limited memory ports." projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:07:19.155+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('Vect_Up_load_4', filterbank.c:112) on array 'Vect_Up', filterbank.c:68 due to limited memory ports." projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:07:19.134+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to satisfy resource constraint for operation type add(II = 1)." projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:07:18.911+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('r_load_2', filterbank.c:84) on array 'r' due to limited memory ports." projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:07:18.831+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to satisfy resource constraint for operation type add(II = 1)." projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:07:18.596+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] more than one sub loop." projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:07:15.357+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2' (filterbank.c:62:9) in function 'filterbank_core_hwa' : " projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:07:14.059+0200" type="Warning"/>
+      </synLog>
+      <simLog>
+        <logs message="WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the &quot;-mt off -v 1&quot; switches to see more information from the C compiler. The following environment variables have been detected:&#xA;    LIBRARY_PATH" projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:09:38.732+0200" type="Warning"/>
+        <logs message="WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the &quot;-mt off -v 1&quot; switches to see more information from the C compiler. The following environment variables have been detected:&#xA;    LIBRARY_PATH" projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:08:32.514+0200" type="Warning"/>
+        <logs message="WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the &quot;-mt off -v 1&quot; switches to see more information from the C compiler. The following environment variables have been detected:&#xA;    LIBRARY_PATH" projectName="hls_filterbank" solutionName="solution1" date="2017-07-09T16:07:35.386+0200" type="Warning"/>
+      </simLog>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

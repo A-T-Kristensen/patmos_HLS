@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="filterbank.c" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank_int/filterbank.c"/>
+    <originFiles name="filterbank.h" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank_int/filterbank.h"/>
+  </source>
+  <testbench>
+    <originFiles name="filterbank_test.c" path="/home/patmos/github/bachelor_project_HLS/hls/tacle-bench/kernel/filterbank_int/filterbank_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
