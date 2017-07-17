@@ -60,6 +60,9 @@ void fir2dim_hwa(TYPE  fir2dim_input[SIZE], TYPE fir2dim_output[IMAGEDIM * IMAGE
 
 #pragma HLS INTERFACE ap_ctrl_hs port=return
 
+#pragma HLS ALLOCATION instances=mul limit=2 operation
+#pragma HLS ALLOCATION instances=add limit=2 operation
+
   TYPE *parray  = &fir2dim_input[ARRAY_OFFSET], *parray2, *parray3 ;
 
   TYPE *pcoeff  = &fir2dim_input[COEFF_OFFSET];

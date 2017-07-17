@@ -23,7 +23,7 @@
 #include <stdio.h>
 
 #define STORAGE_CLASS register
-#define TYPE          int
+typedef int TYPE;
 #define IMAGEDIM      4
 #define ARRAYDIM      (IMAGEDIM + 2)
 #define COEFFICIENTS  3

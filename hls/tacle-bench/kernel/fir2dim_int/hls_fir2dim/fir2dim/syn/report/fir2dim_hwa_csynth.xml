@@ -17,31 +17,31 @@
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>9.44</EstimatedClockPeriod>
+<EstimatedClockPeriod>8.57</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>137</Best-caseLatency>
-<Average-caseLatency>137</Average-caseLatency>
-<Worst-caseLatency>137</Worst-caseLatency>
-<Interval-min>138</Interval-min>
-<Interval-max>138</Interval-max>
+<Best-caseLatency>134</Best-caseLatency>
+<Average-caseLatency>134</Average-caseLatency>
+<Worst-caseLatency>134</Worst-caseLatency>
+<Interval-min>135</Interval-min>
+<Interval-max>135</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <Loop1>
 <TripCount>4</TripCount>
-<Latency>135</Latency>
+<Latency>132</Latency>
 <PipelineII>27</PipelineII>
-<PipelineDepth>55</PipelineDepth>
+<PipelineDepth>52</PipelineDepth>
 </Loop1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<DSP48E>10</DSP48E>
-<FF>2114</FF>
-<LUT>1673</LUT>
+<DSP48E>8</DSP48E>
+<FF>2014</FF>
+<LUT>1482</LUT>
 <BRAM_18K>0</BRAM_18K>
 </Resources>
 <AvailableResources>
@@ -129,7 +129,7 @@
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>fir2dim_input_EN_A</name>
@@ -141,7 +141,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>fir2dim_input_WEN_A</name>
@@ -153,7 +153,7 @@
 <Dir>out</Dir>
 <Bits>4</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>fir2dim_input_Din_A</name>
@@ -165,7 +165,7 @@
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>fir2dim_input_Dout_A</name>
@@ -177,7 +177,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>fir2dim_input_Clk_A</name>
@@ -189,7 +189,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>fir2dim_input_Rst_A</name>
@@ -201,7 +201,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>fir2dim_output_Addr_A</name>
@@ -213,7 +213,7 @@
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>fir2dim_output_EN_A</name>
@@ -225,7 +225,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>fir2dim_output_WEN_A</name>
@@ -237,7 +237,7 @@
 <Dir>out</Dir>
 <Bits>4</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>fir2dim_output_Din_A</name>
@@ -249,7 +249,7 @@
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>fir2dim_output_Dout_A</name>
@@ -261,7 +261,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>fir2dim_output_Clk_A</name>
@@ -273,7 +273,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>fir2dim_output_Rst_A</name>
@@ -285,7 +285,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 </InterfaceSummary>
 
